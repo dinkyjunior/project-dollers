@@ -20,7 +20,11 @@ The exact tested content is recorded by runtime/data hashes in `qa/results.json`
 
 ## External verification limits
 
-Normal requests to the exact GitHub Pages URL fail at the environment CONNECT tunnel with 403 before receiving a website response; GitHub API requests are Forbidden. A Git push is not a hosted-site verification. `npm run qa:hosted` saves the actual blocked outcome under `qa/hosted/` and must be retried after production publication. Pages configuration and refresh workflow execution cannot currently be checked through the API.
+The tested application commit `c8bf0d298d5915460a11b6bc1776d3a9a93a0208` has been published to `codex-rebuild` and `main`, preserving remote history; PR #1's remote head was confirmed at that commit. See `qa/PUBLICATION_STATUS.md` for publication and verification evidence.
+
+Ordinary public GitHub HTML independently confirms PR #1 is merged and Pages build/deployment run #37 succeeded for the exact application commit. Minimal sanitized evidence is saved in `qa/hosted/public-github-status.json`. The Pages workflow succeeded; actual served browser behavior is still unverified.
+
+The exact hosted URL was tested again after publication at 2026-10-01T16:14:54Z. Normal requests still fail at the environment CONNECT tunnel with 403 before receiving a website response; GitHub API requests are Forbidden. A Git push is not a hosted-site verification. `npm run qa:hosted` saves the actual blocked outcome under `qa/hosted/`. Actual hosted verification remains pending accessible network transport. Pages configuration and refresh workflow execution cannot currently be checked through the API.
 
 Official WebKit downloads also return 403. Chromium iPhone touch/3× and compact-height checks passed, but actual Safari/iPhone hardware is unrun. Independent official/second-provider NFL access was blocked; datasets were independently recomputed but not falsely claimed cross-provider confirmed. Forecast, travel itinerary, confirmed inactives and exactly timed historical prices remain unavailable.
 

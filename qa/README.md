@@ -33,6 +33,7 @@ Coverage includes navigation and entry-specific destinations, history, direct ha
 - [Performance and accessibility](PERFORMANCE_REVIEW.md): lifecycle, keyboard/dialog, contrast and headless frame-cadence measurements.
 - [Mobile/Safari readiness](SAFARI_REVIEW.md): touch and 3× image-density checks at full/compact heights. Actual WebKit download was blocked by 403; Safari/iPhone hardware is unrun.
 - [Deployment review](DEPLOYMENT_REVIEW.md): production subpath and scheduled refresh contract; external verification limits.
+- [Publication status](PUBLICATION_STATUS.md): confirmed source/production/PR heads and the actual hosted test attempted after publication.
 
 An apparent missing-navigation-label issue in image-tool previews was challenged with pixel measurements; the raw screenshots contain all five labels and icons. The capture harness was separately corrected to finish finite transitions rather than restart them when resuming decoration.
 
