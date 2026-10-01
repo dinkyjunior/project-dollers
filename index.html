@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#00030a">
+<title>Project Dollar$</title>
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div id="app" class="app-shell">
+  <div class="cosmos" aria-hidden="true"></div>
+
+  <section class="page active" id="homePage" data-page="home">
+    <main class="page-scroll home-layout">
+      <header class="home-header">
+        <div class="ios-row"><span>9:41</span><span class="ios-icons">▮▮▮⌁ ▰</span></div>
+        <button class="gear" aria-label="Settings">⚙</button>
+        <img class="brand" src="./assets/img/brand.webp" alt="Project Dollar$">
+      </header>
+
+      <div class="sport-grid">
+        <button class="sport-card nfl-card" data-open="nfl">
+          <span class="shine"></span>
+          <img src="./assets/img/nfl_logo.webp" alt="NFL">
+          <strong>NFL</strong>
+          <small>LIVE DATA<br>STATS · RESEARCH<br>MATCHUPS</small>
+        </button>
+        <article class="sport-card nba-card disabled-card">
+          <img src="./assets/img/nba_logo.webp" alt="NBA">
+          <strong>NBA</strong><small>COMING SOON</small>
+        </article>
+        <article class="sport-card nrl-card disabled-card">
+          <img src="./assets/img/nrl_logo.webp" alt="NRL">
+          <strong>NRL</strong><small>COMING SOON</small>
+        </article>
+        <article class="sport-card ufc-card disabled-card">
+          <img src="./assets/img/ufc_logo.webp" alt="UFC">
+          <strong>UFC</strong><small>COMING SOON</small>
+        </article>
+      </div>
+
+      <section class="stadium-card" aria-label="Football stadium">
+        <img src="./assets/img/stadium.webp" alt="Neon football stadium">
+        <span class="stadium-sweep"></span>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <button class="nav-btn active-nav" data-open="home"><span>⌂</span>Home</button>
+      <button class="nav-btn" data-open="nfl"><span>▣</span>NFL</button>
+      <button class="nav-btn"><span>⌘</span>Matchups</button>
+      <button class="nav-btn"><span>◔</span>Insights</button>
+      <button class="nav-btn"><span>•••</span>More</button>
+    </nav>
+  </section>
+
+  <section class="page" id="nflPage" data-page="nfl">
+    <main class="page-scroll nfl-layout">
+      <header class="league-header">
+        <div class="ios-row"><span>9:41</span><span class="ios-icons">▮▮▮⌁ ▰</span></div>
+        <div class="league-title-row">
+          <img src="./assets/img/nfl_shield.webp" class="league-shield" alt="NFL">
+          <div class="league-copy"><h1>NFL</h1><p>2025 REGULAR SEASON</p></div>
+          <div class="week-picker">Week 4⌄</div>
+        </div>
+      </header>
+
+      <div class="segmented league-tabs"><div class="seg active-seg">LADDER</div><div class="seg">TOP PLAYERS</div><div class="seg">WEEKLY RECAP</div></div>
+      <div class="conference"><div class="conference-btn active-gold">AFC</div><div class="conference-btn">NFC</div></div>
+
+      <section class="standings-card panel">
+        <div class="stand-head"><span>#</span><span>TEAM</span><span>W</span><span>L</span><span>PCT</span><span>STRK</span></div>
+        <div class="stand-row"><b>1</b><span class="team"><img src="./assets/img/chiefs.webp">Chiefs</span><span>3</span><span>0</span><span>1.000</span><i>W3</i></div>
+        <div class="stand-row"><b>2</b><span class="team"><img src="./assets/img/bills.webp">Bills</span><span>3</span><span>0</span><span>1.000</span><i>W3</i></div>
+        <button class="stand-row current-team" data-open="steelers"><b>3</b><span class="team"><img src="./assets/img/steelers.webp">Steelers</span><span>2</span><span>1</span><span>.667</span><i>W2</i></button>
+        <div class="stand-row"><b>4</b><span class="team"><img src="./assets/img/ravens.webp">Ravens</span><span>2</span><span>1</span><span>.667</span><i>W1</i></div>
+        <div class="stand-row"><b>5</b><span class="team"><img src="./assets/img/texans.webp">Texans</span><span>2</span><span>1</span><span>.667</span><i>W1</i></div>
+      </section>
+
+      <div class="leaders-grid">
+        <section class="leader panel"><h2>TOP 5 QBs <em>(WEEK 3)</em></h2><div class="leader-head"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div><div>1 <b>J. Allen</b><span>348</span><span>4</span></div><div>2 <b>L. Jackson</b><span>323</span><span>3</span></div><div>3 <b>D. Prescott</b><span>312</span><span>3</span></div><div>4 <b>B. Mayfield</b><span>306</span><span>3</span></div><div>5 <b>J. Daniels</b><span>301</span><span>3</span></div></section>
+        <section class="leader panel"><h2>TOP 5 RBs <em>(WEEK 3)</em></h2><div class="leader-head"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div><div>1 <b>D. Henry</b><span>142</span><span>2</span></div><div>2 <b>J. Taylor</b><span>128</span><span>2</span></div><div>3 <b>B. Hall</b><span>125</span><span>1</span></div><div>4 <b>K. Williams</b><span>118</span><span>1</span></div><div>5 <b>C. McCaffrey</b><span>112</span><span>1</span></div></section>
+      </div>
+
+      <div class="week-tabs"><span>WEEK 2</span><span>WEEK 3</span><span class="week-active">WEEK 4</span><span>WEEK 5</span></div>
+      <h2 class="tomorrow">TOMORROW'S GAME</h2>
+      <button class="match-card" data-open="steelers">
+        <div class="match-team"><img src="./assets/img/steelers_big.webp"><strong>Steelers</strong><small>2 - 1</small></div>
+        <div class="match-center"><strong>Fri, Oct 2<br>8:15 PM ET</strong><small>Huntington Bank Field<br>Cleveland, OH</small></div>
+        <div class="match-team"><img src="./assets/img/browns.webp"><strong>Browns</strong><small>2 - 1</small></div>
+      </button>
+    </main>
+    <nav class="bottom-nav"><button class="nav-btn" data-open="home"><span>⌂</span>Home</button><button class="nav-btn active-nav"><span>▣</span>Teams</button><button class="nav-btn"><span>⌘</span>Matchups</button><button class="nav-btn"><span>◔</span>Insights</button><button class="nav-btn"><span>•••</span>More</button></nav>
+  </section>
+
+  <section class="page pit-page" id="steelersPage" data-page="steelers">
+    <main class="page-scroll pit-layout">
+      <header class="team-header">
+        <div class="ios-row"><span>9:41</span><span class="ios-icons">▮▮▮⌁ ▰</span></div>
+        <div class="team-title-row"><button class="back" data-open="nfl" aria-label="Back">‹</button><img src="./assets/img/steelers_big.webp" alt="Steelers"><div><h1>Pittsburgh Steelers</h1><p>2 - 1 <span>|</span> <em>2nd in AFC North</em></p></div></div>
+      </header>
+      <div class="segmented team-tabs"><div class="seg active-gold">Roster</div><div class="seg">Schedule</div><div class="seg">Team Stats</div><div class="seg">Matchups</div></div>
+      <div class="position-tabs"><button class="pos active-gold" data-filter="ALL">All</button><button class="pos" data-filter="QB">QB</button><button class="pos" data-filter="RB">RB</button><button class="pos" data-filter="WR">WR</button><button class="pos" data-filter="TE">TE</button><button class="pos" data-filter="DEF">DEF</button><button class="pos" data-filter="K">K</button></div>
+
+      <div class="roster-list">
+        <article class="player-card" data-pos="QB"><span class="energy"></span><span class="orbit-ball"></span><img src="./assets/img/rodgers.webp" class="player-photo"><div class="player-main"><h2><b>#8</b> Aaron Rodgers</h2><p><strong>QB</strong> · Starter</p><div class="stat-strip"><span><b>700</b><small>Pass YDS</small></span><span><b>7</b><small>TD</small></span><span><b>2</b><small>INT</small></span><span><b>108.5</b><small>Rating</small></span></div></div><span class="chev">›</span></article>
+        <article class="player-card" data-pos="RB"><span class="energy"></span><span class="orbit-ball delay1"></span><img src="./assets/img/warren.webp" class="player-photo"><div class="player-main"><h2><b>#30</b> Jaylen Warren</h2><p><strong>RB</strong> · Primary</p><div class="stat-strip"><span><b>216</b><small>Rush YDS</small></span><span><b>2</b><small>TD</small></span><span><b>18</b><small>Rec</small></span><span><b>142</b><small>Rec YDS</small></span></div></div><span class="chev">›</span></article>
+        <article class="player-card" data-pos="WR"><span class="energy"></span><span class="orbit-ball delay2"></span><img src="./assets/img/metcalf.webp" class="player-photo"><div class="player-main"><h2><b>#4</b> DK Metcalf</h2><p><strong>WR</strong> · WR1</p><div class="stat-strip"><span><b>18</b><small>Rec</small></span><span><b>302</b><small>Rec YDS</small></span><span><b>3</b><small>TD</small></span><span><b>16.8</b><small>Avg</small></span></div></div><span class="chev">›</span></article>
+        <article class="player-card" data-pos="WR"><span class="energy"></span><span class="orbit-ball delay3"></span><img src="./assets/img/pittman.webp" class="player-photo"><div class="player-main"><h2><b>#11</b> Michael Pittman Jr.</h2><p><strong>WR</strong> · WR2</p><div class="stat-strip"><span><b>14</b><small>Rec</small></span><span><b>185</b><small>Rec YDS</small></span><span><b>1</b><small>TD</small></span><span><b>13.2</b><small>Avg</small></span></div></div><span class="chev">›</span></article>
+        <article class="player-card" data-pos="TE"><span class="energy"></span><span class="orbit-ball delay4"></span><img src="./assets/img/freiermuth.webp" class="player-photo"><div class="player-main"><h2><b>#88</b> Pat Freiermuth</h2><p><strong>TE</strong> · Starter</p><div class="stat-strip"><span><b>12</b><small>Rec</small></span><span><b>134</b><small>Rec YDS</small></span><span><b>2</b><small>TD</small></span><span><b>11.2</b><small>Avg</small></span></div></div><span class="chev">›</span></article>
+      </div>
+    </main>
+    <nav class="bottom-nav"><button class="nav-btn" data-open="home"><span>⌂</span>Home</button><button class="nav-btn active-nav" data-open="nfl"><span>▣</span>Teams</button><button class="nav-btn"><span>⌘</span>Matchups</button><button class="nav-btn"><span>◔</span>Insights</button><button class="nav-btn"><span>•••</span>More</button></nav>
+  </section>
+</div>
+<script src="./assets/app.js"></script>
+</body>
+</html>
