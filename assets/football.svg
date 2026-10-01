@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+<defs>
+ <radialGradient id="leather" cx=".42" cy=".28" r=".8"><stop stop-color="#ba6c36"/><stop offset=".35" stop-color="#824022"/><stop offset=".7" stop-color="#431d13"/><stop offset="1" stop-color="#120909"/></radialGradient>
+ <linearGradient id="edge" x2="0" y2="1"><stop stop-color="#ffad5e"/><stop offset=".4" stop-color="#7e341c"/><stop offset="1" stop-color="#20caff"/></linearGradient>
+ <linearGradient id="stripe" x2="0" y2="1"><stop stop-color="#fff7db"/><stop offset="1" stop-color="#9c9387"/></linearGradient>
+ <pattern id="grain" width="7" height="6" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#210b04" opacity=".5"/><circle cx="2" cy="1.4" r=".8" fill="#f5a366" opacity=".25"/><circle cx="5.5" cy="5" r="1.1" fill="#100500" opacity=".35"/></pattern>
+ <clipPath id="shape"><path d="M22 120Q95 5 203 18Q310 24 378 120Q302 217 203 222Q93 235 22 120Z"/></clipPath>
+</defs>
+<g transform="rotate(-17 200 120)">
+ <path d="M22 120Q95 5 203 18Q310 24 378 120Q302 217 203 222Q93 235 22 120Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+ <g clip-path="url(#shape)"><path d="M22 120Q95 5 203 18Q310 24 378 120Q302 217 203 222Q93 235 22 120Z" fill="url(#grain)"/>
+ <path d="M75 23Q127 120 75 226M321 19Q269 120 321 226" fill="none" stroke="url(#stripe)" stroke-width="18" opacity=".85"/>
+ <path d="M21 120Q200 111 379 120" fill="none" stroke="#25100b" stroke-width="4"/><path d="M30 116Q200 106 368 115" fill="none" stroke="#da9c73" stroke-width="1" opacity=".45"/>
+ <path d="M128 81Q200 66 268 81" fill="none" stroke="#180906" stroke-width="13" stroke-linecap="round"/><path d="M128 78Q200 63 268 78" fill="none" stroke="#eee0bc" stroke-width="4" stroke-linecap="round"/>
+ <path d="m142 67 2 23m17-26 1 24m18-26 1 24m18-26v24m19-23-1 24m20-21-2 23m20-19-3 21" stroke="#241009" stroke-width="7" stroke-linecap="round"/><path d="m141 64 2 23m17-26 1 24m18-26 1 24m18-26v24m19-23-1 24m20-21-2 23m20-19-3 21" stroke="#fff1d2" stroke-width="4" stroke-linecap="round"/>
+ <path d="M85 60Q200 0 313 63" fill="none" stroke="#ffc48c" stroke-width="2" opacity=".35"/>
+ </g>
+</g></svg>

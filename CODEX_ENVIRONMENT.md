@@ -43,8 +43,10 @@ Core visual QA must not depend on external hotlinked images that may return 403 
 
 Use repo-local assets for anything needed to render and compare the core experience.
 
-The approved visual reference is stored in the repo at:
+The approved visual reference is expected at:
 `reference/approved_eight_screen_reference.jpg`
+
+It was absent from the remote `codex-rebuild` branch at handoff commit `2a11d82`. Until restored, use `REFERENCE_SPEC.md` as the permitted fallback and leave original-render visual acceptance pending. Bundled assets and browser evidence are now in the repository; see `ASSET_SOURCES.md` and `qa/README.md`.
 
 Where real league/team/player imagery is required, prefer downloading/bundling stable local copies into the repo during the rebuild rather than relying on runtime hotlinks.
 
