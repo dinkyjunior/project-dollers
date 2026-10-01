@@ -2,10 +2,13 @@
   "name": "project-dollers",
   "version": "1.0.0",
   "private": true,
-  "description": "Static Pages 1–3 prototype; npm is used only for browser QA.",
+  "description": "Premium mobile-first NFL sports research; static GitHub Pages with verified refreshable data.",
   "scripts": {
     "test": "node qa/run.cjs",
-    "qa": "node qa/run.cjs"
+    "qa": "node qa/run.cjs",
+    "data:refresh": "python3 scripts/refresh-data.py",
+    "data:check": "python3 scripts/refresh-data.py --check",
+    "qa:hosted": "node qa/hosted.cjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"

@@ -1,0 +1,169 @@
+/* Deliberate motion for the existing three screens. Geometry stays in the UI;
+   only the card border receives a moving football and travelling illumination. */
+.app-shell::after {
+  animation: premium-frame-breathe 6.8s ease-in-out infinite;
+}
+.app-shell:has(.page[data-page="steelers"].active)::after {
+  border-color: #e7bb62;
+  box-shadow: 0 0 2px #fff0c2, 0 0 7px #cf8a2c66,
+    0 0 17px #ad66262b, inset 0 0 6px #ca8a2733;
+}
+.page.active {
+  animation: page-in .28s cubic-bezier(.2,.75,.25,1) both;
+}
+.sport-card,
+.game-card,
+.player-card,
+.bottom-nav button,
+.tabs button,
+.positions button,
+.conference-toggle button,
+.week-row button,
+.settings,
+.team-back,
+.subtle-button {
+  transition: transform .16s cubic-bezier(.2,.8,.2,1),
+    border-color .22s ease, color .18s ease;
+}
+.sport-card:active,
+.game-card:active {
+  transform: scale(.985);
+}
+.bottom-nav button:active,
+.tabs button:active,
+.positions button:active,
+.week-row button:active,
+.settings:active,
+.team-back:active {
+  transform: translateY(1px);
+}
+.player-card:has(.player-expander:active) {
+  transform: scale(.993);
+}
+.nfl-card {
+  animation: none;
+}
+.nfl-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 14px #159dff22, 0 0 9px #15bfff44;
+  pointer-events: none;
+  animation: premium-tile-breathe 5.6s ease-in-out infinite;
+}
+.live-dot {
+  animation: premium-live-breathe 4s ease-in-out infinite;
+}
+.stadium-scene::after {
+  background: linear-gradient(110deg, transparent 42%, #b4f8ff1f 50%, transparent 58%);
+  animation: premium-stadium-reflection 12s cubic-bezier(.3,0,.6,1) infinite;
+}
+.stadium-art {
+  animation: premium-stadium-depth 18s ease-in-out infinite;
+  transform-origin: 50% 70%;
+}
+.player-card.motion-track-ready {
+  --orbit-duration: 9s;
+  --orbit-play-state: paused;
+}
+.player-card.motion-track-ready.motion-in-view {
+  --orbit-play-state: running;
+}
+.player-card.motion-track-ready .orbit-football {
+  /* This path is the measured outer card border, never the portrait. */
+  top: -1px;
+  left: -1px;
+  width: 16px;
+  height: 10px;
+  transform: none;
+  offset-path: var(--card-perimeter);
+  offset-position: 0 0;
+  offset-anchor: 50% 50%;
+  offset-distance: 0%;
+  offset-rotate: auto;
+  border: 1px solid #fbe6b4;
+  background: radial-gradient(ellipse at 37% 22%,#eebc6f,#a85a29 56%,#48260f);
+  box-shadow: 0 0 3px #ffe6b6, 0 0 8px #f3aa3277;
+  animation: premium-card-perimeter var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay, 0s);
+  animation-play-state: var(--orbit-play-state);
+}
+.card-perimeter-light {
+  position: absolute;
+  inset: -1px;
+  z-index: 3;
+  overflow: visible;
+  pointer-events: none;
+  fill: none;
+}
+.card-perimeter-light path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 5 95;
+  stroke-dashoffset: 5;
+  animation: premium-card-light var(--orbit-duration) linear infinite;
+  animation-delay: var(--orbit-delay, 0s);
+  animation-play-state: var(--orbit-play-state);
+}
+.perimeter-light-bloom { stroke: #ef9a2a; stroke-width: 4; opacity: .24; }
+.perimeter-light-core { stroke: #ffe8a4; stroke-width: 1.4; opacity: .86; }
+.motion-paused::after,
+.motion-paused .nfl-card::after,
+.motion-paused .live-dot,
+.motion-paused .stadium-scene::after,
+.motion-paused .stadium-art,
+.page:not(.active) .nfl-card::after,
+.page:not(.active) .live-dot,
+.page:not(.active) .stadium-scene::after,
+.page:not(.active) .stadium-art {
+  animation-play-state: paused;
+}
+.motion-paused .player-card.motion-track-ready {
+  --orbit-play-state: paused;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nfl-card:hover { transform: translateY(-2px); border-color: #d2f7ff; }
+  .game-card:hover { transform: translateY(-1px); }
+  .player-card:has(.player-expander:hover) { border-color: #ffda79; }
+}
+@keyframes premium-card-perimeter { to { offset-distance: 100%; } }
+@keyframes premium-card-light { to { stroke-dashoffset: -95; } }
+@keyframes premium-frame-breathe {
+  0%, 100% { opacity: .84; }
+  50% { opacity: 1; }
+}
+@keyframes premium-tile-breathe {
+  0%, 100% { opacity: .28; }
+  50% { opacity: .72; }
+}
+@keyframes premium-live-breathe {
+  0%, 100% { opacity: .7; }
+  50% { opacity: 1; }
+}
+@keyframes premium-stadium-reflection {
+  0%, 48% { transform: translateX(-110%); opacity: 0; }
+  55% { opacity: .8; }
+  78% { opacity: .8; }
+  90%, 100% { transform: translateX(110%); opacity: 0; }
+}
+@keyframes premium-stadium-depth {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.022) translateY(-1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell::after,
+  .nfl-card::after,
+  .live-dot,
+  .stadium-scene::after,
+  .stadium-art,
+  .page.active,
+  .card-perimeter-light path { animation: none !important; }
+  .card-perimeter-light,
+  .orbit-football { display: none !important; }
+  .sport-card:active,
+  .game-card:active,
+  .nfl-card:hover,
+  .game-card:hover,
+  .player-card:has(.player-expander:active) { transform: none; }
+}

@@ -1,48 +1,49 @@
-# Pages 1–3 visual and functional evidence
+# Final premium QA evidence — Pages 1–3
 
-The user's **approved eight-screen chat attachment** guided this refinement. Its first three top-row panels were visually compared with actual Chromium output at **393×852** and **430×896**, followed by sequential Home → NFL → roster iteration. The source attachment was visible but its file bytes were not exposed; the user explicitly authorized proceeding. See [reference provenance](../reference/CHAT_SOURCE.md).
+The approved eight-screen image supplied in chat is the visual authority. Its first three top-row panels were inspected directly during this refinement. The separately mentioned original concept was not attached in the available context. Original approved-image bytes were not exposed as a repository file; the comparison sheets therefore contain **previous browser output versus final browser output**, never fabricated approved-source pixels.
 
-## Visual evidence
+## Screenshots
 
-| Page | 393 × 852 | 430 × 896 | Side-by-side comparison |
-| --- | --- | --- | --- |
-| Home | [Capture](home-393.png) | [Capture](home-430.png) | [393](comparisons/home-393.jpg), [430](comparisons/home-430.jpg) |
-| NFL | [Capture](nfl-393.png) | [Capture](nfl-430.png) | [393](comparisons/nfl-393.jpg), [430](comparisons/nfl-430.jpg) |
-| Steelers | [Capture](steelers-393.png) | [Capture](steelers-430.png) | [393](comparisons/steelers-393.jpg), [430](comparisons/steelers-430.jpg) |
+Primary viewport sizes are **393 × 852** and **430 × 896**. PNG captures use **2× device scale**, so their files are 786 × 1704 and 860 × 1792 pixels. This preserves Retina detail; viewport dimensions are not inferred from PNG dimensions.
 
-[All six current captures](contact-sheet.jpg) and the [detailed attachment-based comparison](REFERENCE_COMPARISON.md) document layout, proportions, type, glow, image clarity and density. The side-by-side files pair the preserved **previous draft** with the **refined browser output**, not the inaccessible source-image bytes. Each sheet identifies the approved source as the chat attachment. Original reference pixels are not substituted or fabricated.
+| Page | 393 × 852 | 430 × 896 |
+| --- | --- | --- |
+| Home | [Screenshot](home-393.png) | [Screenshot](home-430.png) |
+| NFL | [Screenshot](nfl-393.png) | [Screenshot](nfl-430.png) |
+| Steelers | [Screenshot](steelers-393.png) | [Screenshot](steelers-430.png) |
 
-The screenshots freeze normal animation at a repeatable time. Original stadium art is a standalone background asset; interactive components remain HTML/CSS. All player portraits are authentic downloaded photographs. Five equal roster cards and enlarged jersey labels follow the source's rhythm. The footer frame/navigation, broad slanted masthead, league grid boundaries, compact NFL columns and gold/orange perimeter treatment are materially closer to the supplied render.
+[Contact sheet](contact-sheet.jpg) · [Before/after viewer](comparisons/index.html) · [Reference comparison notes](REFERENCE_COMPARISON.md)
 
-## Functional validation
+Additional captures cover the player accordion, complete-roster bottom, Schedule, Team Stats, Matchups, Top Players, Weekly Recap and Sources. Smaller-phone, tablet and desktop evidence is also saved. The preceding `ae568d1` draft is preserved under `premium-before/`; the older `aa184bd` evidence remains under `before/`.
 
-`npm test` starts a temporary Python server under `/project-dollers/`, runs Chromium, blocks all external requests and tests both viewports. It exits nonzero on failed checks and stops only its own server/browser.
+## Functional and integrity checks
 
-Passed at both sizes:
+`npm test` passed in Chromium 151.0.7922.173 at **393×852, 430×896, 320×700, 768×1024 and 1440×1000**, all at 2× DPR. Browser timezone is Australia/Sydney. The runner blocks every external runtime request.
 
-- Home → NFL → Steelers → NFL → Home; browser back/forward; direct hash loads and refresh on all three pages.
-- NFL tabs, AFC/NFC controls, week selector/chips, team tabs, all seven roster filters, bottom navigation and About.
-- Keyboard tab navigation, reduced motion, aligned table rows and equal five-card bounds.
-- Football animation sampled at 32 points: all four perimeter edges visited without leaving the card boundary.
-- Every local image decoded; zero external requests, HTTP errors, console errors or JavaScript exceptions.
-- No horizontal overflow or clipped default page content at either required size.
-- Exactly three app pages; player-detail Page 4 is not added.
+Coverage includes navigation and entry-specific destinations, history, direct hash loads, refresh, all conference/week controls, all roster position filters, complete 77-player roster expansion, player accordion, all tabs, keyboard navigation, native dialogs, scrolling, local data and image decoding, Retina density/aspect ratios, text clipping, default primary cards above navigation, reduced motion, and feed failure/retry. All four edges and corners of every featured football track and the expanded research card are sampled; the border light shares its phase. No external requests, failed assets, console errors or JavaScript exceptions were recorded.
 
-`results.json` records browser version and run outcomes. Npm dependencies are QA tooling only; the application is static and requires no live services or credentials.
+`python3 qa/data.test.py` passes five regressions covering partial score/stat releases, positional allowance denominators, absent columns, unknown numeric values and future-week recap context. `npm run data:check` validates the snapshot and canonical provenance checksum.
 
-## Scope and remaining differences
+[results.json](results.json) records actual run times, source/file hashes, runtime hashes before/after the run, viewport geometry, image density, animation samples and checks. Git HEAD was the preceding draft while the final changes were uncommitted; exact runtime-file hashes establish which content was tested.
 
-Verified historical 2025 data is retained. Michael Pittman Jr. is not inserted into that year's Steelers roster; Roman Wilson is the verified fifth receiver. The fixture and actual records/stats differ from the source's illustrative values. [Asset/data provenance](../ASSET_SOURCES.md) documents those choices.
+## Independent reviews
 
-Visual comparison establishes a material reduction in the gap, not pixel equality or user visual approval. Fine metallic highlights, flare patterns and portrait crops remain different. Safari/iPhone hardware testing remains unrun; an optional WebKit download was blocked by the network proxy. Publication/merge to `main` is outside this task.
+- [Visual review](VISUAL_REVIEW.md): six primary views and research tabs inspected, two fix cycles, final fixture/card clearance verified.
+- [Data review](DATA_REVIEW.md): source CSVs independently recomputed; absent values, depth chart and injury status remain explicit.
+- [Performance and accessibility](PERFORMANCE_REVIEW.md): lifecycle, keyboard/dialog, contrast and headless frame-cadence measurements.
+- [Mobile/Safari readiness](SAFARI_REVIEW.md): touch and 3× image-density checks at full/compact heights. Actual WebKit download was blocked by 403; Safari/iPhone hardware is unrun.
+- [Deployment review](DEPLOYMENT_REVIEW.md): production subpath and scheduled refresh contract; external verification limits.
+
+An apparent missing-navigation-label issue in image-tool previews was challenged with pixel measurements; the raw screenshots contain all five labels and icons. The capture harness was separately corrected to finish finite transitions rather than restart them when resuming decoration.
 
 ## Reproduce
-
-From `/workspace/project-dollers`:
 
 ```sh
 npm ci --cache /workspace/.onboarding/npm-cache --no-audit --no-fund
 npm test
+python3 qa/data.test.py
+npm run data:check
+npm run qa:hosted
 ```
 
-Python 3, Node and `/usr/bin/chromium` are required. `CHROMIUM_EXECUTABLE` can override the browser path. The test uses port 8765 and expects a checkout named `project-dollers`; it fails if its server cannot bind. Local development uses `python3 -m http.server 8000 --bind 127.0.0.1 --directory /workspace` and the `/project-dollers/` path. No localhost preview link is needed for the saved evidence.
+The static app has no compilation step. Local QA serves the parent folder under `/project-dollers/`. Actual hosted verification uses the exact public URL, checks the committed data and the same interactions, and saves transport/access failure as failure. A local pass or Git push does not establish a successful public deployment.

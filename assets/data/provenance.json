@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-01T15:52:06Z",
+  "retrievedAt": "2026-10-01T15:52:06Z",
+  "snapshotSha256CanonicalJson": "99aa00e6ad5bda54ae8593e6580ff168cf6e1522233fdd701bbec103689540b2",
+  "sources": [
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:06Z",
+      "status": "verified",
+      "sha256": "f3ed832ef43ef901b5bcf3ac663ad355a106325dcb2c55e7cec6ca30ec38d23a",
+      "bytes": 2182354
+    },
+    {
+      "id": "nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:06Z",
+      "status": "verified",
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "bytes": 18919
+    },
+    {
+      "id": "nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:06Z",
+      "status": "verified",
+      "sha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+      "bytes": 957383
+    },
+    {
+      "id": "nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:06Z",
+      "status": "verified",
+      "sha256": "e293e213908f746db982cd9112f5016125a42eeeec16c4773b35c6cc5edf6327",
+      "bytes": 1487226
+    },
+    {
+      "id": "nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:07Z",
+      "status": "verified",
+      "sha256": "1a1c4149017b2d780b1ac53d2298f97145190019eedc0d66f1cfcf4632762706",
+      "bytes": 56175075
+    },
+    {
+      "id": "nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-01T15:52:06Z",
+      "status": "verified",
+      "sha256": "4de401c1e8ba365b834d9e64acb7300606db9a7fb03874ef6bd9cbf5a73702aa",
+      "bytes": 111017
+    }
+  ],
+  "datasets": {
+    "standings": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_teams"
+      ],
+      "season": 2026,
+      "throughWeek": 3,
+      "note": "Calculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null."
+    },
+    "weeklyLeaders": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 3,
+      "note": "Previous available week's yards; future selected weeks explicitly retain latest verified leader week."
+    },
+    "roster": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_roster"
+      ],
+      "season": 2026,
+      "week": 4,
+      "note": "Current retained roster: active, reserve and practice squad; cut players excluded."
+    },
+    "playerStats": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 3,
+      "note": "Summed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT."
+    },
+    "teamStats": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 3,
+      "coverageGameIds": [
+        "2026_01_ATL_PIT",
+        "2026_02_PIT_NE",
+        "2026_03_CIN_PIT"
+      ],
+      "note": "Gross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals."
+    },
+    "schedule": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "season": 2026,
+      "note": "Kickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions."
+    },
+    "injuries": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_injuries"
+      ],
+      "season": 2026,
+      "week": 4,
+      "note": "Practice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable."
+    },
+    "depthChart": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_depth"
+      ],
+      "season": 2026,
+      "sourceTimestamp": "2026-10-01T14:25:58Z",
+      "note": "Latest published ESPN-derived depth order, not a confirmed starter designation."
+    },
+    "opponentAllowances": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_player_stats",
+        "nflverse_games"
+      ],
+      "season": 2026,
+      "throughWeek": 3,
+      "coverageGameIds": [
+        "2026_01_CLE_JAX",
+        "2026_02_CLE_TB",
+        "2026_03_CAR_CLE"
+      ],
+      "opponent": "CLE",
+      "note": "Opponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable."
+    },
+    "historicalMatchups": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "note": "Most recent five completed meetings; each game carries its original season/week."
+    },
+    "historicalPrices": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "note": "Archival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price."
+    },
+    "exactPreGamePrices": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "Archived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price."
+    },
+    "weatherForecast": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "No accessible verified forecast feed in this environment. NOAA API blocked403 during audit. Historical recorded conditions remain sourced game data."
+    },
+    "travel": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "Team travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule."
+    },
+    "crossChecks": {
+      "status": "partial",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_player_stats",
+        "nflverse_roster",
+        "nflverse_depth",
+        "nflverse_injuries"
+      ],
+      "note": "Internal dataset consistency validated. Independent official/ESPN API retrieval blocked403; no claim of independently verified official standings."
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "teamCount": 32,
+    "rosterCount": 77,
+    "activeRosterCount": 53,
+    "season": 2026,
+    "currentWeek": 4,
+    "throughWeek": 3,
+    "featured": [
+      "Aaron Rodgers",
+      "Jaylen Warren",
+      "DK Metcalf",
+      "Michael Pittman",
+      "Pat Freiermuth"
+    ],
+    "disagreements": []
+  },
+  "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
+  "refreshCommand": "python3 scripts/refresh-data.py",
+  "validateCommand": "python3 scripts/refresh-data.py --check",
+  "refreshCadence": "Recommend every six hours during the season; snapshot freshness is always visible in app."
+}

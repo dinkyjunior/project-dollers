@@ -1,25 +1,27 @@
-# Project Dollar$ Codex Handoff Status
+# Project Dollar$ handoff — premium current-data pass
 
-## Current lane
+## Scope and authorization
 
-- Repository: `dinkyjunior/project-dollers`
-- Working branch: `codex-rebuild`
-- Review: Draft PR #1
-- Production: GitHub Pages, `main`, root folder
-- Scope: Pages 1–3 only. No Page 4. Do not merge to `main` without user approval.
+Only Pages 1–3 are implemented. No Page 4. Repository `dinkyjunior/project-dollers`; working branch `codex-rebuild`, PR #1; GitHub Pages production source documented as `main` / root. The latest user request explicitly authorizes completing QA, updating the PR and publishing the finished implementation to production. This supersedes the earlier request to keep `main` untouched for the preceding review pass.
 
-## Approved-source refinements
+## Implementation
 
-The user supplied the eight-screen approved image in chat and confirmed it is the source of truth. Its first three top-row panels were compared with actual browser output at 393×852 and 430×896. Sequential refinements and a second visual pass materially reduced the gaps in masthead proportions, Home grid placement, foreground stadium lighting, NFL density, navigation/frame treatment and the five-card Steelers stack.
+Approved eight-screen chat render first three panels remain the visual authority. Original binary bytes and the separately mentioned concept render were unavailable; no approved-source composite is claimed. Two visual fix cycles retained the masthead/tile/standings/five-card silhouettes while improving type, borders, image crops and touch geometry.
 
-All league/team marks, five genuine player headshots, typefaces and stadium/edge art are local. The Home background is original generated stadium artwork with no people; all portraits are authentic downloaded photographs. The verified historical 2025 snapshot remains clearly labeled. Unsupported source statistics, rankings and roster membership were not copied. See `ASSET_SOURCES.md`.
+76 genuine native headshots, all 32 team marks and league marks are local optimized assets. The stadium art has no people and is explicitly generated background artwork; no faces were generated. WOFF2 type and native WebP imagery are used at runtime.
 
-Offline `npm test` passed at both required sizes with no external requests, missing images, HTTP errors or console/JavaScript errors. It exercises navigation/history/direct loads, tabs, filters, alignment/overflow and all four edges of the perimeter animation. Six final captures, preserved previous-draft captures, six side-by-side before/after comparison sheets, a contact sheet and visual observations are under `qa/`.
+Current 2026 data supersedes the static 2025 sample. The replaceable local JSON feed carries all 32 records, full Steelers roster, game/player/team stats, depth and injury/practice context, schedule, recaps and matchup research. A standard-library refresh script and six-hour/manual workflow validate and publish changes. The complete rounded player card remains the football track, including expanded inline research.
 
-## Reference provenance and next review
+## Validation
 
-The chat attachment was visible but not available as file bytes or a download ID. No copy could be written to `reference/approved_eight_screen_reference.jpg`. The user explicitly instructed continuing and producing available comparison evidence rather than blocking. `reference/CHAT_SOURCE.md` and `qa/REFERENCE_COMPARISON.md` identify the attachment as authority; this is no longer an unresolved source-of-truth question.
+Final Chromium QA passes 393×852, 430×896, 320×700, 768×1024 and 1440×1000 at 2× DPR. Five data regressions and snapshot/provenance checks pass. Six current primary captures, tab/detail evidence and before/after sheets are committed under `qa/`. Six available parallel agent slots were used for functional, visual, source, performance, Safari readiness and deployment review.
 
-The side-by-side files contain preserved and refined browser output; they do not fabricate unavailable original pixels. Visual comparison established material improvement, not pixel identity or user visual approval. Fine flare/metallic details and portrait crops remain different. Safari/hardware QA remains unrun.
+The exact tested content is recorded by runtime/data hashes in `qa/results.json`; screenshots do not merely refer to the old pre-commit Git HEAD. Independent reports document no current factual discrepancies, clean mobile geometry, authentic images and motion lifecycle checks.
 
-Before pushing further work, fetch and rebase the latest `codex-rebuild` so remote changes are preserved. Keep PR #1 in draft; `main` and Page 4 remain untouched.
+## External verification limits
+
+Normal requests to the exact GitHub Pages URL fail at the environment CONNECT tunnel with 403 before receiving a website response; GitHub API requests are Forbidden. A Git push is not a hosted-site verification. `npm run qa:hosted` saves the actual blocked outcome under `qa/hosted/` and must be retried after production publication. Pages configuration and refresh workflow execution cannot currently be checked through the API.
+
+Official WebKit downloads also return 403. Chromium iPhone touch/3× and compact-height checks passed, but actual Safari/iPhone hardware is unrun. Independent official/second-provider NFL access was blocked; datasets were independently recomputed but not falsely claimed cross-provider confirmed. Forecast, travel itinerary, confirmed inactives and exactly timed historical prices remain unavailable.
+
+Read `qa/README.md`, the independent review files and `DEPLOYMENT.md` before continuing. Use the existing checkout; no worktree is needed. Fetch and rebase current `codex-rebuild` before another push.

@@ -1,0 +1,46 @@
+name: Refresh verified NFL data
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: nfl-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out production
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+      - name: Fetch and validate public source data
+        run: |
+          python3 scripts/refresh-data.py
+          python3 scripts/refresh-data.py --check
+      - name: Publish the validated snapshot
+        run: |
+          if git diff --quiet -- assets/data/current.json assets/data/provenance.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/data/current.json assets/data/provenance.json
+          git commit -m 'Refresh verified NFL snapshot'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      # GITHUB_TOKEN commits do not trigger the automatic branch Pages build.
+      # Request that build explicitly for the configured main / root source.
+      - name: Rebuild the published GitHub Pages site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"

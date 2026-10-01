@@ -61,3 +61,7 @@ Read in this order:
 7. `reference/approved_eight_screen_reference.jpg`
 
 Then continue the rebuild on `codex-rebuild` and do not merge to `main` until approved.
+
+## Latest task authorization and data
+
+The premium refinement request authorizes production publication after QA. That instruction supersedes the earlier hold on `main` for the preceding draft pass. Page 4 remains excluded. Runtime data is now the verified refreshable 2026 JSON feed; the environment/tooling remains static Python HTTP plus pinned Playwright. Actual hosted and Safari verification are tracked separately in `qa/` and remain blocked where official requests receive proxy403.

@@ -9,13 +9,18 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Project Dollar$ — sports data and research. A self-contained 2025 NFL research snapshot."
+      content="Project Dollar$ — sports data and research. Current NFL data, authentic player imagery, and premium team research."
     />
     <title>Project Dollar$ · Sports Data &amp; Research</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preload" href="assets/fonts/BarlowCondensed-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/Barlow-BlackItalic.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/refinements.css" />
-    <script src="assets/data/snapshot.js" defer></script>
+    <link rel="stylesheet" href="assets/premium.css" />
+    <link rel="stylesheet" href="assets/motion.css" />
     <script src="assets/app.js" defer></script>
+    <script src="assets/motion.js" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -56,7 +61,7 @@
             <div class="sport-grid">
               <button class="sport-card nfl-card" data-open="nfl">
                 <img
-                  src="assets/logos/nfl.png"
+                  src="assets/logos/nfl.webp"
                   alt="NFL shield"
                   width="500"
                   height="500"
@@ -68,7 +73,7 @@
               </button>
               <div class="sport-card nba-card">
                 <img
-                  src="assets/logos/nba.png"
+                  src="assets/logos/nba.webp"
                   alt="NBA logo"
                   width="500"
                   height="500"
@@ -76,7 +81,7 @@
               </div>
               <div class="sport-card nrl-card">
                 <img
-                  src="assets/logos/nrl.png"
+                  src="assets/logos/nrl.webp"
                   alt="NRL shield"
                   width="500"
                   height="500"
@@ -97,14 +102,16 @@
             >
               <img
                 class="stadium-art"
-                src="assets/football-stadium.png"
+                src="assets/football-stadium.webp"
                 alt="Football and floodlit stadium artwork"
                 width="1983"
                 height="793"
+                decoding="async"
+                fetchpriority="high"
               />
             </div>
             <p class="home-footnote">
-              NFL RESEARCH <span>2025 SEASON SNAPSHOT</span>
+              NFL RESEARCH <span>CURRENT NFL RESEARCH</span>
             </p>
           </div>
         </div>
@@ -150,22 +157,18 @@
             </div>
             <header class="league-header">
               <img
-                src="assets/logos/nfl.png"
+                src="assets/logos/nfl.webp"
                 alt="NFL"
                 width="500"
                 height="500"
               />
               <div>
                 <h1>NFL</h1>
-                <p>2025 REGULAR SEASON</p>
+                <p id="season-context">NFL REGULAR SEASON</p>
               </div>
               <label class="week-select"
                 ><span class="sr-only">Select NFL week</span
-                ><select id="week-select">
-                  <option value="2">Week 2</option>
-                  <option value="3">Week 3</option>
-                  <option value="4" selected>Week 4</option>
-                  <option value="5">Week 5</option></select
+                ><select id="week-select" disabled><option>Loading…</option></select
                 ><svg class="icon" aria-hidden="true">
                   <use href="assets/icons.svg#down"></use></svg
               ></label>
@@ -215,13 +218,12 @@
                 ><button data-conference="NFC" aria-pressed="false">NFC</button>
               </div>
               <div class="table-label">
-                <span id="table-caption">SELECTED AFC TEAMS</span
-                ><span class="through-week">THROUGH WEEK 3</span>
+                <div><span id="table-caption">AFC TEAM RECORDS</span><span class="through-week">LOADING DATA</span></div><button class="subtle-button standings-toggle" data-standings-toggle aria-expanded="false">All conference teams</button>
               </div>
               <div
                 class="standings"
                 role="table"
-                aria-label="Selected team records; not a conference ranking"
+                aria-label="Conference records sorted by win percentage; not official playoff seeding"
               >
                 <div class="stand-head" role="row">
                   <span role="columnheader">#</span
@@ -257,23 +259,15 @@
               <h2 id="recap-title">Week 3 in numbers</h2>
               <div id="recap-content"></div>
             </div>
-            <div class="week-row" role="group" aria-label="Week selection">
-              <button data-week="2" aria-pressed="false">Week 2</button
-              ><button data-week="3" aria-pressed="false">Week 3</button
-              ><button data-week="4" aria-pressed="true">Week 4</button
-              ><button data-week="5" aria-pressed="false">Week 5</button>
-            </div>
+            <div class="week-row" role="group" aria-label="Week selection"></div>
             <section class="matchup-section" aria-label="Steelers fixture">
               <div class="section-heading">
                 <h2>FEATURED MATCHUP</h2>
-                <span>2025 ARCHIVE</span>
+                <span id="fixture-context">CURRENT SEASON</span>
               </div>
               <div id="featured-matchup"></div>
             </section>
-            <p class="data-note">
-              Historical snapshot · nflverse
-              <span>Not live standings or rankings</span>
-            </p>
+            <div class="data-status" id="data-status"><span>Loading verified data…</span><button data-sources>Sources</button></div>
           </div>
         </div>
         <nav class="bottom-nav" aria-label="Main navigation">
@@ -331,14 +325,14 @@
                   <use href="assets/icons.svg#back"></use>
                 </svg></button
               ><img
-                src="assets/logos/pit.png"
+                src="assets/logos/pit.webp"
                 alt="Steelers logo"
                 width="500"
                 height="500"
               />
               <div>
                 <h1>Pittsburgh Steelers</h1>
-                <p>2025 ROSTER SNAPSHOT <span>2–1 THROUGH WEEK 3</span></p>
+                <p id="team-context">CURRENT ROSTER <span>Loading verified data…</span></p>
               </div>
             </header>
             <div
@@ -394,166 +388,19 @@
                 ><button data-filter="RB" aria-pressed="false">RB</button
                 ><button data-filter="WR" aria-pressed="false">WR</button
                 ><button data-filter="TE" aria-pressed="false">TE</button
+                ><button data-filter="OL" aria-pressed="false">OL</button
                 ><button data-filter="DEF" aria-pressed="false">DEF</button
                 ><button data-filter="K" aria-pressed="false">K</button>
               </div>
               <div class="roster-heading">
-                <span>PLAYER RESEARCH</span><span>THROUGH WEEK 3</span>
+                <span>PLAYER RESEARCH</span><span>LOADING DATA</span>
               </div>
-              <div id="roster" class="roster">
-                <article
-                  class="player-card"
-                  data-position="QB"
-                  style="--orbit-delay: -0s"
-                  aria-label="Aaron Rodgers, QB"
-                >
-                  <span class="orbit-football" aria-hidden="true"></span>
-                  <div class="portrait">
-                    <img
-                      src="assets/players/aaron-rodgers.png"
-                      alt="Aaron Rodgers"
-                      width="600"
-                      height="436"
-                    />
-                  </div>
-                  <div class="player-info">
-                    <h2>
-                      <span class="jersey">#8</span
-                      ><span class="player-name">Aaron Rodgers</span>
-                    </h2>
-                    <p>QB <span>· PITTSBURGH STEELERS</span></p>
-                    <div class="player-stats">
-                      <div><b>586</b><span>PASS YDS</span></div>
-                      <div><b>7</b><span>TD</span></div>
-                      <div><b>3</b><span>INT</span></div>
-                      <div><b>65.1%</b><span>COMP</span></div>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="player-card"
-                  data-position="RB"
-                  style="--orbit-delay: -1.8s"
-                  aria-label="Jaylen Warren, RB"
-                >
-                  <span class="orbit-football" aria-hidden="true"></span>
-                  <div class="portrait">
-                    <img
-                      src="assets/players/jaylen-warren.png"
-                      alt="Jaylen Warren"
-                      width="600"
-                      height="436"
-                    />
-                  </div>
-                  <div class="player-info">
-                    <h2>
-                      <span class="jersey">#30</span
-                      ><span class="player-name">Jaylen Warren</span>
-                    </h2>
-                    <p>RB <span>· PITTSBURGH STEELERS</span></p>
-                    <div class="player-stats">
-                      <div><b>132</b><span>RUSH YDS</span></div>
-                      <div><b>43</b><span>ATT</span></div>
-                      <div><b>142</b><span>REC YDS</span></div>
-                      <div><b>3.1</b><span>YPC</span></div>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="player-card"
-                  data-position="WR"
-                  style="--orbit-delay: -3.6s"
-                  aria-label="DK Metcalf, WR"
-                >
-                  <span class="orbit-football" aria-hidden="true"></span>
-                  <div class="portrait">
-                    <img
-                      src="assets/players/dk-metcalf.png"
-                      alt="DK Metcalf"
-                      width="600"
-                      height="436"
-                    />
-                  </div>
-                  <div class="player-info">
-                    <h2>
-                      <span class="jersey">#4</span
-                      ><span class="player-name">DK Metcalf</span>
-                    </h2>
-                    <p>WR <span>· PITTSBURGH STEELERS</span></p>
-                    <div class="player-stats">
-                      <div><b>10</b><span>REC</span></div>
-                      <div><b>135</b><span>REC YDS</span></div>
-                      <div><b>2</b><span>TD</span></div>
-                      <div><b>13.5</b><span>YPR</span></div>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="player-card"
-                  data-position="WR"
-                  style="--orbit-delay: -5.4s"
-                  aria-label="Roman Wilson, WR"
-                >
-                  <span class="orbit-football" aria-hidden="true"></span>
-                  <div class="portrait">
-                    <img
-                      src="assets/players/roman-wilson.png"
-                      alt="Roman Wilson"
-                      width="600"
-                      height="436"
-                    />
-                  </div>
-                  <div class="player-info">
-                    <h2>
-                      <span class="jersey">#10</span
-                      ><span class="player-name">Roman Wilson</span>
-                    </h2>
-                    <p>WR <span>· PITTSBURGH STEELERS</span></p>
-                    <div class="player-stats">
-                      <div><b>1</b><span>REC</span></div>
-                      <div><b>7</b><span>REC YDS</span></div>
-                      <div><b>0</b><span>TD</span></div>
-                      <div><b>7.0</b><span>YPR</span></div>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="player-card"
-                  data-position="TE"
-                  style="--orbit-delay: -7.2s"
-                  aria-label="Pat Freiermuth, TE"
-                >
-                  <span class="orbit-football" aria-hidden="true"></span>
-                  <div class="portrait">
-                    <img
-                      src="assets/players/pat-freiermuth.png"
-                      alt="Pat Freiermuth"
-                      width="600"
-                      height="436"
-                    />
-                  </div>
-                  <div class="player-info">
-                    <h2>
-                      <span class="jersey">#88</span
-                      ><span class="player-name">Pat Freiermuth</span>
-                    </h2>
-                    <p>TE <span>· PITTSBURGH STEELERS</span></p>
-                    <div class="player-stats">
-                      <div><b>7</b><span>REC</span></div>
-                      <div><b>65</b><span>REC YDS</span></div>
-                      <div><b>0</b><span>TD</span></div>
-                      <div><b>9.3</b><span>YPR</span></div>
-                    </div>
-                  </div>
-                </article>
-              </div>
+              <div id="roster" class="roster" aria-live="polite"></div>
+              <button class="subtle-button" data-roster-toggle aria-expanded="false">Show complete roster</button>
               <p id="empty-roster" class="empty-state" role="status" hidden>
-                No players in this position are included in this five-player
-                snapshot.
+                No players are listed for this position in the current source.
               </p>
-              <p class="roster-note">
-                Selected 2025 players · cumulative Weeks 1–3 stats
-              </p>
+              <p class="roster-note" id="roster-note"></p>
             </div>
             <div
               id="team-panel-schedule"
@@ -561,7 +408,7 @@
               aria-labelledby="team-tab-schedule"
               hidden
             >
-              <h2 class="panel-title">2025 · Weeks 2–5</h2>
+              <h2 class="panel-title" id="schedule-title">Season schedule</h2>
               <div id="schedule-list"></div>
             </div>
             <div
@@ -570,14 +417,7 @@
               aria-labelledby="team-tab-stats"
               hidden
             >
-              <h2 class="panel-title">Through Week 3 · 2025</h2>
-              <div class="team-record">
-                <b>2</b><span>WINS</span><b>1</b><span>LOSS</span>
-              </div>
-              <p class="section-note">
-                Selected player totals are available in the roster. Aggregate
-                team stats are not populated in this snapshot.
-              </p>
+              <div id="team-stats-content"></div>
             </div>
             <div
               id="team-panel-matchups"
@@ -585,8 +425,9 @@
               aria-labelledby="team-tab-matchups"
               hidden
             >
-              <h2 class="panel-title">Featured 2025 fixture</h2>
+              <h2 class="panel-title" id="matchup-title">Matchup research</h2>
               <div id="team-matchup"></div>
+              <div id="matchup-research"></div>
             </div>
           </div>
         </div>
@@ -619,25 +460,29 @@
         </nav>
       </section>
     </main>
-    <dialog id="about-dialog">
+    <dialog id="about-dialog" aria-labelledby="about-title">
       <form method="dialog">
         <button class="dialog-close" aria-label="Close about panel">×</button>
       </form>
       <span class="eyebrow">SPORTS DATA &amp; RESEARCH</span>
-      <h2>Project Dollar<span class="cyan">$</span></h2>
+      <h2 id="about-title">Project Dollar<span class="cyan">$</span></h2>
       <p>
-        Explore the NFL, its teams, and selected player research in a bundled
-        2025 season snapshot.
+        Explore current NFL records, leaders, fixtures and Steelers research.
+        Data refreshes through a scheduled repository feed; it is not a play-by-play stream.
       </p>
       <p>
-        NBA, NRL and UFC are coming soon. Statistics are historical, not a live
-        feed.
+        NBA, NRL and UFC are coming soon. Open Data sources to inspect freshness and coverage.
       </p>
       <p class="credits">
         League marks and player photography are credited in the repository asset
         notes. The stadium foreground is original generated background artwork;
         all player portraits are real photographs.
       </p>
+    </dialog>
+    <dialog id="sources-dialog" aria-labelledby="sources-title">
+      <form method="dialog"><button class="dialog-close" aria-label="Close data sources">×</button></form>
+      <span class="eyebrow">DATA INTEGRITY</span><h2 id="sources-title">Sources &amp; freshness</h2>
+      <div id="sources-content"></div>
     </dialog>
     <noscript
       ><p class="noscript">

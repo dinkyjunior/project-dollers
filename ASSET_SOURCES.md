@@ -1,36 +1,36 @@
-# Bundled visual assets and research data
+# Bundled visual assets and provenance
 
-The application loads every logo, portrait, font, icon, football illustration and stadium image from a relative repository path. There are no runtime image hotlinks, remote fonts or API requests. Attribution links in the About dialog are links, not automatically loaded resources.
+League and team marks, player photography, fonts, interface icons and background artwork are served from relative repository paths. The application does not depend on hotlinked images or remotely loaded fonts. Every optimized asset has a source URL or local source identifier, SHA-256 checksum, source checksum, transformation description and processing/retrieval context in [assets/sources.json](assets/sources.json).
 
-## Logos and player photography
+## League and team logos
 
-- NFL, NBA and NRL league logos: ESPN CDN, original 500px assets.
-- Chiefs, Bills, Steelers, Ravens, Texans, Browns, Eagles, Lions, 49ers, Packers, Cowboys, Vikings, Patriots and Seahawks logos: ESPN CDN, original 500px assets.
-- Aaron Rodgers (ESPN ID 8439), Jaylen Warren (4569987), DK Metcalf (4047650) Roman Wilson (4431492) and Pat Freiermuth (4361411): original ESPN photographic headshots, 600×436px. No generated faces, portrait substitutions, recoloring, or upscaling.
-- UFC vector wordmark: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:UFC_Logo.svg?uselang=en), credited there to UFC. Commons identifies it as a public-domain text logo; trademark rights remain applicable.
-- ESPN sports marks and headshots remain the property of their respective owners. These bundled copies identify leagues, teams and players in the research prototype; they are not a grant of commercial reuse rights.
+NFL, NBA and NRL league logos and all 32 NFL team marks are bundled as lossless WebP files in `assets/logos/`. These originate from ESPN's public image CDN. Most original files are 500×500 pixels. The Jets endpoint supplied a larger native image; it was downsampled to a 500-pixel box using Lanczos. No logo was upscaled. Transparent margins and original proportions are retained.
 
-Exact download URLs and SHA-256 hashes for the unmodified downloaded assets are in [assets/sources.json](assets/sources.json).
+These 500-pixel assets support sharp mobile presentation at up to three device pixels per CSS pixel. They are substantially larger than the marks displayed in dashboard tables, headers and fixture cards. Logo mapping, native dimensions and source URLs are in [assets/player-assets.json](assets/player-assets.json). ESPN abbreviations `lar`/`wsh` also have `LA`/`WAS` aliases for nflverse team codes.
 
-## Stadium, type and interface art
+The UFC wordmark remains a bundled SVG from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:UFC_Logo.svg?uselang=en), credited there to UFC. Commons identifies it as a public-domain text logo; trademark rights still apply. The ESPN marks remain the property of the respective leagues and teams. Public access to an image does not establish permission for commercial reuse.
 
-- Legacy `assets/stadium.jpg` (retained from the earlier draft; no longer used by Home): **Heinz Field**, Joey Gannon, March 30, 2006. [Commons description](https://commons.wikimedia.org/wiki/File:Heinz_Field.jpg?uselang=en); [original Flickr](https://www.flickr.com/photos/67961268@N00/120510253/); [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Original image bytes are preserved. The UI crops it and applies CSS brightness, saturation and contrast changes. This legacy photograph is not rendered in the current Home scene. Its attribution and license are retained here.
-- `assets/fonts/Anton-Regular.ttf`: Anton, Google Fonts. SIL Open Font License is bundled in `assets/fonts/OFL.txt`.
-- `Barlow-BlackItalic.ttf` and `BarlowCondensed-SemiBold.ttf`: Barlow and Barlow Condensed, Google Fonts. Their SIL Open Font Licenses are bundled as `Barlow-OFL.txt` and `BarlowCondensed-OFL.txt`.
-- `assets/football-stadium.png`: original generated stadium/football artwork, 1983×793px, prepared specifically for the Home foreground. It contains no people. The asset is independent of the approved interface render; HTML/CSS implements every actual interface component. The supplied original PNG is bundled unchanged, with SHA-256 in `assets/sources.json`.
-- `assets/icons.svg`, `assets/energy.svg` and `assets/roster-energy.svg`: original scalable interface art and edge-light effects. `assets/football.svg` is retained as the earlier draft's unused vector fallback.
+## Authentic player photography
 
-## Verified 2025 research snapshot
+The 2026 Week 4 Steelers roster contains 77 players when active, developmental and reserve records are included and released (`CUT`) records are excluded. Authentic photographic headshots were available for 76 of those players through ESPN's public image CDN. Each is stored as `assets/players/{espnId}.webp`, retaining the native 600×436 dimensions with quality-90 WebP compression. No upscaling, generated faces, recoloring, synthetic uniform changes or face substitutions were used.
 
-The season is deliberately labeled **2025** to match the available reference specification. It is historical and does not claim live 2026 roster, standings, schedule or statistical accuracy.
+Player IDs are matched to nflverse roster records by GSIS ID. Nineteen missing ESPN IDs were recovered through the public [nflverse player identity dataset](https://github.com/nflverse/nflverse-data/releases/download/players/players.csv), with matching birth dates checked before downloading. Exact identity source hashes and IDs are recorded internally. Photo mapping is keyed by GSIS ID, so the UI does not need to guess a URL for a missing ID.
 
-- Selected player names, positions, Steelers affiliation and jersey numbers: [nflverse 2025 roster release](https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2025.csv). The five relevant records and source hash are retained in `assets/data/roster-source.json`.
-- Player statistics: [nflverse 2025 weekly player statistics](https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv).
-- Team records and fixtures: [nflverse/nfldata games](https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv).
-- Processed data, source URLs and original-file hashes: `assets/data/snapshot.js`.
+Michael Pittman (`4035687`) has a verified 2026 Pittsburgh roster record and an authentic black-uniform photograph. Aaron Rodgers (`8439`), Jaylen Warren (`4569987`), DK Metcalf (`4047650`) and Pat Freiermuth (`4361411`) also have native photographs. The current dataset places Jaylen Warren at jersey number 30 and Pittman at number 11; old reference artwork does not override verified current roster information.
 
-Dashboard Week 2–5 selections show team records **through the prior week** and that prior week's QB/RB leaders. Leaders are sorted by passing yards for QBs and rushing yards for RBs, with name as the deterministic tie break. The team table includes the reference's selected teams, not an official conference ranking; its rank column is deliberately unpopulated. Win percentage is `(wins + ties/2) / games`; streak counts consecutive identical results through the selected cutoff.
+Gabe Rubio has no verified ESPN identity ID in the available datasets. The official NFL public image host returned 403, so his photo is explicitly unavailable. The UI must display its neutral non-photographic fallback rather than request a guessed URL or substitute another face. A few authentic CDN photos retain a previous uniform colour, including Isaiah Hodgins, Darius Rush and Travis Homer; those photographs have not been digitally recolored.
 
-Roster stats are cumulative 2025 regular-season Weeks 1–3. Completion rate is completions/attempts; YPC is rushing yards/carries; YPR is receiving yards/receptions. Starter/depth-chart labels, AFC North position, and unverified player data are not asserted. Roman Wilson supplies the fifth verified 2025 Steelers card. The approved illustration's Michael Pittman Jr. does not appear in that season's Pittsburgh roster, so his membership and mock statistics were not copied.
+Photography remains the property of the respective rights holders. These source records document provenance, not a commercial reuse license. The blocked NFL image host and ESPN roster API were not bypassed.
 
-The verified Week 4 Steelers fixture is against the Vikings on September 28, 2025, not the previous prototype's unsupported Friday/Browns fixture. No stadium location is asserted because the upstream Week 4 stadium field conflicts with the game's known neutral-site designation. Week 5 correctly displays a bye. The schedule panel is restricted to Weeks 2–5; it does not imply a complete season schedule.
+## Background, fonts and interface artwork
+
+- `assets/football-stadium.webp` is a quality-90 WebP derivative of the existing original `football-stadium.png`, retaining its native 1983×793 dimensions. It depicts a football and stadium and contains no people. It is generated background artwork, not a photograph of an identified venue, game or player. The original PNG remains bundled for traceability.
+- Anton, Barlow Black Italic and Barlow Condensed Semibold are bundled as Latin-1 and UI-punctuation WOFF2 subsets. Their original TTF files and SIL Open Font License files remain in `assets/fonts/`. Subsetting reduces transfer size while keeping the existing typography and licensed font names.
+- `assets/icons.svg`, `assets/energy.svg` and `assets/roster-energy.svg` are original scalable interface artwork. They are rendered as vectors rather than low-resolution raster decorations. `assets/football.svg` is retained as an earlier unused fallback.
+- Legacy `assets/stadium.jpg` is **Heinz Field**, Joey Gannon, March 30, 2006: [Commons description](https://commons.wikimedia.org/wiki/File:Heinz_Field.jpg?uselang=en), [original Flickr](https://www.flickr.com/photos/67961268@N00/120510253/), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). It is retained from the historical draft and is not the current Home backdrop. Its original bytes, attribution and license are preserved.
+
+The previous PNG logos, five named-player PNGs and TTF fonts are retained as historical source/fallback files. The current interface should prefer the optimized WebP/WOFF2 mappings. Lazy loading and appropriately sized image rendering keep the full-roster asset collection out of the initial transfer.
+
+## Sports-data provenance
+
+The current production data and its source/cross-check context are recorded separately in [assets/data/current.json](assets/data/current.json) and [assets/data/provenance.json](assets/data/provenance.json). The original `snapshot.js` and `roster-source.json` are historical 2025 draft artifacts, not current-season authority. Current roster membership, jerseys, fixtures and statistics follow verified source records rather than mock values in the supplied visual renders.
