@@ -171,6 +171,8 @@ window.PD_DATA = {
         gametime: "13:00",
         away_team: "SEA",
         home_team: "PIT",
+        away_record: "0\u20131",
+        home_record: "1\u20130",
       },
     },
     3: {
@@ -343,6 +345,8 @@ window.PD_DATA = {
         gametime: "13:00",
         away_team: "PIT",
         home_team: "NE",
+        away_record: "1\u20131",
+        home_record: "1\u20131",
       },
     },
     4: {
@@ -515,6 +519,8 @@ window.PD_DATA = {
         gametime: "09:30",
         away_team: "MIN",
         home_team: "PIT",
+        away_record: "2\u20131",
+        home_record: "2\u20131",
       },
     },
     5: {
@@ -750,6 +756,29 @@ window.PD_DATA = {
         },
         {
           value: "13.5",
+          label: "YPR",
+        },
+      ],
+    },
+    {
+      name: "Roman Wilson",
+      number: "10",
+      position: "WR",
+      stats: [
+        {
+          value: 1,
+          label: "REC",
+        },
+        {
+          value: 7,
+          label: "REC YDS",
+        },
+        {
+          value: 0,
+          label: "TD",
+        },
+        {
+          value: "7.0",
           label: "YPR",
         },
       ],

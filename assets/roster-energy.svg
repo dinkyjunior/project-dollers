@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" fill="none">
+<defs>
+ <filter id="fire"><feGaussianBlur stdDeviation="3"/></filter>
+ <filter id="spark"><feGaussianBlur stdDeviation=".65"/></filter>
+ <linearGradient id="heat"><stop stop-color="#fff4bc"/><stop offset=".25" stop-color="#ffb321"/><stop offset=".65" stop-color="#f95105"/><stop offset="1" stop-color="#ffd738"/></linearGradient>
+ <g id="rim"><path d="M25 8C85 4 115 11 177 7S301 4 373 9Q392 12 390 28L392 107Q390 130 373 132L24 132Q7 128 9 107L8 32Q8 10 25 8Z"/><path d="M42 7l-13-4-9 7-7-2-7 17 6 6-4 13 7 9-5 10M370 8l9-5 10 7-3 12 6 8-3 11M25 132l8-4 10 5 6-6 14 5M367 132l12 1 6-10 8 2"/></g>
+</defs>
+<g stroke="#ff6900" stroke-width="7" opacity=".64" filter="url(#fire)"><use href="#rim"/></g>
+<g stroke="url(#heat)" stroke-width="2"><use href="#rim"/></g>
+<g stroke="#fff1a1" stroke-width=".7" opacity=".9"><use href="#rim"/></g>
+<path d="M7 37l-5 6 5 3-3 5M8 77l5 6-4 5-6-3M388 110l6 4-3 8-8 3" stroke="#ffb73a" stroke-width="1.8"/>
+<g fill="#fff5b2" filter="url(#spark)"><circle cx="13" cy="35" r="2"/><circle cx="370" cy="11" r="1.6"/><circle cx="42" cy="129" r="2"/><circle cx="390" cy="114" r="1.6"/></g>
+</svg>

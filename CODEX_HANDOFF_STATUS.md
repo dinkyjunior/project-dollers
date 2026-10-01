@@ -8,16 +8,18 @@
 - Production: GitHub Pages, `main`, root folder
 - Scope: Pages 1–3 only. No Page 4. Do not merge to `main` without user approval.
 
-## Rebuild completed for draft review
+## Approved-source refinements
 
-The static HTML/CSS/JavaScript implementation now uses repository-local league/team logos, four real player headshots, an included display font, a stadium photograph and vector interface art. There are no runtime external image, font or data dependencies. Download sources, attribution and hashes are documented in `ASSET_SOURCES.md`.
+The user supplied the eight-screen approved image in chat and confirmed it is the source of truth. Its first three top-row panels were compared with actual browser output at 393×852 and 430×896. Sequential refinements and a second visual pass materially reduced the gaps in masthead proportions, Home grid placement, foreground stadium lighting, NFL density, navigation/frame treatment and the five-card Steelers stack.
 
-The interface uses a clearly labeled, verified historical 2025 snapshot. Dashboard week/conference controls, NFL/team tabs, roster filters, navigation and About work within the existing three pages. Roster cards share exact geometry and have a football animation around the complete perimeter. Unused old illustrated portrait SVGs were removed.
+All league/team marks, five genuine player headshots, typefaces and stadium/edge art are local. The Home background is original generated stadium artwork with no people; all portraits are authentic downloaded photographs. The verified historical 2025 snapshot remains clearly labeled. Unsupported source statistics, rankings and roster membership were not copied. See `ASSET_SOURCES.md`.
 
-`npm test` passed at 393×852 and 430×896 with external requests blocked. Six browser captures, alignment/overflow results, navigation results and animation checks are in `qa/`. See `qa/README.md` for detailed evidence and limitations.
+Offline `npm test` passed at both required sizes with no external requests, missing images, HTTP errors or console/JavaScript errors. It exercises navigation/history/direct loads, tabs, filters, alignment/overflow and all four edges of the perimeter animation. Six final captures, preserved previous-draft captures, six side-by-side before/after comparison sheets, a contact sheet and visual observations are under `qa/`.
 
-## Required next visual step
+## Reference provenance and next review
 
-The handoff originally described `reference/approved_eight_screen_reference.jpg`, but the file was absent from the remote Draft PR #1 branch when this task fetched it. The fallback in `REFERENCE_SPEC.md` guided the rebuild. The original reference still must be supplied/restored for exact side-by-side review; current captures do not establish final visual approval.
+The chat attachment was visible but not available as file bytes or a download ID. No copy could be written to `reference/approved_eight_screen_reference.jpg`. The user explicitly instructed continuing and producing available comparison evidence rather than blocking. `reference/CHAT_SOURCE.md` and `qa/REFERENCE_COMPARISON.md` identify the attachment as authority; this is no longer an unresolved source-of-truth question.
 
-Continue on `codex-rebuild`. Read `CODEX_START.md`, inspect the six captures, locate the approved original render and iterate sequentially Page 1 → Page 2 → Page 3. Safari/hardware QA, original-render visual acceptance and production deployment are not claimed.
+The side-by-side files contain preserved and refined browser output; they do not fabricate unavailable original pixels. Visual comparison established material improvement, not pixel identity or user visual approval. Fine flare/metallic details and portrait crops remain different. Safari/hardware QA remains unrun.
+
+Before pushing further work, fetch and rebase the latest `codex-rebuild` so remote changes are preserved. Keep PR #1 in draft; `main` and Page 4 remain untouched.

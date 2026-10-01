@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 900" fill="none">
+<defs>
+ <filter id="halo"><feGaussianBlur stdDeviation="5"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="1.4"/></filter>
+ <linearGradient id="blue"><stop stop-color="#007bff"/><stop offset=".35" stop-color="#7afaff"/><stop offset=".7" stop-color="#2446ff"/><stop offset="1" stop-color="#c149ff"/></linearGradient>
+ <linearGradient id="hot"><stop stop-color="#0077ff"/><stop offset=".45" stop-color="#fc54bf"/><stop offset=".65" stop-color="#fff4ac"/><stop offset="1" stop-color="#18b8ff"/></linearGradient>
+ <radialGradient id="flare"><stop stop-color="#fff"/><stop offset=".06" stop-color="#fff5b1"/><stop offset=".18" stop-color="#ff981a" stop-opacity=".85"/><stop offset=".5" stop-color="#f94600" stop-opacity=".2"/><stop offset="1" stop-color="#fa5500" stop-opacity="0"/></radialGradient>
+ <g id="spark"><circle r="23" fill="url(#flare)"/><path d="M-18 0H18M0-18V18M-10-10 10 10M-10 10 10-10" stroke="#ffd28b" stroke-width=".65"/><circle r="2" fill="#fff8d7"/></g>
+ <g id="trails"><path d="M-35 171C75 131 35 48 189 78S311 99 446 43M-19 228C128 154 284 40 448 8M-30 677C67 636 164 715 286 631S396 648 478 584M-20 797C90 710 209 762 444 678"/><path d="M-18 116 169 171 448 48M-22 640C94 712 347 605 440 746M-36 743 453 639M-16 843C94 734 334 813 458 724"/></g>
+</defs>
+<g stroke="url(#blue)" stroke-width="10" opacity=".65" filter="url(#halo)"><use href="#trails"/></g>
+<g stroke="url(#blue)" stroke-width="1.5" opacity=".85"><use href="#trails"/></g>
+<path d="M-22 672C121 716 276 591 441 664M-12 756 446 683M8 866 430 785" stroke="url(#hot)" stroke-width="2.3"/>
+<g fill="#befbff" opacity=".9">
+ <circle cx="99" cy="67" r="1.8"/><circle cx="122" cy="46" r="1.1"/><circle cx="299" cy="30" r="1.3"/><circle cx="382" cy="132" r="1.5"/><circle cx="43" cy="154" r="1.2"/><circle cx="371" cy="269" r="1.3"/><circle cx="33" cy="427" r="1"/><circle cx="392" cy="523" r="1.1"/><circle cx="181" cy="657" r="1.7"/><circle cx="249" cy="692" r="1.3"/><circle cx="327" cy="649" r="1.4"/><circle cx="109" cy="706" r="1.6"/><circle cx="340" cy="751" r="1.4"/><circle cx="54" cy="822" r="1.5"/>
+</g>
+<g opacity=".85"><use href="#spark" x="28" y="103"/><use href="#spark" x="91" y="48"/><use href="#spark" x="360" y="649"/><use href="#spark" x="42" y="679"/><use href="#spark" x="116" y="688"/><use href="#spark" x="395" y="804"/><use href="#spark" x="74" y="837"/></g>
+</svg>

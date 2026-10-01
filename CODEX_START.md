@@ -36,4 +36,4 @@ npm test
 
 Npm is for QA tooling only; no app build or live API credentials are required. The test starts its own temporary Python server and Chromium and saves six screenshots under `qa/`. Read `qa/README.md` and `ASSET_SOURCES.md`. Never replace verified data with invented values or reintroduce runtime hotlinks. Keep attribution when changing the stadium or font.
 
-The original approved image is currently missing at the expected path. Restore it before claiming original-render visual acceptance. The fallback guided the current draft rebuild; the captured browser output remains subject to exact reference comparison and user approval.
+The user supplied the approved eight-screen render as a chat attachment. It was used directly for the latest visual comparison and sequential refinements; see `reference/CHAT_SOURCE.md` and `qa/REFERENCE_COMPARISON.md`. The attachment bytes were not available for copying to the expected image path, and the user explicitly instructed continuing without blocking. Do not mistake that file limitation for absence of an approved source. Current screenshots and side-by-side before/after evidence remain subject to user visual approval.

@@ -46,7 +46,7 @@ Use repo-local assets for anything needed to render and compare the core experie
 The approved visual reference is expected at:
 `reference/approved_eight_screen_reference.jpg`
 
-It was absent from the remote `codex-rebuild` branch at handoff commit `2a11d82`. Until restored, use `REFERENCE_SPEC.md` as the permitted fallback and leave original-render visual acceptance pending. Bundled assets and browser evidence are now in the repository; see `ASSET_SOURCES.md` and `qa/README.md`.
+The user subsequently supplied the approved eight-screen render in chat, and that attachment guided the latest comparison/refinements. Its bytes were not exposed for a repository copy; the user expressly authorized proceeding. Read `reference/CHAT_SOURCE.md` for provenance and `qa/REFERENCE_COMPARISON.md` for evidence. Use the attachment as authority when it is visible, with `REFERENCE_SPEC.md` as fallback in sessions where it is unavailable. User visual approval remains pending.
 
 Where real league/team/player imagery is required, prefer downloading/bundling stable local copies into the repo during the rebuild rather than relying on runtime hotlinks.
 

@@ -13,6 +13,7 @@
     />
     <title>Project Dollar$ · Sports Data &amp; Research</title>
     <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/refinements.css" />
     <script src="assets/data/snapshot.js" defer></script>
     <script src="assets/app.js" defer></script>
   </head>
@@ -92,27 +93,15 @@
             </div>
             <div
               class="stadium-scene"
-              aria-label="Football above a floodlit Pittsburgh stadium"
+              aria-label="Football in a floodlit stadium"
             >
               <img
-                class="stadium-photo"
-                src="assets/stadium.jpg"
-                alt=""
-                width="800"
-                height="600"
+                class="stadium-art"
+                src="assets/football-stadium.png"
+                alt="Football and floodlit stadium artwork"
+                width="1983"
+                height="793"
               />
-              <div class="stadium-lights" aria-hidden="true"></div>
-              <div class="field-lines" aria-hidden="true"></div>
-              <img
-                class="hero-football"
-                src="assets/football.svg"
-                alt="American football"
-                width="400"
-                height="240"
-              />
-              <span class="stadium-caption"
-                >THE GAME. THE NUMBERS. THE EDGE.</span
-              >
             </div>
             <p class="home-footnote">
               NFL RESEARCH <span>2025 SEASON SNAPSHOT</span>
@@ -428,7 +417,10 @@
                     />
                   </div>
                   <div class="player-info">
-                    <h2><span class="jersey">#8</span> Aaron Rodgers</h2>
+                    <h2>
+                      <span class="jersey">#8</span
+                      ><span class="player-name">Aaron Rodgers</span>
+                    </h2>
                     <p>QB <span>· PITTSBURGH STEELERS</span></p>
                     <div class="player-stats">
                       <div><b>586</b><span>PASS YDS</span></div>
@@ -454,7 +446,10 @@
                     />
                   </div>
                   <div class="player-info">
-                    <h2><span class="jersey">#30</span> Jaylen Warren</h2>
+                    <h2>
+                      <span class="jersey">#30</span
+                      ><span class="player-name">Jaylen Warren</span>
+                    </h2>
                     <p>RB <span>· PITTSBURGH STEELERS</span></p>
                     <div class="player-stats">
                       <div><b>132</b><span>RUSH YDS</span></div>
@@ -480,7 +475,10 @@
                     />
                   </div>
                   <div class="player-info">
-                    <h2><span class="jersey">#4</span> DK Metcalf</h2>
+                    <h2>
+                      <span class="jersey">#4</span
+                      ><span class="player-name">DK Metcalf</span>
+                    </h2>
                     <p>WR <span>· PITTSBURGH STEELERS</span></p>
                     <div class="player-stats">
                       <div><b>10</b><span>REC</span></div>
@@ -492,8 +490,37 @@
                 </article>
                 <article
                   class="player-card"
-                  data-position="TE"
+                  data-position="WR"
                   style="--orbit-delay: -5.4s"
+                  aria-label="Roman Wilson, WR"
+                >
+                  <span class="orbit-football" aria-hidden="true"></span>
+                  <div class="portrait">
+                    <img
+                      src="assets/players/roman-wilson.png"
+                      alt="Roman Wilson"
+                      width="600"
+                      height="436"
+                    />
+                  </div>
+                  <div class="player-info">
+                    <h2>
+                      <span class="jersey">#10</span
+                      ><span class="player-name">Roman Wilson</span>
+                    </h2>
+                    <p>WR <span>· PITTSBURGH STEELERS</span></p>
+                    <div class="player-stats">
+                      <div><b>1</b><span>REC</span></div>
+                      <div><b>7</b><span>REC YDS</span></div>
+                      <div><b>0</b><span>TD</span></div>
+                      <div><b>7.0</b><span>YPR</span></div>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="player-card"
+                  data-position="TE"
+                  style="--orbit-delay: -7.2s"
                   aria-label="Pat Freiermuth, TE"
                 >
                   <span class="orbit-football" aria-hidden="true"></span>
@@ -506,7 +533,10 @@
                     />
                   </div>
                   <div class="player-info">
-                    <h2><span class="jersey">#88</span> Pat Freiermuth</h2>
+                    <h2>
+                      <span class="jersey">#88</span
+                      ><span class="player-name">Pat Freiermuth</span>
+                    </h2>
                     <p>TE <span>· PITTSBURGH STEELERS</span></p>
                     <div class="player-stats">
                       <div><b>7</b><span>REC</span></div>
@@ -518,7 +548,7 @@
                 </article>
               </div>
               <p id="empty-roster" class="empty-state" role="status" hidden>
-                No players in this position are included in this four-player
+                No players in this position are included in this five-player
                 snapshot.
               </p>
               <p class="roster-note">
@@ -604,13 +634,9 @@
         feed.
       </p>
       <p class="credits">
-        Stadium photo: Joey Gannon,
-        <a href="https://commons.wikimedia.org/wiki/File:Heinz_Field.jpg"
-          >Heinz Field</a
-        >,
-        <a href="https://creativecommons.org/licenses/by-sa/2.0/"
-          >CC BY-SA 2.0</a
-        >. Displayed with a crop and color treatment.
+        League marks and player photography are credited in the repository asset
+        notes. The stadium foreground is original generated background artwork;
+        all player portraits are real photographs.
       </p>
     </dialog>
     <noscript

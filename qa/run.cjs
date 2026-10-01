@@ -47,7 +47,10 @@ async function active(page, expected) {
   assert.equal(await page.locator(".page:visible").count(), 1);
   // Measure settled layouts rather than transient fractional transition bounds.
   await page.evaluate(() => {
-    document.querySelector(".page.active").getAnimations().forEach(animation => animation.finish());
+    document
+      .querySelector(".page.active")
+      .getAnimations()
+      .forEach((animation) => animation.finish());
   });
 }
 async function capture(page, name, width) {
@@ -121,6 +124,11 @@ async function capture(page, name, width) {
       await page.goto(base + "#home", { waitUntil: "networkidle" });
       await active(page, "home");
       assert.equal(await page.locator(".sport-card img").count(), 4);
+      assert.equal(
+        await page.locator(".page").count(),
+        3,
+        "Only Pages 1–3 are in scope",
+      );
       geometry.home = await capture(page, "home", width);
       await page.locator(".nfl-card").click();
       await active(page, "nfl");
@@ -152,7 +160,7 @@ async function capture(page, name, width) {
       geometry.nfl = await capture(page, "nfl", width);
       await page.locator(".steelers-row button").click();
       await active(page, "steelers");
-      assert.equal(await page.locator(".player-card:visible").count(), 4);
+      assert.equal(await page.locator(".player-card:visible").count(), 5);
       const cards = await page.locator(".player-card").evaluateAll((cards) =>
         cards.map((card) => {
           const r = card.getBoundingClientRect();
@@ -170,7 +178,7 @@ async function capture(page, name, width) {
       );
       assert.match(
         await page.locator(".player-card").first().innerText(),
-        /#8 Aaron Rodgers[\s\S]*586[\s\S]*65\.1%/,
+        /#8\s+Aaron Rodgers[\s\S]*586[\s\S]*65\.1%/,
       );
       geometry.steelers = await capture(page, "steelers", width);
       const edges = await page.evaluate(() => {
@@ -202,11 +210,11 @@ async function capture(page, name, width) {
       for (const [filter, count] of [
         ["QB", 1],
         ["RB", 1],
-        ["WR", 1],
+        ["WR", 2],
         ["TE", 1],
         ["DEF", 0],
         ["K", 0],
-        ["ALL", 4],
+        ["ALL", 5],
       ]) {
         await page.locator(`[data-filter="${filter}"]`).click();
         assert.equal(await page.locator(".player-card:visible").count(), count);

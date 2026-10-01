@@ -1,0 +1,1007 @@
+/* Approved top-row panels 1–3, supplied in chat. The screen artwork remains
+   the authority; these styles refine actual components, never stretch a render. */
+@font-face {
+  font-family: BarlowDisplay;
+  src: url("./fonts/Barlow-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: BarlowCondensed;
+  src: url("./fonts/BarlowCondensed-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+:root {
+  --nav-height: calc(60px + env(safe-area-inset-bottom, 0px));
+}
+.app-shell::after {
+  content: "";
+  position: absolute;
+  inset: 5px 7px;
+  z-index: 10;
+  border: 1.5px solid #b4f4ff;
+  border-radius: 23px;
+  box-shadow:
+    0 0 3px #e4fbff,
+    0 0 8px #00b7ff,
+    0 0 17px #005eff,
+    inset 0 0 7px #007eff99;
+  pointer-events: none;
+}
+.page-scroll {
+  padding: calc(8px + env(safe-area-inset-top, 0px)) 12px 0;
+}
+.frame {
+  border: 0;
+  border-radius: 0;
+  padding: 4px 7px 0;
+  background: none;
+  box-shadow: none;
+}
+.frame::before {
+  display: none;
+}
+.status-row {
+  height: 25px;
+  padding-inline: 8px;
+}
+.bottom-nav {
+  inset: auto 9px 7px;
+  height: calc(52px + env(safe-area-inset-bottom, 0px));
+  padding: 3px 0 calc(3px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid #29a6d6;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(#050b12dd, #000);
+  box-shadow: 0 -2px 9px #00a8ff33;
+}
+.bottom-nav button {
+  gap: 3px;
+  font-family: BarlowCondensed, Arial, sans-serif;
+  font-size: 10px;
+  color: #c8d3df;
+}
+.bottom-nav .icon {
+  width: 20px;
+  height: 20px;
+}
+.bottom-nav button[aria-current="page"]::before {
+  display: none;
+}
+.page:not([data-page="home"]) .bottom-nav button[aria-current="page"] {
+  color: #ffda23;
+}
+.page:not([data-page="home"]) .bottom-nav button[aria-current="page"] .icon {
+  filter: drop-shadow(0 0 4px #e8ad00);
+}
+/* Panel 1: wider slanted metallic masthead, taller grid, unboxed stadium. */
+.page[data-page="home"] {
+  background:
+    linear-gradient(#0003, #0002 60%, #0000),
+    url("./energy.svg") center top / 100% 100% no-repeat,
+    #000;
+}
+.home-header {
+  height: 162px;
+  padding: 16px 0 9px;
+}
+.settings {
+  right: 1px;
+  top: 13px;
+  color: #d6f8ff;
+}
+.brand {
+  font-family: BarlowDisplay, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  transform: rotate(-8deg) skewX(-4deg);
+  line-height: 0.86;
+  letter-spacing: -2px;
+  filter: drop-shadow(1px 2px 0 #215981) drop-shadow(0 0 6px #35bfff)
+    drop-shadow(0 0 14px #0069ff88);
+}
+.brand-project {
+  font-size: 59px;
+  letter-spacing: -2px;
+  -webkit-text-stroke: 0.7px #deeeff99;
+}
+.brand-dollar {
+  font-size: 69px;
+  letter-spacing: -2.6px;
+  -webkit-text-stroke: 0.75px #f9e8b7bb;
+}
+.brand-cash {
+  -webkit-text-stroke: 0.75px #60f7ff;
+}
+.brand-subtitle {
+  font-family: BarlowCondensed, sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  transform: rotate(-8deg);
+  margin-top: 13px;
+  color: #eff6ff;
+  text-shadow: 0 0 5px #0061c4;
+}
+.sport-grid {
+  gap: 11px;
+}
+.sport-card {
+  height: 195px;
+  border-radius: 15px;
+  background: linear-gradient(120deg, #071326ee, #010208f5 68%);
+  border-color: #40a9cb;
+  box-shadow: inset 0 0 12px #0956a522;
+}
+.sport-card img {
+  width: 110px;
+  height: 105px;
+  margin-bottom: 6px;
+}
+.sport-card strong {
+  font-family: BarlowCondensed, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.sport-card small {
+  font-family: BarlowCondensed, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  line-height: 1.22;
+  color: #e5eef8;
+}
+.nfl-card {
+  border: 1.5px solid #ccfcff;
+  background: linear-gradient(110deg, #061c32ed, #020713ef);
+  box-shadow:
+    0 0 3px white,
+    0 0 9px #00caff,
+    0 0 19px #006bff,
+    inset 0 0 15px #0086ff44;
+  animation: reference-nfl-breathe 4s ease-in-out infinite;
+}
+.nba-card {
+  border-color: #fa8da0;
+  background: linear-gradient(125deg, #131227ed, #03040bea);
+  box-shadow:
+    0 0 6px #ff3c7544,
+    inset 0 0 11px #770c1222;
+}
+.nrl-card {
+  border-color: #90d9ae;
+  background: linear-gradient(125deg, #04261bef, #020905ef);
+  box-shadow: 0 0 7px #29e7a944;
+}
+.ufc-card {
+  border-color: #f4bb64;
+  background: linear-gradient(120deg, #211309ea, #100105ef);
+  box-shadow: 0 0 8px #ff631b55;
+}
+.nba-card img {
+  height: 115px;
+  width: 98px;
+}
+.nrl-card img {
+  height: 104px;
+}
+.ufc-card img {
+  height: 78px;
+  width: 131px;
+  margin-bottom: 30px;
+}
+.stadium-scene {
+  margin: 5px -7px 0;
+  height: 183px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  overflow: hidden;
+}
+.stadium-photo {
+  object-position: 50% 42%;
+  filter: brightness(0.65) saturate(0.8) contrast(1.5);
+  mask-image: linear-gradient(transparent, #000 18%, #000 74%, transparent);
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    #000 18%,
+    #000 74%,
+    transparent
+  );
+}
+.stadium-lights {
+  z-index: 1;
+  opacity: 0.95;
+  background:
+    radial-gradient(
+      ellipse at 6% 30%,
+      #fff 0,
+      #ffb64d 1%,
+      #f6610c77 7%,
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 92% 26%,
+      #fff 0,
+      #9efaff 1%,
+      #1177ffa6 8%,
+      transparent 32%
+    );
+}
+.field-lines {
+  bottom: -12px;
+  height: 77px;
+  border-color: #d0faff;
+  opacity: 0.65;
+}
+.hero-football {
+  width: 337px;
+  top: 60%;
+  filter: drop-shadow(-5px 3px 8px #ff912380)
+    drop-shadow(6px -6px 8px #329cffaa);
+  transform: translate(-50%, -50%) rotate(-5deg) scaleY(0.76);
+  animation: reference-football-float 6s ease-in-out infinite;
+}
+.stadium-caption,
+.home-footnote {
+  display: none;
+}
+@keyframes reference-nfl-breathe {
+  50% {
+    box-shadow:
+      0 0 3px white,
+      0 0 12px #00caff,
+      0 0 22px #006bff,
+      inset 0 0 15px #0086ff44;
+  }
+}
+@keyframes reference-football-float {
+  50% {
+    transform: translate(-50%, -53%) rotate(-4deg) scaleY(0.76);
+  }
+}
+@media (min-width: 420px) and (min-height: 880px) {
+  .home-header {
+    height: 174px;
+    padding-top: 20px;
+  }
+  .brand-project {
+    font-size: 64px;
+  }
+  .brand-dollar {
+    font-size: 74px;
+  }
+  .sport-card {
+    height: 205px;
+  }
+  .stadium-scene {
+    height: 188px;
+  }
+  .hero-football {
+    width: 361px;
+  }
+}
+@media (max-width: 360px) {
+  .brand-project {
+    font-size: 51px;
+  }
+  .brand-dollar {
+    font-size: 59px;
+  }
+  .home-header {
+    height: 147px;
+  }
+  .sport-card {
+    height: 179px;
+  }
+  .sport-card img {
+    width: 91px;
+    height: 96px;
+  }
+  .hero-football {
+    width: 295px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nfl-card,
+  .hero-football {
+    animation: none;
+  }
+}
+.stadium-scene::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    176deg,
+    transparent 10%,
+    #9bfaff99 11%,
+    #078fff99 12%,
+    transparent 15%,
+    transparent 24%,
+    #277dff77 25%,
+    transparent 28%
+  );
+}
+/* Panel 2: condensed research typography, shallower ladder, denser tall leaders. */
+.page[data-page="nfl"] {
+  font-family: BarlowCondensed, Arial, sans-serif;
+  font-weight: 600;
+  background:
+    radial-gradient(ellipse at 0 85%, #02388f55, transparent 30%),
+    radial-gradient(ellipse at 100% 90%, #0756b544, transparent 25%), #000;
+}
+.league-header {
+  min-height: 78px;
+  grid-template-columns: 61px minmax(0, 1fr) auto;
+  gap: 7px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+.league-header > img {
+  width: 57px;
+  height: 65px;
+}
+.league-header h1 {
+  font-size: 43px;
+}
+.league-header p {
+  font-size: 11px;
+  letter-spacing: 0.1px;
+  color: #e0eef6;
+}
+.week-select select {
+  font-size: 12px;
+  padding: 7px 24px 7px 7px;
+  border-radius: 4px;
+  border-color: #3c7185;
+}
+.primary-tabs {
+  gap: 4px;
+  margin-bottom: 7px;
+}
+.primary-tabs button {
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  font-weight: 600;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border-color: #236382;
+  background: #00080de6;
+}
+.primary-tabs button[aria-selected="true"] {
+  border-color: #88eaff;
+  background: linear-gradient(#10528a, #021731);
+  box-shadow:
+    0 0 5px #0e9bff99,
+    inset 0 0 6px #00caff44;
+}
+.conference-toggle {
+  gap: 0;
+  border: 1px solid #377c8d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.conference-toggle button {
+  border: 0;
+  border-radius: 0;
+  padding-block: 5px;
+  font-size: 14px;
+  background: #010c12;
+}
+.conference-toggle button[aria-pressed="true"] {
+  color: #ffeb54;
+  background: linear-gradient(#50461a, #171a05);
+  box-shadow:
+    inset 0 0 0 1px #d9b929,
+    inset 0 0 9px #efad3355;
+}
+.table-label {
+  font-size: 8px;
+  letter-spacing: 0.2px;
+  padding-bottom: 4px;
+}
+.standings {
+  border-color: #26a2b9;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #0bbaff33;
+}
+.stand-head,
+.stand-row {
+  grid-template-columns: 20px minmax(0, 1fr) 29px 29px 48px 38px;
+  padding-inline: 7px;
+  gap: 2px;
+}
+.stand-head {
+  height: 26px;
+  font-size: 10px;
+  letter-spacing: 0.15px;
+  color: #4fe7ec;
+  background: #04151e;
+}
+.nfl-frame .stand-row {
+  height: 31px;
+  font-size: 14px;
+  border-color: #164253;
+}
+.stand-row > span:first-child {
+  font-size: 13px;
+  color: #f4d545;
+}
+.table-team {
+  font-size: 14px;
+  font-weight: 600;
+  gap: 5px;
+}
+.table-team img {
+  width: 29px;
+  height: 27px;
+}
+.nfl-frame .team-link {
+  font:
+    600 14px BarlowCondensed,
+    sans-serif;
+  height: 29px;
+  gap: 5px;
+}
+.steelers-row {
+  background: linear-gradient(90deg, #15517099, #05354ce6);
+  box-shadow:
+    inset 0 0 0 1px #91f4ff,
+    0 0 6px #25bfff99,
+    inset 0 0 9px #00caff22;
+}
+.streak {
+  font-size: 12px;
+}
+.win {
+  color: #16efb7;
+}
+.loss {
+  color: #ff9879;
+}
+.nfl-frame .leader-grid {
+  margin-top: 9px;
+  gap: 6px;
+}
+.leader-panel {
+  border-color: #278ea8;
+  border-radius: 4px;
+  background: #00080de6;
+  box-shadow: 0 0 4px #087dbb44;
+}
+.leader-panel h2 {
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  padding: 7px 6px 6px;
+  color: #ddf9ff;
+}
+.leader-panel h2 > span {
+  font-size: 10px;
+  color: #ccedf1;
+}
+.leader-columns {
+  font-size: 9px;
+  color: #4ecbda;
+  padding: 3px 6px 2px 24px;
+  grid-template-columns: minmax(0, 1fr) 30px 18px;
+  letter-spacing: 0.1px;
+}
+.leader-row {
+  min-height: 26px;
+  font-size: 12px;
+  padding-inline: 6px;
+  grid-template-columns: 14px minmax(0, 1fr) 30px 18px;
+  gap: 2px;
+}
+.leader-row > b {
+  font-size: 12px;
+  color: #e4d53e;
+}
+.leader-row > span:first-of-type {
+  padding-right: 3px;
+  border-right: 1px solid #0b3546;
+}
+.leader-row > span:last-child {
+  color: #b7e5ef;
+}
+.week-row {
+  gap: 4px;
+  margin-top: 10px;
+}
+.week-row button {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  padding-block: 5px;
+  border-radius: 3px;
+  border-color: #1e7798;
+}
+.week-row button[aria-pressed="true"] {
+  color: #ffec43;
+  border-color: #f8d433;
+  background: linear-gradient(#423615, #111603);
+  box-shadow:
+    0 0 5px #ffb22077,
+    inset 0 0 6px #efae2233;
+}
+.section-heading {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.section-heading h2 {
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.section-heading > span {
+  font-size: 9px;
+}
+.game-card {
+  min-height: 130px;
+  grid-template-columns: 77px minmax(0, 1fr) 77px;
+  padding: 8px 5px;
+  border-color: #98f4ff;
+  border-radius: 5px;
+  background: linear-gradient(125deg, #063067, #00050be6 60%, #033467);
+  box-shadow:
+    0 0 5px #059eff,
+    inset 0 0 9px #0bcfff55;
+}
+.game-team img {
+  width: 59px;
+  height: 59px;
+}
+.game-team strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+.game-team small {
+  font-size: 12px;
+  color: #deebf2;
+  margin-top: 2px;
+}
+.game-center {
+  gap: 4px;
+}
+.fixture-week {
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+.game-center strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+.game-center > span:not(.fixture-week) {
+  font-size: 14px;
+}
+.game-center small {
+  font-size: 10px;
+  color: #b4c9d8;
+}
+.nfl-frame .data-note {
+  font-size: 8px;
+  margin-top: 6px;
+  color: #91b5c6;
+}
+@media (min-width: 420px) and (min-height: 880px) {
+  .nfl-frame .stand-row {
+    height: 34px;
+  }
+  .nfl-frame .team-link {
+    height: 32px;
+  }
+  .leader-row {
+    min-height: 28px;
+  }
+  .game-card {
+    min-height: 136px;
+  }
+}
+@media (max-width: 360px) {
+  .stand-head,
+  .stand-row {
+    grid-template-columns: 16px minmax(0, 1fr) 22px 22px 41px 29px;
+    padding-inline: 4px;
+  }
+  .leader-panel h2 {
+    font-size: 12px;
+  }
+  .leader-panel h2 > span {
+    font-size: 8px;
+  }
+  .leader-row {
+    font-size: 11px;
+    grid-template-columns: 11px minmax(0, 1fr) 25px 15px;
+    padding-inline: 4px;
+  }
+}
+/* Second Home pass after comparing normalized boundaries with the source. */
+.home-header {
+  height: 182px;
+  padding-top: 29px;
+}
+.sport-card {
+  height: 202px;
+}
+.sport-card img {
+  width: 119px;
+  height: 113px;
+  margin-bottom: 3px;
+}
+.nba-card img {
+  width: 107px;
+  height: 124px;
+}
+.nrl-card img {
+  height: 112px;
+}
+.ufc-card img {
+  width: 137px;
+  height: 78px;
+  margin-bottom: 29px;
+}
+.nba-card {
+  border-color: #a3a0d6;
+  box-shadow:
+    -2px 0 7px #2359ff66,
+    2px 2px 6px #ff437977,
+    inset 0 0 11px #770c1222;
+}
+.ufc-card {
+  border-color: #fa7969;
+  background: linear-gradient(120deg, #19060aef, #080105f2);
+  box-shadow:
+    0 0 7px #ff423f66,
+    1px 3px 8px #ff751133;
+}
+.stadium-scene {
+  height: 149px;
+}
+.hero-football {
+  top: 62%;
+  transform: translate(-50%, -50%) rotate(-5deg) scaleY(0.63);
+}
+.field-lines {
+  opacity: 0.2;
+}
+@keyframes reference-football-float {
+  50% {
+    transform: translate(-50%, -53%) rotate(-4deg) scaleY(0.63);
+  }
+}
+@media (min-width: 420px) and (min-height: 880px) {
+  .home-header {
+    height: 194px;
+    padding-top: 32px;
+  }
+  .sport-card {
+    height: 212px;
+  }
+  .stadium-scene {
+    height: 154px;
+  }
+}
+/* Panel 3: five compact photographic cards with the reference's gold fire rails. */
+.page[data-page="steelers"] {
+  font-family: BarlowCondensed, Arial, sans-serif;
+  font-weight: 600;
+  background:
+    radial-gradient(ellipse at 0 52%, #d8540722, transparent 44%), #000;
+}
+.team-header {
+  min-height: 78px;
+  grid-template-columns: 23px 57px minmax(0, 1fr);
+  padding: 3px 0 9px;
+  gap: 5px;
+}
+.team-header > img {
+  width: 57px;
+  height: 57px;
+  filter: drop-shadow(0 0 3px #ffd169) drop-shadow(0 0 8px #ff9a2266);
+}
+.team-back {
+  color: #ffda23;
+}
+.team-header h1 {
+  font:
+    600 24px/1 BarlowCondensed,
+    sans-serif;
+  letter-spacing: -0.15px;
+}
+.team-header p {
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  margin-top: 5px;
+}
+.team-header p > span {
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  color: #d6dddc;
+}
+.team-tabs {
+  margin-bottom: 8px;
+  gap: 4px;
+}
+.team-tabs button {
+  font:
+    600 12px BarlowCondensed,
+    sans-serif;
+  padding: 5px 2px;
+  letter-spacing: 0;
+  border-color: #295469;
+  border-radius: 4px;
+  color: #8cdae8;
+  background: #02090c;
+}
+.team-tabs button[aria-selected="true"] {
+  color: #fff398;
+  background: linear-gradient(#53411b, #181505);
+  border-color: #fada66;
+  box-shadow:
+    0 0 6px #ffae19aa,
+    inset 0 0 4px #fff0a333;
+}
+.positions {
+  gap: 4px;
+}
+.positions button {
+  font:
+    600 12px BarlowCondensed,
+    sans-serif;
+  padding: 5px 0;
+  border-color: #335361;
+  border-radius: 4px;
+  color: #d6e2e5;
+  background: #03090b;
+}
+.positions button[aria-pressed="true"] {
+  color: #fff398;
+  border-color: #f2d562;
+  background: linear-gradient(#473518, #111202);
+  box-shadow: 0 0 5px #ffb13066;
+}
+.roster-heading {
+  margin: 9px 1px 8px;
+  font-size: 8px;
+  letter-spacing: 0.4px;
+}
+.roster {
+  gap: 12px;
+}
+.player-card {
+  height: 110px;
+  grid-template-columns: 99px minmax(0, 1fr);
+  border-radius: 17px;
+  border-color: #ffbb2b;
+  background:
+    radial-gradient(ellipse at 5% 55%, #75450b55, transparent 43%),
+    linear-gradient(110deg, #130d03, #030402 72%);
+  box-shadow:
+    0 0 3px #ffef93,
+    0 0 8px #ff8a1355,
+    inset 0 0 12px #5a330c44;
+}
+.player-card::before {
+  inset: -6px;
+  border: 0;
+  border-radius: 0;
+  background: url("./roster-energy.svg") center / 100% 100% no-repeat;
+  z-index: 0;
+  opacity: 0.9;
+}
+.player-card::after {
+  height: 1px;
+  bottom: 0;
+  box-shadow: 0 0 10px #ff6913;
+}
+.portrait {
+  overflow: hidden;
+  border-radius: 16px 0 0 16px;
+  background: radial-gradient(ellipse at 40% 62%, #ff8e2644, transparent 72%);
+}
+.portrait img {
+  width: 150px;
+  height: 109px;
+  bottom: 0;
+  filter: drop-shadow(0 0 2px #ffb52688);
+  mask-image: linear-gradient(#000 0 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(#000 0 90%, transparent 100%);
+}
+.player-info {
+  padding: 7px 9px 8px 1px;
+}
+.player-info h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font:
+    600 21px/1 BarlowCondensed,
+    sans-serif;
+  letter-spacing: 0.1px;
+}
+.jersey {
+  font:
+    600 12px/1 BarlowCondensed,
+    sans-serif;
+  color: #ffe33a;
+  margin-bottom: 2px;
+}
+.player-info > p {
+  font:
+    600 12px/1 BarlowCondensed,
+    sans-serif;
+  margin: 4px 0 5px;
+  color: #36e6e9;
+  letter-spacing: 0;
+}
+.player-info > p > span {
+  font-size: 8px;
+  letter-spacing: 0.25px;
+  color: #7aafab;
+}
+.player-stats {
+  padding-top: 6px;
+  border-top-color: #dcb24255;
+}
+.player-stats b {
+  font:
+    600 15px/1 BarlowCondensed,
+    sans-serif;
+  letter-spacing: 0;
+  color: #fff4cb;
+}
+.player-stats span {
+  font:
+    600 9px/1 BarlowCondensed,
+    sans-serif;
+  margin-top: 4px;
+  letter-spacing: 0.05px;
+  color: #d7cbb1;
+}
+.player-stats > div:not(:last-child) {
+  border-right-color: #417d8266;
+}
+.orbit-football {
+  width: 19px;
+  height: 11px;
+  border-color: #fff39f;
+  box-shadow:
+    0 0 3px #ffffbf,
+    0 0 8px #ffc429,
+    0 0 15px #ff6700;
+}
+@supports (offset-path: inset(0 round 17px)) {
+  .orbit-football {
+    offset-path: inset(0 round 17px);
+  }
+}
+.roster-note {
+  font-size: 8px;
+  line-height: 1.2;
+  margin-top: 8px;
+  color: #a99b77;
+}
+@media (min-width: 420px) and (min-height: 880px) {
+  .player-card {
+    height: 118px;
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+  .portrait img {
+    width: 162px;
+    height: 118px;
+  }
+  .player-info h2 {
+    font-size: 23px;
+  }
+  .player-info > p {
+    margin-bottom: 7px;
+  }
+  .player-stats b {
+    font-size: 16px;
+  }
+  .player-stats span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .team-header h1 {
+    font-size: 21px;
+  }
+  .player-card {
+    grid-template-columns: 84px minmax(0, 1fr);
+  }
+  .portrait img {
+    width: 143px;
+    height: 104px;
+  }
+  .player-info h2 {
+    font-size: 18px;
+  }
+  .player-stats span {
+    font-size: 8px;
+  }
+}
+/* Second roster pass: retain all five cards and data note above the nav. */
+.roster {
+  gap: 11px;
+}
+.player-card {
+  height: 104px;
+}
+.portrait img {
+  height: 104px;
+  width: 143px;
+}
+@media (min-width: 420px) and (min-height: 880px) {
+  .player-card {
+    height: 113px;
+  }
+  .portrait img {
+    height: 113px;
+    width: 155px;
+  }
+}
+.leader-panel {
+  box-shadow:
+    0 0 4px #058cd966,
+    inset 0 0 6px #0369a51c;
+}
+.standings {
+  box-shadow: 0 0 6px #0b9ce755;
+}
+.stadium-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  mask-image: linear-gradient(transparent, #000 5%, #000 100%);
+  -webkit-mask-image: linear-gradient(transparent, #000 5%, #000 100%);
+}
+.stadium-scene::before,
+.stadium-scene::after {
+  display: none;
+}
+/* Final reference review: edge sparks rather than long strands over portraits. */
+.player-card::before {
+  opacity: 0.78;
+}
+.player-info {
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+.jersey {
+  font-size: 13px;
+}
+.stadium-art {
+  position: absolute;
+  left: -14%;
+  top: -16%;
+  width: 128%;
+  height: 128%;
+}
+.stadium-scene::after {
+  display: block;
+  background: linear-gradient(
+    110deg,
+    transparent 35%,
+    #b4f8ff22 49%,
+    transparent 61%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: stadium-reflection 10s ease-in-out infinite;
+}
+@keyframes stadium-reflection {
+  0%,
+  45% {
+    transform: translateX(-110%);
+  }
+  85%,
+  100% {
+    transform: translateX(110%);
+  }
+}

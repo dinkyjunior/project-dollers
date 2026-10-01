@@ -72,13 +72,17 @@
       return `<div class="bye-card"><img src="assets/logos/pit.png" alt="Steelers"><div><strong>Steelers · Bye week</strong><p>Week ${state.week} · 2025</p></div></div>`;
     const game = snapshot.fixture;
     const opponent = game.away_team === "PIT" ? game.home_team : game.away_team;
+    const ownRecord =
+      game.home_team === "PIT" ? game.home_record : game.away_record;
+    const opponentRecord =
+      game.home_team === "PIT" ? game.away_record : game.home_record;
     const date = new Date(`${game.gameday}T12:00:00Z`).toLocaleDateString(
       "en-US",
       { timeZone: "UTC", month: "short", day: "numeric" },
     );
     const [hours, minutes] = game.gametime.split(":").map(Number);
     const time = `${hours % 12 || 12}:${String(minutes).padStart(2, "0")} ${hours >= 12 ? "PM" : "AM"} ET`;
-    return `<button class="game-card" data-open="steelers" aria-label="Explore Steelers roster, ${data.teamNames.PIT} versus ${data.teamNames[opponent]}"><span class="game-team"><img src="assets/logos/pit.png" alt=""><strong>Steelers</strong><small>PIT</small></span><span class="game-center"><span class="fixture-week">WEEK ${state.week} · 2025</span><strong>${game.weekday.slice(0, 3)}, ${date}</strong><span>${time}</span><small>Historical fixture</small></span><span class="game-team"><img src="assets/logos/${opponent.toLowerCase()}.png" alt=""><strong>${data.teamNames[opponent]}</strong><small>${opponent}</small></span></button>`;
+    return `<button class="game-card" data-open="steelers" aria-label="Explore Steelers roster, ${data.teamNames.PIT} versus ${data.teamNames[opponent]}"><span class="game-team"><img src="assets/logos/pit.png" alt=""><strong>Steelers</strong><small>${ownRecord}</small></span><span class="game-center"><span class="fixture-week">WEEK ${state.week} · 2025</span><strong>${game.weekday.slice(0, 3)}, ${date}</strong><span>${time}</span><small>Historical fixture</small></span><span class="game-team"><img src="assets/logos/${opponent.toLowerCase()}.png" alt=""><strong>${data.teamNames[opponent]}</strong><small>${opponentRecord}</small></span></button>`;
   }
   function renderDashboard() {
     const snapshot = data.weeks[state.week];
