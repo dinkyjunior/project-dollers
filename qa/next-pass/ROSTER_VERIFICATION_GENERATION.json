@@ -1,0 +1,490 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-02T01:59:08Z",
+  "currentSha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+  "historySha256": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90",
+  "provenanceSha256": "a2c4184d3375d0587a15db3b4ce7188642a10f9c8fc4b044cb349ccdd1d257e6",
+  "rawRetainedPlayerCount": 77,
+  "historyPlayerCount": 77,
+  "historyGameRowCount": 1224,
+  "optionalRosterVerification": {
+    "status": "partial",
+    "sourceIds": [
+      "espn_athlete_4426506",
+      "espn_steelers_roster",
+      "official_steelers_roster"
+    ],
+    "confirmed": 68,
+    "disputed": 9,
+    "unavailable": 0,
+    "retained": 0,
+    "officialRosterCount": 74,
+    "espnRosterCount": 76
+  },
+  "sources": [
+    {
+      "id": "espn_athlete_4426506",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4426506",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:59Z",
+      "status": "verified",
+      "sha256": "5ba2d057349e4f5300f7d8bf72b399d17a17916c0f23e8660cf7a520c5f93fec",
+      "bytes": 128773
+    },
+    {
+      "id": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:58Z",
+      "status": "verified",
+      "sha256": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58",
+      "bytes": 357275
+    },
+    {
+      "id": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "provider": "Pittsburgh Steelers",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:58Z",
+      "status": "verified",
+      "sha256": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+      "bytes": 448216
+    }
+  ],
+  "flags": [
+    {
+      "id": "00-0039167",
+      "name": "Joey Porter Jr.",
+      "primaryNumber": "24",
+      "primaryStatus": "Active",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster",
+          "espn_athlete_4426506"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58",
+          "espn_athlete_4426506": "5ba2d057349e4f5300f7d8bf72b399d17a17916c0f23e8660cf7a520c5f93fec"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": false,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": null,
+        "espnPosition": null,
+        "reportedOtherTeam": {
+          "abbr": "DAL",
+          "name": "Dallas Cowboys",
+          "athleteId": "4426506",
+          "sourceId": "espn_athlete_4426506"
+        },
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "DAL",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Joey Porter Jr.",
+          "espnId": "4426506",
+          "identityJoinMethod": "Published ESPN ID and normalized exact athlete name; birth date compared only when exposed"
+        }
+      }
+    },
+    {
+      "id": "00-0039883",
+      "name": "Daequan Hardy",
+      "primaryNumber": "31",
+      "primaryStatus": "Reserve",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "PIT",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Daequan Hardy",
+          "espnId": "4429743",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0039626",
+      "name": "Cole Burgess",
+      "primaryNumber": "85",
+      "primaryStatus": "Reserve",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "PIT",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Cole Burgess",
+          "espnId": "5192448",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0038388",
+      "name": "Darius Rush",
+      "primaryNumber": "36",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 38,
+        "officialPosition": "DB",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "36",
+            "official": 38,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Darius Rush",
+          "espnName": "Darius Rush",
+          "espnId": "4362858",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0040341",
+      "name": "Doneiko Slaughter",
+      "primaryNumber": "40",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Active",
+        "officialNumber": 40,
+        "officialPosition": "DB",
+        "espnRosterStatus": "defense",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "rosterStatus",
+            "primary": "Practice squad",
+            "official": "Active",
+            "espn": "defense",
+            "note": "Official current category differs from the primary release; categories retain their source wording."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Doneiko Slaughter",
+          "espnName": "Doneiko Slaughter",
+          "espnId": "4692628",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0038409",
+      "name": "Lew Nichols III",
+      "primaryNumber": "31",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Active",
+        "officialNumber": 31,
+        "officialPosition": "RB",
+        "espnRosterStatus": "offense",
+        "espnPosition": "RB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "rosterStatus",
+            "primary": "Practice squad",
+            "official": "Active",
+            "espn": "offense",
+            "note": "Official current category differs from the primary release; categories retain their source wording."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Lew Nichols",
+          "espnName": "Lew Nichols",
+          "espnId": "4428119",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0037382",
+      "name": "Brandon Johnson",
+      "primaryNumber": "82",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 89,
+        "officialPosition": "WR",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "82",
+            "official": 89,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Brandon Johnson",
+          "espnName": "Brandon Johnson",
+          "espnId": "4035198",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0036165",
+      "name": "Isaiah Hodgins",
+      "primaryNumber": "89",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 82,
+        "officialPosition": "WR",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "89",
+            "official": 82,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Isaiah Hodgins",
+          "espnName": "Isaiah Hodgins",
+          "espnId": "4242540",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "id": "00-0040618",
+      "name": "Max Hurleman",
+      "primaryNumber": "84",
+      "primaryStatus": "Practice squad",
+      "rosterVerification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad/Injured",
+        "officialNumber": 84,
+        "officialPosition": "WR",
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "RB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "position",
+            "primary": "WR",
+            "official": "WR",
+            "espn": "RB",
+            "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Max Hurleman",
+          "espnName": "Max Hurleman",
+          "espnId": "4694237",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    }
+  ],
+  "regressionTests": 22,
+  "note": "Raw primary/history records preserved; only corroborated other-team departure qualifies for current-PIT presentation exclusion. No historical advanced-statistics independent-provider claim."
+}

@@ -11,6 +11,25 @@
   const number = (value, decimals) => available(value) && Number.isFinite(Number(value)) ? Number(value).toLocaleString(undefined, decimals === undefined ? {} : { maximumFractionDigits: decimals, minimumFractionDigits: decimals }) : '—';
   const logo = abbr => assets.logos?.[String(abbr).toLowerCase()]?.path || `assets/logos/${String(abbr).toLowerCase()}.png`;
   const teamName = abbr => data?.teamNames?.[abbr] || data?.teams?.find?.(team => team.abbr === abbr)?.name || abbr;
+  const rosterEvidence = player => {
+    const evidence = player.rosterVerification;
+    const primary = data?.sources?.find(source => source.id === 'nflverse_roster');
+    if (!evidence || !['confirmed','disputed'].includes(evidence.status) || evidence.primaryRosterSha256 !== primary?.sha256 || !evidence.sourceIds?.length) return null;
+    if (!evidence.sourceIds.every(id => data.sources.some(source => source.id === id && source.status === 'verified' && evidence.sourceHashes?.[id] === source.sha256))) return null;
+    return evidence;
+  };
+  const departedRoster = player => {
+    const evidence = rosterEvidence(player);
+    return evidence?.officialCurrentMembership === false && evidence.espnCurrentMembership === false && evidence.reportedOtherTeam?.abbr && evidence.reportedOtherTeam.abbr !== 'PIT';
+  };
+  const rosterNumber = player => rosterEvidence(player)?.officialNumber ?? player.number;
+  function rosterVerificationNote(player) {
+    const evidence = rosterEvidence(player);
+    if (!evidence || evidence.status !== 'disputed') return '';
+    const labels = { membership:'Team membership',rosterStatus:'Roster status',position:'Position',number:'Jersey number',jersey:'Jersey number' };
+    const sourceNames = evidence.sourceIds.map(id => data.sources.find(source => source.id === id)?.name || id.replaceAll('_',' '));
+    return `<aside class="roster-verification-note" data-roster-disagreement><strong>Roster sources differ</strong><ul>${(evidence.issues || []).map(issue => `<li><b>${esc(labels[issue.field] || issue.field)}</b>: primary ${esc(issue.primary ?? 'unavailable')} · Steelers ${esc(issue.official ?? 'unavailable')} · ESPN ${esc(issue.espn ?? 'unavailable')}${issue.note ? `<br>${esc(issue.note)}` : ''}</li>`).join('')}</ul><p>Steelers roster: ${esc(evidence.officialRosterStatus || (evidence.officialCurrentMembership === false ? 'No matched entry' : 'Unavailable'))} · ESPN roster: ${esc(evidence.espnRosterStatus || 'Unavailable')}${evidence.reportedOtherTeam ? `<br>ESPN current team: ${esc(evidence.reportedOtherTeam.name || evidence.reportedOtherTeam.abbr)}` : ''}</p><p>${esc(sourceNames.join(' · '))}<br>Checked ${esc(timestamp(evidence.retrievedAt || evidence.checkedAt))}${evidence.retained ? ' · previous verified check retained' : ''}</p></aside>`;
+  }
   const seasonLabel = () => `${data.season} regular season`;
   const timestamp = value => value ? new Date(value).toLocaleString(undefined, { month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short' }) : 'Unavailable';
   const date = game => {
@@ -109,7 +128,7 @@
     $('recap-content').innerHTML = recap(snapshot);
   }
   function playerDetails(player) {
-    return window.PDPlayerResearch.render(player, {data,state,history:playerHistory,error:historyError,loading:!!historyPromise,logo,teamName,metric,sourceNote});
+    return window.PDPlayerResearch.render(player, {data,state,history:playerHistory,error:historyError,loading:!!historyPromise,logo,teamName,metric,sourceNote,rosterVerificationNote:rosterVerificationNote(player)});
   }
   function preserveScroll(render) {
     const positions = [...document.querySelectorAll('.page-scroll')].map(node => [node,node.scrollTop]);
@@ -176,14 +195,15 @@
     preserveScroll(() => { renderDashboard(); renderRoster(); renderTeamMatchup(); });
   }
   function renderRoster() {
-    const all = data.roster.filter(player => player.rosterStatus !== 'Cut');
+    const all = data.roster.filter(player => player.rosterStatus !== 'Cut' && !departedRoster(player));
     const selected = state.filter === 'ALL' ? all : all.filter(player => (player.filterGroup || player.position) === state.filter);
     const shown = state.filter === 'ALL' && !state.rosterExpanded ? selected.filter(player => player.featured) : selected;
     $('roster').innerHTML = shown.map((player,index) => {
       const photo = assets.players?.[player.id];
-      const role = player.depth?.label && player.depth.label !== 'Unavailable' ? player.depth.label : player.rosterStatus;
+      const verification = rosterEvidence(player);
+      const role = verification?.status === 'disputed' ? 'Roster disputed' : player.depth?.label && player.depth.label !== 'Unavailable' ? player.depth.label : player.rosterStatus;
       const stats = player.stats || Array.from({length:4}, () => ({ label:'UNAVAILABLE', value:null }));
-      return `<article class="player-card${state.openPlayer === player.id ? ' is-expanded' : ''}" data-position="${esc(player.filterGroup || player.position)}" data-player-id="${esc(player.id)}" style="--orbit-delay: -${(index % 5) * 1.8}s" aria-label="${esc(player.name)}, ${esc(player.position)}"><span class="orbit-football" aria-hidden="true"></span><div class="portrait">${photo?.path ? `<img src="${esc(photo.path)}" alt="${esc(player.name)}" width="${photo.width}" height="${photo.height}" loading="${index < 5 ? 'eager' : 'lazy'}" decoding="async">` : '<span class="photo-unavailable">PHOTO<br>UNAVAILABLE</span>'}</div><div class="player-info"><h2><span class="jersey">#${esc(player.number || '—')}</span><span class="player-name">${esc(player.name)}</span></h2><p>${esc(player.position)} <span>· ${esc(role || 'Depth unavailable')}</span></p><div class="player-stats">${stats.slice(0,4).map(stat => `<div><b>${available(stat.value) ? esc(stat.value) : '—'}</b><span>${esc(stat.label)}</span></div>`).join('')}</div></div>${icon('chevron').replace('class="icon"','class="icon card-chevron"')}<button class="player-expander" data-player="${esc(player.id)}" aria-label="${state.openPlayer === player.id ? 'Close' : 'Show'} ${esc(player.name)} research" aria-controls="player-detail-${esc(player.id)}" aria-expanded="${state.openPlayer === player.id}"></button>${playerDetails(player)}</article>`;
+      return `<article class="player-card${state.openPlayer === player.id ? ' is-expanded' : ''}" data-position="${esc(player.filterGroup || player.position)}" data-player-id="${esc(player.id)}" style="--orbit-delay: -${(index % 5) * 1.8}s" aria-label="${esc(player.name)}, ${esc(player.position)}"><span class="orbit-football" aria-hidden="true"></span><div class="portrait">${photo?.path ? `<img src="${esc(photo.path)}" alt="${esc(player.name)}" width="${photo.width}" height="${photo.height}" loading="${index < 5 ? 'eager' : 'lazy'}" decoding="async">` : '<span class="photo-unavailable">PHOTO<br>UNAVAILABLE</span>'}</div><div class="player-info"><h2><span class="jersey">#${esc(available(rosterNumber(player)) ? rosterNumber(player) : '—')}</span><span class="player-name">${esc(player.name)}</span></h2><p>${esc(player.position)} <span>· ${esc(role || 'Depth unavailable')}</span></p><div class="player-stats">${stats.slice(0,4).map(stat => `<div><b>${available(stat.value) ? esc(stat.value) : '—'}</b><span>${esc(stat.label)}</span></div>`).join('')}</div></div>${icon('chevron').replace('class="icon"','class="icon card-chevron"')}<button class="player-expander" data-player="${esc(player.id)}" aria-label="${state.openPlayer === player.id ? 'Close' : 'Show'} ${esc(player.name)} research" aria-controls="player-detail-${esc(player.id)}" aria-expanded="${state.openPlayer === player.id}"></button>${playerDetails(player)}</article>`;
     }).join('');
     document.querySelectorAll('[data-filter]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.filter === state.filter)));
     $('empty-roster').hidden = shown.length > 0;
@@ -192,7 +212,9 @@
     toggle.textContent = state.rosterExpanded ? 'Show featured players' : `Show complete roster · ${all.length} players`;
     toggle.setAttribute('aria-expanded',String(state.rosterExpanded));
     document.querySelector('.roster-heading').innerHTML = `<span>${state.filter === 'ALL' && !state.rosterExpanded ? 'FEATURED PLAYERS' : `${shown.length} ${state.filter === 'ALL' ? 'ROSTER' : state.filter} PLAYERS`}</span><span>${data.season} · WK 1–${data.provenance?.playerStats?.throughWeek ?? data.throughWeek}</span>`;
-    $('roster-note').innerHTML = `${data.season} season totals · tap a card for research<br>Depth chart: ${esc(timestamp(data.roster.find(player => player.depth?.sourceTimestamp)?.depth?.sourceTimestamp))} · <button data-sources>Sources</button>`;
+    const disputed = data.roster.filter(player => rosterEvidence(player)?.status === 'disputed');
+    const departed = data.roster.filter(departedRoster);
+    $('roster-note').innerHTML = `${data.season} season totals · tap a card for research<br>Depth chart: ${esc(timestamp(data.roster.find(player => player.depth?.sourceTimestamp)?.depth?.sourceTimestamp))}${disputed.length ? `<br>${disputed.length} roster source differences${departed.length ? ` · ${departed.length} confirmed departure excluded` : ''}` : ''} · <button data-sources>Sources</button>`;
   }
   function metric(label,value,suffix='',decimals) {
     return `<div class="metric"><b>${number(value,decimals)}${available(value) ? esc(suffix) : ''}</b><span>${esc(label)}</span></div>`;
@@ -243,7 +265,7 @@
     const provenance = Object.entries(data.provenance || {});
     const sources = [...(data.sources || []),...(playerHistory?.sources || []).filter(source=>!data.sources.some(existing=>existing.id === source.id))];
     const labels = { standings:'Conference records',weeklyLeaders:'Weekly leaders',roster:'Current roster',playerStats:'Player statistics',teamStats:'Team statistics',schedule:'Schedule & results',depthChart:'Depth chart',injuries:'Injury & practice reports',opponentAllowances:'Opponent positional allowance',historicalMatchups:'Previous meetings',weatherForecast:'Weather forecast',historicalPrices:'Archival lines (provider/time unavailable)' };
-    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : key === 'crossChecks' ? 'Dataset consistency checks passed. Independent official/provider confirmation is unavailable.' : entry.note || '')}</p></div>`).join('')}</div><p>Official-team and second-provider cross-checks were unavailable where access was denied. Missing injury designations are not treated as healthy status.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : entry.note || '')}</p></div>`).join('')}</div>${data.roster.some(player => rosterEvidence(player)?.status === 'disputed') ? `<section class="roster-source-differences"><h3>Roster source differences</h3><p>Confirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.</p>${data.roster.filter(player => rosterEvidence(player)?.status === 'disputed').map(player => `<h4>${esc(player.name)}</h4>${rosterVerificationNote(player)}`).join('')}</section>` : ''}<p>Missing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   function freshness() {
     if (!data) return;

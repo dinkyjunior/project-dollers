@@ -371,7 +371,11 @@ async function rafSample(page) {
   });
 }
 function rosterForFilter(data, filter, full = true) {
-  const current = data.roster.filter((p) => p.status !== "cut" && p.status !== "released" && !p.cut);
+  const current = data.roster.filter((p) => {
+    const evidence = p.rosterVerification;
+    const corroboratedDeparture = evidence?.officialCurrentMembership === false && evidence.espnCurrentMembership === false && evidence.reportedOtherTeam?.abbr && evidence.reportedOtherTeam.abbr !== 'PIT';
+    return p.status !== "cut" && p.status !== "released" && !p.cut && !corroboratedDeparture;
+  });
   if (filter !== "ALL") return current.filter((p) => p.filterGroup === filter);
   return full ? current : current.filter((p) => p.featured);
 }
@@ -384,7 +388,8 @@ async function rosterValues(page, data) {
   for (const card of cards) {
     const player = data.roster.find((p) => p.id === card.id);
     assert.ok(player, `Card identifies a sourced player: ${card.id}`);
-    assert.equal(card.name, player.name); assert.equal(card.number, `#${player.number || "—"}`);
+    const sourceNumber = player.rosterVerification?.officialNumber ?? player.number;
+    assert.equal(card.name, player.name); assert.equal(card.number, `#${sourceNumber === null || sourceNumber === undefined || sourceNumber === '' ? "—" : sourceNumber}`);
     assert.equal(card.position, player.filterGroup || player.position);
     assert.deepEqual(card.stats, player.stats.slice(0,4).map((s) => ({ label: s.label, value: s.value === null || s.value === undefined || s.value === "" ? "—" : String(s.value) })), `Visible statistics match the current dataset: ${player.name}`);
   }
@@ -487,6 +492,19 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     await page.locator('[data-filter="ALL"]').click();
     await page.locator("[data-roster-toggle]").click();
     assert.equal(await page.locator(".player-card:visible").count(), rosterForFilter(data, "ALL").length, "Full roster includes all current entries");
+    for (const player of data.roster.filter(player => player.rosterVerification?.reportedOtherTeam?.abbr && player.rosterVerification.officialCurrentMembership === false && player.rosterVerification.espnCurrentMembership === false)) {
+      assert.equal(await page.locator(`[data-player-id="${player.id}"]`).count(),0,`${player.name}: corroborated departure cannot appear as a current Steelers player`);
+      assert.ok(history.players[player.id],`${player.name}: original legitimate historical statistics are retained`);
+    }
+    const membershipDispute = data.roster.find(player => player.rosterVerification?.officialCurrentMembership === false && player.rosterVerification.espnCurrentMembership === true);
+    if (membershipDispute) {
+      const card = page.locator(`[data-player-id="${membershipDispute.id}"]`);
+      await card.locator('[data-player]').click();
+      assert.match(await card.locator('[data-roster-disagreement]').innerText(),/Roster sources differ/);
+      assert.match(await card.locator('.player-info').innerText(),/Roster disputed/);
+      await layout(page,'roster-disagreement');
+      await card.locator('[data-player]').click();
+    }
     await page.locator(".page.active img").evaluateAll(async (items) => {
       // Exercise each local file at least once; shipped lazy loading is unchanged.
       for (const image of items) image.loading = "eager";

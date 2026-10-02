@@ -13,9 +13,12 @@ import concurrent.futures
 import csv
 import datetime as dt
 import hashlib
+import html
 import io
 import json
 import os
+import re
+import ssl
 from pathlib import Path
 import tempfile
 import urllib.error
@@ -78,6 +81,14 @@ HISTORY_FIRST_SEASON = 2005  # Covers every regular-season year of the longest-t
 HISTORY_PATH = ROOT / "assets/data/player-history.json"
 
 
+def verified_ssl_context():
+    context = ssl.create_default_context()
+    supplied_ca = Path("/usr/local/share/ca-certificates/environment-proxy-ca.crt")
+    if supplied_ca.exists():
+        context.load_verify_locations(cafile=str(supplied_ca))
+    return context
+
+
 def iso(value):
     return value.astimezone(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
 
@@ -126,7 +137,7 @@ def archive_source_specs(season, player_ids):
 
 def fetch_source(item, cache_dir):
     source_id, spec = item
-    metadata = {"id": source_id, "url": spec["url"], "provider": "nflverse", "required": spec["required"]}
+    metadata = {"id": source_id, "url": spec["url"], "provider": spec.get("provider", "nflverse"), "required": spec["required"]}
     try:
         cache = Path(cache_dir) / spec["cache"] if cache_dir else None
         if cache and cache.exists():
@@ -140,16 +151,21 @@ def fetch_source(item, cache_dir):
                     metadata.update({key: saved[key] for key in ("httpStatus", "etag", "lastModified") if key in saved})
         else:
             request = urllib.request.Request(spec["url"], headers={"User-Agent": "ProjectDollarDataRefresh/1.0 public-data-audit"})
-            with urllib.request.urlopen(request, timeout=75) as response:
+            with urllib.request.urlopen(request, timeout=75, context=verified_ssl_context()) as response:
                 body = response.read()
                 metadata["httpStatus"] = response.status
                 metadata["etag"] = response.headers.get("ETag")
                 metadata["lastModified"] = response.headers.get("Last-Modified")
             retrieved = dt.datetime.now(UTC)
         metadata.update({"retrievedAt": iso(retrieved), "status": "verified", "sha256": hashlib.sha256(body).hexdigest(), "bytes": len(body)})
-        reader = csv.DictReader(io.StringIO(body.decode("utf-8-sig")))
-        player_ids = spec.get("playerIds")
-        rows = [row for row in reader if not player_ids or row.get("player_id") in player_ids]
+        if spec.get("format") == "json":
+            rows = json.loads(body)
+        elif spec.get("format") == "html":
+            rows = body.decode("utf-8-sig")
+        else:
+            reader = csv.DictReader(io.StringIO(body.decode("utf-8-sig")))
+            player_ids = spec.get("playerIds")
+            rows = [row for row in reader if not player_ids or row.get("player_id") in player_ids]
         if not rows:
             raise ValueError("Source contains no rows")
         if cache_dir and not (cache and cache.exists()):
@@ -277,6 +293,246 @@ def card_stats(position, stats, has_data):
 
 def position_filter(position):
     return position if position in ("QB", "RB", "WR", "TE") else "RB" if position == "FB" else "K" if position in ("K", "P", "LS") else "OL" if position in ("C", "G", "T", "OT", "OG", "OL") else "DEF"
+
+
+def normalized_name(value):
+    words = re.sub(r"[^a-z0-9 ]", "", value.lower()).split()
+    if words and words[-1] in ("jr", "sr", "ii", "iii", "iv"):
+        words.pop()
+    return "".join(words)
+
+
+def parse_official_roster(document):
+    """Absence is evidence only after validating a complete current team page."""
+    if not isinstance(document, str) or not re.search(r"Pittsburgh\s+Steelers", document, re.I):
+        raise ValueError("Official roster team identity missing")
+    players, groups = [], []
+    for match in re.finditer(r"<table\b[^>]*>(.*?)</table>", document, re.S | re.I):
+        prefix = document[:match.start()]
+        headings = re.findall(r'<span\b[^>]*class=["\'][^"\']*nfl-o-roster__title-status[^"\']*["\'][^>]*>(.*?)</span>', prefix, re.S | re.I)
+        if not headings:
+            continue
+        group = html.unescape(re.sub(r"<[^>]+>", " ", headings[-1])).strip()
+        content = match.group(1)
+        headers = [html.unescape(re.sub(r"<[^>]+>", " ", cell)).strip() for cell in re.findall(r"<th\b[^>]*>(.*?)</th>", content, re.S | re.I)]
+        if headers[:3] != ["Player", "#", "Pos"]:
+            continue
+        group_players = []
+        for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", content, re.S | re.I):
+            cells = re.findall(r"<td\b[^>]*>(.*?)</td>", row, re.S | re.I)
+            if not cells:
+                continue
+            if len(cells) < 8:
+                raise ValueError("Official roster row incomplete")
+            values = [" ".join(html.unescape(re.sub(r"<[^>]+>", " ", cell)).split()) for cell in cells]
+            if not values[0] or not re.fullmatch(r"[A-Z/]{1,6}", values[2]):
+                raise ValueError("Official roster identity/position invalid")
+            jersey = int(values[1]) if re.fullmatch(r"\d{1,2}", values[1]) else None
+            group_players.append({"name": values[0], "number": jersey, "position": values[2], "status": group})
+        if group_players:
+            groups.append({"name": group, "count": len(group_players)})
+            players.extend(group_players)
+    counts = {entry["name"]: entry["count"] for entry in groups}
+    if not (60 <= len(players) <= 110 and 45 <= counts.get("Active", 0) <= 60 and counts.get("Practice Squad", 0) >= 5):
+        raise ValueError("Official roster completeness threshold not met; no absence conclusions")
+    if len({normalized_name(player["name"]) for player in players}) != len(players):
+        raise ValueError("Official roster duplicate or ambiguous names")
+    return {"players": players, "groups": groups, "complete": True}
+
+
+def parse_espn_roster(document, season):
+    if not isinstance(document, dict) or document.get("season", {}).get("year") != season:
+        raise ValueError("ESPN roster season context differs")
+    team = document.get("team", {})
+    if str(team.get("id")) != "23" and team.get("abbreviation") != "PIT":
+        raise ValueError("ESPN roster team context differs")
+    groups = document.get("athletes", [])
+    if not isinstance(groups, list) or not {"offense", "defense", "specialTeam"}.issubset({group.get("position") for group in groups}):
+        raise ValueError("ESPN roster category schema incomplete")
+    players = [{**player, "rosterGroup": group["position"]} for group in groups for player in group.get("items", [])]
+    active = sum(player["rosterGroup"] in ("offense", "defense", "specialTeam") for player in players)
+    if not (60 <= len(players) <= 110 and active >= 45 and len({str(player.get("id")) for player in players}) == len(players)):
+        raise ValueError("ESPN roster completeness threshold not met")
+    if any(not player.get("displayName") or not str(player.get("id", "")).isdigit() for player in players):
+        raise ValueError("ESPN roster identity schema invalid")
+    return {"players": players, "complete": True, "sourceTimestamp": document.get("timestamp"), "season": season}
+
+
+def match_espn_player(raw_player, espn_players):
+    birthday = raw_player.get("birth_date")
+    espn_id = raw_player.get("espn_id")
+    candidates = [player for player in espn_players if str(player["id"]) == str(espn_id)] if espn_id else []
+    if not candidates:
+        candidates = [player for player in espn_players if normalized_name(player["displayName"]) == normalized_name(raw_player["full_name"])]
+    method = "ESPN ID or normalized exact name"
+    if not candidates and birthday:
+        surname = re.sub(r"\s+(Jr\.?|Sr\.?|III|II)$", "", raw_player["full_name"], flags=re.I).split()[-1].lower()
+        candidates = [player for player in espn_players if str(player.get("dateOfBirth", ""))[:10] == birthday
+                      and re.sub(r"\s+(Jr\.?|Sr\.?|III|II)$", "", player["displayName"], flags=re.I).split()[-1].lower() == surname
+                      and str(player.get("jersey")) == str(number(raw_player.get("jersey_number")))]
+        method = "Unique birth date, surname and jersey match"
+    if len(candidates) != 1:
+        return None, "No unambiguous matched ESPN identity"
+    candidate = candidates[0]
+    if birthday and candidate.get("dateOfBirth") and str(candidate["dateOfBirth"])[:10] != birthday:
+        return None, "Conflicting identity birth date"
+    return candidate, method
+
+
+def match_official_player(raw_player, espn_player, official_players):
+    names = {normalized_name(raw_player["full_name"])}
+    if espn_player:
+        names.add(normalized_name(espn_player["displayName"]))
+    matched = [player for player in official_players if normalized_name(player["name"]) in names]
+    return matched[0] if len(matched) == 1 else None
+
+
+def position_families(position):
+    lookup = {"DB": "DB", "CB": "DB", "S": "DB", "FS": "DB", "SS": "DB", "DL": "DL", "DE": "DL", "DT": "DL",
+              "OL": "OL", "C": "OL", "G": "OL", "OG": "OL", "T": "OL", "OT": "OL", "K": "K", "PK": "K",
+              "RB": "RB", "FB": "RB"}
+    return {lookup.get(value, value) for value in str(position or "").split("/") if value}
+
+
+def roster_source_specs(season):
+    return {"official_steelers_roster": {"url": "https://www.steelers.com/team/players-roster/", "cache": "official-steelers-roster.html",
+                                           "format": "html", "provider": "Pittsburgh Steelers", "required": False},
+            "espn_steelers_roster": {"url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+                                      "cache": f"espn-steelers-roster{season}.json", "format": "json", "provider": "ESPN", "required": False}}
+
+
+def apply_roster_verification(data, raw_roster, payloads, metadata, now, previous=None):
+    primary_hash = next(source["sha256"] for source in data["sources"] if source["id"] == "nflverse_roster")
+    source_ids = ("official_steelers_roster", "espn_steelers_roster")
+    current_context = data["season"] == (now.year - 1 if now.month < 3 else now.year)
+    if not current_context:
+        for source_id in source_ids:
+            metadata[source_id] = {**metadata.get(source_id, {"id": source_id, "required": False}), "status": "unavailable",
+                                   "error": "Current public roster cannot establish historical-season membership"}
+    parsed = {}
+    for source_id, parser in [(source_ids[0], parse_official_roster), (source_ids[1], lambda payload: parse_espn_roster(payload, data["season"]))]:
+        try:
+            if metadata.get(source_id, {}).get("status") != "verified":
+                raise ValueError("Optional roster source unavailable")
+            parsed[source_id] = parser(payloads[source_id])
+        except (ValueError, KeyError, TypeError) as exc:
+            metadata[source_id] = {**metadata.get(source_id, {"id": source_id, "required": False}), "status": "unavailable", "error": str(exc)}
+    pair_available = len(parsed) == 2
+    prior_players = {player["id"]: player for player in (previous or {}).get("roster", [])}
+    previous_sources = {source["id"]: source for source in (previous or {}).get("sources", [])}
+    raw_by_id = {player["gsis_id"]: player for player in raw_roster
+                 if player.get("team") == "PIT" and player.get("season") == str(data["season"]) and player.get("status") != "CUT"}
+    retained_sources = {}
+    for player in data["roster"]:
+        prior = prior_players.get(player["id"], {}).get("rosterVerification")
+        if current_context and not pair_available and prior and prior.get("primaryRosterSha256") == primary_hash and prior["status"] != "unavailable":
+            verification = json.loads(json.dumps(prior))
+            verification.update({"retained": True, "stale": True, "lastAttemptAt": iso(now),
+                                 "note": "Earlier source verification retained because optional source access failed and the primary roster content is unchanged. Original evidence, source times and disagreements are preserved; the check is stale."})
+            player["rosterVerification"] = verification
+            for source_id in prior["sourceIds"]:
+                if source_id in previous_sources:
+                    retained_sources[source_id] = {**previous_sources[source_id], "retained": True,
+                                                  "lastAttempt": metadata.get(source_id, {"status": "not attempted", "retrievedAt": iso(now)})}
+            continue
+        raw = raw_by_id[player["id"]]
+        espn_player, join_method = match_espn_player(raw, parsed.get(source_ids[1], {}).get("players", []))
+        official = match_official_player(raw, espn_player, parsed.get(source_ids[0], {}).get("players", []))
+        used = [source_id for source_id in source_ids if source_id in parsed]
+        official_member = bool(official) if source_ids[0] in parsed and pair_available else None
+        espn_member = bool(espn_player) if source_ids[1] in parsed else None
+        other_team = None
+        athlete_source_id = f"espn_athlete_{raw.get('espn_id')}"
+        athlete = payloads.get(athlete_source_id, {}).get("athlete", {}) if isinstance(payloads.get(athlete_source_id), dict) else {}
+        if not official_member and not espn_member and athlete and metadata.get(athlete_source_id, {}).get("status") == "verified":
+            birth_matches = not raw.get("birth_date") or not athlete.get("dateOfBirth") or str(athlete["dateOfBirth"])[:10] == raw["birth_date"]
+            same_identity = str(athlete.get("id")) == str(raw.get("espn_id")) and normalized_name(athlete.get("displayName", "")) == normalized_name(raw["full_name"]) and birth_matches
+            athlete_season = payloads[athlete_source_id].get("season", {}).get("year")
+            if same_identity and athlete_season == data["season"] and athlete.get("team", {}).get("abbreviation"):
+                used.append(athlete_source_id)
+                team = athlete["team"]
+                if team["abbreviation"] != "PIT":
+                    other_team = {"abbr": team["abbreviation"], "name": team.get("displayName"), "athleteId": str(athlete["id"]), "sourceId": athlete_source_id}
+        issues = []
+        def issue(field, primary, official_value, espn_value, note):
+            issues.append({"field": field, "primary": primary, "official": official_value, "espn": espn_value, "note": note})
+        if official_member is False:
+            issue("membership", "PIT", "No matched entry in complete current roster", "PIT" if espn_member else other_team["abbr"] if other_team else "No matched roster entry",
+                  "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.")
+        official_status = official["status"] if official else None
+        if official_status:
+            group = "Active" if official_status == "Active" else "Practice squad" if official_status.startswith("Practice Squad") else "Reserve" if official_status.startswith("Reserve/") else None
+            if group and group != player["rosterStatus"]:
+                issue("rosterStatus", player["rosterStatus"], official_status, espn_player.get("rosterGroup") if espn_player else None,
+                      "Official current category differs from the primary release; categories retain their source wording.")
+        espn_position = espn_player.get("position", {}).get("abbreviation") if espn_player else None
+        positions = [position for position in [player["position"], official.get("position") if official else None, espn_position] if position]
+        if positions and not set.intersection(*(position_families(position) for position in positions)):
+            issue("position", player["position"], official.get("position") if official else None, espn_position,
+                  "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.")
+        official_number = official.get("number") if official else None
+        if official_number is not None and number(raw.get("jersey_number")) is not None and official_number != number(raw["jersey_number"]):
+            issue("jersey", player["number"], official_number, espn_player.get("jersey") if espn_player else None,
+                  "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.")
+        verified_sources = [metadata[source_id] for source_id in used]
+        verification = {"status": "unavailable" if not pair_available else "disputed" if issues else "confirmed", "primaryRosterSha256": primary_hash,
+                        "checkedAt": iso(now), "retrievedAt": min((source["retrievedAt"] for source in verified_sources), default=None),
+                        "sourceIds": used, "sourceHashes": {source["id"]: source["sha256"] for source in verified_sources},
+                        "retained": False, "stale": False, "officialCurrentMembership": official_member, "espnCurrentMembership": espn_member,
+                        "officialRosterStatus": official_status, "officialNumber": official_number, "officialPosition": official.get("position") if official else None,
+                        "espnRosterStatus": espn_player.get("rosterGroup") if espn_player else None, "espnPosition": espn_position,
+                        "reportedOtherTeam": other_team, "issues": issues,
+                        "note": "Optional source comparison unavailable; no primary data replaced." if not pair_available else "Source disagreements are explicit; primary retained records and all historical statistics remain intact." if issues else "Current official and ESPN roster identity compared; source label granularity is preserved.",
+                        "evidence": {"officialName": official.get("name") if official else None,
+                                     "espnName": espn_player.get("displayName") if espn_player else athlete.get("displayName") if other_team else None,
+                                     "espnId": str(espn_player["id"]) if espn_player else str(athlete["id"]) if other_team else None,
+                                     "identityJoinMethod": "Published ESPN ID and normalized exact athlete name; birth date compared only when exposed" if other_team else join_method}}
+        player["rosterVerification"] = verification
+    metadata.update(retained_sources)
+    data["sources"].extend(source for source_id, source in metadata.items() if source_id not in {entry["id"] for entry in data["sources"]})
+    verifications = [player["rosterVerification"] for player in data["roster"]]
+    verification_sources = sorted({source_id for verification in verifications for source_id in verification["sourceIds"]})
+    for player in data["roster"]:
+        verification = player["rosterVerification"]
+        for entry in verification["issues"]:
+            data["disagreements"].append({"playerId": player["id"], "name": player["name"], **entry, "sourceIds": verification["sourceIds"],
+                                          "checkedAt": verification["checkedAt"], "retained": verification["retained"],
+                                          "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."})
+    state = "unavailable" if all(entry["status"] == "unavailable" for entry in verifications) else "partial" if any(entry["status"] != "confirmed" or entry["stale"] for entry in verifications) else "verified"
+    data["provenance"]["rosterVerification"] = {"status": state, "sourceIds": verification_sources, "season": data["season"],
+                                                 "note": "Optional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten."}
+    data["provenance"]["crossChecks"].update({"status": "partial", "sourceIds": sorted(set(data["provenance"]["crossChecks"]["sourceIds"] + verification_sources)),
+                                               "note": "Current roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields."})
+    return {"status": state, "sourceIds": verification_sources, "confirmed": sum(entry["status"] == "confirmed" for entry in verifications),
+            "disputed": sum(entry["status"] == "disputed" for entry in verifications), "unavailable": sum(entry["status"] == "unavailable" for entry in verifications),
+            "retained": sum(entry["retained"] for entry in verifications), "officialRosterCount": len(parsed.get(source_ids[0], {}).get("players", [])),
+            "espnRosterCount": len(parsed.get(source_ids[1], {}).get("players", []))}
+
+
+def refresh_roster_verification(data, raw_roster, now, cache_dir=None, previous=None):
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+        results = list(pool.map(lambda item: fetch_source(item, cache_dir), roster_source_specs(data["season"]).items()))
+    payloads = {source_id: value for source_id, value, _ in results}
+    metadata = {source_id: source for source_id, _, source in results}
+    try:
+        official = parse_official_roster(payloads["official_steelers_roster"])
+        espn = parse_espn_roster(payloads["espn_steelers_roster"], data["season"])
+        specs = {}
+        for raw in raw_roster:
+            if raw.get("team") != "PIT" or raw["gsis_id"] not in {player["id"] for player in data["roster"]}:
+                continue
+            espn_player, _ = match_espn_player(raw, espn["players"])
+            if not espn_player and not match_official_player(raw, espn_player, official["players"]) and re.fullmatch(r"\d+", raw.get("espn_id") or ""):
+                athlete_id = raw["espn_id"]
+                specs[f"espn_athlete_{athlete_id}"] = {"url": f"https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/{athlete_id}",
+                                                     "cache": f"espn-athlete-{athlete_id}.json", "format": "json", "provider": "ESPN", "required": False}
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+            results = list(pool.map(lambda item: fetch_source(item, cache_dir), specs.items()))
+        payloads.update({source_id: value for source_id, value, _ in results})
+        metadata.update({source_id: source for source_id, _, source in results})
+    except (ValueError, KeyError, TypeError):
+        pass  # apply_roster_verification records unavailable parser/source state.
+    return apply_roster_verification(data, raw_roster, payloads, metadata, dt.datetime.now(UTC), previous)
 
 
 def canonical_team(abbr):
@@ -726,7 +982,28 @@ def validate(data):
         assert team_stats["netPassingYards"] <= team_stats["passingYards"], "Sack loss must reduce net passing"
     assert team_stats["totalYards"] == known_sum(team_stats["netPassingYards"], team_stats["rushingYards"])
     source_ids = {s["id"] for s in data["sources"]}
+    source_map = {source["id"]: source for source in data["sources"]}
     assert all(source_id in source_ids for group in data["provenance"].values() for source_id in group["sourceIds"])
+    for player in data["roster"]:
+        verification = player.get("rosterVerification")
+        if not verification:
+            continue
+        assert verification["status"] in ("confirmed", "disputed", "unavailable")
+        assert verification["primaryRosterSha256"] == source_map["nflverse_roster"]["sha256"]
+        assert verification["officialCurrentMembership"] in (True, False, None)
+        assert verification["espnCurrentMembership"] in (True, False, None)
+        assert len(set(verification["sourceIds"])) == len(verification["sourceIds"])
+        assert set(verification["sourceIds"]) == set(verification.get("sourceHashes", {}))
+        if verification["status"] in ("confirmed", "disputed"):
+            assert verification["checkedAt"] and verification["retrievedAt"] and verification["sourceIds"]
+        for source_id, content_hash in verification.get("sourceHashes", {}).items():
+            assert source_id in source_map and source_map[source_id]["sha256"] == content_hash
+            assert source_map[source_id]["status"] == "verified", "Roster verification source is unavailable"
+            assert source_map[source_id].get("retrievedAt") and source_map[source_id].get("url")
+            assert source_map[source_id]["retrievedAt"] <= verification["checkedAt"], "Roster evidence was retrieved after its verification"
+        if verification.get("reportedOtherTeam"):
+            assert verification["reportedOtherTeam"]["sourceId"] in verification["sourceIds"]
+            assert verification["reportedOtherTeam"]["sourceId"] == f"espn_athlete_{verification['reportedOtherTeam']['athleteId']}"
     encoded = json.dumps(data, allow_nan=False)
     assert "NaN" not in encoded
     return {"status": "passed", "teamCount": len(data["teams"]), "rosterCount": len(data["roster"]),
@@ -793,11 +1070,17 @@ def main():
         return
     now = dt.datetime.now(UTC)
     season = args.season or (now.year - 1 if now.month < 3 else now.year)
+    try:
+        previous = json.loads((ROOT / "assets/data/current.json").read_text())
+    except (OSError, ValueError):
+        previous = None
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(lambda item: fetch_source(item, args.cache_dir), source_specs(season).items()))
     datasets = {source_id: rows for source_id, rows, _ in results}
     metadata = {source_id: meta for source_id, _, meta in results}
+    now = dt.datetime.now(UTC)
     data = build_snapshot(datasets, metadata, now, season)
+    roster_checks = refresh_roster_verification(data, datasets["nflverse_roster"], now, args.cache_dir, previous)
     cached = cached_player_history(season, data["roster"], data["steelers"]["schedule"], args.refresh_history)
     if not cached:
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
@@ -828,6 +1111,7 @@ def main():
     provenance = {"schemaVersion": 1, "generatedAt": data["generatedAt"], "retrievedAt": data["retrievedAt"], "snapshotSha256CanonicalJson": normalized_hash,
                   "sources": data["sources"], "datasets": data["provenance"], "validation": checks,
                   "playerHistorySha256": history_hash, "playerHistoryValidation": history_checks,
+                  "rosterVerification": roster_checks,
                   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
                   "refreshCommand": "python3 scripts/refresh-data.py", "validateCommand": "python3 scripts/refresh-data.py --check",
                   "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
@@ -837,6 +1121,7 @@ def main():
     atomic_json(ROOT / "assets/data/provenance.json", provenance)
     print(json.dumps({**checks, "retrievedAt": data["retrievedAt"], "nextGame": data["steelers"]["upcomingGame"],
                       "snapshotBytes": (ROOT / "assets/data/current.json").stat().st_size,
+                      "rosterVerification": roster_checks,
                       "playerHistory": history_checks, "playerHistoryBytes": HISTORY_PATH.stat().st_size}, indent=2))
 
 

@@ -79,6 +79,31 @@ def history_fixtures():
     return datasets, metadata, now
 
 
+def optional_roster_fixtures():
+    datasets, metadata, now = fixtures()
+    datasets["nflverse_roster"][0].update({"birth_date": "1983-12-02", "espn_id": "8439"})
+    snapshot = REFRESH.build_snapshot(datasets, metadata, now, 2026)
+    players = [{"name": "Aaron Rodgers", "number": 8, "position": "QB", "id": "8439", "birth": "1983-12-02"}] + [
+        {"name": f"Synthetic Roster {i}", "number": i % 99, "position": "WR", "id": str(9000000 + i), "birth": "2000-01-01"}
+        for i in range(1, 60)]
+    def official_html(values):
+        output = "<title>Pittsburgh Steelers test-only roster</title>"
+        for group, subset in [("Active", values[:50]), ("Practice Squad", values[50:])]:
+            output += f'<span class="nfl-o-roster__title-status">{group}</span><table><tr><th>Player</th><th>#</th><th>Pos</th></tr>'
+            output += "".join("<tr>" + "".join(f"<td>{value}</td>" for value in [p["name"], p["number"], p["position"], "6-0", "200", "26", "1", "Test-only"]) + "</tr>" for p in subset)
+            output += "</table>"
+        return output
+    espn_players = [{"id": p["id"], "displayName": p["name"], "jersey": str(p["number"]), "dateOfBirth": p["birth"] + "T00:00Z",
+                     "position": {"abbreviation": p["position"]}} for p in players]
+    espn = {"season": {"year": 2026}, "team": {"id": "23"}, "athletes": [
+        {"position": "offense", "items": espn_players[:48]}, {"position": "defense", "items": espn_players[48:49]},
+        {"position": "specialTeam", "items": espn_players[49:50]}, {"position": "practiceSquad", "items": espn_players[50:]}]}
+    payloads = {"official_steelers_roster": official_html(players), "espn_steelers_roster": espn}
+    optional_metadata = {key: {"id": key, "url": "https://example.invalid/test-only", "provider": "Synthetic test fixture",
+                               "required": False, "status": "verified", "sha256": f"test-only-{key}", "retrievedAt": REFRESH.iso(now)} for key in payloads}
+    return datasets, snapshot, payloads, optional_metadata, now, players, official_html
+
+
 class CoverageTests(unittest.TestCase):
     def test_partial_release_uses_each_dataset_coverage_not_league_week(self):
         datasets, metadata, now = fixtures()
@@ -311,6 +336,133 @@ class PlayerHistoryTests(unittest.TestCase):
         self.assertEqual(player["games"], {})
         self.assertTrue(all(entry["status"] == "unavailable" and entry["gameIds"] == [] for entry in player["byOpponent"].values()))
         self.assertIn("absence is not proof", player["note"])
+
+
+class RosterVerificationTests(unittest.TestCase):
+    def test_optional_roster_completeness_rejects_partial_and_wrong_context(self):
+        _, _, payloads, _, _, _, _ = optional_roster_fixtures()
+        with self.assertRaisesRegex(ValueError, "completeness"):
+            REFRESH.parse_official_roster(payloads["official_steelers_roster"].split("</table>")[0] + "</table>")
+        wrong = copy.deepcopy(payloads["espn_steelers_roster"])
+        wrong["season"]["year"] = 2025
+        with self.assertRaisesRegex(ValueError, "season context"):
+            REFRESH.parse_espn_roster(wrong, 2026)
+        wrong["season"]["year"] = 2026
+        wrong["team"]["id"] = "6"
+        with self.assertRaisesRegex(ValueError, "team context"):
+            REFRESH.parse_espn_roster(wrong, 2026)
+
+    def test_corrobated_other_team_departure_preserves_primary_player(self):
+        datasets, snapshot, payloads, metadata, now, _, _ = optional_roster_fixtures()
+        raw = {**datasets["nflverse_roster"][0], "gsis_id": "test-port", "full_name": "Joey Porter Jr.", "espn_id": "4426506",
+               "birth_date": "2000-07-26", "jersey_number": "24", "position": "DB"}
+        datasets["nflverse_roster"].append(raw)
+        snapshot["roster"].append({**copy.deepcopy(snapshot["roster"][0]), "id": "test-port", "name": raw["full_name"], "number": "24", "position": "DB"})
+        # The actual public athlete resource exposes ID/name but no date of
+        # birth. Missing optional DOB must not defeat the exact identity join.
+        payloads["espn_athlete_4426506"] = {"season": {"year": 2026}, "athlete": {"id": "4426506", "displayName": "Joey Porter Jr.",
+                                                                                     "team": {"abbreviation": "DAL", "displayName": "Dallas Cowboys"}}}
+        metadata["espn_athlete_4426506"] = {**metadata["espn_steelers_roster"], "id": "espn_athlete_4426506", "sha256": "test-only-athlete"}
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, metadata, now)
+        player = snapshot["roster"][1]
+        verification = player["rosterVerification"]
+        self.assertEqual((player["team"], player["number"], player["rosterStatus"]), ("PIT", "24", "Active"))
+        self.assertEqual((verification["officialCurrentMembership"], verification["espnCurrentMembership"]), (False, False))
+        self.assertEqual(verification["reportedOtherTeam"]["abbr"], "DAL")
+        self.assertEqual(verification["evidence"]["espnId"], "4426506")
+        self.assertIn("exact athlete name", verification["evidence"]["identityJoinMethod"])
+        self.assertEqual(verification["status"], "disputed")
+        REFRESH.validate(snapshot)
+        prior = copy.deepcopy(snapshot)
+        blocked = copy.deepcopy(metadata)
+        blocked["official_steelers_roster"].update({"status": "unavailable", "error": "Test-only temporary failure"})
+        snapshot["disagreements"] = []
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, blocked, now + dt.timedelta(hours=1), prior)
+        retained = snapshot["roster"][1]["rosterVerification"]
+        self.assertTrue(retained["retained"] and retained["stale"])
+        self.assertEqual((retained["officialCurrentMembership"], retained["espnCurrentMembership"]), (False, False))
+        self.assertEqual(retained["reportedOtherTeam"]["abbr"], "DAL")
+        self.assertEqual(retained["checkedAt"], verification["checkedAt"])
+        REFRESH.validate(snapshot)
+
+    def test_verified_alias_jersey_zero_and_meaningful_status_not_granularity(self):
+        datasets, snapshot, payloads, metadata, now, players, render = optional_roster_fixtures()
+        raw = datasets["nflverse_roster"][0]
+        raw.update({"full_name": "Gabe Rubio", "espn_id": "", "birth_date": "2003-07-09", "jersey_number": "0", "position": "DL", "status": "DEV"})
+        player = snapshot["roster"][0]
+        player.update({"name": "Gabe Rubio", "number": "0", "position": "DL", "rosterStatus": "Practice squad"})
+        players[0].update({"name": "Gabriel Rubio", "number": 0, "position": "DE"})
+        payloads["official_steelers_roster"] = render(players)
+        espn = payloads["espn_steelers_roster"]["athletes"][0]["items"][0]
+        espn.update({"id": "4431533", "displayName": "Gabriel Rubio", "jersey": "0", "dateOfBirth": "2003-07-09T00:00Z", "position": {"abbreviation": "DE"}})
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, metadata, now)
+        verification = player["rosterVerification"]
+        self.assertTrue(verification["officialCurrentMembership"])
+        self.assertEqual(verification["officialNumber"], 0)
+        self.assertEqual(verification["officialRosterStatus"], "Active")
+        self.assertIn("birth date", verification["evidence"]["identityJoinMethod"])
+        self.assertEqual([issue["field"] for issue in verification["issues"]], ["rosterStatus"])
+
+    def test_position_family_disagreement_and_real_jersey_conflict(self):
+        datasets, snapshot, payloads, metadata, now, players, render = optional_roster_fixtures()
+        raw = datasets["nflverse_roster"][0]
+        raw.update({"position": "WR", "jersey_number": "82"})
+        player = snapshot["roster"][0]
+        player.update({"position": "WR", "number": "82"})
+        players[0].update({"position": "WR", "number": 89})
+        payloads["official_steelers_roster"] = render(players)
+        payloads["espn_steelers_roster"]["athletes"][0]["items"][0].update({"position": {"abbreviation": "RB"}, "jersey": None})
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, metadata, now)
+        self.assertEqual({issue["field"] for issue in player["rosterVerification"]["issues"]}, {"jersey", "position"})
+        self.assertEqual(player["rosterVerification"]["officialNumber"], 89)
+
+    def test_unavailable_optional_sources_never_prove_absence(self):
+        datasets, snapshot, payloads, metadata, now, _, _ = optional_roster_fixtures()
+        metadata["official_steelers_roster"].update({"status": "unavailable", "error": "test-only blocked source"})
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, metadata, now)
+        verification = snapshot["roster"][0]["rosterVerification"]
+        self.assertIsNone(verification["officialCurrentMembership"])
+        self.assertEqual(verification["status"], "unavailable")
+        self.assertFalse(verification["issues"])
+
+    def test_failed_source_retains_bound_prior_flags_but_new_primary_hash_does_not(self):
+        datasets, snapshot, payloads, metadata, now, _, _ = optional_roster_fixtures()
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, copy.deepcopy(metadata), now)
+        prior = copy.deepcopy(snapshot)
+        next_snapshot = copy.deepcopy(snapshot)
+        next_snapshot["disagreements"] = []
+        for source in metadata.values():source.update({"status": "unavailable", "error": "test-only temporary failure"})
+        REFRESH.apply_roster_verification(next_snapshot, datasets["nflverse_roster"], payloads, copy.deepcopy(metadata), now + dt.timedelta(hours=1), prior)
+        verification = next_snapshot["roster"][0]["rosterVerification"]
+        self.assertTrue(verification["retained"] and verification["stale"])
+        self.assertEqual(verification["checkedAt"], prior["roster"][0]["rosterVerification"]["checkedAt"])
+        self.assertEqual(verification["retrievedAt"], prior["roster"][0]["rosterVerification"]["retrievedAt"])
+        REFRESH.validate(next_snapshot)
+        retained_note = verification["note"]
+        for iteration in range(5):
+            repeated_prior = copy.deepcopy(next_snapshot)
+            REFRESH.apply_roster_verification(next_snapshot, datasets["nflverse_roster"], payloads, copy.deepcopy(metadata), now + dt.timedelta(hours=2 + iteration), repeated_prior)
+            self.assertEqual(next_snapshot["roster"][0]["rosterVerification"]["note"], retained_note)
+            self.assertEqual(next_snapshot["roster"][0]["rosterVerification"]["checkedAt"], prior["roster"][0]["rosterVerification"]["checkedAt"])
+        changed = copy.deepcopy(snapshot)
+        next(source for source in changed["sources"] if source["id"] == "nflverse_roster")["sha256"] = "changed-primary-content"
+        REFRESH.apply_roster_verification(changed, datasets["nflverse_roster"], payloads, copy.deepcopy(metadata), now, prior)
+        verification = changed["roster"][0]["rosterVerification"]
+        self.assertFalse(verification["retained"])
+        self.assertIsNone(verification["officialCurrentMembership"])
+        self.assertEqual(verification["status"], "unavailable")
+
+    def test_verification_requires_matching_source_hash_and_source_timestamp(self):
+        datasets, snapshot, payloads, metadata, now, _, _ = optional_roster_fixtures()
+        REFRESH.apply_roster_verification(snapshot, datasets["nflverse_roster"], payloads, metadata, now)
+        invalid = copy.deepcopy(snapshot)
+        invalid["roster"][0]["rosterVerification"]["sourceHashes"]["official_steelers_roster"] = "unmatched-content-hash"
+        with self.assertRaises(AssertionError):
+            REFRESH.validate(invalid)
+        invalid = copy.deepcopy(snapshot)
+        next(source for source in invalid["sources"] if source["id"] == "official_steelers_roster")["retrievedAt"] = REFRESH.iso(now + dt.timedelta(hours=1))
+        with self.assertRaisesRegex(AssertionError, "after its verification"):
+            REFRESH.validate(invalid)
 
 
 if __name__ == "__main__":

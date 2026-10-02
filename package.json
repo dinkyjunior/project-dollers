@@ -9,6 +9,8 @@
     "data:refresh": "python3 scripts/refresh-data.py",
     "data:check": "python3 scripts/refresh-data.py --check",
     "qa:hosted": "node qa/hosted.cjs",
+    "qa:hosted:firefox": "node qa/hosted-firefox.cjs",
+    "qa:hosted:webkit": "node qa/hosted-webkit.cjs",
     "test:data": "python3 qa/data.test.py",
     "test:updates": "node qa/data-updates.test.cjs",
     "test:sources": "python3 qa/source-updates.test.py",

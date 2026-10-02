@@ -1,0 +1,3777 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-02T01:40:08Z",
+  "scope": "Read-only independent cross-check of immutable published baseline; no app or generated data override.",
+  "baseline": {
+    "gitCommit": "f3f6af5",
+    "currentJsonSha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+    "season": 2026,
+    "currentWeek": 4,
+    "throughWeek": 3,
+    "retrievedAt": "2026-10-02T00:34:31Z",
+    "generatedAt": "2026-10-02T00:37:38Z",
+    "nflverseSources": [
+      {
+        "id": "nflverse_games",
+        "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+        "provider": "nflverse",
+        "required": true,
+        "httpStatus": 200,
+        "etag": "\"e0c6f4d4966de3410592fec7c3ccd9291693bd1ea6ed185511d95cc683afd5e0\"",
+        "lastModified": null,
+        "retrievedAt": "2026-10-02T00:34:31Z",
+        "status": "verified",
+        "sha256": "759f14a852eb7c27cfcd371f8b31ab9d0e695cd52cdd283521d4fe5f1498a926",
+        "bytes": 2182435
+      },
+      {
+        "id": "nflverse_roster",
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+        "provider": "nflverse",
+        "required": true,
+        "httpStatus": 200,
+        "etag": "\"0x8DF1FC826F6D7A2\"",
+        "lastModified": "Thu, 01 Oct 2026 14:27:41 GMT",
+        "retrievedAt": "2026-10-02T00:34:32Z",
+        "status": "verified",
+        "sha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "bytes": 957383
+      },
+      {
+        "id": "nflverse_depth",
+        "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+        "provider": "nflverse",
+        "required": false,
+        "httpStatus": 200,
+        "etag": "\"0x8DF1FC7F08C7A70\"",
+        "lastModified": "Thu, 01 Oct 2026 14:26:10 GMT",
+        "retrievedAt": "2026-10-02T00:34:33Z",
+        "status": "verified",
+        "sha256": "1a1c4149017b2d780b1ac53d2298f97145190019eedc0d66f1cfcf4632762706",
+        "bytes": 56175075
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "espn_steelers_team",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "sha256": "9113d77840dcafc59dc5e775c731ffa5685adfd30c28dfe38814e8559d0cb8e0",
+      "bytes": 24572,
+      "headers": {
+        "Date": "Fri, 02 Oct 2026 01:33:56 GMT",
+        "Cache-Control": "max-age=1",
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    },
+    {
+      "id": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "sha256": "ff4b2a33bf562e75b0703e773735702fe42138fa09af0ed716c6e01ab83b9108",
+      "bytes": 357177,
+      "headers": {
+        "Date": "Fri, 02 Oct 2026 01:33:56 GMT",
+        "Cache-Control": "max-age=1",
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    },
+    {
+      "id": "espn_steelers_depth",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/depthcharts",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "sha256": "1a7e58ac653795b8fa5108f060027da56922c7ea580fa17548ca05c54bf55914",
+      "bytes": 212122,
+      "headers": {
+        "Date": "Fri, 02 Oct 2026 01:33:56 GMT",
+        "Cache-Control": "max-age=1",
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    },
+    {
+      "id": "espn_nfl_standings",
+      "url": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "sha256": "c0ae886f9c555e15c667a80446ccecc1a1d765597d9be4d61ef8260bc14ac777",
+      "bytes": 157377,
+      "headers": {
+        "Date": "Fri, 02 Oct 2026 01:33:56 GMT",
+        "Cache-Control": "max-age=1",
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    },
+    {
+      "id": "espn_nfl_scoreboard",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "sha256": "035c2ca48db4dbab2a6ac21f825c9bc6b72dd1c5d811b88b185cae617c94c26f",
+      "bytes": 276140,
+      "headers": {
+        "Date": "Fri, 02 Oct 2026 01:33:56 GMT",
+        "Cache-Control": "max-age=5",
+        "Content-Type": "application/json;charset=UTF-8"
+      }
+    },
+    {
+      "id": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:24:14Z",
+      "sha256": "62b7eea85d87557a0cce944e761100f2d6c2bed7a757f5d8a853a819dfdb051b",
+      "bytes": 448216
+    },
+    {
+      "id": "espn_joey_porter",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4426506",
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T01:24:14Z",
+      "sha256": "90a1b32719a6586cfc590cc8c0074958cb5570adab3d156c5f6b6362677bdffc",
+      "bytes": 128773
+    }
+  ],
+  "verification": {
+    "tls": "Normal certificate verification enabled; per-request SSL context with supplied environment proxy CA. No verify=False, authentication, paywall or access-control bypass.",
+    "independence": "Distinct official-team and established-provider publishing endpoints; underlying statistic collection independence was not established."
+  },
+  "standings": {
+    "season": 2026,
+    "appThroughWeek": 3,
+    "teamsChecked": 32,
+    "fieldsPerTeam": 5,
+    "factualFieldsChecked": 160,
+    "disagreementCount": 0,
+    "rows": [
+      {
+        "team": "ARI",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 63,
+          "pointsAgainst": 81
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 63.0,
+          "pointsAgainst": 81.0
+        },
+        "equal": true
+      },
+      {
+        "team": "ATL",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 51,
+          "pointsAgainst": 68
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 51.0,
+          "pointsAgainst": 68.0
+        },
+        "equal": true
+      },
+      {
+        "team": "BAL",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 92,
+          "pointsAgainst": 78
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 92.0,
+          "pointsAgainst": 78.0
+        },
+        "equal": true
+      },
+      {
+        "team": "BUF",
+        "primary": {
+          "w": 3,
+          "l": 0,
+          "ties": 0,
+          "pointsFor": 101,
+          "pointsAgainst": 78
+        },
+        "espn": {
+          "w": 3.0,
+          "l": 0.0,
+          "ties": 0.0,
+          "pointsFor": 101.0,
+          "pointsAgainst": 78.0
+        },
+        "equal": true
+      },
+      {
+        "team": "CAR",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 89,
+          "pointsAgainst": 83
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 89.0,
+          "pointsAgainst": 83.0
+        },
+        "equal": true
+      },
+      {
+        "team": "CHI",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 89,
+          "pointsAgainst": 53
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 89.0,
+          "pointsAgainst": 53.0
+        },
+        "equal": true
+      },
+      {
+        "team": "CIN",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 80,
+          "pointsAgainst": 63
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 80.0,
+          "pointsAgainst": 63.0
+        },
+        "equal": true
+      },
+      {
+        "team": "CLE",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 54,
+          "pointsAgainst": 71
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 54.0,
+          "pointsAgainst": 71.0
+        },
+        "equal": true
+      },
+      {
+        "team": "DAL",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 88,
+          "pointsAgainst": 82
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 88.0,
+          "pointsAgainst": 82.0
+        },
+        "equal": true
+      },
+      {
+        "team": "DEN",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 60,
+          "pointsAgainst": 70
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 60.0,
+          "pointsAgainst": 70.0
+        },
+        "equal": true
+      },
+      {
+        "team": "DET",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 93,
+          "pointsAgainst": 95
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 93.0,
+          "pointsAgainst": 95.0
+        },
+        "equal": true
+      },
+      {
+        "team": "GB",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 56,
+          "pointsAgainst": 91
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 56.0,
+          "pointsAgainst": 91.0
+        },
+        "equal": true
+      },
+      {
+        "team": "HOU",
+        "primary": {
+          "w": 0,
+          "l": 3,
+          "ties": 0,
+          "pointsFor": 54,
+          "pointsAgainst": 75
+        },
+        "espn": {
+          "w": 0.0,
+          "l": 3.0,
+          "ties": 0.0,
+          "pointsFor": 54.0,
+          "pointsAgainst": 75.0
+        },
+        "equal": true
+      },
+      {
+        "team": "IND",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 72,
+          "pointsAgainst": 91
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 72.0,
+          "pointsAgainst": 91.0
+        },
+        "equal": true
+      },
+      {
+        "team": "JAX",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 82,
+          "pointsAgainst": 36
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 82.0,
+          "pointsAgainst": 36.0
+        },
+        "equal": true
+      },
+      {
+        "team": "KC",
+        "primary": {
+          "w": 3,
+          "l": 0,
+          "ties": 0,
+          "pointsFor": 88,
+          "pointsAgainst": 50
+        },
+        "espn": {
+          "w": 3.0,
+          "l": 0.0,
+          "ties": 0.0,
+          "pointsFor": 88.0,
+          "pointsAgainst": 50.0
+        },
+        "equal": true
+      },
+      {
+        "team": "LA",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 61,
+          "pointsAgainst": 63
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 61.0,
+          "pointsAgainst": 63.0
+        },
+        "equal": true
+      },
+      {
+        "team": "LAC",
+        "primary": {
+          "w": 0,
+          "l": 3,
+          "ties": 0,
+          "pointsFor": 44,
+          "pointsAgainst": 76
+        },
+        "espn": {
+          "w": 0.0,
+          "l": 3.0,
+          "ties": 0.0,
+          "pointsFor": 44.0,
+          "pointsAgainst": 76.0
+        },
+        "equal": true
+      },
+      {
+        "team": "LV",
+        "primary": {
+          "w": 3,
+          "l": 0,
+          "ties": 0,
+          "pointsFor": 88,
+          "pointsAgainst": 54
+        },
+        "espn": {
+          "w": 3.0,
+          "l": 0.0,
+          "ties": 0.0,
+          "pointsFor": 88.0,
+          "pointsAgainst": 54.0
+        },
+        "equal": true
+      },
+      {
+        "team": "MIA",
+        "primary": {
+          "w": 0,
+          "l": 3,
+          "ties": 0,
+          "pointsFor": 36,
+          "pointsAgainst": 86
+        },
+        "espn": {
+          "w": 0.0,
+          "l": 3.0,
+          "ties": 0.0,
+          "pointsFor": 36.0,
+          "pointsAgainst": 86.0
+        },
+        "equal": true
+      },
+      {
+        "team": "MIN",
+        "primary": {
+          "w": 3,
+          "l": 0,
+          "ties": 0,
+          "pointsFor": 71,
+          "pointsAgainst": 41
+        },
+        "espn": {
+          "w": 3.0,
+          "l": 0.0,
+          "ties": 0.0,
+          "pointsFor": 71.0,
+          "pointsAgainst": 41.0
+        },
+        "equal": true
+      },
+      {
+        "team": "NE",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 36,
+          "pointsAgainst": 51
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 36.0,
+          "pointsAgainst": 51.0
+        },
+        "equal": true
+      },
+      {
+        "team": "NO",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 81,
+          "pointsAgainst": 83
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 81.0,
+          "pointsAgainst": 83.0
+        },
+        "equal": true
+      },
+      {
+        "team": "NYG",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 46,
+          "pointsAgainst": 55
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 46.0,
+          "pointsAgainst": 55.0
+        },
+        "equal": true
+      },
+      {
+        "team": "NYJ",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 64,
+          "pointsAgainst": 61
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 64.0,
+          "pointsAgainst": 61.0
+        },
+        "equal": true
+      },
+      {
+        "team": "PHI",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 55,
+          "pointsAgainst": 69
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 55.0,
+          "pointsAgainst": 69.0
+        },
+        "equal": true
+      },
+      {
+        "team": "PIT",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 53,
+          "pointsAgainst": 60
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 53.0,
+          "pointsAgainst": 60.0
+        },
+        "equal": true
+      },
+      {
+        "team": "SEA",
+        "primary": {
+          "w": 2,
+          "l": 1,
+          "ties": 0,
+          "pointsFor": 75,
+          "pointsAgainst": 50
+        },
+        "espn": {
+          "w": 2.0,
+          "l": 1.0,
+          "ties": 0.0,
+          "pointsFor": 75.0,
+          "pointsAgainst": 50.0
+        },
+        "equal": true
+      },
+      {
+        "team": "SF",
+        "primary": {
+          "w": 3,
+          "l": 0,
+          "ties": 0,
+          "pointsFor": 98,
+          "pointsAgainst": 50
+        },
+        "espn": {
+          "w": 3.0,
+          "l": 0.0,
+          "ties": 0.0,
+          "pointsFor": 98.0,
+          "pointsAgainst": 50.0
+        },
+        "equal": true
+      },
+      {
+        "team": "TB",
+        "primary": {
+          "w": 0,
+          "l": 3,
+          "ties": 0,
+          "pointsFor": 62,
+          "pointsAgainst": 79
+        },
+        "espn": {
+          "w": 0.0,
+          "l": 3.0,
+          "ties": 0.0,
+          "pointsFor": 62.0,
+          "pointsAgainst": 79.0
+        },
+        "equal": true
+      },
+      {
+        "team": "TEN",
+        "primary": {
+          "w": 0,
+          "l": 3,
+          "ties": 0,
+          "pointsFor": 37,
+          "pointsAgainst": 59
+        },
+        "espn": {
+          "w": 0.0,
+          "l": 3.0,
+          "ties": 0.0,
+          "pointsFor": 37.0,
+          "pointsAgainst": 59.0
+        },
+        "equal": true
+      },
+      {
+        "team": "WAS",
+        "primary": {
+          "w": 1,
+          "l": 2,
+          "ties": 0,
+          "pointsFor": 75,
+          "pointsAgainst": 92
+        },
+        "espn": {
+          "w": 1.0,
+          "l": 2.0,
+          "ties": 0.0,
+          "pointsFor": 75.0,
+          "pointsAgainst": 92.0
+        },
+        "equal": true
+      }
+    ]
+  },
+  "steelersTeamRecord": {
+    "primary": {
+      "id": "pit",
+      "abbr": "PIT",
+      "name": "Steelers",
+      "fullName": "Pittsburgh Steelers",
+      "w": 2,
+      "l": 1,
+      "ties": 0,
+      "pointsFor": 53,
+      "pointsAgainst": 60,
+      "rank": null,
+      "pct": "0.667",
+      "streak": "W1",
+      "record": "2\u20131",
+      "pointDifferential": -7,
+      "sortIndex": 7
+    },
+    "espn": {
+      "team": "Pittsburgh Steelers",
+      "conference": "AFC",
+      "stats": {
+        "differential": -7.0,
+        "gamesBehind": 1.0,
+        "losses": 1.0,
+        "playoffSeed": 4.0,
+        "pointDifferential": -7.0,
+        "pointsAgainst": 60.0,
+        "pointsFor": 53.0,
+        "streak": 1.0,
+        "ties": 0.0,
+        "winPercent": 0.6666667,
+        "wins": 2.0,
+        "divisionLosses": 0.0,
+        "divisionRecord": 0.0,
+        "divisionTies": 0.0,
+        "divisionWins": 1.0,
+        "lockedDivRank": 0.0,
+        "overall": null,
+        "Home": null,
+        "Road": null,
+        "vs. Div.": null,
+        "vs. Conf.": null
+      }
+    },
+    "espnTeamEndpointSummary": "2-1",
+    "result": "PIT 2\u20131, 53 points for, 60 points against corroborated.",
+    "espnTeamEndpointFields": {
+      "w": 2.0,
+      "l": 1.0,
+      "ties": 0.0,
+      "pointsFor": 53.0,
+      "pointsAgainst": 60.0
+    },
+    "espnTeamEndpointFieldsEqual": true
+  },
+  "week4Fixture": {
+    "primary": {
+      "season": 2026,
+      "week": 4,
+      "kickoffUtc": "2026-10-02T00:15:00Z",
+      "away_team": "PIT",
+      "home_team": "CLE",
+      "venue": "Huntington Bank Field",
+      "neutralSite": false
+    },
+    "espn": {
+      "season": 2026,
+      "week": 4,
+      "kickoffUtc": "2026-10-02T00:15:00Z",
+      "away_team": "PIT",
+      "home_team": "CLE",
+      "venue": "Huntington Bank Field",
+      "neutralSite": false
+    },
+    "equal": true,
+    "sydneyKickoff": "2026-10-02T10:15:00+10:00",
+    "liveObservation": {
+      "sourceId": "espn_nfl_scoreboard",
+      "eventId": "401872964",
+      "retrievedAt": "2026-10-02T01:33:56Z",
+      "state": "in",
+      "completed": false,
+      "status": "1:47 - 2nd Quarter",
+      "period": 2,
+      "clock": "1:47",
+      "score": {
+        "CLE": 14,
+        "PIT": 7
+      },
+      "primaryArchiveState": {
+        "status": "scheduled",
+        "awayScore": null,
+        "homeScore": null
+      },
+      "classification": "Newer live provider information versus archival awaiting-result state; not a final-result disagreement and not verified advanced game statistics."
+    },
+    "upcomingPointerNote": "Baseline upcomingGame points to Week 5 IND@PIT because the Week 4 kickoff has passed; verified Week 4 schedule row remains awaiting provider final data."
+  },
+  "roster": {
+    "primaryCount": 77,
+    "espnCount": 76,
+    "officialCount": 74,
+    "espnMatchedPrimaryCount": 76,
+    "officialMatchedPrimaryCount": 74,
+    "espnRosterGroups": {
+      "offense": 27,
+      "defense": 24,
+      "specialTeam": 3,
+      "injuredReserveOrOut": 8,
+      "suspended": 0,
+      "practiceSquad": 14
+    },
+    "officialRosterGroups": {
+      "Active": 54,
+      "Practice Squad": 14,
+      "Practice Squad/Injured": 1,
+      "Reserve/Injured": 4,
+      "Reserve/Physically Unable to Perform": 1
+    },
+    "normalization": {
+      "names": "Remove punctuation and Jr/II/III suffixes only for candidate matching; prefer exact published ESPN ID. Known Gabe/Gabriel identity separately corroborated by birth date and jersey.",
+      "positionGroups": {
+        "DB": [
+          "CB",
+          "DB",
+          "S"
+        ],
+        "DL": [
+          "DE",
+          "DL",
+          "DT"
+        ],
+        "OL": [
+          "C",
+          "G",
+          "OL",
+          "OT"
+        ],
+        "K": [
+          "K",
+          "PK"
+        ],
+        "RB": [
+          "FB",
+          "RB",
+          "RB/WR"
+        ]
+      },
+      "status": "Compare roster bucket, not athlete injury labels; Day-To-Day is not roster status. Official PS/Injured remains explicit."
+    },
+    "aliasChecks": [
+      {
+        "primaryName": "Gabe Rubio",
+        "gsisId": "00-0041400",
+        "providerName": "Gabriel Rubio",
+        "espnId": "4431533",
+        "birthDate": "2003-07-09",
+        "jersey": "96",
+        "status": "Corroborated full-name/first-name identity via public nflverse raw roster and ESPN; no fuzzy birth-date-free match."
+      },
+      {
+        "primaryName": "Michael Pittman",
+        "espnName": "Michael Pittman Jr.",
+        "espnId": "4035687",
+        "status": "Exact existing provider ID; name suffix only."
+      },
+      {
+        "primaryName": "Lew Nichols III",
+        "officialName": "Lew Nichols",
+        "espnId": "4428119",
+        "jersey": "31",
+        "status": "Exact existing provider ID for ESPN; official normalized name plus same jersey/position."
+      }
+    ],
+    "disagreementPlayerCount": 9,
+    "disagreements": [
+      {
+        "gsisId": "00-0039167",
+        "name": "Joey Porter Jr.",
+        "primary": {
+          "team": "PIT",
+          "number": "24",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": null,
+        "official": null,
+        "conflicts": [
+          "not-listed-by-espn-pit-roster",
+          "not-listed-by-official-pit-roster",
+          "espn-athlete-team-and-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "espnAthleteEndpoint": {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "team": "DAL",
+          "jersey": "25",
+          "status": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          },
+          "sourceId": "espn_joey_porter"
+        }
+      },
+      {
+        "gsisId": "00-0039883",
+        "name": "Daequan Hardy",
+        "primary": {
+          "team": "PIT",
+          "number": "31",
+          "position": "DB",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "4429743",
+          "name": "Daequan Hardy",
+          "number": "31",
+          "position": "CB",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": null,
+        "conflicts": [
+          "not-listed-by-official-pit-roster"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039626",
+        "name": "Cole Burgess",
+        "primary": {
+          "team": "PIT",
+          "number": "85",
+          "position": "WR",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "5192448",
+          "name": "Cole Burgess",
+          "number": "85",
+          "position": "WR",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": null,
+        "conflicts": [
+          "not-listed-by-official-pit-roster"
+        ],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0038388",
+        "name": "Darius Rush",
+        "primary": {
+          "team": "PIT",
+          "number": "36",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4362858",
+          "name": "Darius Rush",
+          "number": null,
+          "position": "CB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Darius Rush",
+          "number": "38",
+          "position": "DB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position.",
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0040341",
+        "name": "Doneiko Slaughter",
+        "primary": {
+          "team": "PIT",
+          "number": "40",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4692628",
+          "name": "Doneiko Slaughter",
+          "number": "40",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Doneiko Slaughter",
+          "number": "40",
+          "position": "DB",
+          "status": "Active"
+        },
+        "conflicts": [
+          "espn-roster-status-disagreement",
+          "official-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0038409",
+        "name": "Lew Nichols III",
+        "primary": {
+          "team": "PIT",
+          "number": "31",
+          "position": "RB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4428119",
+          "name": "Lew Nichols",
+          "number": "31",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Lew Nichols",
+          "number": "31",
+          "position": "RB",
+          "status": "Active"
+        },
+        "conflicts": [
+          "espn-roster-status-disagreement",
+          "official-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0037382",
+        "name": "Brandon Johnson",
+        "primary": {
+          "team": "PIT",
+          "number": "82",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4035198",
+          "name": "Brandon Johnson",
+          "number": null,
+          "position": "WR",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Brandon Johnson",
+          "number": "89",
+          "position": "WR",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0036165",
+        "name": "Isaiah Hodgins",
+        "primary": {
+          "team": "PIT",
+          "number": "89",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4242540",
+          "name": "Isaiah Hodgins",
+          "number": null,
+          "position": "WR",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Isaiah Hodgins",
+          "number": "82",
+          "position": "WR",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0040618",
+        "name": "Max Hurleman",
+        "primary": {
+          "team": "PIT",
+          "number": "84",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4694237",
+          "name": "Max Hurleman",
+          "number": "84",
+          "position": "RB",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Max Hurleman",
+          "number": "84",
+          "position": "WR",
+          "status": "Practice Squad/Injured"
+        },
+        "conflicts": [
+          "espn-position-disagreement",
+          "espn-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "officialAdditionalStatus": "Injured practice-squad status is more specific than DEV; not a release or confirmed game-day inactive."
+      }
+    ],
+    "rows": [
+      {
+        "gsisId": "00-0023459",
+        "name": "Aaron Rodgers",
+        "primary": {
+          "team": "PIT",
+          "number": "8",
+          "position": "QB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "8439",
+          "name": "Aaron Rodgers",
+          "number": "8",
+          "position": "QB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Aaron Rodgers",
+          "number": "8",
+          "position": "QB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0037228",
+        "name": "Jaylen Warren",
+        "primary": {
+          "team": "PIT",
+          "number": "30",
+          "position": "RB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4569987",
+          "name": "Jaylen Warren",
+          "number": "30",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Jaylen Warren",
+          "number": "30",
+          "position": "RB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0035640",
+        "name": "DK Metcalf",
+        "primary": {
+          "team": "PIT",
+          "number": "4",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4047650",
+          "name": "DK Metcalf",
+          "number": "4",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "DK Metcalf",
+          "number": "4",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036252",
+        "name": "Michael Pittman",
+        "primary": {
+          "team": "PIT",
+          "number": "11",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4035687",
+          "name": "Michael Pittman Jr.",
+          "number": "11",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Michael Pittman Jr.",
+          "number": "11",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036894",
+        "name": "Pat Freiermuth",
+        "primary": {
+          "team": "PIT",
+          "number": "88",
+          "position": "TE",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4361411",
+          "name": "Pat Freiermuth",
+          "number": "88",
+          "position": "TE",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Pat Freiermuth",
+          "number": "88",
+          "position": "TE",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036333",
+        "name": "Alex Highsmith",
+        "primary": {
+          "team": "PIT",
+          "number": "56",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4037333",
+          "name": "Alex Highsmith",
+          "number": "56",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Alex Highsmith",
+          "number": "56",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036617",
+        "name": "Asante Samuel Jr.",
+        "primary": {
+          "team": "PIT",
+          "number": "22",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4363034",
+          "name": "Asante Samuel Jr.",
+          "number": "22",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Asante Samuel Jr.",
+          "number": "22",
+          "position": "CB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0036504",
+        "name": "Brandin Echols",
+        "primary": {
+          "team": "PIT",
+          "number": "26",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4567979",
+          "name": "Brandin Echols",
+          "number": "26",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Brandin Echols",
+          "number": "26",
+          "position": "CB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0027969",
+        "name": "Cameron Heyward",
+        "primary": {
+          "team": "PIT",
+          "number": "97",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "13977",
+          "name": "Cameron Heyward",
+          "number": "97",
+          "position": "DT",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Cameron Heyward",
+          "number": "97",
+          "position": "DT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0040231",
+        "name": "Carson Bruener",
+        "primary": {
+          "team": "PIT",
+          "number": "44",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4429490",
+          "name": "Carson Bruener",
+          "number": "44",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Carson Bruener",
+          "number": "44",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0035286",
+        "name": "Cole Holcomb",
+        "primary": {
+          "team": "PIT",
+          "number": "55",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3116689",
+          "name": "Cole Holcomb",
+          "number": "55",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Cole Holcomb",
+          "number": "55",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041393",
+        "name": "Daylen Everette",
+        "primary": {
+          "team": "PIT",
+          "number": "23",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4685327",
+          "name": "Daylen Everette",
+          "number": "23",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Daylen Everette",
+          "number": "23",
+          "position": "CB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0040678",
+        "name": "Derrick Harmon",
+        "primary": {
+          "team": "PIT",
+          "number": "99",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4682980",
+          "name": "Derrick Harmon",
+          "number": "99",
+          "position": "DT",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Derrick Harmon",
+          "number": "99",
+          "position": "DT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041400",
+        "name": "Gabe Rubio",
+        "primary": {
+          "team": "PIT",
+          "number": "96",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4431533",
+          "name": "Gabriel Rubio",
+          "number": "96",
+          "position": "DE",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Gabriel Rubio",
+          "number": "96",
+          "position": "DE",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0040160",
+        "name": "Jack Sawyer",
+        "primary": {
+          "team": "PIT",
+          "number": "33",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4431590",
+          "name": "Jack Sawyer",
+          "number": "33",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Jack Sawyer",
+          "number": "33",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0033055",
+        "name": "Jalen Ramsey",
+        "primary": {
+          "team": "PIT",
+          "number": "5",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3045373",
+          "name": "Jalen Ramsey",
+          "number": "5",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Jalen Ramsey",
+          "number": "5",
+          "position": "CB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0035699",
+        "name": "Jamel Dean",
+        "primary": {
+          "team": "PIT",
+          "number": "35",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3873935",
+          "name": "Jamel Dean",
+          "number": "35",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Jamel Dean",
+          "number": "35",
+          "position": "CB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0038135",
+        "name": "Jaquan Brisker",
+        "primary": {
+          "team": "PIT",
+          "number": "3",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4570044",
+          "name": "Jaquan Brisker",
+          "number": "3",
+          "position": "S",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Jaquan Brisker",
+          "number": "3",
+          "position": "S",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039167",
+        "name": "Joey Porter Jr.",
+        "primary": {
+          "team": "PIT",
+          "number": "24",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": null,
+        "official": null,
+        "conflicts": [
+          "not-listed-by-espn-pit-roster",
+          "not-listed-by-official-pit-roster",
+          "espn-athlete-team-and-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "espnAthleteEndpoint": {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "team": "DAL",
+          "jersey": "25",
+          "status": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          },
+          "sourceId": "espn_joey_porter"
+        }
+      },
+      {
+        "gsisId": "00-0039110",
+        "name": "Keeanu Benton",
+        "primary": {
+          "team": "PIT",
+          "number": "95",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4426694",
+          "name": "Keeanu Benton",
+          "number": "95",
+          "position": "DT",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Keeanu Benton",
+          "number": "95",
+          "position": "DT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041261",
+        "name": "Kevin Jobity Jr.",
+        "primary": {
+          "team": "PIT",
+          "number": "92",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "5084849",
+          "name": "Kevin Jobity Jr.",
+          "number": "92",
+          "position": "DT",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Kevin Jobity Jr.",
+          "number": "92",
+          "position": "DL",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0038577",
+        "name": "Nick Herbig",
+        "primary": {
+          "team": "PIT",
+          "number": "51",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4429164",
+          "name": "Nick Herbig",
+          "number": "51",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Nick Herbig",
+          "number": "51",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036323",
+        "name": "Patrick Queen",
+        "primary": {
+          "team": "PIT",
+          "number": "6",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4242207",
+          "name": "Patrick Queen",
+          "number": "6",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Patrick Queen",
+          "number": "6",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0039741",
+        "name": "Payton Wilson",
+        "primary": {
+          "team": "PIT",
+          "number": "41",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4361652",
+          "name": "Payton Wilson",
+          "number": "41",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Payton Wilson",
+          "number": "41",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0033941",
+        "name": "Rayshawn Jenkins",
+        "primary": {
+          "team": "PIT",
+          "number": "20",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "2969961",
+          "name": "Rayshawn Jenkins",
+          "number": "20",
+          "position": "S",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Rayshawn Jenkins",
+          "number": "20",
+          "position": "S",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041401",
+        "name": "Robert Spears-Jennings",
+        "primary": {
+          "team": "PIT",
+          "number": "28",
+          "position": "DB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4820584",
+          "name": "Robert Spears-Jennings",
+          "number": "28",
+          "position": "S",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Robert Spears-Jennings",
+          "number": "28",
+          "position": "S",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0034810",
+        "name": "Sebastian Joseph-Day",
+        "primary": {
+          "team": "PIT",
+          "number": "69",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3047495",
+          "name": "Sebastian Joseph-Day",
+          "number": "69",
+          "position": "DT",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Sebastian Joseph-Day",
+          "number": "69",
+          "position": "DT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0033886",
+        "name": "T.J. Watt",
+        "primary": {
+          "team": "PIT",
+          "number": "90",
+          "position": "LB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3045282",
+          "name": "T.J. Watt",
+          "number": "90",
+          "position": "LB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "T.J. Watt",
+          "number": "90",
+          "position": "LB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0040188",
+        "name": "Yahya Black",
+        "primary": {
+          "team": "PIT",
+          "number": "94",
+          "position": "DL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4430947",
+          "name": "Yahya Black",
+          "number": "94",
+          "position": "DE",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Yahya Black",
+          "number": "94",
+          "position": "DL",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0033729",
+        "name": "Cameron Johnston",
+        "primary": {
+          "team": "PIT",
+          "number": "19",
+          "position": "P",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3051397",
+          "name": "Cameron Johnston",
+          "number": "19",
+          "position": "P",
+          "rosterGroup": "specialTeam",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Cameron Johnston",
+          "number": "19",
+          "position": "P",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0031136",
+        "name": "Chris Boswell",
+        "primary": {
+          "team": "PIT",
+          "number": "9",
+          "position": "K",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "17372",
+          "name": "Chris Boswell",
+          "number": "9",
+          "position": "PK",
+          "rosterGroup": "specialTeam",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Chris Boswell",
+          "number": "9",
+          "position": "K",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0034051",
+        "name": "Christian Kuntz",
+        "primary": {
+          "team": "PIT",
+          "number": "46",
+          "position": "LS",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "2978524",
+          "name": "Christian Kuntz",
+          "number": "46",
+          "position": "LS",
+          "rosterGroup": "specialTeam",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Christian Kuntz",
+          "number": "46",
+          "position": "LS",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0037336",
+        "name": "Brock Hoffman",
+        "primary": {
+          "team": "PIT",
+          "number": "67",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4241087",
+          "name": "Brock Hoffman",
+          "number": "67",
+          "position": "C",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Brock Hoffman",
+          "number": "67",
+          "position": "G",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0037480",
+        "name": "Dylan Cook",
+        "primary": {
+          "team": "PIT",
+          "number": "60",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4570898",
+          "name": "Dylan Cook",
+          "number": "60",
+          "position": "OT",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Dylan Cook",
+          "number": "60",
+          "position": "OT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039358",
+        "name": "Mason McCormick",
+        "primary": {
+          "team": "PIT",
+          "number": "66",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4368304",
+          "name": "Mason McCormick",
+          "number": "66",
+          "position": "G",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Mason McCormick",
+          "number": "66",
+          "position": "G",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041482",
+        "name": "Max Iheanachor",
+        "primary": {
+          "team": "PIT",
+          "number": "71",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "5150136",
+          "name": "Max Iheanachor",
+          "number": "71",
+          "position": "OT",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Max Iheanachor",
+          "number": "71",
+          "position": "OT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0036783",
+        "name": "Ryan McCollum",
+        "primary": {
+          "team": "PIT",
+          "number": "62",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4035253",
+          "name": "Ryan McCollum",
+          "number": "62",
+          "position": "C",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Ryan McCollum",
+          "number": "62",
+          "position": "C",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0038645",
+        "name": "Spencer Anderson",
+        "primary": {
+          "team": "PIT",
+          "number": "74",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4372056",
+          "name": "Spencer Anderson",
+          "number": "74",
+          "position": "G",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Spencer Anderson",
+          "number": "74",
+          "position": "OL",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039871",
+        "name": "Troy Fautanu",
+        "primary": {
+          "team": "PIT",
+          "number": "76",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4427170",
+          "name": "Troy Fautanu",
+          "number": "76",
+          "position": "OT",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Troy Fautanu",
+          "number": "76",
+          "position": "OT",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039896",
+        "name": "Zach Frazier",
+        "primary": {
+          "team": "PIT",
+          "number": "54",
+          "position": "OL",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4429775",
+          "name": "Zach Frazier",
+          "number": "54",
+          "position": "C",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Zach Frazier",
+          "number": "54",
+          "position": "C",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041565",
+        "name": "Drew Allar",
+        "primary": {
+          "team": "PIT",
+          "number": "16",
+          "position": "QB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4714771",
+          "name": "Drew Allar",
+          "number": "16",
+          "position": "QB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Drew Allar",
+          "number": "16",
+          "position": "QB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0034771",
+        "name": "Mason Rudolph",
+        "primary": {
+          "team": "PIT",
+          "number": "2",
+          "position": "QB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "3116407",
+          "name": "Mason Rudolph",
+          "number": "2",
+          "position": "QB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Mason Rudolph",
+          "number": "2",
+          "position": "QB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0040203",
+        "name": "Will Howard",
+        "primary": {
+          "team": "PIT",
+          "number": "18",
+          "position": "QB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4429955",
+          "name": "Will Howard",
+          "number": "18",
+          "position": "QB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Will Howard",
+          "number": "18",
+          "position": "QB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041490",
+        "name": "Eli Heidenreich",
+        "primary": {
+          "team": "PIT",
+          "number": "29",
+          "position": "RB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "5081508",
+          "name": "Eli Heidenreich",
+          "number": "29",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Eli Heidenreich",
+          "number": "29",
+          "position": "RB/WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0036139",
+        "name": "Rico Dowdle",
+        "primary": {
+          "team": "PIT",
+          "number": "13",
+          "position": "RB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4038815",
+          "name": "Rico Dowdle",
+          "number": "13",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Rico Dowdle",
+          "number": "13",
+          "position": "RB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041398",
+        "name": "Riley Nowakowski",
+        "primary": {
+          "team": "PIT",
+          "number": "37",
+          "position": "RB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4693370",
+          "name": "Riley Nowakowski",
+          "number": "37",
+          "position": "FB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Riley Nowakowski",
+          "number": "37",
+          "position": "FB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0035594",
+        "name": "Travis Homer",
+        "primary": {
+          "team": "PIT",
+          "number": "21",
+          "position": "RB",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4037457",
+          "name": "Travis Homer",
+          "number": "21",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Travis Homer",
+          "number": "21",
+          "position": "RB",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0038558",
+        "name": "Darnell Washington",
+        "primary": {
+          "team": "PIT",
+          "number": "80",
+          "position": "TE",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4430802",
+          "name": "Darnell Washington",
+          "number": "80",
+          "position": "TE",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Darnell Washington",
+          "number": "80",
+          "position": "TE",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0033757",
+        "name": "Robert Tonyan",
+        "primary": {
+          "team": "PIT",
+          "number": "85",
+          "position": "TE",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "2975674",
+          "name": "Robert Tonyan",
+          "number": "85",
+          "position": "TE",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Robert Tonyan",
+          "number": "85",
+          "position": "TE",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036862",
+        "name": "Ben Skowronek",
+        "primary": {
+          "team": "PIT",
+          "number": "15",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4035656",
+          "name": "Ben Skowronek",
+          "number": "15",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Ben Skowronek",
+          "number": "15",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041489",
+        "name": "Germie Bernard",
+        "primary": {
+          "team": "PIT",
+          "number": "17",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4685261",
+          "name": "Germie Bernard",
+          "number": "17",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Germie Bernard",
+          "number": "17",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041397",
+        "name": "Kaden Wetjen",
+        "primary": {
+          "team": "PIT",
+          "number": "10",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "5081338",
+          "name": "Kaden Wetjen",
+          "number": "10",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Kaden Wetjen",
+          "number": "10",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0039739",
+        "name": "Roman Wilson",
+        "primary": {
+          "team": "PIT",
+          "number": "14",
+          "position": "WR",
+          "status": "ACT",
+          "rosterStatus": "Active"
+        },
+        "espn": {
+          "id": "4431492",
+          "name": "Roman Wilson",
+          "number": "14",
+          "position": "WR",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Roman Wilson",
+          "number": "14",
+          "position": "WR",
+          "status": "Active"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0039883",
+        "name": "Daequan Hardy",
+        "primary": {
+          "team": "PIT",
+          "number": "31",
+          "position": "DB",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "4429743",
+          "name": "Daequan Hardy",
+          "number": "31",
+          "position": "CB",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": null,
+        "conflicts": [
+          "not-listed-by-official-pit-roster"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0034277",
+        "name": "DeShon Elliott",
+        "primary": {
+          "team": "PIT",
+          "number": "25",
+          "position": "DB",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "3929846",
+          "name": "DeShon Elliott",
+          "number": "25",
+          "position": "S",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "DeShon Elliott",
+          "number": "25",
+          "position": "S",
+          "status": "Reserve/Injured"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0040232",
+        "name": "Donte Kent",
+        "primary": {
+          "team": "PIT",
+          "number": "34",
+          "position": "DB",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "4608004",
+          "name": "Donte Kent",
+          "number": "34",
+          "position": "CB",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Donte Kent",
+          "number": "34",
+          "position": "CB",
+          "status": "Reserve/Physically Unable to Perform"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039389",
+        "name": "Logan Lee",
+        "primary": {
+          "team": "PIT",
+          "number": "91",
+          "position": "DL",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "4569474",
+          "name": "Logan Lee",
+          "number": "91",
+          "position": "DT",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Logan Lee",
+          "number": "91",
+          "position": "DL",
+          "status": "Reserve/Injured"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0041396",
+        "name": "Gennings Dunker",
+        "primary": {
+          "team": "PIT",
+          "number": "73",
+          "position": "OL",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "4431258",
+          "name": "Gennings Dunker",
+          "number": "73",
+          "position": "G",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Gennings Dunker",
+          "number": "73",
+          "position": "G",
+          "status": "Reserve/Injured"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0036396",
+        "name": "Jack Driscoll",
+        "primary": {
+          "team": "PIT",
+          "number": "68",
+          "position": "OL",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "3932668",
+          "name": "Jack Driscoll",
+          "number": "68",
+          "position": "OT",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Jack Driscoll",
+          "number": "68",
+          "position": "OT",
+          "status": "Reserve/Injured"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039626",
+        "name": "Cole Burgess",
+        "primary": {
+          "team": "PIT",
+          "number": "85",
+          "position": "WR",
+          "status": "RES",
+          "rosterStatus": "Reserve"
+        },
+        "espn": {
+          "id": "5192448",
+          "name": "Cole Burgess",
+          "number": "85",
+          "position": "WR",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": null,
+        "conflicts": [
+          "not-listed-by-official-pit-roster"
+        ],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0040176",
+        "name": "Bradyn Swinson",
+        "primary": {
+          "team": "PIT",
+          "number": "57",
+          "position": "LB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4431424",
+          "name": "Bradyn Swinson",
+          "number": null,
+          "position": "LB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Bradyn Swinson",
+          "number": "57",
+          "position": "LB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null,
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0040322",
+        "name": "Car'lin Vigers",
+        "primary": {
+          "team": "PIT",
+          "number": "42",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4917486",
+          "name": "Car'lin Vigers",
+          "number": null,
+          "position": "CB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Car'lin Vigers",
+          "number": "42",
+          "position": "DB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position.",
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0038388",
+        "name": "Darius Rush",
+        "primary": {
+          "team": "PIT",
+          "number": "36",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4362858",
+          "name": "Darius Rush",
+          "number": null,
+          "position": "CB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Darius Rush",
+          "number": "38",
+          "position": "DB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position.",
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0040341",
+        "name": "Doneiko Slaughter",
+        "primary": {
+          "team": "PIT",
+          "number": "40",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4692628",
+          "name": "Doneiko Slaughter",
+          "number": "40",
+          "position": "CB",
+          "rosterGroup": "defense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Doneiko Slaughter",
+          "number": "40",
+          "position": "DB",
+          "status": "Active"
+        },
+        "conflicts": [
+          "espn-roster-status-disagreement",
+          "official-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0037274",
+        "name": "Esezi Otomewo",
+        "primary": {
+          "team": "PIT",
+          "number": "93",
+          "position": "DL",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4240759",
+          "name": "Esezi Otomewo",
+          "number": "93",
+          "position": "DT",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Esezi Otomewo",
+          "number": "93",
+          "position": "DT",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039457",
+        "name": "Jacoby Windmon",
+        "primary": {
+          "team": "PIT",
+          "number": "53",
+          "position": "LB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4428909",
+          "name": "Jacoby Windmon",
+          "number": "53",
+          "position": "LB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Jacoby Windmon",
+          "number": "53",
+          "position": "LB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0039931",
+        "name": "Julius Welschof",
+        "primary": {
+          "team": "PIT",
+          "number": "45",
+          "position": "LB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4372098",
+          "name": "Julius Welschof",
+          "number": "45",
+          "position": "LB",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Julius Welschof",
+          "number": "45",
+          "position": "LB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0039609",
+        "name": "Kyler Baugh",
+        "primary": {
+          "team": "PIT",
+          "number": "65",
+          "position": "DL",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4573443",
+          "name": "Kyler Baugh",
+          "number": "65",
+          "position": "DT",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Kyler Baugh",
+          "number": "65",
+          "position": "DT",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0040527",
+        "name": "Sebastian Castro",
+        "primary": {
+          "team": "PIT",
+          "number": "49",
+          "position": "DB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4426882",
+          "name": "Sebastian Castro",
+          "number": "49",
+          "position": "S",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Sebastian Castro",
+          "number": "49",
+          "position": "DB",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039716",
+        "name": "Doug Nester",
+        "primary": {
+          "team": "PIT",
+          "number": "72",
+          "position": "OL",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4426368",
+          "name": "Doug Nester",
+          "number": "72",
+          "position": "G",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Doug Nester",
+          "number": "72",
+          "position": "OL",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0039555",
+        "name": "Steven Jones",
+        "primary": {
+          "team": "PIT",
+          "number": "79",
+          "position": "OL",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4373830",
+          "name": "Steven Jones",
+          "number": "79",
+          "position": "G",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Steven Jones",
+          "number": "79",
+          "position": "OL",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": "Broader nflverse group versus provider role; compatible grouping, not equal detailed position."
+      },
+      {
+        "gsisId": "00-0038409",
+        "name": "Lew Nichols III",
+        "primary": {
+          "team": "PIT",
+          "number": "31",
+          "position": "RB",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4428119",
+          "name": "Lew Nichols",
+          "number": "31",
+          "position": "RB",
+          "rosterGroup": "offense",
+          "athleteStatus": {
+            "id": "1",
+            "name": "Active",
+            "type": "active",
+            "abbreviation": "Active"
+          }
+        },
+        "official": {
+          "name": "Lew Nichols",
+          "number": "31",
+          "position": "RB",
+          "status": "Active"
+        },
+        "conflicts": [
+          "espn-roster-status-disagreement",
+          "official-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0041263",
+        "name": "Lake McRee",
+        "primary": {
+          "team": "PIT",
+          "number": "81",
+          "position": "TE",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4566198",
+          "name": "Lake McRee",
+          "number": "81",
+          "position": "TE",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Lake McRee",
+          "number": "81",
+          "position": "TE",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0037382",
+        "name": "Brandon Johnson",
+        "primary": {
+          "team": "PIT",
+          "number": "82",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4035198",
+          "name": "Brandon Johnson",
+          "number": null,
+          "position": "WR",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Brandon Johnson",
+          "number": "89",
+          "position": "WR",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0036775",
+        "name": "Brandon Smith",
+        "primary": {
+          "team": "PIT",
+          "number": "87",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4240577",
+          "name": "Brandon Smith",
+          "number": "87",
+          "position": "WR",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Brandon Smith",
+          "number": "87",
+          "position": "WR",
+          "status": "Practice Squad"
+        },
+        "conflicts": [],
+        "positionTaxonomyNote": null
+      },
+      {
+        "gsisId": "00-0036165",
+        "name": "Isaiah Hodgins",
+        "primary": {
+          "team": "PIT",
+          "number": "89",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4242540",
+          "name": "Isaiah Hodgins",
+          "number": null,
+          "position": "WR",
+          "rosterGroup": "practiceSquad",
+          "athleteStatus": {
+            "id": "29",
+            "name": "Practice Squad",
+            "type": "practice-squad",
+            "abbreviation": "Practice Squad"
+          }
+        },
+        "official": {
+          "name": "Isaiah Hodgins",
+          "number": "82",
+          "position": "WR",
+          "status": "Practice Squad"
+        },
+        "conflicts": [
+          "official-jersey-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "unavailableProviderFields": [
+          "espn-jersey"
+        ]
+      },
+      {
+        "gsisId": "00-0040618",
+        "name": "Max Hurleman",
+        "primary": {
+          "team": "PIT",
+          "number": "84",
+          "position": "WR",
+          "status": "DEV",
+          "rosterStatus": "Practice squad"
+        },
+        "espn": {
+          "id": "4694237",
+          "name": "Max Hurleman",
+          "number": "84",
+          "position": "RB",
+          "rosterGroup": "injuredReserveOrOut",
+          "athleteStatus": {
+            "id": "13",
+            "name": "Day-To-Day",
+            "type": "day-to-day",
+            "abbreviation": "Day-To-Day"
+          }
+        },
+        "official": {
+          "name": "Max Hurleman",
+          "number": "84",
+          "position": "WR",
+          "status": "Practice Squad/Injured"
+        },
+        "conflicts": [
+          "espn-position-disagreement",
+          "espn-roster-status-disagreement"
+        ],
+        "positionTaxonomyNote": null,
+        "officialAdditionalStatus": "Injured practice-squad status is more specific than DEV; not a release or confirmed game-day inactive."
+      }
+    ],
+    "handling": "Preserve primary facts and explicitly flag conflicts. Official absence means not listed, never automatically released. Newer roster membership/positions/statuses require user-visible provenance and further confirmation.",
+    "fieldCoverage": {
+      "espnJerseysAvailable": 71,
+      "espnJerseyDisagreements": 0,
+      "officialJerseysAvailable": 74,
+      "officialJerseyDisagreements": 3,
+      "espnPositionGroupDisagreements": 1,
+      "officialPositionGroupDisagreements": 0,
+      "espnRosterBucketDisagreements": 3,
+      "officialRosterBucketDisagreements": 2
+    },
+    "officialParserNote": "Official HTML was independently parsed with Python HTMLParser from each <table summary=\"Roster\"> caption and player cells. Independently reproduced parent extracted table values; only one trailing non-breaking space in Lew Nichols name was normalized."
+  },
+  "depthChart": {
+    "sourceId": "espn_steelers_depth",
+    "formation": "3WR 1TE",
+    "checks": [
+      {
+        "player": "Michael Pittman",
+        "primaryRank": 2,
+        "espnSlot": "wr2",
+        "espnSlotRank": 1,
+        "classification": "Not directly comparable: separate ESPN formation slot versus nflverse WR position rank. Neither alone confirms game-day starter."
+      },
+      {
+        "player": "Pat Freiermuth",
+        "primaryRank": 2,
+        "espnSlot": "te",
+        "espnSlotRank": 2,
+        "classification": "Consistent ordering behind Darnell Washington in ESPN formation; not game-day active confirmation."
+      }
+    ],
+    "notChecked": "Exhaustive all-player slot matching or confirmed game-day starters/inactives."
+  },
+  "liveCorsProbe": {
+    "id": "espn_scoreboard_cors",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard",
+    "httpStatus": 200,
+    "retrievedAt": "2026-10-02T01:38:54Z",
+    "sha256": "69ab5c34749bdbfc3129612fe7906a87b2edd3261cb6b9d6a7c30458568e76ac",
+    "bytes": 276140,
+    "requestOrigin": "https://dinkyjunior.github.io",
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,OPTIONS,HEAD",
+      "Access-Control-Allow-Headers": null,
+      "Cache-Control": "max-age=8",
+      "Content-Type": "application/json;charset=UTF-8",
+      "Date": "Fri, 02 Oct 2026 01:38:54 GMT",
+      "ETag": null,
+      "Last-Modified": null
+    },
+    "rawResponseHashIndependentlyRecomputed": true
+  },
+  "limits": {
+    "checked": [
+      "All 32 W/L/T/PF/PA fields",
+      "PIT team record via two ESPN endpoints",
+      "Week4 PIT@CLE season/week/kickoff/venue/home-away",
+      "All77 primary roster identities, jersey/position/status compatibility against76 ESPN and74 official rows",
+      "Two featured depth ordering examples",
+      "Public score HTTP and CORS response metadata"
+    ],
+    "notChecked": [
+      "Independent last-five or opponent-history statistical values",
+      "Historical advanced metrics, touchdowns, rushing/receiving/pass stat values",
+      "Injury/practice participation beyond roster buckets",
+      "Final Week4 result (game was in progress)",
+      "Travel itinerary, weather forecast, verified sportsbook price",
+      "Commercial data redistribution license or provider freshness SLA"
+    ]
+  },
+  "conclusion": "Standings and Week4 fixture details corroborated. Nine roster rows require explicit membership/jersey/position/status handling; live ESPN scoreboard is available and newer than archival schedule state. Do not label the entire dataset independently verified."
+}
