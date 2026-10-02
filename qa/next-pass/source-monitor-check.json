@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-02T00:37:08Z",
+  "shouldRefresh": false,
+  "sourceChanges": [],
+  "fullFetchSafetyIntervalHours": 6,
+  "oldestRequiredRetrievalAgeSeconds": 157,
+  "forced": false,
+  "safetyRefreshDue": false,
+  "requiredErrors": [],
+  "checks": [
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    }
+  ],
+  "note": "Source availability check does not renew statistics retrieval timestamps",
+  "cadenceReason": "Authorized manual or integration trigger"
+}

@@ -106,17 +106,21 @@
   animation-delay: var(--orbit-delay, 0s);
   animation-play-state: var(--orbit-play-state);
 }
-.perimeter-light-bloom { stroke: #ef9a2a; stroke-width: 4; opacity: .24; }
-.perimeter-light-core { stroke: #ffe8a4; stroke-width: 1.4; opacity: .86; }
+.perimeter-light-bloom { stroke: #f29b24; stroke-width: 5; opacity: .42; }
+.perimeter-light-core { stroke: #fff0b6; stroke-width: 1.8; opacity: .98; }
 .motion-paused::after,
 .motion-paused .nfl-card::after,
 .motion-paused .live-dot,
 .motion-paused .stadium-scene::after,
 .motion-paused .stadium-art,
+.motion-paused .orbit-football,
+.motion-paused .card-perimeter-light path,
 .page:not(.active) .nfl-card::after,
 .page:not(.active) .live-dot,
 .page:not(.active) .stadium-scene::after,
-.page:not(.active) .stadium-art {
+.page:not(.active) .stadium-art,
+.page:not(.active) .orbit-football,
+.page:not(.active) .card-perimeter-light path {
   animation-play-state: paused;
 }
 .motion-paused .player-card.motion-track-ready {
@@ -130,7 +134,7 @@
 @keyframes premium-card-perimeter { to { offset-distance: 100%; } }
 @keyframes premium-card-light { to { stroke-dashoffset: -95; } }
 @keyframes premium-frame-breathe {
-  0%, 100% { opacity: .84; }
+  0%, 100% { opacity: .9; }
   50% { opacity: 1; }
 }
 @keyframes premium-tile-breathe {

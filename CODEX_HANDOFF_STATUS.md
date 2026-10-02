@@ -1,5 +1,17 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Latest follow-up — October 2, 2026 (Sydney)
+
+The user approved the base and requested full personal last-five and weekly-opponent statistics, more automatic updates, brighter borders and a crisper/more interactive Home. This pass preserves Pages 1–3. Home now uses native outlined vector branding and deliberate lighting/reflections; shared blue/gold rails are stronger.
+
+Player research lazy-loads a checksum-linked full-statistics bundle spanning verified 2005–2026 regular seasons. It covers 77 players, 1,224 retained game rows and all 14 scheduled opponents, preserving previous clubs and original game context. Shorter histories and unavailable rows are explicit. Selected-week fixture entry now follows the selected opponent. Statistics prioritise the player's position and retain every additional provider field behind a disclosure.
+
+Browser checks run on open, resume, focus, online return and refresh, plus conditional checks while active. Source monitoring detects published changes around game/provider windows. Genuine live in-game/push data is not configured; provider release cadence is documented. Updates preserve filters, selected weeks, native disclosures, focus and deep scroll. Invalid feeds, render failures and rejected history checksums retain verified data and original source times.
+
+Final local QA passed five viewports at 2026-10-02T00:55:14.553Z; all 16 runtime hashes match. Fifteen data/history, seven source-monitor and eight update behaviour regression groups pass. Independent raw CSV audits and rich UI field comparisons passed. Read `qa/next-pass/README.md` and its independent visual, data, source, control, motion and automatic-update reviews for current evidence.
+
+The saved environment allowlist was found to omit the hosted URL. A concrete network/startup draft was saved with the cloud onboarding skill, preserving existing destinations and setup requirements. It does not change live runtime access by itself. Read `qa/next-pass/ENVIRONMENT_ACCESS.md`; actual hosted and Safari verification require the saved access change and successful retries. Publication status for this follow-up is recorded separately after the final push.
+
 ## Scope and authorization
 
 Only Pages 1–3 are implemented. No Page 4. Repository `dinkyjunior/project-dollers`; working branch `codex-rebuild`, PR #1; GitHub Pages production source documented as `main` / root. The latest user request explicitly authorizes completing QA, updating the PR and publishing the finished implementation to production. This supersedes the earlier request to keep `main` untouched for the preceding review pass.

@@ -19,8 +19,14 @@
     <link rel="stylesheet" href="assets/refinements.css" />
     <link rel="stylesheet" href="assets/premium.css" />
     <link rel="stylesheet" href="assets/motion.css" />
+    <link rel="stylesheet" href="assets/illumination.css" />
+    <link rel="stylesheet" href="assets/player-research.css" />
+    <link rel="stylesheet" href="assets/home-premium.css" />
+    <script src="assets/data-updates.js" defer></script>
+    <script src="assets/player-research.js" defer></script>
     <script src="assets/app.js" defer></script>
     <script src="assets/motion.js" defer></script>
+    <script src="assets/home-interactions.js" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -31,6 +37,11 @@
       >
         <div class="page-scroll">
           <div class="frame home-frame">
+            <div class="home-stage" aria-hidden="true">
+              <span class="home-stage-beam"></span>
+              <span class="home-stage-beam home-stage-beam-secondary"></span>
+              <span class="home-stage-line"></span>
+            </div>
             <div class="status-row" aria-hidden="true">
               <span>9:41</span
               ><span class="status-icons"
@@ -51,15 +62,14 @@
                 </svg>
               </button>
               <h1 class="brand" aria-label="Project Dollar$">
-                <span class="brand-project">PROJECT</span
-                ><span class="brand-dollar"
-                  >DOLLAR<span class="brand-cash">$</span></span
-                >
+                <img class="home-brand-mark" src="assets/home-brand.svg" alt="" aria-hidden="true" width="550" height="246" fetchpriority="high" />
               </h1>
               <p class="brand-subtitle">SPORTS DATA &amp; RESEARCH</p>
             </header>
             <div class="sport-grid">
               <button class="sport-card nfl-card" data-open="nfl">
+                <span class="tile-border-light" aria-hidden="true"></span>
+                <span class="sport-card-status">EXPLORE THE LEAGUE</span>
                 <img
                   src="assets/logos/nfl.webp"
                   alt="NFL shield"
@@ -71,30 +81,36 @@
                   · TEAMS · MATCHUPS</small
                 >
               </button>
-              <div class="sport-card nba-card">
+              <button class="sport-card nba-card" data-sport-comingsoon="NBA" aria-label="NBA — coming soon">
+                <span class="tile-border-light" aria-hidden="true"></span>
+                <span class="sport-card-status">BASKETBALL</span>
                 <img
                   src="assets/logos/nba.webp"
                   alt="NBA logo"
                   width="500"
                   height="500"
                 /><strong>NBA</strong><small>COMING SOON</small>
-              </div>
-              <div class="sport-card nrl-card">
+              </button>
+              <button class="sport-card nrl-card" data-sport-comingsoon="NRL" aria-label="NRL — coming soon">
+                <span class="tile-border-light" aria-hidden="true"></span>
+                <span class="sport-card-status">RUGBY LEAGUE</span>
                 <img
                   src="assets/logos/nrl.webp"
                   alt="NRL shield"
                   width="500"
                   height="500"
                 /><strong>NRL</strong><small>COMING SOON</small>
-              </div>
-              <div class="sport-card ufc-card">
+              </button>
+              <button class="sport-card ufc-card" data-sport-comingsoon="UFC" aria-label="UFC — coming soon">
+                <span class="tile-border-light" aria-hidden="true"></span>
+                <span class="sport-card-status">COMBAT SPORTS</span>
                 <img
                   src="assets/logos/ufc.svg"
                   alt="UFC wordmark"
                   width="1250"
                   height="433"
                 /><strong>UFC</strong><small>COMING SOON</small>
-              </div>
+              </button>
             </div>
             <div
               class="stadium-scene"
@@ -110,9 +126,7 @@
                 fetchpriority="high"
               />
             </div>
-            <p class="home-footnote">
-              NFL RESEARCH <span>CURRENT NFL RESEARCH</span>
-            </p>
+            <p class="home-availability" role="status" aria-live="polite"></p>
           </div>
         </div>
         <nav class="bottom-nav" aria-label="Main navigation">

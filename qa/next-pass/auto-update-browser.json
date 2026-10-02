@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-02T00:29:43.673Z",
+  "browser": "151.0.7922.173",
+  "source": "Same-origin local HTTP fixture with real browser fetch, ETag/304 and failure responses.",
+  "checks": [
+    "No duplicate initial request",
+    "Unchanged body does not redraw",
+    "ETag conditional requests",
+    "New verified body updates once",
+    "503 preserves last-good source data",
+    "Reconnect revalidates immediately",
+    "No JavaScript page errors"
+  ],
+  "requestCount": 6,
+  "conditionalCount": 3,
+  "pageErrors": []
+}

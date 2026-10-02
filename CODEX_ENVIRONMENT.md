@@ -65,3 +65,5 @@ Then continue the rebuild on `codex-rebuild` and do not merge to `main` until ap
 ## Latest task authorization and data
 
 The premium refinement request authorizes production publication after QA. That instruction supersedes the earlier hold on `main` for the preceding draft pass. Page 4 remains excluded. Runtime data is now the verified refreshable 2026 JSON feed; the environment/tooling remains static Python HTTP plus pinned Playwright. Actual hosted and Safari verification are tracked separately in `qa/` and remain blocked where official requests receive proxy403.
+
+The October 2 follow-up adds a lazy checksum-linked `player-history.json`, a source-change monitor and browser update client. Setup still requires only Node/npm, Python standard library and Chromium; no live-provider key or server backend is configured. Validate with `npm run test:data`, `npm run test:sources`, `npm run test:updates`, `npm run test:integration`, `npm run data:check` and `npm test`. Automated QA uses local files and controlled failure fixtures; archival source downloads are unnecessary for ordinary environment setup.

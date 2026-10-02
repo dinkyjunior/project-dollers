@@ -1,8 +1,9 @@
 (() => {
   'use strict';
   const pages = [...document.querySelectorAll('.page')];
-  const state = { week: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null };
+  const state = { week: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
   let data = null, assets = { players: {}, logos: {} };
+  let playerHistory = null, historyPromise = null, historyError = null, historyHash = null, updater = null, updateStatus = {};
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#${name}"></use></svg>`;
@@ -108,15 +109,71 @@
     $('recap-content').innerHTML = recap(snapshot);
   }
   function playerDetails(player) {
-    const stats = player.seasonStats || {};
-    const position = player.position, group = player.filterGroup;
-    const entries = position === 'QB' ? [['COMPLETION %',stats.completionPct],['PASS ATTEMPTS',stats.attempts],['PASSER RATING',stats.passerRating],['SACKS TAKEN',stats.sacks]] : group === 'RB' ? [['RUSH YDS / GAME',stats.rushingYardsPerGame],['RECEPTIONS',stats.receptions],['TARGETS',stats.targets],['RUSH TD',stats.rushingTD]] : ['WR','TE'].includes(position) ? [['REC YDS / GAME',stats.receivingYardsPerGame],['TARGETS',stats.targets],['YARDS / RECEPTION',stats.yardsPerReception],['REC TD',stats.receivingTD]] : group === 'DEF' ? [['SOLO TACKLES',stats.tackles],['SACKS',stats.defensiveSacks],['INTERCEPTIONS',stats.defensiveInterceptions],['PASSES DEFENDED',stats.passesDefended]] : group === 'K' ? [['FIELD GOALS',stats.fieldGoalsMade],['FG ATTEMPTS',stats.fieldGoalAttempts],['PUNTS',stats.punts],['PUNT YARDS',stats.puntYards]] : [['RECORDED GAMES',stats.games]];
-    const historyKeys = position === 'QB' ? ['PASS YDS','passingYards','TD','passingTD'] : group === 'RB' ? ['RUSH YDS','rushingYards','TD','rushingTD'] : ['WR','TE'].includes(position) ? ['REC YDS','receivingYards','TD','receivingTD'] : group === 'DEF' ? ['SOLO','tackles','SACKS','defensiveSacks'] : group === 'K' ? ['FG','fieldGoalsMade','PUNTS','punts'] : ['GAMES','games','—',null];
-    const injury = player.injury || {};
-    const status = injury.reportStatus ? `${injury.reportStatus}${injury.injury ? ` · ${injury.injury}` : ''}` : 'Game status unavailable';
-    const practice = injury.practiceStatus || 'Practice participation unavailable';
-    const games = player.last5 || [];
-    return `<div class="player-detail" id="player-detail-${esc(player.id)}" ${state.openPlayer === player.id ? '' : 'hidden'}><h3>${esc(player.name)} · season research</h3><div class="metric-grid">${entries.map(([label,value]) => metric(label,value)).join('')}</div><p>${esc(player.rosterStatus || 'Roster status unavailable')} · ${esc(player.depth?.label || 'Depth chart unavailable')}</p><p>Week ${data.currentWeek}: ${esc(status)}<br>${esc(practice)}</p><p class="source-note">Per-game averages cover ${number(stats.games)} recorded games. Missing games are not filled with estimates.</p><h3>Last ${Math.min(5,games.length)} recorded games</h3>${games.length ? `<table class="compact-table"><thead><tr><th>WK / OPP</th><th>${historyKeys[0]}</th><th>${historyKeys[2]}</th></tr></thead><tbody>${games.map(game => `<tr><td>${game.week} · ${esc(game.opponent)}</td><td>${number(game.stats?.[historyKeys[1]])}</td><td>${number(game.stats?.[historyKeys[3]])}</td></tr>`).join('')}</tbody></table>` : '<p class="unavailable">Game statistics unavailable.</p>'}${sourceNote('playerStats',`${data.season} · through Week ${data.provenance?.playerStats?.throughWeek ?? data.throughWeek}`)}</div>`;
+    return window.PDPlayerResearch.render(player, {data,state,history:playerHistory,error:historyError,loading:!!historyPromise,logo,teamName,metric,sourceNote});
+  }
+  function preserveScroll(render) {
+    const positions = [...document.querySelectorAll('.page-scroll')].map(node => [node,node.scrollTop]);
+    const focused = document.activeElement;
+    const card = focused?.closest?.('[data-player-id]');
+    let selector = null;
+    if (focused?.id) selector = `#${CSS.escape(focused.id)}`;
+    else if (focused?.matches?.('[data-history-week]') && card) selector = `[data-player-id="${CSS.escape(card.dataset.playerId)}"] [data-history-week]`;
+    else if (focused?.dataset?.historyMode) selector = `[data-history-mode="${CSS.escape(focused.dataset.historyMode)}"]`;
+    else if (focused?.dataset?.player) selector = `[data-player="${CSS.escape(focused.dataset.player)}"]`;
+    else if (focused?.matches?.('summary')) {
+      const detail = focused.parentElement;
+      if (detail.dataset.extraGame) selector = `[data-extra-player="${CSS.escape(detail.dataset.extraPlayer)}"][data-extra-game="${CSS.escape(detail.dataset.extraGame)}"] > summary`;
+      else if (detail.dataset.gameId) selector = `[data-game-player="${CSS.escape(detail.dataset.gamePlayer)}"][data-game-id="${CSS.escape(detail.dataset.gameId)}"] > summary`;
+      else if (detail.dataset.seasonPlayer) selector = `[data-season-player="${CSS.escape(detail.dataset.seasonPlayer)}"] > summary`;
+    } else if (focused?.matches?.('[data-refresh]')) selector = '[data-refresh]';
+    else if (focused?.matches?.('[data-sources]')) selector = '[data-sources]';
+    else if (focused?.closest?.('#sources-content') && focused.matches('a[href]')) selector = `#sources-content a[href="${CSS.escape(focused.getAttribute('href'))}"]`;
+    render();
+    positions.forEach(([node,top]) => { node.scrollTop = top; });
+    if (selector && !focused.isConnected) document.querySelector(selector)?.focus({preventScroll:true});
+  }
+  async function loadHistory(force = false) {
+    if (historyPromise) return historyPromise;
+    const summary = data?.playerHistory;
+    if (!force && playerHistory && historyHash === summary?.sha256) return playerHistory;
+    historyError = null;
+    const snapshot = data;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(),20000);
+    historyPromise = (async () => {
+      await Promise.resolve();
+      try {
+        if (!summary?.path || !/^[a-f0-9]{64}$/.test(summary.sha256)) throw new Error('Verified history metadata unavailable');
+        const url = new URL(summary.path,document.baseURI);
+        if (url.origin !== location.origin || !url.pathname.includes('/assets/data/')) throw new Error('History path invalid');
+        const response = await fetch(url.href,{cache:'no-cache',signal:controller.signal});
+        if (!response.ok) throw new Error('History unavailable');
+        const bytes = await response.arrayBuffer();
+        const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(value=>value.toString(16).padStart(2,'0')).join('');
+        if (digest !== summary.sha256) throw new Error('History checksum does not match the verified snapshot');
+        const bundle = JSON.parse(new TextDecoder().decode(bytes));
+        if (bundle.schemaVersion !== 1 || bundle.season !== snapshot.season || !bundle.players || !Array.isArray(bundle.sources)) throw new Error('History schema invalid');
+        if (Object.entries(summary.currentSourceHashes || {}).some(([id,hash]) => bundle.currentSourceHashes?.[id] !== hash)) throw new Error('History source versions do not match');
+        if (data.playerHistory?.sha256 !== summary.sha256) return null;
+        playerHistory = bundle; historyHash = summary.sha256; window.PD_HISTORY = bundle;
+        return bundle;
+      } catch (error) {
+        if (data.playerHistory?.sha256 === summary?.sha256) historyError = error.message;
+        return null;
+      } finally {
+        clearTimeout(timeout);
+        historyPromise = null;
+        preserveScroll(() => { renderRoster(); renderSources(); });
+        if (data.playerHistory?.sha256 !== summary?.sha256 && state.openPlayer) queueMicrotask(() => loadHistory());
+      }
+    })();
+    preserveScroll(renderRoster);
+    return historyPromise;
+  }
+  function changeWeek(week) {
+    if (!data?.weeks[week]) return;
+    state.week = String(week);
+    preserveScroll(() => { renderDashboard(); renderRoster(); renderTeamMatchup(); });
   }
   function renderRoster() {
     const all = data.roster.filter(player => player.rosterStatus !== 'Cut');
@@ -164,8 +221,9 @@
     $('team-stats-content').innerHTML = `<h2 class="panel-title">${data.season} · through Week ${stats.throughWeek ?? data.throughWeek}</h2><section class="research-panel"><h3>Steelers · ${record.w ?? '—'}–${record.l ?? '—'}${record.ties ? `–${record.ties}` : ''}</h3><p class="source-note">Record through Week ${data.throughWeek} · statistics through Week ${stats.throughWeek ?? data.throughWeek}</p><div class="metric-grid">${metric('POINTS / GAME',stats.pointsPerGame,'',1)}${metric('POINTS ALLOWED / GAME',stats.pointsAllowedPerGame,'',1)}${metric('NET PASS YDS / GAME',available(stats.netPassingYards) && stats.games ? stats.netPassingYards / stats.games : null,'',1)}${metric('RUSH YDS / GAME',stats.rushingYardsPerGame,'',1)}${metric('GROSS PASS YARDS',stats.passingYards)}${metric('SEASON RUSH YARDS',stats.rushingYards)}${metric('TOTAL YDS / GAME',stats.totalYardsPerGame,'',1)}${metric('COMPLETION %',stats.completionPct,'',1)}</div>${sourceNote('teamStats')}</section><section class="research-panel"><h3>Last ${data.steelers.last5?.length || 0} results</h3>${resultStrip(data.steelers.last5)}${sourceNote('standings')}</section><section class="research-panel"><h3>Week ${data.currentWeek} · injury &amp; practice report</h3>${injuries.length ? `<table class="compact-table"><thead><tr><th>PLAYER</th><th>PRACTICE</th><th>GAME</th></tr></thead><tbody>${injuries.map(injury => `<tr><td>${esc(injury.name || injury.fullName || injury.full_name)}<br><span class="source-note">${esc(injury.injury || 'Injury detail unavailable')}</span></td><td>${esc(injury.practiceStatus || 'Unavailable')}</td><td>${esc(injury.reportStatus || 'Unavailable')}</td></tr>`).join('')}</tbody></table>` : '<p class="unavailable">Verified injury report unavailable.</p>'}<p class="source-note">A missing game designation does not establish availability. Inactives are unavailable until an official list is verified.</p>${sourceNote('injuries',`${data.season} · Week ${data.currentWeek}`)}</section>`;
   }
   function renderTeamMatchup() {
-    const game = data.steelers.upcomingGame || data.weeks[data.currentWeek]?.fixture;
-    const research = data.steelers.matchup || {};
+    const game = data.weeks[state.week]?.fixture || null;
+    const opponent = game ? (game.home_team === 'PIT' ? game.away_team : game.home_team) : null;
+    const research = data.steelers.matchupsByOpponent?.[opponent] || (data.steelers.matchup?.opponent === opponent ? data.steelers.matchup : {opponent});
     $('matchup-title').textContent = game ? `Steelers ${game.home_team === 'PIT' ? 'vs' : '@'} ${teamName(research.opponent || (game.home_team === 'PIT' ? game.away_team : game.home_team))}` : 'Steelers matchup research';
     $('team-matchup').innerHTML = matchup(game,false);
     const allowances = research.allowances || {};
@@ -179,21 +237,24 @@
       const entry = allowances[position];
       const yards = position === 'QB' ? entry.passingYardsAllowedPerGame : position === 'RB' ? entry.rushingYardsAllowedPerGame : entry.receivingYardsAllowedPerGame;
       return `<tr><td>${position}</td><td>${number(yards,1)}</td><td>${number(entry.receptionsAllowedPerGame,1)}</td><td>${number(entry.tdAllowedPerGame,2)}</td></tr>`;
-    }).join('')}</tbody></table><p class="source-note">QB: passing yards · RB: rushing yards · WR/TE: receiving yards. TD includes passing, rushing and receiving by the listed position; per ${allowances.QB?.games ?? 'available'} completed opponent games.</p>` : '<p class="unavailable">Verified positional allowance unavailable.</p>'}${sourceNote('allowances')}</section><section class="research-panel"><h3>Previous meetings</h3>${gameHistory.length ? `<table class="compact-table"><thead><tr><th>DATE</th><th>AWAY</th><th>HOME</th></tr></thead><tbody>${gameHistory.map(meeting => `<tr><td>${esc(meeting.gameday)}</td><td>${esc(meeting.away_team)} ${number(meeting.away_score)}</td><td>${esc(meeting.home_team)} ${number(meeting.home_score)}</td></tr>`).join('')}</tbody></table>` : '<p class="unavailable">Previous meetings unavailable.</p>'}${sourceNote('history','Historical final scores')}</section><section class="research-panel"><h3>Historical pre-game prices</h3><p class="unavailable">Verified pre-game head-to-head prices with provider and capture time are unavailable.</p><p class="source-note">Unattributed archival lines are excluded from the interface.</p></section>`;
+    }).join('')}</tbody></table><p class="source-note">QB: passing yards · RB: rushing yards · WR/TE: receiving yards. TD includes passing, rushing and receiving by the listed position; per ${allowances.QB?.games ?? 'available'} completed opponent games.</p>` : '<p class="unavailable">Verified positional allowance unavailable.</p>'}${sourceNote('allowances',`${data.season} · ${teamName(opponent || 'Opponent')} · through Week ${research.throughWeek ?? data.provenance?.opponentAllowances?.throughWeek ?? data.throughWeek}`)}</section><section class="research-panel"><h3>Previous meetings</h3>${gameHistory.length ? `<table class="compact-table"><thead><tr><th>DATE</th><th>AWAY</th><th>HOME</th></tr></thead><tbody>${gameHistory.map(meeting => `<tr><td>${esc(meeting.gameday)}</td><td>${esc(meeting.away_team)} ${number(meeting.away_score)}</td><td>${esc(meeting.home_team)} ${number(meeting.home_score)}</td></tr>`).join('')}</tbody></table>` : '<p class="unavailable">Previous meetings unavailable.</p>'}${sourceNote('history','Historical final scores')}</section><section class="research-panel"><h3>Historical pre-game prices</h3><p class="unavailable">Verified pre-game head-to-head prices with provider and capture time are unavailable.</p><p class="source-note">Unattributed archival lines are excluded from the interface.</p></section>`;
   }
   function renderSources() {
     const provenance = Object.entries(data.provenance || {});
-    const sources = data.sources || [];
+    const sources = [...(data.sources || []),...(playerHistory?.sources || []).filter(source=>!data.sources.some(existing=>existing.id === source.id))];
     const labels = { standings:'Conference records',weeklyLeaders:'Weekly leaders',roster:'Current roster',playerStats:'Player statistics',teamStats:'Team statistics',schedule:'Schedule & results',depthChart:'Depth chart',injuries:'Injury & practice reports',opponentAllowances:'Opponent positional allowance',historicalMatchups:'Previous meetings',weatherForecast:'Weather forecast',historicalPrices:'Archival lines (provider/time unavailable)' };
-    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>Public data is refreshed every six hours when the repository refresh succeeds. This is a timestamped snapshot, not live play-by-play.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : key === 'crossChecks' ? 'Dataset consistency checks passed. Independent official/provider confirmation is unavailable.' : entry.note || '')}</p></div>`).join('')}</div><p>Official-team and second-provider cross-checks were unavailable where access was denied. Missing injury designations are not treated as healthy status.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : key === 'crossChecks' ? 'Dataset consistency checks passed. Independent official/provider confirmation is unavailable.' : entry.note || '')}</p></div>`).join('')}</div><p>Official-team and second-provider cross-checks were unavailable where access was denied. Missing injury designations are not treated as healthy status.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   function freshness() {
+    if (!data) return;
     const age = Math.max(0,Date.now() - new Date(data.retrievedAt).getTime());
     const stale = age > 12 * 60 * 60 * 1000 || data.context?.isCurrent === false;
     const note = $('data-status');
     note.classList.toggle('is-stale',stale);
-    note.innerHTML = `<span>${stale ? 'Snapshot may be stale' : 'Verified snapshot'} · ${esc(timestamp(data.retrievedAt))}</span><button data-sources>Sources</button>`;
-    if (stale) note.title = 'The last successful feed refresh is more than 12 hours old or belongs to an older season. Check sources before relying on it.';
+    const checking = updateStatus.state === 'checking';
+    note.innerHTML = `<span>${checking ? 'Checking for updates' : updateStatus.state === 'error' ? 'Retained verified data' : stale ? 'Snapshot may be stale' : 'Verified snapshot'} · ${esc(timestamp(data.retrievedAt))}</span><span class="update-actions"><button data-refresh aria-label="Refresh verified data" aria-busy="${checking}" aria-disabled="${checking}">↻</button><button data-sources>Sources</button></span>`;
+    note.title = updateStatus.state === 'error' ? 'The latest update check failed. The last verified snapshot remains available.' : stale ? 'The verified source snapshot may be stale. Check sources before relying on it.' : updateStatus.lastCheckedAt ? `Automatically checked ${timestamp(updateStatus.lastCheckedAt)}. Source publication time is shown separately.` : 'Automatic checks on open, return to the app and reconnect.';
+    window.PD_UPDATE_STATUS = updateStatus;
   }
   function renderAll() {
     $('season-context').textContent = `${data.season} REGULAR SEASON`;
@@ -208,6 +269,35 @@
     document.documentElement.dataset.dataReady = 'true';
     document.dispatchEvent(new CustomEvent('pd:data-ready'));
   }
+  function applySnapshot(snapshot) {
+    const previous = data;
+    const previousWeek = state.week;
+    const previousPlayer = state.openPlayer;
+    const oldHistoryHash = data?.playerHistory?.sha256;
+    try {
+      data = snapshot;
+      if (!data.weeks[state.week]) state.week = String(data.currentWeek);
+      if (state.openPlayer && !data.roster.some(player => player.id === state.openPlayer)) state.openPlayer = null;
+      preserveScroll(renderAll);
+      window.PD_DATA = data;
+    } catch (error) {
+      data = previous; state.week = previousWeek; state.openPlayer = previousPlayer;
+      window.PD_DATA = previous;
+      if (previous) preserveScroll(renderAll);
+      throw error;
+    }
+    if (oldHistoryHash !== data.playerHistory?.sha256) historyError = null;
+    if (state.openPlayer && historyHash !== data.playerHistory?.sha256) loadHistory();
+  }
+  function startUpdates() {
+    updater?.stop();
+    updater = window.PDDataUpdates.start({
+      getSnapshot:() => data,
+      onSnapshot:applySnapshot,
+      onStatus:status => { updateStatus = status; preserveScroll(freshness); document.dispatchEvent(new CustomEvent('pd:update-status',{detail:status})); },
+      checkOnStart:false
+    });
+  }
   document.addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
     if (button.dataset.open) {
@@ -220,39 +310,55 @@
     if (button.hasAttribute('data-more')) $('about-dialog').showModal();
     if (button.hasAttribute('data-sources')) $('sources-dialog').showModal();
     if (button.hasAttribute('data-retry')) loadData();
+    if (button.hasAttribute('data-refresh') && updateStatus.state !== 'checking') updater?.refresh('manual',{force:true});
+    if (button.hasAttribute('data-history-retry')) loadHistory(true);
     if (!data) return;
     if (button.dataset.conference) { state.conference = button.dataset.conference; renderDashboard(); }
-    if (button.dataset.week) { state.week = button.dataset.week; renderDashboard(); }
+    if (button.dataset.week) changeWeek(button.dataset.week);
+    if (button.dataset.historyMode) { state.historyMode = button.dataset.historyMode; preserveScroll(renderRoster); }
     if (button.hasAttribute('data-standings-toggle')) { state.standingsExpanded = !state.standingsExpanded; renderDashboard(); }
     if (button.hasAttribute('data-roster-toggle')) { state.rosterExpanded = !state.rosterExpanded; state.openPlayer = null; renderRoster(); }
     if (button.dataset.filter) { state.filter = button.dataset.filter; state.openPlayer = null; renderRoster(); }
     if (button.dataset.player) {
-      const id = button.dataset.player, close = state.openPlayer === id;
-      document.querySelectorAll('.player-detail').forEach(detail => { detail.hidden = true; });
-      document.querySelectorAll('.player-card').forEach(card => card.classList.remove('is-expanded'));
-      document.querySelectorAll('[data-player]').forEach(control => control.setAttribute('aria-expanded','false'));
-      state.openPlayer = close ? null : id;
-      $(`player-detail-${id}`).hidden = close;
-      button.closest('.player-card').classList.toggle('is-expanded',!close);
-      button.setAttribute('aria-expanded',String(!close));
-      button.setAttribute('aria-label',`${close ? 'Show' : 'Close'} ${data.roster.find(player => player.id === id)?.name || 'player'} research`);
+      const id = button.dataset.player;
+      state.openPlayer = state.openPlayer === id ? null : id;
+      preserveScroll(renderRoster);
+      document.querySelector(`[data-player="${CSS.escape(id)}"]`)?.focus({preventScroll:true});
+      if (state.openPlayer) loadHistory();
     }
     if (button.dataset.shortcut) {
       if (button.dataset.shortcut === 'matchups') { openPage('steelers'); selectTab('team','matchups'); }
       else { openPage('nfl'); selectTab('nfl','players'); }
     }
   });
-  $('week-select').addEventListener('change',event => { if (data?.weeks[event.target.value]) { state.week=event.target.value; renderDashboard(); } });
+  $('week-select').addEventListener('change',event => changeWeek(event.target.value));
+  document.addEventListener('change',event => { if (event.target.matches('[data-history-week]')) changeWeek(event.target.value); });
+  document.addEventListener('toggle',event => {
+    const game = event.target;
+    if (!game.isConnected) return;
+    if (game.matches('.additional-statistics')) {
+      const key = `${game.dataset.extraPlayer}:${game.dataset.extraGame}:extra`;
+      if (game.open) state.openGames.add(key); else state.openGames.delete(key);
+      return;
+    }
+    if (game.matches('.season-overview')) {
+      if (game.open) state.seasonOpen.add(game.dataset.seasonPlayer); else state.seasonOpen.delete(game.dataset.seasonPlayer);
+      return;
+    }
+    if (!game.matches('.game-breakdown')) return;
+    const key = `${game.dataset.gamePlayer}:${game.dataset.gameId}`;
+    if (game.open) state.openGames.add(key); else state.openGames.delete(key);
+  },true);
   window.addEventListener('popstate',() => openPage(location.hash.slice(1),false));
   window.addEventListener('hashchange',() => openPage(location.hash.slice(1),false));
   async function loadData() {
+    if (data && updater) return updater.refresh('retry',{force:true});
     try {
       const responses = await Promise.all([fetch('assets/data/current.json',{cache:'no-cache'}),fetch('assets/player-assets.json')]);
       if (!responses.every(response => response.ok)) throw new Error('Local feed unavailable');
       const [snapshot,mapping] = await Promise.all(responses.map(response => response.json()));
       if (snapshot.schemaVersion !== 1 || !snapshot.roster?.length || !snapshot.weeks?.[snapshot.currentWeek] || !snapshot.retrievedAt) throw new Error('Local feed invalid');
-      data=snapshot; assets=mapping; window.PD_DATA=data;
-      state.week=String(data.currentWeek); renderAll();
+      assets=mapping; applySnapshot(snapshot); startUpdates();
     } catch (error) {
       $('data-status').innerHTML='<span>Verified data unavailable</span><button data-retry>Retry</button>';
       $('roster').innerHTML='<p class="notice">The verified feed could not load. No statistics are being substituted.</p>';

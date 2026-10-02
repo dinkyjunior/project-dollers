@@ -8,7 +8,11 @@
     "qa": "node qa/run.cjs",
     "data:refresh": "python3 scripts/refresh-data.py",
     "data:check": "python3 scripts/refresh-data.py --check",
-    "qa:hosted": "node qa/hosted.cjs"
+    "qa:hosted": "node qa/hosted.cjs",
+    "test:data": "python3 qa/data.test.py",
+    "test:updates": "node qa/data-updates.test.cjs",
+    "test:sources": "python3 qa/source-updates.test.py",
+    "test:integration": "node qa/auto-integration.cjs"
   },
   "devDependencies": {
     "playwright": "1.58.2"

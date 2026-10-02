@@ -1,0 +1,94 @@
+{
+  "recordedAt": "2026-10-02T00:33:09.439503+00:00",
+  "checks": [
+    {
+      "id": "schedules",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "attemptedAt": "2026-10-02T00:33:08.606731+00:00",
+      "httpStatus": 200,
+      "etag": "\"e0c6f4d4966de3410592fec7c3ccd9291693bd1ea6ed185511d95cc683afd5e0\"",
+      "lastModified": null,
+      "contentLength": "2182435",
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "current-player-stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "attemptedAt": "2026-10-02T00:33:08.607644+00:00",
+      "httpStatus": 200,
+      "etag": "\"0x8DF1FD8BB8750E8\"",
+      "lastModified": "Thu, 01 Oct 2026 16:26:22 GMT",
+      "contentLength": "1487226",
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "historical-player-stats2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "attemptedAt": "2026-10-02T00:33:08.608013+00:00",
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95B1AFD7169\"",
+      "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+      "contentLength": "8656387",
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "attemptedAt": "2026-10-02T00:33:08.608447+00:00",
+      "httpStatus": 200,
+      "etag": "\"0x8DF1FC7F08C7A70\"",
+      "lastModified": "Thu, 01 Oct 2026 14:26:10 GMT",
+      "contentLength": "56175075",
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "provider-cadence-doc",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/main/vignettes/articles/nflverse_data_schedule.Rmd",
+      "attemptedAt": "2026-10-02T00:33:08.746657+00:00",
+      "httpStatus": 200,
+      "etag": "\"542ccb9171b60abbe16a5ebe039257701ce8778812c637126929a225c6a25c61\"",
+      "lastModified": null,
+      "contentLength": "9462",
+      "sha256": "6ea71f130135c4ff7cebc7221319428e3c1ba69fc9b8f1d26a306d5271670278",
+      "bytes": 9462,
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "provider-workflow-overview",
+      "url": "https://raw.githubusercontent.com/nflverse/nflverse-data/master/workflows.md",
+      "attemptedAt": "2026-10-02T00:33:09.092725+00:00",
+      "httpStatus": 200,
+      "etag": "\"3fadce4b665f5d871c62ab0f5ccaf24cf93eba41e8b07b37afd505c969b82927\"",
+      "lastModified": null,
+      "contentLength": "3344",
+      "sha256": "b7af9beff2208c68f381a578e41fc5f92bd230c8222bd7b2409b7a21ffbdd1b5",
+      "bytes": 3344,
+      "conditionalCheck": {
+        "httpStatus": 304,
+        "bytesDownloaded": 0
+      }
+    },
+    {
+      "id": "hosted",
+      "url": "https://dinkyjunior.github.io/project-dollers/",
+      "attemptedAt": "2026-10-02T00:33:09.129255+00:00",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "note": "Only public authorized requests. A tunnel error is not an HTTP response from the hosted website."
+}

@@ -1,5 +1,13 @@
 # Premium Pages 1–3 with a verified current NFL feed
 
+## October 2 follow-up
+
+The base was approved, but Home still felt soft, borders lacked prominence and personal game research showed only two statistics per current-season game. The new pass uses crisp native outlined branding, animated blue rails/reflections and stronger gold player borders. Each personal game now contains full passing/rushing/receiving/touchdown and additional defensive/kicking/provider statistics, with the five most recent recorded games and up to five against each selected weekly opponent across verified seasons and previous clubs. All displayed fields retain source context; shorter/unavailable histories are explicit.
+
+Selected-week entry is fixed end to end. Automatic browser checks and source-change publishing retain all selections, expanded statistics, focus and scrolling; faults roll back to verified data. Fifteen data/history, seven source-monitor and eight update-client behaviour groups pass. Final local QA passed all five viewports, including both iPhone sizes, with exact runtime hashes and independently checked source fields. Current screenshots/reviews are under `qa/next-pass/` and `qa/results.json`.
+
+True live in-game/push data remains an unconnected provider/backend requirement. Hosted access is still a separately verified condition; a saved cloud network/startup draft addresses missing allowed destinations without claiming it was applied. Page 4 remains outside scope. The prior PR #1 is already merged; this follow-up's source/production publication is recorded separately.
+
 The previous draft used a static 2025 sample and its roster/control treatment still felt approximate. This pass preserves the approved Project Dollar$ composition while adding sharp local assets, restrained blue/gold illumination, consistent spacing, readable data typography and polished interactions. Football motion follows each entire player-card perimeter, including expanded research, with a synchronized light trail.
 
 The NFL layer now contains verified 2026 records for all 32 teams, weekly leaders/recaps, the full retained Steelers roster, schedule, season/game statistics, depth order, practice/injury status and matchup research. Source timestamps, hashes, coverage and derivations are explicit. Missing forecasts, confirmed inactives, independent confirmation and exact historical pre-game prices remain unavailable. A six-hour repository refresh is configured and preserves the last validated feed on required-source failure.

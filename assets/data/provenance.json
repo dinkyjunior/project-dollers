@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T00:34:31Z",
+  "generatedAt": "2026-10-02T00:37:38Z",
   "retrievedAt": "2026-10-02T00:34:31Z",
-  "snapshotSha256CanonicalJson": "e434530e00785c5b2d6202be50ae595e9e72c27f6c7c306988be6286a1b0d46c",
+  "snapshotSha256CanonicalJson": "a96581bb2ffed0ab9f14613400504ab2e472dd8298d3a5e6e7f0ca9b7173ccc8",
   "sources": [
     {
       "id": "nflverse_games",
@@ -10,6 +10,8 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
+      "etag": "\"e0c6f4d4966de3410592fec7c3ccd9291693bd1ea6ed185511d95cc683afd5e0\"",
+      "lastModified": null,
       "retrievedAt": "2026-10-02T00:34:31Z",
       "status": "verified",
       "sha256": "759f14a852eb7c27cfcd371f8b31ab9d0e695cd52cdd283521d4fe5f1498a926",
@@ -21,6 +23,8 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
+      "etag": "\"0x8DE8C1878E14FA9\"",
+      "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
       "retrievedAt": "2026-10-02T00:34:31Z",
       "status": "verified",
       "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
@@ -32,7 +36,9 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
-      "retrievedAt": "2026-10-02T00:34:31Z",
+      "etag": "\"0x8DF1FC826F6D7A2\"",
+      "lastModified": "Thu, 01 Oct 2026 14:27:41 GMT",
+      "retrievedAt": "2026-10-02T00:34:32Z",
       "status": "verified",
       "sha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
       "bytes": 957383
@@ -43,6 +49,8 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
+      "etag": "\"0x8DF1FD8BB8750E8\"",
+      "lastModified": "Thu, 01 Oct 2026 16:26:22 GMT",
       "retrievedAt": "2026-10-02T00:34:31Z",
       "status": "verified",
       "sha256": "de05005fcd731f2877dee92372d47db62f3dc2c2dc32bf4b476aef41eca81b86",
@@ -54,7 +62,9 @@
       "provider": "nflverse",
       "required": false,
       "httpStatus": 200,
-      "retrievedAt": "2026-10-02T00:34:32Z",
+      "etag": "\"0x8DF1FC7F08C7A70\"",
+      "lastModified": "Thu, 01 Oct 2026 14:26:10 GMT",
+      "retrievedAt": "2026-10-02T00:34:33Z",
       "status": "verified",
       "sha256": "1a1c4149017b2d780b1ac53d2298f97145190019eedc0d66f1cfcf4632762706",
       "bytes": 56175075
@@ -65,10 +75,243 @@
       "provider": "nflverse",
       "required": false,
       "httpStatus": 200,
+      "etag": "\"0x8DF1FC7D64FDFB1\"",
+      "lastModified": "Thu, 01 Oct 2026 14:25:26 GMT",
       "retrievedAt": "2026-10-02T00:34:32Z",
       "status": "verified",
       "sha256": "4de401c1e8ba365b834d9e64acb7300606db9a7fb03874ef6bd9cbf5a73702aa",
       "bytes": 111017
+    },
+    {
+      "id": "nflverse_player_stats_2005",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2005.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:34Z",
+      "status": "verified",
+      "sha256": "cfaaa943c6b869c5eedfc9611400f0ca47a972bdf30823528b5929f4f9298273",
+      "bytes": 7434902
+    },
+    {
+      "id": "nflverse_player_stats_2006",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2006.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:34Z",
+      "status": "verified",
+      "sha256": "32f5825b8e174ec00641c935de811d4deeb10b4a96807c5c1926f2a16d889714",
+      "bytes": 7418077
+    },
+    {
+      "id": "nflverse_player_stats_2007",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2007.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:34Z",
+      "status": "verified",
+      "sha256": "24829b3f384aad21da867c06180f572a45619c793e94cdbf9e828bd892fa7837",
+      "bytes": 7442890
+    },
+    {
+      "id": "nflverse_player_stats_2008",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2008.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:34Z",
+      "status": "verified",
+      "sha256": "1b0c72f0540f21c8d63f0f86717b821dd05bc97081480764db56ad74cd889856",
+      "bytes": 7420439
+    },
+    {
+      "id": "nflverse_player_stats_2009",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2009.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "4f2dbdef657aa2c961595b2a2c832e0fb2a7c13e41c301380900faff266c3477",
+      "bytes": 7902720
+    },
+    {
+      "id": "nflverse_player_stats_2010",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2010.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "76f33d484781a3bc1852aa8aab5003874ab219dcb6c67a7e2e881be9822c9d13",
+      "bytes": 7859210
+    },
+    {
+      "id": "nflverse_player_stats_2011",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2011.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "c1720e9e5ed59b7def9486ae650ea73ee80dda1fd2ab97d50c5fb4f6565dbeaa",
+      "bytes": 7800649
+    },
+    {
+      "id": "nflverse_player_stats_2012",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2012.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "5c8885d93ec529efa9d729cec1ef255f438ee27a59eba6e156a360fa0045b56b",
+      "bytes": 7796458
+    },
+    {
+      "id": "nflverse_player_stats_2013",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2013.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "f7329a8f15084c9c23d841f14eb117fcc630d6c82913501f3c60f2d8f4e651a4",
+      "bytes": 7713866
+    },
+    {
+      "id": "nflverse_player_stats_2014",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2014.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "a389b10d94eb8e6b9a153223d381aab821b0eff4cd73967835a21032192abc61",
+      "bytes": 7883194
+    },
+    {
+      "id": "nflverse_player_stats_2015",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2015.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "21052baa3b3291a92faf3e6827891295010dca8cc5cefd5a909984b9d7b64664",
+      "bytes": 7881066
+    },
+    {
+      "id": "nflverse_player_stats_2016",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2016.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:35Z",
+      "status": "verified",
+      "sha256": "eb0264c65d1ef593196afcd4ba24e9f2e9b7942923bf6f4bb4639684e2c4d470",
+      "bytes": 7852359
+    },
+    {
+      "id": "nflverse_player_stats_2017",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2017.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "592b0916065987b0b3afb0480162f03350d16b12250dc42b0f194e2ab1378563",
+      "bytes": 7821392
+    },
+    {
+      "id": "nflverse_player_stats_2018",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2018.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "c53021bcfc9f89d30edd6f1fe145a1d7d6ce469efeec75974fe9f0adac568642",
+      "bytes": 7792665
+    },
+    {
+      "id": "nflverse_player_stats_2019",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2019.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "a05558126b1209b80fe11a8f18938cb35816370bf9990975a87de49e9eed7376",
+      "bytes": 7767165
+    },
+    {
+      "id": "nflverse_player_stats_2020",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2020.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "05b992676faccc8940efbf6242cb76358069372d31d7c2e02c1a4acdcd3cbe18",
+      "bytes": 7883270
+    },
+    {
+      "id": "nflverse_player_stats_2021",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2021.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "41915fb49238902ad1f129ebf0405b11a1e710454ae0fe8f7b3e4f9145875f48",
+      "bytes": 8477784
+    },
+    {
+      "id": "nflverse_player_stats_2022",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2022.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "ad426c3fe5bf1cc30c3f137fdfe96d054e19d400879ee4413129da49fa7b54be",
+      "bytes": 8408729
+    },
+    {
+      "id": "nflverse_player_stats_2023",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2023.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "f19cb71a5de0dce7fd09376026237c9ee9d5a93fe13815a2ea3ec2d37204cb17",
+      "bytes": 8332874
+    },
+    {
+      "id": "nflverse_player_stats_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2024.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+      "bytes": 8470040
+    },
+    {
+      "id": "nflverse_player_stats_2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "retrievedAt": "2026-10-02T00:23:36Z",
+      "status": "verified",
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "bytes": 8656387
     }
   ],
   "datasets": {
@@ -173,6 +416,15 @@
       ],
       "note": "Most recent five completed meetings; each game carries its original season/week."
     },
+    "weeklyOpponentResearch": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "note": "Every scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates."
+    },
     "historicalPrices": {
       "status": "verified",
       "sourceIds": [
@@ -205,6 +457,69 @@
         "nflverse_injuries"
       ],
       "note": "Internal dataset consistency validated. Independent official/ESPN API retrieval blocked403; no claim of independently verified official standings."
+    },
+    "playerHistory": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_roster",
+        "nflverse_player_stats",
+        "nflverse_player_stats_2005",
+        "nflverse_player_stats_2006",
+        "nflverse_player_stats_2007",
+        "nflverse_player_stats_2008",
+        "nflverse_player_stats_2009",
+        "nflverse_player_stats_2010",
+        "nflverse_player_stats_2011",
+        "nflverse_player_stats_2012",
+        "nflverse_player_stats_2013",
+        "nflverse_player_stats_2014",
+        "nflverse_player_stats_2015",
+        "nflverse_player_stats_2016",
+        "nflverse_player_stats_2017",
+        "nflverse_player_stats_2018",
+        "nflverse_player_stats_2019",
+        "nflverse_player_stats_2020",
+        "nflverse_player_stats_2021",
+        "nflverse_player_stats_2022",
+        "nflverse_player_stats_2023",
+        "nflverse_player_stats_2024",
+        "nflverse_player_stats_2025"
+      ],
+      "season": 2026,
+      "retrievedAt": "2026-10-02T00:23:34Z",
+      "coverage": {
+        "firstSeason": 2005,
+        "lastSeason": 2026,
+        "availableSeasons": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "unavailableSeasons": [],
+        "status": "verified",
+        "cachedRowsNeedingBackfill": 0
+      },
+      "note": "Completed regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset."
     }
   },
   "validation": {
@@ -224,8 +539,46 @@
     ],
     "disagreements": []
   },
+  "playerHistorySha256": "2cffbc6efc5d4c7b418bb35b8369a4f97c51de9072a80493c0fb6687b6a2f27b",
+  "playerHistoryValidation": {
+    "status": "passed",
+    "playerCount": 77,
+    "gameRowCount": 1224,
+    "coverage": {
+      "firstSeason": 2005,
+      "lastSeason": 2026,
+      "availableSeasons": [
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "unavailableSeasons": [],
+      "status": "verified",
+      "cachedRowsNeedingBackfill": 0
+    }
+  },
   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
   "refreshCommand": "python3 scripts/refresh-data.py",
   "validateCommand": "python3 scripts/refresh-data.py --check",
-  "refreshCadence": "Recommend every six hours during the season; snapshot freshness is always visible in app."
+  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
+  "historyRefreshCommand": "python3 scripts/refresh-data.py --refresh-history"
 }

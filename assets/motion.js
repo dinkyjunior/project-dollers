@@ -1,7 +1,18 @@
 (() => {
   "use strict";
   const shell = document.querySelector(".app-shell");
-  if (!shell || !window.ResizeObserver || !window.IntersectionObserver ||
+  if (!shell) return;
+
+  // Keep every decorative layer still in background tabs, including browsers
+  // that use the stylesheet's fallback instead of the measured SVG card path.
+  function syncVisibility() {
+    shell.classList.toggle("motion-paused", document.hidden);
+  }
+  document.addEventListener("visibilitychange", syncVisibility);
+  window.addEventListener("pagehide", () => shell.classList.add("motion-paused"));
+  window.addEventListener("pageshow", syncVisibility);
+  syncVisibility();
+  if (!window.ResizeObserver || !window.IntersectionObserver ||
       !CSS.supports("offset-path", 'path("M 0 0 L 1 1")')) return;
 
   const SVG_NS = "http://www.w3.org/2000/svg";
@@ -39,6 +50,11 @@
       track.svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
       for (const path of track.paths) path.setAttribute("d", d);
       card.style.setProperty("--card-perimeter", `path("${d}")`);
+      // Long research cards get a longer lap, rather than sending the football
+      // racing down thousands of pixels. Both light paths share this duration.
+      const r = Math.max(0, Math.min(radius - .5, (width - 1) / 2, (height - 1) / 2));
+      const perimeter = 2 * (width + height - 2) - 8 * r + 2 * Math.PI * r;
+      card.style.setProperty("--orbit-duration", `${Math.max(9, perimeter / 110).toFixed(3)}s`);
       card.classList.add("motion-track-ready");
     }
   });
@@ -81,9 +97,5 @@
   // Roster filters, week selection and verified-data refreshes replace cards.
   // Observe structural changes only; no frame loop or animation-time layout read.
   new MutationObserver(reconcile).observe(shell, { childList: true, subtree: true });
-  document.addEventListener("visibilitychange", () => {
-    shell.classList.toggle("motion-paused", document.hidden);
-  });
-  shell.classList.toggle("motion-paused", document.hidden);
   reconcile();
 })();

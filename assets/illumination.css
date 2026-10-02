@@ -1,0 +1,120 @@
+/* Crisp illuminated rails with bloom outside the content, never across type.
+   Home art and tile motion live in home-premium.css; this is the shared system. */
+.page {
+  --rail-core: #72dfff;
+  --rail-rgb: 20 154 255;
+  --rail-soft: #286280;
+  --rail-panel: #4b9dbe;
+  --rail-active: #b8f3ff;
+}
+.page[data-page="steelers"] {
+  --rail-core: #f9cc67;
+  --rail-rgb: 237 151 34;
+  --rail-soft: #79602e;
+  --rail-panel: #c49b50;
+  --rail-active: #ffeeb4;
+}
+.app-shell::after {
+  border-color: #a4efff;
+  box-shadow: 0 0 2px #e1fbff, 0 0 8px #11a9ffee,
+    0 0 20px #0575ff80, inset 0 0 9px #1baaff55;
+}
+.app-shell:has(.page[data-page="steelers"].active)::after {
+  border-color: #ffe6a5;
+  box-shadow: 0 0 2px #fff5d8, 0 0 8px #f9ad37cc,
+    0 0 20px #cd782b66, inset 0 0 9px #f2ae3555;
+}
+.bottom-nav {
+  border-top-color: var(--rail-core);
+  box-shadow: 0 -1px 2px rgb(var(--rail-rgb) / .48),
+    0 -4px 12px rgb(var(--rail-rgb) / .13), 0 -8px 18px #000b;
+}
+.bottom-nav button[aria-current="page"]::before {
+  display: block;
+  width: 28px;
+  height: 2px;
+  top: -3px;
+  border-radius: 4px;
+  background: var(--rail-active);
+  box-shadow: 0 0 3px var(--rail-core), 0 0 9px rgb(var(--rail-rgb) / .65);
+}
+.page:not([data-page="home"]) :is(.tabs button, .positions button, .week-row button, .week-select select) {
+  border-color: var(--rail-soft);
+  box-shadow: inset 0 0 0 1px rgb(var(--rail-rgb) / .04),
+    0 0 5px rgb(var(--rail-rgb) / .06);
+}
+.page:not([data-page="home"]) :is(.tabs button[aria-selected="true"], .positions button[aria-pressed="true"], .week-row button[aria-pressed="true"]) {
+  border-color: var(--rail-active);
+  box-shadow: 0 0 2px rgb(var(--rail-rgb) / .68),
+    0 0 9px rgb(var(--rail-rgb) / .3),
+    inset 0 0 12px rgb(var(--rail-rgb) / .11);
+}
+.conference-toggle {
+  border-color: #4f9dba;
+  box-shadow: 0 0 6px #159fff1b;
+}
+.conference-toggle button[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px #8de4fb, inset 0 0 12px #0ba1ff22;
+}
+.page:not([data-page="home"]) :is(.standings, .leader-panel, .research-panel, .recap-panel) {
+  border-color: var(--rail-panel);
+  box-shadow: 0 0 1px rgb(var(--rail-rgb) / .6),
+    0 0 10px rgb(var(--rail-rgb) / .2),
+    inset 0 1px 0 rgb(var(--rail-rgb) / .08);
+}
+.page[data-page="nfl"] .standings {
+  border-color: #52b2d6;
+  box-shadow: 0 0 2px #099bff80, 0 0 12px #0b93ff24;
+}
+.steelers-row {
+  box-shadow: inset 0 0 0 1px #8be6fb, inset 0 0 12px #09b6ff20;
+}
+.game-card {
+  border-color: var(--rail-active);
+  box-shadow: 0 0 2px rgb(var(--rail-rgb) / .8),
+    0 0 12px rgb(var(--rail-rgb) / .3),
+    inset 0 0 15px rgb(var(--rail-rgb) / .09);
+}
+.team-frame .game-card {
+  border-color: #ffe19a;
+  box-shadow: 0 0 2px #ffc76799, 0 0 12px #f29c334d, inset 0 0 15px #d7a52617;
+}
+.player-card {
+  border-color: #ffd67b;
+  box-shadow: 0 0 2px #ffe8a8a8, 0 0 8px #ffb12b5c,
+    0 0 17px #e66e201f, inset 0 0 11px #d9953017;
+}
+.player-card::after {
+  inset: 2px;
+  height: auto;
+  border: 1px solid #ffe7a517;
+  border-radius: 13px;
+  background: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.player-card .player-detail {
+  border-color: #a57f3d;
+  box-shadow: 0 0 5px #df982c17, inset 0 1px 0 #e6b55312;
+}
+.team-frame .metric {
+  border-color: #65512d;
+  box-shadow: inset 0 1px 0 #f4c56412;
+}
+.team-frame :is(.notice, .empty-state) {
+  border-color: #b38e44;
+  box-shadow: 0 0 7px #e9a63216;
+}
+dialog {
+  border-color: #6edcfa;
+  box-shadow: 0 0 2px #b9efff80, 0 0 24px #169eff2b, 0 20px 70px #000d;
+}
+@media (hover: hover) and (pointer: fine) {
+  .page:not([data-page="home"]) :is(.tabs button, .positions button, .week-row button):hover {
+    border-color: var(--rail-core);
+    color: #f4fcff;
+  }
+  .player-card:has(.player-expander:hover) {
+    border-color: #fff0bc;
+  }
+}

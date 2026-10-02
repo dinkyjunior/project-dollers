@@ -1,0 +1,202 @@
+{
+  "startedAt": "2026-10-02T00:45:41.220Z",
+  "scope": "Independent new control/data integration; no production data changed or test screenshots captured",
+  "fixture1": {
+    "week": "1",
+    "opponent": "ATL",
+    "fixtureMatchesDestination": true
+  },
+  "bye": {
+    "week": "9",
+    "opponent": null,
+    "explicitBye": true
+  },
+  "history": {
+    "status": "passed",
+    "players": [
+      {
+        "player": "Aaron Rodgers",
+        "playerId": "00-0023459",
+        "opponent": "CLE",
+        "recent": {
+          "games": 5,
+          "comparedFields": 700,
+          "gameIds": [
+            "2026_03_CIN_PIT",
+            "2026_02_PIT_NE",
+            "2026_01_ATL_PIT",
+            "2025_18_BAL_PIT",
+            "2025_17_PIT_CLE"
+          ]
+        },
+        "against": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2025_17_PIT_CLE",
+            "2025_06_CLE_PIT",
+            "2021_16_CLE_GB",
+            "2013_07_CLE_GB",
+            "2009_07_GB_CLE"
+          ]
+        },
+        "priorClubs": [
+          "PIT",
+          "GB"
+        ]
+      },
+      {
+        "player": "Jaylen Warren",
+        "playerId": "00-0037228",
+        "opponent": "CLE",
+        "recent": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2026_03_CIN_PIT",
+            "2026_02_PIT_NE",
+            "2026_01_ATL_PIT",
+            "2025_18_BAL_PIT",
+            "2025_17_PIT_CLE"
+          ]
+        },
+        "against": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2025_17_PIT_CLE",
+            "2025_06_CLE_PIT",
+            "2024_14_CLE_PIT",
+            "2024_12_PIT_CLE",
+            "2023_11_PIT_CLE"
+          ]
+        },
+        "priorClubs": [
+          "PIT"
+        ]
+      },
+      {
+        "player": "DK Metcalf",
+        "playerId": "00-0035640",
+        "opponent": "CLE",
+        "recent": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2026_03_CIN_PIT",
+            "2026_02_PIT_NE",
+            "2026_01_ATL_PIT",
+            "2025_16_PIT_DET",
+            "2025_15_MIA_PIT"
+          ]
+        },
+        "against": {
+          "games": 3,
+          "comparedFields": 417,
+          "gameIds": [
+            "2025_06_CLE_PIT",
+            "2023_08_CLE_SEA",
+            "2019_06_SEA_CLE"
+          ]
+        },
+        "priorClubs": [
+          "PIT",
+          "SEA"
+        ]
+      },
+      {
+        "player": "Michael Pittman",
+        "playerId": "00-0036252",
+        "opponent": "CLE",
+        "recent": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2026_03_CIN_PIT",
+            "2026_01_ATL_PIT",
+            "2025_18_IND_HOU",
+            "2025_17_JAX_IND",
+            "2025_16_SF_IND"
+          ]
+        },
+        "against": {
+          "games": 1,
+          "comparedFields": 139,
+          "gameIds": [
+            "2023_07_CLE_IND"
+          ]
+        },
+        "priorClubs": [
+          "IND"
+        ]
+      },
+      {
+        "player": "Pat Freiermuth",
+        "playerId": "00-0036894",
+        "opponent": "CLE",
+        "recent": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2026_03_CIN_PIT",
+            "2026_02_PIT_NE",
+            "2026_01_ATL_PIT",
+            "2025_18_BAL_PIT",
+            "2025_17_PIT_CLE"
+          ]
+        },
+        "against": {
+          "games": 5,
+          "comparedFields": 695,
+          "gameIds": [
+            "2025_17_PIT_CLE",
+            "2025_06_CLE_PIT",
+            "2024_14_CLE_PIT",
+            "2024_12_PIT_CLE",
+            "2023_11_PIT_CLE"
+          ]
+        },
+        "priorClubs": [
+          "PIT"
+        ]
+      }
+    ],
+    "byeOpponentHistoryExplicit": true
+  },
+  "historyFailures": {
+    "status": "passed",
+    "results": [
+      {
+        "failure": "checksum",
+        "status": "passed",
+        "historyRequests": 2,
+        "initialLoadLazy": true,
+        "unverifiedRowsShown": false,
+        "seasonRetained": true,
+        "retryRecovered": true
+      },
+      {
+        "failure": "timeout",
+        "status": "passed",
+        "historyRequests": 2,
+        "initialLoadLazy": true,
+        "unverifiedRowsShown": false,
+        "seasonRetained": true,
+        "retryRecovered": true,
+        "testTimeoutMs": 1000
+      }
+    ]
+  },
+  "update": {
+    "status": "passed",
+    "failedRefreshRetainsFullSnapshot": true,
+    "newerSnapshotAcceptedAtomically": true,
+    "olderSnapshotRejected": true,
+    "reconnectEventChecks": 1,
+    "allSelectionsAndExpandedResearchPreserved": true,
+    "scrollPreserved": true,
+    "fixtureNote": "Isolated network fixtures changed retrieval metadata only; no test snapshot or screenshots were published"
+  },
+  "status": "passed",
+  "completedAt": "2026-10-02T00:45:57.636Z"
+}

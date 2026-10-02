@@ -1,0 +1,70 @@
+{
+  "context": "Normal browser cross-origin fetch from local HTTP app origin; no CORS/security bypass.",
+  "results": [
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261002",
+      "ok": false,
+      "corsReadable": false,
+      "error": "Failed to fetch",
+      "checkedAt": "2026-10-02T00:28:47.749Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dinkyjunior/project-dollers/main/assets/data/current.json",
+      "ok": false,
+      "corsReadable": false,
+      "error": "Failed to fetch",
+      "checkedAt": "2026-10-02T00:28:47.774Z"
+    }
+  ],
+  "requestFailures": [
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261002",
+      "error": "net::ERR_TUNNEL_CONNECTION_FAILED"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dinkyjunior/project-dollers/main/assets/data/current.json",
+      "error": "net::ERR_CERT_AUTHORITY_INVALID"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+    "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID"
+  ],
+  "normalHttpProbes": [
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261002",
+      "checkedAt": "2026-10-02T00:30:48.408666+00:00",
+      "method": "GET",
+      "context": "Normal urllib network request with browser Origin header; no access bypass.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit",
+      "checkedAt": "2026-10-02T00:30:48.422360+00:00",
+      "method": "GET",
+      "context": "Normal urllib network request with browser Origin header; no access bypass.",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dinkyjunior/project-dollers/main/assets/data/current.json",
+      "checkedAt": "2026-10-02T00:30:48.424861+00:00",
+      "method": "GET",
+      "context": "Normal urllib network request with browser Origin header; no access bypass.",
+      "httpStatus": 200,
+      "bytes": 605128,
+      "allowOrigin": "*",
+      "cacheControl": "max-age=300",
+      "etag": "\"837b82086aa1ccc8c1e3bc4a2036b99aa322533981d7c9dc9874c729ae456bfe\"",
+      "keys": [
+        "schemaVersion",
+        "retrievedAt",
+        "generatedAt",
+        "season",
+        "currentWeek",
+        "throughWeek",
+        "context",
+        "teams"
+      ]
+    }
+  ]
+}

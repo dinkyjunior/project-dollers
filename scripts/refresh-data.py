@@ -37,6 +37,45 @@ STAT_FIELDS = {
     "passesDefended": "def_pass_defended", "fieldGoalsMade": "fg_made", "fieldGoalAttempts": "fg_att",
     "punts": "pt_att", "puntYards": "pt_yards",
 }
+# Counting statistics can be summed over games. Efficiency and longest-distance
+# fields below remain per-game values; they are never summed into season totals.
+EXTRA_COUNT_FIELDS = {
+    "passingAirYards": "passing_air_yards", "passingYardsAfterCatch": "passing_yards_after_catch",
+    "passingFirstDowns": "passing_first_downs", "passingTwoPointConversions": "passing_2pt_conversions",
+    "sackFumbles": "sack_fumbles", "sackFumblesLost": "sack_fumbles_lost",
+    "rushingFumbles": "rushing_fumbles", "rushingFumblesLost": "rushing_fumbles_lost",
+    "rushingFirstDowns": "rushing_first_downs", "rushingTwoPointConversions": "rushing_2pt_conversions",
+    "rushing20Plus": "rushing_20", "rushing40Plus": "rushing_40",
+    "receivingFumbles": "receiving_fumbles", "receivingFumblesLost": "receiving_fumbles_lost",
+    "receivingAirYards": "receiving_air_yards", "receivingYardsAfterCatch": "receiving_yards_after_catch",
+    "receivingFirstDowns": "receiving_first_downs", "receivingTwoPointConversions": "receiving_2pt_conversions",
+    "receiving20Plus": "receiving_20", "receiving40Plus": "receiving_40", "specialTeamsTD": "special_teams_tds",
+    "tacklesWithAssist": "def_tackles_with_assist", "tacklesForLoss": "def_tackles_for_loss",
+    "tackleForLossYards": "def_tackles_for_loss_yards", "forcedFumbles": "def_fumbles_forced",
+    "defensiveSackYards": "def_sack_yards", "quarterbackHits": "def_qb_hits",
+    "interceptionReturnYards": "def_interception_yards", "defensiveTD": "def_tds",
+    "defensiveFumbles": "def_fumbles", "safeties": "def_safeties", "puntBlocks": "def_punt_blocks",
+    "extraPointBlocks": "def_pat_blocks", "fieldGoalBlocks": "def_fg_blocks",
+    "fumbleRecoveriesOwn": "fumble_recovery_own", "fumbleRecoveryYardsOwn": "fumble_recovery_yards_own",
+    "fumbleRecoveriesOpponent": "fumble_recovery_opp", "fumbleRecoveryYardsOpponent": "fumble_recovery_yards_opp",
+    "fumbleRecoveryTD": "fumble_recovery_tds", "penalties": "penalties", "penaltyYards": "penalty_yards",
+    "fumbles": "fumbles_total", "fumblesLost": "fumbles_lost_total",
+    "puntReturns": "punt_returns", "puntReturnYards": "punt_return_yards",
+    "kickoffReturns": "kickoff_returns", "kickoffReturnYards": "kickoff_return_yards",
+    "fieldGoalsMissed": "fg_missed", "fieldGoalsBlocked": "fg_blocked",
+    "extraPointsMade": "pat_made", "extraPointAttempts": "pat_att", "extraPointsMissed": "pat_missed",
+    "extraPointsBlocked": "pat_blocked", "puntsBlocked": "pt_blocked", "puntsInside20": "pt_inside_20",
+    "puntTouchbacks": "pt_touchback", "puntsFairCaught": "pt_fair_caught", "puntsReturned": "pt_returned",
+    "puntReturnYardsAllowed": "pt_return_yards", "puntReturnTDAllowed": "pt_return_tds", "netPuntYards": "pt_net_yards",
+}
+EXTRA_GAME_FIELDS = {
+    "passingEPA": "passing_epa", "passingCPOE": "passing_cpoe", "rushingEPA": "rushing_epa",
+    "receivingEPA": "receiving_epa", "targetShare": "target_share", "airYardsShare": "air_yards_share",
+    "fieldGoalLong": "fg_long", "puntLong": "pt_long", "fantasyPoints": "fantasy_points",
+    "fantasyPointsPPR": "fantasy_points_ppr",
+}
+HISTORY_FIRST_SEASON = 2005  # Covers every regular-season year of the longest-tenured current player.
+HISTORY_PATH = ROOT / "assets/data/player-history.json"
 
 
 def iso(value):
@@ -77,6 +116,14 @@ def source_specs(season):
     }
 
 
+def archive_source_specs(season, player_ids):
+    release = "https://github.com/nflverse/nflverse-data/releases/download/stats_player"
+    return {f"nflverse_player_stats_{year}": {
+                "url": f"{release}/stats_player_week_{year}.csv", "cache": f"stats{year}.csv",
+                "required": False, "season": year, "playerIds": set(player_ids)}
+            for year in range(HISTORY_FIRST_SEASON, season)}
+
+
 def fetch_source(item, cache_dir):
     source_id, spec = item
     metadata = {"id": source_id, "url": spec["url"], "provider": "nflverse", "required": spec["required"]}
@@ -85,16 +132,30 @@ def fetch_source(item, cache_dir):
         if cache and cache.exists():
             body = cache.read_bytes()
             retrieved = dt.datetime.fromtimestamp(cache.stat().st_mtime, UTC)
+            cache_meta = cache.with_suffix(".meta.json")
+            if cache_meta.exists():
+                saved = json.loads(cache_meta.read_text())
+                if saved.get("sha256") == hashlib.sha256(body).hexdigest():
+                    retrieved = dt.datetime.fromisoformat(saved["retrievedAt"].replace("Z", "+00:00"))
+                    metadata.update({key: saved[key] for key in ("httpStatus", "etag", "lastModified") if key in saved})
         else:
             request = urllib.request.Request(spec["url"], headers={"User-Agent": "ProjectDollarDataRefresh/1.0 public-data-audit"})
             with urllib.request.urlopen(request, timeout=75) as response:
                 body = response.read()
                 metadata["httpStatus"] = response.status
+                metadata["etag"] = response.headers.get("ETag")
+                metadata["lastModified"] = response.headers.get("Last-Modified")
             retrieved = dt.datetime.now(UTC)
         metadata.update({"retrievedAt": iso(retrieved), "status": "verified", "sha256": hashlib.sha256(body).hexdigest(), "bytes": len(body)})
-        rows = list(csv.DictReader(io.StringIO(body.decode("utf-8-sig"))))
+        reader = csv.DictReader(io.StringIO(body.decode("utf-8-sig")))
+        player_ids = spec.get("playerIds")
+        rows = [row for row in reader if not player_ids or row.get("player_id") in player_ids]
         if not rows:
             raise ValueError("Source contains no rows")
+        if cache_dir and not (cache and cache.exists()):
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            cache.write_bytes(body)
+            cache.with_suffix(".meta.json").write_text(json.dumps(metadata))
         return source_id, rows, metadata
     except Exception as exc:
         metadata.update({"retrievedAt": iso(dt.datetime.now(UTC)), "status": "unavailable", "error": str(exc)})
@@ -105,7 +166,7 @@ def fetch_source(item, cache_dir):
 
 def aggregate_stats(rows):
     values = {}
-    for key, field in STAT_FIELDS.items():
+    for key, field in {**STAT_FIELDS, **EXTRA_COUNT_FIELDS}.items():
         inputs = [number(row.get(field)) for row in rows]
         # An explicit zero is a verified zero. A missing field/cell or absent
         # source row cannot establish a zero, including within season totals.
@@ -120,6 +181,14 @@ def aggregate_stats(rows):
     values["passingYardsPerGame"] = ratio(values["passingYards"], values["games"])
     values["rushingYardsPerGame"] = ratio(values["rushingYards"], values["games"])
     values["receivingYardsPerGame"] = ratio(values["receivingYards"], values["games"])
+    values["offensiveTD"] = known_sum(values["rushingTD"], values["receivingTD"])
+    values["touchdownsAccountedFor"] = known_sum(values["passingTD"], values["rushingTD"], values["receivingTD"])
+    values["fieldGoalPct"] = ratio(values["fieldGoalsMade"] * 100 if values["fieldGoalsMade"] is not None else None, values["fieldGoalAttempts"])
+    values["extraPointPct"] = ratio(values["extraPointsMade"] * 100 if values["extraPointsMade"] is not None else None, values["extraPointAttempts"])
+    values["yardsPerPunt"] = ratio(values["puntYards"], values["punts"])
+    values["netYardsPerPunt"] = ratio(values["netPuntYards"], values["punts"])
+    if len(rows) == 1:
+        values.update({key: number(rows[0].get(field)) for key, field in EXTRA_GAME_FIELDS.items()})
     if values["attempts"] and all(values[key] is not None for key in ("completions", "passingYards", "passingTD", "interceptions")):
         a = values["attempts"]
         terms = [(values["completions"] / a - .3) * 5, (values["passingYards"] / a - 3) * .25,
@@ -210,6 +279,238 @@ def position_filter(position):
     return position if position in ("QB", "RB", "WR", "TE") else "RB" if position == "FB" else "K" if position in ("K", "P", "LS") else "OL" if position in ("C", "G", "T", "OT", "OG", "OL") else "DEF"
 
 
+def canonical_team(abbr):
+    """Join franchise histories while preserving original club labels on games."""
+    return {"OAK": "LV", "SD": "LAC", "STL": "LA", "LAR": "LA", "JAC": "JAX", "WSH": "WAS"}.get(abbr, abbr)
+
+
+def current_history_source_hashes(metadata):
+    return {key: metadata[key]["sha256"] for key in ("nflverse_games", "nflverse_player_stats", "nflverse_roster")}
+
+
+def history_game(row, game, source, schedule_source):
+    team, opponent = row["team"], row["opponent_team"]
+    is_home = canonical_team(team) == canonical_team(game["home_team"])
+    team_score = number(game["home_score"] if is_home else game["away_score"])
+    opponent_score = number(game["away_score"] if is_home else game["home_score"])
+    context_fields = {"player_id", "player_name", "player_display_name", "position", "position_group", "headshot_url",
+                      "season", "week", "season_type", "game_id", "team", "opponent_team"}
+    raw_stats, raw_lists = {}, {}
+    for field, value in row.items():
+        if field in context_fields:
+            continue
+        if field.endswith("_list"):
+            raw_lists[field] = str(value) if value is not None and str(value).strip() else None
+            continue
+        try:
+            raw_stats[field] = number(value)
+        except (ValueError, TypeError):
+            # Preserve legitimate provider list cells without coercing a list
+            # of kick distances into a single invented numeric statistic.
+            raw_lists[field] = value or None
+    time = kickoff(game)
+    return {"playerId": row["player_id"], "gameId": row["game_id"], "season": int(row["season"]),
+            "week": int(row["week"]), "seasonType": "REG", "date": game["gameday"],
+            "kickoffUtc": iso(time) if time else None, "team": team, "teamCanonical": canonical_team(team),
+            "opponent": canonical_team(opponent), "opponentSourceAbbr": opponent,
+            "position": row.get("position") or None, "homeAway": "home" if is_home else "away",
+            "result": "W" if team_score > opponent_score else "L" if team_score < opponent_score else "T",
+            "teamScore": team_score, "opponentScore": opponent_score, "stats": aggregate_stats([row]),
+            "rawStats": raw_stats, "rawLists": raw_lists, "statsSourceId": source["id"],
+            "sourceIds": [source["id"], "nflverse_games"], "retrievedAt": source["retrievedAt"],
+            "scheduleRetrievedAt": schedule_source["retrievedAt"]}
+
+
+def build_player_history(roster, schedule, datasets, metadata, now, season, cached=None):
+    """Publish only corroborated game rows; never infer an appearance from absence.
+
+    Archived tables are reduced to the five most recent rows for each scheduled
+    opponent plus the five most recent rows overall. Each player's pool dedupes
+    overlapping games. A validated prior bundle supplies archived rows between
+    roster/season changes, retaining their original retrieval timestamps.
+    """
+    player_ids = {player["id"] for player in roster}
+    opponents = sorted({canonical_team(game["away_team"] if game["home_team"] == "PIT" else game["home_team"])
+                        for game in schedule})
+    sources = dict(metadata)
+    games_by_player = collections.defaultdict(dict)
+    disagreements = []
+    cached_exclusions = set()
+    if cached:
+        for source in cached["sources"]:
+            if source["id"].startswith("nflverse_player_stats_"):
+                sources[source["id"]] = source
+    final_games = {game["game_id"]: game for game in datasets["nflverse_games"]
+                   if game["game_type"] == "REG" and game.get("away_score") and game.get("home_score")
+                   and ((kickoff(game) is not None and kickoff(game) <= now)
+                        or (kickoff(game) is None and game["gameday"] < now.date().isoformat()))}
+    if cached:
+        for player_id, player in cached["players"].items():
+            if player_id not in player_ids:
+                continue
+            for game_id, old_game in player["games"].items():
+                if old_game["season"] >= season:
+                    continue
+                game = final_games.get(game_id)
+                source = sources.get(old_game["statsSourceId"])
+                if (not game or not source or source["status"] != "verified"
+                        or {canonical_team(old_game["team"]), old_game["opponent"]} != {canonical_team(game["home_team"]), canonical_team(game["away_team"])}
+                        or old_game["season"] != int(game["season"]) or old_game["week"] != int(game["week"])):
+                    cached_exclusions.add(player_id)
+                    disagreements.append({"playerId": player_id, "gameId": game_id, "sourceId": old_game["statsSourceId"],
+                                          "issue": "Cached historical row no longer joins a verified completed game", "action": "excluded; archival backfill recommended"})
+                    continue
+                raw_row = {**old_game["rawStats"], **old_game.get("rawLists", {}), "player_id": player_id,
+                           "game_id": game_id, "season": old_game["season"], "week": old_game["week"], "season_type": "REG",
+                           "team": old_game["team"], "opponent_team": old_game["opponentSourceAbbr"], "position": old_game.get("position")}
+                games_by_player[player_id][game_id] = history_game(raw_row, game, source, sources["nflverse_games"])
+    required_columns = set(STAT_FIELDS.values()) | {"season", "season_type", "week", "game_id", "team", "opponent_team", "player_id"}
+    for source_id, rows in datasets.items():
+        if not source_id.startswith("nflverse_player_stats") or not rows:
+            continue
+        missing_columns = required_columns - set(rows[0])
+        if missing_columns:
+            if source_id == "nflverse_player_stats":
+                raise ValueError(f"Current history source missing required columns: {sorted(missing_columns)}")
+            sources[source_id] = {**sources[source_id], "status": "unavailable",
+                                  "error": f"Archive schema missing required columns: {sorted(missing_columns)}"}
+            continue
+        conflicted = set()
+        for row in rows:
+            if row.get("player_id") not in player_ids or row.get("season_type") != "REG":
+                continue
+            game = final_games.get(row.get("game_id"))
+            if not game:
+                disagreements.append({"playerId": row["player_id"], "gameId": row.get("game_id"),
+                                      "sourceId": source_id, "issue": "Statistics lack a verified completed regular-season game", "action": "excluded"})
+                continue
+            joined_clubs = {canonical_team(row["team"]), canonical_team(row["opponent_team"])}
+            schedule_clubs = {canonical_team(game["home_team"]), canonical_team(game["away_team"])}
+            if (joined_clubs != schedule_clubs or int(row["season"]) != int(game["season"])
+                    or int(row["week"]) != int(game["week"])):
+                disagreements.append({"playerId": row["player_id"], "gameId": row["game_id"], "sourceId": source_id,
+                                      "issue": "Statistical and schedule identity/context disagree", "action": "excluded"})
+                continue
+            key = (row["player_id"], row["game_id"])
+            if key in conflicted:
+                continue
+            normalized = history_game(row, game, sources[source_id], sources["nflverse_games"])
+            previous = games_by_player[row["player_id"]].get(row["game_id"])
+            if previous and previous["statsSourceId"] == source_id and previous["rawStats"] != normalized["rawStats"]:
+                del games_by_player[row["player_id"]][row["game_id"]]
+                conflicted.add(key)
+                disagreements.append({"playerId": row["player_id"], "gameId": row["game_id"], "sourceId": source_id,
+                                      "issue": "Conflicting duplicated player/game statistics", "action": "both rows excluded"})
+            else:
+                games_by_player[row["player_id"]][row["game_id"]] = normalized
+    expected_seasons = list(range(HISTORY_FIRST_SEASON, season + 1))
+    available = [year for year in expected_seasons if sources.get("nflverse_player_stats" if year == season else f"nflverse_player_stats_{year}", {}).get("status") == "verified"]
+    unavailable = sorted(set(expected_seasons) - set(available))
+    coverage_status = "partial" if unavailable or cached_exclusions else "verified"
+    players = {}
+    for player in roster:
+        ordered = sorted(games_by_player[player["id"]].values(), key=lambda game: (game["date"], game.get("kickoffUtc") or "", game["gameId"]), reverse=True)
+        last5 = [game["gameId"] for game in ordered[:5]]
+        by_opponent = {}
+        pool_ids = set(last5)
+        for opponent in opponents:
+            matches = [game["gameId"] for game in ordered if game["opponent"] == opponent][:5]
+            pool_ids.update(matches)
+            status = "partial" if unavailable or player["id"] in cached_exclusions else "verified" if matches else "unavailable"
+            note = f"{len(matches)} recorded completed regular-season game(s) against {opponent}; prior teams included."
+            if unavailable:
+                note += f" Archive coverage incomplete for seasons {', '.join(map(str, unavailable))}; the latest five cannot be guaranteed."
+            elif not matches:
+                note += " No provider statistical rows available in the verified season range; this does not establish zero appearances."
+            if player["id"] in cached_exclusions:
+                note += " Cached rows were withdrawn after source disagreement; archive backfill is required to guarantee the latest five."
+            by_opponent[opponent] = {"gameIds": matches, "status": status, "note": note}
+        note = f"{len(last5)} most recent recorded regular-season game(s), across verified seasons; prior teams included."
+        if unavailable:
+            note += f" Archive coverage incomplete for seasons {', '.join(map(str, unavailable))}; latest-five order may be partial."
+        if not last5:
+            note += " No verified statistical row; absence is not proof of no appearance."
+        if player["id"] in cached_exclusions:
+            note += " Cached rows were withdrawn after source disagreement; archive backfill is required."
+        players[player["id"]] = {"id": player["id"], "status": "partial" if unavailable or player["id"] in cached_exclusions else "verified" if last5 else "unavailable",
+                                 "note": note, "last5": last5, "byOpponent": by_opponent,
+                                 "games": {game["gameId"]: game for game in ordered if game["gameId"] in pool_ids}}
+    history_sources = [source for key, source in sources.items() if key in ("nflverse_games", "nflverse_roster") or key.startswith("nflverse_player_stats")]
+    retrieved = min(source["retrievedAt"] for source in history_sources if source["status"] == "verified")
+    return {"schemaVersion": 1, "season": season, "generatedAt": iso(now), "retrievedAt": retrieved, "scope": "REG",
+            "coverage": {"firstSeason": HISTORY_FIRST_SEASON, "lastSeason": season, "availableSeasons": available,
+                         "unavailableSeasons": unavailable, "status": coverage_status, "cachedRowsNeedingBackfill": len(cached_exclusions)},
+            "currentSourceHashes": current_history_source_hashes(metadata), "opponents": opponents,
+            "players": players, "sources": history_sources, "disagreements": disagreements,
+            "note": "Completed regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset."}
+
+
+def validate_history(history, current=None):
+    assert history["schemaVersion"] == 1 and history["scope"] == "REG"
+    source_ids = {source["id"] for source in history["sources"]}
+    for player_id, player in history["players"].items():
+        assert player["id"] == player_id
+        assert len(player["last5"]) <= 5 and len(set(player["last5"])) == len(player["last5"])
+        groups = [player["last5"]] + [entry["gameIds"] for entry in player["byOpponent"].values()]
+        for group in groups:
+            assert len(group) <= 5 and len(set(group)) == len(group)
+            assert all(game_id in player["games"] for game_id in group)
+            assert [player["games"][game_id]["date"] for game_id in group] == sorted([player["games"][game_id]["date"] for game_id in group], reverse=True)
+        for opponent, entry in player["byOpponent"].items():
+            assert all(player["games"][game_id]["opponent"] == opponent for game_id in entry["gameIds"])
+            assert entry["status"] in ("verified", "partial", "unavailable") and entry["note"]
+        for game in player["games"].values():
+            assert game["playerId"] == player_id and game["seasonType"] == "REG"
+            assert game["season"] in history["coverage"]["availableSeasons"]
+            assert all(source_id in source_ids for source_id in game["sourceIds"])
+            assert game["retrievedAt"] and game["scheduleRetrievedAt"]
+            assert len(game["stats"]) >= len(STAT_FIELDS)
+            assert game["result"] in ("W", "L", "T") and game["homeAway"] in ("home", "away")
+    if current:
+        assert set(history["players"]) == {player["id"] for player in current["roster"]}
+        metadata = {source["id"]: source for source in current["sources"]}
+        assert history["currentSourceHashes"] == current_history_source_hashes(metadata), "History/current source versions disagree"
+        assert history["season"] == current["season"]
+    json.dumps(history, allow_nan=False)
+    return {"status": "passed", "playerCount": len(history["players"]),
+            "gameRowCount": sum(len(player["games"]) for player in history["players"].values()), "coverage": history["coverage"]}
+
+
+def build_opponent_matchup(opponent, raw_games, all_games, stats, teams, records, now, season, retrieved_at):
+    finished = [game for game in raw_games if game.get("away_score") and game.get("home_score")]
+    opponent_games = [game for game in finished if opponent in (game["away_team"], game["home_team"])]
+    covered_ids = {row["game_id"] for row in stats if row["opponent_team"] == opponent and row["position"] in ("QB", "RB", "FB", "WR", "TE")}
+    covered_games = [game for game in opponent_games if game["game_id"] in covered_ids]
+    through_week = max((int(game["week"]) for game in covered_games), default=0)
+    allowances = {}
+    for position in ("QB", "RB", "WR", "TE"):
+        rows = [row for row in stats if row["opponent_team"] == opponent and (row["position"] == position or (position == "RB" and row["position"] == "FB"))]
+        sums, count = aggregate_stats(rows), len(covered_games)
+        td = known_sum(sums["passingTD"], sums["rushingTD"], sums["receivingTD"])
+        allowances[position] = {"status": "derived" if rows and count else "unavailable", "games": count,
+                                "throughWeek": through_week, "coverageGameIds": sorted(covered_ids),
+                                "passingYardsAllowed": sums["passingYards"], "rushingYardsAllowed": sums["rushingYards"],
+                                "receivingYardsAllowed": sums["receivingYards"], "receptionsAllowed": sums["receptions"], "tdAllowed": td,
+                                "passingYardsAllowedPerGame": ratio(sums["passingYards"], count),
+                                "rushingYardsAllowedPerGame": ratio(sums["rushingYards"], count),
+                                "receivingYardsAllowedPerGame": ratio(sums["receivingYards"], count),
+                                "receptionsAllowedPerGame": ratio(sums["receptions"], count), "tdAllowedPerGame": ratio(td, count),
+                                "note": "Position totals from verified player-stat rows. All positions share only completed opponent games with verified offensive-stat coverage; missing positions are unavailable."}
+    historical = sorted([game for game in all_games if {canonical_team(game["home_team"]), canonical_team(game["away_team"])} == {"PIT", opponent}
+                         and game.get("away_score") and game.get("home_score") and game["gameday"] < now.date().isoformat()],
+                        key=lambda game: (game["gameday"], game["game_id"]), reverse=True)[:5]
+    history = [normalize_game(game, {}) for game in historical]
+    return {"opponent": opponent, "opponentRecord": records.get(opponent), "last5": history,
+            "opponentLast5": [normalize_game(game, standings(teams, raw_games, max(0, int(game["week"]) - 1))[0])
+                              for game in sorted(opponent_games, key=lambda game: (game["gameday"], game["game_id"]), reverse=True)[:5]],
+            "allowances": allowances, "weather": {"status": "unavailable", "note": "No verified forecast feed available; game metadata preserves recorded conditions separately."},
+            "travel": {"status": "unavailable", "note": "Team travel itinerary not publicly verified. Home/away, venue and verified rest days remain available."},
+            "historicalPrices": [{"gameId": game["id"], "date": game["gameday"], **game["odds"]} for game in history],
+            "context": {"season": season, "throughWeek": through_week, "coverageGameIds": sorted(covered_ids),
+                        "sourceIds": ["nflverse_games", "nflverse_player_stats"], "retrievedAt": retrieved_at,
+                        "note": "Current verified season allowance context, independent of selected historical fixture week; not a reconstruction of what was known before that week."}}
+
+
 def build_snapshot(datasets, metadata, now, requested_season):
     actual_retrieval = min(dt.datetime.fromisoformat(item["retrievedAt"].replace("Z", "+00:00"))
                            for item in metadata.values() if item["required"] and item["status"] == "verified")
@@ -274,7 +575,7 @@ def build_snapshot(datasets, metadata, now, requested_season):
         player_depth = [r for r in depth_rows if r["gsis_id"] == player["gsis_id"] or (player.get("espn_id") and r["espn_id"] == player["espn_id"])]
         rank = min([int(r["pos_rank"]) for r in player_depth if r.get("pos_rank")], default=None)
         position = player["position"]
-        last5 = [{"week": int(row["week"]), "opponent": row["opponent_team"], "date": game_by_id.get(row["game_id"], {}).get("gameday"),
+        last5 = [{"season": requested_season, "team": row["team"], "week": int(row["week"]), "opponent": row["opponent_team"], "date": game_by_id.get(row["game_id"], {}).get("gameday"),
                   "gameId": row["game_id"], "stats": aggregate_stats([row]), "sourceId": "nflverse_player_stats"} for row in player_stats[:5]]
         number_value = number(player.get("jersey_number"))
         normalized_roster.append({"id": player["gsis_id"], "name": player["full_name"], "number": str(number_value) if number_value is not None else "—",
@@ -368,16 +669,21 @@ def build_snapshot(datasets, metadata, now, requested_season):
         "depthChart": {"status": "verified" if depth_rows else "unavailable", "sourceIds": ["nflverse_depth"], "season": requested_season, "sourceTimestamp": depth_timestamp, "note": "Latest published ESPN-derived depth order, not a confirmed starter designation."},
         "opponentAllowances": {"status": "derived" if allowance_games else "unavailable", "sourceIds": ["nflverse_player_stats", "nflverse_games"], "season": requested_season, "throughWeek": allowance_week, "coverageGameIds": sorted(opponent_stat_game_ids), "opponent": opponent, "note": "Opponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable."},
         "historicalMatchups": {"status": "verified" if historical else "unavailable", "sourceIds": ["nflverse_games"], "note": "Most recent five completed meetings; each game carries its original season/week."},
+        "weeklyOpponentResearch": {"status": "derived", "sourceIds": ["nflverse_games", "nflverse_player_stats"], "season": requested_season,
+                                   "note": "Every scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates."},
         "historicalPrices": {"status": "verified" if any(g["odds"]["status"] == "verified" for g in historical_games) else "unavailable", "sourceIds": ["nflverse_games"], "note": "Archival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price."},
         "exactPreGamePrices": {"status": "unavailable", "sourceIds": [], "note": "Archived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price."},
         "weatherForecast": {"status": "unavailable", "sourceIds": [], "note": "No accessible verified forecast feed in this environment. NOAA API blocked403 during audit. Historical recorded conditions remain sourced game data."},
         "travel": {"status": "unavailable", "sourceIds": [], "note": "Team travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule."},
         "crossChecks": {"status": "partial", "sourceIds": ["nflverse_games", "nflverse_player_stats", "nflverse_roster", "nflverse_depth", "nflverse_injuries"], "note": "Internal dataset consistency validated. Independent official/ESPN API retrieval blocked403; no claim of independently verified official standings."},
     }
+    matchups_by_opponent = {abbr: build_opponent_matchup(abbr, raw_games, all_games, stats, teams, all_records, now, requested_season, iso(actual_retrieval))
+                           for abbr in sorted({game["away_team"] if game["home_team"] == "PIT" else game["home_team"] for game in schedule})}
     return {"schemaVersion": 1, "retrievedAt": iso(actual_retrieval), "generatedAt": iso(now), "season": requested_season, "currentWeek": current_week, "throughWeek": through_week,
             "context": {"label": f"{requested_season} regular season · Week {current_week}", "requestedSeason": requested_season, "availableSeason": requested_season,
                         "isCurrent": bool(upcoming) and now < actual_retrieval + dt.timedelta(hours=24),
                         "isStale": now > actual_retrieval + dt.timedelta(hours=6), "refreshAfter": iso(actual_retrieval + dt.timedelta(hours=6)),
+                        "refreshGameKickoffsUtc": sorted(iso(time) for game in raw_games if (time := kickoff(game))),
                         "freshness": "Verified cached snapshot; not a live feed. Age uses the oldest required source retrieval, not regeneration time.",
                         "statsThroughWeek": stats_week, "last5Note": "Only played games are shown; no synthetic results pad the last-five lists"},
             "teams": list(teams.values()), "teamNames": {abbr: team["name"] for abbr, team in teams.items()}, "weeks": weeks,
@@ -385,6 +691,7 @@ def build_snapshot(datasets, metadata, now, requested_season):
                      "teamStats": team_stats, "upcomingGame": next_pit, "injuries": list(injury_by_id.values()),
                      "depthChart": [{"name": r["player_name"], "playerId": r["gsis_id"] or None, "espnId": r["espn_id"] or None,
                                      "position": r["pos_abb"], "rank": number(r["pos_rank"]), "unit": r["pos_grp"], "sourceTimestamp": r["dt"]} for r in depth_rows],
+                     "matchupsByOpponent": matchups_by_opponent,
                      "matchup": {"opponent": opponent, "opponentRecord": all_records.get(opponent), "last5": historical_games,
                                  "opponentLast5": [normalize_game(g, standings(teams, raw_games, max(0, int(g["week"]) - 1))[0]) for g in sorted(opponent_games, key=lambda g: g["gameday"], reverse=True)[:5]],
                                  "allowances": allowance, "weather": {"status": "unavailable", "note": provenance["weatherForecast"]["note"]},
@@ -442,10 +749,33 @@ def atomic_json(path, value, compact=False):
             os.unlink(temporary)
 
 
+def cached_player_history(season, roster, schedule, force=False):
+    if force or not HISTORY_PATH.exists():
+        return None
+    try:
+        previous = json.loads((ROOT / "assets/data/current.json").read_text())
+        expected_hash = previous.get("playerHistory", {}).get("sha256")
+        body = HISTORY_PATH.read_bytes()
+        if not expected_hash or hashlib.sha256(body).hexdigest() != expected_hash:
+            return None
+        history = json.loads(body)
+        validate_history(history)
+        ids = {player["id"] for player in roster}
+        opponents = {canonical_team(game["away_team"] if game["home_team"] == "PIT" else game["home_team"]) for game in schedule}
+        if history["season"] != season or not ids.issubset(history["players"]) or not opponents.issubset(history["opponents"]):
+            return None
+        # Optional unavailable archives are retried by an explicit historical
+        # refresh; ordinary source-driven updates preserve honest partial data.
+        return history
+    except (OSError, ValueError, KeyError, AssertionError, TypeError):
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--season", type=int, help="Requested NFL season; defaults to current year, previous year in Jan/Feb")
     parser.add_argument("--cache-dir", help="Use already-retrieved audit CSVs with their original filesystem retrieval timestamps")
+    parser.add_argument("--refresh-history", action="store_true", help="Re-fetch archived seasons to backfill or verify historical corrections")
     parser.add_argument("--check", action="store_true", help="Validate saved snapshot without a network request")
     args = parser.parse_args()
     if args.check:
@@ -453,7 +783,13 @@ def main():
         provenance = json.loads((ROOT / "assets/data/provenance.json").read_text())
         canonical_hash = hashlib.sha256(json.dumps(data, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
         assert canonical_hash == provenance["snapshotSha256CanonicalJson"], "Saved snapshot differs from its provenance manifest"
-        print(json.dumps({**validate(data), "provenanceHash": "passed"}, indent=2))
+        history_checks = None
+        if data.get("playerHistory"):
+            body = HISTORY_PATH.read_bytes()
+            assert hashlib.sha256(body).hexdigest() == data["playerHistory"]["sha256"], "Saved player history differs from current-snapshot checksum"
+            history_checks = validate_history(json.loads(body), data)
+            assert provenance.get("playerHistorySha256") == data["playerHistory"]["sha256"], "History provenance checksum differs"
+        print(json.dumps({**validate(data), "provenanceHash": "passed", "playerHistory": history_checks}, indent=2))
         return
     now = dt.datetime.now(UTC)
     season = args.season or (now.year - 1 if now.month < 3 else now.year)
@@ -462,16 +798,46 @@ def main():
     datasets = {source_id: rows for source_id, rows, _ in results}
     metadata = {source_id: meta for source_id, _, meta in results}
     data = build_snapshot(datasets, metadata, now, season)
+    cached = cached_player_history(season, data["roster"], data["steelers"]["schedule"], args.refresh_history)
+    if not cached:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            archive_results = list(pool.map(lambda item: fetch_source(item, args.cache_dir),
+                                           archive_source_specs(season, {player["id"] for player in data["roster"]}).items()))
+        datasets.update({source_id: rows for source_id, rows, _ in archive_results})
+        metadata.update({source_id: meta for source_id, _, meta in archive_results})
+    history = build_player_history(data["roster"], data["steelers"]["schedule"], datasets, metadata, now, season, cached)
+    history_checks = validate_history(history)
+    history_sources = [source for source in history["sources"] if source["id"].startswith("nflverse_player_stats_")]
+    data["sources"].extend(history_sources)
+    history_content = json.dumps(history, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
+    history_hash = hashlib.sha256(history_content.encode()).hexdigest()
+    history_source_ids = [source["id"] for source in history["sources"]]
+    data["playerHistory"] = {"path": "assets/data/player-history.json", "sha256": history_hash, "status": history["coverage"]["status"],
+                             "scope": history["scope"], "season": season, "sourceIds": history_source_ids,
+                             "coverage": history["coverage"], "currentSourceHashes": history["currentSourceHashes"],
+                             "retrievedAt": history["retrievedAt"], "generatedAt": history["generatedAt"]}
+    data["provenance"]["playerHistory"] = {"status": "derived" if history["coverage"]["status"] == "verified" else "partial",
+                                           "sourceIds": history_source_ids, "season": season, "retrievedAt": history["retrievedAt"],
+                                           "coverage": history["coverage"], "note": history["note"]}
+    for player in data["roster"]:
+        player["historyStatus"] = history["players"][player["id"]]["status"]
+        player["historyNote"] = history["players"][player["id"]]["note"]
+    validate_history(history, data)
     checks = validate(data)
     normalized_hash = hashlib.sha256(json.dumps(data, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     provenance = {"schemaVersion": 1, "generatedAt": data["generatedAt"], "retrievedAt": data["retrievedAt"], "snapshotSha256CanonicalJson": normalized_hash,
                   "sources": data["sources"], "datasets": data["provenance"], "validation": checks,
+                  "playerHistorySha256": history_hash, "playerHistoryValidation": history_checks,
                   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
                   "refreshCommand": "python3 scripts/refresh-data.py", "validateCommand": "python3 scripts/refresh-data.py --check",
-                  "refreshCadence": "Recommend every six hours during the season; snapshot freshness is always visible in app."}
+                  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
+                  "historyRefreshCommand": "python3 scripts/refresh-data.py --refresh-history"}
+    atomic_json(HISTORY_PATH, history, compact=True)
     atomic_json(ROOT / "assets/data/current.json", data, compact=True)
     atomic_json(ROOT / "assets/data/provenance.json", provenance)
-    print(json.dumps({**checks, "retrievedAt": data["retrievedAt"], "nextGame": data["steelers"]["upcomingGame"], "snapshotBytes": (ROOT / "assets/data/current.json").stat().st_size}, indent=2))
+    print(json.dumps({**checks, "retrievedAt": data["retrievedAt"], "nextGame": data["steelers"]["upcomingGame"],
+                      "snapshotBytes": (ROOT / "assets/data/current.json").stat().st_size,
+                      "playerHistory": history_checks, "playerHistoryBytes": HISTORY_PATH.stat().st_size}, indent=2))
 
 
 if __name__ == "__main__":
