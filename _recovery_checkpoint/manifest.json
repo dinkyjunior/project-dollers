@@ -1,0 +1,2437 @@
+{
+  "createdAtSydney": "20261007T092049+1100",
+  "repository": "dinkyjunior/project-dollers",
+  "head": "9633c03cad6d069c51731795a9d098d713d3100a",
+  "branch": "codex-rebuild",
+  "status": "## codex-rebuild\nM  CODEX_ENVIRONMENT.md\nM  CODEX_HANDOFF_STATUS.md\nM  CODEX_START.md\nM  DEPLOYMENT.md\nM  qa/PR_REVIEW.md\nM  qa/README.md\nA  qa/hosted/README.md\nA  qa/hosted/contact-sheet-manifest.json\nA  qa/hosted/contact-sheet.html\nA  qa/hosted/contact-sheet.jpg\nM  qa/hosted/failure.json\nA  qa/hosted/firefox-archive/20261002T020806899Z/engine-and-tls.json\nA  qa/hosted/firefox-archive/20261002T020806899Z/failure-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/home-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/home-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-players-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-players-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-recap-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/nfl-recap-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/results.json\nA  qa/hosted/firefox-archive/20261002T020806899Z/sources-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/sources-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-full-bottom-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-full-bottom-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-game-statistics-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-game-statistics-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-matchups-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-matchups-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-opponent-history-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-opponent-history-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-player-details-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-player-details-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-schedule-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-schedule-430.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-stats-393.png\nA  qa/hosted/firefox-archive/20261002T020806899Z/steelers-stats-430.png\nA  qa/hosted/firefox/engine-and-tls.json\nA  qa/hosted/firefox/home-393.png\nA  qa/hosted/firefox/home-430.png\nA  qa/hosted/firefox/nfl-393.png\nA  qa/hosted/firefox/nfl-430.png\nA  qa/hosted/firefox/nfl-players-393.png\nA  qa/hosted/firefox/nfl-players-430.png\nA  qa/hosted/firefox/nfl-recap-393.png\nA  qa/hosted/firefox/nfl-recap-430.png\nA  qa/hosted/firefox/results.json\nA  qa/hosted/firefox/sources-393.png\nA  qa/hosted/firefox/sources-430.png\nA  qa/hosted/firefox/steelers-393.png\nA  qa/hosted/firefox/steelers-430.png\nA  qa/hosted/firefox/steelers-full-bottom-393.png\nA  qa/hosted/firefox/steelers-full-bottom-430.png\nA  qa/hosted/firefox/steelers-game-statistics-393.png\nA  qa/hosted/firefox/steelers-game-statistics-430.png\nA  qa/hosted/firefox/steelers-matchups-393.png\nA  qa/hosted/firefox/steelers-matchups-430.png\nA  qa/hosted/firefox/steelers-opponent-history-393.png\nA  qa/hosted/firefox/steelers-opponent-history-430.png\nA  qa/hosted/firefox/steelers-player-details-393.png\nA  qa/hosted/firefox/steelers-player-details-430.png\nA  qa/hosted/firefox/steelers-schedule-393.png\nA  qa/hosted/firefox/steelers-schedule-430.png\nA  qa/hosted/firefox/steelers-stats-393.png\nA  qa/hosted/firefox/steelers-stats-430.png\nM  qa/hosted/results.json\nA  qa/hosted/webkit/RUNTIME_SETUP.md\nA  qa/hosted/webkit/dependency-status.json\nA  qa/hosted/webkit/engine-and-tls.json\nA  qa/hosted/webkit/home-393.png\nA  qa/hosted/webkit/home-430.png\nA  qa/hosted/webkit/nfl-393.png\nA  qa/hosted/webkit/nfl-430.png\nA  qa/hosted/webkit/nfl-players-393.png\nA  qa/hosted/webkit/nfl-players-430.png\nA  qa/hosted/webkit/nfl-recap-393.png\nA  qa/hosted/webkit/nfl-recap-430.png\nA  qa/hosted/webkit/package-verification.json\nA  qa/hosted/webkit/release-probe.json\nA  qa/hosted/webkit/results.json\nA  qa/hosted/webkit/sources-393.png\nA  qa/hosted/webkit/sources-430.png\nA  qa/hosted/webkit/steelers-393.png\nA  qa/hosted/webkit/steelers-430.png\nA  qa/hosted/webkit/steelers-full-bottom-393.png\nA  qa/hosted/webkit/steelers-full-bottom-430.png\nA  qa/hosted/webkit/steelers-game-statistics-393.png\nA  qa/hosted/webkit/steelers-game-statistics-430.png\nA  qa/hosted/webkit/steelers-matchups-393.png\nA  qa/hosted/webkit/steelers-matchups-430.png\nA  qa/hosted/webkit/steelers-opponent-history-393.png\nA  qa/hosted/webkit/steelers-opponent-history-430.png\nA  qa/hosted/webkit/steelers-player-details-393.png\nA  qa/hosted/webkit/steelers-player-details-430.png\nA  qa/hosted/webkit/steelers-schedule-393.png\nA  qa/hosted/webkit/steelers-schedule-430.png\nA  qa/hosted/webkit/steelers-stats-393.png\nA  qa/hosted/webkit/steelers-stats-430.png\nA  qa/hosted/webkit/summary.json\nA  qa/next-pass/AUTO_REFRESH_EXECUTION.json\nM  qa/next-pass/DATA_HISTORY_REVIEW.md\nM  qa/next-pass/ENVIRONMENT_ACCESS.md\nA  qa/next-pass/GITHUB_API_RELEASE_STATUS.json\nA  qa/next-pass/HOSTED_HTTP_AUDIT.json\nA  qa/next-pass/INCOMING_REFRESH_PRESERVATION.json\nA  qa/next-pass/POST_RELEASE_AUTO_REFRESH.json\nA  qa/next-pass/PR_UPDATE_CONFIRMATION.json\nA  qa/next-pass/PUBLICATION_STATUS.md\nA  qa/next-pass/PUBLIC_GITHUB_DEPLOYMENT.json\nM  qa/next-pass/README.md\nA  qa/next-pass/REMOTE_DATA_INTEGRATION.json\nA  qa/next-pass/ROSTER_VERIFICATION_REVIEW.json\nA  qa/next-pass/ROSTER_VERIFICATION_REVIEW.md\nA  qa/next-pass/http-audit-archive/20261002T020755567030Z.json\n?? qa/hosted-refresh-smoke.cjs\n?? qa/hosted/refresh-smoke-attempt01.json\n?? qa/hosted/refresh-smoke.json\n",
+  "files": [
+    {
+      "path": ".github/workflows/refresh-nfl-data.yml",
+      "bytes": 3549,
+      "sha256": "4254619b491657feba945c0699cfb13aa754c44dd5a8269406d9342987317955"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 74,
+      "sha256": "10dae5803497a6f1f91edda46589d44c6782bb48d8d6812cf8c7ebffb0c72026"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "404.html",
+      "bytes": 342,
+      "sha256": "5ed3923d905c12ceffc7722e10cd1b2999ba57db252c93f2acd9602508e445a6"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3359,
+      "sha256": "baf9306d756898751f8ee34c0080d9a4fc27aa906b332c45d56c981ef08f6908"
+    },
+    {
+      "path": "ASSET_SOURCES.md",
+      "bytes": 6288,
+      "sha256": "34e6fc2c790bd7cb386d036468a6a91e64efa3ee2c0591f2d496e0b4d09a3e4f"
+    },
+    {
+      "path": "CODEX_ENVIRONMENT.md",
+      "bytes": 4455,
+      "sha256": "5fcbb08e268a2a2b5a93149abdeeae1f5e7f7993720a80e0ee4c54d1c8b968a2"
+    },
+    {
+      "path": "CODEX_HANDOFF_STATUS.md",
+      "bytes": 7522,
+      "sha256": "6f4eed6a63a221c56a3dd67ea80acd8a7bfecb08729e59f428fda25946c1ca0f"
+    },
+    {
+      "path": "CODEX_START.md",
+      "bytes": 4186,
+      "sha256": "9fa96f59867ae2e4c17068ca5c270de49cb6e34e1e74d5a5a3e0345d07dcfe9d"
+    },
+    {
+      "path": "CODEX_TASK.md",
+      "bytes": 3445,
+      "sha256": "c922a8728ee5a3f5fb6b00100b5dc0fb19e41db305f5af50acca980c8ece490d"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 6154,
+      "sha256": "81a369af415275b73a0c5b74763ca5f408ae3aefc40c1bbbbf0dd13f411b61b1"
+    },
+    {
+      "path": "QA_ACCEPTANCE.md",
+      "bytes": 1858,
+      "sha256": "a07a8643b01349d5e019452530eff6214f334398d9c1cab7cd3c353547535ac8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4014,
+      "sha256": "6dbe8fdd7dd2084622d1cd08ede8919644d98d0e132d8614123304e1c100c086"
+    },
+    {
+      "path": "README_FOR_CODEX.md",
+      "bytes": 853,
+      "sha256": "607f6b901c095e063d4163a8459eca48b2dd9f0e51eb75c602d3a73bf3fc39d1"
+    },
+    {
+      "path": "REFERENCE_SPEC.md",
+      "bytes": 4950,
+      "sha256": "b717ae0f6ad8a119c63354ff4e62876b74e64646f5d5aaed4cf8760ca5ff51b7"
+    },
+    {
+      "path": "assets/app.js",
+      "bytes": 40392,
+      "sha256": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95"
+    },
+    {
+      "path": "assets/data-updates.js",
+      "bytes": 15136,
+      "sha256": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07"
+    },
+    {
+      "path": "assets/data/current.json",
+      "bytes": 1109241,
+      "sha256": "80c2a9f4ad7fb20b3afe98d40884562807a04e9d3b0715d69cafc3d788d03f22"
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "bytes": 6836610,
+      "sha256": "b89ae5e5bdb50ac52ec4ccdd1e7632dcd45b6d76d5a982bba71466b0ac98fd4f"
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "bytes": 29548,
+      "sha256": "3b6db2670ecea8d9838675e736a9999ce2ff4ac3be72ab495fddb3476bf57d46"
+    },
+    {
+      "path": "assets/data/roster-source.json",
+      "bytes": 880,
+      "sha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e"
+    },
+    {
+      "path": "assets/data/snapshot.js",
+      "bytes": 16931,
+      "sha256": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416"
+    },
+    {
+      "path": "assets/energy.svg",
+      "bytes": 2453,
+      "sha256": "d57a58aa08da4b91643a079acdc5a1e83b225a47cf62e8b7f70f1001f8c2f48a"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 370,
+      "sha256": "e08e81732e4dd296f3563f39d3b1f3bc2c0e9f4b6842d8e669dd19b0930b7f48"
+    },
+    {
+      "path": "assets/fonts/Anton-Regular.ttf",
+      "bytes": 170812,
+      "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab"
+    },
+    {
+      "path": "assets/fonts/Anton-Regular.woff2",
+      "bytes": 15584,
+      "sha256": "05134fad84d75065974b690dc5464b3c4ac58b365559b287d1911aef97d55134"
+    },
+    {
+      "path": "assets/fonts/Barlow-BlackItalic.ttf",
+      "bytes": 114596,
+      "sha256": "109ad3b4fff5bfd338d0fbc908e68d601893b97b9b1d8ae698aaab2209f6a618"
+    },
+    {
+      "path": "assets/fonts/Barlow-BlackItalic.woff2",
+      "bytes": 20432,
+      "sha256": "46a22cb1337341385e30ca9933a5c2be866b26ab6d33fe457f266039e89bdeae"
+    },
+    {
+      "path": "assets/fonts/Barlow-OFL.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-OFL.txt",
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-SemiBold.ttf",
+      "bytes": 109428,
+      "sha256": "7b619d14bc2327509a9ef32b0890f709626f7ecc9ff61191c2a4314c5499d2d9"
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-SemiBold.woff2",
+      "bytes": 18872,
+      "sha256": "c9d27a55d92632e62b9927c3ee3ab0bcc7ac9e6219c19539eebf44b4256d2347"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "bytes": 4484,
+      "sha256": "ee67e6ee22790b7929f1a3769ca2801d565c64b5a9096942c1adf5596de9c9e4"
+    },
+    {
+      "path": "assets/football-stadium.png",
+      "bytes": 2600524,
+      "sha256": "7b0caeb16fb7643d8746aaf020d95dc778eaa5929562366a566fe3eb0f82b5e0"
+    },
+    {
+      "path": "assets/football-stadium.webp",
+      "bytes": 422220,
+      "sha256": "28784c62d3d106aaf2d962bbf9a7d7dc73153e0b11495e943f6a14bfdd486de0"
+    },
+    {
+      "path": "assets/football.svg",
+      "bytes": 2178,
+      "sha256": "34af73a15b4259f571e89cc930ff136bfdb03c2605a601aadd832c7fc074f7aa"
+    },
+    {
+      "path": "assets/home-brand.svg",
+      "bytes": 12515,
+      "sha256": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27"
+    },
+    {
+      "path": "assets/home-interactions.js",
+      "bytes": 2217,
+      "sha256": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9"
+    },
+    {
+      "path": "assets/home-premium.css",
+      "bytes": 11424,
+      "sha256": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4"
+    },
+    {
+      "path": "assets/icons.svg",
+      "bytes": 1248,
+      "sha256": "475400413f20d08a2e97fe085f52628122a8daaef5e02321702ae603bc3eda1a"
+    },
+    {
+      "path": "assets/illumination.css",
+      "bytes": 3743,
+      "sha256": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67"
+    },
+    {
+      "path": "assets/logos/ari.webp",
+      "bytes": 19440,
+      "sha256": "79b747f8fa68a35f1c8fae6de0a21517d3726c96b152df884b80d3053a39a79b"
+    },
+    {
+      "path": "assets/logos/atl.webp",
+      "bytes": 25108,
+      "sha256": "ba90cb0cdc8447aa5319b4d2c6b0f4c7f5ef646fb7193feffe76ec5617c605ea"
+    },
+    {
+      "path": "assets/logos/bal.png",
+      "bytes": 55985,
+      "sha256": "67796023c172c9aeab5bcdac9204823d3590097246ad1cb92971134b5f26dcc0"
+    },
+    {
+      "path": "assets/logos/bal.webp",
+      "bytes": 35664,
+      "sha256": "f537a8eb13bf7b125316dafb6b5ac86cf8b63bee2a77bfc164752ea31239d24e"
+    },
+    {
+      "path": "assets/logos/buf.png",
+      "bytes": 38004,
+      "sha256": "79b71e2f536ee29f9d23834e89828883af2d95bf6968cbd07a505444229cdd20"
+    },
+    {
+      "path": "assets/logos/buf.webp",
+      "bytes": 24520,
+      "sha256": "3097eab58c43b2fe90e79b482aae0c157d61710d4292a1d6f3d47349ee6eec07"
+    },
+    {
+      "path": "assets/logos/car.webp",
+      "bytes": 22364,
+      "sha256": "3cf30c6ce2fd22412cae3cd19805e82770ec5c85e4af1a5e98b4dc565b1337a4"
+    },
+    {
+      "path": "assets/logos/chi.webp",
+      "bytes": 55466,
+      "sha256": "2bee8a7296d6b1667f59876afa070794f2a86e1aab1faaef4418972172c8b8d3"
+    },
+    {
+      "path": "assets/logos/cin.webp",
+      "bytes": 14082,
+      "sha256": "d2f517dbc17b671271e1d4403888e9d33105dcb8df415d9d85976f7c1af65fc8"
+    },
+    {
+      "path": "assets/logos/cle.png",
+      "bytes": 94482,
+      "sha256": "9b286fc4286dc39b1b5a6a08aab042b456ba5fdce99e45e49a4d1e2672411fa2"
+    },
+    {
+      "path": "assets/logos/cle.webp",
+      "bytes": 55586,
+      "sha256": "9b93fc7d3fa6aac6b2efc5990bff72b4bb480d7a9b97765ac952e3e0674c7233"
+    },
+    {
+      "path": "assets/logos/dal.png",
+      "bytes": 32372,
+      "sha256": "f4ea9a2ec7d7d500f08db94c8c6f1b23f75361ffe39c4d4b480a684a511ce61e"
+    },
+    {
+      "path": "assets/logos/dal.webp",
+      "bytes": 14698,
+      "sha256": "0703248790f2f722433fc2974e0824988a97681c397bccb15c1fe86dc68edeae"
+    },
+    {
+      "path": "assets/logos/den.webp",
+      "bytes": 24172,
+      "sha256": "e75567e4b694ceb3274507634a168af9c05e50a61e67ee7f6f7c8238ab0096ca"
+    },
+    {
+      "path": "assets/logos/det.png",
+      "bytes": 57465,
+      "sha256": "9776b567ebab0bd3640165e915d948d8e736e35967dfc19ce62b967cfe7b4eb1"
+    },
+    {
+      "path": "assets/logos/det.webp",
+      "bytes": 29036,
+      "sha256": "f4d6a96f0326e9c6aec211058f79bf21c51c19a6d0228a3cb2b31ec4e3ca0253"
+    },
+    {
+      "path": "assets/logos/gb.png",
+      "bytes": 39188,
+      "sha256": "7ea8154cdbff5db84d248f235c1f1c78a1a8b4cb8c14335b5886ec10ee20b00e"
+    },
+    {
+      "path": "assets/logos/gb.webp",
+      "bytes": 25352,
+      "sha256": "c43e1d22e47d3072b6377d8eb4af4a66708944d611d3fd5002409fab37297531"
+    },
+    {
+      "path": "assets/logos/hou.png",
+      "bytes": 35767,
+      "sha256": "54b0fe559761860e4953851c197d995b2f9c0c4e278164edda7b608ffd64f39b"
+    },
+    {
+      "path": "assets/logos/hou.webp",
+      "bytes": 18156,
+      "sha256": "3417010ae76e5f7ab9c6f85ec2e8c82ceda9bb9b144c458e1dcdb6b339898b1b"
+    },
+    {
+      "path": "assets/logos/ind.webp",
+      "bytes": 24858,
+      "sha256": "f3cdcc3ad9410b26904fdfdd59e756dada8ef8672c382f11d0be38bdfbebd21e"
+    },
+    {
+      "path": "assets/logos/jax.webp",
+      "bytes": 46552,
+      "sha256": "b703046a9c7d18e9a372b583b97ca98f9cbbf5fadcb3751f4c94191a36081543"
+    },
+    {
+      "path": "assets/logos/kc.png",
+      "bytes": 40228,
+      "sha256": "3d77958dc6373768919bb2681cbe1b143f56c07a1f013460def665a5026a7f3d"
+    },
+    {
+      "path": "assets/logos/kc.webp",
+      "bytes": 16580,
+      "sha256": "39d900dc98323d4547cfe641a908236ae924f3a5b0db9eb803b92cda1ea5b81c"
+    },
+    {
+      "path": "assets/logos/lac.webp",
+      "bytes": 19346,
+      "sha256": "cf4f669b27852acb08208094a042df45f520fd42f127fc833675efe0e4528178"
+    },
+    {
+      "path": "assets/logos/lar.webp",
+      "bytes": 20380,
+      "sha256": "18a393aebb1d7b5a5509783429e516c6523c3b1cf0c80e6ed9f833abf9a7cb1b"
+    },
+    {
+      "path": "assets/logos/lv.webp",
+      "bytes": 46010,
+      "sha256": "e71751b7f8ff27c455d178befe68d9ce9411b5ad43c5f8a6b662936896fd006b"
+    },
+    {
+      "path": "assets/logos/mia.webp",
+      "bytes": 41346,
+      "sha256": "8630b153dde6fa6a386070c9a0a161d2c5fc2747d02a64a54b06ae43b1f30d8d"
+    },
+    {
+      "path": "assets/logos/min.png",
+      "bytes": 69686,
+      "sha256": "72759956b149bc1c9496ea6ebb9a6ae34093dfed371cc6abb425c13f14f53448"
+    },
+    {
+      "path": "assets/logos/min.webp",
+      "bytes": 37628,
+      "sha256": "58baaffd3fcc534aeadf43bd2a7db383f12ca290cd382f3c84587815ac6b452f"
+    },
+    {
+      "path": "assets/logos/nba.png",
+      "bytes": 19058,
+      "sha256": "04b2b9dd2a0bda5310227001f9b48af3bb30ad9919d891a39ac723283e1ffbda"
+    },
+    {
+      "path": "assets/logos/nba.webp",
+      "bytes": 9206,
+      "sha256": "2d8a5823dc42e02277d669b6d63ec424a831466970d6c620255703219429e1cc"
+    },
+    {
+      "path": "assets/logos/ne.png",
+      "bytes": 32083,
+      "sha256": "dac19aa9a573dcf9075e2422bee3e35a4955b9ab494bb3191ab3bacfd3609729"
+    },
+    {
+      "path": "assets/logos/ne.webp",
+      "bytes": 17830,
+      "sha256": "6edc18a01cdc8c1013bfb36e87a37991ce9301cffc6f5b8963bd722abaed24b1"
+    },
+    {
+      "path": "assets/logos/nfl.png",
+      "bytes": 18178,
+      "sha256": "0636d39ee7a9b88eda419d786eb1c4dcf20a5e431968391afb04eb917b5bb6b9"
+    },
+    {
+      "path": "assets/logos/nfl.webp",
+      "bytes": 6794,
+      "sha256": "21e3f7fc6db9e0b23cfa1dfecf939d01aedaf7da2bc97476131051a52a658ec7"
+    },
+    {
+      "path": "assets/logos/no.webp",
+      "bytes": 21832,
+      "sha256": "9326b44ab514b1f159b7df13745fac6c09fea6ec1d2f776637396906cab295f4"
+    },
+    {
+      "path": "assets/logos/nrl.png",
+      "bytes": 34494,
+      "sha256": "dfcad2ae22ea86f62708bee210601ffc3dc08069a8830e3ce6ebdc9d19faf154"
+    },
+    {
+      "path": "assets/logos/nrl.webp",
+      "bytes": 17422,
+      "sha256": "e89e98da04928f6d29a56aa68e23449078e9f7d2d5eb626a10bcf8e1be56f10c"
+    },
+    {
+      "path": "assets/logos/nyg.webp",
+      "bytes": 2142,
+      "sha256": "14d3bda4488317e2de0d4cc5c02c2cde1ca8be6c89eaae94212bfed3ea7041d4"
+    },
+    {
+      "path": "assets/logos/nyj.webp",
+      "bytes": 6010,
+      "sha256": "19f52c30500b3a226ec8c30cf6b5146afb9931123e6b7d44a36fc62bef4a565b"
+    },
+    {
+      "path": "assets/logos/phi.png",
+      "bytes": 70332,
+      "sha256": "2875f50f8b756ed5ea3866105b4683f5c603aa542e2c7f7870287e1d3d006100"
+    },
+    {
+      "path": "assets/logos/phi.webp",
+      "bytes": 37856,
+      "sha256": "c5702e5b6d5d78bc48fad24e8e8964dc03a25a10dd3837bf08bffbd329d06e5e"
+    },
+    {
+      "path": "assets/logos/pit.png",
+      "bytes": 56620,
+      "sha256": "806bcb72e75ed184a99bea34df458e6cd87145fc9a863945f3356b01122aeb6f"
+    },
+    {
+      "path": "assets/logos/pit.webp",
+      "bytes": 28692,
+      "sha256": "281b2ee0360596c803488966c04aba2e96d59eb3587c9271f7105996b433ac20"
+    },
+    {
+      "path": "assets/logos/sea.png",
+      "bytes": 32081,
+      "sha256": "2546b1d4fe5cf6c2d75cda53d3fb56bbc4dd43c6b00200586dab5a85df8fa492"
+    },
+    {
+      "path": "assets/logos/sea.webp",
+      "bytes": 17618,
+      "sha256": "df6b7dd55237ff34d3864779462f40f0646bd524d8e6659dcf04362efb8500f1"
+    },
+    {
+      "path": "assets/logos/sf.png",
+      "bytes": 48699,
+      "sha256": "82ae812f6c15718ce5abdd402863e8b4553fa9971e4baa5d45ff585c52948a45"
+    },
+    {
+      "path": "assets/logos/sf.webp",
+      "bytes": 24384,
+      "sha256": "fdfb2db1ef220b2aa6425bcde749cc8a634ba858194cadba87bda3d1f1ff7539"
+    },
+    {
+      "path": "assets/logos/tb.webp",
+      "bytes": 54728,
+      "sha256": "88da0890dcc453bb48131d08a8c163d8e08012df9ab73c394673c823ebdfc63c"
+    },
+    {
+      "path": "assets/logos/ten.webp",
+      "bytes": 27226,
+      "sha256": "85fc88ab26a189bdf9f64210fc8aedc0ef024d8bce635f93c85dbff020ab2d0a"
+    },
+    {
+      "path": "assets/logos/ufc.svg",
+      "bytes": 2525,
+      "sha256": "3b56effab3c6f94b2c32fd7e347395615e0ecc29a468a82f8a556a3991ed486d"
+    },
+    {
+      "path": "assets/logos/wsh.webp",
+      "bytes": 15816,
+      "sha256": "66c1d93e8a7641a43869e41bcf3284e8f2ae3ad19b6d61507d7bd25a91584898"
+    },
+    {
+      "path": "assets/motion.css",
+      "bytes": 5120,
+      "sha256": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b"
+    },
+    {
+      "path": "assets/motion.js",
+      "bytes": 4546,
+      "sha256": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86"
+    },
+    {
+      "path": "assets/player-assets.json",
+      "bytes": 47625,
+      "sha256": "81c0d018c431fc850a9b2db2f0d59979b8a2911bc298ffff66bc0d1b0311176c"
+    },
+    {
+      "path": "assets/player-research.css",
+      "bytes": 7136,
+      "sha256": "bd3240e0ac4453785ed8ffe91bfe8a23ee2ab4d3f7dd731f1de845c606e2b01c"
+    },
+    {
+      "path": "assets/player-research.js",
+      "bytes": 13971,
+      "sha256": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae"
+    },
+    {
+      "path": "assets/players/13977.webp",
+      "bytes": 35520,
+      "sha256": "4e6327a455340d3c8de2491a1ae4b3680c7f2a4a35282b2717b30b73aeb9e975"
+    },
+    {
+      "path": "assets/players/17372.webp",
+      "bytes": 36140,
+      "sha256": "a3337fda2de2baa7a4c880b0339392bc6470e1c1a2fc70b1b9bc90d07a38d3c0"
+    },
+    {
+      "path": "assets/players/2969961.webp",
+      "bytes": 44464,
+      "sha256": "1cc81c443fdc889b41fa6908e49444b6b778e9538622d75751128b7ddf800b8c"
+    },
+    {
+      "path": "assets/players/2975674.webp",
+      "bytes": 41432,
+      "sha256": "fb1927d6ae00f9f103696df429e0bcd907dbfabfd9b96c0bb6fc7df012a3e350"
+    },
+    {
+      "path": "assets/players/2978524.webp",
+      "bytes": 30804,
+      "sha256": "7d09df6269799b8be480e4336016be4f9a60bc4f1a112caf93a54389d950e909"
+    },
+    {
+      "path": "assets/players/3045282.webp",
+      "bytes": 28966,
+      "sha256": "d24fabc208cc80c8b8a297c0c8f3833b013b0412387da711b5774e4ad3bcae63"
+    },
+    {
+      "path": "assets/players/3045373.webp",
+      "bytes": 37664,
+      "sha256": "9458a1de55376f8940e32e956516c820adecdcada14249516df3983a692250ac"
+    },
+    {
+      "path": "assets/players/3047495.webp",
+      "bytes": 40872,
+      "sha256": "ccd319c719df1f1ef2b73e962af8a27c27f4c8749f20d9b7082ecf526f94a95b"
+    },
+    {
+      "path": "assets/players/3051397.webp",
+      "bytes": 28644,
+      "sha256": "ff8b883ef8ffc97051c88c2afaa6416883cef46efaa47098695c56d307d2f17b"
+    },
+    {
+      "path": "assets/players/3116407.webp",
+      "bytes": 27670,
+      "sha256": "9e1372b272d337d326ecb37148db704ad3f7f1341847f30c5fd6a454efb25347"
+    },
+    {
+      "path": "assets/players/3116689.webp",
+      "bytes": 35442,
+      "sha256": "632ff25857bfe7e61bfe752caa3c76e1f6164936aafe133ae79e06c21d6398fb"
+    },
+    {
+      "path": "assets/players/3873935.webp",
+      "bytes": 29110,
+      "sha256": "8674a9daa78b0b8105ad9ff03f041d8460d4bcc3c097064ffc9fe72816e04cad"
+    },
+    {
+      "path": "assets/players/3929846.webp",
+      "bytes": 29558,
+      "sha256": "d6b4aef9847ab33e1409a22a8c42c2c4c55f3f596e17020608d77ad195e88c18"
+    },
+    {
+      "path": "assets/players/3932668.webp",
+      "bytes": 29264,
+      "sha256": "7df831f0b158238092a9d6bdba7f12f7a23f33bce78c8d37ce33fd8ee53e1354"
+    },
+    {
+      "path": "assets/players/4035198.webp",
+      "bytes": 24690,
+      "sha256": "d28842f77ce9a7b6d8f8838f76ed18ad15d161a406681ff05250d9ed72b7d0c4"
+    },
+    {
+      "path": "assets/players/4035253.webp",
+      "bytes": 28558,
+      "sha256": "22cf245aeed97e0ce49fd8b4cfbd62f6f3196e0503cb603dbf7f0a8adbe9978c"
+    },
+    {
+      "path": "assets/players/4035656.webp",
+      "bytes": 47502,
+      "sha256": "306c383450a222818f4259fc744475ba67d78c296a3fff48b5e5de6b2d56a5d4"
+    },
+    {
+      "path": "assets/players/4035687.webp",
+      "bytes": 30214,
+      "sha256": "ec747a4e578abad841d566184a6ff52425a8fe764c03acc8d1fb393eb9e6b1ee"
+    },
+    {
+      "path": "assets/players/4037333.webp",
+      "bytes": 33146,
+      "sha256": "6e4c4d9dcacb68a475d8179a17f792adf5d7ffc589b2be072af0ff9b7342732f"
+    },
+    {
+      "path": "assets/players/4037457.webp",
+      "bytes": 28338,
+      "sha256": "5733540fe780c61ec3454b41a96897de50c6354a850b8a1166211a1046013e57"
+    },
+    {
+      "path": "assets/players/4038815.webp",
+      "bytes": 33884,
+      "sha256": "a8c849ad5f353210647384d4c030d10f9863c99f6d765f46150dd245b2d74ccd"
+    },
+    {
+      "path": "assets/players/4047650.webp",
+      "bytes": 36276,
+      "sha256": "defd292cccdbcddac1442049eb10e26f07faea21bb55501832fa78f3d7c1c6b2"
+    },
+    {
+      "path": "assets/players/4240577.webp",
+      "bytes": 35910,
+      "sha256": "d4cf5b5fba1bd02d88d4e5f3dae061578491b06bc61bff498273309ef3ea8921"
+    },
+    {
+      "path": "assets/players/4240759.webp",
+      "bytes": 32318,
+      "sha256": "fcb254b51a0ab34d57dcd789e06701cdef40b62ae5c1bd4595dede755084f2fd"
+    },
+    {
+      "path": "assets/players/4241087.webp",
+      "bytes": 33556,
+      "sha256": "198038d469833f92416dbf6d39a7598d61358a846fdbbbe9961f2c1a0bda8df5"
+    },
+    {
+      "path": "assets/players/4242207.webp",
+      "bytes": 42318,
+      "sha256": "68da5ccc987c162a1bcfa68ef4350c1440c4f2560af3126c59128d1bb2e41703"
+    },
+    {
+      "path": "assets/players/4242540.webp",
+      "bytes": 38204,
+      "sha256": "f49647b8f041e8914b3cb370b6307ce01e2bf3156976c63227e3d93d1593d5fd"
+    },
+    {
+      "path": "assets/players/4361411.webp",
+      "bytes": 30746,
+      "sha256": "63a2655451a0af860eb0922bdc219f627fac6e2511e95865442970313972066b"
+    },
+    {
+      "path": "assets/players/4361652.webp",
+      "bytes": 36162,
+      "sha256": "653a34dfc2ab69ff36658ffa051af43989078b191c689c8fc2d9e77b0d37643c"
+    },
+    {
+      "path": "assets/players/4362858.webp",
+      "bytes": 34546,
+      "sha256": "354a7b946c8bd66ff19504b7fb5cafee59f4266604cac2c7fec5127da042f705"
+    },
+    {
+      "path": "assets/players/4363034.webp",
+      "bytes": 30280,
+      "sha256": "cf0a9489754dd2dc9b0e29fc5125bbdd798629ccc3c454e531ccea8f62c7538b"
+    },
+    {
+      "path": "assets/players/4368304.webp",
+      "bytes": 31474,
+      "sha256": "520052a853d09fdea76b762bb37b7c02241a641051cb5fc5b76edcbb66a85d4e"
+    },
+    {
+      "path": "assets/players/4372056.webp",
+      "bytes": 38652,
+      "sha256": "e44c454f7dacae24a04aec822406dc34ae02d7b95ab8908d25c9f29729813882"
+    },
+    {
+      "path": "assets/players/4372098.webp",
+      "bytes": 27886,
+      "sha256": "51d4c6011c89417c8c842ac983594a6c7c8ecdd9206d3add20e796c762675d91"
+    },
+    {
+      "path": "assets/players/4373830.webp",
+      "bytes": 29226,
+      "sha256": "be8815b71ce846313d8379deddeafd7655e5f8a546b7418a410ff7ffede04a6f"
+    },
+    {
+      "path": "assets/players/4426368.webp",
+      "bytes": 29384,
+      "sha256": "fd890bacd48e029da474c7b894fed98833fffa2d2684d7cead0e654f8ac55151"
+    },
+    {
+      "path": "assets/players/4426506.webp",
+      "bytes": 32956,
+      "sha256": "b5c5c620f6c377a9dec713413b12beabb755fb7a26d8f9d012a0c43483c52f99"
+    },
+    {
+      "path": "assets/players/4426694.webp",
+      "bytes": 44164,
+      "sha256": "95b013fabca789dad58e4c68b251a84c959c704c13f8d3c0edb175fddae9ba19"
+    },
+    {
+      "path": "assets/players/4426882.webp",
+      "bytes": 38526,
+      "sha256": "7684bb2ad90221e7685dcf0b27fff8267d46307c91adeb23031edd5ae6c8e9ef"
+    },
+    {
+      "path": "assets/players/4427170.webp",
+      "bytes": 32980,
+      "sha256": "c11698fc787545f8b29f6c0f45777115c70ec046060620ecb3f1abcf038b2b60"
+    },
+    {
+      "path": "assets/players/4428119.webp",
+      "bytes": 30328,
+      "sha256": "ee678c304974fbdd10a951ad5a646ea66a197fc89742af5025d57819986e262d"
+    },
+    {
+      "path": "assets/players/4428909.webp",
+      "bytes": 41850,
+      "sha256": "8564a10e0ff7d70d459693cb13b30ba52759f4825799d3e4f343ab60922a3fa2"
+    },
+    {
+      "path": "assets/players/4429164.webp",
+      "bytes": 26480,
+      "sha256": "6e4f8f64ea3ba544beb9e3d72c8a5014bdeb7def4b44541fb547e2e01191ed18"
+    },
+    {
+      "path": "assets/players/4429490.webp",
+      "bytes": 33488,
+      "sha256": "c4520d836d76d2e569d734db99fdf4f7f9a3e051b6c816c5eec3802923b2d7a1"
+    },
+    {
+      "path": "assets/players/4429743.webp",
+      "bytes": 40656,
+      "sha256": "52adaa950f5cf7f855b690c5f0e23794b30e26be3ca79d81ec33591cf4d00071"
+    },
+    {
+      "path": "assets/players/4429775.webp",
+      "bytes": 35948,
+      "sha256": "58037d8e8a3cb6bff55c4cfc712aef7a226f5ffad0acfdfef077843550b11f15"
+    },
+    {
+      "path": "assets/players/4429955.webp",
+      "bytes": 30844,
+      "sha256": "a6994b968103b22d97be2ce34f1476bd9367f4f78b3e07da4498ab9e6bf57855"
+    },
+    {
+      "path": "assets/players/4430802.webp",
+      "bytes": 40034,
+      "sha256": "722ed28cc52e5578b589d5a72abaeb0f95aedc585a30d6819a019dd33e917dee"
+    },
+    {
+      "path": "assets/players/4430947.webp",
+      "bytes": 36718,
+      "sha256": "c9f2254a26b7c63358420f00ba32d12a867bf7170b9826719ef7c567f1491de3"
+    },
+    {
+      "path": "assets/players/4431258.webp",
+      "bytes": 53820,
+      "sha256": "0a157ae7732f06ab53d1d6a9d5886bcf4d224c530df68143db5c9b0c5a637f9a"
+    },
+    {
+      "path": "assets/players/4431424.webp",
+      "bytes": 43708,
+      "sha256": "ee712df53f5d708c0569aef6cb0874e87abff64bf9fad8ed5a5cfabc539d0f8c"
+    },
+    {
+      "path": "assets/players/4431492.webp",
+      "bytes": 29158,
+      "sha256": "756f17865397ceba141f6e14d1371883dd670f389b367fa23d3be29eb3c0898b"
+    },
+    {
+      "path": "assets/players/4431590.webp",
+      "bytes": 30202,
+      "sha256": "bef2ae24878e73b89cd997ee05e008957321522964c2f296fdacc2c3f32e81e0"
+    },
+    {
+      "path": "assets/players/4566198.webp",
+      "bytes": 28980,
+      "sha256": "930171dd2b00c2b150e45c7bd8a078abcb967aaf4eb20975b3d0fac526acab3a"
+    },
+    {
+      "path": "assets/players/4567979.webp",
+      "bytes": 27188,
+      "sha256": "4bf7e10cdbd64ad5a78cae30c9d5c33650025e75d7726162ebd86ff3f415f6e7"
+    },
+    {
+      "path": "assets/players/4569474.webp",
+      "bytes": 29258,
+      "sha256": "245bd9140bcd61c641bce4514e415c93c7419c5dd723a219ef03a78b628e5e7a"
+    },
+    {
+      "path": "assets/players/4569987.webp",
+      "bytes": 40996,
+      "sha256": "710bdfbef42bca127a6ea0918969cce3047d8a5dea6af1627575b60f231194d4"
+    },
+    {
+      "path": "assets/players/4570044.webp",
+      "bytes": 32636,
+      "sha256": "2cd2d9f172022aa597448c240c23afce9b46623b37f7dc92a8709cf2fa42e72e"
+    },
+    {
+      "path": "assets/players/4570898.webp",
+      "bytes": 36218,
+      "sha256": "bc3d673ab50fecfb793dcb959f9fc40396bfbfa77c3957420c0c290a2ad1af81"
+    },
+    {
+      "path": "assets/players/4573443.webp",
+      "bytes": 31124,
+      "sha256": "cb96bdcf4f253ae71bfcf370a5bdb7092ed9b89ee77d4ff6d419ad553ea59e67"
+    },
+    {
+      "path": "assets/players/4608004.webp",
+      "bytes": 37088,
+      "sha256": "fd83bd202ee5d672173b0940c81095e140e1b2a17dc863c51d560033e7f42d64"
+    },
+    {
+      "path": "assets/players/4682980.webp",
+      "bytes": 36882,
+      "sha256": "fd5e590cc3cbb9a6057429d665e8c62c696257b2aea6be4f953522959232ddb8"
+    },
+    {
+      "path": "assets/players/4685261.webp",
+      "bytes": 35384,
+      "sha256": "849ff76e353c1275a2c4580497af7fcacdebddfd038623164b3cfcd83df535ce"
+    },
+    {
+      "path": "assets/players/4685327.webp",
+      "bytes": 31522,
+      "sha256": "00323e5fea6f4d6f56c94898e86c237eb020b0dfd92d7f88f19381a112fff9e4"
+    },
+    {
+      "path": "assets/players/4692628.webp",
+      "bytes": 31910,
+      "sha256": "449e99af5a3cba645d1404f3a86f7671e903589c07a57f3e8150d024c9c63155"
+    },
+    {
+      "path": "assets/players/4693370.webp",
+      "bytes": 36080,
+      "sha256": "8219d246f5444c80dda45e691201a9e6ecc7b0fd43abca37e9f16f94ee40590a"
+    },
+    {
+      "path": "assets/players/4694237.webp",
+      "bytes": 30674,
+      "sha256": "2c92e8c6fb98ef9d23c52416cb258a0902a46b89efb03a1407dd6959be89f316"
+    },
+    {
+      "path": "assets/players/4714771.webp",
+      "bytes": 35414,
+      "sha256": "552447402dc23cb7709a78e4714efc2f0c62dc0e6d18fc44f464f5c8f8a74111"
+    },
+    {
+      "path": "assets/players/4820584.webp",
+      "bytes": 30602,
+      "sha256": "23273f8a94d21444fe67a9421d36e09159547539b521fd2fd6f7a0d1125593a8"
+    },
+    {
+      "path": "assets/players/4917486.webp",
+      "bytes": 42782,
+      "sha256": "713fc12f63a81a922efbe4c36e2969960a3308433ec1371a2b1d9aa0bba04646"
+    },
+    {
+      "path": "assets/players/5081338.webp",
+      "bytes": 28220,
+      "sha256": "4108c5bcd204e53e00f59c406ddbc03e59fc801c4646a04bb383dc3b2deaad37"
+    },
+    {
+      "path": "assets/players/5081508.webp",
+      "bytes": 28100,
+      "sha256": "6f17e058c155d004c3bd042a76273de41bad2173250c5f9c6d70bb0252441362"
+    },
+    {
+      "path": "assets/players/5084849.webp",
+      "bytes": 40720,
+      "sha256": "d1db2e1819bf69514cd4650eff811b91d15e10d73f7fdc5c55ff92a483be94c8"
+    },
+    {
+      "path": "assets/players/5150136.webp",
+      "bytes": 39290,
+      "sha256": "dd320e3470ae50ea106e73bf49ff0b6e0d0bf6af2edb29432ff532f6b8c0c7d7"
+    },
+    {
+      "path": "assets/players/5192448.webp",
+      "bytes": 28650,
+      "sha256": "de399312c4f8edc0a4b20b03217decf78a141f525f59bede0350d59252a9980a"
+    },
+    {
+      "path": "assets/players/8439.webp",
+      "bytes": 24100,
+      "sha256": "a1e1315d1a256800239e7bc39787e42b9a327f9fd1821992f7f949cf43a08cac"
+    },
+    {
+      "path": "assets/players/aaron-rodgers.png",
+      "bytes": 234508,
+      "sha256": "be7d6b5176f2d85efa619d292b8cdd243baace74b933bb4c285744846a03cac6"
+    },
+    {
+      "path": "assets/players/dk-metcalf.png",
+      "bytes": 276856,
+      "sha256": "1528b6e951a8f0b4cbe2308984c4d0c32a14ace8cb9bec0c331a68b54f111771"
+    },
+    {
+      "path": "assets/players/jaylen-warren.png",
+      "bytes": 317075,
+      "sha256": "286bb0df586c2cb5aaf44864cb1fee3c5ff717cc1269ef438fee69e58c724293"
+    },
+    {
+      "path": "assets/players/pat-freiermuth.png",
+      "bytes": 256574,
+      "sha256": "a2bb32dd9c9bdf81e53e2739bfcf7985846c99f56562a4fa148170784e134584"
+    },
+    {
+      "path": "assets/players/roman-wilson.png",
+      "bytes": 258524,
+      "sha256": "721c41bc8664cc30c4d12d4551e5efd3532e433f77a4f1b3469f6336318be158"
+    },
+    {
+      "path": "assets/premium.css",
+      "bytes": 18831,
+      "sha256": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b"
+    },
+    {
+      "path": "assets/refinements.css",
+      "bytes": 19931,
+      "sha256": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc"
+    },
+    {
+      "path": "assets/roster-energy.svg",
+      "bytes": 1199,
+      "sha256": "052da76428da1e15f4887f43620b531fb500245239c0b322ad33fdd149bc17f8"
+    },
+    {
+      "path": "assets/sources.json",
+      "bytes": 95991,
+      "sha256": "36b6eaab34430e217a33e9ac22117ae260b15cb133540302d0a5c363ab00bec0"
+    },
+    {
+      "path": "assets/stadium.jpg",
+      "bytes": 150696,
+      "sha256": "d05edf81f840c10a4cd5db42002bc52c5fce195b496127acd1405a682f5417ff"
+    },
+    {
+      "path": "assets/styles.css",
+      "bytes": 31715,
+      "sha256": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 20671,
+      "sha256": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1739,
+      "sha256": "fe87de1aaec55bb5f8574ac6f8ad6cb0a4d42f03e9b5483263a87b4b79030b36"
+    },
+    {
+      "path": "package.json",
+      "bytes": 794,
+      "sha256": "43df8909209e53974e8bac8d09838492e458803d673dce5c6c41645bb53d0e67"
+    },
+    {
+      "path": "qa/DATA_REVIEW.md",
+      "bytes": 6633,
+      "sha256": "9da0ba116ac7268df02c5549d9e6f185f5d274657f4a438e5069d0be18f21595"
+    },
+    {
+      "path": "qa/DEPLOYMENT_REVIEW.md",
+      "bytes": 5307,
+      "sha256": "a309ad3a4e86ec4b39b90dabc9935b19a9387425ecfc4e3ede134a6af1c68035"
+    },
+    {
+      "path": "qa/PERFORMANCE_REVIEW.md",
+      "bytes": 7739,
+      "sha256": "4a77c9f2ccfe0af6b1c9edd7b5121935041dfeaf4c425f3cfc6a101cbc1d0e7f"
+    },
+    {
+      "path": "qa/PR_REVIEW.md",
+      "bytes": 3694,
+      "sha256": "b56c662fef0bab8bc27fe5d8d36e12a2d9a5c0d5634b53a3b6e494002438a456"
+    },
+    {
+      "path": "qa/PUBLICATION_STATUS.md",
+      "bytes": 3056,
+      "sha256": "b39595f2b33fe6b7ecf897a3149cbb1e10399f93c30a1ecb114701052a287c9c"
+    },
+    {
+      "path": "qa/README.md",
+      "bytes": 6531,
+      "sha256": "ca233210478c0ccacd159788abb56615424cdc995f584eddc3fdc5678dcff22e"
+    },
+    {
+      "path": "qa/REFERENCE_COMPARISON.md",
+      "bytes": 4366,
+      "sha256": "96c2115e6a821a7ea61dd457547ea437f9657c34aa909a5835d2468419a4f534"
+    },
+    {
+      "path": "qa/SAFARI_REVIEW.md",
+      "bytes": 4906,
+      "sha256": "ac194423da2f7699a8d6d1311a59b11a1388fa583f0be6d8024f2af2ccacdc22"
+    },
+    {
+      "path": "qa/VISUAL_REVIEW.md",
+      "bytes": 5236,
+      "sha256": "c2a5f6c4660cbd1a82adf91ccde9353131516f6d30bd07336eda32ec815cbe23"
+    },
+    {
+      "path": "qa/auto-integration.cjs",
+      "bytes": 12711,
+      "sha256": "438d3c11cfdb29cf3668e0d911632c434fe33fee91f594cfd6b9daf779668fe4"
+    },
+    {
+      "path": "qa/before/home-393.png",
+      "bytes": 264940,
+      "sha256": "b344727d2a791bb4a9312a29d15276ca04c452e6684863f2b72dd7786fa455ae"
+    },
+    {
+      "path": "qa/before/home-430.png",
+      "bytes": 293230,
+      "sha256": "6ba4486a7a07109c8207fd105095c4dfc4a9a109deda99a4f74ad681a22533ca"
+    },
+    {
+      "path": "qa/before/nfl-393.png",
+      "bytes": 177019,
+      "sha256": "62c0b1494ab2ac476c6a2f65d0203c038b2578906bdf9b5d435044cc15e3136c"
+    },
+    {
+      "path": "qa/before/nfl-430.png",
+      "bytes": 181929,
+      "sha256": "d81c076aabb1a2982c29f3fd6c6cea478c9635d901fa138470c4bebfefd26885"
+    },
+    {
+      "path": "qa/before/results.json",
+      "bytes": 2636,
+      "sha256": "00b54b67db6d7da97a1b52b8786de1d5fdc53d8b32793ccd1f4f5f530921ab6c"
+    },
+    {
+      "path": "qa/before/steelers-393.png",
+      "bytes": 265211,
+      "sha256": "930c522a1bd87351d5e3b695c0078f67029a4fc71c989f5da7a3dc0566edd07e"
+    },
+    {
+      "path": "qa/before/steelers-430.png",
+      "bytes": 299195,
+      "sha256": "3a238c4ce39358c78c6cd1a2bfc68c508280a0e530cd5e071e32c4fbbfb42238"
+    },
+    {
+      "path": "qa/comparisons/contact.html",
+      "bytes": 1440,
+      "sha256": "8c26eb11e462a33b084954f8c33293c8710ae10dba9be2051e8a8028b5588558"
+    },
+    {
+      "path": "qa/comparisons/home-393.jpg",
+      "bytes": 262177,
+      "sha256": "ac8a9ddc9f9dee589d2d25b7d5b2960e8785afd70d6b1af76462a49ea0a1a62f"
+    },
+    {
+      "path": "qa/comparisons/home-430.jpg",
+      "bytes": 287374,
+      "sha256": "aafba46d00cc6a569e43a84be62c95de662ac8bd538baa4917cdd2da58e5f489"
+    },
+    {
+      "path": "qa/comparisons/index.html",
+      "bytes": 5795,
+      "sha256": "385582bbe98113e01470445a1deb78b6647c3705072fb1b2da29123e76c1cab2"
+    },
+    {
+      "path": "qa/comparisons/nfl-393.jpg",
+      "bytes": 231564,
+      "sha256": "5a45c43f9a5f99c572fe2ec626200c08198c718be54306d34769ec1575f3dbd0"
+    },
+    {
+      "path": "qa/comparisons/nfl-430.jpg",
+      "bytes": 244424,
+      "sha256": "6daeb1250f07ffe3b02159c5f6f543aa8a7bd8dbe343b15209429040d9c51ccd"
+    },
+    {
+      "path": "qa/comparisons/steelers-393.jpg",
+      "bytes": 251812,
+      "sha256": "82dd9056d643ad01d8779bd60bc2f26fd14e7f893b76388e30924649e327c546"
+    },
+    {
+      "path": "qa/comparisons/steelers-430.jpg",
+      "bytes": 272657,
+      "sha256": "4ca4682b3fb9d7116e5692ab59bcb5efba5c4026707b316f609c625a8af7834f"
+    },
+    {
+      "path": "qa/contact-sheet.jpg",
+      "bytes": 661599,
+      "sha256": "669ee57c35708145e0062d9717cf8d7b5523905b9968ce1cab584f72e9f01fe9"
+    },
+    {
+      "path": "qa/data-updates.test.cjs",
+      "bytes": 9875,
+      "sha256": "489fc0752472ec545ec9efc852d382d8fcd420ad107e67abb563d3d20876c4da"
+    },
+    {
+      "path": "qa/data.test.py",
+      "bytes": 31921,
+      "sha256": "af436ed1c278a1a1e7617cffb6b32ed8d8da3e68ff6a9dbd34f9f1156d20583c"
+    },
+    {
+      "path": "qa/home-1440.png",
+      "bytes": 2912057,
+      "sha256": "b90cbed4f7fa20d1e61595063a4ab8ec0333c07001af5bfc935db93a635a85bd"
+    },
+    {
+      "path": "qa/home-320.png",
+      "bytes": 701314,
+      "sha256": "6c98c457b5c47e59ce2aa041ada70b518eaa56d5de2d8192f9c946691afb53ef"
+    },
+    {
+      "path": "qa/home-393.png",
+      "bytes": 1177540,
+      "sha256": "3e5477b2278b5fc7621895daeb8ba8ae3104ff70be927c4e0ed0ad74a87776fb"
+    },
+    {
+      "path": "qa/home-430.png",
+      "bytes": 1340326,
+      "sha256": "bfedc4b11bc3a24167689d63584d81ff2ec18d0af0c7e87044ce4be921a5fd15"
+    },
+    {
+      "path": "qa/home-768.png",
+      "bytes": 2107575,
+      "sha256": "81721e87bbfdba754673beb6bb75841b8342d576d87af2770ec1625f60e11093"
+    },
+    {
+      "path": "qa/hosted-firefox.cjs",
+      "bytes": 13345,
+      "sha256": "b3fcc0bb8cc7265d82d1002ca4eb52ea9eaadcea651e60ab355685d541a82e91"
+    },
+    {
+      "path": "qa/hosted-http-audit.py",
+      "bytes": 12485,
+      "sha256": "f713d4f9c1170c01bd61e4e804e32d9519c6fa89dbdfc4321d156f353fd5a741"
+    },
+    {
+      "path": "qa/hosted-refresh-smoke.cjs",
+      "bytes": 12071,
+      "sha256": "f926cc570d2df63d2381dc39d3a4b701ef66234aa31937dea5417658240a803d"
+    },
+    {
+      "path": "qa/hosted-webkit.cjs",
+      "bytes": 6599,
+      "sha256": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+    },
+    {
+      "path": "qa/hosted.cjs",
+      "bytes": 1852,
+      "sha256": "40434beeccbefc9adaeec38c051a461633d45bc6113c2381a187328e9de2d497"
+    },
+    {
+      "path": "qa/hosted/README.md",
+      "bytes": 3401,
+      "sha256": "eec670edfea4f4a6ff1603a731095cd44557d75c05cfcad19c11895c025bea4c"
+    },
+    {
+      "path": "qa/hosted/contact-sheet-manifest.json",
+      "bytes": 1401,
+      "sha256": "220802f66ffdbb32a4cfd776d4666c534f5f4e3ebdf9c2cec7651626b9b8b034"
+    },
+    {
+      "path": "qa/hosted/contact-sheet.html",
+      "bytes": 2049,
+      "sha256": "3afc3406dffcb76f2ac30e764fde05fec7fd1105029f3ff0ad673b04aa31e05c"
+    },
+    {
+      "path": "qa/hosted/contact-sheet.jpg",
+      "bytes": 621385,
+      "sha256": "bd8bc87d1d11926c9785eae11ff95ffddf68440ec80b80f288639ed96d9d150f"
+    },
+    {
+      "path": "qa/hosted/failure.json",
+      "bytes": 1746,
+      "sha256": "cb3ae309aadb65703e2cbb0570925921d5d6504126b89f2583b3dafc097d0684"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/engine-and-tls.json",
+      "bytes": 901,
+      "sha256": "f4b3161d2beb6d536a341950bd441688e8e49a26d50363564089eecbde6f3f6c"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/failure-393.png",
+      "bytes": 1133705,
+      "sha256": "a5f20d35c939fb5a035f8e69ebb3755345ef65baa64b10bf8dfddd3be05aea54"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/home-393.png",
+      "bytes": 1150914,
+      "sha256": "d0ca6ec098e693bec60b4fec4b2cbeab4ce09f892378cf5232da571cb23eb7ef"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/home-430.png",
+      "bytes": 1310426,
+      "sha256": "68eb1d551e3748fbcb36acaca7605f74d61c4766cf898157270bf7c70db2efd8"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-393.png",
+      "bytes": 477258,
+      "sha256": "e964723fdc8812dcfab43048f88c91d81ed0b7363742bdfdf0854ff77b1b5dfa"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-430.png",
+      "bytes": 512888,
+      "sha256": "7890349a98b1687b6c430265dd2cadf04c5e6dabae2f62790d781fc7132b0731"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-players-393.png",
+      "bytes": 433639,
+      "sha256": "4dd213f6e11292643dbcd58935da3b98dab7e9bbca236b6d649fe3f4ad3759f4"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-players-430.png",
+      "bytes": 452793,
+      "sha256": "f6ca45d8e53cdde0ec29bd2b240173da1f4d953aded3c72893767cb5b6301185"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-recap-393.png",
+      "bytes": 286416,
+      "sha256": "f6fd32b84d326bb5af63b1360508070b941fde821bd8a58c45b0cad765fb43c4"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/nfl-recap-430.png",
+      "bytes": 306722,
+      "sha256": "bbd1aa9d74fc32a7c62d74b7d6fe8de8745576a94672056365f9a16ef3d6a5e2"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/results.json",
+      "bytes": 229303,
+      "sha256": "bb09ddab74a1f0567d9e3b2b851830f9d5fc4382f4ddad22a9229ae37ee47c54"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/sources-393.png",
+      "bytes": 318284,
+      "sha256": "d54b04d64ed1a1ed04b0bd207ad2050158e1020b491a8298bb0828c96cf8563a"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/sources-430.png",
+      "bytes": 385348,
+      "sha256": "e8b06d8bfb1ff484bf4ce5b678919d776744be98aafcab435724e1ab24d4f442"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-393.png",
+      "bytes": 770362,
+      "sha256": "54a4c88b617bc490d5d0dc41ac04069885036debbb3642fa53a53a4a911d2bf6"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-430.png",
+      "bytes": 830436,
+      "sha256": "e70bdd42901289ebc1d6d0b247d2ef1524d52cca5a7bd595fca7ddc9e36ecc5f"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-full-bottom-393.png",
+      "bytes": 806645,
+      "sha256": "7ede77defec4e42dd6252118774a7ad85b298cdd4a77e314821e6f6570f5fbfa"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-full-bottom-430.png",
+      "bytes": 865263,
+      "sha256": "046e34b13348032f65543fd002f9e794d9ae86ce7dc0a89a9e5eb3b4c01c07a0"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-game-statistics-393.png",
+      "bytes": 301531,
+      "sha256": "fa3780c6717b4d0ed1863eae8181c11f5ee97bc02ada5befe1c15b3e6fa78f73"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-game-statistics-430.png",
+      "bytes": 317959,
+      "sha256": "9a4582df98a2e2eaede70983f76d53fd8c8c1155bcf7fd0e44348df159138808"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-matchups-393.png",
+      "bytes": 380607,
+      "sha256": "fb84d904802d19d3b9c86cfe53653e5e38cc89dfabd360894d0ed3aa8a086c4d"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-matchups-430.png",
+      "bytes": 397321,
+      "sha256": "5d4e3425754d18d391e42e722c4d8193cca5a2796c198210ba07d4c06c51f2f8"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-opponent-history-393.png",
+      "bytes": 392071,
+      "sha256": "b8e065137070b772bb5001951131cae6546242b0b6f76b3e163135a80059ff8f"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-opponent-history-430.png",
+      "bytes": 420286,
+      "sha256": "6c7c8dad0ce2db04df1534d9c9965f7aef21c6ae45ae692a487fd0774f5789fe"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-player-details-393.png",
+      "bytes": 392575,
+      "sha256": "be2c241994ea347b5627a0410d50ce08e5ac8cdc11e93cb1da5b5901e2cac0b6"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-player-details-430.png",
+      "bytes": 420586,
+      "sha256": "d42ed57c55bd058adf8f7dcf46226daf812cad5f261144e62a3959e310ea30e9"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-schedule-393.png",
+      "bytes": 317158,
+      "sha256": "1c546394eaa909845a46257917e61350ec3dec8be344aac3a95d0da66e6f36a2"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-schedule-430.png",
+      "bytes": 324612,
+      "sha256": "05e5d47ba39dfd75f18f5541812433ddd8f3904d82d3ae319057c66171c9bec9"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-stats-393.png",
+      "bytes": 317142,
+      "sha256": "c1543615902cde09bcb8072c8b618514e0ba08335f6762065a3d25e384ebe72b"
+    },
+    {
+      "path": "qa/hosted/firefox-archive/20261002T020806899Z/steelers-stats-430.png",
+      "bytes": 335009,
+      "sha256": "244e054fb6f34ad08addb44c6f95f5f18ba410d600dc2d1f44bfc0f119dd641e"
+    },
+    {
+      "path": "qa/hosted/firefox/engine-and-tls.json",
+      "bytes": 5269,
+      "sha256": "7e66bf79c5ba9de22e0a9a091d12eadf839fe29ce72dd8ccc29fd0c2662f5a1f"
+    },
+    {
+      "path": "qa/hosted/firefox/home-393.png",
+      "bytes": 1150914,
+      "sha256": "d0ca6ec098e693bec60b4fec4b2cbeab4ce09f892378cf5232da571cb23eb7ef"
+    },
+    {
+      "path": "qa/hosted/firefox/home-430.png",
+      "bytes": 1310426,
+      "sha256": "68eb1d551e3748fbcb36acaca7605f74d61c4766cf898157270bf7c70db2efd8"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-393.png",
+      "bytes": 477258,
+      "sha256": "e964723fdc8812dcfab43048f88c91d81ed0b7363742bdfdf0854ff77b1b5dfa"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-430.png",
+      "bytes": 512845,
+      "sha256": "9f5cfd30e127e242864e7ec0adfaa82547d8a775c5848285595b83f7085cd5db"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-players-393.png",
+      "bytes": 433595,
+      "sha256": "6ff77225f338c123e8d6038652ba20464c1b6481d1a7abd6d3a33814547a3e2c"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-players-430.png",
+      "bytes": 452729,
+      "sha256": "f0ff8e1cf427cf4809eb2cdb0901cd68990725b58f1d5567c11394283973621a"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-recap-393.png",
+      "bytes": 286416,
+      "sha256": "f6fd32b84d326bb5af63b1360508070b941fde821bd8a58c45b0cad765fb43c4"
+    },
+    {
+      "path": "qa/hosted/firefox/nfl-recap-430.png",
+      "bytes": 306722,
+      "sha256": "bbd1aa9d74fc32a7c62d74b7d6fe8de8745576a94672056365f9a16ef3d6a5e2"
+    },
+    {
+      "path": "qa/hosted/firefox/results.json",
+      "bytes": 233299,
+      "sha256": "2417ddf784cb42555fcbb0d38e762ad6eb9160ffa44b6223d36217a0d5e199d6"
+    },
+    {
+      "path": "qa/hosted/firefox/sources-393.png",
+      "bytes": 318582,
+      "sha256": "07504c9a5df1281e98fd54a6a3e6965bf6ce1a7f43ad96834f616a3f9e0ab0f5"
+    },
+    {
+      "path": "qa/hosted/firefox/sources-430.png",
+      "bytes": 385658,
+      "sha256": "3e4038c4c4d877e56c3d887f96620672c8f1dafafada00b2de7729cdd09aaf78"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-393.png",
+      "bytes": 770362,
+      "sha256": "54a4c88b617bc490d5d0dc41ac04069885036debbb3642fa53a53a4a911d2bf6"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-430.png",
+      "bytes": 830437,
+      "sha256": "a08b3e579d1f6ae559f29103a34cf12cb6d1dfac204e89d07874513753ccb306"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-full-bottom-393.png",
+      "bytes": 793443,
+      "sha256": "0804b3ffd91c548c025688e2a6def9e837f65f76420b9a4d7c5dd83e35bccda8"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-full-bottom-430.png",
+      "bytes": 858453,
+      "sha256": "06c3fb0f21ad4a8953f13e95542a72a27ee04af54b11e807052fd5c09325c9ac"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-game-statistics-393.png",
+      "bytes": 301531,
+      "sha256": "fa3780c6717b4d0ed1863eae8181c11f5ee97bc02ada5befe1c15b3e6fa78f73"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-game-statistics-430.png",
+      "bytes": 317959,
+      "sha256": "9a4582df98a2e2eaede70983f76d53fd8c8c1155bcf7fd0e44348df159138808"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-matchups-393.png",
+      "bytes": 380575,
+      "sha256": "9f56cbc1c17b8184ac5485cbaedcb05548aeb690be9fee68fcefa7ec1261dd14"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-matchups-430.png",
+      "bytes": 397328,
+      "sha256": "497f58e7e9cc64cf8f76c70e4e267c166b85178b9f81316efd02987646820810"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-opponent-history-393.png",
+      "bytes": 392071,
+      "sha256": "b8e065137070b772bb5001951131cae6546242b0b6f76b3e163135a80059ff8f"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-opponent-history-430.png",
+      "bytes": 420286,
+      "sha256": "6c7c8dad0ce2db04df1534d9c9965f7aef21c6ae45ae692a487fd0774f5789fe"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-player-details-393.png",
+      "bytes": 392575,
+      "sha256": "be2c241994ea347b5627a0410d50ce08e5ac8cdc11e93cb1da5b5901e2cac0b6"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-player-details-430.png",
+      "bytes": 420586,
+      "sha256": "d42ed57c55bd058adf8f7dcf46226daf812cad5f261144e62a3959e310ea30e9"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-schedule-393.png",
+      "bytes": 317158,
+      "sha256": "1c546394eaa909845a46257917e61350ec3dec8be344aac3a95d0da66e6f36a2"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-schedule-430.png",
+      "bytes": 324612,
+      "sha256": "05e5d47ba39dfd75f18f5541812433ddd8f3904d82d3ae319057c66171c9bec9"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-stats-393.png",
+      "bytes": 317120,
+      "sha256": "91546d0d54e4ee0b1029a5a02d711883d857a82ab45f04122b0f0eab73491815"
+    },
+    {
+      "path": "qa/hosted/firefox/steelers-stats-430.png",
+      "bytes": 334945,
+      "sha256": "1a5cd2356726b7b933ccd9d11d965fbb3b3953c042278e2228ad22144a03de6b"
+    },
+    {
+      "path": "qa/hosted/public-github-status.json",
+      "bytes": 1342,
+      "sha256": "781da11c1f2fde5aa108375c1c083615492433ef3f816ad512ddd90d5878e23e"
+    },
+    {
+      "path": "qa/hosted/refresh-smoke-attempt01.json",
+      "bytes": 3140,
+      "sha256": "0c8d16a3e73b72c5b64b36955c5121c5ad57df3e0232d5d393c0a845c0e2c411"
+    },
+    {
+      "path": "qa/hosted/refresh-smoke.json",
+      "bytes": 15396,
+      "sha256": "a7e566901676d4c5eeebaa253ba84ff48689b77321a45cfababaf9c5e17dbf7a"
+    },
+    {
+      "path": "qa/hosted/results.json",
+      "bytes": 3003,
+      "sha256": "ca033e78a6978656d061d6cd0f56a05dab4a997bc57ad0b7f7d6b4f7941d183c"
+    },
+    {
+      "path": "qa/hosted/webkit/RUNTIME_SETUP.md",
+      "bytes": 4272,
+      "sha256": "8f90e7d0453c31ff86e978219d01fd3d5331f4c8b0a4144b3806e69d351a6930"
+    },
+    {
+      "path": "qa/hosted/webkit/dependency-status.json",
+      "bytes": 2534,
+      "sha256": "7eb830f07f2bb00c4cb58752d91135fa27c7b5c5a19aacb448e3d83997e1c8bf"
+    },
+    {
+      "path": "qa/hosted/webkit/engine-and-tls.json",
+      "bytes": 1270,
+      "sha256": "7192084badb2a53313d662524f78eec5a503d887cc33bec0dda34999e2014bf1"
+    },
+    {
+      "path": "qa/hosted/webkit/home-393.png",
+      "bytes": 862556,
+      "sha256": "e9c2eb7ac1cd89ed159b8917c8e97e9a6a6da3d03270474ef7aedcfce72fea2e"
+    },
+    {
+      "path": "qa/hosted/webkit/home-430.png",
+      "bytes": 967594,
+      "sha256": "aec066cfec3b33049749722d96dc72fc6e83f017d4212e37010374994b09c5ae"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-393.png",
+      "bytes": 365244,
+      "sha256": "f9f74a564791ee99b33f348a821cca435932e885e0f0ef8702f94040b402e999"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-430.png",
+      "bytes": 391117,
+      "sha256": "1cc2bc4d803ec2f42399df691f466716e484aadbf942bf3237438a38105da11e"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-players-393.png",
+      "bytes": 327472,
+      "sha256": "f0e571ca3937ea3fe781dd5549c37d06ee88dfd01e766173da776c278fac5c09"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-players-430.png",
+      "bytes": 339461,
+      "sha256": "0a12166b070c3212609c4457496f87a558d8e9f28a5846db9446009f00c9f4ac"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-recap-393.png",
+      "bytes": 219312,
+      "sha256": "97c4825f759b049c82bdf259be908f90ce13e5ddd1c485ddfa4f6043aacdd3cd"
+    },
+    {
+      "path": "qa/hosted/webkit/nfl-recap-430.png",
+      "bytes": 232350,
+      "sha256": "470a9bd139773f339a9e1fafca8ee5f6fe1f6786c5153bd18c8a21aa3f13e8cc"
+    },
+    {
+      "path": "qa/hosted/webkit/package-verification.json",
+      "bytes": 3976,
+      "sha256": "db0f4f62cd4014d565dd554a7a1fea640c41cbcbeb5d66b6981fde4cf4f16b8c"
+    },
+    {
+      "path": "qa/hosted/webkit/release-probe.json",
+      "bytes": 1166,
+      "sha256": "ccf8b3ff2f7ed0478afa588dded7c2e95675991221cc026e7e705494e6eb3b72"
+    },
+    {
+      "path": "qa/hosted/webkit/results.json",
+      "bytes": 228593,
+      "sha256": "27b0975f46e3869e0eab117c313f6be15b243bbb0b35ee2a09b51ae0cac45e99"
+    },
+    {
+      "path": "qa/hosted/webkit/sources-393.png",
+      "bytes": 308869,
+      "sha256": "d3e8ccff14f6e334351349027b1b2bd4abe18574154c689e7974e914b77dfd41"
+    },
+    {
+      "path": "qa/hosted/webkit/sources-430.png",
+      "bytes": 360220,
+      "sha256": "2536c86b2e779a21ffc64ec76d1fed15d6eea7d8e7bcf71fd768c9da2e17d40f"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-393.png",
+      "bytes": 611501,
+      "sha256": "74cadff926afa4fa41f1b613f22a867d1edf11147e90056b2dae144f7fae8f7b"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-430.png",
+      "bytes": 680410,
+      "sha256": "773411de8521b2842f9e9dcaf39f5e66c790d0dc79ebbddd280d627407538ec1"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-full-bottom-393.png",
+      "bytes": 632122,
+      "sha256": "a6e0147b914eb89c2df2a6bc8f4f071499372226846117e2a66f62ef5036c769"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-full-bottom-430.png",
+      "bytes": 711045,
+      "sha256": "befc59f627708090573cb0cebc12f22f54c5d41dae4c573654922fe404b3681e"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-game-statistics-393.png",
+      "bytes": 228311,
+      "sha256": "e27a6731041ac5114d32e1234c3c722161e16dd6d0db2a04d3524b5213c4d1cd"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-game-statistics-430.png",
+      "bytes": 242476,
+      "sha256": "a2d27b225b2828c382d49ed6672f5ce6c6ac6d50c220e0d435d77a48fd5778de"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-matchups-393.png",
+      "bytes": 303260,
+      "sha256": "c5317a0e8356c02441876492c32e460e0c54c0dc104eba3d47085bf5c93d55bd"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-matchups-430.png",
+      "bytes": 313345,
+      "sha256": "3db2dd374a8ef6eaceef12fe2e2fcabf401943d0ea225c0ab3eac50318c10c14"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-opponent-history-393.png",
+      "bytes": 314384,
+      "sha256": "02000e7dbbc50dffaa2f82efef720c29c224718b9cd12fd20fc8274540ba15c8"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-opponent-history-430.png",
+      "bytes": 333759,
+      "sha256": "7eb1b1c8d026fb4f7d0bb5adb3ca7a21796a85a264b6b2875fe41e8550ab3a0a"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-player-details-393.png",
+      "bytes": 314840,
+      "sha256": "2e25f5e413bdcff6b9a9e2006c6af5605dcdae8b44c559ac2fff83aa9e55eb4c"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-player-details-430.png",
+      "bytes": 334422,
+      "sha256": "8738f532ba5ffc1d57a4b8b3b0e608969eab45352c7e0969d8a3f4a2d5a2b311"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-schedule-393.png",
+      "bytes": 260851,
+      "sha256": "2c5a9f50fd24f85e5a661405bbd41e6ec2a06b8d1a219f571addc0c0e3b00fcc"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-schedule-430.png",
+      "bytes": 264280,
+      "sha256": "1487c3a1010a55ea95276f5359563b056f243c893bc43b410b70e684193784bb"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-stats-393.png",
+      "bytes": 253957,
+      "sha256": "86cd5a6c49b500b242857a2b121ecd71006dc23e04652712d1716adf8ce48ae6"
+    },
+    {
+      "path": "qa/hosted/webkit/steelers-stats-430.png",
+      "bytes": 263575,
+      "sha256": "86969a11272ba3c22063d562b3d81237ab131bda26de9e75a119d8310f37e8f0"
+    },
+    {
+      "path": "qa/hosted/webkit/summary.json",
+      "bytes": 2234,
+      "sha256": "dba1608bb5ebed03eda65cb775d3229e41f85b250216300fb2869675be31b6cf"
+    },
+    {
+      "path": "qa/next-pass/AUTO_INTEGRATION_REVIEW.md",
+      "bytes": 2925,
+      "sha256": "7d58328aadb52ef5e67ae753d2414f81fb7a5b375869a13f4bbeef9d05179e08"
+    },
+    {
+      "path": "qa/next-pass/AUTO_REFRESH_EXECUTION.json",
+      "bytes": 6603,
+      "sha256": "bd8e7d3ca52812051122cd9bafc8a2bb0b8573c6eeb3061d11d3cd5a750de8ba"
+    },
+    {
+      "path": "qa/next-pass/AUTO_UPDATE_REVIEW.md",
+      "bytes": 4507,
+      "sha256": "9e55b52fa76220ea0e85f1eb3071ee0842e0f2417cfda8db201beb012b50d860"
+    },
+    {
+      "path": "qa/next-pass/CONTROLS_REVIEW.md",
+      "bytes": 8161,
+      "sha256": "543968ca0289dc67417bc20e21326f2260f66435f691f12c5613cd4a59238fce"
+    },
+    {
+      "path": "qa/next-pass/DATA_HISTORY_REVIEW.md",
+      "bytes": 9991,
+      "sha256": "2fc3b8156077afec08c7c07d983da6116909256612c4f0c4741e29afabdd6851"
+    },
+    {
+      "path": "qa/next-pass/ENVIRONMENT_ACCESS.md",
+      "bytes": 4426,
+      "sha256": "745d97070138d7626a5bb715b375368a122890b980508cb370c5ed55b74c7281"
+    },
+    {
+      "path": "qa/next-pass/GITHUB_API_RELEASE_STATUS.json",
+      "bytes": 6348,
+      "sha256": "c9524c769f498745fd0b11ff295442620f5a8bb0693d62f5fc57d7fafb894c42"
+    },
+    {
+      "path": "qa/next-pass/HOME_REVIEW.md",
+      "bytes": 3495,
+      "sha256": "e3b3f5b01f1dbf4f2f57f0feb9ded5b385b52c4d73a0f2e4b65e018a448afe14"
+    },
+    {
+      "path": "qa/next-pass/HOSTED_HTTP_AUDIT.json",
+      "bytes": 116357,
+      "sha256": "4cba949e40784aad16465d07104d4384a044b560223926be8b14d7187c131e3c"
+    },
+    {
+      "path": "qa/next-pass/INCOMING_REFRESH_PRESERVATION.json",
+      "bytes": 934,
+      "sha256": "d2d659f3804eefd89ab14e1d4c6681a879e27ecb9265e70b07b7270ad0fce1a3"
+    },
+    {
+      "path": "qa/next-pass/MOTION_REVIEW.md",
+      "bytes": 4140,
+      "sha256": "4fc6fd67d16eaabaf6f88608c10ceeb345d2ff3f1cfc55115a18ab368bfc4501"
+    },
+    {
+      "path": "qa/next-pass/POST_RELEASE_AUTO_REFRESH.json",
+      "bytes": 1373,
+      "sha256": "f7f6990c5e758c76f6ff260d89658cca5e98da2f333ef6c7f38ef13f71f7fddc"
+    },
+    {
+      "path": "qa/next-pass/PR_UPDATE_CONFIRMATION.json",
+      "bytes": 407,
+      "sha256": "06a0a162693c4a32ecd8aa9e6f86ec58a012cad85af22d4f075a60a97972f96b"
+    },
+    {
+      "path": "qa/next-pass/PUBLICATION_STATUS.md",
+      "bytes": 4406,
+      "sha256": "47465a9d609b62479dfa0f256a14fa1874a9cd70308bcc703f08a88db2aebb68"
+    },
+    {
+      "path": "qa/next-pass/PUBLIC_GITHUB_DEPLOYMENT.json",
+      "bytes": 5775,
+      "sha256": "c64e504817425ecaf43ba4f2172f45578d1ef8c644bb36b4e47a3b542fa930b7"
+    },
+    {
+      "path": "qa/next-pass/README.md",
+      "bytes": 4821,
+      "sha256": "6416d43cbf555746b9b36f5926fbdd7057c61affd6b1cb5d3799060f611fc806"
+    },
+    {
+      "path": "qa/next-pass/REMOTE_DATA_INTEGRATION.json",
+      "bytes": 4124,
+      "sha256": "036554e71055c71777f512ad42b1a22bcebcfb28c5175a6db35903717ea544a1"
+    },
+    {
+      "path": "qa/next-pass/ROSTER_VERIFICATION_GENERATION.json",
+      "bytes": 18549,
+      "sha256": "325d19dd5f794e26937f6d48039ae317ececdbd0ec901f4389fbd872c7c3f6b3"
+    },
+    {
+      "path": "qa/next-pass/ROSTER_VERIFICATION_REVIEW.json",
+      "bytes": 43489,
+      "sha256": "2622ebd4134015ed106ce6bff74e900f4790f6c9fa6df955b76faca0b8dc2c0a"
+    },
+    {
+      "path": "qa/next-pass/ROSTER_VERIFICATION_REVIEW.md",
+      "bytes": 4020,
+      "sha256": "6dd136a6e2d4817418d7e66e33033e5239b1b3ca0e0520bd6567d9076141be08"
+    },
+    {
+      "path": "qa/next-pass/SECOND_PROVIDER_REVIEW.json",
+      "bytes": 102257,
+      "sha256": "304dfb90a997fba9ec3245c12aeb885286d17b8d1e0cadc819e686b94a192b3a"
+    },
+    {
+      "path": "qa/next-pass/SECOND_PROVIDER_REVIEW.md",
+      "bytes": 5469,
+      "sha256": "6a1971ab5a084b31b218048e6417d0f6f43ebf0216d76f4e434e4fad139a2382"
+    },
+    {
+      "path": "qa/next-pass/SOURCE_RUNTIME_REVIEW.md",
+      "bytes": 8190,
+      "sha256": "b15b0029f7fd2ede696e76d5b95df8661449dbd48daa76571c769f3f99ceffe3"
+    },
+    {
+      "path": "qa/next-pass/VISUAL_REVIEW.md",
+      "bytes": 6136,
+      "sha256": "2e7ddffbe37de428ac7809aa7dbceea6a33418a0b0d06010801fcbbecf99e736"
+    },
+    {
+      "path": "qa/next-pass/artifact-manifest.json",
+      "bytes": 3472,
+      "sha256": "775e2ebf35c9caef0f57239c830322df68c17936a3d1736f867a9f2f4c8df61c"
+    },
+    {
+      "path": "qa/next-pass/auto-update-browser.json",
+      "bytes": 548,
+      "sha256": "7bc388e42b269e43c70c9e3533749c0ddc0b2e3cc5bb3c4708b8c332dcd07d5b"
+    },
+    {
+      "path": "qa/next-pass/auto-update-integration.json",
+      "bytes": 4297,
+      "sha256": "b3f518ad691675dccddf175cc192a78307d598da5f08f889041e360b86365ff1"
+    },
+    {
+      "path": "qa/next-pass/auto-update-source-probes.json",
+      "bytes": 2553,
+      "sha256": "128f008506d169b3ebd4e82cbc4312d30037046b45a1a8085a5d9ff15669bfbd"
+    },
+    {
+      "path": "qa/next-pass/before/home-393.png",
+      "bytes": 1083691,
+      "sha256": "c3835733e458cf4c67059881eb9bf9bb2b0cf41ab4a27a7e9a23222821b5aa6c"
+    },
+    {
+      "path": "qa/next-pass/before/home-430.png",
+      "bytes": 1246201,
+      "sha256": "c26757e5170a89c3f8d884ade3f386718486ae1456b38173e3b123705b057c8b"
+    },
+    {
+      "path": "qa/next-pass/before/nfl-393.png",
+      "bytes": 542398,
+      "sha256": "cad01b47c80fe8aca2a12624121f9d87fe877ddd34783de9a17f6d5d0f98beec"
+    },
+    {
+      "path": "qa/next-pass/before/nfl-430.png",
+      "bytes": 584195,
+      "sha256": "6c5aa10985118d7f995ba019afc53744e96b28f3b615d894e928e0627c5b59a7"
+    },
+    {
+      "path": "qa/next-pass/before/steelers-393.png",
+      "bytes": 736296,
+      "sha256": "404f151e1149bc15f01731d70076c9933ff649170a570a4b16d08c221a2e5333"
+    },
+    {
+      "path": "qa/next-pass/before/steelers-430.png",
+      "bytes": 836351,
+      "sha256": "a1ce0a67f777bad415d48cf9cea61f0f8b8032bad598fb8bd2d011ac9e68cce1"
+    },
+    {
+      "path": "qa/next-pass/comparison.html",
+      "bytes": 3687,
+      "sha256": "5a6fa08e54c3bcd1d03e94f5972b92bde03fd64a7df55c0511361ffdeaf2374d"
+    },
+    {
+      "path": "qa/next-pass/comparison.jpg",
+      "bytes": 444871,
+      "sha256": "b82ea4e32569d5592fe5319d329eba18ffcad20a728c3dcf25da71e7ee4acde1"
+    },
+    {
+      "path": "qa/next-pass/contact-sheet.html",
+      "bytes": 1948,
+      "sha256": "5b3950a12b4b81af68d599f140351b69d77d4d511cd7f9eeae21284d875041ef"
+    },
+    {
+      "path": "qa/next-pass/contact-sheet.jpg",
+      "bytes": 661599,
+      "sha256": "669ee57c35708145e0062d9717cf8d7b5523905b9968ce1cab584f72e9f01fe9"
+    },
+    {
+      "path": "qa/next-pass/control-regressions.json",
+      "bytes": 4913,
+      "sha256": "f53c57baf57f3f02689f20802506111b44829abd9279ecf66a4c1a532a5d7497"
+    },
+    {
+      "path": "qa/next-pass/controls-preflight.json",
+      "bytes": 625,
+      "sha256": "767ef855a6ee6e5998aa862f58db038bc986c02209348abcd5acb0cb9cc20cd9"
+    },
+    {
+      "path": "qa/next-pass/data-history-independent-audit.json",
+      "bytes": 2100,
+      "sha256": "45fa14b6e48af42a30a51a97ee961a1778744a541ca3f50b53c9e4a0b6fc53a4"
+    },
+    {
+      "path": "qa/next-pass/home-after-393.png",
+      "bytes": 1177540,
+      "sha256": "3e5477b2278b5fc7621895daeb8ba8ae3104ff70be927c4e0ed0ad74a87776fb"
+    },
+    {
+      "path": "qa/next-pass/home-after-430.png",
+      "bytes": 1340326,
+      "sha256": "bfedc4b11bc3a24167689d63584d81ff2ec18d0af0c7e87044ce4be921a5fd15"
+    },
+    {
+      "path": "qa/next-pass/home-before-393.png",
+      "bytes": 1079449,
+      "sha256": "b72438c8e69f0e3354fa5b47ec5d1cca59ea1a9e015bbf696cf4a8031d09d104"
+    },
+    {
+      "path": "qa/next-pass/home-before-430.png",
+      "bytes": 1240963,
+      "sha256": "7d577e12f292ae4fec337c653dd307cce8afde1ce9932a7a8b30c107dc975ca2"
+    },
+    {
+      "path": "qa/next-pass/home-check.cjs",
+      "bytes": 6156,
+      "sha256": "da57c559b7d64b6b81e2d8ae74b7a0c18ea6c359e8715c4700f8a71169d2a7e0"
+    },
+    {
+      "path": "qa/next-pass/home-comparison.html",
+      "bytes": 1974,
+      "sha256": "0a942c073ceee0728e43fdafce510b95814a19b9396569aeca4f7d27bd2e564d"
+    },
+    {
+      "path": "qa/next-pass/home-comparison.jpg",
+      "bytes": 458792,
+      "sha256": "1f684b9e6946c8cd74b4c678d07fab0e874459cfbce0a84d668692020fd01ec9"
+    },
+    {
+      "path": "qa/next-pass/home-iteration1-393.png",
+      "bytes": 1160009,
+      "sha256": "4e54e3a323a790cc26eeebc402cba7d1a189bd511ed81a38c203d53a5c66ee05"
+    },
+    {
+      "path": "qa/next-pass/home-iteration1-430.png",
+      "bytes": 1316344,
+      "sha256": "96b63b5c50d23ef80ce4fe1d3744f92bc7a6f1b898927f2c7d733f7403656d71"
+    },
+    {
+      "path": "qa/next-pass/home-results.json",
+      "bytes": 3441,
+      "sha256": "d193c90675c1bfce022b0a1b11e105164242a3d68a83496e3428446a5cb1950e"
+    },
+    {
+      "path": "qa/next-pass/http-audit-archive/20261002T020755567030Z.json",
+      "bytes": 112790,
+      "sha256": "a4b3b579f04797bff9131865d4e9e00a4513d19a1612ca773511c6b941d09112"
+    },
+    {
+      "path": "qa/next-pass/motion/nfl-illumination-393.png",
+      "bytes": 564514,
+      "sha256": "a10b7698ae2397adf0c0b69b952ec4579f6be252387f6a411fbcf568a8a1ab00"
+    },
+    {
+      "path": "qa/next-pass/motion/nfl-illumination-430.png",
+      "bytes": 605186,
+      "sha256": "22011cd35854a14f949c26c0d2ac4cc50d4c9779a1634ac9362ea6effd97578b"
+    },
+    {
+      "path": "qa/next-pass/motion/player-all-stats-illumination-393.png",
+      "bytes": 533871,
+      "sha256": "dbfc1e62e5b6d6b174f1f14731b05c1bbd058c0d552c0f12fc6a61c82404f9b7"
+    },
+    {
+      "path": "qa/next-pass/motion/player-all-stats-illumination-430.png",
+      "bytes": 604996,
+      "sha256": "dd2793dbb5dd091a865d7acca998eaad707d07e862ecc80721e50aa1320d01d0"
+    },
+    {
+      "path": "qa/next-pass/motion/player-expanded-illumination-393.png",
+      "bytes": 537711,
+      "sha256": "7a49ec67c909d7e1d7e6c742b780dd1b25917ea816b8f25057519b0251c0ca5a"
+    },
+    {
+      "path": "qa/next-pass/motion/player-expanded-illumination-430.png",
+      "bytes": 604758,
+      "sha256": "1a475180ee421c3e788f006f2468aa27456ebd684522c85bed1cebbacdec9043"
+    },
+    {
+      "path": "qa/next-pass/motion/player-opponent-all-stats-illumination-393.png",
+      "bytes": 537749,
+      "sha256": "1c935b301da0d844d016fe924fe5d7cf37bde98b1fb624b0da6f7fc468e6b679"
+    },
+    {
+      "path": "qa/next-pass/motion/player-opponent-all-stats-illumination-430.png",
+      "bytes": 604636,
+      "sha256": "921f00aeab1c9438c8b817b9543725368ca6fece6b7d436344c14a759c7503df"
+    },
+    {
+      "path": "qa/next-pass/motion/results.json",
+      "bytes": 11247,
+      "sha256": "3895a8f39ba14eb27b62220278092fb41d0498ecad9018869a37531b0ca52b03"
+    },
+    {
+      "path": "qa/next-pass/motion/steelers-illumination-393.png",
+      "bytes": 761827,
+      "sha256": "4bed5198bdd2713d354558bed27ac3cae7359b30d6801830f2678337069e61d7"
+    },
+    {
+      "path": "qa/next-pass/motion/steelers-illumination-430.png",
+      "bytes": 863666,
+      "sha256": "1b14a8e787edfd9a3cb755f6791d6224f985f584db25c4e6b70cd4a545563a42"
+    },
+    {
+      "path": "qa/next-pass/source-monitor-check.json",
+      "bytes": 2470,
+      "sha256": "cacfb1437eae87a7a846c285a7b1c16f4496c6d138c61bc69db382e9089c468a"
+    },
+    {
+      "path": "qa/next-pass/source-runtime-full-history-audit.json",
+      "bytes": 3996,
+      "sha256": "951acbac9e3270df3fb787ca067c21a508ef80ad27e5ced60540423d527b694c"
+    },
+    {
+      "path": "qa/next-pass/source-runtime-history-audit.json",
+      "bytes": 548,
+      "sha256": "0497012e2716625020d87dca574ca9df8b1b1e6d5acc7716bebc2f266240bb49"
+    },
+    {
+      "path": "qa/next-pass/source-runtime-network.json",
+      "bytes": 3413,
+      "sha256": "e0ee7c5883c86f541568f33d87d9bac0d5e2f2002522e17d3a7a7e10e9b7d99f"
+    },
+    {
+      "path": "qa/next-pass/visual/captures.json",
+      "bytes": 4583,
+      "sha256": "7b8846de4e0ba89c1a2fc4b9d7542d3379474c5e093e7bee3d60164cd7484e8b"
+    },
+    {
+      "path": "qa/next-pass/visual/home-393.png",
+      "bytes": 1177540,
+      "sha256": "3e5477b2278b5fc7621895daeb8ba8ae3104ff70be927c4e0ed0ad74a87776fb"
+    },
+    {
+      "path": "qa/next-pass/visual/home-430.png",
+      "bytes": 1340326,
+      "sha256": "bfedc4b11bc3a24167689d63584d81ff2ec18d0af0c7e87044ce4be921a5fd15"
+    },
+    {
+      "path": "qa/next-pass/visual/metcalf-opponent-393.png",
+      "bytes": 372036,
+      "sha256": "7c1feb9d63a62e63af6afba0399c46d01ca7d416bc11f65bc0f95b44ce05b186"
+    },
+    {
+      "path": "qa/next-pass/visual/navigation-430.png",
+      "bytes": 25279,
+      "sha256": "9fb6af88db33c78f8d9d19fe66b54e7c50c31e39075ed3285b34a71870368fbf"
+    },
+    {
+      "path": "qa/next-pass/visual/navigation-full-430.png",
+      "bytes": 862996,
+      "sha256": "797fa7b1526d920769425db11ed0c5abfcb6384fa5f5767501f9a0b4c3a18870"
+    },
+    {
+      "path": "qa/next-pass/visual/nfl-393.png",
+      "bytes": 564188,
+      "sha256": "4ac1354258e7592077379cf0d3ee2366acbbc15b713480351570d5db521c2787"
+    },
+    {
+      "path": "qa/next-pass/visual/nfl-430.png",
+      "bytes": 604934,
+      "sha256": "c0d3f0b0a2173a7bf669ddfb85f682210f18a1ecbd199d1e230841d4003afb14"
+    },
+    {
+      "path": "qa/next-pass/visual/steelers-393.png",
+      "bytes": 761540,
+      "sha256": "b33d919d13c8a4b16e4c9c1d21057149509eba38d43fea4f253acb8c1139514e"
+    },
+    {
+      "path": "qa/next-pass/visual/steelers-430.png",
+      "bytes": 864049,
+      "sha256": "aa7458a62026631833ee2c2a41f3ed6472243a99fcf69ab0a969f7e144dd9799"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-fullgame-393.png",
+      "bytes": 450720,
+      "sha256": "a4ee3de34acd1cc634ec679f932cfb8e0032bf75266b56c379b3312d42e356aa"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-fullgame-430.png",
+      "bytes": 502551,
+      "sha256": "8db92651b72642f3ea7245f32659198f3850a5df8552f48e9b12cccc74935969"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-last5-393.png",
+      "bytes": 364740,
+      "sha256": "4df4fd54ef889458b6965014e94431425ab3884d53a0805c2ec79623dd992f6b"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-last5-430.png",
+      "bytes": 400372,
+      "sha256": "93b0084ba999612a75b8fb0be2679da2346667d9d63ec16208cf13bd4f61b09f"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-opponent-393.png",
+      "bytes": 364988,
+      "sha256": "e8e284fbb161c2d146719b3d057a76f5936643b0e3dbf0782ddd119d4412ca76"
+    },
+    {
+      "path": "qa/next-pass/visual/warren-opponent-430.png",
+      "bytes": 400514,
+      "sha256": "52c433f457e6ff6dd6251853d39953128622dd08b071e125094be0fc808d8f6d"
+    },
+    {
+      "path": "qa/nfl-1440.png",
+      "bytes": 1561623,
+      "sha256": "2f7bec2756724a1a33a18b54fc8060934e3144c0bf10483f9245ddf66463a36e"
+    },
+    {
+      "path": "qa/nfl-320.png",
+      "bytes": 367257,
+      "sha256": "ef72849fee8d857c41d7612cb5c9ae26c1ddc8346bba1a46d61f9eb41b555e14"
+    },
+    {
+      "path": "qa/nfl-393.png",
+      "bytes": 564188,
+      "sha256": "4ac1354258e7592077379cf0d3ee2366acbbc15b713480351570d5db521c2787"
+    },
+    {
+      "path": "qa/nfl-430.png",
+      "bytes": 604497,
+      "sha256": "4a990dab525a8006d1336686e118148c82c564113a633a63c249776a7dab6f46"
+    },
+    {
+      "path": "qa/nfl-768.png",
+      "bytes": 863376,
+      "sha256": "42a65a4505f3e1ba5bd00ddaf84c2eb2ed90e9f46edab3adfa38a7328a354e4b"
+    },
+    {
+      "path": "qa/nfl-players-1440.png",
+      "bytes": 1536168,
+      "sha256": "591f1b8cc153cf093df0aa16844f2e6cb023c07f76854082009f9c8cd87b9e3b"
+    },
+    {
+      "path": "qa/nfl-players-320.png",
+      "bytes": 395263,
+      "sha256": "468101ec915f18aa25a30618607ebd4c0fe8bed1528eaa2ef6002998617b6a7d"
+    },
+    {
+      "path": "qa/nfl-players-393.png",
+      "bytes": 517772,
+      "sha256": "443843b255a293d71057f131da1adf9d6fcce3c4a60cd605ec62a052980b5756"
+    },
+    {
+      "path": "qa/nfl-players-430.png",
+      "bytes": 552254,
+      "sha256": "2e95db0a8ba9852fd38a7c84fe42f0bb109fe8e1e24efd1188b52d7e244f3f0a"
+    },
+    {
+      "path": "qa/nfl-players-768.png",
+      "bytes": 827294,
+      "sha256": "3d42dadb19f64a547163272b0d6544e942cc408ec51a33d48cea2c42f72789ca"
+    },
+    {
+      "path": "qa/nfl-recap-1440.png",
+      "bytes": 1285266,
+      "sha256": "a8452d84eeda8c6666498b76225441f0e37dc5423202338ea46a44467e5a3906"
+    },
+    {
+      "path": "qa/nfl-recap-320.png",
+      "bytes": 206985,
+      "sha256": "78fadb7aadf1313fdc15b2513caf8d199b4beba593d0be0cbf187f75068cded3"
+    },
+    {
+      "path": "qa/nfl-recap-393.png",
+      "bytes": 310185,
+      "sha256": "868ddd588e72f037b7b0750a99c13d070e4f2058191a296d37bf338706481686"
+    },
+    {
+      "path": "qa/nfl-recap-430.png",
+      "bytes": 353762,
+      "sha256": "ca0e35fdc883f35ef128c305cad14fa958a7e3c53da1f585553621cb0aee76a3"
+    },
+    {
+      "path": "qa/nfl-recap-768.png",
+      "bytes": 566254,
+      "sha256": "d81a28c410b6e8568b2ed44c6d3d815a0d26a2976fe31debfae2359d3c025b1b"
+    },
+    {
+      "path": "qa/premium-before/home-393.png",
+      "bytes": 348445,
+      "sha256": "95c6530215ab9f976f6d42eae972b49868df65ed3dbed85d8accb4d9d9e7b856"
+    },
+    {
+      "path": "qa/premium-before/home-430.png",
+      "bytes": 406474,
+      "sha256": "24f5330c284fd587c7d1a778d658b3cc1c0f34cc969e302599cdae3c1675cbc3"
+    },
+    {
+      "path": "qa/premium-before/nfl-393.png",
+      "bytes": 154626,
+      "sha256": "f408a16822387b5b1b97b54bdbcf0bb62f407e834465ff33fd23f8119672867f"
+    },
+    {
+      "path": "qa/premium-before/nfl-430.png",
+      "bytes": 164469,
+      "sha256": "bd3fc159cafc6c718303008c33fde999380dec2cdce163f7292982ce33bd5a98"
+    },
+    {
+      "path": "qa/premium-before/results.json",
+      "bytes": 2636,
+      "sha256": "adf07bf1255de422aa73ab9ddab9b3d20308789fd73fcebbc9a8a9416d5bd076"
+    },
+    {
+      "path": "qa/premium-before/steelers-393.png",
+      "bytes": 273754,
+      "sha256": "a66bc464d3d804578720671c4dee6bb8713c10baaee0c544a7198d59e0580b1d"
+    },
+    {
+      "path": "qa/premium-before/steelers-430.png",
+      "bytes": 309657,
+      "sha256": "8ca47b2c246ceeb593d8ed158334e3cebfa06a8bafd47f86601f1b214363d6c7"
+    },
+    {
+      "path": "qa/results.json",
+      "bytes": 552254,
+      "sha256": "2db3ce77eedc5d5cfe7e35c73e6e404c350a0ec738cb0ec7ae810e7d29e114bb"
+    },
+    {
+      "path": "qa/run.cjs",
+      "bytes": 64633,
+      "sha256": "55fa69e720623c7bafa094649ce5390bb2b8a011f430c06ca886260fc411fc0d"
+    },
+    {
+      "path": "qa/source-updates.test.py",
+      "bytes": 4233,
+      "sha256": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822"
+    },
+    {
+      "path": "qa/sources-1440.png",
+      "bytes": 512588,
+      "sha256": "1f2e3ad497de72a5b1408035e680a7bd38485e8d0340cae95c968a91b32efc04"
+    },
+    {
+      "path": "qa/sources-320.png",
+      "bytes": 213359,
+      "sha256": "77934e2ea4dd073a5562742e2c27ab5db48edf26b4ef8a00742573105f74e1e0"
+    },
+    {
+      "path": "qa/sources-393.png",
+      "bytes": 268087,
+      "sha256": "08ee6a5a393148545debb96398f3e2925489c59dd7170a62c41609cc3decbc67"
+    },
+    {
+      "path": "qa/sources-430.png",
+      "bytes": 316572,
+      "sha256": "27353f8756544e8fbb2f14003c6db22b6e1ba87d96559181ff44eb14fd6caae4"
+    },
+    {
+      "path": "qa/sources-768.png",
+      "bytes": 474743,
+      "sha256": "c7a4199a613a7659391f84ed0972e39c24005461b741b485c4d6bbb742b0de5a"
+    },
+    {
+      "path": "qa/steelers-1440.png",
+      "bytes": 2004268,
+      "sha256": "40f4a91b85afe393d716b3b247ea26de17abefe6db96ed7e3088add9aba84829"
+    },
+    {
+      "path": "qa/steelers-320.png",
+      "bytes": 534187,
+      "sha256": "d1f3eee168d31c59c9c78656327ae3e60cdea02e0f093c5e1107cf8047de7805"
+    },
+    {
+      "path": "qa/steelers-393.png",
+      "bytes": 761486,
+      "sha256": "94fc4d7e33ca991ebfce6f4719c3cf1fd4db7f146b5497571fddb943ff7f823c"
+    },
+    {
+      "path": "qa/steelers-430.png",
+      "bytes": 863087,
+      "sha256": "736594bdf63569f9dfd2edd7ff759d370114317f0e458ebb80d6c5869fa1ae02"
+    },
+    {
+      "path": "qa/steelers-768.png",
+      "bytes": 1227986,
+      "sha256": "8bd5041b6b51ca5cab0d6d09c93b27145a155c76850c9d4261fe8c49c7237c8f"
+    },
+    {
+      "path": "qa/steelers-full-bottom-1440.png",
+      "bytes": 2143349,
+      "sha256": "f6579d049a416d3417f6b08ccf2564046d6ac273a668ecda486406d9777f1606"
+    },
+    {
+      "path": "qa/steelers-full-bottom-320.png",
+      "bytes": 564179,
+      "sha256": "c0bad8ff61eca578066d17aa5bcdbba2f30863dddcf8c63ebaa825589678313b"
+    },
+    {
+      "path": "qa/steelers-full-bottom-393.png",
+      "bytes": 804273,
+      "sha256": "9d19c598e1fa26996e011b0030b900ea64c81e71dad29a21790056cab9902d6e"
+    },
+    {
+      "path": "qa/steelers-full-bottom-430.png",
+      "bytes": 928349,
+      "sha256": "28d679f7f070f0c1dfd869d31e73aa8af1385cbff26b1ad766f24428c6823377"
+    },
+    {
+      "path": "qa/steelers-full-bottom-768.png",
+      "bytes": 1365833,
+      "sha256": "aa8af5bd34e421f1d621b0ed7fd90c68cbe19e0510db9e7a892d82eccf08105a"
+    },
+    {
+      "path": "qa/steelers-game-statistics-1440.png",
+      "bytes": 1406168,
+      "sha256": "d3be7b598a30c1536d9126d1e0add795ac441c30d8fce7a62a15ee785f21a0bd"
+    },
+    {
+      "path": "qa/steelers-game-statistics-320.png",
+      "bytes": 327507,
+      "sha256": "d40729aae884f997456a2faeec56e2cec39f873613f590b2ec130443b594a1f6"
+    },
+    {
+      "path": "qa/steelers-game-statistics-393.png",
+      "bytes": 418591,
+      "sha256": "fbdf10a7860a281a13c757c7f8dde27ad960ba5da726625c74569a55a2bd4cbd"
+    },
+    {
+      "path": "qa/steelers-game-statistics-430.png",
+      "bytes": 469388,
+      "sha256": "2821531b524fd830f500c6c74597804fad299d5f37af22fe9f5ebf8a9308d325"
+    },
+    {
+      "path": "qa/steelers-game-statistics-768.png",
+      "bytes": 691673,
+      "sha256": "928e05397d08b0ec5ce97b61a780c48dd9b60006986f60044b6c644b0fd10ed4"
+    },
+    {
+      "path": "qa/steelers-matchups-1440.png",
+      "bytes": 1519506,
+      "sha256": "458cc4862393d117dcc028d7dac47da11052e6e614a1dbc1ee3f561f729ffd0d"
+    },
+    {
+      "path": "qa/steelers-matchups-320.png",
+      "bytes": 364480,
+      "sha256": "3c712d82b3531aa7ff43def6f4a9648a73e3dfba5d7a8ff0a717adca627901d0"
+    },
+    {
+      "path": "qa/steelers-matchups-393.png",
+      "bytes": 492232,
+      "sha256": "30d8597552082f7dcbb886f1921d7e2e6491c6559ee7794be0b6a7f0cba12b14"
+    },
+    {
+      "path": "qa/steelers-matchups-430.png",
+      "bytes": 536945,
+      "sha256": "9ba87c9af1051be26335a624698bb5ff3288cdbcf0411fbe2364a746624d1c8a"
+    },
+    {
+      "path": "qa/steelers-matchups-768.png",
+      "bytes": 813927,
+      "sha256": "065f719d59445a21fa382a5ff79809ed1c78eb40fdb0f511016f62e7a5de8cbd"
+    },
+    {
+      "path": "qa/steelers-opponent-history-1440.png",
+      "bytes": 1341405,
+      "sha256": "28cec42c64042a9c2c3641e703fb2b5aaf65292a70b625161c309f759a157406"
+    },
+    {
+      "path": "qa/steelers-opponent-history-320.png",
+      "bytes": 296056,
+      "sha256": "a435e0e4353f5838a1e01d9e7772904efc18e96fc1fedfa8c19c50693bc7059f"
+    },
+    {
+      "path": "qa/steelers-opponent-history-393.png",
+      "bytes": 400766,
+      "sha256": "5a7ff9aceadb3e5ee9e3d4ca7e0e7154318fb930f36f67cb78c2a80bf08060bc"
+    },
+    {
+      "path": "qa/steelers-opponent-history-430.png",
+      "bytes": 436028,
+      "sha256": "34095cc779eba0f18ac873905d640780a35f70ebff183c0826779d07612664f3"
+    },
+    {
+      "path": "qa/steelers-opponent-history-768.png",
+      "bytes": 614880,
+      "sha256": "498d0adcc58153aba4ca8ee7c1e28f15eb0fa97ae189ae80376cca4f6a44015f"
+    },
+    {
+      "path": "qa/steelers-player-details-1440.png",
+      "bytes": 1340793,
+      "sha256": "22aca9a88b545c2f3a03f9208c0b53a11c664b554e2bc585d1ccd474443c4c30"
+    },
+    {
+      "path": "qa/steelers-player-details-320.png",
+      "bytes": 296303,
+      "sha256": "bce1d2b8e978f67e77f0e4280158aa6972cd561093b61891ba2e1291aefe3638"
+    },
+    {
+      "path": "qa/steelers-player-details-393.png",
+      "bytes": 401028,
+      "sha256": "a60333160eb62202a771bb3819b3f7615128c847dc437b4f13369df42e1ebcae"
+    },
+    {
+      "path": "qa/steelers-player-details-430.png",
+      "bytes": 436427,
+      "sha256": "a481e0329f47c6cdb98d3ddd6500459c6c8d6b14926e2905e4d49c1c3695b1bd"
+    },
+    {
+      "path": "qa/steelers-player-details-768.png",
+      "bytes": 612981,
+      "sha256": "1f44dbf5c9c4dca5b7a23dd5d4285e9ee6dd719067d0b9a21f4d7852157b8f89"
+    },
+    {
+      "path": "qa/steelers-schedule-1440.png",
+      "bytes": 1114432,
+      "sha256": "c3c230e0c5652f835ccc6ce194d436893c8becbccc85d080300d09c3ec137a53"
+    },
+    {
+      "path": "qa/steelers-schedule-320.png",
+      "bytes": 221233,
+      "sha256": "21d1a933e5557a89ccf24656b0da9174a5c78604f86ae91055e7165814b4f37c"
+    },
+    {
+      "path": "qa/steelers-schedule-393.png",
+      "bytes": 271927,
+      "sha256": "b5defead4c1e24ec1b9502ed0a0f2331f24032d898bfa1c11cf33114404544fb"
+    },
+    {
+      "path": "qa/steelers-schedule-430.png",
+      "bytes": 277172,
+      "sha256": "c7ce2d4faa6ec4c74a1128a17f19da15cea1c2ede5528c5a029696a9dd1931ab"
+    },
+    {
+      "path": "qa/steelers-schedule-768.png",
+      "bytes": 395735,
+      "sha256": "b8a7a8ac3955f0b149e1f1e4d825adb9901f315b411a2749e2bae8dbc846e53e"
+    },
+    {
+      "path": "qa/steelers-stats-1440.png",
+      "bytes": 1319668,
+      "sha256": "0519efbc18e3a5d218c515aca1c69f27ba5ecd0cc4ab46f68ca0b2c49208b14e"
+    },
+    {
+      "path": "qa/steelers-stats-320.png",
+      "bytes": 264366,
+      "sha256": "0f58b30e80936746d5060778e4a6d836beed05e38fd0cc22e0a41519a1591db4"
+    },
+    {
+      "path": "qa/steelers-stats-393.png",
+      "bytes": 364085,
+      "sha256": "67113f689b91afd837bfa540de60da14e8454bb1f4eec18beae534759f55f225"
+    },
+    {
+      "path": "qa/steelers-stats-430.png",
+      "bytes": 402938,
+      "sha256": "070a2d41549ed443f41ffb031960fcd580d223c7a6759f19dbd13510c522e16e"
+    },
+    {
+      "path": "qa/steelers-stats-768.png",
+      "bytes": 613309,
+      "sha256": "c2c81eaefd05188d28ab786844690617ba9fad3bb219478dbfd60462ae719bb7"
+    },
+    {
+      "path": "qa/webkit/chromium-mobile-fallback.json",
+      "bytes": 39458,
+      "sha256": "ecc8ac8efa136afbb8be2d23ece89c54725be0841406c3b42af36ac49f77f044"
+    },
+    {
+      "path": "reference/CHAT_SOURCE.md",
+      "bytes": 1429,
+      "sha256": "dfe4b53f64f5f11b421fabbbcffc0d818d4db9b76abb833d38e41ba7e1c9583d"
+    },
+    {
+      "path": "reference/README.md",
+      "bytes": 741,
+      "sha256": "5e8416680aaeec2e95967fd5c2cc879b9228835c11543e522804e0eb93ecdb84"
+    },
+    {
+      "path": "scripts/check-source-updates.py",
+      "bytes": 8258,
+      "sha256": "d8f1f47049094f48682f011cca2dbb9fd3655190b97137a6bee889b04f091f63"
+    },
+    {
+      "path": "scripts/refresh-data.py",
+      "bytes": 90850,
+      "sha256": "8f6e35edc5eecf6e9fed8d527f9449c9ac2033f2442e63f6a216ecebfaf7191f"
+    }
+  ],
+  "missingWorkingFiles": [],
+  "excluded": [
+    "node_modules",
+    "__pycache__",
+    "npm-debug.log*",
+    ".git configuration/credentials"
+  ],
+  "approvedHomeImplemented": false
+}
