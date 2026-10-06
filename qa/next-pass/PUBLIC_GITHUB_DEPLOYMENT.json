@@ -1,0 +1,154 @@
+{
+  "recordedAt": "2026-10-02T02:23:44.735495+00:00",
+  "retrievalMethod": "Ordinary read-only public GitHub HTTPS run-summary HTML with per-request supplied CA and strict TLS; selected metadata only. Subsequent automated data refresh is separately attributed to the root release agent.",
+  "commit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+  "branch": "main",
+  "workflow": {
+    "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36954044966",
+    "checksUrl": "https://github.com/dinkyjunior/project-dollers/commit/a3012937c32681404da17aed662a0d2cba4c7b6b/checks",
+    "runId": 36954044966,
+    "runNumber": 48,
+    "name": "pages-build-deployment",
+    "title": "pages build and deployment",
+    "status": "Success",
+    "totalDuration": "30s",
+    "jobNames": [
+      "build",
+      "deploy",
+      "report-build-status"
+    ],
+    "deployTargetUrl": "https://dinkyjunior.github.io/project-dollers/"
+  },
+  "verification": {
+    "githubPagesWorkflowSucceeded": true,
+    "exactCommitLinkedInRunSummary": true,
+    "actualHostedWebsiteVerified": true,
+    "hostedHttpAudit": {
+      "path": "qa/next-pass/HOSTED_HTTP_AUDIT.json",
+      "status": "passed",
+      "runtimeManifestMatches": 16,
+      "assetHeadsPassed": 171,
+      "checkedAt": "2026-10-02T02:07:55.567127+00:00"
+    },
+    "actualHostedBrowsers": [
+      {
+        "engine": "Firefox",
+        "version": "146.0.1",
+        "status": "passed",
+        "completedAt": "2026-10-02T02:09:55.288Z",
+        "commit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+        "report": "qa/hosted/firefox/results.json",
+        "sourceSha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+        "viewports": [
+          {
+            "viewport": {
+              "width": 393,
+              "height": 852
+            },
+            "status": "passed",
+            "consoleErrors": 0,
+            "httpErrors": 0,
+            "transportFailures": 0,
+            "externalRequests": 0
+          },
+          {
+            "viewport": {
+              "width": 430,
+              "height": 896
+            },
+            "status": "passed",
+            "consoleErrors": 0,
+            "httpErrors": 0,
+            "transportFailures": 0,
+            "externalRequests": 0
+          }
+        ]
+      },
+      {
+        "engine": "WebKit",
+        "version": "26.0",
+        "status": "passed",
+        "completedAt": "2026-10-02T02:13:57.666Z",
+        "commit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+        "report": "qa/hosted/webkit/results.json",
+        "sourceSha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+        "viewports": [
+          {
+            "viewport": {
+              "width": 393,
+              "height": 852
+            },
+            "status": "passed",
+            "consoleErrors": 0,
+            "httpErrors": 0,
+            "transportFailures": 0,
+            "externalRequests": 0
+          },
+          {
+            "viewport": {
+              "width": 430,
+              "height": 896
+            },
+            "status": "passed",
+            "consoleErrors": 0,
+            "httpErrors": 0,
+            "transportFailures": 0,
+            "externalRequests": 0
+          }
+        ]
+      }
+    ],
+    "limit": "Actual hosted Firefox and genuine WebKit both passed strict TLS on exact a3012937 at both requested viewports. Physical iPhone/Safari controls remain unrun. A subsequent metadata-only data refresh is being separately integrated and targeted-tested; this immutable full-suite proof is not relabeled as a test of that later commit."
+  },
+  "originalMergedPR": {
+    "number": 1,
+    "state": "closed",
+    "draft": true,
+    "merged": true,
+    "merged_at": "2026-10-01T16:14:18Z",
+    "head_sha": "c8bf0d298d5915460a11b6bc1776d3a9a93a0208",
+    "head_ref": "codex-rebuild",
+    "base_ref": "main",
+    "merge_commit_sha": "c8bf0d298d5915460a11b6bc1776d3a9a93a0208",
+    "html_url": "https://github.com/dinkyjunior/project-dollers/pull/1"
+  },
+  "providerPushConfigured": false,
+  "subsequentAutomaticDataRefresh": {
+    "commit": "9633c03cad6d069c51731795a9d098d713d3100a",
+    "snapshotTimestamp": "2026-10-02T02:18:57Z",
+    "source": "Root release agent normal origin/main fetch and POST_RELEASE_AUTO_REFRESH.json recursive audit",
+    "report": "qa/next-pass/POST_RELEASE_AUTO_REFRESH.json",
+    "changeScope": "Three linked data JSON files; retrieval/check/hash/byte metadata changed, factual values identical to the full-suite application release",
+    "comparedFactualLeaves": {
+      "current": 49842,
+      "history": 328354,
+      "provenance": 495
+    },
+    "branchIntegration": "Root safely fast-forwarded codex-rebuild to preserve the incoming 9633c03 refresh; data:check passed.",
+    "targetedHostedVerification": "pending; root will append the final controls-agent result"
+  },
+  "previousPublicCheck": {
+    "fetchedAt": "2026-10-02T01:05:02.699789+00:00",
+    "commit": "f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca",
+    "workflow": {
+      "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36949068486",
+      "checksUrl": "https://github.com/dinkyjunior/project-dollers/commit/f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca/checks",
+      "runId": 36949068486,
+      "runNumber": 43,
+      "name": "pages-build-deployment",
+      "title": "pages build and deployment",
+      "status": "Success",
+      "totalDuration": "29s",
+      "jobNames": [
+        "build",
+        "report-build-status",
+        "deploy"
+      ],
+      "deployTargetUrl": "https://dinkyjunior.github.io/project-dollers/"
+    }
+  },
+  "pullRequestReviewUpdate": {
+    "confirmation": "qa/next-pass/PR_UPDATE_CONFIRMATION.json",
+    "status": "updated and independently confirmed by root"
+  }
+}

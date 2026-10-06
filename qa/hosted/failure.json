@@ -1,14 +1,14 @@
 {
   "status": "failed",
-  "checkedAt": "2026-10-01T16:14:54.630Z",
+  "checkedAt": "2026-10-02T01:05:37.314Z",
   "base": "https://dinkyjunior.github.io/project-dollers/",
   "transportProbe": {
-    "checkedAt": "2026-10-01T16:14:54.630Z",
+    "checkedAt": "2026-10-02T01:05:37.314Z",
     "method": "HEAD",
     "url": "https://dinkyjunior.github.io/project-dollers/",
-    "exitCode": 56,
-    "headers": "HTTP/1.1 403 Forbidden\r\ncontent-length: 16\r\ncontent-type: text/plain\r\ndate: Thu, 01 Oct 2026 16:14:54 GMT\r\nserver: envoy\r\nconnection: close\r\n\r\n",
-    "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+    "exitCode": 0,
+    "headers": "HTTP/1.1 200 OK\r\ndate: Fri, 02 Oct 2026 01:05:37 GMT\r\nserver: envoy\r\n\r\nHTTP/2 200 \r\nserver: envoy\r\ncontent-type: text/html; charset=utf-8\r\nlast-modified: Fri, 02 Oct 2026 01:03:46 GMT\r\naccess-control-allow-origin: *\r\nstrict-transport-security: max-age=31556952\r\netag: \"6abf02f2-50bf\"\r\nexpires: Fri, 02 Oct 2026 01:14:02 GMT\r\ncache-control: max-age=600\r\nx-proxy-cache: MISS\r\nx-github-request-id: 7450:C3D7:56C9:6051:6ABF0301\r\nx-github-edge-region: iad\r\naccept-ranges: bytes\r\nage: 95\r\ndate: Fri, 02 Oct 2026 01:05:37 GMT\r\nvia: 1.1 varnish\r\nx-served-by: cache-chi-klot8100068-CHI\r\nx-cache: HIT\r\nx-cache-hits: 0\r\nx-timer: S1790903137.294414,VS0,VE6\r\nvary: Accept-Encoding\r\nx-fastly-request-id: c5fa5ca0c36a52719d260fde05cc7b8825b956d7\r\ncontent-length: 20671\r\nx-envoy-upstream-service-time: 69\r\n\r\n",
+    "error": ""
   },
   "viewport": {
     "width": 393,
@@ -19,10 +19,10 @@
   "failedRequests": [
     {
       "url": "https://dinkyjunior.github.io/project-dollers/",
-      "failure": "net::ERR_TUNNEL_CONNECTION_FAILED"
+      "failure": "net::ERR_CERT_AUTHORITY_INVALID"
     }
   ],
   "external": [],
   "url": "chrome-error://chromewebdata/",
-  "message": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://dinkyjunior.github.io/project-dollers/#home\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#home\", waiting until \"networkidle\"\u001b[22m\n"
+  "message": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://dinkyjunior.github.io/project-dollers/#home\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#home\", waiting until \"networkidle\"\u001b[22m\n"
 }

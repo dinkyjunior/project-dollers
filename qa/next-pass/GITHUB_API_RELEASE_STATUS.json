@@ -1,0 +1,182 @@
+{
+  "recordedAt": "2026-10-02T02:23:44.735495+00:00",
+  "method": "Read-only authenticated GitHub CLI API; selected nonsecret release metadata. Exact app/run/PR/settings were independently read during this review. Subsequent data-only branch advancement is separately attributed to the root release agent.",
+  "applicationCommit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+  "pages": {
+    "status": "built",
+    "html_url": "https://dinkyjunior.github.io/project-dollers/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "https_enforced": true
+  },
+  "applicationDeployment": {
+    "id": 36954044966,
+    "name": "pages build and deployment",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+    "head_branch": "main",
+    "run_number": 48,
+    "html_url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36954044966",
+    "created_at": "2026-10-02T02:05:58Z",
+    "updated_at": "2026-10-02T02:06:28Z"
+  },
+  "deploymentJobs": [
+    {
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-02T02:06:02Z",
+      "completed_at": "2026-10-02T02:06:15Z"
+    },
+    {
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-02T02:06:19Z",
+      "completed_at": "2026-10-02T02:06:27Z"
+    },
+    {
+      "name": "report-build-status",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-02T02:06:17Z",
+      "completed_at": "2026-10-02T02:06:21Z"
+    }
+  ],
+  "originalPullRequest": {
+    "number": 1,
+    "state": "closed",
+    "draft": true,
+    "merged": true,
+    "merged_at": "2026-10-01T16:14:18Z",
+    "head_sha": "c8bf0d298d5915460a11b6bc1776d3a9a93a0208",
+    "head_ref": "codex-rebuild",
+    "base_ref": "main",
+    "merge_commit_sha": "c8bf0d298d5915460a11b6bc1776d3a9a93a0208",
+    "html_url": "https://github.com/dinkyjunior/project-dollers/pull/1"
+  },
+  "originalPullRequestContext": "PR #1 is the merged original c8bf0d2 release; its frozen merged head does not track the later a3012937 follow-up published on the production branch.",
+  "hostedHttp": {
+    "status": "passed",
+    "report": "qa/next-pass/HOSTED_HTTP_AUDIT.json",
+    "completedAt": "2026-10-02T02:07:55.567127+00:00",
+    "runtimeHashesMatched": 16,
+    "assetHeadsPassed": 171,
+    "historyTransfer": {
+      "observedContentEncoding": "gzip",
+      "observedWireBodyBytes": 233052,
+      "decodedBodyBytes": 6836610,
+      "compressionObserved": true,
+      "wireToDecodedRatio": 0.03409,
+      "note": "Wire size is curl size_download for this actual GET response, not a locally estimated gzip/Brotli size."
+    }
+  },
+  "actualHostedBrowsers": [
+    {
+      "engine": "Firefox",
+      "version": "146.0.1",
+      "status": "passed",
+      "completedAt": "2026-10-02T02:09:55.288Z",
+      "commit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+      "report": "qa/hosted/firefox/results.json",
+      "sourceSha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+      "viewports": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "consoleErrors": 0,
+          "httpErrors": 0,
+          "transportFailures": 0,
+          "externalRequests": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "consoleErrors": 0,
+          "httpErrors": 0,
+          "transportFailures": 0,
+          "externalRequests": 0
+        }
+      ]
+    },
+    {
+      "engine": "WebKit",
+      "version": "26.0",
+      "status": "passed",
+      "completedAt": "2026-10-02T02:13:57.666Z",
+      "commit": "a3012937c32681404da17aed662a0d2cba4c7b6b",
+      "report": "qa/hosted/webkit/results.json",
+      "sourceSha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+      "viewports": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "consoleErrors": 0,
+          "httpErrors": 0,
+          "transportFailures": 0,
+          "externalRequests": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "consoleErrors": 0,
+          "httpErrors": 0,
+          "transportFailures": 0,
+          "externalRequests": 0
+        }
+      ]
+    }
+  ],
+  "subsequentAutomaticDataRefresh": {
+    "commit": "9633c03cad6d069c51731795a9d098d713d3100a",
+    "snapshotTimestamp": "2026-10-02T02:18:57Z",
+    "source": "Root release agent normal origin/main fetch and POST_RELEASE_AUTO_REFRESH.json recursive audit",
+    "report": "qa/next-pass/POST_RELEASE_AUTO_REFRESH.json",
+    "changeScope": "Three linked data JSON files; retrieval/check/hash/byte metadata changed, factual values identical to the full-suite application release",
+    "comparedFactualLeaves": {
+      "current": 49842,
+      "history": 328354,
+      "provenance": 495
+    },
+    "branchIntegration": "Root safely fast-forwarded codex-rebuild to preserve the incoming 9633c03 refresh; data:check passed.",
+    "targetedHostedVerification": "pending; root will append the final controls-agent result"
+  },
+  "limitations": [
+    "Physical iPhone and Safari browser chrome have not been tested.",
+    "Firefox checks viewport/DPR2/touch; genuine WebKit additionally supports isMobile. Neither is physical hardware.",
+    "No upstream provider push relay or live in-game provider is connected."
+  ],
+  "previousApplicationDeployment": {
+    "checkedAt": "2026-10-02T01:19:07.254712+00:00",
+    "deployment": {
+      "conclusion": "success",
+      "created_at": "2026-10-02T01:03:21Z",
+      "event": "dynamic",
+      "head_sha": "f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca",
+      "html_url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36949068486",
+      "id": 36949068486,
+      "status": "completed",
+      "updated_at": "2026-10-02T01:03:50Z"
+    }
+  },
+  "pullRequestReviewUpdate": {
+    "confirmation": "qa/next-pass/PR_UPDATE_CONFIRMATION.json",
+    "status": "updated and independently confirmed by root"
+  }
+}

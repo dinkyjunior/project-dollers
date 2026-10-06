@@ -8,9 +8,13 @@ Player research lazy-loads a checksum-linked full-statistics bundle spanning ver
 
 Browser checks run on open, resume, focus, online return and refresh, plus conditional checks while active. Source monitoring detects published changes around game/provider windows. Genuine live in-game/push data is not configured; provider release cadence is documented. Updates preserve filters, selected weeks, native disclosures, focus and deep scroll. Invalid feeds, render failures and rejected history checksums retain verified data and original source times.
 
-Final local QA passed five viewports at 2026-10-02T00:55:14.553Z; all 16 runtime hashes match. Fifteen data/history, seven source-monitor and eight update behaviour regression groups pass. Independent raw CSV audits and rich UI field comparisons passed. Read `qa/next-pass/README.md` and its independent visual, data, source, control, motion and automatic-update reviews for current evidence.
+Final local QA passed five viewports at 2026-10-02T01:58:02.094Z; all 16 runtime hashes match. Twenty-two data/history/roster-verification, seven source-monitor and eight update behaviour regression groups pass. Independent raw CSV audits, rich UI field comparisons and twelve negative source-verification probes passed. Read `qa/next-pass/README.md` and its independent visual, data, source, control, motion and automatic-update reviews for current evidence.
 
-The saved environment allowlist was found to omit the hosted URL. A concrete network/startup draft was saved with the cloud onboarding skill, preserving existing destinations and setup requirements. It does not change live runtime access by itself. Read `qa/next-pass/ENVIRONMENT_ACCESS.md`; actual hosted and Safari verification require the saved access change and successful retries. Publication status for this follow-up is recorded separately after the final push.
+The final application was published to `codex-rebuild` and `main` as `a3012937c32681404da17aed662a0d2cba4c7b6b`, preserving incoming automatic-data commits. [Pages run 36954044966](https://github.com/dinkyjunior/project-dollers/actions/runs/36954044966) succeeded for that exact commit. GitHub API inspection confirms HTTPS Pages uses `main` / root. Actual hosted HTTP verification passed: 16 runtime hashes match and all 171 assets return 200; the history bundle transfers as 233,052 gzip bytes. Actual hosted Firefox 146 and genuine WebKit 26 passed the full shared suite at both 393×852 and 430×896 with strict TLS, zero console/HTTP/transport errors and zero external runtime requests. See `qa/hosted/README.md` and `qa/next-pass/PUBLICATION_STATUS.md`.
+
+Official Steelers and ESPN checks corroborate all 32 current records/PF/PA and the selected fixture. Nine roster-source differences are explicitly flagged with values, hashes and times. One corroborated departure is excluded from current controls, leaving 76 entries; all 77 original histories remain retained. Official jersey corrections carry source evidence. Optional-source failure never silently implies a departure.
+
+A concrete network/startup draft was saved with the cloud onboarding skill, preserving existing destinations and setup requirements. Saving a draft does not itself prove a live access change. Subsequent verified HTTPS retries now reach the website, API and official browser downloads. Chromium's default certificate trust remains a separate limitation; the persistent-CA import was rejected and not executed. Read `qa/next-pass/ENVIRONMENT_ACCESS.md` for temporary-profile verification and exact limits.
 
 ## Scope and authorization
 
@@ -22,22 +26,22 @@ Approved eight-screen chat render first three panels remain the visual authority
 
 76 genuine native headshots, all 32 team marks and league marks are local optimized assets. The stadium art has no people and is explicitly generated background artwork; no faces were generated. WOFF2 type and native WebP imagery are used at runtime.
 
-Current 2026 data supersedes the static 2025 sample. The replaceable local JSON feed carries all 32 records, full Steelers roster, game/player/team stats, depth and injury/practice context, schedule, recaps and matchup research. A standard-library refresh script and six-hour/manual workflow validate and publish changes. The complete rounded player card remains the football track, including expanded inline research.
+Current 2026 data supersedes the static 2025 sample. The replaceable local JSON feed carries all 32 records, retained Steelers roster, game/player/team stats, depth and injury/practice context, schedule, recaps and matchup research. A standard-library refresh script and source-change workflow validate and publish changes, with fifteen-minute game/provider windows, hourly checks otherwise, manual/event hooks and a six-hour safety refresh. The complete rounded player card remains the football track, including expanded inline research.
 
 ## Validation
 
-Final Chromium QA passes 393×852, 430×896, 320×700, 768×1024 and 1440×1000 at 2× DPR. Five data regressions and snapshot/provenance checks pass. Six current primary captures, tab/detail evidence and before/after sheets are committed under `qa/`. Six available parallel agent slots were used for functional, visual, source, performance, Safari readiness and deployment review.
+Final Chromium QA passes 393×852, 430×896, 320×700, 768×1024 and 1440×1000 at 2× DPR. Twenty-two data regressions and snapshot/provenance checks pass. Actual hosted WebKit and Firefox also pass both primary sizes. Six current primary captures, tab/detail evidence and before/after sheets are committed under `qa/`, plus independent hosted-engine captures. All six available parallel agent roles were used, with independent source and release follow-up audits.
 
 The exact tested content is recorded by runtime/data hashes in `qa/results.json`; screenshots do not merely refer to the old pre-commit Git HEAD. Independent reports document no current factual discrepancies, clean mobile geometry, authentic images and motion lifecycle checks.
 
-## External verification limits
+## Previous pass publication history (superseded by the follow-up above)
 
 The tested application commit `c8bf0d298d5915460a11b6bc1776d3a9a93a0208` has been published to `codex-rebuild` and `main`, preserving remote history; PR #1's remote head was confirmed at that commit. See `qa/PUBLICATION_STATUS.md` for publication and verification evidence.
 
 Ordinary public GitHub HTML independently confirms PR #1 is merged and Pages build/deployment run #37 succeeded for the exact application commit. Minimal sanitized evidence is saved in `qa/hosted/public-github-status.json`. The Pages workflow succeeded; actual served browser behavior is still unverified.
 
-The exact hosted URL was tested again after publication at 2026-10-01T16:14:54Z. Normal requests still fail at the environment CONNECT tunnel with 403 before receiving a website response; GitHub API requests are Forbidden. A Git push is not a hosted-site verification. `npm run qa:hosted` saves the actual blocked outcome under `qa/hosted/`. Actual hosted verification remains pending accessible network transport. Pages configuration and refresh workflow execution cannot currently be checked through the API.
+The exact hosted URL was tested after the preceding publication at 2026-10-01T16:14:54Z. At that time requests failed at the environment CONNECT tunnel with 403 and the API was inaccessible. These are historical results, superseded by the October 2 hosted HTTP/API evidence above. A Git push alone remains insufficient evidence of hosted behavior.
 
-Official WebKit downloads also return 403. Chromium iPhone touch/3× and compact-height checks passed, but actual Safari/iPhone hardware is unrun. Independent official/second-provider NFL access was blocked; datasets were independently recomputed but not falsely claimed cross-provider confirmed. Forecast, travel itinerary, confirmed inactives and exactly timed historical prices remain unavailable.
+Official WebKit downloads were also blocked in the preceding environment and now succeed. Chromium iPhone touch/3× and compact-height checks passed; physical iPhone/Safari hardware remains unrun. Independent data recomputation does not imply cross-provider confirmation. Forecast, travel itinerary, confirmed inactives and exactly timed historical prices remain unavailable unless a current verified source supplies them.
 
 Read `qa/README.md`, the independent review files and `DEPLOYMENT.md` before continuing. Use the existing checkout; no worktree is needed. Fetch and rebase current `codex-rebuild` before another push.

@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-02T01:03:48Z",
+  "remoteCommit": "a3b7cbf",
+  "testedCommit": "eb1f2904988c44dc3687ae148745015b817a339e",
+  "remoteCurrentSha256": "24f41c666179fb0a405b835186d98bd11e3df9bf305e79d38d87af77f59df299",
+  "testedCurrentSha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+  "auditMethod": "Read-only immutable git-object extraction; recursive remote-field subset comparison permits new history/stat fields but rejects changed/missing existing factual values. No app or generated data changed.",
+  "currentSourceChecks": [
+    {
+      "id": "nflverse_games",
+      "sha256": "759f14a852eb7c27cfcd371f8b31ab9d0e695cd52cdd283521d4fe5f1498a926",
+      "retrievedAt": "2026-10-02T00:34:31Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:31Z",
+      "retrievalTimestampExactlyEqual": true
+    },
+    {
+      "id": "nflverse_teams",
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "retrievedAt": "2026-10-02T00:34:31Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:31Z",
+      "retrievalTimestampExactlyEqual": true
+    },
+    {
+      "id": "nflverse_roster",
+      "sha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+      "retrievedAt": "2026-10-02T00:34:31Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:32Z",
+      "retrievalTimestampExactlyEqual": false
+    },
+    {
+      "id": "nflverse_player_stats",
+      "sha256": "de05005fcd731f2877dee92372d47db62f3dc2c2dc32bf4b476aef41eca81b86",
+      "retrievedAt": "2026-10-02T00:34:31Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:31Z",
+      "retrievalTimestampExactlyEqual": true
+    },
+    {
+      "id": "nflverse_depth",
+      "sha256": "1a1c4149017b2d780b1ac53d2298f97145190019eedc0d66f1cfcf4632762706",
+      "retrievedAt": "2026-10-02T00:34:32Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:33Z",
+      "retrievalTimestampExactlyEqual": false
+    },
+    {
+      "id": "nflverse_injuries",
+      "sha256": "4de401c1e8ba365b834d9e64acb7300606db9a7fb03874ef6bd9cbf5a73702aa",
+      "retrievedAt": "2026-10-02T00:34:32Z",
+      "contentAndSourceContractMatch": true,
+      "testedLocalRetrievedAt": "2026-10-02T00:34:32Z",
+      "retrievalTimestampExactlyEqual": true
+    }
+  ],
+  "factualGroupsChecked": [
+    "retrievedAt",
+    "season",
+    "currentWeek",
+    "throughWeek",
+    "teams",
+    "teamNames",
+    "weeks",
+    "steelers.record",
+    "steelers.schedule",
+    "steelers.last5",
+    "steelers.teamStats",
+    "steelers.upcomingGame",
+    "steelers.injuries",
+    "steelers.depthChart",
+    "steelers.matchup",
+    "roster (all77 original fields recursively, including all core seasonStats and last5 values)"
+  ],
+  "rosterPlayersChecked": 77,
+  "remoteScalarValuesChecked": 30083,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "conclusion": "All current public source content and every original remote factual value are incorporated in the tested extended snapshot. Two identical-content local sources were retrieved one second later; their honest later timestamps are preserved. Restoring the exact tested current/provenance/history pair preserves concurrent remote facts and runtime QA.",
+  "informationalRetrievalMetadataDifferences": [
+    {
+      "path": "sources.nflverse_roster.retrievedAt",
+      "remote": "2026-10-02T00:34:31Z",
+      "testedLocal": "2026-10-02T00:34:32Z",
+      "classification": "Informational: tested local source was independently retrieved later with identical content hash",
+      "localRetrievalLaterBySeconds": 1.0
+    },
+    {
+      "path": "sources.nflverse_depth.retrievedAt",
+      "remote": "2026-10-02T00:34:32Z",
+      "testedLocal": "2026-10-02T00:34:33Z",
+      "classification": "Informational: tested local source was independently retrieved later with identical content hash",
+      "localRetrievalLaterBySeconds": 1.0
+    }
+  ]
+}

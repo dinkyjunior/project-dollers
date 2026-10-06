@@ -1,0 +1,1337 @@
+{
+  "reviewedAt": "2026-10-02T02:02:39Z",
+  "reviewer": "Independent read-only source_crosscheck agent",
+  "assessment": "passed",
+  "materialBlockers": [],
+  "scope": "Roster verification, primary fact preservation, source evidence bindings, failure guards and exact runtime exclusion predicates. DOM and visual rendering belong to separate browser QA.",
+  "inputHashes": {
+    "assets/data/current.json": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+    "assets/data/player-history.json": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90",
+    "assets/data/provenance.json": "a2c4184d3375d0587a15db3b4ce7188642a10f9c8fc4b044cb349ccdd1d257e6",
+    "scripts/refresh-data.py": "8f6e35edc5eecf6e9fed8d527f9449c9ac2033f2442e63f6a216ecebfaf7191f",
+    "qa/data.test.py": "af436ed1c278a1a1e7617cffb6b32ed8d8da3e68ff6a9dbd34f9f1156d20583c",
+    "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95"
+  },
+  "snapshotContext": {
+    "season": 2026,
+    "currentWeek": 4,
+    "throughWeek": 3,
+    "retrievedAt": "2026-10-02T01:51:55Z",
+    "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03"
+  },
+  "summary": {
+    "status": "partial",
+    "sourceIds": [
+      "espn_athlete_4426506",
+      "espn_steelers_roster",
+      "official_steelers_roster"
+    ],
+    "confirmed": 68,
+    "disputed": 9,
+    "unavailable": 0,
+    "retained": 0,
+    "officialRosterCount": 74,
+    "espnRosterCount": 76
+  },
+  "comparisonToIndependentSourceReview": {
+    "report": "qa/next-pass/SECOND_PROVIDER_REVIEW.json",
+    "immutableBaselineCommit": "f3f6af5",
+    "baselineSha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+    "sameNineDisputedGSISIDs": true,
+    "allOriginal77PlayersRetained": true,
+    "allOriginalPlayerFieldsUnchanged": true,
+    "primaryPlayerFieldDifferences": [],
+    "historyPlayersRetained": 77
+  },
+  "all77SourceBindings": [
+    {
+      "playerId": "00-0023459",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0037228",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0035640",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036252",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036894",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036333",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036617",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036504",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0027969",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040231",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0035286",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041393",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040678",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041400",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040160",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0033055",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0035699",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038135",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039167",
+      "status": "disputed",
+      "sourceCount": 3,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039110",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041261",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038577",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036323",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039741",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0033941",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041401",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0034810",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0033886",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040188",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0033729",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0031136",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0034051",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0037336",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0037480",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039358",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041482",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036783",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038645",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039871",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039896",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041565",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0034771",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040203",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041490",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036139",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041398",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0035594",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038558",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0033757",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036862",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041489",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041397",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039739",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039883",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0034277",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040232",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039389",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041396",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036396",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039626",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040176",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040322",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038388",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040341",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0037274",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039457",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039931",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039609",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040527",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039716",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0039555",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0038409",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0041263",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0037382",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036775",
+      "status": "confirmed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0036165",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    },
+    {
+      "playerId": "00-0040618",
+      "status": "disputed",
+      "sourceCount": 2,
+      "primaryHashBound": true,
+      "sourceHashesStatusesAndTimesValid": true,
+      "retained": false,
+      "stale": false
+    }
+  ],
+  "disputedPlayers": [
+    {
+      "playerId": "00-0039167",
+      "name": "Joey Porter Jr.",
+      "primary": {
+        "team": "PIT",
+        "number": "24",
+        "position": "DB",
+        "rosterStatus": "Active"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster",
+          "espn_athlete_4426506"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58",
+          "espn_athlete_4426506": "5ba2d057349e4f5300f7d8bf72b399d17a17916c0f23e8660cf7a520c5f93fec"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": false,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": null,
+        "espnPosition": null,
+        "reportedOtherTeam": {
+          "abbr": "DAL",
+          "name": "Dallas Cowboys",
+          "athleteId": "4426506",
+          "sourceId": "espn_athlete_4426506"
+        },
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "DAL",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Joey Porter Jr.",
+          "espnId": "4426506",
+          "identityJoinMethod": "Published ESPN ID and normalized exact athlete name; birth date compared only when exposed"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039883",
+      "name": "Daequan Hardy",
+      "primary": {
+        "team": "PIT",
+        "number": "31",
+        "position": "DB",
+        "rosterStatus": "Reserve"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "PIT",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Daequan Hardy",
+          "espnId": "4429743",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039626",
+      "name": "Cole Burgess",
+      "primary": {
+        "team": "PIT",
+        "number": "85",
+        "position": "WR",
+        "rosterStatus": "Reserve"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": false,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": null,
+        "officialNumber": null,
+        "officialPosition": null,
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "membership",
+            "primary": "PIT",
+            "official": "No matched entry in complete current roster",
+            "espn": "PIT",
+            "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": null,
+          "espnName": "Cole Burgess",
+          "espnId": "5192448",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038388",
+      "name": "Darius Rush",
+      "primary": {
+        "team": "PIT",
+        "number": "36",
+        "position": "DB",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 38,
+        "officialPosition": "DB",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "36",
+            "official": 38,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Darius Rush",
+          "espnName": "Darius Rush",
+          "espnId": "4362858",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040341",
+      "name": "Doneiko Slaughter",
+      "primary": {
+        "team": "PIT",
+        "number": "40",
+        "position": "DB",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Active",
+        "officialNumber": 40,
+        "officialPosition": "DB",
+        "espnRosterStatus": "defense",
+        "espnPosition": "CB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "rosterStatus",
+            "primary": "Practice squad",
+            "official": "Active",
+            "espn": "defense",
+            "note": "Official current category differs from the primary release; categories retain their source wording."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Doneiko Slaughter",
+          "espnName": "Doneiko Slaughter",
+          "espnId": "4692628",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038409",
+      "name": "Lew Nichols III",
+      "primary": {
+        "team": "PIT",
+        "number": "31",
+        "position": "RB",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Active",
+        "officialNumber": 31,
+        "officialPosition": "RB",
+        "espnRosterStatus": "offense",
+        "espnPosition": "RB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "rosterStatus",
+            "primary": "Practice squad",
+            "official": "Active",
+            "espn": "offense",
+            "note": "Official current category differs from the primary release; categories retain their source wording."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Lew Nichols",
+          "espnName": "Lew Nichols",
+          "espnId": "4428119",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037382",
+      "name": "Brandon Johnson",
+      "primary": {
+        "team": "PIT",
+        "number": "82",
+        "position": "WR",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 89,
+        "officialPosition": "WR",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "82",
+            "official": 89,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Brandon Johnson",
+          "espnName": "Brandon Johnson",
+          "espnId": "4035198",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036165",
+      "name": "Isaiah Hodgins",
+      "primary": {
+        "team": "PIT",
+        "number": "89",
+        "position": "WR",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad",
+        "officialNumber": 82,
+        "officialPosition": "WR",
+        "espnRosterStatus": "practiceSquad",
+        "espnPosition": "WR",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "jersey",
+            "primary": "89",
+            "official": 82,
+            "espn": null,
+            "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Isaiah Hodgins",
+          "espnName": "Isaiah Hodgins",
+          "espnId": "4242540",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040618",
+      "name": "Max Hurleman",
+      "primary": {
+        "team": "PIT",
+        "number": "84",
+        "position": "WR",
+        "rosterStatus": "Practice squad"
+      },
+      "verification": {
+        "status": "disputed",
+        "primaryRosterSha256": "9d3b19d592837cc13d0a9aee4b4dc44a2a6d734936a7f0e6a7c7c55a25c1ee03",
+        "checkedAt": "2026-10-02T01:51:59Z",
+        "retrievedAt": "2026-10-02T01:51:58Z",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "sourceHashes": {
+          "official_steelers_roster": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+          "espn_steelers_roster": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58"
+        },
+        "retained": false,
+        "stale": false,
+        "officialCurrentMembership": true,
+        "espnCurrentMembership": true,
+        "officialRosterStatus": "Practice Squad/Injured",
+        "officialNumber": 84,
+        "officialPosition": "WR",
+        "espnRosterStatus": "injuredReserveOrOut",
+        "espnPosition": "RB",
+        "reportedOtherTeam": null,
+        "issues": [
+          {
+            "field": "position",
+            "primary": "WR",
+            "official": "WR",
+            "espn": "RB",
+            "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts."
+          }
+        ],
+        "note": "Source disagreements are explicit; primary retained records and all historical statistics remain intact.",
+        "evidence": {
+          "officialName": "Max Hurleman",
+          "espnName": "Max Hurleman",
+          "espnId": "4694237",
+          "identityJoinMethod": "ESPN ID or normalized exact name"
+        }
+      }
+    }
+  ],
+  "optionalSourceMetadata": [
+    {
+      "id": "espn_athlete_4426506",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4426506",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:59Z",
+      "status": "verified",
+      "sha256": "5ba2d057349e4f5300f7d8bf72b399d17a17916c0f23e8660cf7a520c5f93fec",
+      "bytes": 128773
+    },
+    {
+      "id": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:58Z",
+      "status": "verified",
+      "sha256": "8b339b6cda918d3d3e28a98822200b51701e5cebf979712f4f854abb5061cd58",
+      "bytes": 357275
+    },
+    {
+      "id": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "provider": "Pittsburgh Steelers",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-02T01:51:58Z",
+      "status": "verified",
+      "sha256": "c2c5aac7b21edef65490b70acf9d5703da9c05fadd9e37a1a2dc91689d4f2690",
+      "bytes": 448216
+    }
+  ],
+  "failureAndIdentityProbes": {
+    "count": 12,
+    "passed": 12,
+    "items": [
+      {
+        "name": "mixed-source-failure-retains-hash-bound-prior",
+        "passed": true,
+        "detail": "Fresh single-source response does not reset stale evidence age or replace prior bound hashes."
+      },
+      {
+        "name": "new-primary-content-drops-stale-membership",
+        "passed": true,
+        "detail": "New primary source hash blocks prior flags from being carried forward."
+      },
+      {
+        "name": "changed-source-content-rejected",
+        "passed": true,
+        "detail": "Saved verification cannot use mismatched, unavailable or future evidence metadata."
+      },
+      {
+        "name": "unavailable-reference-rejected",
+        "passed": true,
+        "detail": "Saved verification cannot use mismatched, unavailable or future evidence metadata."
+      },
+      {
+        "name": "future-evidence-time-rejected",
+        "passed": true,
+        "detail": "Saved verification cannot use mismatched, unavailable or future evidence metadata."
+      },
+      {
+        "name": "gabriel-alias-requires-birth-surname-jersey",
+        "passed": true,
+        "detail": "Unique corroborated identity joins Gabe/Gabriel without a guessed ID."
+      },
+      {
+        "name": "alias-wrong-birth-date-unmatched",
+        "passed": true,
+        "detail": "A similar surname and jersey cannot establish an alias when birth date differs."
+      },
+      {
+        "name": "existing-id-wrong-birth-date-unmatched",
+        "passed": true,
+        "detail": "Published ESPN ID is rejected if exposed birth date contradicts primary identity."
+      },
+      {
+        "name": "position-family-comparison",
+        "passed": true,
+        "detail": "Broad compatible role families pass; WR versus RB remains a disagreement."
+      },
+      {
+        "name": "departure-wrong-season-rejected",
+        "passed": true,
+        "detail": "Absence plus mismatched identity/season cannot establish another current club."
+      },
+      {
+        "name": "departure-wrong-athlete-name-rejected",
+        "passed": true,
+        "detail": "Absence plus mismatched identity/season cannot establish another current club."
+      },
+      {
+        "name": "departure-exposed-wrong-birth-date-rejected",
+        "passed": true,
+        "detail": "Absence plus mismatched identity/season cannot establish another current club."
+      }
+    ],
+    "syntheticFixtureNote": "Isolated test-only inputs exercised in memory, never published; generator imported with bytecode writes disabled."
+  },
+  "runtimePredicateAudit": {
+    "rawPlayerCount": 77,
+    "predictedVisibleCount": 76,
+    "excluded": [
+      {
+        "id": "00-0039167",
+        "name": "Joey Porter Jr.",
+        "reportedTeam": "DAL"
+      }
+    ],
+    "corruptSourceHashSuppressesNobody": true,
+    "unavailableSourceSuppressesNobody": true,
+    "method": "Execute exact current app.js rosterEvidence/departedRoster helpers with frozen data; DOM rendering independently covered by browser QA."
+  },
+  "designChecks": {
+    "parserCompleteness": "Official parser requires Pittsburgh team identity, recognizable Player/#/Pos rows, minimum 60 total/45 active/5 practice-squad entries, all row cells, valid roles and unique names. ESPN requires correct season/team, all three active groups, minimum 60 total/45 active and unique numeric athlete IDs. Completeness thresholds are defensive heuristics, not a formal provider guarantee.",
+    "aliasIdentity": "Gabe/Gabriel Rubio matched by unique shared birth date/surname/jersey; exact ESPN identity is preferred, contradictory exposed birth dates reject joins. Athlete departure proof checks current season, exact published ID and normalized exact name; missing optional athlete DOB is not invented.",
+    "statusGranularity": "Practice Squad/Injured remains explicit. ESPN injuredReserveOrOut combines availability categories, so it does not by itself prove a transfer from practice squad to injured reserve. Max Hurleman stays disputed for WR versus RB while both source buckets remain visible.",
+    "positionMeaning": "DB/CB/S, DL/DT/DE, OL/C/G/OT, K/PK, RB/FB compatible families do not create false disputes; WR/RB remains a conflict. Multi-role RB/WR may intersect either compatible family.",
+    "retention": "Optional failure retains prior evidence only under identical primary roster content hash, preserves original checkedAt/retrievedAt/sourceHashes, sets retained+stale, and records latest attempt separately. Changed primary hash removes old membership conclusions.",
+    "sourceValidation": "All 77 published verifications match primary roster hash, each source ID/content hash/status/url, and retrieval-before-check timestamp. Negative probes reject mismatched hashes, unavailable references and future evidence times.",
+    "departurePreservation": "Only Joey has false membership in both complete current rosters plus current ESPN other-team proof. Raw primary PIT record and all77 histories remain; exact app predicate excludes only Joey from76 current controls. Hardy and Burgess remain available with source-difference notices."
+  },
+  "nonblockingLimits": [
+    "Historical advanced/last-five/opponent stat values were not independently cross-verified in this roster review.",
+    "Source-body hashes are validated against published metadata and the fetcher computation; this review did not re-download the exact ephemeral 01:51:58\u201359 response bodies. Earlier independent public captures corroborate the same factual conflict rows.",
+    "The generator compares official jersey values with primary values; it preserves ESPN role/status granularity rather than interpreting every provider label as an equal category.",
+    "Membership/status/confidence labels validate their defined roster comparison scope, not a confirmed game-day starter/inactive or comprehensive verification of every player statistic."
+  ]
+}
