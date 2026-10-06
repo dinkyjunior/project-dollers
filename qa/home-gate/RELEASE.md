@@ -1,6 +1,6 @@
 # Approved Page 1 Aperture release
 
-Recorded 7 October 2026 (Australia/Sydney). **Current status: implemented locally; final QA and production publication pending.** No claim that the new Home is live is made by this document.
+Recorded 7 October 2026 (Australia/Sydney). **Current status: deployed and verified on the actual website.** Final local and actual-hosted mobile/desktop/publication checks passed.
 
 The user approved implementing and launching the reattached four-sport Project Dollar — Final Home Concept. Production target:
 
@@ -61,20 +61,26 @@ Two visual refinement cycles and a 320px decorative-overflow correction preceded
 | Final Chromium: all four states at 393×852, 430×896, 320×700, 768×1024, 1440×1000 | Passed against versioned release HTML; all 183 manifest files match current bytes | `local-chromium/results.json`, completed 10:33:19 AEDT, 7 October; preceding pass retained in `pre-cache-chromium/results.json` |
 | Final genuine WebKit: all four states at 393×852 and 430×896 | Passed against versioned release HTML; all 183 manifest files match current bytes | `local-webkit/results.json`, completed 10:35:57 AEDT, 7 October |
 | Existing-app regression suite | Passed at all five sizes before release URL versioning; app code remains unchanged, index hash is explicitly pre-cache | `../results.json`, completed 10:31:21 AEDT, 7 October |
-| Actual hosted WebKit, both mobile sizes/all states | Pending publication | `hosted-webkit/results.json` when completed |
-| Independent served-file hashes, production branch source and workflow review | Pending publication | To be recorded after hosted verification |
+| Actual hosted WebKit, both mobile sizes/all states | Passed; 183 delivered files HTTP 200 with exact tested hashes | `hosted-webkit/results.json`, completed 10:44:18 AEDT, 7 October |
+| Independent actual-hosted 1440×1000 desktop, four states/routes and natural ring/venue motion | Passed; all four sports actually move across natural animation frames, base palettes stay fixed | `independent-hosted/results.json`, completed 10:47:41 AEDT, 7 October |
+| Independent served-file hashes, production branch source and workflow review | Passed; 183 delivered files HTTP 200/SHA exact, both publication branches at application commit, main/root HTTPS Pages and exact successful workflow/jobs | `independent-hosted/results.json` |
 
-New browser reports must record stable exact runtime/data/artwork hashes, zero unplanned console/network/HTTP failures, sharp local imagery, no horizontal overflow, navigation/direct refresh and true live-frame animation changes. Isolated motion/failure harnesses are identified explicitly in `README.md`. Physical iPhone hardware, Safari address/tab controls and a device FPS benchmark remain unrun; browser emulation does not establish those results.
+Both hosted reports record stable exact runtime/data/artwork hashes, zero console/JavaScript/HTTP/external/transport failures, sharp local imagery, no horizontal overflow, navigation/direct refresh and true live-frame animation changes. Existing player research/data/football regression checks also passed on the actual mobile website. Isolated motion/failure harnesses are identified explicitly in `README.md`. Physical iPhone hardware, Safari address/tab controls and a device FPS benchmark remain unrun; browser emulation does not establish those results.
 
-## Publication record — pending
+The actual unpaused eight-capture presentation gallery is [live-captures/index.html](live-captures/index.html), with PNG/hash/time metadata in `live-captures/manifest.json`. It shows four sports at each primary mobile size, without pausing the application for screenshot exposure. These are browser captures, not new concept renders or exported source panels.
+
+The first standalone desktop motion harness mistakenly sampled the static `.home-scene-drift` wrapper rather than the animated visible `img[data-home-scene]`. Its desktop interaction/layout results passed, but that added assertion failed. Original failure/screenshots are retained in `independent-hosted-wrapper-harness/`. The corrected reproducible audit at `independent-hosted/review.cjs` uses running-state guards, the visible image and 30 natural requestAnimationFrame callbacks for every sport; ring and venue transforms change while theme palettes stay fixed. This was a resolved test-selector artifact, not an application defect, and no runtime code was changed to make it pass.
+
+## Publication record — deployed and verified
 
 - Working branch: `codex-rebuild`.
 - Production source: GitHub Pages `main` / repository root, HTTPS enforced.
 - Recovered preceding evidence checkpoint: `808bf015b997715cca4cb103fe1271ceaf732e21`.
 - Integrated automatic-data production baseline: `4f38a25cc9409314744667f92d8fc2d13f35ca40`.
-- Final application commit: pending.
-- Final production/main commit: pending.
-- Exact successful Pages build/deploy run: pending.
-- Actual hosted verification completion: pending.
+- Final application commit: `ec35fb1b6bcc442cfee89716bc6d1948ba28b557`.
+- Published production/main and development/codex-rebuild commit: `ec35fb1b6bcc442cfee89716bc6d1948ba28b557`.
+- Exact successful Pages build/deploy run: [37547594682](https://github.com/dinkyjunior/project-dollers/actions/runs/37547594682), completed 10:38:28 AEDT, 7 October; build, deploy and report jobs succeeded.
+- Actual hosted mobile verification completion: 10:44:18 AEDT, 7 October (`2026-10-06T23:44:18.082Z`).
+- Independent actual-hosted desktop/publication/served-file review completion: 10:47:41 AEDT, 7 October (`2026-10-06T23:47:41.281Z`).
 
-Root fetches/rebases before pushing and preserves any newer production data commits. PR #1 is already merged; it must not be represented as an open Draft PR. A build command or successful Git push alone does not establish hosted behaviour. Replace these pending fields only after the exact release and public-site evidence are available.
+Root freshly fetched/rebased both branches before ordinary non-forced publication, preserving `4f38a25` automatic data. Independent Git-object review confirms all 183 committed runtime files match the final local QA manifest and `assets/app.js` is unchanged from the production baseline. Read-only GitHub API inspection at the recorded verification time confirmed both branches at the exact application commit, Pages built from `main` / root with enforced HTTPS, and the workflow/jobs above successful. PR #1 is already merged; it must not be represented as an open Draft PR. Both actual-hosted browser and served-file audits passed after publication; build/push success alone was not used as release acceptance. Subsequent documentation/evidence-only publication must preserve these exact runtime hashes.

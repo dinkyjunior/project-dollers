@@ -20,7 +20,7 @@ money bag, a circular stadium gate, foreground authentic league mark, league
 heading and research subtitle, illuminated entry/availability control, four
 sport selectors, and compact bottom navigation. The diamond and polished-gold
 material plate remains clean at Retina capture size; official foreground marks
-use local vector/high-resolution assets. Venue photography has native source
+use local vector/high-resolution assets. Generated decorative venue artwork has native source
 resolution above its rendered Retina requirement and preserves its aspect
 ratio through a controlled circular crop.
 
@@ -63,6 +63,11 @@ captures do not establish physical iPhone performance or actual Safari browser
 chrome behaviour. Chromium and genuine WebKit browser reports, plus a separate
 actual hosted-URL verification, establish the tested practical scope. The top
 9:41/status row is decorative concept chrome, not a live device-status feed.
+Some full-viewport snapshots intermittently omit its signal bars, including an
+unpaused capture. Independent unpaused Chromium and WebKit probes confirmed the
+bars render in all four live sport states. A snapshot/compositing issue is
+suspected; a live product failure was not established and the precise cause is
+unconfirmed.
 Pages 2–3 remain functional and receive source/interaction/perimeter regression
 checks; Page 4 is excluded.
 
