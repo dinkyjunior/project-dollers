@@ -22,11 +22,13 @@ Additional captures cover the player accordion, complete-roster bottom, Schedule
 
 `npm test` passed in Chromium 151.0.7922.173 at **393×852, 430×896, 320×700, 768×1024 and 1440×1000**, all at 2× DPR. Browser timezone is Australia/Sydney. The runner blocks every external runtime request.
 
-Coverage includes navigation and entry-specific destinations, history, direct hash loads, refresh, all conference/week controls, all roster position filters, complete 77-player roster expansion, player accordion, all tabs, keyboard navigation, native dialogs, scrolling, local data and image decoding, Retina density/aspect ratios, text clipping, default primary cards above navigation, reduced motion, and feed failure/retry. All four edges and corners of every featured football track and the expanded research card are sampled; the border light shares its phase. No external requests, failed assets, console errors or JavaScript exceptions were recorded.
+Coverage includes navigation and entry-specific destinations, history, direct hash loads, refresh, all conference/week controls, complete current-roster expansion, player accordion, all tabs, keyboard navigation, native dialogs, scrolling, local data and image decoding, Retina density/aspect ratios, text clipping, default primary cards above navigation, reduced motion, and feed failure/retry. Corroborated departures are excluded from current controls while their original history remains retained; unresolved membership reports stay flagged. All four edges and corners of every featured football track and the expanded research card are sampled; the border light shares its phase. No external requests, failed assets, console errors or JavaScript exceptions were recorded.
 
-`python3 qa/data.test.py` passes fifteen regressions covering partial releases, positional allowance denominators, absent columns, unknown values, cross-season chronology, original clubs, opponent filtering, cached corrections and linked history. Seven source-monitor and eight automatic-update behaviour groups pass. `node qa/auto-integration.cjs` independently verifies focus, deep scroll, nested details, atomic rollback and retained data during faults. `npm run data:check` validates the snapshot, provenance and exact lazy-history checksum/source versions.
+`python3 qa/data.test.py` passes twenty-two regressions covering partial releases, positional allowance denominators, absent columns, unknown values, cross-season chronology, original clubs, opponent filtering, cached corrections, linked history, complete roster-source parsing, identity matching, source disagreements and retained verification on failure. Seven source-monitor and eight automatic-update behaviour groups pass. `node qa/auto-integration.cjs` independently verifies focus, deep scroll, nested details, atomic rollback and retained data during faults. `npm run data:check` validates the snapshot, provenance and exact lazy-history checksum/source versions.
 
-[results.json](results.json) records actual run times, source/file hashes, runtime hashes before/after the run, viewport geometry, image density, animation samples and checks. Git HEAD was the preceding draft while the final changes were uncommitted; exact runtime-file hashes establish which content was tested.
+[results.json](results.json) records actual run times, source/file hashes, runtime hashes before/after the run, viewport geometry, image density, animation samples and checks. When tested changes are uncommitted, exact runtime-file hashes establish the tested content independently of the preceding Git HEAD.
+
+Current hosted release evidence is indexed in [next-pass/PUBLICATION_STATUS.md](next-pass/PUBLICATION_STATUS.md). Earlier reviews below retain their original run context; they do not supersede the new actual HTTPS/browser evidence or [official/ESPN source review](next-pass/SECOND_PROVIDER_REVIEW.md).
 
 ## Independent reviews
 
@@ -50,6 +52,10 @@ node qa/data-updates.test.cjs
 node qa/auto-integration.cjs
 npm run data:check
 npm run qa:hosted
+# In this cloud, where Chromium's default proxy-CA trust is unavailable:
+npm run qa:hosted:webkit
+# Optional second-engine verification with disposable certificate profiles:
+PLAYWRIGHT_BROWSERS_PATH=/workspace/.onboarding/playwright-browsers npm run qa:hosted:firefox
 ```
 
 The static app has no compilation step. Local QA serves the parent folder under `/project-dollers/`. Actual hosted verification uses the exact public URL, checks the committed data and the same interactions, and saves transport/access failure as failure. A local pass or Git push does not establish a successful public deployment.

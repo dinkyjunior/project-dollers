@@ -16,16 +16,17 @@ The approved eight-screen chat render remains the visual authority. Its bytes we
 
 - [Home review](HOME_REVIEW.md) and [independent visual review](VISUAL_REVIEW.md).
 - [Data/history audit](DATA_HISTORY_REVIEW.md) and [independent source/runtime review](SOURCE_RUNTIME_REVIEW.md).
+- [Independent official/ESPN verification](SECOND_PROVIDER_REVIEW.md) corroborates all 32 records/PF/PA and the selected fixture, and identifies nine roster-source differences. The generator now records optional source hashes, times and per-player comparisons. Only a departure corroborated by both complete rosters and a matching athlete's current team is excluded from current controls. Other membership/status/position differences remain flagged; official jersey numbers have explicit source evidence. All original statistics and 77 history records remain available internally.
 - [Motion review](MOTION_REVIEW.md), including full-card expanded-stat geometry and reduced motion.
 - [Control audit](CONTROLS_REVIEW.md) and [automatic-update integration review](AUTO_INTEGRATION_REVIEW.md).
 - Final primary screenshots and five-viewport functional report remain in [../README.md](../README.md) and [../results.json](../results.json).
 
-Fifteen data/history regressions, seven source-monitor regressions and eight automatic-update behaviour groups pass. Independent raw-input audits found no mismatches among 1,224 retained game rows and 165,240 numeric source cells. The comparison uses the same provider independently; second-provider confirmation is not claimed.
+Twenty-two data/history/roster-verification regressions, seven source-monitor regressions and eight automatic-update behaviour groups pass. Independent raw-input audits found no mismatches among 1,224 retained game rows and 165,240 numeric source cells. Historical statistics were recomputed from the same provider; the separate current-record/roster cross-check does not imply independent confirmation of advanced historical fields.
 
 ## Update limits
 
 The public source publishes detailed player statistics after games and later corrections. A genuine live in-game/provider push connection is not configured. GitHub scheduled jobs and Pages/browser caching can introduce delays; faster checking does not make unpublished data available. Optional authorised event hooks remain unconnected.
 
-The history file is about 6.84 MB uncompressed and is fetched only when a player is opened. Its gzip estimate is about 193 KB; actual hosted compression has not been verified. Raw historical CSVs are not bundled.
+The history file is about 6.84 MB uncompressed and is fetched only when a player is opened. Final actual hosted GET verification observes a 233,052-byte gzip transfer. Raw historical CSVs are not bundled.
 
-Actual hosted verification and Safari engine/hardware testing must be reported separately. The environment has rejected the public URL at its CONNECT tunnel and official WebKit downloads with 403. A successful local run or deployment workflow is not a hosted-browser pass.
+The final application is published as `a301293`; [Pages run 36954044966](https://github.com/dinkyjunior/project-dollers/actions/runs/36954044966) succeeded. [Actual hosted HTTP audit](HOSTED_HTTP_AUDIT.json) verifies all 16 runtime hashes and 171 asset URLs, with TLS/hostname validation enabled. Actual hosted Firefox 146 and genuine WebKit 26 pass the full suite at both primary phone sizes; [hosted screenshots and reports](../hosted/README.md) record engine qualifications and original delivery. Physical iPhone/Safari hardware remains unrun. See [publication status](PUBLICATION_STATUS.md) for release evidence and limits.

@@ -1,0 +1,3401 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-02T01:15:54.640753+00:00",
+  "completedAt": "2026-10-02T01:15:58.633381+00:00",
+  "base": "https://dinkyjunior.github.io/project-dollers/",
+  "publishedAppCommit": "f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca",
+  "tls": {
+    "certificateVerificationEnabled": true,
+    "hostnameVerificationEnabled": true,
+    "explicitPerRequestCA": "/usr/local/share/ca-certificates/environment-proxy-ca.crt",
+    "systemTrustModified": false,
+    "ignoreCertificateErrors": false
+  },
+  "method": "Ordinary read-only hosted HTTPS requests with curl; GET bodies decoded according to observed Content-Encoding; no browser simulation",
+  "runtimeManifestCount": 16,
+  "runtimeBodyMatches": 16,
+  "runtimeGets": [
+    {
+      "path": "index.html",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 3756,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/index.html",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-50bf\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "3756"
+      },
+      "decodedBodyBytes": 20671,
+      "decodedSha256": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+      "expectedSha256": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/app.js",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 10868,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/app.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-90f5\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "10868"
+      },
+      "decodedBodyBytes": 37109,
+      "decodedSha256": "962184ba433b371653def96ab77adb9674a4f6e7065e480f67e5687560f1706b",
+      "expectedSha256": "962184ba433b371653def96ab77adb9674a4f6e7065e480f67e5687560f1706b",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/styles.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 7775,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/styles.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-7be3\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "7775"
+      },
+      "decodedBodyBytes": 31715,
+      "decodedSha256": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
+      "expectedSha256": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/refinements.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 5288,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/refinements.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-4ddb\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5288"
+      },
+      "decodedBodyBytes": 19931,
+      "decodedSha256": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
+      "expectedSha256": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/premium.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 5091,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/premium.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-498f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5091"
+      },
+      "decodedBodyBytes": 18831,
+      "decodedSha256": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b",
+      "expectedSha256": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/motion.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 1645,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/motion.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1400\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1645"
+      },
+      "decodedBodyBytes": 5120,
+      "decodedSha256": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b",
+      "expectedSha256": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/motion.js",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 1786,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/motion.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-11c2\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1786"
+      },
+      "decodedBodyBytes": 4546,
+      "decodedSha256": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86",
+      "expectedSha256": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/data-updates.js",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 4070,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data-updates.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-3b20\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4070"
+      },
+      "decodedBodyBytes": 15136,
+      "decodedSha256": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+      "expectedSha256": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/player-research.js",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 4583,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/player-research.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-360f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4583"
+      },
+      "decodedBodyBytes": 13839,
+      "decodedSha256": "c289fc735f544440ada17438e473ea0d868300f67d12d4da5cce34a5088e1070",
+      "expectedSha256": "c289fc735f544440ada17438e473ea0d868300f67d12d4da5cce34a5088e1070",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/player-research.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 1934,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/player-research.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1a99\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1934"
+      },
+      "decodedBodyBytes": 6809,
+      "decodedSha256": "66e31e01ed3f8aeb9ff4b03b1ca0460cbc2a858c9f37ad02733a74afb62a1ddb",
+      "expectedSha256": "66e31e01ed3f8aeb9ff4b03b1ca0460cbc2a858c9f37ad02733a74afb62a1ddb",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/home-premium.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 3069,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-premium.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-2ca0\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "3069"
+      },
+      "decodedBodyBytes": 11424,
+      "decodedSha256": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
+      "expectedSha256": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/home-interactions.js",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 868,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-interactions.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-8a9\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "868"
+      },
+      "decodedBodyBytes": 2217,
+      "decodedSha256": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
+      "expectedSha256": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/home-brand.svg",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 5411,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-brand.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-30e3\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5411"
+      },
+      "decodedBodyBytes": 12515,
+      "decodedSha256": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+      "expectedSha256": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/illumination.css",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 1231,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/illumination.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-e9f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1231"
+      },
+      "decodedBodyBytes": 3743,
+      "decodedSha256": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
+      "expectedSha256": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/data/current.json",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 51807,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-fa6c1\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "51807"
+      },
+      "decodedBodyBytes": 1025729,
+      "decodedSha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+      "expectedSha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+      "matchesTestedRuntime": true
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "method": "GET",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 233156,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/player-history.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-685182\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "233156"
+      },
+      "decodedBodyBytes": 6836610,
+      "decodedSha256": "2cffbc6efc5d4c7b418bb35b8369a4f97c51de9072a80493c0fb6687b6a2f27b",
+      "expectedSha256": "2cffbc6efc5d4c7b418bb35b8369a4f97c51de9072a80493c0fb6687b6a2f27b",
+      "matchesTestedRuntime": true
+    }
+  ],
+  "provenanceGet": {
+    "path": "assets/data/provenance.json",
+    "method": "GET",
+    "status": "passed",
+    "httpStatus": 200,
+    "wireBodyBytes": 4887,
+    "tlsVerifyResult": 0,
+    "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/provenance.json",
+    "headers": {
+      "content-type": "application/json; charset=utf-8",
+      "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+      "etag": "W/\"6abf02f2-5347\"",
+      "cache-control": "max-age=600",
+      "content-encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "content-length": "4887"
+    },
+    "decodedBodyBytes": 21319,
+    "decodedSha256": "82b68331aa331eee431785ed222aeffded599c12e616cbacb2d9e70bc9a594c7"
+  },
+  "dataChecks": {
+    "historyMatchesCurrentMetadata": true,
+    "historyMatchesProvenance": true,
+    "currentCanonicalMatchesProvenance": true,
+    "currentAndHistorySourceVersionsMatch": true,
+    "seasonMatches": true,
+    "servedProvenanceMatchesLocalBytes": true
+  },
+  "datasetContext": {
+    "season": 2026,
+    "currentWeek": 4,
+    "throughWeek": 3,
+    "retrievedAt": "2026-10-02T00:34:31Z",
+    "rosterPlayers": 77,
+    "historyPlayers": 77,
+    "historyGameRows": 1224,
+    "historyCoverage": {
+      "firstSeason": 2005,
+      "lastSeason": 2026,
+      "availableSeasons": [
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "unavailableSeasons": [],
+      "status": "verified",
+      "cachedRowsNeedingBackfill": 0
+    },
+    "historySha256": "2cffbc6efc5d4c7b418bb35b8369a4f97c51de9072a80493c0fb6687b6a2f27b",
+    "canonicalSnapshotSha256": "a96581bb2ffed0ab9f14613400504ab2e472dd8298d3a5e6e7f0ca9b7173ccc8"
+  },
+  "historyTransfer": {
+    "observedContentEncoding": "gzip",
+    "observedWireBodyBytes": 233156,
+    "decodedBodyBytes": 6836610,
+    "compressionObserved": true,
+    "wireToDecodedRatio": 0.0341,
+    "note": "Wire size is curl size_download for this GET response, not a locally estimated gzip/Brotli size; headers and decoded checksum are recorded above."
+  },
+  "assetHeadCount": 171,
+  "assetHeadPassed": 171,
+  "assetHeads": [
+    {
+      "path": "assets/app.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/app.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-90f5\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "10868"
+      }
+    },
+    {
+      "path": "assets/data-updates.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data-updates.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-3b20\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4070"
+      }
+    },
+    {
+      "path": "assets/data/current.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-fa6c1\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "51807"
+      }
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/player-history.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-685182\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "233156"
+      }
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/provenance.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-5347\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4887"
+      }
+    },
+    {
+      "path": "assets/data/roster-source.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/roster-source.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-370\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "371"
+      }
+    },
+    {
+      "path": "assets/data/snapshot.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/data/snapshot.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-4223\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "2199"
+      }
+    },
+    {
+      "path": "assets/energy.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/energy.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-995\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "886"
+      }
+    },
+    {
+      "path": "assets/favicon.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/favicon.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-172\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "258"
+      }
+    },
+    {
+      "path": "assets/fonts/Anton-Regular.ttf",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/Anton-Regular.ttf",
+      "headers": {
+        "content-type": "font/ttf",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-29b3c\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "79877"
+      }
+    },
+    {
+      "path": "assets/fonts/Anton-Regular.woff2",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/Anton-Regular.woff2",
+      "headers": {
+        "content-type": "font/woff2",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3ce0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "15584"
+      }
+    },
+    {
+      "path": "assets/fonts/Barlow-BlackItalic.ttf",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/Barlow-BlackItalic.ttf",
+      "headers": {
+        "content-type": "font/ttf",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1bfa4\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "55736"
+      }
+    },
+    {
+      "path": "assets/fonts/Barlow-BlackItalic.woff2",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+      "headers": {
+        "content-type": "font/woff2",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4fd0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "20432"
+      }
+    },
+    {
+      "path": "assets/fonts/Barlow-OFL.txt",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/Barlow-OFL.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1119\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1958"
+      }
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-OFL.txt",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/BarlowCondensed-OFL.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1119\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1958"
+      }
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-SemiBold.ttf",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/BarlowCondensed-SemiBold.ttf",
+      "headers": {
+        "content-type": "font/ttf",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1ab74\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "52115"
+      }
+    },
+    {
+      "path": "assets/fonts/BarlowCondensed-SemiBold.woff2",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/BarlowCondensed-SemiBold.woff2",
+      "headers": {
+        "content-type": "font/woff2",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-49b8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "18872"
+      }
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/fonts/OFL.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1184\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "2011"
+      }
+    },
+    {
+      "path": "assets/football-stadium.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/football-stadium.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-27ae4c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "2600524"
+      }
+    },
+    {
+      "path": "assets/football-stadium.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/football-stadium.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6714c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "422220"
+      }
+    },
+    {
+      "path": "assets/football.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/football.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-882\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "778"
+      }
+    },
+    {
+      "path": "assets/home-brand.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-brand.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-30e3\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5411"
+      }
+    },
+    {
+      "path": "assets/home-interactions.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-interactions.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-8a9\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "868"
+      }
+    },
+    {
+      "path": "assets/home-premium.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/home-premium.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-2ca0\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "3069"
+      }
+    },
+    {
+      "path": "assets/icons.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/icons.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-4e0\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "466"
+      }
+    },
+    {
+      "path": "assets/illumination.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/illumination.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-e9f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1231"
+      }
+    },
+    {
+      "path": "assets/logos/ari.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ari.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4bf0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "19440"
+      }
+    },
+    {
+      "path": "assets/logos/atl.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/atl.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6214\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "25108"
+      }
+    },
+    {
+      "path": "assets/logos/bal.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/bal.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-dab1\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "55985"
+      }
+    },
+    {
+      "path": "assets/logos/bal.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/bal.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8b50\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35664"
+      }
+    },
+    {
+      "path": "assets/logos/buf.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/buf.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9474\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "38004"
+      }
+    },
+    {
+      "path": "assets/logos/buf.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/buf.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-5fc8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24520"
+      }
+    },
+    {
+      "path": "assets/logos/car.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/car.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-575c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "22364"
+      }
+    },
+    {
+      "path": "assets/logos/chi.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/chi.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-d8aa\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "55466"
+      }
+    },
+    {
+      "path": "assets/logos/cin.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/cin.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3702\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "14082"
+      }
+    },
+    {
+      "path": "assets/logos/cle.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/cle.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-17112\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "94482"
+      }
+    },
+    {
+      "path": "assets/logos/cle.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/cle.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-d922\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "55586"
+      }
+    },
+    {
+      "path": "assets/logos/dal.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/dal.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7e74\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32372"
+      }
+    },
+    {
+      "path": "assets/logos/dal.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/dal.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-396a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "14698"
+      }
+    },
+    {
+      "path": "assets/logos/den.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/den.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-5e6c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24172"
+      }
+    },
+    {
+      "path": "assets/logos/det.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/det.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-e079\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "57465"
+      }
+    },
+    {
+      "path": "assets/logos/det.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/det.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-716c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29036"
+      }
+    },
+    {
+      "path": "assets/logos/gb.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/gb.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9914\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "39188"
+      }
+    },
+    {
+      "path": "assets/logos/gb.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/gb.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6308\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "25352"
+      }
+    },
+    {
+      "path": "assets/logos/hou.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/hou.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8bb7\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35767"
+      }
+    },
+    {
+      "path": "assets/logos/hou.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/hou.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-46ec\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "18156"
+      }
+    },
+    {
+      "path": "assets/logos/ind.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ind.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-611a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24858"
+      }
+    },
+    {
+      "path": "assets/logos/jax.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/jax.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-b5d8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "46552"
+      }
+    },
+    {
+      "path": "assets/logos/kc.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/kc.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9d24\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40228"
+      }
+    },
+    {
+      "path": "assets/logos/kc.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/kc.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-40c4\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "16580"
+      }
+    },
+    {
+      "path": "assets/logos/lac.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/lac.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4b92\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "19346"
+      }
+    },
+    {
+      "path": "assets/logos/lar.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/lar.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4f9c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "20380"
+      }
+    },
+    {
+      "path": "assets/logos/lv.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/lv.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-b3ba\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "46010"
+      }
+    },
+    {
+      "path": "assets/logos/mia.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/mia.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a182\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "41346"
+      }
+    },
+    {
+      "path": "assets/logos/min.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/min.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-11036\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "69686"
+      }
+    },
+    {
+      "path": "assets/logos/min.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/min.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-92fc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "37628"
+      }
+    },
+    {
+      "path": "assets/logos/nba.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nba.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4a72\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "19058"
+      }
+    },
+    {
+      "path": "assets/logos/nba.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nba.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-23f6\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "9206"
+      }
+    },
+    {
+      "path": "assets/logos/ne.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ne.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7d53\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32083"
+      }
+    },
+    {
+      "path": "assets/logos/ne.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ne.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-45a6\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "17830"
+      }
+    },
+    {
+      "path": "assets/logos/nfl.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nfl.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4702\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "18178"
+      }
+    },
+    {
+      "path": "assets/logos/nfl.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nfl.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-1a8a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "6794"
+      }
+    },
+    {
+      "path": "assets/logos/no.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/no.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-5548\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "21832"
+      }
+    },
+    {
+      "path": "assets/logos/nrl.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nrl.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-86be\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "34494"
+      }
+    },
+    {
+      "path": "assets/logos/nrl.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nrl.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-440e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "17422"
+      }
+    },
+    {
+      "path": "assets/logos/nyg.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nyg.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-85e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "2142"
+      }
+    },
+    {
+      "path": "assets/logos/nyj.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/nyj.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-177a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "6010"
+      }
+    },
+    {
+      "path": "assets/logos/phi.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/phi.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-112bc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "70332"
+      }
+    },
+    {
+      "path": "assets/logos/phi.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/phi.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-93e0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "37856"
+      }
+    },
+    {
+      "path": "assets/logos/pit.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/pit.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-dd2c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "56620"
+      }
+    },
+    {
+      "path": "assets/logos/pit.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/pit.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7014\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28692"
+      }
+    },
+    {
+      "path": "assets/logos/sea.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/sea.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7d51\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32081"
+      }
+    },
+    {
+      "path": "assets/logos/sea.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/sea.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-44d2\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "17618"
+      }
+    },
+    {
+      "path": "assets/logos/sf.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/sf.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-be3b\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "48699"
+      }
+    },
+    {
+      "path": "assets/logos/sf.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/sf.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-5f40\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24384"
+      }
+    },
+    {
+      "path": "assets/logos/tb.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/tb.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-d5c8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "54728"
+      }
+    },
+    {
+      "path": "assets/logos/ten.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ten.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6a5a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "27226"
+      }
+    },
+    {
+      "path": "assets/logos/ufc.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/ufc.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-9dd\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1236"
+      }
+    },
+    {
+      "path": "assets/logos/wsh.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/logos/wsh.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3dc8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "15816"
+      }
+    },
+    {
+      "path": "assets/motion.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/motion.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1400\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1645"
+      }
+    },
+    {
+      "path": "assets/motion.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/motion.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-11c2\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1786"
+      }
+    },
+    {
+      "path": "assets/player-assets.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/player-assets.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-ba09\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4705"
+      }
+    },
+    {
+      "path": "assets/player-research.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/player-research.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-1a99\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "1934"
+      }
+    },
+    {
+      "path": "assets/player-research.js",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/player-research.js",
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-360f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "4583"
+      }
+    },
+    {
+      "path": "assets/players/13977.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/13977.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8ac0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35520"
+      }
+    },
+    {
+      "path": "assets/players/17372.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/17372.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8d2c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36140"
+      }
+    },
+    {
+      "path": "assets/players/2969961.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/2969961.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-adb0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "44464"
+      }
+    },
+    {
+      "path": "assets/players/2975674.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/2975674.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a1d8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "41432"
+      }
+    },
+    {
+      "path": "assets/players/2978524.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/2978524.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7854\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30804"
+      }
+    },
+    {
+      "path": "assets/players/3045282.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3045282.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7126\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28966"
+      }
+    },
+    {
+      "path": "assets/players/3045373.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3045373.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9320\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "37664"
+      }
+    },
+    {
+      "path": "assets/players/3047495.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3047495.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9fa8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40872"
+      }
+    },
+    {
+      "path": "assets/players/3051397.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3051397.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6fe4\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28644"
+      }
+    },
+    {
+      "path": "assets/players/3116407.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3116407.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6c16\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "27670"
+      }
+    },
+    {
+      "path": "assets/players/3116689.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3116689.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8a72\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35442"
+      }
+    },
+    {
+      "path": "assets/players/3873935.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3873935.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-71b6\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29110"
+      }
+    },
+    {
+      "path": "assets/players/3929846.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3929846.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7376\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29558"
+      }
+    },
+    {
+      "path": "assets/players/3932668.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/3932668.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7250\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29264"
+      }
+    },
+    {
+      "path": "assets/players/4035198.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4035198.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6072\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24690"
+      }
+    },
+    {
+      "path": "assets/players/4035253.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4035253.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6f8e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28558"
+      }
+    },
+    {
+      "path": "assets/players/4035656.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4035656.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-b98e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "47502"
+      }
+    },
+    {
+      "path": "assets/players/4035687.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4035687.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7606\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30214"
+      }
+    },
+    {
+      "path": "assets/players/4037333.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4037333.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-817a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "33146"
+      }
+    },
+    {
+      "path": "assets/players/4037457.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4037457.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6eb2\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28338"
+      }
+    },
+    {
+      "path": "assets/players/4038815.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4038815.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-845c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "33884"
+      }
+    },
+    {
+      "path": "assets/players/4047650.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4047650.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8db4\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36276"
+      }
+    },
+    {
+      "path": "assets/players/4240577.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4240577.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8c46\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35910"
+      }
+    },
+    {
+      "path": "assets/players/4240759.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4240759.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7e3e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32318"
+      }
+    },
+    {
+      "path": "assets/players/4241087.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4241087.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8314\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "33556"
+      }
+    },
+    {
+      "path": "assets/players/4242207.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4242207.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a54e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "42318"
+      }
+    },
+    {
+      "path": "assets/players/4242540.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4242540.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-953c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "38204"
+      }
+    },
+    {
+      "path": "assets/players/4361411.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4361411.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-781a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30746"
+      }
+    },
+    {
+      "path": "assets/players/4361652.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4361652.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8d42\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36162"
+      }
+    },
+    {
+      "path": "assets/players/4362858.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4362858.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-86f2\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "34546"
+      }
+    },
+    {
+      "path": "assets/players/4363034.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4363034.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7648\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30280"
+      }
+    },
+    {
+      "path": "assets/players/4368304.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4368304.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7af2\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "31474"
+      }
+    },
+    {
+      "path": "assets/players/4372056.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4372056.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-96fc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "38652"
+      }
+    },
+    {
+      "path": "assets/players/4372098.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4372098.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6cee\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "27886"
+      }
+    },
+    {
+      "path": "assets/players/4373830.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4373830.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-722a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29226"
+      }
+    },
+    {
+      "path": "assets/players/4426368.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4426368.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-72c8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29384"
+      }
+    },
+    {
+      "path": "assets/players/4426506.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4426506.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-80bc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32956"
+      }
+    },
+    {
+      "path": "assets/players/4426694.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4426694.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-ac84\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "44164"
+      }
+    },
+    {
+      "path": "assets/players/4426882.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4426882.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-967e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "38526"
+      }
+    },
+    {
+      "path": "assets/players/4427170.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4427170.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-80d4\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32980"
+      }
+    },
+    {
+      "path": "assets/players/4428119.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4428119.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7678\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30328"
+      }
+    },
+    {
+      "path": "assets/players/4428909.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4428909.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a37a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "41850"
+      }
+    },
+    {
+      "path": "assets/players/4429164.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4429164.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6770\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "26480"
+      }
+    },
+    {
+      "path": "assets/players/4429490.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4429490.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-82d0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "33488"
+      }
+    },
+    {
+      "path": "assets/players/4429743.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4429743.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9ed0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40656"
+      }
+    },
+    {
+      "path": "assets/players/4429775.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4429775.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8c6c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35948"
+      }
+    },
+    {
+      "path": "assets/players/4429955.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4429955.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-787c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30844"
+      }
+    },
+    {
+      "path": "assets/players/4430802.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4430802.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9c62\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40034"
+      }
+    },
+    {
+      "path": "assets/players/4430947.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4430947.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8f6e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36718"
+      }
+    },
+    {
+      "path": "assets/players/4431258.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4431258.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-d23c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "53820"
+      }
+    },
+    {
+      "path": "assets/players/4431424.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4431424.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-aabc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "43708"
+      }
+    },
+    {
+      "path": "assets/players/4431492.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4431492.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-71e6\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29158"
+      }
+    },
+    {
+      "path": "assets/players/4431590.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4431590.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-75fa\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30202"
+      }
+    },
+    {
+      "path": "assets/players/4566198.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4566198.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7134\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28980"
+      }
+    },
+    {
+      "path": "assets/players/4567979.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4567979.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6a34\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "27188"
+      }
+    },
+    {
+      "path": "assets/players/4569474.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4569474.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-724a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "29258"
+      }
+    },
+    {
+      "path": "assets/players/4569987.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4569987.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a024\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40996"
+      }
+    },
+    {
+      "path": "assets/players/4570044.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4570044.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7f7c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "32636"
+      }
+    },
+    {
+      "path": "assets/players/4570898.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4570898.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8d7a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36218"
+      }
+    },
+    {
+      "path": "assets/players/4573443.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4573443.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7994\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "31124"
+      }
+    },
+    {
+      "path": "assets/players/4608004.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4608004.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-90e0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "37088"
+      }
+    },
+    {
+      "path": "assets/players/4682980.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4682980.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9012\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36882"
+      }
+    },
+    {
+      "path": "assets/players/4685261.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4685261.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8a38\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35384"
+      }
+    },
+    {
+      "path": "assets/players/4685327.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4685327.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7b22\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "31522"
+      }
+    },
+    {
+      "path": "assets/players/4692628.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4692628.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-7ca6\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "31910"
+      }
+    },
+    {
+      "path": "assets/players/4693370.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4693370.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8cf0\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "36080"
+      }
+    },
+    {
+      "path": "assets/players/4694237.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4694237.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-77d2\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30674"
+      }
+    },
+    {
+      "path": "assets/players/4714771.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4714771.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-8a56\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "35414"
+      }
+    },
+    {
+      "path": "assets/players/4820584.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4820584.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-778a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "30602"
+      }
+    },
+    {
+      "path": "assets/players/4917486.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/4917486.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-a71e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "42782"
+      }
+    },
+    {
+      "path": "assets/players/5081338.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/5081338.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6e3c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28220"
+      }
+    },
+    {
+      "path": "assets/players/5081508.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/5081508.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6dc4\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28100"
+      }
+    },
+    {
+      "path": "assets/players/5084849.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/5084849.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-9f10\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "40720"
+      }
+    },
+    {
+      "path": "assets/players/5150136.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/5150136.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-997a\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "39290"
+      }
+    },
+    {
+      "path": "assets/players/5192448.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/5192448.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-6fea\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "28650"
+      }
+    },
+    {
+      "path": "assets/players/8439.webp",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/8439.webp",
+      "headers": {
+        "content-type": "image/webp",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-5e24\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "24100"
+      }
+    },
+    {
+      "path": "assets/players/aaron-rodgers.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/aaron-rodgers.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3940c\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "234508"
+      }
+    },
+    {
+      "path": "assets/players/dk-metcalf.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/dk-metcalf.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-43978\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "276856"
+      }
+    },
+    {
+      "path": "assets/players/jaylen-warren.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/jaylen-warren.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-4d693\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "317075"
+      }
+    },
+    {
+      "path": "assets/players/pat-freiermuth.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/pat-freiermuth.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3ea3e\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "256574"
+      }
+    },
+    {
+      "path": "assets/players/roman-wilson.png",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/players/roman-wilson.png",
+      "headers": {
+        "content-type": "image/png",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-3f1dc\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "258524"
+      }
+    },
+    {
+      "path": "assets/premium.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/premium.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-498f\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5091"
+      }
+    },
+    {
+      "path": "assets/refinements.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/refinements.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-4ddb\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "5288"
+      }
+    },
+    {
+      "path": "assets/roster-energy.svg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/roster-energy.svg",
+      "headers": {
+        "content-type": "image/svg+xml",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-4af\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "593"
+      }
+    },
+    {
+      "path": "assets/sources.json",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/sources.json",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-176f7\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "15729"
+      }
+    },
+    {
+      "path": "assets/stadium.jpg",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/stadium.jpg",
+      "headers": {
+        "content-type": "image/jpeg",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "\"6abf02f2-24ca8\"",
+        "cache-control": "max-age=600",
+        "vary": "Accept-Encoding",
+        "content-length": "150696"
+      }
+    },
+    {
+      "path": "assets/styles.css",
+      "method": "HEAD",
+      "status": "passed",
+      "httpStatus": 200,
+      "wireBodyBytes": 0,
+      "tlsVerifyResult": 0,
+      "effectiveUrl": "https://dinkyjunior.github.io/project-dollers/assets/styles.css",
+      "headers": {
+        "content-type": "text/css; charset=utf-8",
+        "last-modified": "Fri, 02 Oct 2026 01:03:46 GMT",
+        "etag": "W/\"6abf02f2-7be3\"",
+        "cache-control": "max-age=600",
+        "content-encoding": "gzip",
+        "vary": "Accept-Encoding",
+        "content-length": "7775"
+      }
+    }
+  ],
+  "failures": {
+    "http": [],
+    "assetHeads": [],
+    "runtimeHashMismatches": []
+  },
+  "browserVerification": {
+    "status": "not established by this HTTP audit",
+    "limit": "Actual browser certificate trust and browser navigation/render/motion testing are a separate QA task. This report confirms served bytes and asset HTTP/TLS availability only."
+  }
+}

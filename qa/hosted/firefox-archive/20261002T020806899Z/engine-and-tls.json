@@ -1,0 +1,26 @@
+{
+  "engine": "Official Playwright Firefox",
+  "version": "146.0.1",
+  "viewports": [
+    {
+      "width": 393,
+      "height": 852
+    },
+    {
+      "width": 430,
+      "height": 896
+    }
+  ],
+  "deviceScaleFactor": 2,
+  "touch": true,
+  "isMobile": false,
+  "isMobileReason": "Firefox does not support Playwright isMobile. This is a strict hosted mobile-viewport/DPR/touch cross-engine check, not iPhone/Safari emulation.",
+  "tls": {
+    "ignoreHTTPSErrors": false,
+    "hostnameVerificationEnabled": true,
+    "providedCASha256": "7fa2d7d439db8bfa7c191457e61af5e3f4eb412314eb148766ac09e93786e4c3",
+    "providedCAInDisposableTaskProfilesOnly": true,
+    "globalTrustModified": false
+  },
+  "sourceDelivery": "Baseline app/data/assets fetched by the browser from the exact original hosted URL. Shared suite uses deliberate route fault injection only in its separately labeled recovery checks."
+}

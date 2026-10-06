@@ -1,0 +1,216 @@
+{
+  "checkedAt": "2026-10-02T01:42:14.615483+00:00",
+  "method": "GitHub API selected nonsecret workflow metadata",
+  "runs": [
+    {
+      "conclusion": "success",
+      "created_at": "2026-10-02T01:21:19Z",
+      "event": "schedule",
+      "head_sha": "f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca",
+      "html_url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36950530567",
+      "id": 36950530567,
+      "name": "Refresh verified NFL data",
+      "status": "completed",
+      "updated_at": "2026-10-02T01:21:43Z",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "refresh",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out production",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check provider availability without downloading unchanged datasets",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Fetch and validate public source data",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Publish the validated snapshot",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Rebuild the published GitHub Pages site",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out production",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-10-02T01:23:07Z",
+      "event": "workflow_dispatch",
+      "head_sha": "84a83da6488bcbef3c1c2ba026dd9835c88016cb",
+      "html_url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36950675839",
+      "id": 36950675839,
+      "name": "Refresh verified NFL data",
+      "status": "completed",
+      "updated_at": "2026-10-02T01:23:20Z",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "refresh",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out production",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check provider availability without downloading unchanged datasets",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Fetch and validate public source data",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Publish the validated snapshot",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Rebuild the published GitHub Pages site",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out production",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-10-02T01:21:39Z",
+      "event": "dynamic",
+      "head_sha": "84a83da6488bcbef3c1c2ba026dd9835c88016cb",
+      "html_url": "https://github.com/dinkyjunior/project-dollers/actions/runs/36950556739",
+      "id": 36950556739,
+      "name": "pages build and deployment",
+      "status": "completed",
+      "updated_at": "2026-10-02T01:22:12Z",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "build",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload artifact",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "deploy",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Deploy to GitHub Pages",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "report-build-status",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Report Build Status",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Scheduled source monitor published verified changed source files to 84a83da and Pages succeeded; explicit unchanged-source manual monitoring passed. Production changes were fast-forwarded into the local codex checkout before further refinements."
+}

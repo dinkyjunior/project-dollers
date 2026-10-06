@@ -15,7 +15,7 @@ Immediate mission: rebuild/refine Pages 1–3 only. Do not create Page 4.
 
 Work sequentially: Page 1 → visual QA → Page 2 → visual QA → Page 3 → visual QA → integration QA.
 
-Do not push directly to `main`. Keep work on `codex-rebuild` and use the draft PR for review.
+Develop on `codex-rebuild` and preserve PR #1's review history. Its original draft is now merged; current production authorization is recorded below. Publish only tested changes and preserve remote automatic updates.
 
 ## Development and QA
 
@@ -45,3 +45,5 @@ The latest user request authorizes publishing after final QA; it supersedes the 
 ## October 2 follow-up
 
 The user requested full personal last-five and weekly-opponent game statistics, automatic updates, stronger illuminated borders and a sharper/more interactive Home. The lazy history bundle is checksum-linked to the snapshot; do not replace it with guessed figures or treat a missing statistics row as an appearance. Preserve selected-week matchup context and state through refresh. Run `npm run test:data`, `npm run test:sources`, `npm run test:updates`, `npm run test:integration`, `npm test`, and `npm run data:check`. Read the latest `qa/next-pass/` reviews. Actual upstream push remains unconnected and must not be described as live.
+
+The final application release is `a301293`, published on both branches; PR #1 was already merged. Its description records this follow-up separately from the original PR head. Actual hosted WebKit and Firefox QA passed both primary sizes with strict TLS; use `npm run qa:hosted:webkit` and `npm run qa:hosted:firefox` with the documented workspace runtimes in this cloud. Default Chromium's hosted TLS failure is engine-specific and does not supersede those passes. Read `qa/hosted/README.md` and `qa/next-pass/PUBLICATION_STATUS.md`. Fetch/rebase the latest `codex-rebuild` and integrate incoming production data before every subsequent push.

@@ -1,24 +1,38 @@
 {
   "runtimeManifest": {
-    "index.html": "ffe59efa8a5a0c40f23b925a5c7bf4056cbdddbdea93f365353fa1b2d7a66db9",
-    "assets/app.js": "2d9ff38ec18e8a1836efbc954c3603471dc540135ab3dae3a5a90a35846352d1",
+    "index.html": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+    "assets/app.js": "962184ba433b371653def96ab77adb9674a4f6e7065e480f67e5687560f1706b",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
     "assets/refinements.css": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
     "assets/premium.css": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b",
-    "assets/motion.css": "ee45b7ce92f17095b4da4621b2db22e0b7df821743b16d297cf86140197a3070",
-    "assets/motion.js": "382273b61bb7259eedacb355e9ff0d735f02acddb08371986289e65876121a6b",
-    "assets/data/current.json": "6f08940d00b8da0f84a7e2e82f225233489cdbfd4fd58a0ce7b7e10c36dac1a7"
+    "assets/motion.css": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b",
+    "assets/motion.js": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86",
+    "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+    "assets/player-research.js": "c289fc735f544440ada17438e473ea0d868300f67d12d4da5cce34a5088e1070",
+    "assets/player-research.css": "66e31e01ed3f8aeb9ff4b03b1ca0460cbc2a858c9f37ad02733a74afb62a1ddb",
+    "assets/home-premium.css": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
+    "assets/home-interactions.js": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
+    "assets/home-brand.svg": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+    "assets/illumination.css": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
+    "assets/data/current.json": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+    "assets/data/player-history.json": "2cffbc6efc5d4c7b418bb35b8369a4f97c51de9072a80493c0fb6687b6a2f27b"
   },
-  "testScriptSha256": "f9184d7a024f3b2178786aa73855ba0f8294b06f93d394d1c7deb4e9a1ebee39",
-  "worktreeStatus": [],
-  "startedAt": "2026-10-01T16:14:53.962Z",
+  "testScriptSha256": "6878507245950c737d0b6a1f62274719213acd6e16f16dda77d9674802902a00",
+  "worktreeStatus": [
+    "M qa/hosted/failure.json",
+    " M qa/hosted/results.json",
+    "?? qa/hosted/failure-393.png",
+    "?? qa/next-pass/PUBLIC_GITHUB_DEPLOYMENT.json",
+    "?? qa/next-pass/REMOTE_DATA_INTEGRATION.json"
+  ],
+  "startedAt": "2026-10-02T01:05:36.848Z",
   "browser": "151.0.7922.173",
   "mode": "Actual hosted website https://dinkyjunior.github.io/project-dollers/; external runtime requests blocked",
-  "gitHead": "c8bf0d298d5915460a11b6bc1776d3a9a93a0208",
+  "gitHead": "f3f6af595b854d4a5ba3d37e6f7a5d65711e37ca",
   "source": {
     "path": "assets/data/current.json",
-    "sha256": "6f08940d00b8da0f84a7e2e82f225233489cdbfd4fd58a0ce7b7e10c36dac1a7",
-    "bytes": 605128
+    "sha256": "ab82352eebfa82c5c304b161caf04f237b818c85ccbf1218deca2c9e401a09a2",
+    "bytes": 1025729
   },
   "results": [],
   "status": "failed",
@@ -32,12 +46,12 @@
     "failedRequests": [
       {
         "url": "https://dinkyjunior.github.io/project-dollers/",
-        "failure": "net::ERR_TUNNEL_CONNECTION_FAILED"
+        "failure": "net::ERR_CERT_AUTHORITY_INVALID"
       }
     ],
     "external": [],
     "url": "chrome-error://chromewebdata/",
-    "message": "page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://dinkyjunior.github.io/project-dollers/#home\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#home\", waiting until \"networkidle\"\u001b[22m\n"
+    "message": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://dinkyjunior.github.io/project-dollers/#home\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#home\", waiting until \"networkidle\"\u001b[22m\n"
   },
-  "completedAt": "2026-10-01T16:14:54.613Z"
+  "completedAt": "2026-10-02T01:05:37.185Z"
 }

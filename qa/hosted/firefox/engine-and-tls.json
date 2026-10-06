@@ -1,0 +1,83 @@
+{
+  "engine": "Official Playwright Firefox",
+  "startedAt": "2026-10-02T02:08:06.900Z",
+  "base": "https://dinkyjunior.github.io/project-dollers/",
+  "output": "qa/hosted/firefox/",
+  "previousEvidence": "qa/hosted/firefox-archive/20261002T020806899Z",
+  "viewports": [
+    {
+      "width": 393,
+      "height": 852
+    },
+    {
+      "width": 430,
+      "height": 896
+    }
+  ],
+  "deviceScaleFactor": 2,
+  "touch": true,
+  "isMobile": false,
+  "isMobileReason": "Firefox does not support Playwright isMobile. This is mobile viewport/DPR/touch QA, not iPhone or Safari emulation.",
+  "tls": {
+    "ignoreHTTPSErrors": false,
+    "hostnameVerificationEnabled": true,
+    "providedCAUsed": true,
+    "providedCASha256": "7fa2d7d439db8bfa7c191457e61af5e3f4eb412314eb148766ac09e93786e4c3",
+    "trustScope": "Fresh disposable task profiles only",
+    "globalTrustModified": false,
+    "homeRewritten": false
+  },
+  "execution": {
+    "selfElevation": false,
+    "browserSandboxDisableFlags": [],
+    "processNamespaceNote": "This cloud may require sanctioned scoped execution because its read-only UID namespace prevents Firefox startup. The helper does not bypass that review."
+  },
+  "sourceDelivery": "Baseline app/data/assets are fetched directly by the browser from the original hosted URL. Only separately labeled shared-suite recovery scenarios inject deliberate request failures.",
+  "hashesBefore": {
+    "index.html": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+    "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
+    "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
+    "assets/refinements.css": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
+    "assets/premium.css": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b",
+    "assets/motion.css": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b",
+    "assets/motion.js": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86",
+    "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+    "assets/player-research.js": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae",
+    "assets/player-research.css": "bd3240e0ac4453785ed8ffe91bfe8a23ee2ab4d3f7dd731f1de845c606e2b01c",
+    "assets/home-premium.css": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
+    "assets/home-interactions.js": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
+    "assets/home-brand.svg": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+    "assets/illumination.css": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
+    "assets/data/current.json": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+    "assets/data/player-history.json": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90",
+    "qa/run.cjs": "55fa69e720623c7bafa094649ce5390bb2b8a011f430c06ca886260fc411fc0d",
+    "qa/hosted-firefox.cjs": "b3fcc0bb8cc7265d82d1002ca4eb52ea9eaadcea651e60ab355685d541a82e91",
+    "suppliedCACertificate": "7fa2d7d439db8bfa7c191457e61af5e3f4eb412314eb148766ac09e93786e4c3"
+  },
+  "browserVersion": "146.0.1",
+  "completedAt": "2026-10-02T02:09:55.290Z",
+  "disposableProfileCount": 7,
+  "allTaskProfilesRemoved": true,
+  "hashesAfter": {
+    "index.html": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+    "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
+    "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
+    "assets/refinements.css": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
+    "assets/premium.css": "5ac815475a7269e7f9c087bbe79ebc52cbb42c8a0ad7f2d8bd329b2bf5a24a1b",
+    "assets/motion.css": "f3a4f8fff525d42f56376c9a0145f7172ac3d7574f5e26de079a96ae45c0aa8b",
+    "assets/motion.js": "a4aedbe461010e2edb4970e4dc9db22d6d7ddf527ac49aacd8bc95002a5fea86",
+    "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+    "assets/player-research.js": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae",
+    "assets/player-research.css": "bd3240e0ac4453785ed8ffe91bfe8a23ee2ab4d3f7dd731f1de845c606e2b01c",
+    "assets/home-premium.css": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
+    "assets/home-interactions.js": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
+    "assets/home-brand.svg": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+    "assets/illumination.css": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
+    "assets/data/current.json": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
+    "assets/data/player-history.json": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90",
+    "qa/run.cjs": "55fa69e720623c7bafa094649ce5390bb2b8a011f430c06ca886260fc411fc0d",
+    "qa/hosted-firefox.cjs": "b3fcc0bb8cc7265d82d1002ca4eb52ea9eaadcea651e60ab355685d541a82e91",
+    "suppliedCACertificate": "7fa2d7d439db8bfa7c191457e61af5e3f4eb412314eb148766ac09e93786e4c3"
+  },
+  "hashIntegrityPassed": true
+}
