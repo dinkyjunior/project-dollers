@@ -228,13 +228,14 @@ async function layout(page, label) {
       height: scroll.scrollHeight, clientHeight: scroll.clientHeight,
       documentWidth: document.documentElement.scrollWidth, viewportWidth: innerWidth,
       navBottom: nav.bottom, viewportHeight: innerHeight, navigation, clipped,
+      homeSport: document.querySelector('.page.active[data-page="home"]')?.dataset.homeSport,
     };
   });
   assert.ok(value.width <= value.clientWidth + 1, `${label}: horizontal content overflow ${JSON.stringify(value)}`);
   assert.ok(value.documentWidth <= value.viewportWidth + 1, `${label}: document horizontal overflow`);
   assert.ok(value.navBottom <= value.viewportHeight + 1, `${label}: bottom navigation outside viewport`);
   assert.deepEqual(value.clipped, [], `${label}: internally clipped player/table text`);
-  assert.deepEqual(value.navigation.map((item) => item.label), ["Home", "Teams", "Matchups", "Insights", "More"], `${label}: complete navigation labels`);
+  assert.deepEqual(value.navigation.map((item) => item.label), ["Home", value.homeSport === "ufc" ? "Fighters" : "Teams", "Matchups", "Insights", "More"], `${label}: complete navigation labels`);
   for (const item of value.navigation) {
     assert.ok(item.labelVisible && item.iconVisible && item.opacity > 0 && item.iconOpacity > 0 && item.contained, `${label}: navigation text/icon visibility and bounds ${JSON.stringify(item)}`);
     assert.ok(item.renderedIcon.width > 1 && item.renderedIcon.height > 1, `${label}: navigation SVG has actual painted geometry ${JSON.stringify(item)}`);
@@ -263,7 +264,7 @@ async function capture(page, label, viewport, outputDir, scrollTop = true) {
   });
   const geometry = await layout(page, label);
   const primaryBounds = await page.evaluate((screen) => {
-    const selector = { home: ".sport-card", nfl: "#featured-matchup .game-card, #featured-matchup .bye-card", steelers: ".player-card" }[screen];
+    const selector = { home: ".aperture-stage, .home-entry, .home-sport-option", nfl: "#featured-matchup .game-card, #featured-matchup .bye-card", steelers: ".player-card" }[screen];
     if (!selector) return [];
     const scroll = document.querySelector(".page.active .page-scroll").getBoundingClientRect();
     const nav = document.querySelector(".page.active .bottom-nav").getBoundingClientRect();
@@ -449,18 +450,26 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     await ready(page); await active(page, "home");
     assert.equal(await page.locator(".page").count(), 3, "Only Pages 1–3 are in scope");
     const dataset = await datasetCheck(page, data);
-    assert.equal(await page.locator(".sport-card img").count(), 4);
+    assert.equal(await page.locator("[data-home-select] img").count(), 4);
     captures.home = await capture(page, "home", viewport, outputDir);
     images.home = await imageQuality(page);
-    for (const sport of ['NBA','NRL','UFC']) {
-      await page.locator(`[data-sport-comingsoon="${sport}"]`).click();
+    for (const sport of ['nba','nrl','ufc']) {
+      await page.locator(`[data-home-select="${sport}"]`).click();
       assert.equal(await page.locator('.page.active').getAttribute('data-page'),'home','Coming-soon sport never opens a fake destination');
+      assert.equal(await page.locator('.page.active').getAttribute('data-home-sport'), sport, 'Every sport selector changes the Home environment');
+      assert.equal(await page.locator('[data-home-entry]').isDisabled(), true, 'Coming-soon entry is explicitly disabled');
+      assert.match(await page.locator('[data-home-entry-label]').innerText(), new RegExp(`${sport}.*COMING SOON`, 'i'));
       assert.match(await page.locator('.home-availability').innerText(),new RegExp(`${sport}.*coming soon`,'i'),'Every sport tile gives meaningful availability feedback');
       assert.equal(await page.locator('.home-availability').getAttribute('role'),'status','Availability feedback is announced accessibly');
+      assert.equal(await page.locator('[data-home-teams-label]').innerText(), sport === 'ufc' ? 'Fighters' : 'Teams');
+      assert.doesNotMatch(await page.locator('.page.active').innerText(), /preview only/i, 'Removed preview-only copy never returns');
+      await layout(page, `home-${sport}`);
     }
     await page.keyboard.press('Escape');
     assert.equal(await page.locator('.home-availability').evaluate(element=>element.classList.contains('is-visible')),false,'Escape dismisses sport availability feedback');
-    await page.locator(".nfl-card").click(); await active(page, "nfl");
+    await page.locator('[data-home-select="nfl"]').click();
+    assert.equal(await page.locator('[data-home-entry]').isDisabled(), false, 'NFL entry becomes available again');
+    await page.locator("[data-home-entry]").click(); await active(page, "nfl");
     assert.equal(await page.locator(".stand-row:visible").count(), 5, "Default dashboard preserves five selected-team density");
     assert.equal(await page.locator(".leader-row:visible").count(), 10);
     assert.ok(await page.locator(".steelers-row").count(), "Selected AFC contains Steelers entry point");
@@ -751,7 +760,7 @@ async function runQA({ base, outputDir = __dirname, mode = "Local HTTP under /pr
   const source = sourceSnapshot();
   const history = historySnapshot(source.data);
   const startedAt = new Date().toISOString();
-  const runtimeFiles = ["index.html", "assets/app.js", "assets/styles.css", "assets/refinements.css", "assets/premium.css", "assets/motion.css", "assets/motion.js", "assets/data-updates.js", "assets/player-research.js", "assets/player-research.css", "assets/home-premium.css", "assets/home-interactions.js", "assets/home-brand.svg", "assets/illumination.css", "assets/data/current.json", "assets/data/player-history.json"];
+  const runtimeFiles = ["index.html", "assets/app.js", "assets/styles.css", "assets/refinements.css", "assets/premium.css", "assets/motion.css", "assets/motion.js", "assets/data-updates.js", "assets/player-research.js", "assets/player-research.css", "assets/home-premium.css", "assets/home-interactions.js", "assets/home-gate-motion.css", "assets/home-gate-motion.js", "assets/home/gate-brand.webp", "assets/home/gate-scenes-nfl.webp", "assets/home/gate-scenes-nba.webp", "assets/home/gate-scenes-nrl.webp", "assets/home/gate-scenes-ufc.webp", "assets/home/nfl.svg", "assets/home/nba.svg", "assets/illumination.css", "assets/data/current.json", "assets/data/player-history.json"];
   const runtimeManifest = Object.fromEntries(runtimeFiles.map((file) => [file, sha256(fs.readFileSync(path.join(ROOT, file)))]));
   const report = { runtimeManifest, testScriptSha256: sha256(fs.readFileSync(__filename)), worktreeStatus: execFileSync("git", ["status", "--porcelain"], { cwd: ROOT, encoding: "utf8" }).trim().split("\n").filter(Boolean), startedAt, browser: await browser.version(), mode, gitHead: execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8" }).trim(), source: { path: "assets/data/current.json", sha256: source.sha256, bytes: source.bytes }, results: [] };
   try {

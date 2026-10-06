@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-06T23:36:04.312167+00:00",
+  "baseline": "4f38a25cc9409314744667f92d8fc2d13f35ca40",
+  "preservation": {
+    "nflMarkupByteIdentical": true,
+    "steelersMarkupByteIdentical": true,
+    "appJsUnchanged": true
+  },
+  "checks": [
+    {
+      "command": "npm run test:data",
+      "exitCode": 0,
+      "tests": 22
+    },
+    {
+      "command": "npm run test:sources",
+      "exitCode": 0,
+      "tests": 7
+    },
+    {
+      "command": "npm run test:updates",
+      "exitCode": 0,
+      "behaviorGroups": 8
+    },
+    {
+      "command": "npm run test:integration",
+      "exitCode": 0,
+      "evidence": "../next-pass/auto-update-integration.json"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "viewports": 5,
+      "evidence": "../results.json",
+      "qualification": "Before head-only Home asset URL versioning; runtime code unchanged, final Home suites test versioned HTML."
+    }
+  ]
+}

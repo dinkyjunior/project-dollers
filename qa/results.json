@@ -1,6 +1,6 @@
 {
   "runtimeManifest": {
-    "index.html": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+    "index.html": "0e96081b0e9862146b1246458fd2c38c46e4d455f75cc59cda924468aefd8a04",
     "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
     "assets/refinements.css": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
@@ -10,54 +10,75 @@
     "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
     "assets/player-research.js": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae",
     "assets/player-research.css": "bd3240e0ac4453785ed8ffe91bfe8a23ee2ab4d3f7dd731f1de845c606e2b01c",
-    "assets/home-premium.css": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
-    "assets/home-interactions.js": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
-    "assets/home-brand.svg": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+    "assets/home-premium.css": "d67b4991693d75b4798203a5aaf0e5eba7bb5b9c87a62187dd4b03b845b68aee",
+    "assets/home-interactions.js": "6c5a7b69c8de22bbd217dae847f3692da7f0294c71b262aa46fa9240cdc4ad77",
+    "assets/home-gate-motion.css": "130a9c4f968c30f0aab5018da694eda213c608ac9c60666f90e79aff2946f0d7",
+    "assets/home-gate-motion.js": "a0bda4cfd2429c5b8fd6c703ea3ec2c31ef98da5205f888dc746c99f6b5f8662",
+    "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68",
+    "assets/home/nfl.svg": "e835a04c98f07a7a3ada5f930a4c78285ac23f6413038add6f84da0cfbc16636",
+    "assets/home/nba.svg": "e547ae528e5e5f30ebb17dbde724537d6d7eb228e937b750b9a06ea3d4791691",
     "assets/illumination.css": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
-    "assets/data/current.json": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
-    "assets/data/player-history.json": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90"
+    "assets/data/current.json": "9beac7a4f68ef8e910c0eebcb1eefed90c895ee78d4198c044baee3b902feeef",
+    "assets/data/player-history.json": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c"
   },
-  "testScriptSha256": "55fa69e720623c7bafa094649ce5390bb2b8a011f430c06ca886260fc411fc0d",
+  "testScriptSha256": "6604124935600e4daa13ccafb3e333a4bfe91cb0c392cae363aa7c8f4b17f709",
   "worktreeStatus": [
     "M CODEX_ENVIRONMENT.md",
     " M CODEX_HANDOFF_STATUS.md",
-    " M assets/app.js",
-    " M assets/data/current.json",
-    " M assets/data/player-history.json",
-    " M assets/data/provenance.json",
-    " M assets/player-research.css",
-    " M assets/player-research.js",
-    " M package.json",
-    " M qa/README.md",
-    " M qa/data.test.py",
-    " M qa/hosted/failure.json",
-    " M qa/hosted/results.json",
-    " M qa/next-pass/ENVIRONMENT_ACCESS.md",
-    " M qa/next-pass/README.md",
+    " M CODEX_START.md",
+    " M DEPLOYMENT.md",
+    " M assets/home-interactions.js",
+    " M assets/home-premium.css",
+    " M index.html",
+    " M qa/data-updates.test.cjs",
+    " M qa/home-393.png",
+    " M qa/home-430.png",
+    " M qa/next-pass/PUBLICATION_STATUS.md",
+    " M qa/next-pass/auto-update-integration.json",
+    " M qa/nfl-393.png",
+    " M qa/nfl-430.png",
+    " M qa/nfl-players-393.png",
+    " M qa/nfl-players-430.png",
+    " M qa/nfl-recap-393.png",
+    " M qa/nfl-recap-430.png",
+    " M qa/results.json",
     " M qa/run.cjs",
-    " M scripts/refresh-data.py",
-    "?? qa/hosted-firefox.cjs",
-    "?? qa/hosted-http-audit.py",
-    "?? qa/hosted-webkit.cjs",
-    "?? qa/hosted/failure-393.png",
-    "?? qa/hosted/firefox/",
-    "?? qa/hosted/webkit/",
-    "?? qa/next-pass/AUTO_REFRESH_EXECUTION.json",
-    "?? qa/next-pass/GITHUB_API_RELEASE_STATUS.json",
-    "?? qa/next-pass/HOSTED_HTTP_AUDIT.json",
-    "?? qa/next-pass/PUBLIC_GITHUB_DEPLOYMENT.json",
-    "?? qa/next-pass/REMOTE_DATA_INTEGRATION.json",
-    "?? qa/next-pass/SECOND_PROVIDER_REVIEW.json",
-    "?? qa/next-pass/SECOND_PROVIDER_REVIEW.md"
+    " M qa/sources-393.png",
+    " M qa/sources-430.png",
+    " M qa/steelers-393.png",
+    " M qa/steelers-430.png",
+    " M qa/steelers-full-bottom-393.png",
+    " M qa/steelers-full-bottom-430.png",
+    " M qa/steelers-game-statistics-393.png",
+    " M qa/steelers-game-statistics-430.png",
+    " M qa/steelers-matchups-393.png",
+    " M qa/steelers-matchups-430.png",
+    " M qa/steelers-opponent-history-393.png",
+    " M qa/steelers-opponent-history-430.png",
+    " M qa/steelers-player-details-393.png",
+    " M qa/steelers-player-details-430.png",
+    " M qa/steelers-schedule-393.png",
+    " M qa/steelers-schedule-430.png",
+    " M qa/steelers-stats-393.png",
+    " M qa/steelers-stats-430.png",
+    "?? assets/home-gate-motion.css",
+    "?? assets/home-gate-motion.js",
+    "?? assets/home/",
+    "?? qa/home-gate.cjs",
+    "?? qa/home-gate/"
   ],
-  "startedAt": "2026-10-02T01:56:19.881Z",
+  "startedAt": "2026-10-06T23:29:27.162Z",
   "browser": "151.0.7922.173",
   "mode": "Local HTTP under /project-dollers/; external requests blocked",
-  "gitHead": "84a83da6488bcbef3c1c2ba026dd9835c88016cb",
+  "gitHead": "808bf015b997715cca4cb103fe1271ceaf732e21",
   "source": {
     "path": "assets/data/current.json",
-    "sha256": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
-    "bytes": 1109241
+    "sha256": "9beac7a4f68ef8e910c0eebcb1eefed90c895ee78d4198c044baee3b902feeef",
+    "bytes": 1196260
   },
   "results": [
     {
@@ -74,7 +95,7 @@
       "cancelledRequests": [],
       "dataset": {
         "season": 2026,
-        "retrievedAt": "2026-10-02T01:51:55Z",
+        "retrievedAt": "2026-10-06T23:17:45Z",
         "rosterEntries": 77,
         "weekKeys": [
           "1",
@@ -96,7 +117,7 @@
           "17",
           "18"
         ],
-        "sourceCount": 30,
+        "sourceCount": 29,
         "provenanceDatasets": [
           "standings",
           "weeklyLeaders",
@@ -119,6 +140,7 @@
         ],
         "disagreementCount": 9,
         "unavailableFields": [
+          "injuries",
           "exactPreGamePrices",
           "weatherForecast",
           "travel"
@@ -127,9 +149,9 @@
       "captures": {
         "home": {
           "file": "home-393.png",
-          "capturedAt": "2026-10-02T01:56:21.375Z",
-          "sha256": "3e5477b2278b5fc7621895daeb8ba8ae3104ff70be927c4e0ed0ad74a87776fb",
-          "bytes": 1177540,
+          "capturedAt": "2026-10-06T23:29:28.737Z",
+          "sha256": "550503d5f5fc1a2ced2f2029aa2cf0c50b89d1a2cde962ad24670f7837b5330d",
+          "bytes": 1324176,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -137,11 +159,11 @@
           "geometry": {
             "width": 393,
             "clientWidth": 393,
-            "height": 791,
-            "clientHeight": 784,
+            "height": 787,
+            "clientHeight": 787,
             "documentWidth": 393,
             "viewportWidth": 393,
-            "navBottom": 845,
+            "navBottom": 844,
             "viewportHeight": 852,
             "navigation": [
               {
@@ -150,13 +172,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(58, 230, 255)",
+                "color": "rgb(38, 203, 255)",
                 "renderedIcon": {
-                  "width": 15.75,
-                  "height": 15.75
+                  "width": 15,
+                  "height": 15
                 },
-                "targetWidth": 75,
-                "targetHeight": 53,
+                "targetWidth": 73.390625,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -166,13 +188,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14,
-                  "height": 15.75
+                  "width": 13.333333015441895,
+                  "height": 15
                 },
-                "targetWidth": 75,
-                "targetHeight": 53,
+                "targetWidth": 73.40625,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -182,13 +204,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.875,
-                  "height": 15.75
+                  "width": 14.166666984558105,
+                  "height": 15
                 },
-                "targetWidth": 75,
-                "targetHeight": 53,
+                "targetWidth": 73.390625,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -198,13 +220,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 17.5,
-                  "height": 15.75
+                  "width": 16.666667938232422,
+                  "height": 15
                 },
-                "targetWidth": 75,
-                "targetHeight": 53,
+                "targetWidth": 73.40625,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -214,86 +236,103 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.700000762939453,
-                  "height": 2.4499998092651367
+                  "width": 14,
+                  "height": 2.3333330154418945
                 },
-                "targetWidth": 75,
-                "targetHeight": 53,
+                "targetWidth": 73.40625,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               }
             ],
-            "clipped": []
+            "clipped": [],
+            "homeSport": "nfl"
           },
           "primaryBounds": [
             {
-              "element": "EXPLORE THE LEAGUE NFL DATA & RESEARCHSTATS · TEAMS · MATCHUPS",
-              "top": 219,
-              "bottom": 421,
+              "element": "",
+              "top": 186,
+              "bottom": 588,
               "visibleTop": 0,
-              "visibleBottom": 784,
+              "visibleBottom": 787,
               "fullyVisible": true
             },
             {
-              "element": "NBA — coming soon",
-              "top": 219,
-              "bottom": 421,
+              "element": "Enter NFL research",
+              "top": 647,
+              "bottom": 695,
               "visibleTop": 0,
-              "visibleBottom": 784,
+              "visibleBottom": 787,
               "fullyVisible": true
             },
             {
-              "element": "NRL — coming soon",
-              "top": 433,
-              "bottom": 635,
+              "element": "Select NFL",
+              "top": 708,
+              "bottom": 783,
               "visibleTop": 0,
-              "visibleBottom": 784,
+              "visibleBottom": 787,
               "fullyVisible": true
             },
             {
-              "element": "UFC — coming soon",
-              "top": 433,
-              "bottom": 635,
+              "element": "Select NBA, coming soon",
+              "top": 708,
+              "bottom": 783,
               "visibleTop": 0,
-              "visibleBottom": 784,
+              "visibleBottom": 787,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select NRL, coming soon",
+              "top": 708,
+              "bottom": 783,
+              "visibleTop": 0,
+              "visibleBottom": 787,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select UFC, coming soon",
+              "top": 708,
+              "bottom": 783,
+              "visibleTop": 0,
+              "visibleBottom": 787,
               "fullyVisible": true
             }
           ],
           "navigationRaster": [
             {
               "label": "Home",
-              "iconBrightPixels": 314,
-              "labelBrightPixels": 275
+              "iconBrightPixels": 241,
+              "labelBrightPixels": 226
             },
             {
               "label": "Teams",
-              "iconBrightPixels": 324,
-              "labelBrightPixels": 323
+              "iconBrightPixels": 301,
+              "labelBrightPixels": 305
             },
             {
               "label": "Matchups",
-              "iconBrightPixels": 313,
-              "labelBrightPixels": 519
+              "iconBrightPixels": 256,
+              "labelBrightPixels": 480
             },
             {
               "label": "Insights",
-              "iconBrightPixels": 282,
-              "labelBrightPixels": 426
+              "iconBrightPixels": 240,
+              "labelBrightPixels": 406
             },
             {
               "label": "More",
-              "iconBrightPixels": 136,
-              "labelBrightPixels": 241
+              "iconBrightPixels": 104,
+              "labelBrightPixels": 240
             }
           ]
         },
         "nfl": {
           "file": "nfl-393.png",
-          "capturedAt": "2026-10-02T01:56:22.224Z",
-          "sha256": "4ac1354258e7592077379cf0d3ee2366acbbc15b713480351570d5db521c2787",
-          "bytes": 564188,
+          "capturedAt": "2026-10-06T23:29:29.891Z",
+          "sha256": "0993cfde4a7485ed87d607c56f859825ac9a63194943d160b0a4e0ece8c15f70",
+          "bytes": 562718,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -431,9 +470,9 @@
         },
         "steelers": {
           "file": "steelers-393.png",
-          "capturedAt": "2026-10-02T01:56:22.768Z",
-          "sha256": "94fc4d7e33ca991ebfce6f4719c3cf1fd4db7f146b5497571fddb943ff7f823c",
-          "bytes": 761486,
+          "capturedAt": "2026-10-06T23:29:30.474Z",
+          "sha256": "b0de938052d531a73459ec27f815a712666937848196f7c856a339d34e3ece73",
+          "bytes": 764449,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -603,9 +642,9 @@
         },
         "steelers-full-bottom": {
           "file": "steelers-full-bottom-393.png",
-          "capturedAt": "2026-10-02T01:56:25.003Z",
-          "sha256": "9d19c598e1fa26996e011b0030b900ea64c81e71dad29a21790056cab9902d6e",
-          "bytes": 804273,
+          "capturedAt": "2026-10-06T23:29:33.145Z",
+          "sha256": "60cc2850d9dd0d2690a1c6ff15b989eb8d472420d4c1227e1472393aa3c073bf",
+          "bytes": 804549,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -613,7 +652,7 @@
           "geometry": {
             "width": 393,
             "clientWidth": 393,
-            "height": 9148,
+            "height": 9264,
             "clientHeight": 784,
             "documentWidth": 393,
             "viewportWidth": 393,
@@ -734,9 +773,9 @@
         },
         "steelers-player-details": {
           "file": "steelers-player-details-393.png",
-          "capturedAt": "2026-10-02T01:56:25.555Z",
-          "sha256": "a60333160eb62202a771bb3819b3f7615128c847dc437b4f13369df42e1ebcae",
-          "bytes": 401028,
+          "capturedAt": "2026-10-06T23:29:33.829Z",
+          "sha256": "59dcda1b800d0ecc8d20263b57510416f8ccff7d14b44e1d39521c2a98a43bf6",
+          "bytes": 400833,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -865,9 +904,9 @@
         },
         "steelers-opponent-history": {
           "file": "steelers-opponent-history-393.png",
-          "capturedAt": "2026-10-02T01:56:25.944Z",
-          "sha256": "5a7ff9aceadb3e5ee9e3d4ca7e0e7154318fb930f36f67cb78c2a80bf08060bc",
-          "bytes": 400766,
+          "capturedAt": "2026-10-06T23:29:34.310Z",
+          "sha256": "cd3cf37f363f6afbf3558fb4c46102575a9ef07cc9c117cd04560d88189583ca",
+          "bytes": 401739,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -996,9 +1035,9 @@
         },
         "steelers-game-statistics": {
           "file": "steelers-game-statistics-393.png",
-          "capturedAt": "2026-10-02T01:56:26.252Z",
-          "sha256": "fbdf10a7860a281a13c757c7f8dde27ad960ba5da726625c74569a55a2bd4cbd",
-          "bytes": 418591,
+          "capturedAt": "2026-10-06T23:29:34.682Z",
+          "sha256": "a1cf87da09afa7204072ebaa370581f6f8c16084c59bf0723e995ea22e419b24",
+          "bytes": 438427,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1006,7 +1045,7 @@
           "geometry": {
             "width": 393,
             "clientWidth": 393,
-            "height": 2938,
+            "height": 2921,
             "clientHeight": 784,
             "documentWidth": 393,
             "viewportWidth": 393,
@@ -1127,9 +1166,9 @@
         },
         "steelers-schedule": {
           "file": "steelers-schedule-393.png",
-          "capturedAt": "2026-10-02T01:56:26.809Z",
-          "sha256": "b5defead4c1e24ec1b9502ed0a0f2331f24032d898bfa1c11cf33114404544fb",
-          "bytes": 271927,
+          "capturedAt": "2026-10-06T23:29:35.389Z",
+          "sha256": "d01c981fde82be8f81352d0ade51a2388d671fec0b0e57fa92647d10760f1662",
+          "bytes": 268679,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1258,9 +1297,9 @@
         },
         "steelers-stats": {
           "file": "steelers-stats-393.png",
-          "capturedAt": "2026-10-02T01:56:27.110Z",
-          "sha256": "67113f689b91afd837bfa540de60da14e8454bb1f4eec18beae534759f55f225",
-          "bytes": 364085,
+          "capturedAt": "2026-10-06T23:29:35.755Z",
+          "sha256": "dba5067f8e0f7e2e7ef14e7851d732ca1516b2184c08e3919a31638d77e47959",
+          "bytes": 370404,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1268,7 +1307,7 @@
           "geometry": {
             "width": 393,
             "clientWidth": 393,
-            "height": 1239,
+            "height": 1043,
             "clientHeight": 784,
             "documentWidth": 393,
             "viewportWidth": 393,
@@ -1389,9 +1428,9 @@
         },
         "steelers-matchups": {
           "file": "steelers-matchups-393.png",
-          "capturedAt": "2026-10-02T01:56:27.423Z",
-          "sha256": "30d8597552082f7dcbb886f1921d7e2e6491c6559ee7794be0b6a7f0cba12b14",
-          "bytes": 492232,
+          "capturedAt": "2026-10-06T23:29:36.080Z",
+          "sha256": "36422934181953d6b6ec1ae1b1d5e2843b27b850d41816c4729f2f1d368d9026",
+          "bytes": 488379,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1399,7 +1438,7 @@
           "geometry": {
             "width": 393,
             "clientWidth": 393,
-            "height": 1458,
+            "height": 1438,
             "clientHeight": 784,
             "documentWidth": 393,
             "viewportWidth": 393,
@@ -1520,9 +1559,9 @@
         },
         "nfl-players": {
           "file": "nfl-players-393.png",
-          "capturedAt": "2026-10-02T01:56:28.904Z",
-          "sha256": "443843b255a293d71057f131da1adf9d6fcce3c4a60cd605ec62a052980b5756",
-          "bytes": 517772,
+          "capturedAt": "2026-10-06T23:29:37.935Z",
+          "sha256": "e8cbc1238f30d50b4b79f8b7d289ebc4c0240a4640eedc5031f80f559d0fa220",
+          "bytes": 521988,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1651,9 +1690,9 @@
         },
         "nfl-recap": {
           "file": "nfl-recap-393.png",
-          "capturedAt": "2026-10-02T01:56:29.281Z",
-          "sha256": "868ddd588e72f037b7b0750a99c13d070e4f2058191a296d37bf338706481686",
-          "bytes": 310185,
+          "capturedAt": "2026-10-06T23:29:38.342Z",
+          "sha256": "40f1193f7fef6bcd56b03e76d72d9f68015c32717510df675f2cdd66041c56a1",
+          "bytes": 309705,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1782,9 +1821,9 @@
         },
         "sources": {
           "file": "sources-393.png",
-          "capturedAt": "2026-10-02T01:56:38.244Z",
-          "sha256": "08ee6a5a393148545debb96398f3e2925489c59dd7170a62c41609cc3decbc67",
-          "bytes": 268087,
+          "capturedAt": "2026-10-06T23:29:48.142Z",
+          "sha256": "eeda19407aff3f133b4129ca460857d5f286c7a7350dbc8551cb4903bec43d25",
+          "bytes": 267817,
           "viewportCssPixels": {
             "width": 393,
             "height": 852
@@ -1915,52 +1954,84 @@
       "images": {
         "home": [
           {
-            "src": "/project-dollers/assets/home-brand.svg",
+            "src": "/project-dollers/assets/home/gate-brand.webp",
             "natural": [
-              550,
-              246
+              1800,
+              693
             ],
             "rendered": [
-              355,
-              158.78125
+              345,
+              132.8125
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 5.217882352941176,
+            "complete": true,
+            "distortion": 0.0000941176470588001
+          },
+          {
+            "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "natural": [
+              1200,
+              1200
+            ],
+            "rendered": [
+              354.2001953125,
+              354.2002258300781
+            ],
+            "objectFit": "cover",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.38791427133556,
+            "complete": true,
+            "distortion": 8.615911539777699e-8
+          },
+          {
+            "src": "/project-dollers/assets/home/nfl.svg",
+            "natural": [
+              500,
+              500
+            ],
+            "rendered": [
+              191.875,
+              210.328125
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.0000035783936591649024
+            "distortion": 0.08773493796894738
           },
           {
-            "src": "/project-dollers/assets/logos/nfl.webp",
+            "src": "/project-dollers/assets/home/nfl.svg",
             "natural": [
               500,
               500
             ],
             "rendered": [
-              111,
-              102
+              43,
+              44
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.901960784313726,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.08823529411764697
+            "distortion": 0.022727272727272707
           },
           {
-            "src": "/project-dollers/assets/logos/nba.webp",
+            "src": "/project-dollers/assets/home/nba.svg",
             "natural": [
-              500,
-              500
+              915,
+              2079
             ],
             "rendered": [
-              102,
-              102
+              43,
+              44
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.901960784313726,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0
+            "distortion": 1.2204918032786884
           },
           {
             "src": "/project-dollers/assets/logos/nrl.webp",
@@ -1969,14 +2040,14 @@
               500
             ],
             "rendered": [
-              111,
-              102
+              43,
+              44
             ],
             "objectFit": "contain",
             "vector": false,
-            "sourcePixelsPerCssPixel": 4.901960784313726,
+            "sourcePixelsPerCssPixel": 11.627906976744187,
             "complete": true,
-            "distortion": 0.08823529411764697
+            "distortion": 0.022727272727272707
           },
           {
             "src": "/project-dollers/assets/logos/ufc.svg",
@@ -1985,30 +2056,14 @@
               461
             ],
             "rendered": [
-              130,
-              72
+              62,
+              44
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.3755730599316496
-          },
-          {
-            "src": "/project-dollers/assets/football-stadium.webp",
-            "natural": [
-              1983,
-              793
-            ],
-            "rendered": [
-              414.18768310546875,
-              156.943115234375
-            ],
-            "objectFit": "cover",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.787684619523195,
-            "complete": true,
-            "distortion": 0.05537155388328574
+            "distortion": 0.5126849894291754
           }
         ],
         "nfl": [
@@ -2045,7 +2100,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/buf.webp",
+            "src": "/project-dollers/assets/logos/bal.webp",
             "natural": [
               500,
               500
@@ -2061,7 +2116,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/bal.webp",
+            "src": "/project-dollers/assets/logos/buf.webp",
             "natural": [
               500,
               500
@@ -2125,7 +2180,7 @@
             "distortion": 0
           },
           {
-            "src": "/project-dollers/assets/logos/cle.webp",
+            "src": "/project-dollers/assets/logos/ind.webp",
             "natural": [
               500,
               500
@@ -2434,22 +2489,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4685327.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              149,
-              108
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.037037037037037,
-            "complete": true,
-            "distortion": 0.002530864197530791
-          },
-          {
-            "src": "/project-dollers/assets/players/4682980.webp",
             "natural": [
               600,
               436
@@ -3105,6 +3144,22 @@
             "distortion": 0.002530864197530791
           },
           {
+            "src": "/project-dollers/assets/players/4682980.webp",
+            "natural": [
+              600,
+              436
+            ],
+            "rendered": [
+              149,
+              108
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.037037037037037,
+            "complete": true,
+            "distortion": 0.002530864197530791
+          },
+          {
             "src": "/project-dollers/assets/players/4608004.webp",
             "natural": [
               600,
@@ -3218,22 +3273,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4362858.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              149,
-              108
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.037037037037037,
-            "complete": true,
-            "distortion": 0.002530864197530791
-          },
-          {
-            "src": "/project-dollers/assets/players/4692628.webp",
             "natural": [
               600,
               436
@@ -3670,58 +3709,56 @@
           {
             "player": "Aaron Rodgers",
             "playerId": "00-0023459",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2021_16_CLE_GB",
-                "2013_07_CLE_GB",
-                "2009_07_GB_CLE"
+                "2025_09_IND_PIT",
+                "2024_11_IND_NYJ",
+                "2020_11_GB_IND",
+                "2016_09_IND_GB",
+                "2012_05_GB_IND"
               ]
             },
             "priorClubs": [
               "PIT",
+              "NYJ",
               "GB"
             ]
           },
           {
             "player": "Jaylen Warren",
             "playerId": "00-0037228",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
-              "games": 5,
-              "comparedFields": 695,
+              "games": 2,
+              "comparedFields": 278,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2024_14_CLE_PIT",
-                "2024_12_PIT_CLE",
-                "2023_11_PIT_CLE"
+                "2025_09_IND_PIT",
+                "2023_15_PIT_IND"
               ]
             },
             "priorClubs": [
@@ -3731,25 +3768,24 @@
           {
             "player": "DK Metcalf",
             "playerId": "00-0035640",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_16_PIT_DET",
-                "2025_15_MIA_PIT"
+                "2025_16_PIT_DET"
               ]
             },
             "against": {
-              "games": 3,
-              "comparedFields": 417,
+              "games": 2,
+              "comparedFields": 278,
               "gameIds": [
-                "2025_06_CLE_PIT",
-                "2023_08_CLE_SEA",
-                "2019_06_SEA_CLE"
+                "2025_09_IND_PIT",
+                "2021_01_SEA_IND"
               ]
             },
             "priorClubs": [
@@ -3760,53 +3796,48 @@
           {
             "player": "Michael Pittman",
             "playerId": "00-0036252",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
-              "comparedFields": 695,
+              "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_01_ATL_PIT",
                 "2025_18_IND_HOU",
-                "2025_17_JAX_IND",
-                "2025_16_SF_IND"
+                "2025_17_JAX_IND"
               ]
             },
             "against": {
-              "games": 1,
-              "comparedFields": 139,
-              "gameIds": [
-                "2023_07_CLE_IND"
-              ]
+              "games": 0,
+              "comparedFields": 0,
+              "gameIds": []
             },
-            "priorClubs": [
-              "IND"
-            ]
+            "priorClubs": []
           },
           {
             "player": "Pat Freiermuth",
             "playerId": "00-0036894",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
-              "games": 5,
-              "comparedFields": 695,
+              "games": 4,
+              "comparedFields": 561,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2024_14_CLE_PIT",
-                "2024_12_PIT_CLE",
-                "2023_11_PIT_CLE"
+                "2025_09_IND_PIT",
+                "2024_04_PIT_IND",
+                "2023_15_PIT_IND",
+                "2022_12_PIT_IND"
               ]
             },
             "priorClubs": [
@@ -3816,27 +3847,26 @@
           {
             "player": "Alex Highsmith",
             "playerId": "00-0036333",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 720,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
                 "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE",
-                "2025_16_PIT_DET"
+                "2025_17_PIT_CLE"
               ]
             },
             "against": {
-              "games": 5,
-              "comparedFields": 720,
+              "games": 4,
+              "comparedFields": 576,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2024_14_CLE_PIT",
-                "2023_11_PIT_CLE",
-                "2023_02_CLE_PIT"
+                "2025_09_IND_PIT",
+                "2023_15_PIT_IND",
+                "2022_12_PIT_IND",
+                "2020_16_IND_PIT"
               ]
             },
             "priorClubs": [
@@ -3846,31 +3876,31 @@
           {
             "player": "Cameron Johnston",
             "playerId": "00-0033729",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 715,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_15_WAS_NYG",
-                "2025_04_NO_BUF"
+                "2025_15_WAS_NYG"
               ]
             },
             "against": {
-              "games": 4,
-              "comparedFields": 572,
+              "games": 5,
+              "comparedFields": 715,
               "gameIds": [
-                "2023_16_CLE_HOU",
-                "2022_13_CLE_HOU",
-                "2021_02_HOU_CLE",
-                "2020_11_PHI_CLE"
+                "2023_18_HOU_IND",
+                "2022_18_HOU_IND",
+                "2022_01_IND_HOU",
+                "2021_13_IND_HOU",
+                "2021_06_HOU_IND"
               ]
             },
             "priorClubs": [
-              "HOU",
-              "PHI"
+              "HOU"
             ]
           }
         ],
@@ -3879,8 +3909,8 @@
       },
       "performance": {
         "frames": 90,
-        "medianMs": 16.700000000000045,
-        "p95Ms": 16.700000000000273,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.799999999999955,
         "context": "Headless Chromium container observation; not a physical iPhone performance claim"
       },
       "checks": [
@@ -3922,7 +3952,7 @@
       "cancelledRequests": [],
       "dataset": {
         "season": 2026,
-        "retrievedAt": "2026-10-02T01:51:55Z",
+        "retrievedAt": "2026-10-06T23:17:45Z",
         "rosterEntries": 77,
         "weekKeys": [
           "1",
@@ -3944,7 +3974,7 @@
           "17",
           "18"
         ],
-        "sourceCount": 30,
+        "sourceCount": 29,
         "provenanceDatasets": [
           "standings",
           "weeklyLeaders",
@@ -3967,6 +3997,7 @@
         ],
         "disagreementCount": 9,
         "unavailableFields": [
+          "injuries",
           "exactPreGamePrices",
           "weatherForecast",
           "travel"
@@ -3975,9 +4006,9 @@
       "captures": {
         "home": {
           "file": "home-430.png",
-          "capturedAt": "2026-10-02T01:56:43.856Z",
-          "sha256": "bfedc4b11bc3a24167689d63584d81ff2ec18d0af0c7e87044ce4be921a5fd15",
-          "bytes": 1340326,
+          "capturedAt": "2026-10-06T23:29:54.555Z",
+          "sha256": "909b1362bafb4fc4dca375de6c5ed1f5a15ff0be4f1cb7f3b2250461b8b3cda4",
+          "bytes": 1494856,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -3985,11 +4016,11 @@
           "geometry": {
             "width": 430,
             "clientWidth": 430,
-            "height": 834,
-            "clientHeight": 828,
+            "height": 831,
+            "clientHeight": 831,
             "documentWidth": 430,
             "viewportWidth": 430,
-            "navBottom": 889,
+            "navBottom": 888,
             "viewportHeight": 896,
             "navigation": [
               {
@@ -3998,13 +4029,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(58, 230, 255)",
+                "color": "rgb(38, 203, 255)",
                 "renderedIcon": {
-                  "width": 15.75,
-                  "height": 15.75
+                  "width": 15,
+                  "height": 15
                 },
-                "targetWidth": 82.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -4014,13 +4045,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14,
-                  "height": 15.75
+                  "width": 13.333333015441895,
+                  "height": 15
                 },
-                "targetWidth": 82.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.8125,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -4030,13 +4061,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.875,
-                  "height": 15.75
+                  "width": 14.166666984558105,
+                  "height": 15
                 },
-                "targetWidth": 82.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -4046,13 +4077,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 17.5,
-                  "height": 15.75
+                  "width": 16.666667938232422,
+                  "height": 15
                 },
-                "targetWidth": 82.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -4062,86 +4093,103 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.700000762939453,
-                  "height": 2.4499998092651367
+                  "width": 14,
+                  "height": 2.3333330154418945
                 },
-                "targetWidth": 82.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               }
             ],
-            "clipped": []
+            "clipped": [],
+            "homeSport": "nfl"
           },
           "primaryBounds": [
             {
-              "element": "EXPLORE THE LEAGUE NFL DATA & RESEARCHSTATS · TEAMS · MATCHUPS",
-              "top": 231,
-              "bottom": 443,
+              "element": "",
+              "top": 194,
+              "bottom": 625,
               "visibleTop": 0,
-              "visibleBottom": 828,
+              "visibleBottom": 831,
               "fullyVisible": true
             },
             {
-              "element": "NBA — coming soon",
-              "top": 231,
-              "bottom": 443,
+              "element": "Enter NFL research",
+              "top": 688,
+              "bottom": 736,
               "visibleTop": 0,
-              "visibleBottom": 828,
+              "visibleBottom": 831,
               "fullyVisible": true
             },
             {
-              "element": "NRL — coming soon",
-              "top": 455,
-              "bottom": 667,
+              "element": "Select NFL",
+              "top": 750,
+              "bottom": 827,
               "visibleTop": 0,
-              "visibleBottom": 828,
+              "visibleBottom": 831,
               "fullyVisible": true
             },
             {
-              "element": "UFC — coming soon",
-              "top": 455,
-              "bottom": 667,
+              "element": "Select NBA, coming soon",
+              "top": 750,
+              "bottom": 827,
               "visibleTop": 0,
-              "visibleBottom": 828,
+              "visibleBottom": 831,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select NRL, coming soon",
+              "top": 750,
+              "bottom": 827,
+              "visibleTop": 0,
+              "visibleBottom": 831,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select UFC, coming soon",
+              "top": 750,
+              "bottom": 827,
+              "visibleTop": 0,
+              "visibleBottom": 831,
               "fullyVisible": true
             }
           ],
           "navigationRaster": [
             {
               "label": "Home",
-              "iconBrightPixels": 314,
-              "labelBrightPixels": 282
+              "iconBrightPixels": 241,
+              "labelBrightPixels": 237
             },
             {
               "label": "Teams",
-              "iconBrightPixels": 324,
-              "labelBrightPixels": 321
+              "iconBrightPixels": 301,
+              "labelBrightPixels": 310
             },
             {
               "label": "Matchups",
-              "iconBrightPixels": 313,
-              "labelBrightPixels": 514
+              "iconBrightPixels": 256,
+              "labelBrightPixels": 486
             },
             {
               "label": "Insights",
-              "iconBrightPixels": 282,
-              "labelBrightPixels": 407
+              "iconBrightPixels": 240,
+              "labelBrightPixels": 396
             },
             {
               "label": "More",
-              "iconBrightPixels": 136,
-              "labelBrightPixels": 255
+              "iconBrightPixels": 104,
+              "labelBrightPixels": 251
             }
           ]
         },
         "nfl": {
           "file": "nfl-430.png",
-          "capturedAt": "2026-10-02T01:56:44.820Z",
-          "sha256": "4a990dab525a8006d1336686e118148c82c564113a633a63c249776a7dab6f46",
-          "bytes": 604497,
+          "capturedAt": "2026-10-06T23:29:55.828Z",
+          "sha256": "90234a5d60e8a90daeb80c61c62c6ec54b1dddab0f4b2807516300807525d600",
+          "bytes": 601508,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4279,9 +4327,9 @@
         },
         "steelers": {
           "file": "steelers-430.png",
-          "capturedAt": "2026-10-02T01:56:45.388Z",
-          "sha256": "736594bdf63569f9dfd2edd7ff759d370114317f0e458ebb80d6c5869fa1ae02",
-          "bytes": 863087,
+          "capturedAt": "2026-10-06T23:29:56.522Z",
+          "sha256": "2ef42a649b809cb32ba73fda9615b39cfd527c8f8534931b10bc1ab1148313dc",
+          "bytes": 865774,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4451,9 +4499,9 @@
         },
         "steelers-full-bottom": {
           "file": "steelers-full-bottom-430.png",
-          "capturedAt": "2026-10-02T01:56:47.635Z",
-          "sha256": "28d679f7f070f0c1dfd869d31e73aa8af1385cbff26b1ad766f24428c6823377",
-          "bytes": 928349,
+          "capturedAt": "2026-10-06T23:29:59.174Z",
+          "sha256": "de951f16755ace47762eb2a8d853e1c6dfab52c2ee2cfc40fb4988c284bfcc0a",
+          "bytes": 929171,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4461,7 +4509,7 @@
           "geometry": {
             "width": 430,
             "clientWidth": 430,
-            "height": 9528,
+            "height": 9649,
             "clientHeight": 828,
             "documentWidth": 430,
             "viewportWidth": 430,
@@ -4582,9 +4630,9 @@
         },
         "steelers-player-details": {
           "file": "steelers-player-details-430.png",
-          "capturedAt": "2026-10-02T01:56:48.242Z",
-          "sha256": "a481e0329f47c6cdb98d3ddd6500459c6c8d6b14926e2905e4d49c1c3695b1bd",
-          "bytes": 436427,
+          "capturedAt": "2026-10-06T23:29:59.787Z",
+          "sha256": "3cb26050e1df81b482f453b4dc75fe6f70badd0060f611a1b26c892e349194fc",
+          "bytes": 435835,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4713,9 +4761,9 @@
         },
         "steelers-opponent-history": {
           "file": "steelers-opponent-history-430.png",
-          "capturedAt": "2026-10-02T01:56:48.672Z",
-          "sha256": "34095cc779eba0f18ac873905d640780a35f70ebff183c0826779d07612664f3",
-          "bytes": 436028,
+          "capturedAt": "2026-10-06T23:30:00.257Z",
+          "sha256": "128d8a79aa7f783f8dc2d4a96343ab178d9825d473bd885aef3a94893053ab0f",
+          "bytes": 436363,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4844,9 +4892,9 @@
         },
         "steelers-game-statistics": {
           "file": "steelers-game-statistics-430.png",
-          "capturedAt": "2026-10-02T01:56:49.076Z",
-          "sha256": "2821531b524fd830f500c6c74597804fad299d5f37af22fe9f5ebf8a9308d325",
-          "bytes": 469388,
+          "capturedAt": "2026-10-06T23:30:00.706Z",
+          "sha256": "ec0749f0f422df5cd573685a352d07a5151f9dadb6575498ce9cf3007d03827d",
+          "bytes": 468042,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -4975,9 +5023,9 @@
         },
         "steelers-schedule": {
           "file": "steelers-schedule-430.png",
-          "capturedAt": "2026-10-02T01:56:49.884Z",
-          "sha256": "c7ce2d4faa6ec4c74a1128a17f19da15cea1c2ede5528c5a029696a9dd1931ab",
-          "bytes": 277172,
+          "capturedAt": "2026-10-06T23:30:01.508Z",
+          "sha256": "4d149d5c663ddd6f16104b983b4b28af98e1e0ad64e6e94dbd23b8a02ff576d2",
+          "bytes": 274004,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5106,9 +5154,9 @@
         },
         "steelers-stats": {
           "file": "steelers-stats-430.png",
-          "capturedAt": "2026-10-02T01:56:50.193Z",
-          "sha256": "070a2d41549ed443f41ffb031960fcd580d223c7a6759f19dbd13510c522e16e",
-          "bytes": 402938,
+          "capturedAt": "2026-10-06T23:30:01.843Z",
+          "sha256": "554661f7ba7c57866e38c04fd4153d3f35ace0094b8a30239e179d19bc5e0f1d",
+          "bytes": 409363,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5116,7 +5164,7 @@
           "geometry": {
             "width": 430,
             "clientWidth": 430,
-            "height": 1239,
+            "height": 1043,
             "clientHeight": 828,
             "documentWidth": 430,
             "viewportWidth": 430,
@@ -5237,9 +5285,9 @@
         },
         "steelers-matchups": {
           "file": "steelers-matchups-430.png",
-          "capturedAt": "2026-10-02T01:56:50.553Z",
-          "sha256": "9ba87c9af1051be26335a624698bb5ff3288cdbcf0411fbe2364a746624d1c8a",
-          "bytes": 536945,
+          "capturedAt": "2026-10-06T23:30:02.219Z",
+          "sha256": "1a3c7be84ec41f352b75ca6872661c1eeb809ba830f0dbb7b5907a34dcdd2c2f",
+          "bytes": 531579,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5368,9 +5416,9 @@
         },
         "nfl-players": {
           "file": "nfl-players-430.png",
-          "capturedAt": "2026-10-02T01:56:52.142Z",
-          "sha256": "2e95db0a8ba9852fd38a7c84fe42f0bb109fe8e1e24efd1188b52d7e244f3f0a",
-          "bytes": 552254,
+          "capturedAt": "2026-10-06T23:30:03.994Z",
+          "sha256": "dc25adcf092f7a86993a40755f72cf5ab296b24e4c0ba56dd39cd89b5160c070",
+          "bytes": 555730,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5499,9 +5547,9 @@
         },
         "nfl-recap": {
           "file": "nfl-recap-430.png",
-          "capturedAt": "2026-10-02T01:56:52.576Z",
-          "sha256": "ca0e35fdc883f35ef128c305cad14fa958a7e3c53da1f585553621cb0aee76a3",
-          "bytes": 353762,
+          "capturedAt": "2026-10-06T23:30:04.474Z",
+          "sha256": "460b9f333d6ab38b30f273fc8cae3160d7d10d07f1f183ac1387e1291d97187a",
+          "bytes": 353535,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5630,9 +5678,9 @@
         },
         "sources": {
           "file": "sources-430.png",
-          "capturedAt": "2026-10-02T01:56:55.356Z",
-          "sha256": "27353f8756544e8fbb2f14003c6db22b6e1ba87d96559181ff44eb14fd6caae4",
-          "bytes": 316572,
+          "capturedAt": "2026-10-06T23:30:07.867Z",
+          "sha256": "7e36cfd085aa7745d77b8b18f3090b09a1d8f7bfc547f782976e360e1c4fd85b",
+          "bytes": 316251,
           "viewportCssPixels": {
             "width": 430,
             "height": 896
@@ -5763,52 +5811,84 @@
       "images": {
         "home": [
           {
-            "src": "/project-dollers/assets/home-brand.svg",
+            "src": "/project-dollers/assets/home/gate-brand.webp",
             "natural": [
-              550,
-              246
+              1800,
+              693
             ],
             "rendered": [
-              385,
-              172.1875
+              376,
+              144.75
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.787564766839378,
+            "complete": true,
+            "distortion": 0.00006908462867016851
+          },
+          {
+            "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "natural": [
+              1200,
+              1200
+            ],
+            "rendered": [
+              378.58367919921875,
+              378.58367919921875
+            ],
+            "objectFit": "cover",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.16970874850771,
+            "complete": true,
+            "distortion": 0
+          },
+          {
+            "src": "/project-dollers/assets/home/nfl.svg",
+            "natural": [
+              500,
+              500
+            ],
+            "rendered": [
+              202.796875,
+              222.296875
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.00007259528130676429
+            "distortion": 0.08772053138398817
           },
           {
-            "src": "/project-dollers/assets/logos/nfl.webp",
+            "src": "/project-dollers/assets/home/nfl.svg",
             "natural": [
               500,
               500
             ],
             "rendered": [
-              111,
-              108
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.62962962962963,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.02777777777777768
+            "distortion": 0.021739130434782594
           },
           {
-            "src": "/project-dollers/assets/logos/nba.webp",
+            "src": "/project-dollers/assets/home/nba.svg",
             "natural": [
-              500,
-              500
+              915,
+              2079
             ],
             "rendered": [
-              102,
-              108
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.901960784313726,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.05555555555555558
+            "distortion": 1.2227369921596578
           },
           {
             "src": "/project-dollers/assets/logos/nrl.webp",
@@ -5817,14 +5897,14 @@
               500
             ],
             "rendered": [
-              111,
-              108
+              45,
+              46
             ],
             "objectFit": "contain",
             "vector": false,
-            "sourcePixelsPerCssPixel": 4.62962962962963,
+            "sourcePixelsPerCssPixel": 11.11111111111111,
             "complete": true,
-            "distortion": 0.02777777777777768
+            "distortion": 0.021739130434782594
           },
           {
             "src": "/project-dollers/assets/logos/ufc.svg",
@@ -5833,30 +5913,14 @@
               461
             ],
             "rendered": [
-              130,
-              78
+              62,
+              46
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.4236059014753688
-          },
-          {
-            "src": "/project-dollers/assets/football-stadium.webp",
-            "natural": [
-              1983,
-              793
-            ],
-            "rendered": [
-              455.7332763671875,
-              169.73724365234375
-            ],
-            "objectFit": "cover",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.351229332664054,
-            "complete": true,
-            "distortion": 0.07370275729428166
+            "distortion": 0.5338725985844288
           }
         ],
         "nfl": [
@@ -5893,7 +5957,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/buf.webp",
+            "src": "/project-dollers/assets/logos/bal.webp",
             "natural": [
               500,
               500
@@ -5909,7 +5973,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/bal.webp",
+            "src": "/project-dollers/assets/logos/buf.webp",
             "natural": [
               500,
               500
@@ -5973,7 +6037,7 @@
             "distortion": 0
           },
           {
-            "src": "/project-dollers/assets/logos/cle.webp",
+            "src": "/project-dollers/assets/logos/ind.webp",
             "natural": [
               500,
               500
@@ -6282,22 +6346,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4685327.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              155,
-              113
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.8709677419354835,
-            "complete": true,
-            "distortion": 0.003244837758112129
-          },
-          {
-            "src": "/project-dollers/assets/players/4682980.webp",
             "natural": [
               600,
               436
@@ -6953,6 +7001,22 @@
             "distortion": 0.003244837758112129
           },
           {
+            "src": "/project-dollers/assets/players/4682980.webp",
+            "natural": [
+              600,
+              436
+            ],
+            "rendered": [
+              155,
+              113
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.8709677419354835,
+            "complete": true,
+            "distortion": 0.003244837758112129
+          },
+          {
             "src": "/project-dollers/assets/players/4608004.webp",
             "natural": [
               600,
@@ -7066,22 +7130,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4362858.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              155,
-              113
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.8709677419354835,
-            "complete": true,
-            "distortion": 0.003244837758112129
-          },
-          {
-            "src": "/project-dollers/assets/players/4692628.webp",
             "natural": [
               600,
               436
@@ -7518,31 +7566,32 @@
           {
             "player": "Aaron Rodgers",
             "playerId": "00-0023459",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2021_16_CLE_GB",
-                "2013_07_CLE_GB",
-                "2009_07_GB_CLE"
+                "2025_09_IND_PIT",
+                "2024_11_IND_NYJ",
+                "2020_11_GB_IND",
+                "2016_09_IND_GB",
+                "2012_05_GB_IND"
               ]
             },
             "priorClubs": [
               "PIT",
+              "NYJ",
               "GB"
             ]
           }
@@ -7589,7 +7638,7 @@
       "cancelledRequests": [],
       "dataset": {
         "season": 2026,
-        "retrievedAt": "2026-10-02T01:51:55Z",
+        "retrievedAt": "2026-10-06T23:17:45Z",
         "rosterEntries": 77,
         "weekKeys": [
           "1",
@@ -7611,7 +7660,7 @@
           "17",
           "18"
         ],
-        "sourceCount": 30,
+        "sourceCount": 29,
         "provenanceDatasets": [
           "standings",
           "weeklyLeaders",
@@ -7634,6 +7683,7 @@
         ],
         "disagreementCount": 9,
         "unavailableFields": [
+          "injuries",
           "exactPreGamePrices",
           "weatherForecast",
           "travel"
@@ -7642,9 +7692,9 @@
       "captures": {
         "home": {
           "file": "home-320.png",
-          "capturedAt": "2026-10-02T01:56:59.393Z",
-          "sha256": "6c98c457b5c47e59ce2aa041ada70b518eaa56d5de2d8192f9c946691afb53ef",
-          "bytes": 701314,
+          "capturedAt": "2026-10-06T23:30:12.471Z",
+          "sha256": "bb168435f6726bd02bb5db582fb04af2b90bf5d010a831788d08a1b6c1c8ad39",
+          "bytes": 931737,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -7652,11 +7702,11 @@
           "geometry": {
             "width": 320,
             "clientWidth": 320,
-            "height": 728,
-            "clientHeight": 632,
+            "height": 635,
+            "clientHeight": 635,
             "documentWidth": 320,
             "viewportWidth": 320,
-            "navBottom": 693,
+            "navBottom": 692,
             "viewportHeight": 700,
             "navigation": [
               {
@@ -7665,13 +7715,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(58, 230, 255)",
+                "color": "rgb(38, 203, 255)",
                 "renderedIcon": {
-                  "width": 15.75,
-                  "height": 15.75
+                  "width": 15,
+                  "height": 15
                 },
-                "targetWidth": 60.390625,
-                "targetHeight": 53,
+                "targetWidth": 58.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -7681,13 +7731,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14,
-                  "height": 15.75
+                  "width": 13.333333015441895,
+                  "height": 15
                 },
-                "targetWidth": 60.40625,
-                "targetHeight": 53,
+                "targetWidth": 58.8125,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -7697,13 +7747,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.875,
-                  "height": 15.75
+                  "width": 14.166666984558105,
+                  "height": 15
                 },
-                "targetWidth": 60.390625,
-                "targetHeight": 53,
+                "targetWidth": 58.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -7713,13 +7763,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 17.5,
-                  "height": 15.75
+                  "width": 16.666667938232422,
+                  "height": 15
                 },
-                "targetWidth": 60.40625,
-                "targetHeight": 53,
+                "targetWidth": 58.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -7729,86 +7779,103 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.700000762939453,
-                  "height": 2.4499998092651367
+                  "width": 14,
+                  "height": 2.3333330154418945
                 },
-                "targetWidth": 60.40625,
-                "targetHeight": 53,
+                "targetWidth": 58.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               }
             ],
-            "clipped": []
+            "clipped": [],
+            "homeSport": "nfl"
           },
           "primaryBounds": [
             {
-              "element": "EXPLORE THE LEAGUE NFL DATA & RESEARCHSTATS · TEAMS · MATCHUPS",
-              "top": 194,
-              "bottom": 377,
+              "element": "",
+              "top": 161,
+              "bottom": 463,
               "visibleTop": 0,
-              "visibleBottom": 632,
+              "visibleBottom": 635,
               "fullyVisible": true
             },
             {
-              "element": "NBA — coming soon",
-              "top": 194,
-              "bottom": 377,
+              "element": "Enter NFL research",
+              "top": 516,
+              "bottom": 564,
               "visibleTop": 0,
-              "visibleBottom": 632,
+              "visibleBottom": 635,
               "fullyVisible": true
             },
             {
-              "element": "NRL — coming soon",
-              "top": 389,
-              "bottom": 572,
+              "element": "Select NFL",
+              "top": 565,
+              "bottom": 635,
               "visibleTop": 0,
-              "visibleBottom": 632,
+              "visibleBottom": 635,
               "fullyVisible": true
             },
             {
-              "element": "UFC — coming soon",
-              "top": 389,
-              "bottom": 572,
+              "element": "Select NBA, coming soon",
+              "top": 565,
+              "bottom": 635,
               "visibleTop": 0,
-              "visibleBottom": 632,
+              "visibleBottom": 635,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select NRL, coming soon",
+              "top": 565,
+              "bottom": 635,
+              "visibleTop": 0,
+              "visibleBottom": 635,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select UFC, coming soon",
+              "top": 565,
+              "bottom": 635,
+              "visibleTop": 0,
+              "visibleBottom": 635,
               "fullyVisible": true
             }
           ],
           "navigationRaster": [
             {
               "label": "Home",
-              "iconBrightPixels": 314,
-              "labelBrightPixels": 282
+              "iconBrightPixels": 241,
+              "labelBrightPixels": 237
             },
             {
               "label": "Teams",
-              "iconBrightPixels": 324,
-              "labelBrightPixels": 321
+              "iconBrightPixels": 301,
+              "labelBrightPixels": 310
             },
             {
               "label": "Matchups",
-              "iconBrightPixels": 313,
-              "labelBrightPixels": 514
+              "iconBrightPixels": 256,
+              "labelBrightPixels": 486
             },
             {
               "label": "Insights",
-              "iconBrightPixels": 282,
-              "labelBrightPixels": 407
+              "iconBrightPixels": 240,
+              "labelBrightPixels": 396
             },
             {
               "label": "More",
-              "iconBrightPixels": 136,
-              "labelBrightPixels": 255
+              "iconBrightPixels": 104,
+              "labelBrightPixels": 251
             }
           ]
         },
         "nfl": {
           "file": "nfl-320.png",
-          "capturedAt": "2026-10-02T01:57:00.060Z",
-          "sha256": "ef72849fee8d857c41d7612cb5c9ae26c1ddc8346bba1a46d61f9eb41b555e14",
-          "bytes": 367257,
+          "capturedAt": "2026-10-06T23:30:13.614Z",
+          "sha256": "1d693f17c73690765b72c0f7b5c1c6a24ef3eb6c0f111900ebf6e7051101e9aa",
+          "bytes": 367795,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -7946,9 +8013,9 @@
         },
         "steelers": {
           "file": "steelers-320.png",
-          "capturedAt": "2026-10-02T01:57:00.510Z",
-          "sha256": "d1f3eee168d31c59c9c78656327ae3e60cdea02e0f093c5e1107cf8047de7805",
-          "bytes": 534187,
+          "capturedAt": "2026-10-06T23:30:14.123Z",
+          "sha256": "d7a27190f99e27d6fa6c51d7d162d9f038e6ee55ad4bef6a02b1cbfa9d92fdcd",
+          "bytes": 535823,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8118,9 +8185,9 @@
         },
         "steelers-full-bottom": {
           "file": "steelers-full-bottom-320.png",
-          "capturedAt": "2026-10-02T01:57:02.369Z",
-          "sha256": "c0bad8ff61eca578066d17aa5bcdbba2f30863dddcf8c63ebaa825589678313b",
-          "bytes": 564179,
+          "capturedAt": "2026-10-06T23:30:16.577Z",
+          "sha256": "493d65b14f0f5961d65af875f4a475985110b3ce41dbf95855fdfbb1c368faa3",
+          "bytes": 566241,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8128,7 +8195,7 @@
           "geometry": {
             "width": 320,
             "clientWidth": 320,
-            "height": 9145,
+            "height": 9261,
             "clientHeight": 632,
             "documentWidth": 320,
             "viewportWidth": 320,
@@ -8249,9 +8316,9 @@
         },
         "steelers-player-details": {
           "file": "steelers-player-details-320.png",
-          "capturedAt": "2026-10-02T01:57:02.831Z",
-          "sha256": "bce1d2b8e978f67e77f0e4280158aa6972cd561093b61891ba2e1291aefe3638",
-          "bytes": 296303,
+          "capturedAt": "2026-10-06T23:30:17.107Z",
+          "sha256": "c9ecda3aeb734e787ba5df823a6f99767997edafbeda81a8782d34e628824d3b",
+          "bytes": 296177,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8380,9 +8447,9 @@
         },
         "steelers-opponent-history": {
           "file": "steelers-opponent-history-320.png",
-          "capturedAt": "2026-10-02T01:57:03.192Z",
-          "sha256": "a435e0e4353f5838a1e01d9e7772904efc18e96fc1fedfa8c19c50693bc7059f",
-          "bytes": 296056,
+          "capturedAt": "2026-10-06T23:30:17.555Z",
+          "sha256": "44d880dc0ed701fc8b1c7fa366a2fdd18296eae110b8268d2f1d740dc7b43656",
+          "bytes": 295990,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8511,9 +8578,9 @@
         },
         "steelers-game-statistics": {
           "file": "steelers-game-statistics-320.png",
-          "capturedAt": "2026-10-02T01:57:03.510Z",
-          "sha256": "d40729aae884f997456a2faeec56e2cec39f873613f590b2ec130443b594a1f6",
-          "bytes": 327507,
+          "capturedAt": "2026-10-06T23:30:17.910Z",
+          "sha256": "bee7c994acd951e890ade5ccef833fe781d578057654dd9dabec4bdb8433e8d9",
+          "bytes": 326287,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8642,9 +8709,9 @@
         },
         "steelers-schedule": {
           "file": "steelers-schedule-320.png",
-          "capturedAt": "2026-10-02T01:57:04.050Z",
-          "sha256": "21d1a933e5557a89ccf24656b0da9174a5c78604f86ae91055e7165814b4f37c",
-          "bytes": 221233,
+          "capturedAt": "2026-10-06T23:30:18.603Z",
+          "sha256": "a01b02fc5562744940015993ec814897f997a30a5c9e9569017d24003620dde8",
+          "bytes": 218107,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8773,9 +8840,9 @@
         },
         "steelers-stats": {
           "file": "steelers-stats-320.png",
-          "capturedAt": "2026-10-02T01:57:04.252Z",
-          "sha256": "0f58b30e80936746d5060778e4a6d836beed05e38fd0cc22e0a41519a1591db4",
-          "bytes": 264366,
+          "capturedAt": "2026-10-06T23:30:18.877Z",
+          "sha256": "df83807b77ef7b372cc8dafb817b635a92deb9488b6f1a2b70c45dd0300ab7af",
+          "bytes": 266124,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -8783,7 +8850,7 @@
           "geometry": {
             "width": 320,
             "clientWidth": 320,
-            "height": 1311,
+            "height": 1099,
             "clientHeight": 632,
             "documentWidth": 320,
             "viewportWidth": 320,
@@ -8904,9 +8971,9 @@
         },
         "steelers-matchups": {
           "file": "steelers-matchups-320.png",
-          "capturedAt": "2026-10-02T01:57:04.483Z",
-          "sha256": "3c712d82b3531aa7ff43def6f4a9648a73e3dfba5d7a8ff0a717adca627901d0",
-          "bytes": 364480,
+          "capturedAt": "2026-10-06T23:30:19.130Z",
+          "sha256": "71f40cfa60d77ff28edc9aa3c9b0d48319a010a262bd1c8e2efa5cecd059ab1a",
+          "bytes": 360501,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -9035,9 +9102,9 @@
         },
         "nfl-players": {
           "file": "nfl-players-320.png",
-          "capturedAt": "2026-10-02T01:57:05.850Z",
-          "sha256": "468101ec915f18aa25a30618607ebd4c0fe8bed1528eaa2ef6002998617b6a7d",
-          "bytes": 395263,
+          "capturedAt": "2026-10-06T23:30:21.025Z",
+          "sha256": "d02bf38c4ffa6570c2adbd19f73a77b62a6006069583491eed9fcc4fc5196091",
+          "bytes": 398806,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -9166,9 +9233,9 @@
         },
         "nfl-recap": {
           "file": "nfl-recap-320.png",
-          "capturedAt": "2026-10-02T01:57:06.157Z",
-          "sha256": "78fadb7aadf1313fdc15b2513caf8d199b4beba593d0be0cbf187f75068cded3",
-          "bytes": 206985,
+          "capturedAt": "2026-10-06T23:30:21.410Z",
+          "sha256": "8f996c5c55383ea134386ad70a946d74fc4a79b00aeca6296bdb7a6ea8339a78",
+          "bytes": 204612,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -9297,9 +9364,9 @@
         },
         "sources": {
           "file": "sources-320.png",
-          "capturedAt": "2026-10-02T01:57:08.357Z",
-          "sha256": "77934e2ea4dd073a5562742e2c27ab5db48edf26b4ef8a00742573105f74e1e0",
-          "bytes": 213359,
+          "capturedAt": "2026-10-06T23:30:24.274Z",
+          "sha256": "b81e01cd355f958f45d7512181d692908ade444409e52b83b8382df7989079ef",
+          "bytes": 213127,
           "viewportCssPixels": {
             "width": 320,
             "height": 700
@@ -9430,52 +9497,84 @@
       "images": {
         "home": [
           {
-            "src": "/project-dollers/assets/home-brand.svg",
+            "src": "/project-dollers/assets/home/gate-brand.webp",
             "natural": [
-              550,
-              246
+              1800,
+              693
             ],
             "rendered": [
-              282,
-              126.125
+              302,
+              116.265625
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 5.960489181561618,
+            "complete": true,
+            "distortion": 0.000037629350893686464
+          },
+          {
+            "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "natural": [
+              1200,
+              1200
+            ],
+            "rendered": [
+              276.38372802734375,
+              276.38372802734375
+            ],
+            "objectFit": "cover",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.34178961462333,
+            "complete": true,
+            "distortion": 0
+          },
+          {
+            "src": "/project-dollers/assets/home/nfl.svg",
+            "natural": [
+              500,
+              500
+            ],
+            "rendered": [
+              157.03125,
+              172.125
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.00004685106766366687
+            "distortion": 0.08769063180827885
           },
           {
-            "src": "/project-dollers/assets/logos/nfl.webp",
+            "src": "/project-dollers/assets/home/nfl.svg",
             "natural": [
               500,
               500
             ],
             "rendered": [
-              96,
-              94
+              36,
+              38
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 5.319148936170213,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.02127659574468077
+            "distortion": 0.052631578947368474
           },
           {
-            "src": "/project-dollers/assets/logos/nba.webp",
+            "src": "/project-dollers/assets/home/nba.svg",
             "natural": [
-              500,
-              500
+              915,
+              2079
             ],
             "rendered": [
-              96,
-              94
+              36,
+              38
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 5.319148936170213,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.02127659574468077
+            "distortion": 1.1525452976704051
           },
           {
             "src": "/project-dollers/assets/logos/nrl.webp",
@@ -9484,14 +9583,14 @@
               500
             ],
             "rendered": [
-              96,
-              94
+              36,
+              38
             ],
             "objectFit": "contain",
             "vector": false,
-            "sourcePixelsPerCssPixel": 5.319148936170213,
+            "sourcePixelsPerCssPixel": 13.88888888888889,
             "complete": true,
-            "distortion": 0.02127659574468077
+            "distortion": 0.052631578947368474
           },
           {
             "src": "/project-dollers/assets/logos/ufc.svg",
@@ -9500,30 +9599,14 @@
               461
             ],
             "rendered": [
-              108,
-              61
+              54,
+              38
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.387699383862359
-          },
-          {
-            "src": "/project-dollers/assets/football-stadium.webp",
-            "natural": [
-              1983,
-              793
-            ],
-            "rendered": [
-              332.2552490234375,
-              156.943115234375
-            ],
-            "objectFit": "cover",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 5.052786156409303,
-            "complete": true,
-            "distortion": 0.15339650899649482
+            "distortion": 0.5085481896789987
           }
         ],
         "nfl": [
@@ -9560,7 +9643,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/buf.webp",
+            "src": "/project-dollers/assets/logos/bal.webp",
             "natural": [
               500,
               500
@@ -9576,7 +9659,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/bal.webp",
+            "src": "/project-dollers/assets/logos/buf.webp",
             "natural": [
               500,
               500
@@ -9640,7 +9723,7 @@
             "distortion": 0
           },
           {
-            "src": "/project-dollers/assets/logos/cle.webp",
+            "src": "/project-dollers/assets/logos/ind.webp",
             "natural": [
               500,
               500
@@ -9949,22 +10032,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4685327.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              149,
-              108
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.037037037037037,
-            "complete": true,
-            "distortion": 0.002530864197530791
-          },
-          {
-            "src": "/project-dollers/assets/players/4682980.webp",
             "natural": [
               600,
               436
@@ -10620,6 +10687,22 @@
             "distortion": 0.002530864197530791
           },
           {
+            "src": "/project-dollers/assets/players/4682980.webp",
+            "natural": [
+              600,
+              436
+            ],
+            "rendered": [
+              149,
+              108
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.037037037037037,
+            "complete": true,
+            "distortion": 0.002530864197530791
+          },
+          {
             "src": "/project-dollers/assets/players/4608004.webp",
             "natural": [
               600,
@@ -10733,22 +10816,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4362858.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              149,
-              108
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.037037037037037,
-            "complete": true,
-            "distortion": 0.002530864197530791
-          },
-          {
-            "src": "/project-dollers/assets/players/4692628.webp",
             "natural": [
               600,
               436
@@ -11185,31 +11252,32 @@
           {
             "player": "Aaron Rodgers",
             "playerId": "00-0023459",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2021_16_CLE_GB",
-                "2013_07_CLE_GB",
-                "2009_07_GB_CLE"
+                "2025_09_IND_PIT",
+                "2024_11_IND_NYJ",
+                "2020_11_GB_IND",
+                "2016_09_IND_GB",
+                "2012_05_GB_IND"
               ]
             },
             "priorClubs": [
               "PIT",
+              "NYJ",
               "GB"
             ]
           }
@@ -11256,7 +11324,7 @@
       "cancelledRequests": [],
       "dataset": {
         "season": 2026,
-        "retrievedAt": "2026-10-02T01:51:55Z",
+        "retrievedAt": "2026-10-06T23:17:45Z",
         "rosterEntries": 77,
         "weekKeys": [
           "1",
@@ -11278,7 +11346,7 @@
           "17",
           "18"
         ],
-        "sourceCount": 30,
+        "sourceCount": 29,
         "provenanceDatasets": [
           "standings",
           "weeklyLeaders",
@@ -11301,6 +11369,7 @@
         ],
         "disagreementCount": 9,
         "unavailableFields": [
+          "injuries",
           "exactPreGamePrices",
           "weatherForecast",
           "travel"
@@ -11309,21 +11378,21 @@
       "captures": {
         "home": {
           "file": "home-768.png",
-          "capturedAt": "2026-10-02T01:57:12.200Z",
-          "sha256": "81721e87bbfdba754673beb6bb75841b8342d576d87af2770ec1625f60e11093",
-          "bytes": 2107575,
+          "capturedAt": "2026-10-06T23:30:28.981Z",
+          "sha256": "350f59d78a3247b7e72bc70db21c9e116bccffae0eb22391fd8421b9ca579bd5",
+          "bytes": 1905506,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
           },
           "geometry": {
-            "width": 620,
-            "clientWidth": 620,
-            "height": 956,
-            "clientHeight": 956,
+            "width": 430,
+            "clientWidth": 430,
+            "height": 867,
+            "clientHeight": 867,
             "documentWidth": 768,
             "viewportWidth": 768,
-            "navBottom": 1017,
+            "navBottom": 924,
             "viewportHeight": 1024,
             "navigation": [
               {
@@ -11332,13 +11401,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(58, 230, 255)",
+                "color": "rgb(38, 203, 255)",
                 "renderedIcon": {
-                  "width": 15.75,
-                  "height": 15.75
+                  "width": 15,
+                  "height": 15
                 },
-                "targetWidth": 120.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -11348,13 +11417,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14,
-                  "height": 15.75
+                  "width": 13.333333015441895,
+                  "height": 15
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.8125,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -11364,13 +11433,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.875,
-                  "height": 15.75
+                  "width": 14.166666984558105,
+                  "height": 15
                 },
-                "targetWidth": 120.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -11380,13 +11449,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 17.5,
-                  "height": 15.75
+                  "width": 16.666667938232422,
+                  "height": 15
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -11396,86 +11465,103 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.700000762939453,
-                  "height": 2.4499998092651367
+                  "width": 14,
+                  "height": 2.3333330154418945
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               }
             ],
-            "clipped": []
+            "clipped": [],
+            "homeSport": "nfl"
           },
           "primaryBounds": [
             {
-              "element": "EXPLORE THE LEAGUE NFL DATA & RESEARCHSTATS · TEAMS · MATCHUPS",
-              "top": 254,
-              "bottom": 474,
+              "element": "",
+              "top": 194,
+              "bottom": 661,
               "visibleTop": 0,
-              "visibleBottom": 956,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "NBA — coming soon",
-              "top": 254,
-              "bottom": 474,
+              "element": "Enter NFL research",
+              "top": 724,
+              "bottom": 772,
               "visibleTop": 0,
-              "visibleBottom": 956,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "NRL — coming soon",
-              "top": 486,
-              "bottom": 706,
+              "element": "Select NFL",
+              "top": 786,
+              "bottom": 863,
               "visibleTop": 0,
-              "visibleBottom": 956,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "UFC — coming soon",
-              "top": 486,
-              "bottom": 706,
+              "element": "Select NBA, coming soon",
+              "top": 786,
+              "bottom": 863,
               "visibleTop": 0,
-              "visibleBottom": 956,
+              "visibleBottom": 867,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select NRL, coming soon",
+              "top": 786,
+              "bottom": 863,
+              "visibleTop": 0,
+              "visibleBottom": 867,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select UFC, coming soon",
+              "top": 786,
+              "bottom": 863,
+              "visibleTop": 0,
+              "visibleBottom": 867,
               "fullyVisible": true
             }
           ],
           "navigationRaster": [
             {
               "label": "Home",
-              "iconBrightPixels": 314,
-              "labelBrightPixels": 282
+              "iconBrightPixels": 241,
+              "labelBrightPixels": 237
             },
             {
               "label": "Teams",
-              "iconBrightPixels": 324,
-              "labelBrightPixels": 321
+              "iconBrightPixels": 301,
+              "labelBrightPixels": 310
             },
             {
               "label": "Matchups",
-              "iconBrightPixels": 313,
-              "labelBrightPixels": 514
+              "iconBrightPixels": 256,
+              "labelBrightPixels": 486
             },
             {
               "label": "Insights",
-              "iconBrightPixels": 282,
-              "labelBrightPixels": 407
+              "iconBrightPixels": 240,
+              "labelBrightPixels": 396
             },
             {
               "label": "More",
-              "iconBrightPixels": 136,
-              "labelBrightPixels": 255
+              "iconBrightPixels": 104,
+              "labelBrightPixels": 251
             }
           ]
         },
         "nfl": {
           "file": "nfl-768.png",
-          "capturedAt": "2026-10-02T01:57:13.471Z",
-          "sha256": "42a65a4505f3e1ba5bd00ddaf84c2eb2ed90e9f46edab3adfa38a7328a354e4b",
-          "bytes": 863376,
+          "capturedAt": "2026-10-06T23:30:30.659Z",
+          "sha256": "349919fb19139759d008739e958a68daa5ce06e225d46356cb33dda0d5b8616d",
+          "bytes": 860061,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -11613,9 +11699,9 @@
         },
         "steelers": {
           "file": "steelers-768.png",
-          "capturedAt": "2026-10-02T01:57:14.276Z",
-          "sha256": "8bd5041b6b51ca5cab0d6d09c93b27145a155c76850c9d4261fe8c49c7237c8f",
-          "bytes": 1227986,
+          "capturedAt": "2026-10-06T23:30:31.534Z",
+          "sha256": "908ba576cca09d68e10ed3f5e314fc28ba70b1ccb9b6543a4422ceb47006a7d6",
+          "bytes": 1229921,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -11785,9 +11871,9 @@
         },
         "steelers-full-bottom": {
           "file": "steelers-full-bottom-768.png",
-          "capturedAt": "2026-10-02T01:57:16.913Z",
-          "sha256": "aa8af5bd34e421f1d621b0ed7fd90c68cbe19e0510db9e7a892d82eccf08105a",
-          "bytes": 1365833,
+          "capturedAt": "2026-10-06T23:30:34.787Z",
+          "sha256": "b50617f1b0a6203ad6a7052ff5a89ec6835e02669da1f88adde00ecd6ee68d0d",
+          "bytes": 1362630,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -11795,7 +11881,7 @@
           "geometry": {
             "width": 620,
             "clientWidth": 620,
-            "height": 10851,
+            "height": 10989,
             "clientHeight": 956,
             "documentWidth": 768,
             "viewportWidth": 768,
@@ -11916,9 +12002,9 @@
         },
         "steelers-player-details": {
           "file": "steelers-player-details-768.png",
-          "capturedAt": "2026-10-02T01:57:17.788Z",
-          "sha256": "1f44dbf5c9c4dca5b7a23dd5d4285e9ee6dd719067d0b9a21f4d7852157b8f89",
-          "bytes": 612981,
+          "capturedAt": "2026-10-06T23:30:35.769Z",
+          "sha256": "793c6e1eb1cdc52381d8ca152effc142382f40d4e1a85616f8a0c84c3b0618f2",
+          "bytes": 614329,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12047,9 +12133,9 @@
         },
         "steelers-opponent-history": {
           "file": "steelers-opponent-history-768.png",
-          "capturedAt": "2026-10-02T01:57:18.358Z",
-          "sha256": "498d0adcc58153aba4ca8ee7c1e28f15eb0fa97ae189ae80376cca4f6a44015f",
-          "bytes": 614880,
+          "capturedAt": "2026-10-06T23:30:36.470Z",
+          "sha256": "89e49cfe2b689b1eea2086a64cb41f948a660ad61ab13afc186e54726a512dd0",
+          "bytes": 615216,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12178,9 +12264,9 @@
         },
         "steelers-game-statistics": {
           "file": "steelers-game-statistics-768.png",
-          "capturedAt": "2026-10-02T01:57:18.939Z",
-          "sha256": "928e05397d08b0ec5ce97b61a780c48dd9b60006986f60044b6c644b0fd10ed4",
-          "bytes": 691673,
+          "capturedAt": "2026-10-06T23:30:37.152Z",
+          "sha256": "dcd9f3b70962af95364c3fa76d6fd2eaec1827cac513962ddbb29a5e36d38307",
+          "bytes": 688711,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12309,9 +12395,9 @@
         },
         "steelers-schedule": {
           "file": "steelers-schedule-768.png",
-          "capturedAt": "2026-10-02T01:57:19.954Z",
-          "sha256": "b8a7a8ac3955f0b149e1f1e4d825adb9901f315b411a2749e2bae8dbc846e53e",
-          "bytes": 395735,
+          "capturedAt": "2026-10-06T23:30:38.256Z",
+          "sha256": "1047e94c180dd9d0a05709100f3c5afeaddc28742be9defa4987f6737acaf62a",
+          "bytes": 392266,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12440,9 +12526,9 @@
         },
         "steelers-stats": {
           "file": "steelers-stats-768.png",
-          "capturedAt": "2026-10-02T01:57:20.359Z",
-          "sha256": "c2c81eaefd05188d28ab786844690617ba9fad3bb219478dbfd60462ae719bb7",
-          "bytes": 613309,
+          "capturedAt": "2026-10-06T23:30:38.773Z",
+          "sha256": "5fa27947941a48360da93688205832b7b6dc34e30ba5b0891f5de133e3f49224",
+          "bytes": 638187,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12450,7 +12536,7 @@
           "geometry": {
             "width": 620,
             "clientWidth": 620,
-            "height": 1262,
+            "height": 1066,
             "clientHeight": 956,
             "documentWidth": 768,
             "viewportWidth": 768,
@@ -12571,9 +12657,9 @@
         },
         "steelers-matchups": {
           "file": "steelers-matchups-768.png",
-          "capturedAt": "2026-10-02T01:57:20.845Z",
-          "sha256": "065f719d59445a21fa382a5ff79809ed1c78eb40fdb0f511016f62e7a5de8cbd",
-          "bytes": 813927,
+          "capturedAt": "2026-10-06T23:30:39.309Z",
+          "sha256": "a642b7769a73839f8c25f86362d5364eb1354bbcb1febd2e73eb63253c602e9b",
+          "bytes": 808175,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12702,9 +12788,9 @@
         },
         "nfl-players": {
           "file": "nfl-players-768.png",
-          "capturedAt": "2026-10-02T01:57:22.672Z",
-          "sha256": "3d42dadb19f64a547163272b0d6544e942cc408ec51a33d48cea2c42f72789ca",
-          "bytes": 827294,
+          "capturedAt": "2026-10-06T23:30:41.023Z",
+          "sha256": "4261475cc68f55466c2325a0feeef6123796751956dadba77bd57ff6f2dc237b",
+          "bytes": 829578,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12833,9 +12919,9 @@
         },
         "nfl-recap": {
           "file": "nfl-recap-768.png",
-          "capturedAt": "2026-10-02T01:57:23.309Z",
-          "sha256": "d81a28c410b6e8568b2ed44c6d3d815a0d26a2976fe31debfae2359d3c025b1b",
-          "bytes": 566254,
+          "capturedAt": "2026-10-06T23:30:41.673Z",
+          "sha256": "01b9e63c05dab71926c030d2a08ab92d38f9ceb137af40c16c4b4d427ac6cdbc",
+          "bytes": 564989,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -12964,9 +13050,9 @@
         },
         "sources": {
           "file": "sources-768.png",
-          "capturedAt": "2026-10-02T01:57:25.785Z",
-          "sha256": "c7a4199a613a7659391f84ed0972e39c24005461b741b485c4d6bbb742b0de5a",
-          "bytes": 474743,
+          "capturedAt": "2026-10-06T23:30:44.228Z",
+          "sha256": "b8ca14a5519c879d07bf4b6e6592dabaeda7414768c20d9edf15a4ea3c149227",
+          "bytes": 472811,
           "viewportCssPixels": {
             "width": 768,
             "height": 1024
@@ -13097,52 +13183,84 @@
       "images": {
         "home": [
           {
-            "src": "/project-dollers/assets/home-brand.svg",
+            "src": "/project-dollers/assets/home/gate-brand.webp",
             "natural": [
-              550,
-              246
+              1800,
+              693
             ],
             "rendered": [
-              430,
-              192.3125
+              376,
+              144.75
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.787564766839378,
+            "complete": true,
+            "distortion": 0.00006908462867016851
+          },
+          {
+            "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "natural": [
+              1200,
+              1200
+            ],
+            "rendered": [
+              378.58367919921875,
+              378.58367919921875
+            ],
+            "objectFit": "cover",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.16970874850771,
+            "complete": true,
+            "distortion": 0
+          },
+          {
+            "src": "/project-dollers/assets/home/nfl.svg",
+            "natural": [
+              500,
+              500
+            ],
+            "rendered": [
+              202.796875,
+              222.296875
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.00007681626141153863
+            "distortion": 0.08772053138398817
           },
           {
-            "src": "/project-dollers/assets/logos/nfl.webp",
+            "src": "/project-dollers/assets/home/nfl.svg",
             "natural": [
               500,
               500
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 0.021739130434782594
           },
           {
-            "src": "/project-dollers/assets/logos/nba.webp",
+            "src": "/project-dollers/assets/home/nba.svg",
             "natural": [
-              500,
-              500
+              915,
+              2079
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 1.2227369921596578
           },
           {
             "src": "/project-dollers/assets/logos/nrl.webp",
@@ -13151,14 +13269,14 @@
               500
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
             "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "sourcePixelsPerCssPixel": 11.11111111111111,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 0.021739130434782594
           },
           {
             "src": "/project-dollers/assets/logos/ufc.svg",
@@ -13167,30 +13285,14 @@
               461
             ],
             "rendered": [
-              159,
-              86
+              62,
+              46
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.36060468605523477
-          },
-          {
-            "src": "/project-dollers/assets/football-stadium.webp",
-            "natural": [
-              1983,
-              793
-            ],
-            "rendered": [
-              642.0543212890625,
-              209.2626953125
-            ],
-            "objectFit": "cover",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.088523718707632,
-            "complete": true,
-            "distortion": 0.22696007654535522
+            "distortion": 0.5338725985844288
           }
         ],
         "nfl": [
@@ -13227,7 +13329,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/buf.webp",
+            "src": "/project-dollers/assets/logos/bal.webp",
             "natural": [
               500,
               500
@@ -13243,7 +13345,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/bal.webp",
+            "src": "/project-dollers/assets/logos/buf.webp",
             "natural": [
               500,
               500
@@ -13307,7 +13409,7 @@
             "distortion": 0
           },
           {
-            "src": "/project-dollers/assets/logos/cle.webp",
+            "src": "/project-dollers/assets/logos/ind.webp",
             "natural": [
               500,
               500
@@ -13616,22 +13718,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4685327.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              180,
-              130
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.353846153846154,
-            "complete": true,
-            "distortion": 0.006153846153846176
-          },
-          {
-            "src": "/project-dollers/assets/players/4682980.webp",
             "natural": [
               600,
               436
@@ -14287,6 +14373,22 @@
             "distortion": 0.006153846153846176
           },
           {
+            "src": "/project-dollers/assets/players/4682980.webp",
+            "natural": [
+              600,
+              436
+            ],
+            "rendered": [
+              180,
+              130
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.353846153846154,
+            "complete": true,
+            "distortion": 0.006153846153846176
+          },
+          {
             "src": "/project-dollers/assets/players/4608004.webp",
             "natural": [
               600,
@@ -14400,22 +14502,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4362858.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              180,
-              130
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.353846153846154,
-            "complete": true,
-            "distortion": 0.006153846153846176
-          },
-          {
-            "src": "/project-dollers/assets/players/4692628.webp",
             "natural": [
               600,
               436
@@ -14852,31 +14938,32 @@
           {
             "player": "Aaron Rodgers",
             "playerId": "00-0023459",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2021_16_CLE_GB",
-                "2013_07_CLE_GB",
-                "2009_07_GB_CLE"
+                "2025_09_IND_PIT",
+                "2024_11_IND_NYJ",
+                "2020_11_GB_IND",
+                "2016_09_IND_GB",
+                "2012_05_GB_IND"
               ]
             },
             "priorClubs": [
               "PIT",
+              "NYJ",
               "GB"
             ]
           }
@@ -14923,7 +15010,7 @@
       "cancelledRequests": [],
       "dataset": {
         "season": 2026,
-        "retrievedAt": "2026-10-02T01:51:55Z",
+        "retrievedAt": "2026-10-06T23:17:45Z",
         "rosterEntries": 77,
         "weekKeys": [
           "1",
@@ -14945,7 +15032,7 @@
           "17",
           "18"
         ],
-        "sourceCount": 30,
+        "sourceCount": 29,
         "provenanceDatasets": [
           "standings",
           "weeklyLeaders",
@@ -14968,6 +15055,7 @@
         ],
         "disagreementCount": 9,
         "unavailableFields": [
+          "injuries",
           "exactPreGamePrices",
           "weatherForecast",
           "travel"
@@ -14976,21 +15064,21 @@
       "captures": {
         "home": {
           "file": "home-1440.png",
-          "capturedAt": "2026-10-02T01:57:30.106Z",
-          "sha256": "b90cbed4f7fa20d1e61595063a4ab8ec0333c07001af5bfc935db93a635a85bd",
-          "bytes": 2912057,
+          "capturedAt": "2026-10-06T23:30:48.718Z",
+          "sha256": "286a97263c28b47b158562c225e9226ecbe15e546841391d9b388eaf04fbdb19",
+          "bytes": 2546490,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
           },
           "geometry": {
-            "width": 620,
-            "clientWidth": 620,
-            "height": 932,
-            "clientHeight": 932,
+            "width": 430,
+            "clientWidth": 430,
+            "height": 867,
+            "clientHeight": 867,
             "documentWidth": 1440,
             "viewportWidth": 1440,
-            "navBottom": 993,
+            "navBottom": 924,
             "viewportHeight": 1000,
             "navigation": [
               {
@@ -14999,13 +15087,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(58, 230, 255)",
+                "color": "rgb(38, 203, 255)",
                 "renderedIcon": {
-                  "width": 15.75,
-                  "height": 15.75
+                  "width": 15,
+                  "height": 15
                 },
-                "targetWidth": 120.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -15015,13 +15103,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14,
-                  "height": 15.75
+                  "width": 13.333333015441895,
+                  "height": 15
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.8125,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -15031,13 +15119,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.875,
-                  "height": 15.75
+                  "width": 14.166666984558105,
+                  "height": 15
                 },
-                "targetWidth": 120.390625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -15047,13 +15135,13 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 17.5,
-                  "height": 15.75
+                  "width": 16.666667938232422,
+                  "height": 15
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               },
@@ -15063,86 +15151,103 @@
                 "iconVisible": true,
                 "opacity": 1,
                 "iconOpacity": 1,
-                "color": "rgb(200, 211, 223)",
+                "color": "rgb(186, 197, 206)",
                 "renderedIcon": {
-                  "width": 14.700000762939453,
-                  "height": 2.4499998092651367
+                  "width": 14,
+                  "height": 2.3333330154418945
                 },
-                "targetWidth": 120.40625,
-                "targetHeight": 53,
+                "targetWidth": 80.796875,
+                "targetHeight": 49,
                 "hitTarget": true,
                 "contained": true
               }
             ],
-            "clipped": []
+            "clipped": [],
+            "homeSport": "nfl"
           },
           "primaryBounds": [
             {
-              "element": "EXPLORE THE LEAGUE NFL DATA & RESEARCHSTATS · TEAMS · MATCHUPS",
-              "top": 254,
-              "bottom": 474,
+              "element": "",
+              "top": 194,
+              "bottom": 661,
               "visibleTop": 0,
-              "visibleBottom": 932,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "NBA — coming soon",
-              "top": 254,
-              "bottom": 474,
+              "element": "Enter NFL research",
+              "top": 724,
+              "bottom": 772,
               "visibleTop": 0,
-              "visibleBottom": 932,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "NRL — coming soon",
-              "top": 486,
-              "bottom": 706,
+              "element": "Select NFL",
+              "top": 786,
+              "bottom": 863,
               "visibleTop": 0,
-              "visibleBottom": 932,
+              "visibleBottom": 867,
               "fullyVisible": true
             },
             {
-              "element": "UFC — coming soon",
-              "top": 486,
-              "bottom": 706,
+              "element": "Select NBA, coming soon",
+              "top": 786,
+              "bottom": 863,
               "visibleTop": 0,
-              "visibleBottom": 932,
+              "visibleBottom": 867,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select NRL, coming soon",
+              "top": 786,
+              "bottom": 863,
+              "visibleTop": 0,
+              "visibleBottom": 867,
+              "fullyVisible": true
+            },
+            {
+              "element": "Select UFC, coming soon",
+              "top": 786,
+              "bottom": 863,
+              "visibleTop": 0,
+              "visibleBottom": 867,
               "fullyVisible": true
             }
           ],
           "navigationRaster": [
             {
               "label": "Home",
-              "iconBrightPixels": 314,
-              "labelBrightPixels": 282
+              "iconBrightPixels": 241,
+              "labelBrightPixels": 237
             },
             {
               "label": "Teams",
-              "iconBrightPixels": 324,
-              "labelBrightPixels": 321
+              "iconBrightPixels": 301,
+              "labelBrightPixels": 310
             },
             {
               "label": "Matchups",
-              "iconBrightPixels": 313,
-              "labelBrightPixels": 514
+              "iconBrightPixels": 256,
+              "labelBrightPixels": 486
             },
             {
               "label": "Insights",
-              "iconBrightPixels": 282,
-              "labelBrightPixels": 407
+              "iconBrightPixels": 240,
+              "labelBrightPixels": 396
             },
             {
               "label": "More",
-              "iconBrightPixels": 136,
-              "labelBrightPixels": 255
+              "iconBrightPixels": 104,
+              "labelBrightPixels": 251
             }
           ]
         },
         "nfl": {
           "file": "nfl-1440.png",
-          "capturedAt": "2026-10-02T01:57:31.866Z",
-          "sha256": "2f7bec2756724a1a33a18b54fc8060934e3144c0bf10483f9245ddf66463a36e",
-          "bytes": 1561623,
+          "capturedAt": "2026-10-06T23:30:50.382Z",
+          "sha256": "c952fcd9bf4d9c739d0bb67f414d9bcfa196d6f6c6f9f70f7d8e72d9b750fe02",
+          "bytes": 1558105,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15280,9 +15385,9 @@
         },
         "steelers": {
           "file": "steelers-1440.png",
-          "capturedAt": "2026-10-02T01:57:33.167Z",
-          "sha256": "40f4a91b85afe393d716b3b247ea26de17abefe6db96ed7e3088add9aba84829",
-          "bytes": 2004268,
+          "capturedAt": "2026-10-06T23:30:51.578Z",
+          "sha256": "5c834374bcc241674f234b25f89f6263a976d60fcbcd89d43e47087a7f4fc942",
+          "bytes": 2004953,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15452,9 +15557,9 @@
         },
         "steelers-full-bottom": {
           "file": "steelers-full-bottom-1440.png",
-          "capturedAt": "2026-10-02T01:57:36.409Z",
-          "sha256": "f6579d049a416d3417f6b08ccf2564046d6ac273a668ecda486406d9777f1606",
-          "bytes": 2143349,
+          "capturedAt": "2026-10-06T23:30:54.491Z",
+          "sha256": "e4644b1bce2c955474188c95e060e2e5f53eda929cf438ba206c684734ac3255",
+          "bytes": 2135429,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15462,7 +15567,7 @@
           "geometry": {
             "width": 620,
             "clientWidth": 620,
-            "height": 10851,
+            "height": 10989,
             "clientHeight": 932,
             "documentWidth": 1440,
             "viewportWidth": 1440,
@@ -15583,9 +15688,9 @@
         },
         "steelers-player-details": {
           "file": "steelers-player-details-1440.png",
-          "capturedAt": "2026-10-02T01:57:37.707Z",
-          "sha256": "22aca9a88b545c2f3a03f9208c0b53a11c664b554e2bc585d1ccd474443c4c30",
-          "bytes": 1340793,
+          "capturedAt": "2026-10-06T23:30:55.746Z",
+          "sha256": "3bc5896854676c6e51cf9ac81d7a66eb1112ac0937fffb2cac7e79324a747ad8",
+          "bytes": 1341178,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15714,9 +15819,9 @@
         },
         "steelers-opponent-history": {
           "file": "steelers-opponent-history-1440.png",
-          "capturedAt": "2026-10-02T01:57:38.804Z",
-          "sha256": "28cec42c64042a9c2c3641e703fb2b5aaf65292a70b625161c309f759a157406",
-          "bytes": 1341405,
+          "capturedAt": "2026-10-06T23:30:56.784Z",
+          "sha256": "ebf04b1261a5e55a46cc15662a06d67017de794f52f6b7a2055a7be7079eb86a",
+          "bytes": 1341742,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15845,9 +15950,9 @@
         },
         "steelers-game-statistics": {
           "file": "steelers-game-statistics-1440.png",
-          "capturedAt": "2026-10-02T01:57:39.877Z",
-          "sha256": "d3be7b598a30c1536d9126d1e0add795ac441c30d8fce7a62a15ee785f21a0bd",
-          "bytes": 1406168,
+          "capturedAt": "2026-10-06T23:30:57.816Z",
+          "sha256": "42922e9de815812ae2ca886bbfc3ad8698f3363a23cf621be2e86a09abbb0977",
+          "bytes": 1403113,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -15976,9 +16081,9 @@
         },
         "steelers-schedule": {
           "file": "steelers-schedule-1440.png",
-          "capturedAt": "2026-10-02T01:57:41.262Z",
-          "sha256": "c3c230e0c5652f835ccc6ce194d436893c8becbccc85d080300d09c3ec137a53",
-          "bytes": 1114432,
+          "capturedAt": "2026-10-06T23:30:59.459Z",
+          "sha256": "5388c389f2c68901677405dd1f8ba0c252bcc5107823b0729c9a254fcae46c3d",
+          "bytes": 1111033,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16107,9 +16212,9 @@
         },
         "steelers-stats": {
           "file": "steelers-stats-1440.png",
-          "capturedAt": "2026-10-02T01:57:42.113Z",
-          "sha256": "0519efbc18e3a5d218c515aca1c69f27ba5ecd0cc4ab46f68ca0b2c49208b14e",
-          "bytes": 1319668,
+          "capturedAt": "2026-10-06T23:31:00.301Z",
+          "sha256": "4637e479fb46a3c3b7e14bc6cf0d6b18288be8a6bfe66a863c100fec58761bcc",
+          "bytes": 1333227,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16117,7 +16222,7 @@
           "geometry": {
             "width": 620,
             "clientWidth": 620,
-            "height": 1262,
+            "height": 1066,
             "clientHeight": 932,
             "documentWidth": 1440,
             "viewportWidth": 1440,
@@ -16238,9 +16343,9 @@
         },
         "steelers-matchups": {
           "file": "steelers-matchups-1440.png",
-          "capturedAt": "2026-10-02T01:57:43.038Z",
-          "sha256": "458cc4862393d117dcc028d7dac47da11052e6e614a1dbc1ee3f561f729ffd0d",
-          "bytes": 1519506,
+          "capturedAt": "2026-10-06T23:31:01.199Z",
+          "sha256": "0b7f8a752a7a4340e780f5e2e4230d88aac31147474a229de66851f59037f5d6",
+          "bytes": 1515703,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16369,9 +16474,9 @@
         },
         "nfl-players": {
           "file": "nfl-players-1440.png",
-          "capturedAt": "2026-10-02T01:57:45.219Z",
-          "sha256": "591f1b8cc153cf093df0aa16844f2e6cb023c07f76854082009f9c8cd87b9e3b",
-          "bytes": 1536168,
+          "capturedAt": "2026-10-06T23:31:03.369Z",
+          "sha256": "2f0406f3987ca2f14a357b0d1dc50a0c4824d5bc62f69f2610b563bee2dc2bf1",
+          "bytes": 1536852,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16500,9 +16605,9 @@
         },
         "nfl-recap": {
           "file": "nfl-recap-1440.png",
-          "capturedAt": "2026-10-02T01:57:46.219Z",
-          "sha256": "a8452d84eeda8c6666498b76225441f0e37dc5423202338ea46a44467e5a3906",
-          "bytes": 1285266,
+          "capturedAt": "2026-10-06T23:31:04.348Z",
+          "sha256": "62a79641d9c447238a746a5ecf2e85b7c4f8f5db18bea259fc4c1555c1657d01",
+          "bytes": 1284813,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16631,9 +16736,9 @@
         },
         "sources": {
           "file": "sources-1440.png",
-          "capturedAt": "2026-10-02T01:57:49.500Z",
-          "sha256": "1f2e3ad497de72a5b1408035e680a7bd38485e8d0340cae95c968a91b32efc04",
-          "bytes": 512588,
+          "capturedAt": "2026-10-06T23:31:07.913Z",
+          "sha256": "b3a755c48564631cbf86e9061f5823caee191898518c2a567e08c7cf74adcd41",
+          "bytes": 510204,
           "viewportCssPixels": {
             "width": 1440,
             "height": 1000
@@ -16764,52 +16869,84 @@
       "images": {
         "home": [
           {
-            "src": "/project-dollers/assets/home-brand.svg",
+            "src": "/project-dollers/assets/home/gate-brand.webp",
             "natural": [
-              550,
-              246
+              1800,
+              693
             ],
             "rendered": [
-              430,
-              192.3125
+              376,
+              144.75
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 4.787564766839378,
+            "complete": true,
+            "distortion": 0.00006908462867016851
+          },
+          {
+            "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "natural": [
+              1200,
+              1200
+            ],
+            "rendered": [
+              378.58367919921875,
+              378.58367919921875
+            ],
+            "objectFit": "cover",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.16970874850771,
+            "complete": true,
+            "distortion": 0
+          },
+          {
+            "src": "/project-dollers/assets/home/nfl.svg",
+            "natural": [
+              500,
+              500
+            ],
+            "rendered": [
+              202.796875,
+              222.296875
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.00007681626141153863
+            "distortion": 0.08772053138398817
           },
           {
-            "src": "/project-dollers/assets/logos/nfl.webp",
+            "src": "/project-dollers/assets/home/nfl.svg",
             "natural": [
               500,
               500
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 0.021739130434782594
           },
           {
-            "src": "/project-dollers/assets/logos/nba.webp",
+            "src": "/project-dollers/assets/home/nba.svg",
             "natural": [
-              500,
-              500
+              915,
+              2079
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "vector": true,
+            "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 1.2227369921596578
           },
           {
             "src": "/project-dollers/assets/logos/nrl.webp",
@@ -16818,14 +16955,14 @@
               500
             ],
             "rendered": [
-              125,
-              110
+              45,
+              46
             ],
             "objectFit": "contain",
             "vector": false,
-            "sourcePixelsPerCssPixel": 4.545454545454546,
+            "sourcePixelsPerCssPixel": 11.11111111111111,
             "complete": true,
-            "distortion": 0.13636363636363646
+            "distortion": 0.021739130434782594
           },
           {
             "src": "/project-dollers/assets/logos/ufc.svg",
@@ -16834,30 +16971,14 @@
               461
             ],
             "rendered": [
-              159,
-              86
+              62,
+              46
             ],
             "objectFit": "contain",
             "vector": true,
             "sourcePixelsPerCssPixel": null,
             "complete": true,
-            "distortion": 0.36060468605523477
-          },
-          {
-            "src": "/project-dollers/assets/football-stadium.webp",
-            "natural": [
-              1983,
-              793
-            ],
-            "rendered": [
-              642.0542602539062,
-              209.2626953125
-            ],
-            "objectFit": "cover",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.0885240123098074,
-            "complete": true,
-            "distortion": 0.22695995990771634
+            "distortion": 0.5338725985844288
           }
         ],
         "nfl": [
@@ -16894,7 +17015,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/buf.webp",
+            "src": "/project-dollers/assets/logos/bal.webp",
             "natural": [
               500,
               500
@@ -16910,7 +17031,7 @@
             "distortion": 0.03703703703703698
           },
           {
-            "src": "/project-dollers/assets/logos/bal.webp",
+            "src": "/project-dollers/assets/logos/buf.webp",
             "natural": [
               500,
               500
@@ -16974,7 +17095,7 @@
             "distortion": 0
           },
           {
-            "src": "/project-dollers/assets/logos/cle.webp",
+            "src": "/project-dollers/assets/logos/ind.webp",
             "natural": [
               500,
               500
@@ -17283,22 +17404,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4685327.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              180,
-              130
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.353846153846154,
-            "complete": true,
-            "distortion": 0.006153846153846176
-          },
-          {
-            "src": "/project-dollers/assets/players/4682980.webp",
             "natural": [
               600,
               436
@@ -17954,6 +18059,22 @@
             "distortion": 0.006153846153846176
           },
           {
+            "src": "/project-dollers/assets/players/4682980.webp",
+            "natural": [
+              600,
+              436
+            ],
+            "rendered": [
+              180,
+              130
+            ],
+            "objectFit": "contain",
+            "vector": false,
+            "sourcePixelsPerCssPixel": 3.353846153846154,
+            "complete": true,
+            "distortion": 0.006153846153846176
+          },
+          {
             "src": "/project-dollers/assets/players/4608004.webp",
             "natural": [
               600,
@@ -18067,22 +18188,6 @@
           },
           {
             "src": "/project-dollers/assets/players/4362858.webp",
-            "natural": [
-              600,
-              436
-            ],
-            "rendered": [
-              180,
-              130
-            ],
-            "objectFit": "contain",
-            "vector": false,
-            "sourcePixelsPerCssPixel": 3.353846153846154,
-            "complete": true,
-            "distortion": 0.006153846153846176
-          },
-          {
-            "src": "/project-dollers/assets/players/4692628.webp",
             "natural": [
               600,
               436
@@ -18519,31 +18624,32 @@
           {
             "player": "Aaron Rodgers",
             "playerId": "00-0023459",
-            "opponent": "CLE",
+            "opponent": "IND",
             "recent": {
               "games": 5,
               "comparedFields": 700,
               "gameIds": [
+                "2026_04_PIT_CLE",
                 "2026_03_CIN_PIT",
                 "2026_02_PIT_NE",
                 "2026_01_ATL_PIT",
-                "2025_18_BAL_PIT",
-                "2025_17_PIT_CLE"
+                "2025_18_BAL_PIT"
               ]
             },
             "against": {
               "games": 5,
               "comparedFields": 695,
               "gameIds": [
-                "2025_17_PIT_CLE",
-                "2025_06_CLE_PIT",
-                "2021_16_CLE_GB",
-                "2013_07_CLE_GB",
-                "2009_07_GB_CLE"
+                "2025_09_IND_PIT",
+                "2024_11_IND_NYJ",
+                "2020_11_GB_IND",
+                "2016_09_IND_GB",
+                "2012_05_GB_IND"
               ]
             },
             "priorClubs": [
               "PIT",
+              "NYJ",
               "GB"
             ]
           }
@@ -18586,8 +18692,8 @@
   },
   "historySource": {
     "path": "assets/data/player-history.json",
-    "sha256": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90",
-    "bytes": 6836610
+    "sha256": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c",
+    "bytes": 7012983
   },
   "historyFailureRecovery": {
     "status": "passed",
@@ -18624,7 +18730,7 @@
     "fixtureNote": "Isolated network fixtures changed retrieval metadata only; no test snapshot or screenshots were published"
   },
   "runtimeManifestAfterQA": {
-    "index.html": "0c429ab8af6c8b69a36c56c16cfef4fd1ff13644281e2a93a72a6d5ed4a41a29",
+    "index.html": "0e96081b0e9862146b1246458fd2c38c46e4d455f75cc59cda924468aefd8a04",
     "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
     "assets/refinements.css": "72617bc7a69562d4c3c48edc3ff49995b844376c869f5b43deef1f4fd6d218cc",
@@ -18634,13 +18740,21 @@
     "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
     "assets/player-research.js": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae",
     "assets/player-research.css": "bd3240e0ac4453785ed8ffe91bfe8a23ee2ab4d3f7dd731f1de845c606e2b01c",
-    "assets/home-premium.css": "4b1e5f969e76ac0a8ac51d6db7640c408330491e94da7f82227d476e3cfbd5b4",
-    "assets/home-interactions.js": "8966353d6b457f7aec58146a66a2568a87b425fb4087feed6173978bff5777e9",
-    "assets/home-brand.svg": "cdaf0ca15c9236ddca4791c8042aa565e182556fb0a0080cd1720ac88c6f5f27",
+    "assets/home-premium.css": "d67b4991693d75b4798203a5aaf0e5eba7bb5b9c87a62187dd4b03b845b68aee",
+    "assets/home-interactions.js": "6c5a7b69c8de22bbd217dae847f3692da7f0294c71b262aa46fa9240cdc4ad77",
+    "assets/home-gate-motion.css": "130a9c4f968c30f0aab5018da694eda213c608ac9c60666f90e79aff2946f0d7",
+    "assets/home-gate-motion.js": "a0bda4cfd2429c5b8fd6c703ea3ec2c31ef98da5205f888dc746c99f6b5f8662",
+    "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68",
+    "assets/home/nfl.svg": "e835a04c98f07a7a3ada5f930a4c78285ac23f6413038add6f84da0cfbc16636",
+    "assets/home/nba.svg": "e547ae528e5e5f30ebb17dbde724537d6d7eb228e937b750b9a06ea3d4791691",
     "assets/illumination.css": "d6d3abb3882e658ec1b4a339291501b5cfadd0103da5243b1afc7706efe14a67",
-    "assets/data/current.json": "7f727c2cf41d285db19bb332111d3a3f7e7c574ed348b6a7267eead1f6b273ec",
-    "assets/data/player-history.json": "27b0981de7a9da40da424821122c602253cc5ef5d6d0c382f98e6703ce6d6a90"
+    "assets/data/current.json": "9beac7a4f68ef8e910c0eebcb1eefed90c895ee78d4198c044baee3b902feeef",
+    "assets/data/player-history.json": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c"
   },
   "status": "passed",
-  "completedAt": "2026-10-02T01:58:02.094Z"
+  "completedAt": "2026-10-06T23:31:21.683Z"
 }

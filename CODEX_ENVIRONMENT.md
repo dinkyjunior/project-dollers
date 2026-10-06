@@ -46,7 +46,7 @@ Use repo-local assets for anything needed to render and compare the core experie
 The approved visual reference is expected at:
 `reference/approved_eight_screen_reference.jpg`
 
-The user subsequently supplied the approved eight-screen render in chat, and that attachment guided the latest comparison/refinements. Its bytes were not exposed for a repository copy; the user expressly authorized proceeding. Read `reference/CHAT_SOURCE.md` for provenance and `qa/REFERENCE_COMPARISON.md` for evidence. Use the attachment as authority when it is visible, with `REFERENCE_SPEC.md` as fallback in sessions where it is unavailable. User visual approval remains pending.
+The user subsequently supplied the approved eight-screen render in chat, and that attachment guided the earlier comparison/refinements. Its bytes were not exposed for a repository copy; the user expressly authorized proceeding. Read `reference/CHAT_SOURCE.md` for provenance and `qa/REFERENCE_COMPARISON.md` for historical evidence. On 7 October 2026 (Australia/Sydney), the user reattached and approved the four-sport circular Aperture gate concept for Page 1 and explicitly authorized its implementation and launch. That newer attachment is the Page 1 visual authority; the eight-screen reference still applies to Pages 2–3. Do not generate another concept or interpret the approved image as a flattened interface.
 
 Where real league/team/player imagery is required, prefer downloading/bundling stable local copies into the repo during the rebuild rather than relying on runtime hotlinks.
 
@@ -61,6 +61,14 @@ Read in this order:
 7. `reference/approved_eight_screen_reference.jpg`
 
 Then continue on `codex-rebuild`, preserving the current user authorization and production/QA rules below.
+
+## Approved Page 1 launch — 7 October 2026 (Australia/Sydney)
+
+The approved Home is implemented locally and is awaiting final responsive/browser QA and publication; it is not yet verified on the hosted site. Existing NFL/Steelers markup and `assets/app.js` were retained. Do not touch Page 4. The circular gate uses real, accessible sport selectors and native NFL navigation. NFL is functional; NBA, NRL and UFC are selectable Home states whose entry buttons say Coming soon without "Preview only". UFC's Home navigation label is Fighters; other Home states use Teams. The supplied render's NFA typo is corrected to NFL.
+
+Use singular Project Dollar branding with aligned diamond PROJECT and polished-gold DOLLAR, plus an emerald velvet money bag and gold dollar sign. Apply the full-panel lighting themes: electric blue NFL, fixed left-blue/right-red NBA, neon green NRL and neon red UFC. Add continuous travelling ring highlights, background movement, reflections and material glints. Respect reduced motion and pause animation when hidden/offscreen. Bundle crisp assets locally. Test all four states at 393×852 and 430×896 plus desktop, verify existing navigation and refresh, then deploy and test the real hosted URL before reporting completion.
+
+Implementation artwork, native dimensions, local source identifiers and optimized hashes are recorded in `assets/home/asset-provenance.json`. The original approved chat image remains the authority but its binary bytes were unavailable for exporting a reference panel; generated decorative layers are not claimed as extracted source pixels. New QA and final release facts are recorded under `qa/home-gate/`, particularly `RELEASE.md`. Older QA evidence was checkpointed separately as `808bf01` before this implementation. Latest integrated automatic-data production head is `4f38a25`; preserve subsequent remote changes before push.
 
 ## Latest task authorization and data
 

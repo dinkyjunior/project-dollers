@@ -1,5 +1,13 @@
 # Production publication and verification
 
+## Current Page 1 launch — implemented, awaiting final QA/publication
+
+On 7 October 2026 (Australia/Sydney), the user approved implementing and launching the reattached four-sport Aperture gate render, with "Preview only" removed, Fighters used for UFC, and continuous sport-themed lighting/background motion. No further design approval is required. The new Home is implemented locally; final responsive/browser QA and publication remain pending. The historical success reports below do not prove that this new UI is live. Pages 2–3 markup and app routing are preserved; Page 4 remains excluded. Read `qa/home-gate/RELEASE.md` for the final commit, new QA evidence, workflow result and actual hosted verification when available.
+
+Recovered preceding evidence was checkpointed as `808bf01` and latest automatic-data production commit `4f38a25` was integrated without replacing its source data. Fetch/rebase current `codex-rebuild` and fetch `main` again immediately before pushing; a later source refresh may arrive during QA. The 22 data, seven source-monitor and eight updater regression groups and focus/scroll-preserving update integration pass. Final Home/browser and actual hosted results are still required before calling this release complete.
+
+## Previous verified release — 2 October 2026
+
 The Pages 1–3 application release `a3012937c32681404da17aed662a0d2cba4c7b6b` was published and verified on **2 October 2026 (Australia/Sydney)** at:
 
 https://dinkyjunior.github.io/project-dollers/
@@ -20,7 +28,7 @@ TLS and hostname verification stayed enabled. The supplied environment CA was sc
 
 ## Automated data refresh after the full-suite release
 
-A later automatic data commit, `9633c03cad6d069c51731795a9d098d713d3100a`, was reported on `origin/main`, with snapshot timestamp 12:18:57 AEST on 2 October. [The recursive comparison](qa/next-pass/POST_RELEASE_AUTO_REFRESH.json) found all 49,842 current-data, 328,354 history, and 495 provenance factual leaves unchanged; only retrieval/check/hash/byte metadata changed in the three linked JSON files. Root safely integrated that incoming refresh and `data:check` passed. A targeted strict-TLS hosted check of the refreshed snapshot is pending in the release task. The full-suite reports above remain immutable evidence for `a3012937`.
+A later automatic data commit, `9633c03cad6d069c51731795a9d098d713d3100a`, was reported on `origin/main`, with snapshot timestamp 12:18:57 AEST on 2 October. [The recursive comparison](qa/next-pass/POST_RELEASE_AUTO_REFRESH.json) found all 49,842 current-data, 328,354 history, and 495 provenance factual leaves unchanged; only retrieval/check/hash/byte metadata changed in the three linked JSON files. Root safely integrated that incoming refresh and `data:check` passed. The recovered [targeted strict-TLS WebKit report](qa/hosted/refresh-smoke.json) confirms that both 393×852 and 430×896 passed, with served hashes, data joins and navigation verified; it completed at 12:27:13 AEST on 2 October. The full-suite reports above remain immutable evidence for `a3012937`.
 
 ## Data delivery
 

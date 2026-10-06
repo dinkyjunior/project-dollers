@@ -1,5 +1,15 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Current task — approved Page 1 Aperture launch, 7 October 2026 (Sydney)
+
+The recovered workspace is available and the user has explicitly authorized implementing and launching the reattached four-sport gate render. No further concept or design approval is needed. The approved Home is implemented locally after visual refinements and a compact-width decorative-overflow fix. Final responsive/browser QA and publication are pending; the completed releases described below are historical evidence, not proof that the new Home has launched.
+
+The approved Home uses singular Project Dollar diamond/gold branding, an emerald money bag, a metallic circular gate and locally bundled crisp league marks. All four selectors work: NFL enters the existing dashboard; NBA/NRL/UFC remain Coming soon with no "Preview only" wording. UFC uses Fighters instead of Teams. The whole Home changes to blue NFL, stationary split blue/red NBA, green NRL or red UFC. Travelling ring lighting, moving venue/background layers, reflections and glints must be implemented with reduced-motion and hidden-page controls. Preserve existing Pages 2–3, data integrity and full-card football motion. No Page 4.
+
+Before publication, render all four states at 393×852 and 430×896 plus desktop and compare with the reattached approved source. Run meaningful Home interactions and Pages 2–3 regression checks, preserve incoming Git changes, and verify the actual website after deployment. New release evidence belongs under `qa/home-gate/`; do not relabel the October 2 reports as evidence for the new UI.
+
+The old recovered evidence was preserved in checkpoint `808bf01`; latest production automatic-data head `4f38a25` was fast-forwarded before the new implementation. NFL/Steelers markup is byte-identical to production and `assets/app.js` is unchanged. The shared About title only loses the trailing dollar sign for the approved singular name. The 22 data, seven source-monitor and eight updater groups pass; focus/deep-scroll integration preservation passes. These regression results do not replace the still-pending final Home/browser and hosted checks. Original attachment bytes remain unavailable; source limitations, generated decorative asset provenance and exact final publication facts are recorded in `qa/home-gate/RELEASE.md`.
+
 ## Latest follow-up — October 2, 2026 (Sydney)
 
 The user approved the base and requested full personal last-five and weekly-opponent statistics, more automatic updates, brighter borders and a crisper/more interactive Home. This pass preserves Pages 1–3. Home now uses native outlined vector branding and deliberate lighting/reflections; shared blue/gold rails are stronger.
@@ -11,6 +21,8 @@ Browser checks run on open, resume, focus, online return and refresh, plus condi
 Final local QA passed five viewports at 2026-10-02T01:58:02.094Z; all 16 runtime hashes match. Twenty-two data/history/roster-verification, seven source-monitor and eight update behaviour regression groups pass. Independent raw CSV audits, rich UI field comparisons and twelve negative source-verification probes passed. Read `qa/next-pass/README.md` and its independent visual, data, source, control, motion and automatic-update reviews for current evidence.
 
 The final application was published to `codex-rebuild` and `main` as `a3012937c32681404da17aed662a0d2cba4c7b6b`, preserving incoming automatic-data commits. [Pages run 36954044966](https://github.com/dinkyjunior/project-dollers/actions/runs/36954044966) succeeded for that exact commit. GitHub API inspection confirms HTTPS Pages uses `main` / root. Actual hosted HTTP verification passed: 16 runtime hashes match and all 171 assets return 200; the history bundle transfers as 233,052 gzip bytes. Actual hosted Firefox 146 and genuine WebKit 26 passed the full shared suite at both 393×852 and 430×896 with strict TLS, zero console/HTTP/transport errors and zero external runtime requests. See `qa/hosted/README.md` and `qa/next-pass/PUBLICATION_STATUS.md`.
+
+The recovered `qa/hosted/refresh-smoke.json` resolves the previously uncertain final check: the later `9633c03cad6d069c51731795a9d098d713d3100a` data refresh passed targeted strict-TLS WebKit checks at both 393×852 and 430×896, completed at 12:27:13 AEST on 2 October. Its served manifest, linked snapshot/history/provenance and navigation passed. The original full-suite reports remain unchanged evidence for `a3012937`.
 
 Official Steelers and ESPN checks corroborate all 32 current records/PF/PA and the selected fixture. Nine roster-source differences are explicitly flagged with values, hashes and times. One corroborated departure is excluded from current controls, leaving 76 entries; all 77 original histories remain retained. Official jersey corrections carry source evidence. Optional-source failure never silently implies a departure.
 

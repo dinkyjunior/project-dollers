@@ -9,7 +9,9 @@ const base = JSON.parse(fs.readFileSync(path.join(__dirname, '../assets/data/cur
 const clone = value => JSON.parse(JSON.stringify(value));
 const waitMicrotasks = async () => { for (let i = 0; i < 12; i++) await Promise.resolve(); };
 function harness(overrides = {}) {
-  let clock = Date.parse('2026-10-02T04:00:00Z'), nextTimer = 1;
+  // Automated source refreshes advance this committed fixture. Keep simulated
+  // time after it instead of turning the successful-update case into rollback.
+  let clock = Date.parse(base.retrievedAt) + 3600000, nextTimer = 1;
   const timers = new Map(), requests = [], statuses = [], updates = [], streams = [];
   const window = new EventTarget(), document = new EventTarget();
   document.baseURI = 'http://localhost/project-dollers/'; document.hidden = false;
@@ -60,7 +62,8 @@ function harness(overrides = {}) {
     h.cleanup(); tests++;
   }
   {
-    const h = harness(); const newer = clone(base); newer.retrievedAt = '2026-10-02T03:01:00Z';
+    const h = harness(); const newer = clone(base);
+    newer.retrievedAt = new Date(Date.parse(base.retrievedAt) + 60000).toISOString();
     newer.roster[0].seasonStats.rushingYards = 42;
     h.setHandle(async () => h.response(newer, 200, 'new'));
     await h.controller.refresh(); assert.equal(h.updates.length, 1); assert.equal(h.snapshot().roster[0].seasonStats.rushingYards, 42);

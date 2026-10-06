@@ -1,0 +1,137 @@
+/* Aperture Home motion. The scene, chrome and team-colour lighting belong to
+   home-premium.css; these independently composited layers bring them to life.
+   In particular the NBA's blue/red ring never rotates with its travelling light. */
+.page[data-page="home"] {
+  --home-motion-play-state: paused;
+}
+.page[data-page="home"][data-home-motion-state="running"] {
+  --home-motion-play-state: running;
+}
+
+.page[data-page="home"] .aperture-travel-light {
+  pointer-events: none;
+  animation: pd-gate-light-breathe 5.8s ease-in-out infinite;
+}
+.page[data-page="home"] .aperture-travel-sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  /* Colour stays on the fixed rim underneath. A white core and soft tail move
+     around the complete circle, with a second small reflection opposite it. */
+  background: conic-gradient(from -90deg,
+    transparent 0deg 140deg,
+    #ecffff00 149deg, #ecffff30 153deg, #fff8 156deg,
+    #fff 158deg, #ecffff45 160deg, transparent 163deg 275deg,
+    #ecffff00 282deg, #ecffff08 299deg, #ecffff23 309deg,
+    #ecffff70 317deg, #fff 322deg, #ecffffc7 324deg,
+    transparent 328deg 360deg);
+  transform-origin: 50% 50%;
+  animation: pd-gate-circuit 12s linear infinite;
+  will-change: transform;
+}
+
+.page[data-page="home"] .home-scene-drift img[data-home-scene] {
+  transform-origin: 50% 65%;
+  animation: pd-gate-venue-depth 26s ease-in-out infinite;
+  will-change: transform;
+}
+.page[data-page="home"] .home-rail-light {
+  animation: pd-gate-rail-breathe 5.6s ease-in-out infinite;
+}
+.page[data-page="home"] .home-wall-right .home-rail-light {
+  animation-delay: -2.8s;
+}
+.page[data-page="home"] .home-architecture-shimmer {
+  animation: pd-gate-architecture-glide 16s cubic-bezier(.3,0,.6,1) infinite;
+}
+.page[data-page="home"] .home-floor-shimmer {
+  transform-origin: 50% 100%;
+  animation: pd-gate-floor-glide 13s ease-in-out infinite;
+  animation-delay: -4.5s;
+}
+.page[data-page="home"] .brand-glint {
+  transform-origin: 50% 50%;
+  animation: pd-gate-diamond-glint 9s ease-in-out infinite;
+  animation-delay: -2.2s;
+}
+.page[data-page="home"] .brand-glint-secondary {
+  animation-name: pd-gate-gold-glint;
+  animation-duration: 11.5s;
+  animation-delay: -6.8s;
+}
+
+.page[data-page="home"] .aperture-travel-light,
+.page[data-page="home"] .aperture-travel-sweep,
+.page[data-page="home"] .home-scene-drift img[data-home-scene],
+.page[data-page="home"] .home-rail-light,
+.page[data-page="home"] .home-architecture-shimmer,
+.page[data-page="home"] .home-floor-shimmer,
+.page[data-page="home"] .brand-glint {
+  animation-play-state: var(--home-motion-play-state);
+}
+.page[data-page="home"] .home-entry::after {
+  /* The existing CTA bloom also follows Home's viewport pause state. */
+  animation-play-state: var(--home-motion-play-state);
+}
+.page[data-page="home"] .home-scene-drift img[data-home-scene][hidden] {
+  animation-play-state: paused;
+}
+
+@keyframes pd-gate-circuit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pd-gate-light-breathe {
+  0%, 100% { opacity: .84; }
+  50% { opacity: 1; }
+}
+@keyframes pd-gate-venue-depth {
+  0%, 100% { transform: scale(1.035) translate3d(-.35%, .25%, 0); }
+  50% { transform: scale(1.075) translate3d(.35%, -.5%, 0); }
+}
+@keyframes pd-gate-rail-breathe {
+  0%, 100% { opacity: .76; }
+  50% { opacity: 1; }
+}
+@keyframes pd-gate-architecture-glide {
+  0%, 15% { transform: translate3d(-35%, -4%, 0); opacity: .12; }
+  40% { opacity: .42; }
+  75% { opacity: .36; }
+  100% { transform: translate3d(35%, 4%, 0); opacity: .12; }
+}
+@keyframes pd-gate-floor-glide {
+  0%, 100% { transform: translate3d(-9%, 0, 0) scaleX(.94); opacity: .3; }
+  50% { transform: translate3d(9%, 0, 0) scaleX(1.06); opacity: .72; }
+}
+@keyframes pd-gate-diamond-glint {
+  0%, 30%, 60%, 100% { opacity: .22; transform: scale(.75) rotate(0deg); }
+  38% { opacity: 1; transform: scale(1.16) rotate(12deg); }
+  44% { opacity: .42; transform: scale(.9) rotate(18deg); }
+  49% { opacity: .88; transform: scale(1.06) rotate(24deg); }
+}
+@keyframes pd-gate-gold-glint {
+  0%, 36%, 70%, 100% { opacity: .3; transform: scale(.8) rotate(0deg); }
+  45% { opacity: 1; transform: scale(1.18) rotate(-10deg); }
+  51% { opacity: .54; transform: scale(.95) rotate(-16deg); }
+  57% { opacity: .9; transform: scale(1.06) rotate(-22deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page[data-page="home"] .aperture-travel-light,
+  .page[data-page="home"] .aperture-travel-sweep,
+  .page[data-page="home"] .home-scene-drift img[data-home-scene],
+  .page[data-page="home"] .home-rail-light,
+  .page[data-page="home"] .home-architecture-shimmer,
+  .page[data-page="home"] .home-floor-shimmer,
+  .page[data-page="home"] .brand-glint {
+    animation: none !important;
+    will-change: auto;
+  }
+  .page[data-page="home"] .aperture-travel-light { opacity: .75; }
+  .page[data-page="home"] .aperture-travel-sweep { transform: rotate(18deg); }
+  .page[data-page="home"] .home-scene-drift img[data-home-scene] { transform: none; }
+  .page[data-page="home"] .home-rail-light { opacity: .92; }
+  .page[data-page="home"] .home-architecture-shimmer { opacity: .16; transform: none; }
+  .page[data-page="home"] .home-floor-shimmer { opacity: .42; transform: none; }
+  .page[data-page="home"] .brand-glint { opacity: .65; transform: none; }
+}
