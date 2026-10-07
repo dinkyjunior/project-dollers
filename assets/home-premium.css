@@ -138,18 +138,25 @@
 }
 .home-architecture-shimmer { position: absolute; inset: 0; z-index: 1; background: linear-gradient(118deg, transparent 30%, #e3f5ff08 48%, #fff1 50%, transparent 54%); }
 .home-floor {
+  /* A bounded 2D ground plane shares the gate's measured container geometry.
+     Nested perspective transforms painted this floor below the controls in
+     WebKit; the metal reflection supplies depth without a 3D paint hierarchy. */
   position: absolute;
-  left: -36%;
-  right: -36%;
-  bottom: 112px;
-  height: 350px;
-  transform: perspective(320px) rotateX(53deg);
-  transform-origin: bottom center;
-  background: radial-gradient(ellipse at 50% 12%, #2c46565e, transparent 70%),
-    repeating-linear-gradient(0deg, transparent 0 7px, #b5dae90e 8px, transparent 9px 21px, #90b7cc12 22px, transparent 23px 38px, #c3e7f608 39px, transparent 40px 57px),
-    repeating-linear-gradient(0deg, transparent 0 52px, #5f7f8a10 53px, #0005 54px 56px),
-    repeating-linear-gradient(90deg, #06101ace 0 87px, #607e8b0c 88px, #02080dbb 89px 175px);
-  border-top: 1px solid #4e707b25;
+  top: calc(min(calc(100cqw + 12px), calc(100cqh - 6px), 418px) - 4px);
+  bottom: -60px;
+  left: -12px;
+  right: -12px;
+  height: auto;
+  z-index: -2;
+  overflow: hidden;
+  isolation: isolate;
+  transform: none;
+  background: radial-gradient(ellipse at 50% 0%, #294454a6, transparent 72%),
+    repeating-linear-gradient(0deg, transparent 0 7px, #b5dae90a 8px, transparent 9px 21px, #90b7cc0d 22px, transparent 23px 38px, #c3e7f607 39px, transparent 40px 57px),
+    repeating-conic-gradient(from 0deg at 50% -160%, #6d9baa08 0deg .1deg, transparent .13deg 9deg),
+    linear-gradient(180deg, #08131c, #02080d);
+  -webkit-mask: linear-gradient(transparent, #000 5px, #000 calc(100% - 12px), transparent);
+  mask: linear-gradient(transparent, #000 5px, #000 calc(100% - 12px), transparent);
 }
 .home-floor::before, .home-floor::after {
   content: "";
@@ -468,6 +475,7 @@
 @media (max-width:360px) {
   .page[data-page="home"] .page-scroll { padding-inline:9px; }
   .home-architecture { left:-9px; right:-9px; }
+  .home-floor { left:-9px; right:-9px; }
   .home-header .brand { width:100%; }
   .home-header .brand-subtitle { font-size:10.5px; letter-spacing:1.8px; }
   .page[data-page="home"] .home-entry { width:calc(100% - 36px); font-size:20px; }

@@ -1,0 +1,9 @@
+{
+  "status": "invocation_error_not_app_failure",
+  "reviewedAt": "2026-10-07T01:52:25.633839+00:00",
+  "command": "node qa/home-metal/functional.cjs --engine webkit --mobile-only --base http://127.0.0.1:8790/project-dollers/ --output qa/home-metal/local-webkit",
+  "cause": "functional main treats any supplied --base as hosted=true when choosing proxyOptions; the explicit loopback address was routed through external proxy and returned403. Direct loopback health returned200 and all8 genuine WebKit capture states had already completed successfully using a protocol-aware capture helper.",
+  "statesExecuted": 0,
+  "browserClosed": true,
+  "fix": "Use the supported no--base local functional invocation (auto-spawned loopback server, hosted=false). Preserve this failed report."
+}

@@ -78,8 +78,15 @@ async function metalEntrance(page) {
     const metal=home.querySelector('.aperture-metal-housing'),canvas=document.createElement('canvas');canvas.width=metal.naturalWidth;canvas.height=metal.naturalHeight;const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(metal,0,0);
     const alpha=(x,y)=>ctx.getImageData(Math.floor(x*canvas.width),Math.floor(y*canvas.height),1,1).data[3];
     const g=box(gate),v=box(venue),l=box(logo),sub=box(subtitle),h=box(home);
-    return{sport:home.dataset.homeSport,home:h,gate:g,venue:v,logo:l,brandToGateGap:g.y-sub.bottom,radialDepth:(g.width-v.width)/2,radialDepthFraction:(g.width-v.width)/(2*g.width),centreDelta:{x:(v.x+v.width/2)-(g.x+g.width/2),y:(v.y+v.height/2)-(g.y+g.height/2)},logoCentreDelta:{x:(l.x+l.width/2)-(v.x+v.width/2),y:(l.y+l.height/2)-(v.y+v.height/2)},housings,alpha:{centre:[alpha(.5,.5),alpha(.43,.5),alpha(.57,.5)],shell:[alpha(.5,.05),alpha(.95,.5),alpha(.5,.95),alpha(.05,.5)]},oldConnectorCount:home.querySelectorAll('.aperture-connector').length};
+    const floor=home.querySelector('.home-floor'),floorStyle=getComputedStyle(floor);
+    const ground={box:box(floor),parentIsStage:floor.parentElement.classList.contains('aperture-stage'),transform:floorStyle.transform,overflow:floorStyle.overflow,dock:box(home.querySelector('.home-sport-dock'))};
+    return{sport:home.dataset.homeSport,home:h,gate:g,venue:v,logo:l,ground,brandToGateGap:g.y-sub.bottom,radialDepth:(g.width-v.width)/2,radialDepthFraction:(g.width-v.width)/(2*g.width),centreDelta:{x:(v.x+v.width/2)-(g.x+g.width/2),y:(v.y+v.height/2)-(g.y+g.height/2)},logoCentreDelta:{x:(l.x+l.width/2)-(v.x+v.width/2),y:(l.y+l.height/2)-(v.y+v.height/2)},housings,alpha:{centre:[alpha(.5,.5),alpha(.43,.5),alpha(.57,.5)],shell:[alpha(.5,.05),alpha(.95,.5),alpha(.5,.95),alpha(.05,.5)]},oldConnectorCount:home.querySelectorAll('.aperture-connector').length};
   });
+  assert.equal(data.ground.parentIsStage,true,'The floor is anchored to the actual decorative gate stage');
+  assert.equal(data.ground.transform,'none','The ground plane uses engine-neutral geometry rather than nested perspective transforms');
+  assert.ok(['hidden','clip'].includes(data.ground.overflow),'Travelling floor light is physically clipped to its ground plane');
+  assert.ok(Math.abs(data.ground.box.y-data.gate.bottom)<=12,'The glossy floor starts at the actual metal foot contact');
+  if([393,430].includes(data.home.width))assert.ok(data.ground.box.bottom<=data.ground.dock.y,'Moving floor beams cannot paint beneath the sport dock');
   assert.equal(data.oldConnectorCount,0,'The old flat radial connector bars are replaced by the actual metal structure');
   assert.ok(data.alpha.centre.every(alpha=>alpha===0),'The bundled metal portal has a genuinely transparent centre exposing the retained venue');
   assert.ok(data.alpha.shell.every(alpha=>alpha>=245),'The substantial brushed-metal shell and bolted supports remain opaque');

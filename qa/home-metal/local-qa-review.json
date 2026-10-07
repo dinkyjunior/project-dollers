@@ -1,16 +1,16 @@
 {
   "status": "passed",
   "reviewer": "/root/metal_qa",
-  "reviewedAtUtc": "2026-10-07T01:24:39.702005+00:00",
-  "scope": "Final local Page1 metal entrance refinement; preserved Pages2/3 regression. No Page4.",
+  "reviewedAtUtc": "2026-10-07T02:00:46.851495+00:00",
+  "scope": "Final local Page1 physical metal entrance and cross-engine grounded floor; existing Pages2/3 preserved. No Page4.",
   "candidateCaptureManifest": "qa/home-metal/approved-local-captures/manifest.json",
-  "candidateCaptureManifestSha256": "3e305aa84d8194c8403760f3f993fe9b226d12dda551a319ddac98f3e3a1170b",
+  "candidateCaptureManifestSha256": "e029a517da3660342dd870c1b0357bab4800f6c64927191605598ee0cb953a18",
   "runtimeManifest": {
     "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
     "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
-    "assets/data/current.json": "1c03179768c4b75fea3aba444538eb90e2a76c9c7dc72f92f184254ee8beae92",
-    "assets/data/player-history.json": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b",
-    "assets/data/provenance.json": "5de8f5920b3245af9d57f751183b22fe11ad0c5c1d697f06cea2c0bd3f500315",
+    "assets/data/current.json": "518b352f998b8928453bb94538d256fa756590f0f7d831551f13e2fab45c3f88",
+    "assets/data/player-history.json": "ceebd35b11e27b76bac0c7d8b30f87f10435363ab9ad3f283fb9d2fa7e1e9d28",
+    "assets/data/provenance.json": "c1d293ea6dc96033e4479d2f2c870389e75f3f45b0d7290e0774b6989f9e0147",
     "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
     "assets/data/snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
     "assets/energy.svg": "d57a58aa08da4b91643a079acdc5a1e83b225a47cf62e8b7f70f1001f8c2f48a",
@@ -31,7 +31,7 @@
     "assets/home-gate-motion.css": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
     "assets/home-gate-motion.js": "ecb169a2832853d7cae5d83218fbf567ed1dd64632c5474261367da12d8434c2",
     "assets/home-interactions.js": "55c1ece0e0b738b1c5f6e594670ed65798609f508b7523f8a6986d42ea2f5a8b",
-    "assets/home-premium.css": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+    "assets/home-premium.css": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
     "assets/home/README.md": "8d3025071a17a157a954c6d07b9d10271e64bbf1327152b191ddbd96a36ddb9b",
     "assets/home/asset-provenance.json": "ada85f5f25a92d158c9831ed4b43f3554223c47221ab743d50e78a1efa711ecf",
     "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
@@ -189,21 +189,21 @@
     "assets/sources.json": "36b6eaab34430e217a33e9ac22117ae260b15cb133540302d0a5c363ab00bec0",
     "assets/stadium.jpg": "d05edf81f840c10a4cd5db42002bc52c5fce195b496127acd1405a682f5417ff",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
-    "index.html": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df"
+    "index.html": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112"
   },
   "runtimeFileCount": 184,
-  "visualReviewFile": "qa/home-metal/mobile-visual-review.json",
-  "allEightVisualViewsAccepted": true,
+  "visualReviewFile": "qa/home-metal/cross-engine-floor-review.json",
+  "allSixteenVisualViewsAccepted": true,
   "engines": [
     {
       "engine": "chromium",
       "browserVersion": "151.0.7922.173",
       "resultFile": "qa/home-metal/local-chromium/results.json",
-      "resultSha256": "ceaea8b898a9d01b000571c0920b11417f6c63fbb84976bdbb10b1824f44e001",
-      "completedAtUtc": "2026-10-07T01:19:26.157Z",
-      "completedAustraliaSydney": "2026-10-07T12:19:26.157000+11:00",
+      "resultSha256": "9d7341f9fa762cf4f1aae8893358573e4a5e967544edb31c124841d62fe1fc16",
+      "completedAtUtc": "2026-10-07T01:55:37.412Z",
+      "completedAustraliaSydney": "2026-10-07T12:55:37.412000+11:00",
       "sourceMatchedToVisualCandidate": true,
-      "testScriptSha256": "8f0ec39cd88f93940130a694ad709576723881057dc82d7f4f14d23e4f82ef1b",
+      "testScriptSha256": "dee2b118861a4791969e6433631e8f11b585622adfd29829509a766b98f628c7",
       "viewports": [
         {
           "viewport": {
@@ -331,11 +331,11 @@
       "engine": "webkit",
       "browserVersion": "26.0",
       "resultFile": "qa/home-metal/local-webkit/results.json",
-      "resultSha256": "a000115655fe45ca01624196512107da092410e97bf3bf425cc08015f6f53959",
-      "completedAtUtc": "2026-10-07T01:23:16.736Z",
-      "completedAustraliaSydney": "2026-10-07T12:23:16.736000+11:00",
+      "resultSha256": "2254cf8af4b19893f254d530b513d95cf7b880aa93154e44d25f1878c6da5cde",
+      "completedAtUtc": "2026-10-07T01:57:56.207Z",
+      "completedAustraliaSydney": "2026-10-07T12:57:56.207000+11:00",
       "sourceMatchedToVisualCandidate": true,
-      "testScriptSha256": "8f0ec39cd88f93940130a694ad709576723881057dc82d7f4f14d23e4f82ef1b",
+      "testScriptSha256": "dee2b118861a4791969e6433631e8f11b585622adfd29829509a766b98f628c7",
       "viewports": [
         {
           "viewport": {
@@ -418,14 +418,6 @@
       ]
     }
   ],
-  "beforeAfterGallery": "qa/home-metal/before-after-local/index.html",
-  "beforeAfterQualification": "Unmodified prior hosted genuineWebKit versus new actual localChromium pixels; both engines/venues explicitly labelled. Chat source compared independently, no registered concept composite.",
-  "resolvedHarnessIssue": {
-    "archive": "qa/home-metal/iterations/failed-restore-harness",
-    "classification": "Temporary ancestor page-in transition affected a before/after bounds comparison; wait real finite page-entry completion before measuring.",
-    "applicationRuntimeChanges": false,
-    "weakenedAssertions": false
-  },
   "qualifications": {
     "physicalIPhoneTested": false,
     "hardwareFpsCertified": false,
@@ -433,7 +425,14 @@
     "sourceSubstitution": false,
     "allFourSportsInteractiveOnlyNflEnters": true
   },
-  "productionPublicationGate": "All-six independent visual acceptance received by root; final local engines pass. Actual hosted verification after publication is still required.",
   "hostedVerifiedByThisReport": false,
-  "gitMutationsPerformedByReviewer": false
+  "gitMutationsPerformedByReviewer": false,
+  "publicationGate": "All agent approvals and actual hosted source/functionality/visual verification after publication remain root-owned.",
+  "archivedFindings": {
+    "previousWebKitFloorHold": "iterations/webkit-floor-hold/",
+    "real320pxOverflowFixed": "iterations/2d-floor-before-small-breakpoint/",
+    "loopbackProxyInvocationError": "iterations/failed-loopback-proxy-invocation/",
+    "resolvedFinitePageEntryHarnessTiming": "iterations/failed-restore-harness/"
+  },
+  "allEightVisualViewsAccepted": true
 }

@@ -1,0 +1,25 @@
+name: Build approved GitHub Pages
+
+# Rebuild the configured main/root static site after an approved application
+# or evidence commit, without forcing an unrelated source-data refresh.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+concurrency:
+  group: approved-pages-publication
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Request the configured production Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '{status,url}'

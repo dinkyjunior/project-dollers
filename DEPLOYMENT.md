@@ -1,8 +1,10 @@
 # Production publication and verification
 
-## Current Page 1 metal correction — publication pending
+## Current final metal correction — publication pending
 
-The final local candidate has explicit eight-state reference acceptance from all six assigned agents, recorded in `qa/home-metal/agent-acceptance.json`. Complete local Chromium five-size and genuine WebKit two-size regression now pass against the same 184 reviewed runtime hashes; `qa/home-metal/prepublication.json` records the completed gates. Fetch/rebase current `codex-rebuild` and fetch/integrate `main` immediately before ordinary non-forced pushes, preserving remote data changes. After Pages succeeds, test the actual public URL in genuine WebKit at both requested phone sizes and independently on desktop; verify delivered hashes, controls, routes, refresh, motion, images and errors. Read `qa/home-metal/RELEASE.md`. No production changes from this correction have been published at this checkpoint.
+The substantial Page 1 metal entrance and cross-engine floor correction are complete locally on `codex-rebuild`. Final Chromium passes all five sizes (including 320px, tablet and desktop); genuine WebKit passes both requested phone sizes. All six independent roles accepted all 16 current Chromium/WebKit sport captures, with final source bindings recorded in agent-acceptance.json. Corrected publication and actual-hosted verification are pending at this checkpoint. Original branding, league marks, interior venues and Pages 2–3 remain; no Page 4. Read `qa/home-metal/RELEASE.md` and the final `agent-acceptance.json` before publication.
+
+The initial metal run 37557389252 is historical evidence for first runtime 3c11415, whose WebKit floor was held. Do not relabel those initial actual-hosted passes/captures as proof of the final floor. Finish six-agent current-source acceptance and local gates, fetch/rebase both branches before ordinary non-forced publication, then dispatch `build-approved-pages.yml` on `main`. Its repository token uses only contents:read/pages:write and requests the configured production Pages build without touching data or another branch. Wait for the Pages run and verify actual hosted mobile/desktop rendering, delivered source hashes, controls/motion and errors before completion.
 
 ## Previous Page 1 neon refinement — deployed/functionally verified, visually rejected
 

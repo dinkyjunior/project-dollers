@@ -1,17 +1,17 @@
 {
   "status": "passed",
-  "startedAt": "2026-10-07T01:19:36.062Z",
-  "base": "http://127.0.0.1:35859/project-dollers/",
+  "startedAt": "2026-10-07T01:53:36.147Z",
+  "base": "http://127.0.0.1:40249/project-dollers/",
   "engine": "webkit",
   "scope": "Page1 four-sport launch plus Pages2/3 regression; no Page4",
-  "gitHead": "8c9c6d5b864a931bdbee303e35ab35c52e64d34b",
-  "testScriptSha256": "8f0ec39cd88f93940130a694ad709576723881057dc82d7f4f14d23e4f82ef1b",
+  "gitHead": "3c1141509c1356fbfb46c723a6216d4868d34192",
+  "testScriptSha256": "dee2b118861a4791969e6433631e8f11b585622adfd29829509a766b98f628c7",
   "runtimeManifest": {
     "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
     "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
-    "assets/data/current.json": "1c03179768c4b75fea3aba444538eb90e2a76c9c7dc72f92f184254ee8beae92",
-    "assets/data/player-history.json": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b",
-    "assets/data/provenance.json": "5de8f5920b3245af9d57f751183b22fe11ad0c5c1d697f06cea2c0bd3f500315",
+    "assets/data/current.json": "518b352f998b8928453bb94538d256fa756590f0f7d831551f13e2fab45c3f88",
+    "assets/data/player-history.json": "ceebd35b11e27b76bac0c7d8b30f87f10435363ab9ad3f283fb9d2fa7e1e9d28",
+    "assets/data/provenance.json": "c1d293ea6dc96033e4479d2f2c870389e75f3f45b0d7290e0774b6989f9e0147",
     "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
     "assets/data/snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
     "assets/energy.svg": "d57a58aa08da4b91643a079acdc5a1e83b225a47cf62e8b7f70f1001f8c2f48a",
@@ -32,7 +32,7 @@
     "assets/home-gate-motion.css": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
     "assets/home-gate-motion.js": "ecb169a2832853d7cae5d83218fbf567ed1dd64632c5474261367da12d8434c2",
     "assets/home-interactions.js": "55c1ece0e0b738b1c5f6e594670ed65798609f508b7523f8a6986d42ea2f5a8b",
-    "assets/home-premium.css": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+    "assets/home-premium.css": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
     "assets/home/README.md": "8d3025071a17a157a954c6d07b9d10271e64bbf1327152b191ddbd96a36ddb9b",
     "assets/home/asset-provenance.json": "ada85f5f25a92d158c9831ed4b43f3554223c47221ab743d50e78a1efa711ecf",
     "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
@@ -190,10 +190,10 @@
     "assets/sources.json": "36b6eaab34430e217a33e9ac22117ae260b15cb133540302d0a5c363ab00bec0",
     "assets/stadium.jpg": "d05edf81f840c10a4cd5db42002bc52c5fce195b496127acd1405a682f5417ff",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
-    "index.html": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df"
+    "index.html": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112"
   },
   "source": {
-    "retrievedAt": "2026-10-07T00:31:07Z",
+    "retrievedAt": "2026-10-07T01:29:47Z",
     "season": 2026,
     "currentWeek": 5
   },
@@ -230,9 +230,9 @@
           "sport": "nfl",
           "capture": {
             "file": "home-nfl-393x852.png",
-            "sha256": "7a65361e08d5da93c0e35ee880c84d75b50624f97f95c7a19e4d5ddb9c192539",
-            "bytes": 1614930,
-            "capturedAt": "2026-10-07T01:19:54.626Z",
+            "sha256": "a9e825e58f8b132af13565c47d31a7bc4c51b75493fb491aad6663611aff3cb1",
+            "bytes": 1566306,
+            "capturedAt": "2026-10-07T01:53:59.777Z",
             "viewportCssPixels": {
               "width": 393,
               "height": 852
@@ -574,6 +574,27 @@
                   "right": 295.546875,
                   "bottom": 485.921875
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 563,
+                    "width": 393,
+                    "height": 132,
+                    "right": 393,
+                    "bottom": 695
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 701,
+                    "width": 369,
+                    "height": 86,
+                    "right": 381,
+                    "bottom": 787
+                  }
+                },
                 "brandToGateGap": 7.59375,
                 "radialDepth": 64.7734375,
                 "radialDepthFraction": 0.1700090223097113,
@@ -648,7 +669,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -664,23 +685,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  306.9700927734375,
-                  306.9700927734375
+                  306.0425109863281,
+                  306.04248046875
                 ],
                 "objectFit": "cover",
-                "density": 3.909175611077111,
-                "distortion": 0
+                "density": 3.9210239000215488,
+                "distortion": 9.971680436926533e-8
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -696,7 +717,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   198,
@@ -712,7 +733,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -728,7 +749,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   43,
@@ -744,7 +765,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   19,
@@ -760,7 +781,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -776,7 +797,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -797,38 +818,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(0.446042, 0.895012, -0.895012, 0.446042, 0, 0)",
+                "transform": "matrix(-0.988809, 0.14919, -0.14919, -0.988809, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.081657, 0, 0, 1.081657, 0.811829, -1.37024)",
+                "transform": "matrix(1.055773, 0, 0, 1.055773, -0.438942, 0.047812)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.688836",
+                "opacity": "0.903442",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.76836",
+                "opacity": "0.828135",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.707545",
+                "opacity": "0.591851",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.988402",
+                "opacity": "0.706733",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -838,38 +859,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(0.168833, 0.985645, -0.985645, 0.168833, 0, 0)",
+                "transform": "matrix(-0.969872, -0.243615, 0.243615, -0.969872, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.078352, 0, 0, 1.078352, 0.648785, -1.185419)",
+                "transform": "matrix(1.050737, 0, 0, 1.050737, -0.675291, 0.315831)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.688395",
+                "opacity": "0.741667",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.826629",
+                "opacity": "0.761363",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.870551",
+                "opacity": "0.612844",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.988981",
+                "opacity": "0.919062",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -880,38 +901,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(0.168833, 0.985645, -0.985645, 0.168833, 0, 0)",
+                  "transform": "matrix(-0.969872, -0.243615, 0.243615, -0.969872, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.078352, 0, 0, 1.078352, 0.648785, -1.185419)",
+                  "transform": "matrix(1.050737, 0, 0, 1.050737, -0.675291, 0.315831)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.688395",
+                  "opacity": "0.741667",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.826629",
+                  "opacity": "0.761363",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.870551",
+                  "opacity": "0.612844",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.988981",
+                  "opacity": "0.919062",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -929,38 +950,38 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.973219, 0.22988, -0.22988, 0.973219, 0, 0)",
+                  "transform": "matrix(0.809325, 0.587362, -0.587362, 0.809325, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040156, 0, 0, 1.040156, -1.164424, 0.870576)",
+                  "transform": "matrix(1.041176, 0, 0, 1.041176, -1.117724, 0.817608)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.702157",
+                  "opacity": "0.83977",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.853224",
+                  "opacity": "0.968895",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.912893",
+                  "opacity": "1",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.970919",
+                  "opacity": "0.790302",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -1015,9 +1036,9 @@
           "sport": "nba",
           "capture": {
             "file": "home-nba-393x852.png",
-            "sha256": "819c4ba1bde9ad6449c8a49a8ea76183c5266e76486b295dbf9996fb12c3c6f9",
-            "bytes": 1598132,
-            "capturedAt": "2026-10-07T01:20:07.417Z",
+            "sha256": "ad0c73ae35c09ddb30e4bae566deb14b90b0a1d43498679eb5011affc02f3a35",
+            "bytes": 1569642,
+            "capturedAt": "2026-10-07T01:54:24.158Z",
             "viewportCssPixels": {
               "width": 393,
               "height": 852
@@ -1359,6 +1380,27 @@
                   "right": 299.359375,
                   "bottom": 489.734375
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 563,
+                    "width": 393,
+                    "height": 132,
+                    "right": 393,
+                    "bottom": 695
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 701,
+                    "width": 369,
+                    "height": 86,
+                    "right": 381,
+                    "bottom": 787
+                  }
+                },
                 "brandToGateGap": 7.59375,
                 "radialDepth": 64.7734375,
                 "radialDepthFraction": 0.1700090223097113,
@@ -1433,7 +1475,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -1449,23 +1491,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nba.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  295.0677490234375,
-                  295.0677185058594
+                  300.5563659667969,
+                  300.556396484375
                 ],
                 "objectFit": "cover",
-                "density": 4.066862623826378,
-                "distortion": 1.0342567557941607e-7
+                "density": 3.9925951137173166,
+                "distortion": 1.0153694440795391e-7
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -1481,7 +1523,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -1497,7 +1539,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   98,
@@ -1513,7 +1555,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -1529,7 +1571,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -1545,7 +1587,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   43,
@@ -1561,7 +1603,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   19,
@@ -1577,7 +1619,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -1593,7 +1635,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -1614,38 +1656,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.54024, -0.841511, 0.841511, -0.54024, 0, 0)",
+                "transform": "matrix(-0.081591, 0.996666, -0.996666, -0.081591, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.071156, 0, 0, 1.071156, 0.297123, -0.78676)",
+                "transform": "matrix(1.089999, 0, 0, 1.089999, 1.227819, -1.841753)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.941712",
+                "opacity": "0.74619",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.861136",
+                "opacity": "0.906609",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.927175",
+                "opacity": "0.677834",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.7035",
+                "opacity": "0.719112",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -1655,38 +1697,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.249197, -0.968453, 0.968453, -0.249197, 0, 0)",
+                "transform": "matrix(-0.407215, 0.913332, -0.913332, -0.407215, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.07557, 0, 0, 1.07557, 0.512254, -1.030647)",
+                "transform": "matrix(1.089622, 0, 0, 1.089622, 1.208917, -1.820329)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.812814",
+                "opacity": "0.885394",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.779682",
+                "opacity": "0.986598",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.759961",
+                "opacity": "0.58345",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.592626",
+                "opacity": "0.594254",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -1697,38 +1739,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(-0.249197, -0.968453, 0.968453, -0.249197, 0, 0)",
+                  "transform": "matrix(-0.407215, 0.913332, -0.913332, -0.407215, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.07557, 0, 0, 1.07557, 0.512254, -1.030647)",
+                  "transform": "matrix(1.089622, 0, 0, 1.089622, 1.208917, -1.820329)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.812814",
+                  "opacity": "0.885394",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.779682",
+                  "opacity": "0.986598",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.759961",
+                  "opacity": "0.58345",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.592626",
+                  "opacity": "0.594254",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -1746,26 +1788,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.965926, 0.258819, -0.258819, 0.965926, 0, 0)",
+                  "transform": "matrix(0.902585, 0.430511, -0.430511, 0.902585, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040199, 0, 0, 1.040199, -1.162448, 0.868335)",
+                  "transform": "matrix(1.040583, 0, 0, 1.040583, -1.144861, 0.848387)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.70842",
+                  "opacity": "0.7637",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.862835",
+                  "opacity": "0.92194",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -1777,7 +1819,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.962699",
+                  "opacity": "0.890144",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -1832,9 +1874,9 @@
           "sport": "nrl",
           "capture": {
             "file": "home-nrl-393x852.png",
-            "sha256": "2f4d70304b26cb920633635b61dbbe31367c35721857ea8bd821f8bb877e1039",
-            "bytes": 1598000,
-            "capturedAt": "2026-10-07T01:20:21.506Z",
+            "sha256": "2dc6b8271023488671e8a4c7d12e4e0d7d96d1ad671251a81314bcc29464f394",
+            "bytes": 1561305,
+            "capturedAt": "2026-10-07T01:54:45.112Z",
             "viewportCssPixels": {
               "width": 393,
               "height": 852
@@ -2176,6 +2218,27 @@
                   "right": 299.359375,
                   "bottom": 489.734375
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 563,
+                    "width": 393,
+                    "height": 132,
+                    "right": 393,
+                    "bottom": 695
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 701,
+                    "width": 369,
+                    "height": 86,
+                    "right": 381,
+                    "bottom": 787
+                  }
+                },
                 "brandToGateGap": 7.59375,
                 "radialDepth": 64.7734375,
                 "radialDepthFraction": 0.1700090223097113,
@@ -2250,7 +2313,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -2266,23 +2329,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  294.7537841796875,
-                  294.7537841796875
+                  298.02593994140625,
+                  298.02593994140625
                 ],
                 "objectFit": "cover",
-                "density": 4.071194550867776,
+                "density": 4.026495144133854,
                 "distortion": 0
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -2298,7 +2361,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -2314,7 +2377,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -2330,7 +2393,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   43,
@@ -2346,7 +2409,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   19,
@@ -2362,7 +2425,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -2378,7 +2441,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -2399,38 +2462,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.282509, -0.959265, 0.959265, -0.282509, 0, 0)",
+                "transform": "matrix(0.819352, 0.57329, -0.57329, 0.819352, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.070726, 0, 0, 1.070726, 0.27624, -0.763085)",
+                "transform": "matrix(1.088842, 0, 0, 1.088842, 1.169776, -1.775965)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.827831",
+                "opacity": "0.847812",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.785639",
+                "opacity": "0.794592",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.955132",
+                "opacity": "0.779747",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.719671",
+                "opacity": "0.993628",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -2440,38 +2503,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(0.018848, -0.999822, 0.999822, 0.018848, 0, 0)",
+                "transform": "matrix(0.457253, 0.889337, -0.889337, 0.457253, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.074991, 0, 0, 1.074991, 0.483966, -0.998578)",
+                "transform": "matrix(1.089945, 0, 0, 1.089945, 1.225142, -1.838719)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.716403",
+                "opacity": "0.690438",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.760103",
+                "opacity": "0.767115",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.811075",
+                "opacity": "0.588283",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.600989",
+                "opacity": "0.808975",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -2482,38 +2545,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(0.018848, -0.999822, 0.999822, 0.018848, 0, 0)",
+                  "transform": "matrix(0.457253, 0.889337, -0.889337, 0.457253, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.074991, 0, 0, 1.074991, 0.483966, -0.998578)",
+                  "transform": "matrix(1.089945, 0, 0, 1.089945, 1.225142, -1.838719)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.716403",
+                  "opacity": "0.690438",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.760103",
+                  "opacity": "0.767115",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.811075",
+                  "opacity": "0.588283",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.600989",
+                  "opacity": "0.808975",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -2531,26 +2594,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.969999, 0.243107, -0.243107, 0.969999, 0, 0)",
+                  "transform": "matrix(0.950895, 0.309515, -0.309515, 0.950895, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040175, 0, 0, 1.040175, -1.163553, 0.869588)",
+                  "transform": "matrix(1.040289, 0, 0, 1.040289, -1.158342, 0.863678)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.704914",
+                  "opacity": "0.721473",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.857584",
+                  "opacity": "0.880172",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -2562,7 +2625,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.9673",
+                  "opacity": "0.945566",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -2617,9 +2680,9 @@
           "sport": "ufc",
           "capture": {
             "file": "home-ufc-393x852.png",
-            "sha256": "0ef5eddfc060d969968ae5ebd5eb491384981f490d50fe4cb960b4c0e9ce687c",
-            "bytes": 1621370,
-            "capturedAt": "2026-10-07T01:20:32.615Z",
+            "sha256": "8bafa9c206e0f8a72d4f1a2ee7ecea4b2efd2f436c685376d8fec07b590cc9ce",
+            "bytes": 1593685,
+            "capturedAt": "2026-10-07T01:55:04.191Z",
             "viewportCssPixels": {
               "width": 393,
               "height": 852
@@ -2961,6 +3024,27 @@
                   "right": 306.96875,
                   "bottom": 430.6875
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 563,
+                    "width": 393,
+                    "height": 132,
+                    "right": 393,
+                    "bottom": 695
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 701,
+                    "width": 369,
+                    "height": 86,
+                    "right": 381,
+                    "bottom": 787
+                  }
+                },
                 "brandToGateGap": 7.59375,
                 "radialDepth": 64.7734375,
                 "radialDepthFraction": 0.1700090223097113,
@@ -3035,7 +3119,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -3051,23 +3135,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-ufc.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  294.20001220703125,
-                  294.2000427246094
+                  298.0133056640625,
+                  298.0133361816406
                 ],
                 "objectFit": "cover",
-                "density": 4.0788573274385245,
-                "distortion": 1.0373070591374045e-7
+                "density": 4.026665435095139,
+                "distortion": 1.0240339753941896e-7
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -3083,7 +3167,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   220,
@@ -3099,7 +3183,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -3115,7 +3199,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   43,
@@ -3131,7 +3215,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   19,
@@ -3147,7 +3231,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -3163,7 +3247,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -3184,38 +3268,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.949754, -0.312998, 0.312998, -0.949754, 0, 0)",
+                "transform": "matrix(0.988094, -0.153848, 0.153848, 0.988094, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.058814, 0, 0, 1.058814, -0.295137, -0.115254)",
+                "transform": "matrix(1.083879, 0, 0, 1.083879, 0.922055, -1.495183)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.95979",
+                "opacity": "0.99038",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.999995",
+                "opacity": "0.992276",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.998652",
+                "opacity": "0.882084",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.998596",
+                "opacity": "0.76623",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -3225,38 +3309,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.845169, -0.5345, 0.5345, -0.845169, 0, 0)",
+                "transform": "matrix(0.986083, 0.166252, -0.166252, 0.986083, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.062412, 0, 0, 1.062412, -0.123897, -0.309419)",
+                "transform": "matrix(1.086416, 0, 0, 1.086416, 1.048379, -1.638369)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.998375",
+                "opacity": "0.988709",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.980653",
+                "opacity": "0.926807",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.951697",
+                "opacity": "0.704305",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.980025",
+                "opacity": "0.933046",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -3267,38 +3351,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(-0.845169, -0.5345, 0.5345, -0.845169, 0, 0)",
+                  "transform": "matrix(0.986083, 0.166252, -0.166252, 0.986083, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.062412, 0, 0, 1.062412, -0.123897, -0.309419)",
+                  "transform": "matrix(1.086416, 0, 0, 1.086416, 1.048379, -1.638369)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.998375",
+                  "opacity": "0.988709",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.980653",
+                  "opacity": "0.926807",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.951697",
+                  "opacity": "0.704305",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.980025",
+                  "opacity": "0.933046",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -3316,26 +3400,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.69704, 0.717032, -0.717032, 0.69704, 0, 0)",
+                  "transform": "matrix(0.956712, 0.291036, -0.291036, 0.956712, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.041928, 0, 0, 1.041928, -1.083195, 0.778445)",
+                  "transform": "matrix(1.040254, 0, 0, 1.040254, -1.159937, 0.865486)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.91176",
+                  "opacity": "0.716403",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.993843",
+                  "opacity": "0.873797",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -3347,7 +3431,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.695815",
+                  "opacity": "0.952221",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -3359,7 +3443,7 @@
                   "animations": [
                     {
                       "name": "page-in",
-                      "currentTime": 299,
+                      "currentTime": 280,
                       "state": "finished"
                     }
                   ]
@@ -3402,11 +3486,11 @@
       "initialHomePerformance": {
         "network": {
           "navigation": {
-            "domContentLoaded": 57,
-            "load": 1707,
-            "responseStart": 5,
-            "responseEnd": 6,
-            "transferSize": 22386
+            "domContentLoaded": 61,
+            "load": 2093,
+            "responseStart": 7,
+            "responseEnd": 8,
+            "transferSize": 22418
           },
           "resources": [
             {
@@ -3415,23 +3499,7 @@
               "transferSize": 19172,
               "encodedBodySize": 18872,
               "decodedBodySize": 18872,
-              "duration": 2.0000000000000036
-            },
-            {
-              "path": "/project-dollers/assets/styles.css",
-              "initiatorType": "link",
-              "transferSize": 32015,
-              "encodedBodySize": 31715,
-              "decodedBodySize": 31715,
-              "duration": 1
-            },
-            {
-              "path": "/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
-              "initiatorType": "link",
-              "transferSize": 20732,
-              "encodedBodySize": 20432,
-              "decodedBodySize": 20432,
-              "duration": 2.0000000000000036
+              "duration": 2
             },
             {
               "path": "/project-dollers/assets/refinements.css",
@@ -3439,15 +3507,23 @@
               "transferSize": 20231,
               "encodedBodySize": 19931,
               "decodedBodySize": 19931,
-              "duration": 6
+              "duration": 3.0000000000000036
             },
             {
-              "path": "/project-dollers/assets/motion.css",
+              "path": "/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
               "initiatorType": "link",
-              "transferSize": 5420,
-              "encodedBodySize": 5120,
-              "decodedBodySize": 5120,
-              "duration": 2.0000000000000036
+              "transferSize": 20732,
+              "encodedBodySize": 20432,
+              "decodedBodySize": 20432,
+              "duration": 3.0000000000000036
+            },
+            {
+              "path": "/project-dollers/assets/styles.css",
+              "initiatorType": "link",
+              "transferSize": 32015,
+              "encodedBodySize": 31715,
+              "decodedBodySize": 31715,
+              "duration": 3.0000000000000036
             },
             {
               "path": "/project-dollers/assets/premium.css",
@@ -3455,47 +3531,7 @@
               "transferSize": 19131,
               "encodedBodySize": 18831,
               "decodedBodySize": 18831,
-              "duration": 2.0000000000000036
-            },
-            {
-              "path": "/project-dollers/assets/illumination.css",
-              "initiatorType": "link",
-              "transferSize": 4043,
-              "encodedBodySize": 3743,
-              "decodedBodySize": 3743,
-              "duration": 4
-            },
-            {
-              "path": "/project-dollers/assets/player-research.css",
-              "initiatorType": "link",
-              "transferSize": 7436,
-              "encodedBodySize": 7136,
-              "decodedBodySize": 7136,
-              "duration": 7
-            },
-            {
-              "path": "/project-dollers/assets/home-premium.css",
-              "initiatorType": "link",
-              "transferSize": 22482,
-              "encodedBodySize": 22182,
-              "decodedBodySize": 22182,
-              "duration": 7
-            },
-            {
-              "path": "/project-dollers/assets/home-gate-motion.css",
-              "initiatorType": "link",
-              "transferSize": 8664,
-              "encodedBodySize": 8364,
-              "decodedBodySize": 8364,
-              "duration": 3
-            },
-            {
-              "path": "/project-dollers/assets/app.js",
-              "initiatorType": "script",
-              "transferSize": 40692,
-              "encodedBodySize": 40392,
-              "decodedBodySize": 40392,
-              "duration": 4
+              "duration": 6
             },
             {
               "path": "/project-dollers/assets/home/gate-brand.webp",
@@ -3503,39 +3539,7 @@
               "transferSize": 488890,
               "encodedBodySize": 488590,
               "decodedBodySize": 488590,
-              "duration": 10
-            },
-            {
-              "path": "/project-dollers/assets/home/gate-metal.webp",
-              "initiatorType": "img",
-              "transferSize": 335366,
-              "encodedBodySize": 335066,
-              "decodedBodySize": 335066,
-              "duration": 9
-            },
-            {
-              "path": "/project-dollers/assets/home/gate-scenes-nfl.webp",
-              "initiatorType": "img",
-              "transferSize": 438590,
-              "encodedBodySize": 438290,
-              "decodedBodySize": 438290,
-              "duration": 9
-            },
-            {
-              "path": "/project-dollers/assets/home/nfl.svg",
-              "initiatorType": "img",
-              "transferSize": 4532,
-              "encodedBodySize": 4232,
-              "decodedBodySize": 4232,
-              "duration": 8
-            },
-            {
-              "path": "/project-dollers/assets/home-interactions.js",
-              "initiatorType": "script",
-              "transferSize": 5784,
-              "encodedBodySize": 5484,
-              "decodedBodySize": 5484,
-              "duration": 6.000000000000007
+              "duration": 15
             },
             {
               "path": "/project-dollers/assets/home-gate-motion.js",
@@ -3543,7 +3547,7 @@
               "transferSize": 2509,
               "encodedBodySize": 2209,
               "decodedBodySize": 2209,
-              "duration": 6.000000000000007
+              "duration": 12
             },
             {
               "path": "/project-dollers/assets/motion.js",
@@ -3551,7 +3555,23 @@
               "transferSize": 4846,
               "encodedBodySize": 4546,
               "decodedBodySize": 4546,
-              "duration": 5
+              "duration": 11
+            },
+            {
+              "path": "/project-dollers/assets/home-interactions.js",
+              "initiatorType": "script",
+              "transferSize": 5784,
+              "encodedBodySize": 5484,
+              "decodedBodySize": 5484,
+              "duration": 11
+            },
+            {
+              "path": "/project-dollers/assets/app.js",
+              "initiatorType": "script",
+              "transferSize": 40692,
+              "encodedBodySize": 40392,
+              "decodedBodySize": 40392,
+              "duration": 11
             },
             {
               "path": "/project-dollers/assets/player-research.js",
@@ -3559,7 +3579,7 @@
               "transferSize": 14271,
               "encodedBodySize": 13971,
               "decodedBodySize": 13971,
-              "duration": 3
+              "duration": 10
             },
             {
               "path": "/project-dollers/assets/data-updates.js",
@@ -3567,7 +3587,71 @@
               "transferSize": 15436,
               "encodedBodySize": 15136,
               "decodedBodySize": 15136,
-              "duration": 3
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/home-gate-motion.css",
+              "initiatorType": "link",
+              "transferSize": 8664,
+              "encodedBodySize": 8364,
+              "decodedBodySize": 8364,
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/player-research.css",
+              "initiatorType": "link",
+              "transferSize": 7436,
+              "encodedBodySize": 7136,
+              "decodedBodySize": 7136,
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/motion.css",
+              "initiatorType": "link",
+              "transferSize": 5420,
+              "encodedBodySize": 5120,
+              "decodedBodySize": 5120,
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/illumination.css",
+              "initiatorType": "link",
+              "transferSize": 4043,
+              "encodedBodySize": 3743,
+              "decodedBodySize": 3743,
+              "duration": 7
+            },
+            {
+              "path": "/project-dollers/assets/home-premium.css",
+              "initiatorType": "link",
+              "transferSize": 22931,
+              "encodedBodySize": 22631,
+              "decodedBodySize": 22631,
+              "duration": 7
+            },
+            {
+              "path": "/project-dollers/assets/home/nfl.svg",
+              "initiatorType": "img",
+              "transferSize": 4532,
+              "encodedBodySize": 4232,
+              "decodedBodySize": 4232,
+              "duration": 10.999999999999993
+            },
+            {
+              "path": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+              "initiatorType": "img",
+              "transferSize": 438590,
+              "encodedBodySize": 438290,
+              "decodedBodySize": 438290,
+              "duration": 11.999999999999993
+            },
+            {
+              "path": "/project-dollers/assets/home/gate-metal.webp",
+              "initiatorType": "img",
+              "transferSize": 335366,
+              "encodedBodySize": 335066,
+              "decodedBodySize": 335066,
+              "duration": 13.999999999999993
             },
             {
               "path": "/project-dollers/assets/icons.svg",
@@ -3575,7 +3659,7 @@
               "transferSize": 1548,
               "encodedBodySize": 1248,
               "decodedBodySize": 1248,
-              "duration": 2
+              "duration": 2.000000000000007
             },
             {
               "path": "/project-dollers/assets/home/nba.svg",
@@ -3583,7 +3667,7 @@
               "transferSize": 9833,
               "encodedBodySize": 9533,
               "decodedBodySize": 9533,
-              "duration": 2
+              "duration": 1.000000000000007
             },
             {
               "path": "/project-dollers/assets/logos/nrl.webp",
@@ -3591,7 +3675,7 @@
               "transferSize": 17722,
               "encodedBodySize": 17422,
               "decodedBodySize": 17422,
-              "duration": 2
+              "duration": 1
             },
             {
               "path": "/project-dollers/assets/logos/ufc.svg",
@@ -3607,7 +3691,7 @@
               "transferSize": 7094,
               "encodedBodySize": 6794,
               "decodedBodySize": 6794,
-              "duration": 1
+              "duration": 1.999999999999993
             },
             {
               "path": "/project-dollers/assets/logos/pit.webp",
@@ -3615,7 +3699,7 @@
               "transferSize": 28992,
               "encodedBodySize": 28692,
               "decodedBodySize": 28692,
-              "duration": 1
+              "duration": 1.999999999999993
             },
             {
               "path": "/project-dollers/assets/player-assets.json",
@@ -3623,7 +3707,7 @@
               "transferSize": 47925,
               "encodedBodySize": 47625,
               "decodedBodySize": 47625,
-              "duration": 2
+              "duration": 4
             },
             {
               "path": "/project-dollers/assets/data/current.json",
@@ -3631,71 +3715,7 @@
               "transferSize": 1196560,
               "encodedBodySize": 1196260,
               "decodedBodySize": 1196260,
-              "duration": 4
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 14.999999999999773
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 12.999999999999773
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 12.999999999999773
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 12.999999999999773
-            },
-            {
-              "path": "/project-dollers/assets/players/4361411.webp",
-              "initiatorType": "img",
-              "transferSize": 31046,
-              "encodedBodySize": 30746,
-              "decodedBodySize": 30746,
-              "duration": 12
-            },
-            {
-              "path": "/project-dollers/assets/players/4035687.webp",
-              "initiatorType": "img",
-              "transferSize": 30514,
-              "encodedBodySize": 30214,
-              "decodedBodySize": 30214,
-              "duration": 8
-            },
-            {
-              "path": "/project-dollers/assets/players/4047650.webp",
-              "initiatorType": "img",
-              "transferSize": 36576,
-              "encodedBodySize": 36276,
-              "decodedBodySize": 36276,
-              "duration": 6.999999999999773
-            },
-            {
-              "path": "/project-dollers/assets/players/4569987.webp",
-              "initiatorType": "img",
-              "transferSize": 41296,
-              "encodedBodySize": 40996,
-              "decodedBodySize": 40996,
-              "duration": 6.999999999999773
+              "duration": 9
             },
             {
               "path": "/project-dollers/assets/players/8439.webp",
@@ -3703,15 +3723,47 @@
               "transferSize": 24400,
               "encodedBodySize": 24100,
               "decodedBodySize": 24100,
-              "duration": 6
+              "duration": 13.999999999999545
             },
             {
-              "path": "/project-dollers/assets/logos/hou.webp",
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 17.999999999999545
+            },
+            {
+              "path": "/project-dollers/assets/players/4361411.webp",
               "initiatorType": "img",
-              "transferSize": 18456,
-              "encodedBodySize": 18156,
-              "decodedBodySize": 18156,
-              "duration": 6
+              "transferSize": 31046,
+              "encodedBodySize": 30746,
+              "decodedBodySize": 30746,
+              "duration": 16.999999999999545
+            },
+            {
+              "path": "/project-dollers/assets/players/4035687.webp",
+              "initiatorType": "img",
+              "transferSize": 30514,
+              "encodedBodySize": 30214,
+              "decodedBodySize": 30214,
+              "duration": 16
+            },
+            {
+              "path": "/project-dollers/assets/players/4569987.webp",
+              "initiatorType": "img",
+              "transferSize": 41296,
+              "encodedBodySize": 40996,
+              "decodedBodySize": 40996,
+              "duration": 14.999999999999545
+            },
+            {
+              "path": "/project-dollers/assets/players/4047650.webp",
+              "initiatorType": "img",
+              "transferSize": 36576,
+              "encodedBodySize": 36276,
+              "decodedBodySize": 36276,
+              "duration": 14.999999999999545
             },
             {
               "path": "/project-dollers/assets/logos/ind.webp",
@@ -3719,15 +3771,23 @@
               "transferSize": 25158,
               "encodedBodySize": 24858,
               "decodedBodySize": 24858,
-              "duration": 6
+              "duration": 13.999999999999545
             },
             {
-              "path": "/project-dollers/assets/logos/kc.webp",
+              "path": "/project-dollers/assets/logos/buf.webp",
               "initiatorType": "img",
-              "transferSize": 16880,
-              "encodedBodySize": 16580,
-              "decodedBodySize": 16580,
-              "duration": 4.999999999999773
+              "transferSize": 24820,
+              "encodedBodySize": 24520,
+              "decodedBodySize": 24520,
+              "duration": 5.999999999999545
+            },
+            {
+              "path": "/project-dollers/assets/logos/hou.webp",
+              "initiatorType": "img",
+              "transferSize": 18456,
+              "encodedBodySize": 18156,
+              "decodedBodySize": 18156,
+              "duration": 5.999999999999545
             },
             {
               "path": "/project-dollers/assets/logos/bal.webp",
@@ -3738,12 +3798,12 @@
               "duration": 4
             },
             {
-              "path": "/project-dollers/assets/logos/buf.webp",
+              "path": "/project-dollers/assets/logos/kc.webp",
               "initiatorType": "img",
-              "transferSize": 24820,
-              "encodedBodySize": 24520,
-              "decodedBodySize": 24520,
-              "duration": 4
+              "transferSize": 16880,
+              "encodedBodySize": 16580,
+              "decodedBodySize": 16580,
+              "duration": 2.9999999999995453
             },
             {
               "path": "/project-dollers/assets/icons.svg",
@@ -3751,19 +3811,43 @@
               "transferSize": 1548,
               "encodedBodySize": 1248,
               "decodedBodySize": 1248,
-              "duration": 12.999999999999773
+              "duration": 17
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 22
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 22
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 22
             }
           ],
-          "totalTransferBytes": 3115591,
-          "totalEncodedResourceBytes": 3102691,
-          "totalDecodedResourceBytes": 3102691,
+          "totalTransferBytes": 3116040,
+          "totalEncodedResourceBytes": 3103140,
+          "totalDecodedResourceBytes": 3103140,
           "historyLoadedOnHome": false
         },
         "animationFrameCadence": {
           "sampledFrames": 12,
-          "medianIntervalMs": 208,
-          "p95IntervalMs": 2381,
-          "maximumIntervalMs": 2381
+          "medianIntervalMs": 341,
+          "p95IntervalMs": 2264,
+          "maximumIntervalMs": 2264
         },
         "qualification": "Browser measurements in a cloud container; loopback timings or hosted proxy timings as indicated by base. Animation-frame cadence is not physical iPhone/GPU/FPS certification."
       },
@@ -3859,12 +3943,12 @@
           "openSeason": 1,
           "liveFrames": {
             "first": {
-              "ball": "1.103649%",
-              "light": "3.896351px"
+              "ball": "0.920908%",
+              "light": "4.079092px"
             },
             "second": {
-              "ball": "1.432224%",
-              "light": "3.567776px"
+              "ball": "1.218875%",
+              "light": "3.781125px"
             }
           }
         },
@@ -3905,9 +3989,9 @@
           "sport": "nfl",
           "capture": {
             "file": "home-nfl-430x896.png",
-            "sha256": "80245e16aff48518663a572e8e18b535228a625158e0dd27e6ee0e974d40d0a2",
-            "bytes": 1835138,
-            "capturedAt": "2026-10-07T01:21:37.502Z",
+            "sha256": "f83f3ba40fb9a9b407975c97e2c25453b06750c5a780b91821661ff098f1484f",
+            "bytes": 1789332,
+            "capturedAt": "2026-10-07T01:56:19.223Z",
             "viewportCssPixels": {
               "width": 430,
               "height": 896
@@ -4249,6 +4333,27 @@
                   "right": 323.671875,
                   "bottom": 522.46875
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 608,
+                    "width": 430,
+                    "height": 127,
+                    "right": 430,
+                    "bottom": 735
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 743,
+                    "width": 406,
+                    "height": 88,
+                    "right": 418,
+                    "bottom": 831
+                  }
+                },
                 "brandToGateGap": 5.125,
                 "radialDepth": 71.0625,
                 "radialDepthFraction": 0.17000598086124402,
@@ -4323,7 +4428,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -4339,23 +4444,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nfl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  336.7413024902344,
-                  336.7413024902344
+                  336.677734375,
+                  336.677734375
                 ],
                 "objectFit": "cover",
-                "density": 3.5635664265888516,
+                "density": 3.564239263483371,
                 "distortion": 0
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -4371,7 +4476,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   217,
@@ -4387,7 +4492,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -4403,7 +4508,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   45,
@@ -4419,7 +4524,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   20,
@@ -4435,7 +4540,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -4451,7 +4556,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -4472,38 +4577,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.149708, 0.98873, -0.98873, -0.149708, 0, 0)",
+                "transform": "matrix(-0.212519, 0.977157, -0.977157, -0.212519, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.074212, 0, 0, 1.074212, 0.489212, -1.048211)",
+                "transform": "matrix(1.07334, 0, 0, 1.07334, 0.442548, -0.99531)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.771251",
+                "opacity": "0.796791",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.927891",
+                "opacity": "0.945622",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.98584",
+                "opacity": "0.994852",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.880233",
+                "opacity": "0.846424",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -4513,38 +4618,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.484046, 0.875042, -0.875042, -0.484046, 0, 0)",
+                "transform": "matrix(-0.50136, 0.865239, -0.865239, -0.50136, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.06916, 0, 0, 1.06916, 0.219869, -0.742858)",
+                "transform": "matrix(1.068875, 0, 0, 1.068875, 0.204744, -0.72571)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.919402",
+                "opacity": "0.926389",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.995505",
+                "opacity": "0.996834",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.980356",
+                "opacity": "0.97606",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.685785",
+                "opacity": "0.676615",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -4555,38 +4660,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(-0.484046, 0.875042, -0.875042, -0.484046, 0, 0)",
+                  "transform": "matrix(-0.50136, 0.865239, -0.865239, -0.50136, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.06916, 0, 0, 1.06916, 0.219869, -0.742858)",
+                  "transform": "matrix(1.068875, 0, 0, 1.068875, 0.204744, -0.72571)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.919402",
+                  "opacity": "0.926389",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.995505",
+                  "opacity": "0.996834",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.980356",
+                  "opacity": "0.97606",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.685785",
+                  "opacity": "0.676615",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -4604,38 +4709,38 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.959412, 0.282007, -0.282007, 0.959412, 0, 0)",
+                  "transform": "matrix(0.961885, 0.273456, -0.273456, 0.961885, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040238, 0, 0, 1.040238, -1.273368, 0.950437)",
+                  "transform": "matrix(1.040223, 0, 0, 1.040223, -1.274107, 0.951276)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.714057",
+                  "opacity": "0.711913",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.870702",
+                  "opacity": "0.867786",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.935288",
+                  "opacity": "0.931808",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.9553",
+                  "opacity": "0.958114",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -4690,9 +4795,9 @@
           "sport": "nba",
           "capture": {
             "file": "home-nba-430x896.png",
-            "sha256": "feb16707fe88d7c3509ad71e3676e0441b5e188af06e65452b5d8623021ec1cc",
-            "bytes": 1841183,
-            "capturedAt": "2026-10-07T01:21:52.535Z",
+            "sha256": "168d2c3a17e02d7dd82dca065d67f9ebf05509cb8192b0724e44475db23e65ee",
+            "bytes": 1801815,
+            "capturedAt": "2026-10-07T01:56:33.089Z",
             "viewportCssPixels": {
               "width": 430,
               "height": 896
@@ -5034,6 +5139,27 @@
                   "right": 327.84375,
                   "bottom": 526.65625
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 608,
+                    "width": 430,
+                    "height": 127,
+                    "right": 430,
+                    "bottom": 735
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 743,
+                    "width": 406,
+                    "height": 88,
+                    "right": 418,
+                    "bottom": 831
+                  }
+                },
                 "brandToGateGap": 5.125,
                 "radialDepth": 71.0625,
                 "radialDepthFraction": 0.17000598086124402,
@@ -5108,7 +5234,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -5124,23 +5250,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nba.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  324.4525451660156,
-                  324.45257568359375
+                  323.6939697265625,
+                  323.6939697265625
                 ],
                 "objectFit": "cover",
-                "density": 3.69853744409858,
-                "distortion": 9.405867118505995e-8
+                "density": 3.70720529954169,
+                "distortion": 0
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -5156,7 +5282,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -5172,7 +5298,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   108,
@@ -5188,7 +5314,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -5204,7 +5330,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -5220,7 +5346,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   45,
@@ -5236,7 +5362,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   20,
@@ -5252,7 +5378,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -5268,7 +5394,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -5289,38 +5415,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.72176, -0.692143, 0.692143, -0.72176, 0, 0)",
+                "transform": "matrix(-0.227841, -0.973698, 0.973698, -0.227841, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.064522, 0, 0, 1.064522, -0.025156, -0.465056)",
+                "transform": "matrix(1.072668, 0, 0, 1.072668, 0.406589, -0.954544)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.992569",
+                "opacity": "0.803409",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.935753",
+                "opacity": "0.776311",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.934883",
+                "opacity": "0.944447",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.938285",
+                "opacity": "0.653898",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -5330,38 +5456,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.436174, -0.899863, 0.899863, -0.436174, 0, 0)",
+                "transform": "matrix(0.110255, -0.993903, 0.993903, 0.110255, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.069797, 0, 0, 1.069797, 0.253686, -0.781197)",
+                "transform": "matrix(1.077219, 0, 0, 1.077219, 0.650697, -1.231275)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.898449",
+                "opacity": "0.696962",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.823951",
+                "opacity": "0.763641",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.748711",
+                "opacity": "0.773127",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.753727",
+                "opacity": "0.580362",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -5372,38 +5498,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(-0.436174, -0.899863, 0.899863, -0.436174, 0, 0)",
+                  "transform": "matrix(0.110255, -0.993903, 0.993903, 0.110255, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.069797, 0, 0, 1.069797, 0.253686, -0.781197)",
+                  "transform": "matrix(1.077219, 0, 0, 1.077219, 0.650697, -1.231275)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.898449",
+                  "opacity": "0.696962",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.823951",
+                  "opacity": "0.763641",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.748711",
+                  "opacity": "0.773127",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.753727",
+                  "opacity": "0.580362",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -5421,26 +5547,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.963584, 0.267407, -0.267407, 0.963584, 0, 0)",
+                  "transform": "matrix(0.969744, 0.244123, -0.244123, 0.969744, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040213, 0, 0, 1.040213, -1.274615, 0.951852)",
+                  "transform": "matrix(1.040177, 0, 0, 1.040177, -1.27645, 0.953933)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.710443",
+                  "opacity": "0.705133",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.865733",
+                  "opacity": "0.857921",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -5452,7 +5578,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.960044",
+                  "opacity": "0.967012",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -5507,9 +5633,9 @@
           "sport": "nrl",
           "capture": {
             "file": "home-nrl-430x896.png",
-            "sha256": "6779c7b23adc77dc1d06545af94c693a05b3194eb9b176addf06b127c128e462",
-            "bytes": 1842611,
-            "capturedAt": "2026-10-07T01:22:06.747Z",
+            "sha256": "1746a4a37a576514a623a8ac82b9c9791ea304e42c207feba1698515a206932c",
+            "bytes": 1806864,
+            "capturedAt": "2026-10-07T01:56:48.181Z",
             "viewportCssPixels": {
               "width": 430,
               "height": 896
@@ -5851,6 +5977,27 @@
                   "right": 327.84375,
                   "bottom": 526.65625
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 608,
+                    "width": 430,
+                    "height": 127,
+                    "right": 430,
+                    "bottom": 735
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 743,
+                    "width": 406,
+                    "height": 88,
+                    "right": 418,
+                    "bottom": 831
+                  }
+                },
                 "brandToGateGap": 5.125,
                 "radialDepth": 71.0625,
                 "radialDepthFraction": 0.17000598086124402,
@@ -5925,7 +6072,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -5941,23 +6088,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  323.3094787597656,
-                  323.30950927734375
+                  322.81689453125,
+                  322.81689453125
                 ],
                 "objectFit": "cover",
-                "density": 3.7116136877081685,
-                "distortion": 9.439121728682665e-8
+                "density": 3.717277566102833,
+                "distortion": 0
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -5973,7 +6120,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -5989,7 +6136,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -6005,7 +6152,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   45,
@@ -6021,7 +6168,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   20,
@@ -6037,7 +6184,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -6053,7 +6200,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -6074,38 +6221,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.111816, -0.993729, 0.993729, -0.111816, 0, 0)",
+                "transform": "matrix(0.173476, -0.984838, 0.984838, 0.173476, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.071456, 0, 0, 1.071456, 0.341983, -0.881301)",
+                "transform": "matrix(1.074141, 0, 0, 1.074141, 0.485385, -1.043872)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.756788",
+                "opacity": "0.687786",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.763747",
+                "opacity": "0.769304",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.945381",
+                "opacity": "0.79724",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.693468",
+                "opacity": "0.616995",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -6115,38 +6262,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(0.243615, -0.969872, 0.969872, 0.243615, 0, 0)",
+                "transform": "matrix(0.494094, -0.869409, 0.869409, 0.494094, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.076357, 0, 0, 1.076357, 0.604287, -1.178663)",
+                "transform": "matrix(1.078554, 0, 0, 1.078554, 0.7227, -1.312897)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.681817",
+                "opacity": "0.696872",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.778768",
+                "opacity": "0.844163",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.764136",
+                "opacity": "0.628829",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.584612",
+                "opacity": "0.58345",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -6157,38 +6304,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(0.243615, -0.969872, 0.969872, 0.243615, 0, 0)",
+                  "transform": "matrix(0.494094, -0.869409, 0.869409, 0.494094, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.076357, 0, 0, 1.076357, 0.604287, -1.178663)",
+                  "transform": "matrix(1.078554, 0, 0, 1.078554, 0.7227, -1.312897)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.681817",
+                  "opacity": "0.696872",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.778768",
+                  "opacity": "0.844163",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.764136",
+                  "opacity": "0.628829",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.584612",
+                  "opacity": "0.58345",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -6206,26 +6353,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.962313, 0.271944, -0.271944, 0.962313, 0, 0)",
+                  "transform": "matrix(0.957016, 0.290034, -0.290034, 0.957016, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.040221, 0, 0, 1.040221, -1.274235, 0.951421)",
+                  "transform": "matrix(1.040252, 0, 0, 1.040252, -1.272649, 0.949623)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.711542",
+                  "opacity": "0.716139",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.867272",
+                  "opacity": "0.873452",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -6237,7 +6384,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.958601",
+                  "opacity": "0.952568",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -6292,9 +6439,9 @@
           "sport": "ufc",
           "capture": {
             "file": "home-ufc-430x896.png",
-            "sha256": "624a7656405a5b4e54fe07e2509ed3954b48f2e3dc6872375564782a1ec0d832",
-            "bytes": 1885078,
-            "capturedAt": "2026-10-07T01:22:19.926Z",
+            "sha256": "6d6f651f1c48b51a2c06a584d4fa59afe15ba789370312b74c15de6765d648c2",
+            "bytes": 1853226,
+            "capturedAt": "2026-10-07T01:57:01.394Z",
             "viewportCssPixels": {
               "width": 430,
               "height": 896
@@ -6636,6 +6783,27 @@
                   "right": 336.203125,
                   "bottom": 461.859375
                 },
+                "ground": {
+                  "box": {
+                    "x": 0,
+                    "y": 608,
+                    "width": 430,
+                    "height": 127,
+                    "right": 430,
+                    "bottom": 735
+                  },
+                  "parentIsStage": true,
+                  "transform": "none",
+                  "overflow": "hidden",
+                  "dock": {
+                    "x": 12,
+                    "y": 743,
+                    "width": 406,
+                    "height": 88,
+                    "right": 418,
+                    "bottom": 831
+                  }
+                },
                 "brandToGateGap": 5.125,
                 "radialDepth": 71.0625,
                 "radialDepthFraction": 0.17000598086124402,
@@ -6710,7 +6878,7 @@
             "images": [
               {
                 "src": "/project-dollers/assets/home/gate-brand.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1800,
@@ -6726,23 +6894,23 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-scenes-ufc.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1200,
                   1200
                 ],
                 "rendered": [
-                  322.8491516113281,
-                  322.84918212890625
+                  323.3963928222656,
+                  323.39642333984375
                 ],
                 "objectFit": "cover",
-                "density": 3.716905807495178,
-                "distortion": 9.45258028517415e-8
+                "density": 3.7106161769110546,
+                "distortion": 9.436584924582547e-8
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -6758,7 +6926,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   242,
@@ -6774,7 +6942,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/gate-metal.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   1254,
@@ -6790,7 +6958,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nfl.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   45,
@@ -6806,7 +6974,7 @@
               },
               {
                 "src": "/project-dollers/assets/home/nba.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   20,
@@ -6822,7 +6990,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/nrl.webp",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": false,
                 "natural": [
                   500,
@@ -6838,7 +7006,7 @@
               },
               {
                 "src": "/project-dollers/assets/logos/ufc.svg",
-                "origin": "http://127.0.0.1:35859",
+                "origin": "http://127.0.0.1:40249",
                 "vector": true,
                 "natural": [
                   62,
@@ -6859,38 +7027,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.391374, -0.920232, 0.920232, -0.391374, 0, 0)",
+                "transform": "matrix(-0.439469, -0.898258, 0.898258, -0.439469, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.064741, 0, 0, 1.064741, -0.013612, -0.478144)",
+                "transform": "matrix(1.065408, 0, 0, 1.065408, 0.021462, -0.517912)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.878143",
+                "opacity": "0.899914",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.811245",
+                "opacity": "0.825583",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.971323",
+                "opacity": "0.984701",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.932634",
+                "opacity": "0.91382",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -6900,38 +7068,38 @@
               "state": "running",
               "reason": "active",
               "sweep": {
-                "transform": "matrix(-0.119097, -0.992883, 0.992883, -0.119097, 0, 0)",
+                "transform": "matrix(-0.198171, -0.980168, 0.980168, -0.198171, 0, 0)",
                 "opacity": "1",
                 "animationName": "pd-gate-circuit",
                 "playState": "running"
               },
               "venue": {
-                "transform": "matrix(1.068952, 0, 0, 1.068952, 0.208834, -0.730348)",
+                "transform": "matrix(1.069206, 0, 0, 1.069206, 0.222319, -0.745635)",
                 "opacity": "1",
                 "animationName": "pd-gate-venue-depth",
                 "playState": "running"
               },
               "halo": {
                 "transform": "none",
-                "opacity": "0.759447",
+                "opacity": "0.790704",
                 "animationName": "pd-gate-neon-breathe",
                 "playState": "running"
               },
               "innerHalo": {
                 "transform": "none",
-                "opacity": "0.764263",
+                "opacity": "0.77219",
                 "animationName": "pd-gate-neon-inner-breathe",
                 "playState": "running"
               },
               "entryPulse": {
                 "transform": "none",
-                "opacity": "0.854984",
+                "opacity": "0.89971",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
               "selectedPulse": {
                 "transform": "none",
-                "opacity": "0.787888",
+                "opacity": "0.777638",
                 "animationName": "pd-gate-control-breathe",
                 "playState": "running"
               },
@@ -6942,38 +7110,38 @@
                 "state": "running",
                 "reason": "active",
                 "sweep": {
-                  "transform": "matrix(-0.119097, -0.992883, 0.992883, -0.119097, 0, 0)",
+                  "transform": "matrix(-0.198171, -0.980168, 0.980168, -0.198171, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "running"
                 },
                 "venue": {
-                  "transform": "matrix(1.068952, 0, 0, 1.068952, 0.208834, -0.730348)",
+                  "transform": "matrix(1.069206, 0, 0, 1.069206, 0.222319, -0.745635)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "running"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.759447",
+                  "opacity": "0.790704",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "running"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.764263",
+                  "opacity": "0.77219",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "running"
                 },
                 "entryPulse": {
                   "transform": "none",
-                  "opacity": "0.854984",
+                  "opacity": "0.89971",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.787888",
+                  "opacity": "0.777638",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "running"
                 },
@@ -6991,26 +7159,26 @@
                 "state": "paused",
                 "reason": "offscreen",
                 "sweep": {
-                  "transform": "matrix(0.54946, 0.83552, -0.83552, 0.54946, 0, 0)",
+                  "transform": "matrix(0.635809, 0.771847, -0.771847, 0.635809, 0, 0)",
                   "opacity": "1",
                   "animationName": "pd-gate-circuit",
                   "playState": "paused"
                 },
                 "venue": {
-                  "transform": "matrix(1.042984, 0, 0, 1.042984, -1.135119, 0.793635)",
+                  "transform": "matrix(1.042357, 0, 0, 1.042357, -1.166761, 0.829523)",
                   "opacity": "1",
                   "animationName": "pd-gate-venue-depth",
                   "playState": "paused"
                 },
                 "halo": {
                   "transform": "none",
-                  "opacity": "0.970279",
+                  "opacity": "0.940707",
                   "animationName": "pd-gate-neon-breathe",
                   "playState": "paused"
                 },
                 "innerHalo": {
                   "transform": "none",
-                  "opacity": "0.999366",
+                  "opacity": "0.998918",
                   "animationName": "pd-gate-neon-inner-breathe",
                   "playState": "paused"
                 },
@@ -7022,7 +7190,7 @@
                 },
                 "selectedPulse": {
                   "transform": "none",
-                  "opacity": "0.619008",
+                  "opacity": "0.657822",
                   "animationName": "pd-gate-control-breathe",
                   "playState": "paused"
                 },
@@ -7030,12 +7198,12 @@
               },
               "settledPageEntry": {
                 "before": {
-                  "transform": "matrix(1, 0, 0, 1, 0, 0.03781)",
+                  "transform": "matrix(1, 0, 0, 1, 0, 0)",
                   "animations": [
                     {
                       "name": "page-in",
-                      "currentTime": 209,
-                      "state": "running"
+                      "currentTime": 298,
+                      "state": "finished"
                     }
                   ]
                 },
@@ -7077,11 +7245,11 @@
       "initialHomePerformance": {
         "network": {
           "navigation": {
-            "domContentLoaded": 61,
-            "load": 1857,
-            "responseStart": 10,
-            "responseEnd": 14,
-            "transferSize": 22386
+            "domContentLoaded": 53,
+            "load": 1517.0000000000002,
+            "responseStart": 2,
+            "responseEnd": 3,
+            "transferSize": 22418
           },
           "resources": [
             {
@@ -7090,47 +7258,7 @@
               "transferSize": 19172,
               "encodedBodySize": 18872,
               "decodedBodySize": 18872,
-              "duration": 3
-            },
-            {
-              "path": "/project-dollers/assets/styles.css",
-              "initiatorType": "link",
-              "transferSize": 32015,
-              "encodedBodySize": 31715,
-              "decodedBodySize": 31715,
-              "duration": 3
-            },
-            {
-              "path": "/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
-              "initiatorType": "link",
-              "transferSize": 20732,
-              "encodedBodySize": 20432,
-              "decodedBodySize": 20432,
-              "duration": 5
-            },
-            {
-              "path": "/project-dollers/assets/player-research.css",
-              "initiatorType": "link",
-              "transferSize": 7436,
-              "encodedBodySize": 7136,
-              "decodedBodySize": 7136,
-              "duration": 5
-            },
-            {
-              "path": "/project-dollers/assets/illumination.css",
-              "initiatorType": "link",
-              "transferSize": 4043,
-              "encodedBodySize": 3743,
-              "decodedBodySize": 3743,
-              "duration": 4
-            },
-            {
-              "path": "/project-dollers/assets/premium.css",
-              "initiatorType": "link",
-              "transferSize": 19131,
-              "encodedBodySize": 18831,
-              "decodedBodySize": 18831,
-              "duration": 4
+              "duration": 1.0000000000000018
             },
             {
               "path": "/project-dollers/assets/refinements.css",
@@ -7138,7 +7266,23 @@
               "transferSize": 20231,
               "encodedBodySize": 19931,
               "decodedBodySize": 19931,
-              "duration": 3
+              "duration": 5
+            },
+            {
+              "path": "/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+              "initiatorType": "link",
+              "transferSize": 20732,
+              "encodedBodySize": 20432,
+              "decodedBodySize": 20432,
+              "duration": 13
+            },
+            {
+              "path": "/project-dollers/assets/styles.css",
+              "initiatorType": "link",
+              "transferSize": 32015,
+              "encodedBodySize": 31715,
+              "decodedBodySize": 31715,
+              "duration": 5
             },
             {
               "path": "/project-dollers/assets/motion.css",
@@ -7146,95 +7290,39 @@
               "transferSize": 5420,
               "encodedBodySize": 5120,
               "decodedBodySize": 5120,
-              "duration": 4
+              "duration": 3.9999999999999964
+            },
+            {
+              "path": "/project-dollers/assets/player-research.css",
+              "initiatorType": "link",
+              "transferSize": 7436,
+              "encodedBodySize": 7136,
+              "decodedBodySize": 7136,
+              "duration": 5.9999999999999964
+            },
+            {
+              "path": "/project-dollers/assets/premium.css",
+              "initiatorType": "link",
+              "transferSize": 19131,
+              "encodedBodySize": 18831,
+              "decodedBodySize": 18831,
+              "duration": 3.9999999999999964
+            },
+            {
+              "path": "/project-dollers/assets/illumination.css",
+              "initiatorType": "link",
+              "transferSize": 4043,
+              "encodedBodySize": 3743,
+              "decodedBodySize": 3743,
+              "duration": 3.9999999999999964
             },
             {
               "path": "/project-dollers/assets/home-premium.css",
               "initiatorType": "link",
-              "transferSize": 22482,
-              "encodedBodySize": 22182,
-              "decodedBodySize": 22182,
-              "duration": 4.000000000000007
-            },
-            {
-              "path": "/project-dollers/assets/motion.js",
-              "initiatorType": "script",
-              "transferSize": 4846,
-              "encodedBodySize": 4546,
-              "decodedBodySize": 4546,
-              "duration": 5.000000000000007
-            },
-            {
-              "path": "/project-dollers/assets/home/gate-scenes-nfl.webp",
-              "initiatorType": "img",
-              "transferSize": 438590,
-              "encodedBodySize": 438290,
-              "decodedBodySize": 438290,
-              "duration": 10
-            },
-            {
-              "path": "/project-dollers/assets/home/gate-metal.webp",
-              "initiatorType": "img",
-              "transferSize": 335366,
-              "encodedBodySize": 335066,
-              "decodedBodySize": 335066,
-              "duration": 9
-            },
-            {
-              "path": "/project-dollers/assets/home/gate-brand.webp",
-              "initiatorType": "img",
-              "transferSize": 488890,
-              "encodedBodySize": 488590,
-              "decodedBodySize": 488590,
-              "duration": 8
-            },
-            {
-              "path": "/project-dollers/assets/home/nfl.svg",
-              "initiatorType": "img",
-              "transferSize": 4532,
-              "encodedBodySize": 4232,
-              "decodedBodySize": 4232,
-              "duration": 8
-            },
-            {
-              "path": "/project-dollers/assets/home-gate-motion.js",
-              "initiatorType": "script",
-              "transferSize": 2509,
-              "encodedBodySize": 2209,
-              "decodedBodySize": 2209,
-              "duration": 6.000000000000007
-            },
-            {
-              "path": "/project-dollers/assets/home-interactions.js",
-              "initiatorType": "script",
-              "transferSize": 5784,
-              "encodedBodySize": 5484,
-              "decodedBodySize": 5484,
-              "duration": 6.000000000000007
-            },
-            {
-              "path": "/project-dollers/assets/app.js",
-              "initiatorType": "script",
-              "transferSize": 40692,
-              "encodedBodySize": 40392,
-              "decodedBodySize": 40392,
-              "duration": 5.000000000000007
-            },
-            {
-              "path": "/project-dollers/assets/data-updates.js",
-              "initiatorType": "script",
-              "transferSize": 15436,
-              "encodedBodySize": 15136,
-              "decodedBodySize": 15136,
-              "duration": 4
-            },
-            {
-              "path": "/project-dollers/assets/player-research.js",
-              "initiatorType": "script",
-              "transferSize": 14271,
-              "encodedBodySize": 13971,
-              "decodedBodySize": 13971,
-              "duration": 3
+              "transferSize": 22931,
+              "encodedBodySize": 22631,
+              "decodedBodySize": 22631,
+              "duration": 7
             },
             {
               "path": "/project-dollers/assets/home-gate-motion.css",
@@ -7242,7 +7330,87 @@
               "transferSize": 8664,
               "encodedBodySize": 8364,
               "decodedBodySize": 8364,
-              "duration": 2
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/data-updates.js",
+              "initiatorType": "script",
+              "transferSize": 15436,
+              "encodedBodySize": 15136,
+              "decodedBodySize": 15136,
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/player-research.js",
+              "initiatorType": "script",
+              "transferSize": 14271,
+              "encodedBodySize": 13971,
+              "decodedBodySize": 13971,
+              "duration": 8
+            },
+            {
+              "path": "/project-dollers/assets/motion.js",
+              "initiatorType": "script",
+              "transferSize": 4846,
+              "encodedBodySize": 4546,
+              "decodedBodySize": 4546,
+              "duration": 9.000000000000007
+            },
+            {
+              "path": "/project-dollers/assets/home-interactions.js",
+              "initiatorType": "script",
+              "transferSize": 5784,
+              "encodedBodySize": 5484,
+              "decodedBodySize": 5484,
+              "duration": 9.000000000000007
+            },
+            {
+              "path": "/project-dollers/assets/app.js",
+              "initiatorType": "script",
+              "transferSize": 40692,
+              "encodedBodySize": 40392,
+              "decodedBodySize": 40392,
+              "duration": 10
+            },
+            {
+              "path": "/project-dollers/assets/home-gate-motion.js",
+              "initiatorType": "script",
+              "transferSize": 2509,
+              "encodedBodySize": 2209,
+              "decodedBodySize": 2209,
+              "duration": 10
+            },
+            {
+              "path": "/project-dollers/assets/home/gate-brand.webp",
+              "initiatorType": "img",
+              "transferSize": 488890,
+              "encodedBodySize": 488590,
+              "decodedBodySize": 488590,
+              "duration": 12
+            },
+            {
+              "path": "/project-dollers/assets/home/nfl.svg",
+              "initiatorType": "img",
+              "transferSize": 4532,
+              "encodedBodySize": 4232,
+              "decodedBodySize": 4232,
+              "duration": 10
+            },
+            {
+              "path": "/project-dollers/assets/home/gate-scenes-nfl.webp",
+              "initiatorType": "img",
+              "transferSize": 438590,
+              "encodedBodySize": 438290,
+              "decodedBodySize": 438290,
+              "duration": 11
+            },
+            {
+              "path": "/project-dollers/assets/home/gate-metal.webp",
+              "initiatorType": "img",
+              "transferSize": 335366,
+              "encodedBodySize": 335066,
+              "decodedBodySize": 335066,
+              "duration": 12
             },
             {
               "path": "/project-dollers/assets/icons.svg",
@@ -7250,7 +7418,7 @@
               "transferSize": 1548,
               "encodedBodySize": 1248,
               "decodedBodySize": 1248,
-              "duration": 2
+              "duration": 1
             },
             {
               "path": "/project-dollers/assets/home/nba.svg",
@@ -7266,7 +7434,7 @@
               "transferSize": 17722,
               "encodedBodySize": 17422,
               "decodedBodySize": 17422,
-              "duration": 1
+              "duration": 2
             },
             {
               "path": "/project-dollers/assets/logos/ufc.svg",
@@ -7274,7 +7442,7 @@
               "transferSize": 2825,
               "encodedBodySize": 2525,
               "decodedBodySize": 2525,
-              "duration": 3
+              "duration": 0
             },
             {
               "path": "/project-dollers/assets/logos/nfl.webp",
@@ -7282,7 +7450,7 @@
               "transferSize": 7094,
               "encodedBodySize": 6794,
               "decodedBodySize": 6794,
-              "duration": 4
+              "duration": 1
             },
             {
               "path": "/project-dollers/assets/logos/pit.webp",
@@ -7298,7 +7466,7 @@
               "transferSize": 47925,
               "encodedBodySize": 47625,
               "decodedBodySize": 47625,
-              "duration": 5
+              "duration": 4
             },
             {
               "path": "/project-dollers/assets/data/current.json",
@@ -7309,116 +7477,12 @@
               "duration": 8
             },
             {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 25
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 25
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 25
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 21
-            },
-            {
-              "path": "/project-dollers/assets/icons.svg",
-              "initiatorType": "use",
-              "transferSize": 1548,
-              "encodedBodySize": 1248,
-              "decodedBodySize": 1248,
-              "duration": 20
-            },
-            {
-              "path": "/project-dollers/assets/players/4361411.webp",
-              "initiatorType": "img",
-              "transferSize": 31046,
-              "encodedBodySize": 30746,
-              "decodedBodySize": 30746,
-              "duration": 14
-            },
-            {
-              "path": "/project-dollers/assets/players/4035687.webp",
-              "initiatorType": "img",
-              "transferSize": 30514,
-              "encodedBodySize": 30214,
-              "decodedBodySize": 30214,
-              "duration": 14
-            },
-            {
-              "path": "/project-dollers/assets/players/4047650.webp",
-              "initiatorType": "img",
-              "transferSize": 36576,
-              "encodedBodySize": 36276,
-              "decodedBodySize": 36276,
-              "duration": 10
-            },
-            {
-              "path": "/project-dollers/assets/players/4569987.webp",
-              "initiatorType": "img",
-              "transferSize": 41296,
-              "encodedBodySize": 40996,
-              "decodedBodySize": 40996,
-              "duration": 9
-            },
-            {
-              "path": "/project-dollers/assets/players/8439.webp",
-              "initiatorType": "img",
-              "transferSize": 24400,
-              "encodedBodySize": 24100,
-              "decodedBodySize": 24100,
-              "duration": 9
-            },
-            {
-              "path": "/project-dollers/assets/logos/ind.webp",
-              "initiatorType": "img",
-              "transferSize": 25158,
-              "encodedBodySize": 24858,
-              "decodedBodySize": 24858,
-              "duration": 8
-            },
-            {
-              "path": "/project-dollers/assets/logos/hou.webp",
-              "initiatorType": "img",
-              "transferSize": 18456,
-              "encodedBodySize": 18156,
-              "decodedBodySize": 18156,
-              "duration": 7
-            },
-            {
-              "path": "/project-dollers/assets/logos/buf.webp",
-              "initiatorType": "img",
-              "transferSize": 24820,
-              "encodedBodySize": 24520,
-              "decodedBodySize": 24520,
-              "duration": 5
-            },
-            {
               "path": "/project-dollers/assets/logos/bal.webp",
               "initiatorType": "img",
               "transferSize": 35964,
               "encodedBodySize": 35664,
               "decodedBodySize": 35664,
-              "duration": 4
+              "duration": 5
             },
             {
               "path": "/project-dollers/assets/logos/kc.webp",
@@ -7426,19 +7490,123 @@
               "transferSize": 16880,
               "encodedBodySize": 16580,
               "decodedBodySize": 16580,
-              "duration": 3
+              "duration": 5
+            },
+            {
+              "path": "/project-dollers/assets/logos/buf.webp",
+              "initiatorType": "img",
+              "transferSize": 24820,
+              "encodedBodySize": 24520,
+              "decodedBodySize": 24520,
+              "duration": 4
+            },
+            {
+              "path": "/project-dollers/assets/logos/hou.webp",
+              "initiatorType": "img",
+              "transferSize": 18456,
+              "encodedBodySize": 18156,
+              "decodedBodySize": 18156,
+              "duration": 4
+            },
+            {
+              "path": "/project-dollers/assets/logos/ind.webp",
+              "initiatorType": "img",
+              "transferSize": 25158,
+              "encodedBodySize": 24858,
+              "decodedBodySize": 24858,
+              "duration": 4
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 12
+            },
+            {
+              "path": "/project-dollers/assets/players/8439.webp",
+              "initiatorType": "img",
+              "transferSize": 24400,
+              "encodedBodySize": 24100,
+              "decodedBodySize": 24100,
+              "duration": 12
+            },
+            {
+              "path": "/project-dollers/assets/players/4035687.webp",
+              "initiatorType": "img",
+              "transferSize": 30514,
+              "encodedBodySize": 30214,
+              "decodedBodySize": 30214,
+              "duration": 12
+            },
+            {
+              "path": "/project-dollers/assets/players/4361411.webp",
+              "initiatorType": "img",
+              "transferSize": 31046,
+              "encodedBodySize": 30746,
+              "decodedBodySize": 30746,
+              "duration": 12
+            },
+            {
+              "path": "/project-dollers/assets/players/4047650.webp",
+              "initiatorType": "img",
+              "transferSize": 36576,
+              "encodedBodySize": 36276,
+              "decodedBodySize": 36276,
+              "duration": 13
+            },
+            {
+              "path": "/project-dollers/assets/players/4569987.webp",
+              "initiatorType": "img",
+              "transferSize": 41296,
+              "encodedBodySize": 40996,
+              "decodedBodySize": 40996,
+              "duration": 13
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 17
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 17
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 18
+            },
+            {
+              "path": "/project-dollers/assets/icons.svg",
+              "initiatorType": "use",
+              "transferSize": 1548,
+              "encodedBodySize": 1248,
+              "decodedBodySize": 1248,
+              "duration": 19
             }
           ],
-          "totalTransferBytes": 3115591,
-          "totalEncodedResourceBytes": 3102691,
-          "totalDecodedResourceBytes": 3102691,
+          "totalTransferBytes": 3116040,
+          "totalEncodedResourceBytes": 3103140,
+          "totalDecodedResourceBytes": 3103140,
           "historyLoadedOnHome": false
         },
         "animationFrameCadence": {
           "sampledFrames": 12,
-          "medianIntervalMs": 237,
-          "p95IntervalMs": 2556,
-          "maximumIntervalMs": 2556
+          "medianIntervalMs": 216,
+          "p95IntervalMs": 2737,
+          "maximumIntervalMs": 2737
         },
         "qualification": "Browser measurements in a cloud container; loopback timings or hosted proxy timings as indicated by base. Animation-frame cadence is not physical iPhone/GPU/FPS certification."
       },
@@ -7534,12 +7702,12 @@
           "openSeason": 1,
           "liveFrames": {
             "first": {
-              "ball": "1.30117%",
-              "light": "3.698829px"
+              "ball": "1.058778%",
+              "light": "3.941222px"
             },
             "second": {
-              "ball": "1.604837%",
-              "light": "3.395163px"
+              "ball": "1.380466%",
+              "light": "3.619534px"
             }
           }
         },
@@ -7570,5 +7738,5 @@
     }
   ],
   "browserVersion": "26.0",
-  "completedAt": "2026-10-07T01:23:16.736Z"
+  "completedAt": "2026-10-07T01:57:56.207Z"
 }

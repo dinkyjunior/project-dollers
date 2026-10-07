@@ -1,22 +1,36 @@
 {
   "status": "accepted",
   "reviewer": "/root/metal_independent_review",
-  "reviewedAt": "2026-10-07T01:13:52.019418+00:00",
-  "reviewedAtAustraliaSydney": "2026-10-07T12:13:52.019418+11:00",
-  "acceptanceScope": "Independent Page 1 static visual comparison of all four sport states at 393x852 and 430x896; functional, motion, other reviewer and hosted deployment gates remain separate.",
-  "approvedVisualSource": "Latest user-reattached four-sport PROJECT DOLLAR \u2014 FINAL HOME CONCEPT render in chat; the white freehand marks on the rejected current screenshot identify areas to correct and are not desired UI.",
-  "method": "Direct independent inspection of all eight unaltered actual browser screenshots against the attached approved board, with native pixel crop verification when full-image preview omitted existing glyphs.",
+  "reviewedAt": "2026-10-07T02:04:22.933296+00:00",
+  "reviewedAtAustraliaSydney": "2026-10-07T13:04:22.933296+11:00",
+  "acceptanceScope": "Independent Page 1 visual comparison of all four sports at both primary phone sizes in Chromium and genuine WebKit: 16 actual unpaused captures. Functional, other reviewer and actual-hosted deployment gates remain separate.",
+  "approvedVisualSource": "Latest user-reattached four-sport PROJECT DOLLAR \u2014 FINAL HOME CONCEPT render in chat. White freehand marks on the rejected screenshot identify areas to correct and are not desired UI.",
+  "method": "Independent review of all sixteen latest actual screenshots at CSS phone dimensions in labelled Chromium/WebKit contact sheets against the approved chat render; original screenshot bytes are preserved and individually hash-bound. Previously inspected native metal/brand/venue/logo assets are unchanged.",
   "originalReferenceBytesAvailable": false,
   "pixelRegisteredExactMatchClaimed": false,
   "materialVisualGapReduced": true,
-  "captureManifest": "qa/home-metal/approved-local-captures/manifest.json",
-  "captureManifestSha256": "3e305aa84d8194c8403760f3f993fe9b226d12dda551a319ddac98f3e3a1170b",
+  "captureManifests": [
+    {
+      "path": "qa/home-metal/approved-local-captures/manifest.json",
+      "sha256": "e029a517da3660342dd870c1b0357bab4800f6c64927191605598ee0cb953a18",
+      "engine": "chromium",
+      "status": "complete",
+      "completedAt": "2026-10-07T01:53:35.101Z"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/manifest.json",
+      "sha256": "bdcc9f336a72a141acddd7c03a630e2b54e27a3f5c804da6a4a347e4059d6688",
+      "engine": "webkit",
+      "status": "complete",
+      "completedAt": "2026-10-07T01:59:33.722Z"
+    }
+  ],
   "boundRuntimeManifest": {
     "assets/app.js": "ef339266f02065ab66b6840bba8949d246aa55cd18e0a2d1a164821351bded95",
     "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
-    "assets/data/current.json": "1c03179768c4b75fea3aba444538eb90e2a76c9c7dc72f92f184254ee8beae92",
-    "assets/data/player-history.json": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b",
-    "assets/data/provenance.json": "5de8f5920b3245af9d57f751183b22fe11ad0c5c1d697f06cea2c0bd3f500315",
+    "assets/data/current.json": "518b352f998b8928453bb94538d256fa756590f0f7d831551f13e2fab45c3f88",
+    "assets/data/player-history.json": "ceebd35b11e27b76bac0c7d8b30f87f10435363ab9ad3f283fb9d2fa7e1e9d28",
+    "assets/data/provenance.json": "c1d293ea6dc96033e4479d2f2c870389e75f3f45b0d7290e0774b6989f9e0147",
     "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
     "assets/data/snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
     "assets/energy.svg": "d57a58aa08da4b91643a079acdc5a1e83b225a47cf62e8b7f70f1001f8c2f48a",
@@ -37,7 +51,7 @@
     "assets/home-gate-motion.css": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
     "assets/home-gate-motion.js": "ecb169a2832853d7cae5d83218fbf567ed1dd64632c5474261367da12d8434c2",
     "assets/home-interactions.js": "55c1ece0e0b738b1c5f6e594670ed65798609f508b7523f8a6986d42ea2f5a8b",
-    "assets/home-premium.css": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+    "assets/home-premium.css": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
     "assets/home/README.md": "8d3025071a17a157a954c6d07b9d10271e64bbf1327152b191ddbd96a36ddb9b",
     "assets/home/asset-provenance.json": "ada85f5f25a92d158c9831ed4b43f3554223c47221ab743d50e78a1efa711ecf",
     "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
@@ -195,159 +209,320 @@
     "assets/sources.json": "36b6eaab34430e217a33e9ac22117ae260b15cb133540302d0a5c363ab00bec0",
     "assets/stadium.jpg": "d05edf81f840c10a4cd5db42002bc52c5fce195b496127acd1405a682f5417ff",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
-    "index.html": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df"
+    "index.html": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112"
   },
   "currentRuntimeMatchesReviewedManifest": true,
   "captures": [
     {
+      "engine": "chromium",
       "sport": "nfl",
       "viewportCssPixels": {
         "width": 393,
         "height": 852
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nfl-393x852-live.png",
-      "captureSha256": "e8d0e52e5daa5744f8b68c8a6d198e566c3befea352a5b959a0fd56d3b50780e",
+      "captureSha256": "3519628e09041ae559da1859dace69d81b19e5f2d9c2ed02fff16d1eaebaa828",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "electric blue",
       "brandToGateGapCssPixels": 7.59375,
       "outerGateWidthCssPixels": 381
     },
     {
+      "engine": "chromium",
       "sport": "nba",
       "viewportCssPixels": {
         "width": 393,
         "height": 852
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nba-393x852-live.png",
-      "captureSha256": "84594ecd0014a4045cf0bc1e117b8066db06618f9612acf6c609f781970e0aa0",
+      "captureSha256": "e77c240cc72a71e62a5f4962318a53ec78ad04ff6af378be4dafd6c46898fd46",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "fixed blue left / red right",
       "brandToGateGapCssPixels": 7.59375,
       "outerGateWidthCssPixels": 381
     },
     {
+      "engine": "chromium",
       "sport": "nrl",
       "viewportCssPixels": {
         "width": 393,
         "height": 852
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nrl-393x852-live.png",
-      "captureSha256": "e8016c90c0b1f96435d8d2e1a82ac978cd9e873e13b4fc91740c77c00cecd0ef",
+      "captureSha256": "f83629c69589333a41de588aaf1b106524212155578d69ab62fce3accc00ac7e",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "neon green",
       "brandToGateGapCssPixels": 7.59375,
       "outerGateWidthCssPixels": 381
     },
     {
+      "engine": "chromium",
       "sport": "ufc",
       "viewportCssPixels": {
         "width": 393,
         "height": 852
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-ufc-393x852-live.png",
-      "captureSha256": "5e641adfb06fadf6db1b246fcf5c9879531f0c5adb1b064a9d4d01d4a59844e0",
+      "captureSha256": "7ed216059e931aede0327ffe5af10e7771752230a5069966a474dd32ad2cdff4",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "neon red",
       "brandToGateGapCssPixels": 7.59375,
       "outerGateWidthCssPixels": 381
     },
     {
+      "engine": "chromium",
       "sport": "nfl",
       "viewportCssPixels": {
         "width": 430,
         "height": 896
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nfl-430x896-live.png",
-      "captureSha256": "337c96215160d6f32555e88b5a144abe3648db4a7d67b196cddfbce0204ab6d4",
+      "captureSha256": "f95faa3d8df6a4764f8fd5215cbaa6e4a40fcbf9dbc0d0490183c10fc4814cdf",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "electric blue",
       "brandToGateGapCssPixels": 5.125,
       "outerGateWidthCssPixels": 418
     },
     {
+      "engine": "chromium",
       "sport": "nba",
       "viewportCssPixels": {
         "width": 430,
         "height": 896
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nba-430x896-live.png",
-      "captureSha256": "fd9c6f245ae4dc140fa5619c2529e761e5b8cc860102deed5c95bc0be071c4fa",
+      "captureSha256": "336c935b7a7611838d2d4b475f017cd36051e52feec4c8c2e29b274d4c4a887d",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "fixed blue left / red right",
       "brandToGateGapCssPixels": 5.125,
       "outerGateWidthCssPixels": 418
     },
     {
+      "engine": "chromium",
       "sport": "nrl",
       "viewportCssPixels": {
         "width": 430,
         "height": 896
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-nrl-430x896-live.png",
-      "captureSha256": "339854804dfd01c54ba35eafa3d82425da6e0fddb2789221c8bab03f6f3314c3",
+      "captureSha256": "90e6294509f45b29dccd9db4b9751b4a662fd777d57627c185771e884721b432",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "neon green",
       "brandToGateGapCssPixels": 5.125,
       "outerGateWidthCssPixels": 418
     },
     {
+      "engine": "chromium",
       "sport": "ufc",
       "viewportCssPixels": {
         "width": 430,
         "height": 896
       },
       "actualCapture": "qa/home-metal/approved-local-captures/home-ufc-430x896-live.png",
-      "captureSha256": "f38f25568c5003c8cc5cfb5c554ef311ec7d9358b67df50c0da34694da23f77a",
+      "captureSha256": "a7527448f5db569299b54e6e678d962d2f5e82667c06bc19631157525099c754",
       "reviewDecision": "accepted",
       "actualImagesInspectedIndependently": true,
-      "materialDepthAndSegmentation": "substantial multi-plane chrome/black bolted chassis and recessed illuminated channels visible",
-      "environment": "small intentional brand gap, integrated side supports and feet/contact shadow over immediate mirrored illuminated floor",
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "neon red",
+      "brandToGateGapCssPixels": 5.125,
+      "outerGateWidthCssPixels": 418
+    },
+    {
+      "engine": "webkit",
+      "sport": "nfl",
+      "viewportCssPixels": {
+        "width": 393,
+        "height": 852
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nfl-393x852-live.png",
+      "captureSha256": "1d949328f085b2db8868b11d3ef319167132d1d55a8f5c64a3a14eb621326ea4",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "electric blue",
+      "brandToGateGapCssPixels": 7.59375,
+      "outerGateWidthCssPixels": 381
+    },
+    {
+      "engine": "webkit",
+      "sport": "nba",
+      "viewportCssPixels": {
+        "width": 393,
+        "height": 852
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nba-393x852-live.png",
+      "captureSha256": "4d9a33e788674190fb589798939e692ac2723a4c21be7eb09b77b899bbf7a2e7",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "fixed blue left / red right",
+      "brandToGateGapCssPixels": 7.59375,
+      "outerGateWidthCssPixels": 381
+    },
+    {
+      "engine": "webkit",
+      "sport": "nrl",
+      "viewportCssPixels": {
+        "width": 393,
+        "height": 852
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nrl-393x852-live.png",
+      "captureSha256": "38b2ec7dd15a3bb21e6d5937e4186a5109a6aa92d763fb9ac83bca17d1505037",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "neon green",
+      "brandToGateGapCssPixels": 7.59375,
+      "outerGateWidthCssPixels": 381
+    },
+    {
+      "engine": "webkit",
+      "sport": "ufc",
+      "viewportCssPixels": {
+        "width": 393,
+        "height": 852
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-ufc-393x852-live.png",
+      "captureSha256": "d4c563240081e0383ef78d7c9ee92b2e01afbe358d715a87c092e77651f3ab20",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "neon red",
+      "brandToGateGapCssPixels": 7.59375,
+      "outerGateWidthCssPixels": 381
+    },
+    {
+      "engine": "webkit",
+      "sport": "nfl",
+      "viewportCssPixels": {
+        "width": 430,
+        "height": 896
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nfl-430x896-live.png",
+      "captureSha256": "8151281af9fe93d819aad53fffdf183c4759fd31e7a76184e71cd6c02ab351ea",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "electric blue",
+      "brandToGateGapCssPixels": 5.125,
+      "outerGateWidthCssPixels": 418
+    },
+    {
+      "engine": "webkit",
+      "sport": "nba",
+      "viewportCssPixels": {
+        "width": 430,
+        "height": 896
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nba-430x896-live.png",
+      "captureSha256": "2c91fc52c83306258f465b23264e536b86a812c60534583194ed66b7b0b10101",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "fixed blue left / red right",
+      "brandToGateGapCssPixels": 5.125,
+      "outerGateWidthCssPixels": 418
+    },
+    {
+      "engine": "webkit",
+      "sport": "nrl",
+      "viewportCssPixels": {
+        "width": 430,
+        "height": 896
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-nrl-430x896-live.png",
+      "captureSha256": "d2babef883e42c19275e6a9a60c44b845b41f8b92d588193294e1b2ab36c6c7b",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
+      "sportLighting": "neon green",
+      "brandToGateGapCssPixels": 5.125,
+      "outerGateWidthCssPixels": 418
+    },
+    {
+      "engine": "webkit",
+      "sport": "ufc",
+      "viewportCssPixels": {
+        "width": 430,
+        "height": 896
+      },
+      "actualCapture": "qa/home-metal/cross-engine-local-webkit/home-ufc-430x896-live.png",
+      "captureSha256": "4a6780483047469e3e029325ec0ff6dd9494ac04cf0add1b33a48940ba14dddc",
+      "reviewDecision": "accepted",
+      "actualImagesInspectedIndependently": true,
+      "inspection": "Each latest raw PNG reviewed at its CSS phone dimensions within four labelled contact sheets; original full PNGs remain unmodified. Native protected artwork and portal detail previously inspected and unchanged.",
+      "metalDepthAndSegmentation": "Substantial faceted reflective chrome plates, bolted dark chassis and recessed illuminated channels remain clear.",
+      "floorEnvironment": "Immediate sport-lit reflected wet/striated ground joins metal feet to CTA; floor lighting is clipped above a clean selector dock in both browser engines.",
       "sportLighting": "neon red",
       "brandToGateGapCssPixels": 5.125,
       "outerGateWidthCssPixels": 418
     }
   ],
   "resolvedIssues": [
-    "Uniform shallow CSS silver annulus and identical bars replaced by substantial faceted reflective metal plates, bolted dark chassis, multiple depth planes and recessed saturated channels.",
-    "Large empty brand-to-gate interval replaced by a small intentional gap without obscuring the retained tagline.",
-    "Side architecture integrates with the gate; metal feet are grounded immediately over reflected sport lighting rather than floating above a rectangular black void.",
-    "Final floor uses a masked mirror of the same native metal housing and a subdued grid; fixed NBA blue/red split extends through reflections.",
-    "Red and green channel filtering refined before this final eight-state review."
+    "Uniform shallow silver annulus/identical bars replaced by substantial layered, faceted, segmented metal entrance with reflective bevels and bolted dark chassis.",
+    "Large blank masthead gap corrected without covering the retained tagline.",
+    "Wall supports connect into the housing and metal feet meet an immediate sport-lit reflected ground plane.",
+    "Previously held WebKit environment discrepancy is resolved: floor now appears under the feet in both actual browser engines, wall geometry no longer extends through the floor, and broad floor beams do not wash across the selector dock.",
+    "Native metal mirror reflection and restrained wet striations preserve the approved glossy sport-lit environment.",
+    "Strong fixed four-sport colour distribution remains clear and logos/interior venues retain protected assets."
   ],
   "approvedContentPreserved": [
-    "Retained diamond/gold Project Dollar masthead and emerald money bag.",
-    "Retained genuine league logos and inside-gate venue artwork.",
-    "No repeated hero sport-name/DATA & RESEARCH block.",
-    "No Preview only copy; Coming soon sports remain selectable.",
-    "UFC navigation uses Fighters."
+    "Diamond/gold Project Dollar masthead and emerald money bag.",
+    "Genuine league logos and inside-gate venue artwork.",
+    "Repeated below-gate sport-name/DATA & RESEARCH remains removed.",
+    "No Preview only copy; UFC uses Fighters."
   ],
   "releaseBlockingVisualFindings": [],
   "qualifications": [
-    "Chat-source comparison is qualitative; pixel identity cannot be asserted without original reference bytes.",
-    "Screenshots are cloud-browser output at DPR2, not physical iPhone hardware or Safari chrome certification.",
-    "All assigned reviewers must independently accept and final functional/mobile QA must pass before publication.",
-    "This reviewer has not published or deployed the app."
+    "Source comparison is qualitative; original reference bytes are unavailable, so pixel identity is not asserted.",
+    "Cloud browser screenshots do not certify physical iPhone/Safari chrome or hardware FPS.",
+    "All six assigned reviewers and final functional/mobile QA must still pass before publication.",
+    "Actual-hosted visual acceptance for this new floor-corrected runtime is pending deployment and fresh capture review."
   ],
-  "hostedVerificationStatus": "pending actual deployment and root launch instruction"
+  "hostedVerificationStatus": "pending root deployment and new hosted captures; original prior-runtime visual hold remains preserved as historical evidence",
+  "finalGutterCorrection": "The final <=360px-only floor gutter rule prevents compact-width overflow; all latest393/430 actual captures still retain accepted gate/floor proportions in both engines."
 }

@@ -33,8 +33,16 @@ def main():
         'qa/home-metal/mobile-visual-review.json',
         'qa/home-metal/motion-approved/acceptance.json',
         'qa/home-metal/review/visual-review.json',
+        'qa/home-metal/review/hosted-visual-review.json',
         'qa/home-metal/review/results.json',
         'qa/home-metal/hosted-webkit/results.json',
+        'qa/home-metal/HOSTED_QA_REVIEW.md',
+        'qa/home-metal/hosted-qa-review.json',
+        'qa/home-metal/refresh-integration/deployment-refresh-diff.json',
+        'qa/home-metal/refresh-integration/deployed-data-check.json',
+        'qa/home-metal/refresh-integration/deployed-data-tests.txt',
+        'qa/home-metal/refresh-integration/manual-refresh.json',
+        'qa/home-metal/refresh-integration/tooling-review.json',
     ]
     for directory in ['live-captures', 'before-after']:
         additional.extend(str(p.relative_to(ROOT)) for p in sorted(

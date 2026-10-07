@@ -1,0 +1,42 @@
+{
+  "status": "accepted",
+  "reviewer": "metal_motion",
+  "reviewedAt": "2026-10-07T01:38:20.760688+00:00",
+  "scope": "Read-only supplementary tooling review; no browser started, no application files edited and no deployment triggered.",
+  "reviewedFilesSha256": {
+    ".github/workflows/build-approved-pages.yml": "55249b3d7cd1b42a61c3394530d5ac2c9f50364fa67fc1c71c17303cace901a5",
+    "qa/home-metal/compare-refresh.py": "365953282fc845f8c11ab69bcb06ec194a132c8841bb8eaf75b8d6ce6c67e54f",
+    "qa/home-metal/refresh-integration/deployment-refresh-diff.json": "43523d01dfc06800c2ec4421966ee7a847c8e28bf7b31e5d07ce323dc5d44a4c",
+    "qa/home-metal/refresh-integration/manual-refresh.cjs": "a54978b32859f2420e88613b6516a651699bf4efcf6448fbd86431bc23a69320"
+  },
+  "workflow": {
+    "yamlParsed": true,
+    "bashSyntaxPassed": true,
+    "trigger": "workflow_dispatch only",
+    "mainOnly": true,
+    "permissions": {
+      "contents": "read",
+      "pages": "write"
+    },
+    "findings": "Requests the existing configured Pages main/root build with the repository-scoped Actions token; runs no checkout, source code, third-party action, data refresh or branch mutation. The repository path is quoted and no dispatch payload is evaluated as shell code.",
+    "completionQualification": "A successful API request queues a build; it does not prove publication. The Pages build/deploy result and actual hosted content must still be verified."
+  },
+  "refreshDiff": {
+    "pythonSyntaxPassed": true,
+    "independentRerunMatchedSavedReportExceptCheckedAt": true,
+    "factualLeavesCompared": 391771,
+    "changedMetadataLeaves": 1776,
+    "factualDifferences": 0,
+    "nonDataRuntimeFilesByteIdentical": 181,
+    "runtimeFileSetIndependentlyVerifiedUnchanged": true,
+    "findings": "Every recursive JSON type, dictionary key set, list length and factual scalar is checked. Exclusions are enumerated provenance/retrieval/hash scalar paths, not entire data subtrees. Incoming JSON bytes must equal the requested Git objects. The full application runtime file set and 181 non-data hashes are independently unchanged.",
+    "limitation": "compare-refresh.py itself compares hashes of known frozen runtime paths; this review separately checks runtime file-set equality so added runtime files cannot go unnoticed in this release."
+  },
+  "manualRefresh": {
+    "javascriptSyntaxPassed": true,
+    "correctPath": "qa/home-metal/refresh-integration/manual-refresh.cjs",
+    "findings": "Requires the completed full hosted WebKit report and exact current runtime. Observes the native Playwright control click, manual checking event, explicit updated/unchanged success, aria-busy reset, real HTTP200/304 request and exact current source JSON/HTTP200 response SHA. Error/offline retention cannot pass; there are no source substitutions or forced update statuses.",
+    "qualification": "The reviewed companion deliberately requires a stable approved published snapshot; if a newer automatic snapshot arrives during the check, exact-byte assertions fail rather than silently accepting stale expectations. This review only checks implementation/syntax; parent runs the actual browser proof after the current hosted test finishes."
+  },
+  "blockers": []
+}

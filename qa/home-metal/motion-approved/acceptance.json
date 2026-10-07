@@ -1,18 +1,90 @@
 {
   "agent": "metal_motion",
   "status": "accepted",
-  "acceptedAt": "2026-10-07T01:14:02.138466+00:00",
-  "scope": "Page 1 four-sport metal portal visual and motion review only",
-  "approvedSource": "Four-sport FINAL HOME CONCEPT render reattached in chat. White marks on the separate current-site image were interpreted as user annotations.",
+  "acceptedAt": "2026-10-07T02:02:02.787829+00:00",
+  "scope": "Final Page 1 metal entrance, corrected 2D ground and natural motion only. No application changes were made during this final review.",
+  "approvedSource": "The four-sport FINAL HOME CONCEPT render reattached in chat; white strokes on the separate site screenshot are annotations.",
   "capturesIndependentlyViewed": [
-    "home-nfl-393x852-live.png",
-    "home-nba-393x852-live.png",
-    "home-nrl-393x852-live.png",
-    "home-ufc-393x852-live.png",
-    "home-nfl-430x896-live.png",
-    "home-nba-430x896-live.png",
-    "home-nrl-430x896-live.png",
-    "home-ufc-430x896-live.png"
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nfl-393x852-live.png",
+      "sha256": "3519628e09041ae559da1859dace69d81b19e5f2d9c2ed02fff16d1eaebaa828",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nba-393x852-live.png",
+      "sha256": "e77c240cc72a71e62a5f4962318a53ec78ad04ff6af378be4dafd6c46898fd46",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nrl-393x852-live.png",
+      "sha256": "f83629c69589333a41de588aaf1b106524212155578d69ab62fce3accc00ac7e",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-ufc-393x852-live.png",
+      "sha256": "7ed216059e931aede0327ffe5af10e7771752230a5069966a474dd32ad2cdff4",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nfl-430x896-live.png",
+      "sha256": "f95faa3d8df6a4764f8fd5215cbaa6e4a40fcbf9dbc0d0490183c10fc4814cdf",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nba-430x896-live.png",
+      "sha256": "336c935b7a7611838d2d4b475f017cd36051e52feec4c8c2e29b274d4c4a887d",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-nrl-430x896-live.png",
+      "sha256": "90e6294509f45b29dccd9db4b9751b4a662fd777d57627c185771e884721b432",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/approved-local-captures/home-ufc-430x896-live.png",
+      "sha256": "a7527448f5db569299b54e6e678d962d2f5e82667c06bc19631157525099c754",
+      "engine": "chromium"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nfl-393x852-live.png",
+      "sha256": "1d949328f085b2db8868b11d3ef319167132d1d55a8f5c64a3a14eb621326ea4",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nba-393x852-live.png",
+      "sha256": "4d9a33e788674190fb589798939e692ac2723a4c21be7eb09b77b899bbf7a2e7",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nrl-393x852-live.png",
+      "sha256": "38b2ec7dd15a3bb21e6d5937e4186a5109a6aa92d763fb9ac83bca17d1505037",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-ufc-393x852-live.png",
+      "sha256": "d4c563240081e0383ef78d7c9ee92b2e01afbe358d715a87c092e77651f3ab20",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nfl-430x896-live.png",
+      "sha256": "8151281af9fe93d819aad53fffdf183c4759fd31e7a76184e71cd6c02ab351ea",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nba-430x896-live.png",
+      "sha256": "2c91fc52c83306258f465b23264e536b86a812c60534583194ed66b7b0b10101",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-nrl-430x896-live.png",
+      "sha256": "d2babef883e42c19275e6a9a60c44b845b41f8b92d588193294e1b2ab36c6c7b",
+      "engine": "webkit"
+    },
+    {
+      "path": "qa/home-metal/cross-engine-local-webkit/home-ufc-430x896-live.png",
+      "sha256": "4a6780483047469e3e029325ec0ff6dd9494ac04cf0add1b33a48940ba14dddc",
+      "engine": "webkit"
+    }
   ],
   "viewportsCssPixels": [
     [
@@ -24,32 +96,37 @@
       896
     ]
   ],
-  "runtimeSourceEqualBetweenMotionAndWholeScreenCaptures": true,
+  "runtimeSourceEqualBetweenMotionChromeAndWebKit": true,
+  "runtimeFileCount": 184,
   "visualFindings": [
-    "Substantial layered chrome housing, curved bevels, recessed saturated LED channels, side supports and metal pedestal replace the old uniform CSS annulus and thin connectors.",
-    "Chrome facets and dark recesses remain legible beneath localized travelling reflections; light does not repaint the whole perimeter as a matte white rail.",
-    "New mirrored metal and sport-coloured floor reflections connect the pedestal to a glossy stage; the prior suspended-base/empty-floor strip has been materially reduced.",
-    "NFL blue, NBA fixed blue-left/red-right, NRL green and UFC red cover ring, architectural light, floor and active controls coherently.",
-    "All eight latest actual captures retain crisp brand and genuine league artwork, one research tagline, no duplicate sport heading, no Preview only, and Fighters for UFC.",
-    "Native NRL430 navigation crop confirms all five navigation glyphs and labels exist in source PNG despite occasional full-image preview omissions."
+    "All sixteen final actual Chrome/WebKit captures preserve the reference's substantial layered polished metal entrance, dark facet recesses, saturated curved LED channels, side housing, retained sharp brand and genuine league artwork.",
+    "Both engines paint the corrected glossy floor directly beneath the pedestal. Native NBA430 ground/dock crops confirm mirror light and blue-left/red-right split on the ground, with a clean black sport dock beneath it.",
+    "The old thin uniform grey/white rails are gone; local moving highlights preserve chrome depth instead of painting a matte white circumference.",
+    "The captured NFL blue, fixed NBA blue-left/red-right, NRL green and UFC red retain clear hierarchy. Repeated sport headings remain removed, coming-soon controls contain no Preview only, and UFC navigation reads Fighters."
   ],
-  "naturalMotionProof": "motion-approved/results.json",
+  "naturalMotionProof": "qa/home-metal/motion-approved/results.json",
   "motionFindings": [
-    "All eight naturally sampled pairs show the recessed light flare, masked metal glint and venue depth moving while both metal housing copies and fixed sport palettes stay unchanged.",
-    "New mirrored floor material stays static while its existing parent light opacity pulses naturally.",
-    "Strong steady emissive baseline persists through pulses: outer halo >=.68 and inner halo >=.76.",
-    "Reduced motion stops every infinite decorative animation; offscreen, synthetic pagehide and inactive-route states pause the flare, glint and reflected-floor parent."
+    "Eight natural gate pairs and eight natural bounded-ground pairs are saved (32 PNGs). Recessed flare, masked chrome glint, scene depth and clipped floor shimmer move without seeking animation phases.",
+    "Fixed metal copies, NBA half, mirrored metal, 2D ground surface and ground/reflective-parent geometry remain stationary. The floor pixels and reflection opacity change naturally.",
+    "Strong neon minima remain .68 outer and .76 inner. Reduced motion stops every infinite decorative animation; inactive and offscreen states pause ring, glint, floor reflection and floor shimmer.",
+    "The document.hidden branch pauses these same layers in an explicitly isolated visibility-input harness; its original property descriptor and event state are restored before captures or navigation.",
+    "The bounded floor uses no perspective transform, clips travelling light with overflow:hidden and a feathered mask, and contacts the opaque portal foot with an observed 10px overlap."
   ],
+  "observedFloorTopMinusGateBottomCssPixels": {
+    "minimum": -10,
+    "maximum": -10
+  },
   "sourceSha256": {
-    "index.html": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df",
-    "assets/home-premium.css": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+    "index.html": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112",
+    "assets/home-premium.css": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
     "assets/home-gate-motion.css": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
     "assets/home-gate-motion.js": "ecb169a2832853d7cae5d83218fbf567ed1dd64632c5474261367da12d8434c2"
   },
+  "correctedTestGuardHistory": "qa/home-metal/iterations/ground-guard-expectation/README.md",
   "limitations": [
-    "Reference comparison is independent human visual review of the chat render; original approved source bytes are not present for registered pixel-difference measurements.",
-    "Physical iPhone hardware, Safari controls, native operating-system background events and GPU FPS are not certified by this cloud-browser review.",
-    "This acceptance does not replace the other agents' final reviews, full functional/WebKit QA or actual hosted verification."
+    "Human visual comparison uses the attached chat board; original reference bytes are not present for registered pixel identity.",
+    "Cloud Chrome/WebKit emulation does not certify physical iPhone/Safari controls, OS background transitions or GPU FPS. Visibility-input and pagehide-listener harnesses are labeled as such in the motion proof.",
+    "This acceptance does not replace the remaining agents' reviews and actual hosted verification after publication."
   ],
   "blockers": []
 }

@@ -11,7 +11,13 @@ The following runs are preserved as intermediate evidence:
 - `iterations/second-metal/`: floor placement and top-gap refinement.
 - `final-captures/`: despite the premature folder name, this is **intermediate** evidence before the final red/green palette and mirrored floor refinement. It is not the accepted release.
 - `iterations/stopped-functional-before-floor/`: requested cancellation of an intermediate Chromium run after 393×852, 430×896 and 320×700 passed; the remaining suite was not completed. See `INTERRUPTED.json`.
+- `iterations/webkit-floor-hold/`: the first metal release passed functionality, but independent review found a persistent WebKit floor gap and illumination crossing the sport dock. Its original screenshots and reports remain preserved; they do not certify the corrected floor.
+- `iterations/2d-floor-before-small-breakpoint/`: the grounded 2D floor passed all sixteen primary visual views, then the complete Chromium check found real horizontal overflow at 320px. The final isolated ≤360px rule corrects the floor bounds.
+- `iterations/failed-loopback-proxy-invocation/`: an explicit loopback `--base` was interpreted as hosted by the functional runner and routed through the external proxy, returning 403 before any UI test. The supported no-`--base` local rerun passed.
+- `iterations/failed-restore-harness/`: a finite ancestor entry animation affected strict before/after position sampling. Waiting for its real completion preserves the original bounds/offscreen assertions; no application change was required.
 
 `approved-local-captures/` is the current candidate capture location. Its name is provisional: the manifest explicitly requires independent design review and does not grant publication approval. The final acceptance ledger and release record must name the exact runtime hashes reviewed by every assigned agent before publication.
+
+The final local candidate has eight naturally running Chromium captures in `approved-local-captures/` and eight genuine WebKit captures in `cross-engine-local-webkit/`. Complete Chromium checks at five viewports and WebKit checks at both primary phone sizes pass in `local-chromium/` and `local-webkit/`. The sixteen independently accepted frames and both functional reports bind the same 184-file runtime; see `CROSS_ENGINE_FLOOR_REVIEW.md` and `LOCAL_QA_REVIEW.md`. Actual-hosted verification remains a separate release gate.
 
 No physical iPhone hardware, Safari browser controls or device frame-rate certification is claimed. Prior `qa/home-gate/` and `qa/home-neon/` evidence remains unchanged.

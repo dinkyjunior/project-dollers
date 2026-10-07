@@ -1,13 +1,31 @@
 {
   "status": "PASS",
   "reviewer": "metal_asset_design",
-  "reviewed_at_utc": "2026-10-07T01:14:27.134132+00:00",
-  "reviewed_at_australia_sydney": "2026-10-07T12:14:27.134132+11:00",
-  "reference": "User reattached approved four-phone Project Dollar — Final Home Concept chat image. White freehand strokes in current-site screenshot were treated as annotation. Human visual cross-reference performed; attachment original bytes unavailable. No quantitative pixel-identity claim.",
-  "candidate_manifest": "qa/home-metal/approved-local-captures/manifest.json",
-  "candidate_manifest_sha256": "3e305aa84d8194c8403760f3f993fe9b226d12dda551a319ddac98f3e3a1170b",
-  "candidate_html_sha256": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df",
-  "candidate_home_css_sha256": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+  "reviewed_at_utc": "2026-10-07T02:04:00.523361+00:00",
+  "reviewed_at_australia_sydney": "2026-10-07T13:04:00.523361+11:00",
+  "reference": "User reattached approved four-phone Project Dollar — Final Home Concept chat image; white freehand strokes in current-site screenshot are annotations. Visual cross-reference performed on all16 freshactual screenshots. Original attachment bytes unavailable; no quantitative pixel-identity claim.",
+  "candidate_capture_manifests": [
+    {
+      "engine": "chromium",
+      "path": "qa/home-metal/approved-local-captures/manifest.json",
+      "sha256": "e029a517da3660342dd870c1b0357bab4800f6c64927191605598ee0cb953a18",
+      "completed_at": "2026-10-07T01:53:35.101Z",
+      "html_sha256": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112",
+      "home_css_sha256": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
+      "motion_css_sha256": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb"
+    },
+    {
+      "engine": "webkit",
+      "path": "qa/home-metal/cross-engine-local-webkit/manifest.json",
+      "sha256": "bdcc9f336a72a141acddd7c03a630e2b54e27a3f5c804da6a4a347e4059d6688",
+      "completed_at": "2026-10-07T01:59:33.722Z",
+      "html_sha256": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112",
+      "home_css_sha256": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
+      "motion_css_sha256": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb"
+    }
+  ],
+  "candidate_html_sha256": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112",
+  "candidate_home_css_sha256": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
   "candidate_motion_css_sha256": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
   "native_asset_review": {
     "captured_at": "2026-10-07T01:03:28.810101+00:00",
@@ -109,13 +127,14 @@
   },
   "reviewed_captures": [
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nfl-393x852-live.png",
       "sport": "nfl",
       "viewport_css_pixels": {
         "width": 393,
         "height": 852
       },
-      "sha256": "e8d0e52e5daa5744f8b68c8a6d198e566c3befea352a5b959a0fd56d3b50780e",
+      "sha256": "3519628e09041ae559da1859dace69d81b19e5f2d9c2ed02fff16d1eaebaa828",
       "native_metal_dimensions": [
         1254,
         1254
@@ -123,16 +142,18 @@
       "rendered_art_width_css_pixels": 381,
       "native_pixels_per_css_pixel": 3.2913385826771653,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nba-393x852-live.png",
       "sport": "nba",
       "viewport_css_pixels": {
         "width": 393,
         "height": 852
       },
-      "sha256": "84594ecd0014a4045cf0bc1e117b8066db06618f9612acf6c609f781970e0aa0",
+      "sha256": "e77c240cc72a71e62a5f4962318a53ec78ad04ff6af378be4dafd6c46898fd46",
       "native_metal_dimensions": [
         1254,
         1254
@@ -140,16 +161,18 @@
       "rendered_art_width_css_pixels": 381,
       "native_pixels_per_css_pixel": 3.2913385826771653,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nrl-393x852-live.png",
       "sport": "nrl",
       "viewport_css_pixels": {
         "width": 393,
         "height": 852
       },
-      "sha256": "e8016c90c0b1f96435d8d2e1a82ac978cd9e873e13b4fc91740c77c00cecd0ef",
+      "sha256": "f83629c69589333a41de588aaf1b106524212155578d69ab62fce3accc00ac7e",
       "native_metal_dimensions": [
         1254,
         1254
@@ -157,16 +180,18 @@
       "rendered_art_width_css_pixels": 381,
       "native_pixels_per_css_pixel": 3.2913385826771653,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-ufc-393x852-live.png",
       "sport": "ufc",
       "viewport_css_pixels": {
         "width": 393,
         "height": 852
       },
-      "sha256": "5e641adfb06fadf6db1b246fcf5c9879531f0c5adb1b064a9d4d01d4a59844e0",
+      "sha256": "7ed216059e931aede0327ffe5af10e7771752230a5069966a474dd32ad2cdff4",
       "native_metal_dimensions": [
         1254,
         1254
@@ -174,16 +199,18 @@
       "rendered_art_width_css_pixels": 381,
       "native_pixels_per_css_pixel": 3.2913385826771653,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nfl-430x896-live.png",
       "sport": "nfl",
       "viewport_css_pixels": {
         "width": 430,
         "height": 896
       },
-      "sha256": "337c96215160d6f32555e88b5a144abe3648db4a7d67b196cddfbce0204ab6d4",
+      "sha256": "f95faa3d8df6a4764f8fd5215cbaa6e4a40fcbf9dbc0d0490183c10fc4814cdf",
       "native_metal_dimensions": [
         1254,
         1254
@@ -191,16 +218,18 @@
       "rendered_art_width_css_pixels": 418,
       "native_pixels_per_css_pixel": 3.0,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nba-430x896-live.png",
       "sport": "nba",
       "viewport_css_pixels": {
         "width": 430,
         "height": 896
       },
-      "sha256": "fd9c6f245ae4dc140fa5619c2529e761e5b8cc860102deed5c95bc0be071c4fa",
+      "sha256": "336c935b7a7611838d2d4b475f017cd36051e52feec4c8c2e29b274d4c4a887d",
       "native_metal_dimensions": [
         1254,
         1254
@@ -208,16 +237,18 @@
       "rendered_art_width_css_pixels": 418,
       "native_pixels_per_css_pixel": 3.0,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-nrl-430x896-live.png",
       "sport": "nrl",
       "viewport_css_pixels": {
         "width": 430,
         "height": 896
       },
-      "sha256": "339854804dfd01c54ba35eafa3d82425da6e0fddb2789221c8bab03f6f3314c3",
+      "sha256": "90e6294509f45b29dccd9db4b9751b4a662fd777d57627c185771e884721b432",
       "native_metal_dimensions": [
         1254,
         1254
@@ -225,16 +256,18 @@
       "rendered_art_width_css_pixels": 418,
       "native_pixels_per_css_pixel": 3.0,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     },
     {
+      "engine": "chromium",
       "file": "qa/home-metal/approved-local-captures/home-ufc-430x896-live.png",
       "sport": "ufc",
       "viewport_css_pixels": {
         "width": 430,
         "height": 896
       },
-      "sha256": "f38f25568c5003c8cc5cfb5c554ef311ec7d9358b67df50c0da34694da23f77a",
+      "sha256": "a7527448f5db569299b54e6e678d962d2f5e82667c06bc19631157525099c754",
       "native_metal_dimensions": [
         1254,
         1254
@@ -242,18 +275,178 @@
       "rendered_art_width_css_pixels": 418,
       "native_pixels_per_css_pixel": 3.0,
       "asset_visual_review": "PASS",
-      "reference_material_environment_review": "PASS"
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nfl-393x852-live.png",
+      "sport": "nfl",
+      "viewport_css_pixels": {
+        "width": 393,
+        "height": 852
+      },
+      "sha256": "1d949328f085b2db8868b11d3ef319167132d1d55a8f5c64a3a14eb621326ea4",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 381,
+      "native_pixels_per_css_pixel": 3.2913385826771653,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nba-393x852-live.png",
+      "sport": "nba",
+      "viewport_css_pixels": {
+        "width": 393,
+        "height": 852
+      },
+      "sha256": "4d9a33e788674190fb589798939e692ac2723a4c21be7eb09b77b899bbf7a2e7",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 381,
+      "native_pixels_per_css_pixel": 3.2913385826771653,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nrl-393x852-live.png",
+      "sport": "nrl",
+      "viewport_css_pixels": {
+        "width": 393,
+        "height": 852
+      },
+      "sha256": "38b2ec7dd15a3bb21e6d5937e4186a5109a6aa92d763fb9ac83bca17d1505037",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 381,
+      "native_pixels_per_css_pixel": 3.2913385826771653,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-ufc-393x852-live.png",
+      "sport": "ufc",
+      "viewport_css_pixels": {
+        "width": 393,
+        "height": 852
+      },
+      "sha256": "d4c563240081e0383ef78d7c9ee92b2e01afbe358d715a87c092e77651f3ab20",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 381,
+      "native_pixels_per_css_pixel": 3.2913385826771653,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nfl-430x896-live.png",
+      "sport": "nfl",
+      "viewport_css_pixels": {
+        "width": 430,
+        "height": 896
+      },
+      "sha256": "8151281af9fe93d819aad53fffdf183c4759fd31e7a76184e71cd6c02ab351ea",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 418,
+      "native_pixels_per_css_pixel": 3.0,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nba-430x896-live.png",
+      "sport": "nba",
+      "viewport_css_pixels": {
+        "width": 430,
+        "height": 896
+      },
+      "sha256": "2c91fc52c83306258f465b23264e536b86a812c60534583194ed66b7b0b10101",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 418,
+      "native_pixels_per_css_pixel": 3.0,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-nrl-430x896-live.png",
+      "sport": "nrl",
+      "viewport_css_pixels": {
+        "width": 430,
+        "height": 896
+      },
+      "sha256": "d2babef883e42c19275e6a9a60c44b845b41f8b92d588193294e1b2ab36c6c7b",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 418,
+      "native_pixels_per_css_pixel": 3.0,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/home-metal/cross-engine-local-webkit/home-ufc-430x896-live.png",
+      "sport": "ufc",
+      "viewport_css_pixels": {
+        "width": 430,
+        "height": 896
+      },
+      "sha256": "4a6780483047469e3e029325ec0ff6dd9494ac04cf0add1b33a48940ba14dddc",
+      "native_metal_dimensions": [
+        1254,
+        1254
+      ],
+      "rendered_art_width_css_pixels": 418,
+      "native_pixels_per_css_pixel": 3.0,
+      "asset_visual_review": "PASS",
+      "reference_material_environment_review": "PASS",
+      "corrected_floor_paint_review": "PASS"
     }
   ],
+  "engine_visual_acceptance": {
+    "chromium": "PASS all8",
+    "webkit": "PASS all8"
+  },
+  "archived_superseded_review": "qa/home-metal/iterations/webkit-floor-hold/asset-review.md and asset-review.json",
+  "floor_correction_review": "Initial Chromium-only acceptance did not establish WebKit ground-plane visual fidelity; later independent hosted review held thatcandidate. The corrected engine-neutral2Dfloor, clippedmovingbeams andstageanchoring were independently re-inspected in all16 fresh Chromium/WebKit captures. Visible reflected metal/ground persists underfeet atbothsizes inbothengines; no detached/absentgroundplane or uncontrolledfloorpaint overflow observed.",
   "resolved_review_findings": [
-    "Flat uniform silver annulus/eight equal bars replaced by dimensional segmented black-chrome/brushed-steel structure, bolts, inset emissive channels, side supports and pedestal.",
-    "Upper dead gap reduced and surrounding side supports connect portal to dark chrome walls.",
-    "Regular bare grid floor subdued; actual metal artwork is mirrored/compressed under pedestal for glossy curved light and metal reflections.",
-    "Red art hue150/saturation1.25 and green hue-60/saturation1.12 reviewed after rejecting earlier coral/orange and acid-green variants.",
-    "NFL blue and NBA fixed left-blue/right-red cross-referenced at both sizes, with original official logo colors intact."
+    "Flat uniform annulus/eight equal bars replaced by dimensional segmented black-chrome/brushed-steel structure, bolts, inset channels, side supports and pedestal.",
+    "Upper dead gap reduced and structural wall framing connects portal to surrounding blackchrome environment.",
+    "Bare regular grid subdued and genuine artwork mirrored/compressed underfeet. Updated2Dstageanchoredfloor paints correctly inbothengines withclippedsportbeams.",
+    "Final red hue150/saturation1.25 and green hue-60/saturation1.12 preserve saturated themed lighting.",
+    "Alloriginal brand/scenes/genuineleague assets remainbyteidentical; nativealpha andWebP samplingquality remainsunchanged."
   ],
-  "acceptance_scope": "Native/deployed-candidate asset sharpness, alpha integration, material/environment fidelity and sport-color treatment of the inspected frozen Page1 candidate. Functional/motion engine checks and actual-hosted verification are separate release gates.",
+  "acceptance_scope": "Asset sharpness, alpha integration, substantial metal material, sport theme and corrected ground/environment fidelity of the fresh frozen local Page1 candidate acrossbothengines. Functional/motion checks and actualhostedverification remainseparatereleasegates.",
   "remaining_visual_asset_blockers": [],
   "physical_iphone_tested": false,
-  "publication_authorized_by_this_report_alone": false
+  "publication_authorized_by_this_report_alone": false,
+  "final_reinspection_note": "After final≤360CSSpx gutter correction, every final fresh Chromium/WebKit393/430capture was reopened and cross-referenced against approved chatrender. All16 asset/material/floor decisions remainPASS; no source edits performed by assetreviewer."
 }
