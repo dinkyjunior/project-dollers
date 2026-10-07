@@ -23,7 +23,39 @@ CA = '/usr/local/share/ca-certificates/environment-proxy-ca.crt'
 def main():
     hosted = json.loads((ROOT / 'qa/home-metal/hosted-webkit/results.json').read_text())
     assert hosted['status'] == 'passed', 'Complete hosted mobile QA must pass first'
-    manifest = dict(hosted['runtimeManifest'])
+    desktop = json.loads((ROOT / 'qa/home-metal/review/results.json').read_text())
+    assert desktop['status'] == 'passed', 'Independent actual-hosted desktop QA must pass'
+    acceptance = json.loads((ROOT / 'qa/home-metal/agent-acceptance.json').read_text())
+    assert acceptance['status'] == 'all_six_visual_reviews_accepted'
+    assert len(acceptance['reviewers']) == 6 and acceptance['capturedScreens'] == 16
+    for reviewer in acceptance['reviewers']:
+        assert reviewer['decision'] == 'accepted' and reviewer['allFourSportsAtBothPhoneSizesInBothEnginesIndependentlyReviewed']
+        assert hashlib.sha256((ROOT / reviewer['evidence']).read_bytes()).hexdigest() == reviewer['evidenceSha256']
+    refresh_path = ROOT / 'qa/home-metal/refresh-integration/post-refresh-results.json'
+    refresh = json.loads(refresh_path.read_text())
+    manual = json.loads((ROOT / 'qa/home-metal/refresh-integration/post-refresh-manual.json').read_text())
+    diff = json.loads((ROOT / 'qa/home-metal/refresh-integration/final-incoming-refresh.json').read_text())
+    assert refresh['status'] == manual['status'] == 'passed', 'Latest hosted data and native refresh must pass'
+    assert diff['status'] == 'factual-values-preserved' and diff['totalFactualDifferences'] == 0
+    assert refresh['baselineFullQA']['sha256'] == hashlib.sha256(
+        (ROOT / refresh['baselineFullQA']['file']).read_bytes()).hexdigest()
+    assert manual['linkedSmoke']['sha256'] == hashlib.sha256(refresh_path.read_bytes()).hexdigest()
+    manifest = dict(refresh['expectedManifest'])
+    data_paths = {'assets/data/current.json', 'assets/data/player-history.json', 'assets/data/provenance.json'}
+    assert manifest.keys() == hosted['runtimeManifest'].keys() and len(manifest) == 184
+    assert all(manifest[p] == h for p, h in hosted['runtimeManifest'].items() if p not in data_paths)
+    assert all(manifest[p] == h for p, h in acceptance['runtimeManifest'].items() if p not in data_paths)
+    assert refresh['appCoreShaUnchanged'] and refresh['appCoreFiles'] == 181
+    assert diff['nonDataRuntimeFilesByteIdentical'] == 181 and not diff['changedNonDataRuntimeFiles']
+    for p in data_paths:
+        assert diff['files'][p]['afterSha256'] == manifest[p], 'Recursive comparison binds the refreshed snapshot'
+    data_check = json.loads((ROOT / 'qa/home-metal/refresh-integration/final-data-check.json').read_text())
+    assert data_check['status'] == data_check['provenanceHash'] == data_check['playerHistory']['status'] == 'passed'
+    data_tests = (ROOT / 'qa/home-metal/refresh-integration/final-data-tests.txt').read_text()
+    assert 'Ran 22 tests' in data_tests and data_tests.rstrip().endswith('OK')
+    final_review = json.loads((ROOT / 'qa/home-metal/refresh-integration/final-refresh-review.json').read_text())
+    assert final_review['status'] == 'accepted', 'Independent refresh review must accept the preserved snapshot'
+    assert final_review['runtimeManifest'] == manifest, 'Independent review binds all current runtime files'
     additional = [
         'CODEX_START.md', 'CODEX_HANDOFF_STATUS.md', 'CODEX_ENVIRONMENT.md',
         'DEPLOYMENT.md', 'qa/home-metal/RELEASE.md',
@@ -44,6 +76,15 @@ def main():
         'qa/home-metal/refresh-integration/deployed-data-tests.txt',
         'qa/home-metal/refresh-integration/manual-refresh.json',
         'qa/home-metal/refresh-integration/tooling-review.json',
+        'qa/home-metal/refresh-integration/final-incoming-refresh.json',
+        'qa/home-metal/refresh-integration/final-data-check.json',
+        'qa/home-metal/refresh-integration/final-data-tests.txt',
+        'qa/home-metal/refresh-integration/post-refresh-results.json',
+        'qa/home-metal/refresh-integration/post-refresh-manual.json',
+        'qa/home-metal/refresh-integration/final-refresh-review.json',
+        'qa/home-metal/refresh-integration/FINAL_REFRESH_REVIEW.md',
+        'qa/home-metal/refresh-integration/post-refresh-smoke.cjs',
+        'qa/home-metal/refresh-integration/post-refresh-manual.cjs',
     ]
     for directory in ['live-captures', 'before-after']:
         additional.extend(str(p.relative_to(ROOT)) for p in sorted(
@@ -88,8 +129,14 @@ def main():
               'completedAt': datetime.now(timezone.utc).isoformat(),
               'base': BASE, 'evidenceCommit': commit, 'branchRefs': refs,
               'strictTLS': True, 'servedFiles': delivered,
+              'completeApplicationQACommit': hosted['gitHead'],
+              'preservedMetadataRefreshCommit': diff['incomingAutomaticDataCommit'],
+              'latestSnapshotRetrievedAt': refresh['data']['retrievedAt'],
               'qualification': 'Final evidence publication receipt. Complete actual-hosted '
-              'mobile/desktop browser reports retain their tested application and source hashes.'}
+              'mobile/desktop browser reports retain their tested application and source hashes. '
+              'Subsequent metadata-only refresh is bound to the immutable full baseline and '
+              'current hosted two-phone source/native-refresh checks; all 181 non-data files '
+              'remain identical and the recursive data comparison found no factual differences.'}
     out = Path('/workspace/recovery-qa/home-metal-final-publication.json')
     out.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({'status': 'passed', 'files': len(delivered), 'commit': commit,
