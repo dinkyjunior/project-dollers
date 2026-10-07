@@ -1,0 +1,7 @@
+# Current-data genuine WebKit regression
+
+Fresh full genuine WebKit 26.0 mobile suites passed at393×852 and430×896 on the exact191-file current runtime. Only current.json, player-history.json and provenance.json differ from the frozen visual candidate; all188 nondata implementation/asset files remain byte-identical. These incoming JSON changes include real roster/source-verification changes and are not described as metadata-only.
+
+The actual rendered app matched the incoming snapshot. Allfour sport selectors, keyboard and remembered selection, Coming soon route guards, native Escape, loaded local Retina images/fonts, actual compact chrome/venue geometry, thick control edges and Home motion/lifecycle passed. Home→NFL→Steelers→NFL→Home, conference/week/tabs/filters, source-backed player history, expanded complete-card perimeter, back/forward, direct load and refresh passed on both phones. Each phone checked700 recent-game and695 relevant-opponent statistic fields against this incoming snapshot. Allconsole/JavaScript, HTTP, externalruntime and genuine failedrequest arrays are empty.
+
+Exactsource, fullsuite report and frozen historical evidence hashes are saved in current-data-native-review.json. Noapplication edits, priorreview mutations, oldQA overwrites or screenshot substitutions were made. The previous20 visual images retain their original source bindings. This proof covers currentdata functional integration, not independentprovider verification or actualhosted deployment. Physical iPhone/Safari-toolbar and deviceFPS claims are not made.

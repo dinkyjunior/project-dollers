@@ -46,6 +46,7 @@ def main():
     for path in checks:
         check = report(prefix + path)
         assert check["status"] == "passed", path
+    assert report(prefix + "motion-approved/results.json")["status"] == "passed"
     manifest = dict(report(prefix + "refresh-integration/post-refresh-results.json")["expectedManifest"])
     refresh = report(prefix + "refresh-integration/post-refresh-results.json")
     manual = report(prefix + "refresh-integration/post-refresh-manual.json")
@@ -58,16 +59,31 @@ def main():
             assert value == accepted["runtimeManifest"][path], path
     if any(manifest[path] != accepted["runtimeManifest"][path] for path in DATA):
         diff = report(prefix + "refresh-integration/final-incoming-refresh.json")
-        assert diff["status"] == "factual-values-preserved" and diff["totalFactualDifferences"] == 0
         assert not diff["changedNonDataRuntimeFiles"]
         for path in DATA:
             assert diff["files"][path]["afterSha256"] == manifest[path]
+        if diff["totalFactualDifferences"] == 0:
+            assert diff["status"] == "factual-values-preserved"
+        else:
+            # Real roster/source changes cannot be disguised as retrieval
+            # metadata. Require their explicit independent verification and
+            # the complete current-source native regression as separate gates.
+            assert diff["status"] == "differences-found"
+            source = report(prefix + "refresh-integration/current-data-verification.json")
+            assert source["status"] == "passed" and source["allDeclaredDifferencesReviewed"] is True
+            assert source["declaredDifferenceCount"] == diff["totalFactualDifferences"]
+            assert source["incomingDiff"]["sha256"] == sha((ROOT / prefix / "refresh-integration/final-incoming-refresh.json").read_bytes())
+            assert source["runtimeManifest"] == manifest
+            native = report(prefix + "current-data-local-webkit/results.json")
+            assert native["status"] == "passed" and len(native["results"]) == 2
+            assert native["runtimeManifest"] == manifest
     assert report(prefix + "preservation.json")["status"] == "passed"
     additional = ["CODEX_START.md", "CODEX_HANDOFF_STATUS.md", "CODEX_ENVIRONMENT.md", "DEPLOYMENT.md"]
-    for folder in ["approved-local-captures", "approved-local-webkit", "live-captures", "before-after", "review"]:
+    for folder in ["approved-local-captures", "approved-local-webkit", "baseline-local-chromium", "live-captures", "before-after", "review"]:
         additional.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / prefix / folder).iterdir()) if path.is_file() and path.suffix in {".json", ".html", ".png", ".md"})
     additional.extend([prefix + "agent-acceptance.json", prefix + "RELEASE.md", prefix + "preservation.json"])
     additional.extend(item["evidence"] for item in accepted["reviewers"])
+    additional.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / prefix / "refresh-integration").iterdir()) if path.is_file() and path.suffix in {".json", ".md", ".txt"})
     for path in additional:
         manifest[path] = sha((ROOT / path).read_bytes())
     context = ssl.create_default_context(cafile=CA)

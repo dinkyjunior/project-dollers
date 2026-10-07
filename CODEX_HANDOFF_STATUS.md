@@ -6,6 +6,8 @@ Page 1 is rebuilt as a compact polished chrome/glass entrance with vivid sport l
 
 The temporary GitHub HTTP 401 rejection has resolved: repository API and supported authenticated native fetch now pass. Its original exact errors and public hashes are preserved in [the historical authentication record](qa/home-luxury/publication-blocker.json). The workspace and approved requirements were preserved throughout; no credentials were extracted or additional secrets invented. The cause of the temporary rejection is unknown. Before any push, fetch/rebase the latest `codex-rebuild` and `main`, preserve their automatic data updates, run the recursive source audit and current-data checks, then deploy and verify the actual hosted website. This local approval alone is not proof of publication. Original brand, real logos, venue artwork, Pages 2–3 and whole-player-card football tracks remain; no Page 4.
 
+The fresh branch rebase preserved automatic data commit `e0419a5` (retrieved 2026-10-07T03:21:30Z). The audit found 21 genuine roster/source verification changes, independently checked rather than called metadata-only. Current data tests, source checks and the complete current-data native two-phone suite passed. All 188 approved nondata runtime files remain identical; the original six visual approvals bind their original source snapshot. Read the linked release for the separate current-source evidence.
+
 ## Previous metal deployment — superseded visual acceptance
 
 ## Current verified release — metal entrance and consistent WebKit floor
