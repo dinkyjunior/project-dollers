@@ -1,6 +1,10 @@
 # Production publication and verification
 
-## Current Page 1 neon refinement — deployed and verified
+## Current Page 1 metal correction — publication pending
+
+The final local candidate has explicit eight-state reference acceptance from all six assigned agents, recorded in `qa/home-metal/agent-acceptance.json`. Complete local Chromium five-size and genuine WebKit two-size regression now pass against the same 184 reviewed runtime hashes; `qa/home-metal/prepublication.json` records the completed gates. Fetch/rebase current `codex-rebuild` and fetch/integrate `main` immediately before ordinary non-forced pushes, preserving remote data changes. After Pages succeeds, test the actual public URL in genuine WebKit at both requested phone sizes and independently on desktop; verify delivered hashes, controls, routes, refresh, motion, images and errors. Read `qa/home-metal/RELEASE.md`. No production changes from this correction have been published at this checkpoint.
+
+## Previous Page 1 neon refinement — deployed/functionally verified, visually rejected
 
 The user-approved Home-only neon application `32f55a67d500bc8bf646679fb1879e318ef2f4b5` is published on `codex-rebuild` and `main`; [Pages run 37551374311](https://github.com/dinkyjunior/project-dollers/actions/runs/37551374311) succeeded for that exact commit at 11:20:40 AEDT, 7 October. Final local Chromium five-size and genuine WebKit two-size QA passed. It preserves brand/tagline and venue artwork, removes the repeated below-gate sport-name/DATA & RESEARCH block, and adds a thicker entrance gate with much stronger glowing/pulsating ring, entry/selected boxes and walls. Existing four-state functionality, reduced motion, Pages 2–3 and data remain intact; Page 4 remains excluded. Read [the complete release record](qa/home-neon/RELEASE.md), [eight actual unpaused mobile captures](qa/home-neon/live-captures/index.html) and [before/after comparisons](qa/home-neon/before-after/index.html).
 

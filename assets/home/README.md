@@ -50,3 +50,32 @@ visually inspected for sharpness and appropriate material/scene detail.
 The existing wider asset/license documentation remains in `ASSET_SOURCES.md`.
 League marks remain trademarks of their owners; provenance is not a commercial
 trademark-use license.
+
+## Segmented metal entrance artwork
+
+`gate-metal.webp` is a separate, transparent 1254 × 1254 decorative portal
+layer. Its dimensional black-chrome housing, precision brushed-steel bevels,
+structural brackets and recessed blue light bands implement the metal entrance
+in the user-approved four-phone render. It contains no league mark, brand,
+venue or player photograph; the existing genuine league logos and original
+venue/brand assets remain separate and byte-identical.
+
+The artwork was generated with `image_gen` using the two chat images reattached
+for this correction pass as visual references. The white freehand marks in the
+current-site screenshot were treated as annotations, not desired artwork.
+This is generated implementation artwork, not an export or crop of the approved
+render. The attachment's original file bytes remain unavailable.
+
+The native RGBA source was encoded to WebP quality 92, method 6, without resizing
+or changing its alpha channel. The transparent opening has native bounds
+approximately x217–1034, y208–1015 and a centre near (627, 610): about 64% of the
+art width, slightly above the canvas midpoint. The stadium layer must extend
+behind the inner bevel rather than leave an uncovered gap. At a 418 CSS-pixel
+rendered art width, 1254 native pixels supply exactly three native pixels per
+CSS pixel; larger rendering sizes must report their actual ratio.
+
+Only this decorative metal layer may receive sport-colour filters. Official
+logos, the emerald money bag and the original stadium artwork retain their
+original colours. NBA uses fixed blue-left/red-right treatment; filters must
+not rotate that split around the ring. Moving highlights are separate live
+CSS layers, preserving the stationary metal geometry and authentic controls.

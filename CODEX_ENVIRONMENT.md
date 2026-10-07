@@ -1,5 +1,7 @@
 # Codex Cloud Environment — Project Dollar$
 
+Latest authorized work is the Home-only metal entrance correction documented in `qa/home-metal/RELEASE.md`. The working environment and local Chromium/genuine WebKit tooling are available. Six independent agents accepted the final eight local sport captures against the user's reattached concept; complete local Chromium/WebKit regression passes; actual publication and hosted verification are still pending. Existing brand, nine original visual assets, NFL/Steelers markup, application/data code and current source datasets are preserved. The new native transparent metal housing is decorative implementation artwork, not a reference-image export. Page 4 remains excluded.
+
 This project should behave like a self-contained repo-backed Codex Cloud task.
 
 ## Repository

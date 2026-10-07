@@ -21,14 +21,14 @@
     <link rel="stylesheet" href="assets/motion.css" />
     <link rel="stylesheet" href="assets/illumination.css" />
     <link rel="stylesheet" href="assets/player-research.css" />
-    <link rel="stylesheet" href="assets/home-premium.css?v=neon-20261007" />
-    <link rel="stylesheet" href="assets/home-gate-motion.css?v=neon-20261007" />
+    <link rel="stylesheet" href="assets/home-premium.css?v=metal-20261007" />
+    <link rel="stylesheet" href="assets/home-gate-motion.css?v=metal-20261007" />
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
     <script src="assets/app.js" defer></script>
     <script src="assets/motion.js" defer></script>
-    <script src="assets/home-interactions.js?v=neon-20261007" defer></script>
-    <script src="assets/home-gate-motion.js?v=neon-20261007" defer></script>
+    <script src="assets/home-interactions.js?v=metal-20261007" defer></script>
+    <script src="assets/home-gate-motion.js?v=metal-20261007" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -36,8 +36,8 @@
         <div class="page-scroll">
           <div class="frame home-frame">
             <div class="home-architecture" aria-hidden="true">
-              <div class="home-wall home-wall-left"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span></div>
-              <div class="home-wall home-wall-right"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span></div>
+              <div class="home-wall home-wall-left"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
+              <div class="home-wall home-wall-right"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
               <span class="home-architecture-shimmer"></span>
               <div class="home-floor"><span class="home-floor-shimmer"></span></div>
             </div>
@@ -61,12 +61,17 @@
                   <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
                 </div></div>
                 <div class="aperture-rail"></div>
+                <img class="aperture-metal-housing" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" fetchpriority="high" />
+                <img class="aperture-metal-housing aperture-metal-half" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
                 <div class="aperture-inset"></div>
                 <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
-                <span class="aperture-connector aperture-connector-one"></span><span class="aperture-connector aperture-connector-two"></span><span class="aperture-connector aperture-connector-three"></span><span class="aperture-connector aperture-connector-four"></span>
+                <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
                 <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
               </div>
-              <div class="aperture-floor-reflection"></div>
+              <div class="aperture-floor-reflection">
+                <img class="home-metal-reflection-image" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
+              </div>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
               <span data-home-entry-label>ENTER NFL</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>

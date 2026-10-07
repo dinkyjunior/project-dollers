@@ -1,6 +1,6 @@
-/* Aperture Home motion. The scene, chrome and team-colour lighting belong to
-   home-premium.css; these independently composited layers bring them to life.
-   In particular the NBA's blue/red ring never rotates with its travelling light. */
+/* Aperture Home motion. The metal housing and its recessed light channels are
+   stationary. Only a small light flare, reflections and venue depth move; the
+   NBA's fixed blue-left/red-right treatment never turns with the flare. */
 .page[data-page="home"] {
   --home-motion-play-state: paused;
 }
@@ -33,17 +33,31 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  /* Colour stays on the fixed rim underneath. A white core and soft tail move
-     around the complete circle, with a second small reflection opposite it. */
-  background: conic-gradient(from -90deg,
-    transparent 0deg 133deg,
-    #ecffff00 140deg, #ecffff45 148deg, #fffb 154deg,
-    #fff 158deg 162deg, #ecffff65 166deg, transparent 171deg 270deg,
-    #ecffff00 278deg, #ecffff15 288deg, #ecffff50 305deg,
-    #ecffffac 314deg, #fff 320deg 326deg, #ecffffc7 330deg,
-    transparent 336deg 360deg);
-  transform-origin: 50% 50%;
-  animation: pd-gate-circuit 10s linear infinite;
+  /* The UI mask confines this flare to the recessed 2.5px light channel. It
+     never paints across the broad metal bevels or changes the ring's hue. */
+  background: conic-gradient(from -90deg at 50% var(--aperture-art-center-y, 48.9%),
+    transparent 0deg 142deg,
+    #ecffff00 145deg, #ecffff2b 150deg, #ecffff8c 156deg,
+    #ffff 159deg 161deg, #ecffff80 164deg,
+    transparent 170deg 318deg,
+    #ecffff00 320deg, #ecffff1c 325deg, #ecffff52 331deg,
+    #ecffff24 337deg, transparent 343deg 360deg);
+  transform-origin: 50% var(--aperture-art-center-y, 48.9%);
+  animation: pd-gate-circuit 12s linear infinite;
+  will-change: transform;
+}
+.page[data-page="home"] .aperture-metal-glint-sweep {
+  position: absolute;
+  inset: 0;
+  /* This broad, dim specular reflection is masked to polished outer metal by
+     the UI stylesheet. The tiny bright flare above supplies the light source. */
+  background: conic-gradient(from 20deg at 50% var(--aperture-art-center-y, 48.9%),
+    transparent 0deg 254deg,
+    #e9f9ff00 260deg, #e9f9ff0a 273deg, #f5fdff35 287deg,
+    #ffffff58 295deg, #e9f9ff16 311deg, transparent 324deg 360deg);
+  opacity: .48;
+  transform-origin: 50% var(--aperture-art-center-y, 48.9%);
+  animation: pd-gate-circuit 18s linear infinite reverse;
   will-change: transform;
 }
 
@@ -87,6 +101,7 @@
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before,
 .page[data-page="home"] .aperture-travel-light,
 .page[data-page="home"] .aperture-travel-sweep,
+.page[data-page="home"] .aperture-metal-glint-sweep,
 .page[data-page="home"] .home-scene-drift img[data-home-scene],
 .page[data-page="home"] .home-rail-light,
 .page[data-page="home"] .home-architecture-shimmer,
@@ -113,15 +128,15 @@
   50% { opacity: 1; }
 }
 @keyframes pd-gate-neon-breathe {
-  0%, 100% { opacity: .42; }
+  0%, 100% { opacity: .68; }
   50% { opacity: 1; }
 }
 @keyframes pd-gate-neon-inner-breathe {
-  0%, 100% { opacity: .55; }
+  0%, 100% { opacity: .76; }
   50% { opacity: 1; }
 }
 @keyframes pd-gate-control-breathe {
-  0%, 100% { opacity: .38; }
+  0%, 100% { opacity: .58; }
   50% { opacity: 1; }
 }
 @keyframes pd-gate-venue-depth {
@@ -129,7 +144,7 @@
   50% { transform: scale(1.09) translate3d(.4%, -.6%, 0); }
 }
 @keyframes pd-gate-rail-breathe {
-  0%, 100% { opacity: .55; }
+  0%, 100% { opacity: .72; }
   50% { opacity: 1; }
 }
 @keyframes pd-gate-architecture-glide {
@@ -166,6 +181,7 @@
   .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before,
   .page[data-page="home"] .aperture-travel-light,
   .page[data-page="home"] .aperture-travel-sweep,
+  .page[data-page="home"] .aperture-metal-glint-sweep,
   .page[data-page="home"] .home-scene-drift img[data-home-scene],
   .page[data-page="home"] .home-rail-light,
   .page[data-page="home"] .home-architecture-shimmer,
@@ -181,6 +197,7 @@
   .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before { opacity: .86; }
   .page[data-page="home"] .aperture-travel-light { opacity: .85; }
   .page[data-page="home"] .aperture-travel-sweep { transform: rotate(18deg); }
+  .page[data-page="home"] .aperture-metal-glint-sweep { transform: rotate(-16deg); opacity: .4; }
   .page[data-page="home"] .home-scene-drift img[data-home-scene] { transform: none; }
   .page[data-page="home"] .home-rail-light { opacity: .92; }
   .page[data-page="home"] .home-architecture-shimmer { opacity: .28; transform: none; }

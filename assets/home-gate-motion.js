@@ -40,7 +40,7 @@
   routeChanges.observe(home, { attributes: true, attributeFilter: ['class', 'hidden'] });
 
   if ('IntersectionObserver' in window) {
-    const ring = home.querySelector('.aperture-rail') || home;
+    const ring = home.querySelector('.aperture-gate') || home.querySelector('.aperture-rail') || home;
     const viewport = new IntersectionObserver(entries => {
       const entry = entries[entries.length - 1];
       if (!entry) return;

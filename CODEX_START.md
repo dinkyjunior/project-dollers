@@ -1,5 +1,7 @@
 # Codex Start Here
 
+Latest task: the user rejected the preceding Home neon pass's thin circular rails and empty architectural areas. The substantial metal entrance correction is implemented on `codex-rebuild`; all six assigned agents independently accepted all four sports at 393×852 and 430×896 against the reattached approved Home concept. Read `qa/home-metal/RELEASE.md` and `qa/home-metal/agent-acceptance.json`. Complete local Chromium (five sizes) and genuine WebKit (both phone sizes) regression now pass against the same 184 reviewed runtime hashes. Publication/live-site verification remain pending at this checkpoint. Preserve the frozen Home source and ordinary publication rules. The earlier neon deployment below is historical functional evidence, not approval of the rejected metal treatment.
+
 You are working on the `codex-rebuild` branch of `dinkyjunior/project-dollers`.
 
 Read these files before editing code:

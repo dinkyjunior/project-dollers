@@ -72,65 +72,84 @@
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
-  background: radial-gradient(ellipse at 0 43%, rgb(var(--home-left-rgb) / .2), transparent 35%),
-    radial-gradient(ellipse at 100% 43%, rgb(var(--home-right-rgb) / .2), transparent 35%),
-    linear-gradient(180deg, #02040a, #02050b 66%, #000);
+  background: radial-gradient(ellipse at 0 38%, rgb(var(--home-left-rgb) / .26), transparent 39%),
+    radial-gradient(ellipse at 100% 38%, rgb(var(--home-right-rgb) / .26), transparent 39%),
+    radial-gradient(ellipse at 50% 76%, #17232e 0, #07101a 24%, transparent 54%),
+    linear-gradient(180deg, #02050a, #02060c 64%, #000);
 }
 .home-wall {
   --wall-rgb: var(--home-left-rgb);
   --wall-color: var(--home-left);
   position: absolute;
-  top: 8px;
-  bottom: 218px;
-  width: 72px;
-  background: repeating-linear-gradient(0deg, transparent 0 47px, #8ba8b421 48px, #0008 49px 51px),
-    linear-gradient(90deg, #000, #162631 20%, #43515a 25%, #0b141c 31%, #020811 45%, #354651 51%, #0b141c 55%, #03070c);
-  border-right: 1px solid #c3e6f132;
-  box-shadow: 12px 0 22px #000;
+  top: -8px;
+  bottom: 180px;
+  width: 87px;
+  background: repeating-linear-gradient(180deg, transparent 0 52px, #758c9a26 53px, #020508 54px 58px),
+    linear-gradient(90deg, #020408 0 12%, #25333e 14%, #6f818b 17%, #14212b 20%, #040910 38%, #263b4a 44%, #526c7e 46%, #111e2a 50%, #03070d 76%, #24414e 89%, #020609);
+  border-right: 2px solid #52667373;
+  box-shadow: inset -3px 0 6px #000, 9px 0 17px #000b;
 }
-.home-wall-left { left: -22px; transform: skewY(17deg); transform-origin: top left; }
+.home-wall-left { left: -25px; transform: perspective(430px) rotateY(19deg) skewY(20deg); transform-origin: top left; }
 .home-wall-right {
   --wall-rgb: var(--home-right-rgb);
   --wall-color: var(--home-right);
-  right: -22px;
-  transform: scaleX(-1) skewY(17deg);
+  right: -25px;
+  transform: scaleX(-1) perspective(430px) rotateY(19deg) skewY(20deg);
   transform-origin: center;
 }
 .home-rail-light {
   position: absolute;
-  top: 10px;
-  bottom: 82px;
-  right: 14px;
-  width: 5px;
-  background: linear-gradient(90deg, var(--wall-color), #ecffff 45% 55%, var(--wall-color));
-  box-shadow: 0 0 4px #fff9, 0 0 12px var(--wall-color), 0 0 29px rgb(var(--wall-rgb) / .76);
+  top: 13px;
+  bottom: 52px;
+  right: 17px;
+  width: 4px;
+  background: linear-gradient(90deg, var(--wall-color) 0 33%, #d4ffff 44% 56%, var(--wall-color) 67%);
+  box-shadow: 0 0 5px var(--wall-color), 0 0 15px var(--wall-color), 0 0 27px rgb(var(--wall-rgb) / .7);
 }
-.home-rail-light-secondary { width: 2px; right: 38px; top: 51px; bottom: 176px; opacity: .75; }
+.home-rail-light-secondary { width: 2px; right: 47px; top: 38px; bottom: 165px; opacity: .6; }
 .home-wall-fin {
   position: absolute;
-  top: 29px;
-  left: 27px;
-  width: 11px;
-  height: 133px;
-  background: repeating-linear-gradient(180deg, #06131b 0 9px, #f3fdff 10px 11px, var(--wall-color) 12px 22px, #0a1a24 23px 31px);
-  transform: rotate(-33deg);
-  border: 1px solid #9ab3c46b;
-  box-shadow: 0 0 12px rgb(var(--wall-rgb) / .72);
-  opacity: .87;
+  top: 63px;
+  left: 18px;
+  width: 15px;
+  height: 162px;
+  background: repeating-linear-gradient(180deg, #08131c 0 12px, #475964 13px 16px, var(--wall-color) 17px 26px, #08121b 27px 36px);
+  transform: rotate(-31deg);
+  border: 2px solid #0c1721;
+  box-shadow: inset 2px 0 1px #9bafba8a, 2px 0 1px #677f8e70, 0 0 13px rgb(var(--wall-rgb) / .45);
+}
+.home-wall-crossbrace {
+  position: absolute;
+  left: 11px;
+  top: 190px;
+  width: 67px;
+  height: 29px;
+  transform: rotate(31deg);
+  background: linear-gradient(180deg, #60717a, #18252e 10%, #040a10 45%, #3e5362 50%, #17242e 58%, #071017 90%, #718994);
+  border: 1px solid #03080c;
+  box-shadow: 0 9px 9px #000b, inset 0 1px 1px #e8f4fa38;
+}
+.home-wall-crossbrace::after {
+  content: "";
+  position: absolute;
+  inset: 12px 9px;
+  background: var(--wall-color);
+  box-shadow: 0 0 7px var(--wall-color);
 }
 .home-architecture-shimmer { position: absolute; inset: 0; z-index: 1; background: linear-gradient(118deg, transparent 30%, #e3f5ff08 48%, #fff1 50%, transparent 54%); }
 .home-floor {
   position: absolute;
-  left: -28%;
-  right: -28%;
-  bottom: 90px;
-  height: 330px;
-  transform: perspective(300px) rotateX(50deg);
+  left: -36%;
+  right: -36%;
+  bottom: 112px;
+  height: 350px;
+  transform: perspective(320px) rotateX(53deg);
   transform-origin: bottom center;
-  background: radial-gradient(ellipse at 50% 0, #2438465c, transparent 66%),
-    repeating-linear-gradient(0deg, #0000 0 38px, #64788824 39px, #0009 40px 42px),
-    repeating-linear-gradient(90deg, #06101cd9 0 78px, #85939e18 79px, #02070cd9 80px 156px);
-  border-top: 1px solid #5769795c;
+  background: radial-gradient(ellipse at 50% 12%, #2c46565e, transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 7px, #b5dae90e 8px, transparent 9px 21px, #90b7cc12 22px, transparent 23px 38px, #c3e7f608 39px, transparent 40px 57px),
+    repeating-linear-gradient(0deg, transparent 0 52px, #5f7f8a10 53px, #0005 54px 56px),
+    repeating-linear-gradient(90deg, #06101ace 0 87px, #607e8b0c 88px, #02080dbb 89px 175px);
+  border-top: 1px solid #4e707b25;
 }
 .home-floor::before, .home-floor::after {
   content: "";
@@ -217,22 +236,27 @@
   display: grid;
   grid-template-columns: minmax(0,1fr);
   grid-template-rows: minmax(0,1fr);
-  place-items: center;
+  place-items: start center;
   z-index: 1;
 }
 .aperture-gate {
   position: relative;
-  --aperture-depth: 38px;
+  --aperture-depth: 17%;
+  --aperture-art-center-y: 48.65%;
   width: min(calc(100% + 12px), calc(100dvh - 380px));
   max-width: 418px;
+  margin-top: 6px;
   aspect-ratio: 1;
-  border-radius: 50%;
   isolation: isolate;
-  filter: drop-shadow(0 13px 8px #000b);
+  filter: drop-shadow(0 14px 8px #000d);
 }
 .aperture-venue {
   position: absolute;
-  inset: var(--aperture-depth);
+  inset: auto;
+  left: 17%;
+  top: 15.65%;
+  width: 66%;
+  height: 66%;
   overflow: hidden;
   border-radius: 50%;
   background: #02060b;
@@ -253,93 +277,92 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  border-radius: 50%;
-  padding: 20px;
-  background: conic-gradient(from 14deg, #071017 0%, #41606b 5%, #b8d0d9 9%, #142c36 13%, #f1fafd 16%, #5d7d8b 19%, #06101a 24%, #9bb7c4 28%, #122632 33%, #061017 38%, #4d6a78 44%, #e3eef3 49%, #64818c 53%, #0a1b27 58%, #02050a 64%, #b9cdd6 69%, #355562 73%, #eaf9fd 78%, #a1bdc6 82%, #03070d 87%, #223e4a 94%, #7598a4 97%, #071017 100%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  box-shadow: 0 0 2px #fff;
+  pointer-events: none;
 }
-.aperture-rail::before, .aperture-rail::after { content: ""; position: absolute; inset: 3px; border: 1px solid #d4ecf17d; border-radius: 50%; }
-.aperture-rail::after { inset: 7px; border-color: #091720; }
+.aperture-metal-housing {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 3;
+  pointer-events: none;
+}
+.aperture-metal-half { display: none; clip-path: inset(0 0 0 50%); }
+.page[data-page="home"][data-home-sport="nba"] .aperture-metal-half { display: block; filter: hue-rotate(150deg) saturate(1.25); }
+.page[data-page="home"][data-home-sport="nrl"] .aperture-metal-housing { filter: hue-rotate(-60deg) saturate(1.12); }
+.page[data-page="home"][data-home-sport="ufc"] .aperture-metal-housing { filter: hue-rotate(150deg) saturate(1.25); }
 .aperture-inset {
   position: absolute;
-  z-index: 3;
-  inset: 20px;
-  padding: calc(var(--aperture-depth) - 20px);
-  border-radius: 50%;
-  background: conic-gradient(from 8deg, transparent 0 12%, #e9ffffa0 15%, #ffffff12 18%, transparent 23% 27%, #fff4 31%, transparent 39% 43%, #e6ffff90 48%, #fff1 53%, transparent 57% 64%, #fff6 70%, #fff1 76%, transparent 81% 85%, #fff4 90%, transparent 96% 100%), var(--home-theme);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  filter: drop-shadow(0 0 4px var(--home-left));
-}
-.aperture-inset::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border: 3px solid #efffff;
-  opacity: 1;
-  border-radius: inherit;
-  box-shadow: 0 0 8px #fff9;
-}
-.aperture-inset::after {
-  content: "";
-  position: absolute;
-  inset: 9px;
-  border: 5px solid #061321;
-  border-radius: inherit;
-  box-shadow: inset 0 0 3px #fff9, 0 0 3px #fff9;
+  z-index: 4;
+  inset: 0;
+  background: var(--home-theme);
+  opacity: .48;
+  -webkit-mask: radial-gradient(ellipse 39% 38% at 50% var(--aperture-art-center-y), transparent calc(100% - 2px), #000 calc(100% - 1px) 100%, transparent calc(100% + 1px));
+  mask: radial-gradient(ellipse 39% 38% at 50% var(--aperture-art-center-y), transparent calc(100% - 2px), #000 calc(100% - 1px) 100%, transparent calc(100% + 1px));
+  pointer-events: none;
 }
 .aperture-travel-light {
   position: absolute;
   z-index: 5;
-  inset: 18px;
-  padding: calc(var(--aperture-depth) - 17px);
-  border-radius: 50%;
+  inset: 0;
   pointer-events: none;
   overflow: hidden;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
+  -webkit-mask: radial-gradient(ellipse 39% 38% at 50% var(--aperture-art-center-y), transparent calc(100% - 2.5px), #000 calc(100% - 1.5px) 100%, transparent calc(100% + 1px));
+  mask: radial-gradient(ellipse 39% 38% at 50% var(--aperture-art-center-y), transparent calc(100% - 2.5px), #000 calc(100% - 1.5px) 100%, transparent calc(100% + 1px));
 }
-.aperture-travel-sweep { position: absolute; inset: -15%; background: conic-gradient(from 0deg, transparent 0 82%, #ffffff15 86%, #fff 93%, #fff8 96%, transparent 100%); }
-.aperture-connector { position: absolute; z-index: 6; top: 0; bottom: 0; left: calc(50% - 3px); width: 6px; pointer-events: none; }
-.aperture-connector::before, .aperture-connector::after { content: ""; position: absolute; top: 8px; width: 6px; height: calc(var(--aperture-depth) - 13px); background: linear-gradient(90deg, #081017, #d0e5ee 48%, #2d454f 70%, #060a10); border: 1px solid #02131d; }
-.aperture-connector::after { top: auto; bottom: 8px; }
-.aperture-connector-one { transform: rotate(0deg); }
-.aperture-connector-two { transform: rotate(45deg); }
-.aperture-connector-three { transform: rotate(90deg); }
-.aperture-connector-four { transform: rotate(135deg); }
+.aperture-metal-glint {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-mask: radial-gradient(ellipse 48% 47% at 50% var(--aperture-art-center-y), transparent 84%, #000 87% 98%, transparent 100%);
+  mask: radial-gradient(ellipse 48% 47% at 50% var(--aperture-art-center-y), transparent 84%, #000 87% 98%, transparent 100%);
+}
 .aperture-league-logo {
   position: absolute;
   z-index: 7;
   width: 52%;
   height: 57%;
-  top: 21.5%;
+  top: 20.15%;
   left: 24%;
   object-fit: contain;
   filter: drop-shadow(0 7px 5px #000) drop-shadow(0 0 8px #000c);
 }
-.page[data-page="home"][data-home-sport="nba"] .aperture-league-logo { width: 54%; height: 59%; left: 23%; top: 20.5%; }
-.page[data-page="home"][data-home-sport="nrl"] .aperture-league-logo { width: 54%; height: 59%; left: 23%; top: 20.5%; }
-.page[data-page="home"][data-home-sport="ufc"] .aperture-league-logo { width: 58%; height: 28%; top: 36%; left: 21%; filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4668%) hue-rotate(343deg) brightness(101%) contrast(110%) drop-shadow(0 5px 3px #000); }
+.page[data-page="home"][data-home-sport="nba"] .aperture-league-logo { width: 54%; height: 59%; left: 23%; top: 19.15%; }
+.page[data-page="home"][data-home-sport="nrl"] .aperture-league-logo { width: 54%; height: 59%; left: 23%; top: 19.15%; }
+.page[data-page="home"][data-home-sport="ufc"] .aperture-league-logo { width: 58%; height: 28%; top: 34.65%; left: 21%; filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4668%) hue-rotate(343deg) brightness(101%) contrast(110%) drop-shadow(0 5px 3px #000); }
 .aperture-floor-reflection {
   position: absolute;
-  bottom: -13px;
-  left: 8%;
-  right: 8%;
-  height: 31px;
+  top: calc(min(calc(100cqw + 12px), calc(100cqh - 6px), 418px) + 2px);
+  left: -6px;
+  right: -6px;
+  height: 74px;
   z-index: -1;
-  border-radius: 50%;
-  background: linear-gradient(90deg, rgb(var(--home-left-rgb) / .46), rgb(var(--home-right-rgb) / .46));
-  filter: blur(7px);
-  transform: scaleY(.65);
+  overflow: hidden;
+  -webkit-mask: linear-gradient(#000a 0%, #0005 30%, transparent 87%);
+  mask: linear-gradient(#000a 0%, #0005 30%, transparent 87%);
+  filter: blur(.75px);
 }
+.home-metal-reflection-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: scaleY(-.17) translateY(-100%);
+  transform-origin: 50% 0;
+  pointer-events: none;
+}
+.home-metal-reflection-half { display: none; clip-path: inset(0 0 0 50%); }
+.page[data-page="home"][data-home-sport="nba"] .home-metal-reflection-half { display: block; filter: hue-rotate(150deg) saturate(1.25); }
+.page[data-page="home"][data-home-sport="nrl"] .home-metal-reflection-image { filter: hue-rotate(-60deg) saturate(1.12); }
+.page[data-page="home"][data-home-sport="ufc"] .home-metal-reflection-image { filter: hue-rotate(150deg) saturate(1.25); }
 .page[data-page="home"] .home-entry {
   grid-area: entry;
   position: relative;
@@ -421,7 +444,6 @@
 }
 @media (min-width:420px) and (min-height:880px) {
   .home-frame { grid-template-rows: 25px 153px minmax(300px,1fr) 60px 88px; }
-  .aperture-gate { --aperture-depth: 42px; }
   .home-header .brand { width: calc(100% - 26px); }
   .home-header .brand-subtitle { font-size: 13px; letter-spacing: 3px; }
   .home-sport-option img { width: 45px; height: 46px; }
@@ -436,7 +458,7 @@
   .home-frame { min-height: 622px; grid-template-rows: 23px 124px minmax(260px,1fr) 52px 72px; gap: 3px; }
   .home-header .brand { max-width:310px; }
   .home-header .brand-subtitle { font-size:11px; letter-spacing:2.2px; }
-  .aperture-gate { --aperture-depth: 35px; width:min(calc(100% + 12px),calc(100dvh - 326px)); }
+  .aperture-gate { width:min(calc(100% + 12px),calc(100dvh - 326px)); }
   .page[data-page="home"] .home-entry { height:48px; }
   .home-sport-dock { gap:9px; padding-block:0; }
   .page[data-page="home"] .home-sport-option { min-height:64px; }
@@ -462,7 +484,7 @@
    current iPhone Safari; the viewport fallback above covers older engines. */
 @supports (width: 1cqh) {
   .aperture-stage { container-type: size; }
-  .aperture-gate { width: min(calc(100cqw + 12px), 100cqh, 418px); }
+  .aperture-gate { width: min(calc(100cqw + 12px), calc(100cqh - 6px), 418px); }
 }
 
 .home-header .brand-subtitle::after { background:var(--home-right); }
@@ -492,13 +514,12 @@
 }
 
 .home-wall::before { content:""; position:absolute; inset:40px 6px 22px; background:radial-gradient(circle, #a4bfc570 0 1px, #071018 1.5px 2.3px, transparent 3px) center / 25px 68px; opacity:.65; }
-.aperture-gate::before { content:""; position:absolute; inset:9px; border-radius:50%; box-shadow:-8px 0 21px rgb(var(--home-left-rgb) / .38), 8px 0 21px rgb(var(--home-right-rgb) / .38), inset 8px 0 12px rgb(var(--home-left-rgb) / .16), inset -8px 0 12px rgb(var(--home-right-rgb) / .16); z-index:0; }
 
 /* The entrance rim has dedicated bloom layers, separate from its chrome and
    fixed coloured track. Motion varies layer opacity without rotating colour. */
 .aperture-neon-halo, .aperture-neon-halo-inner {
   position:absolute;
-  inset:12px;
+  inset:7% 6% 10%;
   border-radius:50%;
   pointer-events:none;
   z-index:0;
@@ -507,9 +528,13 @@
   box-shadow:-10px 0 18px rgb(var(--home-left-rgb) / .88), 10px 0 18px rgb(var(--home-right-rgb) / .88), -14px 0 36px rgb(var(--home-left-rgb) / .46), 14px 0 36px rgb(var(--home-right-rgb) / .46);
 }
 .aperture-neon-halo-inner {
-  inset:calc(var(--aperture-depth) - 2px);
+  inset:auto;
+  left:17%;
+  top:15.65%;
+  width:66%;
+  height:66%;
   z-index:4;
-  box-shadow:inset 5px 0 9px rgb(var(--home-left-rgb) / .72), inset -5px 0 9px rgb(var(--home-right-rgb) / .72), inset 0 0 3px #f0ffffb0;
+  box-shadow:inset 5px 0 12px rgb(var(--home-left-rgb) / .5), inset -5px 0 12px rgb(var(--home-right-rgb) / .5);
 }
 .page[data-page="home"] .home-entry::before,
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
@@ -532,22 +557,5 @@
   border:1px solid #efffff8a;
   border-radius:inherit;
   box-shadow:0 0 3px #efffff6a;
-  pointer-events:none;
-}
-/* A powered outer lip energises the complete entrance perimeter while the
-   polished metal remains visible between the outer and inner light tracks. */
-.aperture-gate::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:4;
-  padding:2px;
-  border:1px solid #edffffdb;
-  border-radius:50%;
-  background:var(--home-theme);
-  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;
-  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite:exclude;
   pointer-events:none;
 }

@@ -1,0 +1,39 @@
+{
+  "classification": "QA harness timing issue; no application change",
+  "recordedAt": "2026-10-07T01:19:29.073478+00:00",
+  "failedAssertion": "Observed metal gate returns to its actual pre-test position",
+  "isolatedReproduction": {
+    "before": {
+      "gateY": 195,
+      "stageY": 189,
+      "gateTransform": "none",
+      "stageTransform": "none",
+      "scrollTop": 0
+    },
+    "offscreen": {
+      "gateY": -1511.10986328125,
+      "stageY": -1517.10986328125,
+      "stageTransform": "matrix(1, 0, 0, 1, 0, -1704)",
+      "scrollTop": 0
+    },
+    "restoredImmediately": {
+      "gateY": 192.46621704101562,
+      "stageY": 186.46621704101562,
+      "gateTransform": "none",
+      "stageTransform": "none",
+      "scrollTop": 0
+    },
+    "restoredTwoFramesLater": {
+      "gateY": 192.2423553466797,
+      "stageY": 186.2423553466797,
+      "gateTransform": "none",
+      "stageTransform": "none",
+      "scrollTop": 0
+    }
+  },
+  "cause": "Emulating reduced motion disables the global page-in animation; returning to no-preference restarts the existing finite 0.24s .page.active ancestor transition. A before measurement during that transition compared against a later settled position. Stage and gate moved together while exact stage inline style was restored and scrollTop remained zero.",
+  "correction": "Await real finite ancestor Animation.finished promises before saving pre-probe bounds, recording those ancestor states. Preserve exact stage inline style restoration, original <1px gate position assertion, actual observed gate wholly outside viewport and lifecycle reduced/offscreen/running checks.",
+  "applicationRuntimeChanged": false,
+  "weakenedAssertions": false,
+  "rerun": "Complete final Chromium5 and genuineWebKit2 on frozen184-file application."
+}

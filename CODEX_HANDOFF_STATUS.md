@@ -1,6 +1,12 @@
 # Project Dollar$ handoff — premium current-data pass
 
-## Current task — stronger Page 1 neon, 7 October 2026 (Sydney)
+## Current task — substantial Page 1 metal entrance, 7 October 2026 (Sydney)
+
+The user rejected the preceding uniform chrome hoop and marked the weak architectural areas in an attached screenshot. The reattached four-sport approved Home concept remains the authority; its white annotations are feedback, not artwork. The correction now uses a native locally bundled segmented metal housing with recessed neon, structural side walls and a mirrored metal floor. Original branding, interior artwork and genuine logos remain. All six delegated roles inspected all eight final candidate captures and explicitly accepted them against the chat render; see `qa/home-metal/agent-acceptance.json` and the individual source-bound reviews. Complete local Chromium five-size and genuine WebKit two-size regression passes. Safe publication and actual-hosted verification remain pending at this checkpoint. Read `qa/home-metal/prepublication.json` before publishing the frozen candidate.
+
+The final candidate is `index.html` SHA-256 `d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df`, Home CSS `72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5`. `qa/home-metal/preservation.json` verifies nine original assets and Pages 2–3 markup/application/data remain unchanged against the preceding saved release. New evidence belongs under `qa/home-metal/`; prior release evidence stays historical. Source attachment bytes remain unavailable; no pixel-identity or physical-iPhone claim is made.
+
+## Previous stronger Page 1 neon pass — functionally verified, visually rejected
 
 The user-approved further Home-only neon refinement is deployed and verified as `32f55a67d500bc8bf646679fb1879e318ef2f4b5`; [Pages run 37551374311](https://github.com/dinkyjunior/project-dollers/actions/runs/37551374311) succeeded for that exact commit at 11:20:40 AEDT. Final local Chromium passed five sizes and genuine WebKit passed both primary phone sizes. Actual-hosted WebKit passed all four sports at 393×852 and 430×896 at 11:29:52 AEDT; independent hosted 1440×1000 desktop/publication review passed at 11:26:27 AEDT. Each hosted audit received HTTP 200 for all 183 delivered runtime files with exact application hashes and zero console/JavaScript, HTTP, external runtime or transport failures. Existing Project Dollar brand artwork/tagline and venue artwork are retained; the repeated below-gate sport-name/DATA & RESEARCH block is removed. The thicker entrance gate and stronger ring, CTA, selected-box and wall glow/pulse were inspected in actual captures without label washout or clipping.
 
