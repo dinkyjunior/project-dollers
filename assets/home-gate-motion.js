@@ -1,5 +1,6 @@
-/* CSS drives the Home light circuit and scenery. This small lifecycle only
-   changes their play state; it never runs a frame loop or touches NFL motion. */
+/* CSS drives the Home light circuit and scenery. This event-driven lifecycle
+   controls visibility and native playback; it never runs a frame loop or
+   changes animation phases, and never touches NFL motion. */
 (() => {
   'use strict';
   const home = document.querySelector('.page[data-page="home"]');
@@ -8,6 +9,56 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let inViewport = true;
   let pageSuspended = false;
+  let lastSport = home.dataset.homeSport;
+  let revealSequence = false;
+  let revealTimer;
+  const suspendedAnimations = new Set();
+
+  function clearReveal() {
+    window.clearTimeout(revealTimer);
+    delete home.dataset.homeReveal;
+  }
+
+  function revealSelectedLeague() {
+    if (home.dataset.homeMotionState !== 'running') return;
+    window.clearTimeout(revealTimer);
+    // Alternating animation names restart a tiny selection arrival without a
+    // forced layout or frame loop. This never moves the entrance or its colours.
+    revealSequence = !revealSequence;
+    home.dataset.homeReveal = revealSequence ? 'a' : 'b';
+    revealTimer = window.setTimeout(clearReveal, 340);
+  }
+
+  function syncNativePlayback(state) {
+    if (typeof home.getAnimations !== 'function') return;
+    // WebKit can retain running native clocks after display:none even when its
+    // computed CSS play-state is paused. Apply that same lifecycle decision to
+    // native objects only at events; retain phases without a rendering loop.
+    const animations = home.getAnimations({ subtree: true });
+    const present = new Set(animations);
+    for (const animation of suspendedAnimations) {
+      if (!present.has(animation)) suspendedAnimations.delete(animation);
+    }
+    for (const animation of animations) {
+      const effect = animation.effect;
+      const target = effect && effect.target;
+      if (!target || !home.contains(target) || effect.getComputedTiming().iterations !== Infinity) continue;
+      const visibleSport = !target.closest('[hidden]');
+      const style = getComputedStyle(target, effect.pseudoElement || null);
+      const eligible = state === 'running' && visibleSport && style.animationPlayState !== 'paused';
+      if (!eligible) {
+        if (animation.playState === 'running') {
+          animation.pause();
+          suspendedAnimations.add(animation);
+        }
+      } else if (suspendedAnimations.has(animation)) {
+        // Only resume objects this controller suspended and which remain in
+        // this Home subtree; cancelled/replaced and hidden sports stay alone.
+        if (animation.playState === 'paused') animation.play();
+        suspendedAnimations.delete(animation);
+      }
+    }
+  }
 
   function syncMotion() {
     let reason = 'active';
@@ -20,6 +71,8 @@
     const state = reason === 'active' ? 'running' : reason === 'reduced-motion' ? 'reduced' : 'paused';
     if (home.dataset.homeMotionState !== state) home.dataset.homeMotionState = state;
     if (home.dataset.homeMotionReason !== reason) home.dataset.homeMotionReason = reason;
+    if (state !== 'running') clearReveal();
+    syncNativePlayback(state);
   }
 
   document.addEventListener('visibilitychange', syncMotion);
@@ -36,8 +89,15 @@
 
   // Routing changes only this section's active class. Decorative-state data
   // attributes are intentionally excluded to avoid observing our own writes.
-  const routeChanges = new MutationObserver(syncMotion);
-  routeChanges.observe(home, { attributes: true, attributeFilter: ['class', 'hidden'] });
+  const routeChanges = new MutationObserver(() => {
+    syncMotion();
+    const selectedSport = home.dataset.homeSport;
+    if (selectedSport !== lastSport) {
+      lastSport = selectedSport;
+      revealSelectedLeague();
+    }
+  });
+  routeChanges.observe(home, { attributes: true, attributeFilter: ['class', 'hidden', 'data-home-sport'] });
 
   if ('IntersectionObserver' in window) {
     const ring = home.querySelector('.aperture-gate') || home.querySelector('.aperture-rail') || home;

@@ -1,0 +1,11 @@
+# Final local mobile and functional review
+
+Accepted the exact final Page 1 candidate after personally viewing all 20 original, naturally running PNGs: four sports at 393×852 and 430×896 in Chromium and genuine WebKit, plus four desktop states at 1440×1000. Every PNG and all 191 runtime files are hash-bound in `local-qa-review.json`; the corrected motion source is `4a55cb0f869cc4a7b7c2eb54495ebff5a3c3460bd91eec2ea01faaa19372cb52`.
+
+The coherent chrome/glass entry and illuminated enclosing corridor materially improve the approved render direction. Stronger native type, saturated fixed sport palettes, luminous edges, crisp protected marks and compact geometry resolve the dull appliance finish, long floor spacing and NBA control seam. No remaining visual blocker was observed in these exact files. The approved source is the user’s chat attachment, whose original bytes are unavailable; no registered pixel-identical claim is made.
+
+Chromium passed all five viewport suites (393×852,430×896,320×700,768×1024,1440×1000). Genuine WebKit26.0 passed both primary phone suites. All four sport selectors, keyboard/remembered state, Coming soon guards, native dialog Escape, Home motion/reduced motion/offscreen/inactive/pagehide, loaded local images/fonts,44px touch controls and geometry passed. Pages2–3 navigation, conference/week controls, tabs, roster filters, history, direct URLs/refresh and expanded entire-card football/light tracks passed. Each phone regression compared700 recent-game and695 relevant-opponent fields against the unchanged verified snapshot. Both final suite reports have zero JavaScript/console, HTTP, external runtime or genuine failed requests.
+
+Natural Home motion proof also passes on the exact same source. The archived earlier native lifecycle failure is superseded by actual corrected-source verification, not relabelled as a pass. Existing unrelated history/perimeter test geometry samples are restored after isolated assertions; the final Home images and Home natural motion proof are never phase-forced.
+
+This accepts local visual and functional results only. Actual deployed delivery and hosted regression remain separate mandatory release gates. Cloud WebKit emulation is not physical iPhone/Safari toolbar or device-FPS certification. All failed/rejected prior evidence and existing source remain preserved.

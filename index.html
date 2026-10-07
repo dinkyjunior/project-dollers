@@ -15,27 +15,42 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preload" href="assets/fonts/BarlowCondensed-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/Barlow-BlackItalic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/PDArchivoBlack-Latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/PDInter-Latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/refinements.css" />
     <link rel="stylesheet" href="assets/premium.css" />
     <link rel="stylesheet" href="assets/motion.css" />
     <link rel="stylesheet" href="assets/illumination.css" />
     <link rel="stylesheet" href="assets/player-research.css" />
-    <link rel="stylesheet" href="assets/home-premium.css?v=metal-20261007-floor2d" />
-    <link rel="stylesheet" href="assets/home-gate-motion.css?v=metal-20261007-floor2d" />
+    <link rel="stylesheet" href="assets/home-typography.css?v=luxury-20261007-v1" />
+    <link rel="stylesheet" href="assets/home-premium.css?v=luxury-20261007-v1" />
+    <link rel="stylesheet" href="assets/home-gate-motion.css?v=luxury-20261007-v1" />
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
     <script src="assets/app.js" defer></script>
     <script src="assets/motion.js" defer></script>
-    <script src="assets/home-interactions.js?v=metal-20261007-floor2d" defer></script>
-    <script src="assets/home-gate-motion.js?v=metal-20261007-floor2d" defer></script>
+    <script src="assets/home-interactions.js?v=luxury-20261007-v1" defer></script>
+    <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
       <section class="page active aperture-home" data-page="home" data-home-sport="nfl" aria-label="Choose your sport">
+        <svg class="home-light-filters" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;pointer-events:none">
+          <defs>
+            <filter id="home-light-red" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+              <feColorMatrix type="matrix" values="0 0 1 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 1 0" />
+            </filter>
+            <filter id="home-light-green" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
+              <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 1 0 0  .75 .25 0 0 0  0 0 0 1 0" />
+            </filter>
+          </defs>
+        </svg>
         <div class="page-scroll">
           <div class="frame home-frame">
             <div class="home-architecture" aria-hidden="true">
+              <img class="home-corridor" src="assets/home/luxury-corridor.webp" alt="" width="898" height="1752" decoding="async" fetchpriority="high" />
+              <img class="home-corridor home-corridor-half" src="assets/home/luxury-corridor.webp" alt="" width="898" height="1752" decoding="async" />
               <div class="home-wall home-wall-left"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
               <div class="home-wall home-wall-right"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
               <span class="home-architecture-shimmer"></span>
@@ -60,8 +75,8 @@
                   <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
                 </div></div>
                 <div class="aperture-rail"></div>
-                <img class="aperture-metal-housing" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" fetchpriority="high" />
-                <img class="aperture-metal-housing aperture-metal-half" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="aperture-metal-housing" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" fetchpriority="high" />
+                <img class="aperture-metal-housing aperture-metal-half" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
                 <div class="aperture-inset"></div>
                 <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
                 <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
@@ -69,8 +84,8 @@
               </div>
               <div class="home-floor"><span class="home-floor-shimmer"></span></div>
               <div class="aperture-floor-reflection">
-                <img class="home-metal-reflection-image" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
-                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/gate-metal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="home-metal-reflection-image" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
               </div>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">

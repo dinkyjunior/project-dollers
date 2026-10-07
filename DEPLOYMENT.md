@@ -1,5 +1,13 @@
 # Production publication and verification
 
+## Current Page 1 luxury refinement — locally approved; publication pending
+
+Page 1 is rebuilt as a compact polished chrome/glass entrance with vivid sport lighting, licensed native Archivo Black/Inter typography, thicker illuminated controls and natural travelling highlights/reflections. All six specialist visual decisions now bind the same 191 runtime files and 20 independently inspected actual Chromium/WebKit mobile and desktop screenshots. Complete Chromium five-size and genuine WebKit two-size functional suites, natural full-circuit/lifecycle proof and automatic-update integration passed. Read [the current release and evidence](qa/home-luxury/RELEASE.md). Older releases below remain historical evidence.
+
+The temporary GitHub HTTP 401 rejection has resolved: repository API and supported authenticated native fetch now pass. Its original exact errors and public hashes are preserved in [the historical authentication record](qa/home-luxury/publication-blocker.json). The workspace and approved requirements were preserved throughout; no credentials were extracted or additional secrets invented. The cause of the temporary rejection is unknown. Before any push, fetch/rebase the latest `codex-rebuild` and `main`, preserve their automatic data updates, run the recursive source audit and current-data checks, then deploy and verify the actual hosted website. This local approval alone is not proof of publication. Original brand, real logos, venue artwork, Pages 2–3 and whole-player-card football tracks remain; no Page 4.
+
+## Previous metal deployment — superseded visual acceptance
+
 ## Current final metal correction — deployed and verified
 
 The final Page 1 metal entrance and cross-engine floor correction are **deployed and verified** at https://dinkyjunior.github.io/project-dollers/. All six agents accepted all 16 current Chromium/WebKit sport captures against the approved chat render before publication. Complete local Chromium five-size and genuine WebKit two-size suites passed. Actual-hosted WebKit passed both requested phones at 13:13:12 AEDT on 7 October 2026; independent hosted desktop/publication review passed at 13:19:01 AEDT on 7 October 2026. Both hosted audits received HTTP 200 and exact tested hashes for all 184 runtime files with zero console/JavaScript, HTTP, external runtime or transport errors. Independent review accepted all eight final live captures; native manual refresh also passed both phones. Original branding, venues, genuine logos and Pages 2–3 remain; no Page 4. Read [the release record](qa/home-metal/RELEASE.md), [live screenshots](qa/home-metal/live-captures/index.html) and [eight before/after comparisons](qa/home-metal/before-after/index.html).

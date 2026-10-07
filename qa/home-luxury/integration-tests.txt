@@ -1,0 +1,39 @@
+
+> project-dollers@1.0.0 test:integration
+> node qa/auto-integration.cjs
+
+{
+  "status": "passed",
+  "focusPreserved": true,
+  "sourceFocusPreserved": true,
+  "historyScrollPreserved": true,
+  "historyBeforeScroll": [
+    0,
+    0,
+    2600
+  ],
+  "historyAfterScroll": [
+    0,
+    0,
+    2600
+  ],
+  "checks": [
+    "activePage",
+    "week",
+    "conference",
+    "nflTab",
+    "teamTab",
+    "filter",
+    "expanded",
+    "historyMode",
+    "historyWeek",
+    "seasonOpen",
+    "gameOpen",
+    "extraOpen",
+    "scroll",
+    "historyPresent"
+  ],
+  "requestCount": 8,
+  "pageErrors": [],
+  "failedRequests": []
+}

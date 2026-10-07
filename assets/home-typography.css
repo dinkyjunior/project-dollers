@@ -1,0 +1,20 @@
+/* Licensed native outlines for the approved Home refinement. These unique
+   families are applied only inside Page 1; research-page typography stays intact. */
+@font-face {
+  font-family: PDArchivoBlack;
+  src: url("fonts/PDArchivoBlack-Latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: PDInter;
+  src: url("fonts/PDInter-Latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+.page[data-page="home"] {
+  font-synthesis: none;
+  font-optical-sizing: auto;
+}

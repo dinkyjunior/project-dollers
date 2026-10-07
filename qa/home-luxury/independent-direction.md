@@ -1,0 +1,54 @@
+# Independent direction — new Page 1 luxury refinement
+
+Status: **HOLD for a new implementation and actual visual review**. This is a skeptical reassessment of the previous release, not permission to publish the next pass. Its earlier automated and independent reports remain preserved as historical evidence; their passing status does not resolve the user's rejection of the visual result.
+
+## Reference and evidence inspected
+
+The authority is the user's latest reattached four-sport **PROJECT DOLLAR — FINAL HOME CONCEPT** chat render. Its white annotations on a separate rejected screenshot identify correction areas and are not proposed artwork. The original attachment bytes remain unavailable, so this is a qualitative comparison, not a registered pixel-difference claim. The original eight-screen render still governs the unaffected NFL and Steelers screens.
+
+I inspected all eight actual hosted unpaused phone screenshots in `qa/home-metal/live-captures/` at their respective 393×852 and 430×896 CSS dimensions, plus all four actual unpaused 1440×1000 desktop screenshots in `qa/home-metal/review/`. These show the preserved application `3c4e0894ae94f92e2e20b500ca17d9a56b4e8823`; subsequent metadata-only data updates do not change their application artwork. I also read current Page 1 markup and its scoped layout/material/motion CSS. No application files, old captures or prior reports were modified by this review.
+
+## Why the previous result still falls short
+
+1. **Composition is elongated instead of compact.** The gate itself is undistorted, but a large square hero plus a separate floor band makes the whole screen feel stretched. Source-bound hosted geometry records a 381×381 gate ending at y573 and a CTA starting at y639 at 393×852: a 66 px gap. At 430×896, the 418×418 gate ends at y618, CTA starts y679: 61 px. The desktop composition shows a still longer floor band before a CTA at y715. The approved render concentrates the portal, reflective ground and controls into one close visual sequence. Increasing glow alone cannot correct this hierarchy.
+
+2. **The ring reads as a freestanding machine, not an entrance into the venue.** It is broad, orthographic and heavily armoured, with prominent projecting feet and repeated segmented silver plates. The reference has a more integrated tunnel/portal silhouette: concentric illuminated depth, angled enclosing architecture and specular surfaces that lead the eye inward. The current grey armour competes with the venue instead of framing it.
+
+3. **The surrounding architecture does not share the material quality of the hero.** Flat repeating CSS seams, identical vertical rail columns and a few angular braces are visibly procedural beside photographic-looking metal and stadium imagery. Large nearly black regions make those small rails look like decoration on a wall. The approved render shows an enclosing environment with convincing recession, varied reflected highlights and coherent illumination across walls and floor.
+
+4. **Lighting intensity is concentrated in soft control halos.** A very broad homogeneous bloom surrounds the CTA and selected tile, while architectural illumination stays comparatively weak. The reference's intensity comes from tight hot cores, strongly saturated tracks, concentrated specular flare and their reflected light. The current blue/green/red glow can be bright without giving that sharp luminous material impression. Adding white sheets or boosting every layer would wash out chrome and text rather than improve it.
+
+5. **Colour transformations expose synthetic seams/material tint.** NBA's hard centre split recolours the same metal image, with a central red/blue material seam. NRL and UFC retain patches of cool grey/pink/coral reflected metal that can read as a filter, especially near the lower casing. Stationary sport colours remain correct and should be preserved, but the reflections need to feel illuminated by those colours rather than mechanically hue-rotated.
+
+6. **The lower typography loses the premium weight of the reference.** The current 600-weight 22 px BarlowCondensed CTA appears extremely narrow compared with the bold, broad white entry label in the approved panel. Small 14 px condensed sport names and 11 px navigation labels weaken the lower third against the giant masthead. Refine weight, tracking and alignment without distorting glyphs, rebuilding the approved logo, or sacrificing 44 px tap targets.
+
+7. **Desktop makes the visual imbalance easier to see.** A 430 px wide panel extends to roughly y932 in a 1000 px viewport, starting at the top, with extensive dark space around it. The same extra floor distance and tiny lower labels are conspicuous. A deliberate bounded, vertically composed showcase can preserve the mobile identity while avoiding the impression of an unconsidered tall phone strip on a desktop canvas. Do not widen or nonuniformly scale the artwork to fill the desktop.
+
+8. **Motion passing is not proof of a convincing living environment.** Earlier checks prove ring sweeps, pulses and scene movement really ran, but the thin rotating highlight and opacity changes do not alone create the reference's moving reflection/light interaction across robust metal. Motion should animate light with a stable structure, coherent reflection and a clear focal hierarchy.
+
+## Required direction for the implementation team
+
+- Compress the sequence of masthead → portal → short reflective ground → CTA → sport dock → navigation through layout and appropriately sized artwork. Keep the approved logo's native aspect ratio, a round portal and genuine league marks. Do not use `scaleY` or stretch screenshots to manufacture a fit.
+- Rework the housing and enclosing architecture together. Preserve substantial mechanical depth but reduce the appliance/pedestal reading; carry saturated sport light through multiple recessed tracks and into convincing perspective side walls and reflective ground.
+- Make the light sharp and brilliant at its source, with controlled small white cores and vivid sport-colour bloom. Keep dark structural separation and readable chrome facets. Let reflections establish the room instead of placing a broad blurred colour band beneath the ring.
+- Rebalance controls and lower typography with visibly stronger entry lettering, consistent geometry and clean selected-state treatment. Do not restore the removed duplicate sport heading/research line or Preview only text. UFC remains Fighters.
+- Keep NFL functional; NBA, NRL and UFC selectable with Coming soon entry scope. Keep actual continuous lighting and venue movement, hidden/offscreen pause and reduced-motion behaviour. Avoid animating heavy filters or rotating the physical housing/colour split.
+- Restrict app changes to Page 1. Preserve Pages 2–3, the real data/refresh/history layer, approved brand and league marks. No Page 4. Preserve all prior QA history.
+
+## Independent release gate for the new pass
+
+I will not accept a saturation-only repaint. A release candidate must first show a materially tighter composition and a convincingly integrated illuminated entrance in actual screenshots. Once source is frozen, independently review all four sport states at both primary phone sizes in **both Chromium and genuine WebKit** (16 natural, unpaused captures), plus all four desktop states. Bind reports to the full current runtime manifest and each original screenshot hash; do not recycle the old visual acceptance as current approval.
+
+Challenge native aspect ratios, ring depth, logo/venue proportions, colour transitions, coherent wall/floor material, CTA/dock alignment, chrome highlight clipping, typography and visible breathing/travelling reflections. Functional and motion tests must remain separate evidence and cannot overrule a weak screenshot. Both engines must paint the same intended ground geometry; the earlier WebKit floor discrepancy is a specific regression risk.
+
+After all reviewer gates and functional checks pass, root owns publication. Independently verify the exact deployed commit/Pages run, actual HTTPS assets, navigation and natural animation on desktop, then inspect the eight actual hosted phone captures against this same chat attachment. Never claim a pixel-perfect source replica, physical iPhone testing or measured device FPS without that evidence.
+
+## Candidate 02 intermediate inspection
+
+I inspected the five completed actual Chromium captures under `candidate-02/`: all four 393×852 sport states and NFL at 1440×1000. This is a genuine material/composition change, not the rejected saturation-only repaint. The new proportional native corridor establishes enclosing perspective and bright wet reflections, the portal opens more generously into the retained venue, the old appliance feet disappear, and actual Archivo/Inter lettering gives the controls stronger hierarchy. The floor-to-entry relationship is visibly short and desktop is deliberately centred in a bounded portrait.
+
+Two residual reference questions were sent to root/UI before final freeze: the new outer chrome is slimmer than the approved broad layered mechanical housing, and bright wet-floor texture extends behind the unselected sport dock. Review a slightly broader faceted outer material band only if it preserves the integrated entrance; avoid returning to heavy appliance armour. A restrained dark dock backing may separate controls cleanly while retaining strong floor reflection above the CTA. These are concrete actual-output observations, not requests to restore procedural bars or uniformly increase blur.
+
+The new neutral-preserving SVG channel matrices improve the red/emerald metal relative to hue rotation and preserve neutral chrome mathematically. Actual WebKit rendering and the NBA blended centre transition still require independent inspection. This intermediate review is **not final acceptance**: both primary sizes, both engines, all four desktop states and frozen source bindings remain required.
+
+I subsequently independently inspected all four Candidate 02 genuine WebKit 393×852 states and a native DPR2 actual ring crop. Neutral chrome, red/emerald lighting and the NBA portal/corridor transition paint consistently in both engines. The enlarged real crop shows separate dark chrome bevels, recessed illuminated glass depth and clamp hardware: together with the enclosing corridor, this is a physical entrance. I withdraw the provisional suggestion to add broader armour; it risks reintroducing the rejected appliance impression and is not necessary. The actual hard NBA CTA interior seam and busy floor behind the dock remain the specific intermediate finish issues. UI reports an opaque common control face, subtle directional reflections and calmer dock backing in the next frozen source; those changes still need fresh actual inspection before final acceptance.
