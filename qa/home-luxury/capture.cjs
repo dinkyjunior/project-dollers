@@ -71,5 +71,8 @@ async function main(){
   }
   console.log(`Saved ${report.captures.length} actual screenshots: ${path.relative(ROOT,out)}/index.html`);
 }
-if(require.main===module)main().catch(error=>{console.error(redact(error.stack));process.exitCode=1;});
+if(require.main===module){
+  if(process.argv.includes('--help'))console.log('node qa/home-luxury/capture.cjs [--engine chromium|webkit] [--base URL] [--desktop] [--output DIRECTORY]. Saves actual unpaused browser evidence and a source-bound manifest.');
+  else main().catch(error=>{console.error(redact(error.stack));process.exitCode=1;});
+}
 module.exports={main};

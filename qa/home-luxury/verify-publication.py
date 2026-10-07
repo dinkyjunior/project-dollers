@@ -47,11 +47,25 @@ def main():
         check = report(prefix + path)
         assert check["status"] == "passed", path
     assert report(prefix + "motion-approved/results.json")["status"] == "passed"
-    manifest = dict(report(prefix + "refresh-integration/post-refresh-results.json")["expectedManifest"])
-    refresh = report(prefix + "refresh-integration/post-refresh-results.json")
-    manual = report(prefix + "refresh-integration/post-refresh-manual.json")
+    if (ROOT / prefix / "refresh-integration/post-refresh-results.json").exists():
+        refresh = report(prefix + "refresh-integration/post-refresh-results.json")
+        manifest = dict(refresh["expectedManifest"])
+        manual = report(prefix + "refresh-integration/post-refresh-manual.json")
+        assert manual["linkedSmoke"]["sha256"] == sha((ROOT / prefix / "refresh-integration/post-refresh-results.json").read_bytes())
+    else:
+        # The complete hosted suite already validates this exact integrated
+        # source. A focused native manual-refresh check covers its additional
+        # meaningful control behavior without duplicating broad regressions.
+        refresh = report(prefix + "hosted-webkit/results.json")
+        manifest = dict(refresh["runtimeManifest"])
+        manual = report(prefix + "manual-refresh.json")
+        assert manual["linkedFullHosted"]["sha256"] == sha((ROOT / prefix / "hosted-webkit/results.json").read_bytes())
     assert refresh["status"] == manual["status"] == "passed"
-    assert manual["linkedSmoke"]["sha256"] == sha((ROOT / prefix / "refresh-integration/post-refresh-results.json").read_bytes())
+    hosted_visual = report(prefix + "review/hosted-visual-review.json")
+    hosted_native = report(prefix + "hosted-native-review.json")
+    assert hosted_visual["status"] == "accepted" and hosted_native["status"] == "passed"
+    assert hosted_visual["reviewedPhoneScreens"] == 8 and hosted_visual["reviewedDesktopScreens"] == 4
+    assert hosted_visual["runtimeManifest"] == hosted_native["runtimeManifest"] == manifest
     assert manifest.keys() == accepted["runtimeManifest"].keys()
     for path, value in manifest.items():
         assert sha((ROOT / path).read_bytes()) == value, path
@@ -81,7 +95,7 @@ def main():
     additional = ["CODEX_START.md", "CODEX_HANDOFF_STATUS.md", "CODEX_ENVIRONMENT.md", "DEPLOYMENT.md"]
     for folder in ["approved-local-captures", "approved-local-webkit", "baseline-local-chromium", "live-captures", "before-after", "review"]:
         additional.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / prefix / folder).iterdir()) if path.is_file() and path.suffix in {".json", ".html", ".png", ".md"})
-    additional.extend([prefix + "agent-acceptance.json", prefix + "RELEASE.md", prefix + "preservation.json"])
+    additional.extend([prefix + "agent-acceptance.json", prefix + "RELEASE.md", prefix + "preservation.json", prefix + "hosted-webkit/results.json", prefix + "manual-refresh.json", prefix + "hosted-native-review.json", prefix + "HOSTED_NATIVE_REVIEW.md"])
     additional.extend(item["evidence"] for item in accepted["reviewers"])
     additional.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / prefix / "refresh-integration").iterdir()) if path.is_file() and path.suffix in {".json", ".md", ".txt"})
     for path in additional:
