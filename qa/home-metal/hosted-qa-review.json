@@ -1,10 +1,10 @@
 {
-  "status": "functional_passed_visual_floor_review_pending",
+  "status": "passed",
   "reviewer": "/root/metal_qa",
-  "reviewedAtUtc": "2026-10-07T01:40:32.445547+00:00",
+  "reviewedAtUtc": "2026-10-07T02:16:24.851214+00:00",
   "base": "https://dinkyjunior.github.io/project-dollers/",
   "actuallyHosted": true,
-  "gitHeadDuringBrowserVerification": "3c1141509c1356fbfb46c723a6216d4868d34192",
+  "gitHeadDuringBrowserVerification": "3c4e0894ae94f92e2e20b500ca17d9a56b4e8823",
   "browserVersion": "26.0",
   "engine": "Genuine official Playwright WebKit26 LinuxWPE",
   "strictTLS": true,
@@ -12,9 +12,9 @@
   "sourceSubstitution": false,
   "functionalResult": {
     "file": "qa/home-metal/hosted-webkit/results.json",
-    "sha256": "8567c156be8a8d632d0dae714d5fe5ed3141a8b3cdfcc3888a0e0f6d1dd9de89",
-    "completedAtUtc": "2026-10-07T01:37:00.534Z",
-    "completedAustraliaSydney": "2026-10-07T12:37:00.534000+11:00"
+    "sha256": "9221003bfd314605cf79e4923371b88490780c8ff6620b8a1480e22b295430ec",
+    "completedAtUtc": "2026-10-07T02:13:12.368Z",
+    "completedAustraliaSydney": "2026-10-07T13:13:12.368000+11:00"
   },
   "deliveredFiles": 184,
   "everyDeliveredFileHttp200ExactSha256": true,
@@ -49,7 +49,7 @@
     "assets/home-gate-motion.css": "83200c4fcbaaf7cdcc9ec381ea0a64ca0bb4c947718a73f23c3173b97bdfeddb",
     "assets/home-gate-motion.js": "ecb169a2832853d7cae5d83218fbf567ed1dd64632c5474261367da12d8434c2",
     "assets/home-interactions.js": "55c1ece0e0b738b1c5f6e594670ed65798609f508b7523f8a6986d42ea2f5a8b",
-    "assets/home-premium.css": "72db4bde8cc1eb23548457a4237973ed3736e6afc974273d5477317ea76e4bd5",
+    "assets/home-premium.css": "0935eadb330ab4a76460f3b9e009030cec170898a3b648205c419cf0bb4c4a1a",
     "assets/home/README.md": "8d3025071a17a157a954c6d07b9d10271e64bbf1327152b191ddbd96a36ddb9b",
     "assets/home/asset-provenance.json": "ada85f5f25a92d158c9831ed4b43f3554223c47221ab743d50e78a1efa711ecf",
     "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
@@ -207,14 +207,10 @@
     "assets/sources.json": "36b6eaab34430e217a33e9ac22117ae260b15cb133540302d0a5c363ab00bec0",
     "assets/stadium.jpg": "d05edf81f840c10a4cd5db42002bc52c5fce195b496127acd1405a682f5417ff",
     "assets/styles.css": "40bbbeaab6f89da72ef8cc49a91bc2fd3ff90bc3d1d95a94560e6c4f000f981e",
-    "index.html": "d593350ee4dcb19df92c2a6d5ecf2732f77eebf679cdfbf24142e4b371c757df"
+    "index.html": "4060e98aa1fa81b7d8faf553f66af83ec7c772e2bfcf2de2864976d669cec112"
   },
   "reviewedNonDataFilesUnchanged": 181,
-  "differentSourcePathsComparedToVisualCandidate": [
-    "assets/data/current.json",
-    "assets/data/player-history.json",
-    "assets/data/provenance.json"
-  ],
+  "differentSourcePathsComparedToVisualCandidate": [],
   "metadataOnlyChangesProof": "qa/home-metal/refresh-integration/",
   "viewports": [
     {
@@ -292,28 +288,265 @@
   ],
   "naturalUnpausedLiveCaptures": {
     "file": "qa/home-metal/live-captures/manifest.json",
-    "sha256": "98388677be8be4a39f2e015a0a71c6a662a97a6e37c0eda35adacdb731efb686",
+    "sha256": "f6162bf921b3dd614790cb97a68d2e2dfe491bdda7b4308a937f47ad4c9af1ae",
     "count": 8,
-    "completedAtUtc": "2026-10-07T01:38:17.465Z",
+    "completedAtUtc": "2026-10-07T02:14:58.836Z",
     "motionRunningDuringAllExposures": true,
     "allEightIndependentlyViewedAgainstApprovedChatRender": true,
-    "visualDecision": "Ring/metal/theme/control geometry accepted; overall hosted visual acceptance is withheld pending cross-engine floor assessment."
+    "visualDecision": "Accepted: substantial fixed metal planes, recessed light channels, brackets/bolts, pedestal and grounded glossy reflected environment. Both primary sizes/all4sport themes preserve the approved entry direction; previous underfoot gap and floor illumination across dock are resolved.",
+    "captures": [
+      {
+        "file": "home-nfl-393x852-live.png",
+        "sha256": "ab734cafdb18d0564608e0e8a6fdfcee1347c6abca8f1f0a6381e8a6e79dca74",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 563,
+            "width": 393,
+            "height": 132,
+            "right": 393,
+            "bottom": 695
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 701,
+            "width": 369,
+            "height": 86,
+            "right": 381,
+            "bottom": 787
+          }
+        }
+      },
+      {
+        "file": "home-nba-393x852-live.png",
+        "sha256": "5fe7a86ed22fdeed98512184ad863ea0970ae50f47c7e1ded21918b5de5e8670",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 563,
+            "width": 393,
+            "height": 132,
+            "right": 393,
+            "bottom": 695
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 701,
+            "width": 369,
+            "height": 86,
+            "right": 381,
+            "bottom": 787
+          }
+        }
+      },
+      {
+        "file": "home-nrl-393x852-live.png",
+        "sha256": "655d846a90f6c02aa21d9f366a7836c25297185368b16387a351d1cec8f8c11f",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 563,
+            "width": 393,
+            "height": 132,
+            "right": 393,
+            "bottom": 695
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 701,
+            "width": 369,
+            "height": 86,
+            "right": 381,
+            "bottom": 787
+          }
+        }
+      },
+      {
+        "file": "home-ufc-393x852-live.png",
+        "sha256": "205c1df2c18f974ac929da45755f05886ab0f7160d985708ce4431b9b5f90619",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 563,
+            "width": 393,
+            "height": 132,
+            "right": 393,
+            "bottom": 695
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 701,
+            "width": 369,
+            "height": 86,
+            "right": 381,
+            "bottom": 787
+          }
+        }
+      },
+      {
+        "file": "home-nfl-430x896-live.png",
+        "sha256": "3d277555498ed55059791e55b09e3eb0959b430f5588f68625dfeaba234a99ae",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 608,
+            "width": 430,
+            "height": 127,
+            "right": 430,
+            "bottom": 735
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 743,
+            "width": 406,
+            "height": 88,
+            "right": 418,
+            "bottom": 831
+          }
+        }
+      },
+      {
+        "file": "home-nba-430x896-live.png",
+        "sha256": "bc0546462cbd139fdefd0de185c3b0f28dd16941ca0645d42b1b97eb380a062d",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 608,
+            "width": 430,
+            "height": 127,
+            "right": 430,
+            "bottom": 735
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 743,
+            "width": 406,
+            "height": 88,
+            "right": 418,
+            "bottom": 831
+          }
+        }
+      },
+      {
+        "file": "home-nrl-430x896-live.png",
+        "sha256": "07915b8939f88543f3393b413f1b71cc2df0838ab9092e85950399e1552ddb58",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 608,
+            "width": 430,
+            "height": 127,
+            "right": 430,
+            "bottom": 735
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 743,
+            "width": 406,
+            "height": 88,
+            "right": 418,
+            "bottom": 831
+          }
+        }
+      },
+      {
+        "file": "home-ufc-430x896-live.png",
+        "sha256": "e2d35714b579cce3706430d50a62348007ae07a0ed8ceed095ac847b02bea5ca",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "ground": {
+          "box": {
+            "x": 0,
+            "y": 608,
+            "width": 430,
+            "height": 127,
+            "right": 430,
+            "bottom": 735
+          },
+          "parentIsStage": true,
+          "transform": "none",
+          "overflow": "hidden",
+          "dock": {
+            "x": 12,
+            "y": 743,
+            "width": 406,
+            "height": 88,
+            "right": 418,
+            "bottom": 831
+          }
+        }
+      }
+    ]
   },
   "beforeAfter": {
     "gallery": "qa/home-metal/before-after/index.html",
     "sourcePixelsResized": false,
     "comparison": "Prior actual hosted WebKit output versus new actual hosted WebKit output, bothDPR2/motionrunning",
-    "pixelRegisteredConceptComparison": false
+    "pixelRegisteredConceptComparison": false,
+    "manifestSha256": "a2ecb4a7c6e75d591fe2988bc66dc421e1f3454bffde8b16ced5d737094edbce",
+    "compositeCount": 8,
+    "originalBrowserRegionsVerifiedLossless": true
   },
   "remainingPublicationTasks": "Root owns independent hosted desktop verification, native manual refresh and final evidence publication. No application source or git mutations performed by this reviewer.",
-  "visualAcceptanceWithheld": true,
+  "visualAcceptanceWithheld": false,
   "floorAssessment": {
-    "finding": "Local and hosted genuineWebKit captures consistently paint the under-foot environment darker and show floor light beams across the sport dock compared with accepted Chromium captures. This persists across paused and naturally running exposure, so pure animation phase is insufficient as an explanation.",
-    "unchangedGeometryProof": "Recorded native metal reflection image bounding size is381x64.77001953125CSSpx in both engines; the independent mirrored metal image remains visible and undistorted as intentional physical projection.",
-    "suspectedLayer": ".home-floor using perspective(320px)rotateX(53deg) with layered gradients/blurred children; actual engine paint/compositing difference requires UI investigation.",
-    "newBrowserRunForInvestigation": false,
+    "status": "resolved_and_accepted_on_actual_hosted",
+    "method": "Independently inspected all8 actual hosted live screenshots against approved attached render and final Chrome/WebKit local captures, including native NBA430/UFC393 detail.",
+    "finding": "Gate-anchored glossy2D floor visibly joins pedestal in all8 actual hosted states. Ring reflection is visible; floor illumination is clipped before clean sport dock. No persistent black underfoot gap or engine-specific geometry discrepancy.",
+    "geometry": "393 floor563..695, gatebottom573, dock701;430 floor608..735, gatebottom618, dock743. In both sizes parentIsStage=true, transform=none, overflow=hidden.",
     "sourceChangedByQa": false,
-    "owner": "/root/metal_ui; root publication gate held"
+    "archivedPriorProblem": "qa/home-metal/iterations/webkit-floor-hold/"
   },
   "measuredHostedPerformance": [
     {
@@ -322,20 +555,20 @@
         "height": 852
       },
       "navigation": {
-        "domContentLoaded": 2220,
-        "load": 2310,
-        "responseStart": 166,
-        "responseEnd": 184,
-        "transferSize": 4410
+        "domContentLoaded": 2157,
+        "load": 2255,
+        "responseStart": 127,
+        "responseEnd": 144.00000000000003,
+        "transferSize": 4420
       },
-      "totalEncodedResourceBytes": 1769801,
-      "totalTransferBytes": 1782701,
+      "totalEncodedResourceBytes": 1769947,
+      "totalTransferBytes": 1782847,
       "historyLoadedOnHome": false,
       "cloudRafTwelveFrameSample": {
         "sampledFrames": 12,
-        "medianIntervalMs": 194,
-        "p95IntervalMs": 2306,
-        "maximumIntervalMs": 2306
+        "medianIntervalMs": 182,
+        "p95IntervalMs": 2409,
+        "maximumIntervalMs": 2409
       },
       "qualification": "Browser measurements in a cloud container; loopback timings or hosted proxy timings as indicated by base. Animation-frame cadence is not physical iPhone/GPU/FPS certification."
     },
@@ -345,22 +578,36 @@
         "height": 896
       },
       "navigation": {
-        "domContentLoaded": 2039.0000000000002,
-        "load": 2123,
-        "responseStart": 57,
-        "responseEnd": 70,
-        "transferSize": 4410
+        "domContentLoaded": 331,
+        "load": 1979,
+        "responseStart": 90,
+        "responseEnd": 101,
+        "transferSize": 4420
       },
-      "totalEncodedResourceBytes": 1769801,
-      "totalTransferBytes": 1782701,
+      "totalEncodedResourceBytes": 1769947,
+      "totalTransferBytes": 1782847,
       "historyLoadedOnHome": false,
       "cloudRafTwelveFrameSample": {
         "sampledFrames": 12,
-        "medianIntervalMs": 214,
-        "p95IntervalMs": 2507,
-        "maximumIntervalMs": 2507
+        "medianIntervalMs": 229,
+        "p95IntervalMs": 3178,
+        "maximumIntervalMs": 3178
       },
       "qualification": "Browser measurements in a cloud container; loopback timings or hosted proxy timings as indicated by base. Animation-frame cadence is not physical iPhone/GPU/FPS certification."
     }
-  ]
+  ],
+  "sourceMatchedToFinal184FileVisualCandidate": true,
+  "qualifications": {
+    "hardwareFpsCertified": false,
+    "physicalIPhoneTested": false,
+    "originalApprovedReferenceBytesAvailable": false,
+    "pixelExactReferenceIdentityClaimed": false,
+    "approvedSource": "User reattached four-sport Home concept in chat; source originalbytes unavailable. White annotation strokes identify rejected UI.",
+    "functionalCapturesPausedOnlyForExposure": true,
+    "finalLiveCapturesNaturallyUnpaused": true,
+    "manualNativeRefreshCoveredByThisReport": false,
+    "independentDesktopCoveredByThisReport": false,
+    "appSourceChangesPerformedByReviewer": false,
+    "gitMutationsPerformedByReviewer": false
+  }
 }
