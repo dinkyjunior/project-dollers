@@ -1,0 +1,299 @@
+{
+  "status": "factual-values-preserved",
+  "completedAt": "2026-10-07T00:35:20.740017Z",
+  "baseApplicationCommit": "32f55a67d500bc8bf646679fb1879e318ef2f4b5",
+  "incomingAutomaticDataCommit": "79b3160b56af66121aed80d29c67274b4e04235a",
+  "method": "Compare Git-object JSON recursively at every scalar and every dictionary key set/list length. Exclude only same-type scalar changes at the enumerated metadata path patterns; * matches exactly one path component. Any other changed value, type or collection shape is reported as a factual difference. Exclusions concern retrieval/generation/check/schedule-retrieval times, refresh scheduling, source validators/body bytes/checksums and linked-file checksums. No incoming data is edited.",
+  "ignoredMetadataPathPatterns": {
+    "assets/data/current.json": [
+      "/context/refreshAfter",
+      "/generatedAt",
+      "/retrievedAt",
+      "/playerHistory/generatedAt",
+      "/playerHistory/sha256",
+      "/playerHistory/currentSourceHashes/nflverse_games",
+      "/disagreements/*/checkedAt",
+      "/roster/*/rosterVerification/checkedAt",
+      "/roster/*/rosterVerification/retrievedAt",
+      "/roster/*/rosterVerification/sourceHashes/espn_steelers_roster",
+      "/roster/*/rosterVerification/sourceHashes/official_steelers_roster",
+      "/sources/*/bytes",
+      "/sources/*/etag",
+      "/sources/*/retrievedAt",
+      "/sources/*/sha256",
+      "/steelers/matchupsByOpponent/*/context/retrievedAt"
+    ],
+    "assets/data/player-history.json": [
+      "/currentSourceHashes/nflverse_games",
+      "/generatedAt",
+      "/players/*/games/*/retrievedAt",
+      "/players/*/games/*/scheduleRetrievedAt",
+      "/sources/*/etag",
+      "/sources/*/retrievedAt",
+      "/sources/*/sha256"
+    ],
+    "assets/data/provenance.json": [
+      "/generatedAt",
+      "/retrievedAt",
+      "/playerHistorySha256",
+      "/snapshotSha256CanonicalJson",
+      "/sources/*/bytes",
+      "/sources/*/etag",
+      "/sources/*/retrievedAt",
+      "/sources/*/sha256",
+      "/validation/disagreements/*/checkedAt"
+    ]
+  },
+  "files": {
+    "assets/data/current.json": {
+      "beforeSha256": "9beac7a4f68ef8e910c0eebcb1eefed90c895ee78d4198c044baee3b902feeef",
+      "incomingSha256": "1c03179768c4b75fea3aba444538eb90e2a76c9c7dc72f92f184254ee8beae92",
+      "workspaceMatchesIncomingGitObject": true,
+      "dictionaryShapesCompared": 3634,
+      "totalScalarsCompared": 54531,
+      "factualScalarsCompared": 54078,
+      "metadataScalarsCompared": 453,
+      "listLengthsCompared": 653,
+      "metadataChangedScalarCount": 350,
+      "metadataChangesByExactPattern": {
+        "/context/refreshAfter": 1,
+        "/disagreements/*/checkedAt": 9,
+        "/generatedAt": 1,
+        "/playerHistory/currentSourceHashes/nflverse_games": 1,
+        "/playerHistory/generatedAt": 1,
+        "/playerHistory/sha256": 1,
+        "/retrievedAt": 1,
+        "/roster/*/rosterVerification/checkedAt": 77,
+        "/roster/*/rosterVerification/retrievedAt": 77,
+        "/roster/*/rosterVerification/sourceHashes/espn_steelers_roster": 77,
+        "/roster/*/rosterVerification/sourceHashes/official_steelers_roster": 77,
+        "/sources/*/bytes": 1,
+        "/sources/*/etag": 1,
+        "/sources/*/retrievedAt": 8,
+        "/sources/*/sha256": 3,
+        "/steelers/matchupsByOpponent/*/context/retrievedAt": 14
+      },
+      "metadataChangeExamples": {
+        "/context/refreshAfter": {
+          "path": "/context/refreshAfter",
+          "before": "2026-10-07T05:17:45Z",
+          "after": "2026-10-07T06:31:07Z"
+        },
+        "/disagreements/*/checkedAt": {
+          "path": "/disagreements/0/checkedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:10Z"
+        },
+        "/generatedAt": {
+          "path": "/generatedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:09Z"
+        },
+        "/playerHistory/currentSourceHashes/nflverse_games": {
+          "path": "/playerHistory/currentSourceHashes/nflverse_games",
+          "before": "c665b32f6a386ac13b66c25c42acb6731c5ebcfb1b6f3b2c089ee2e758fc41bf",
+          "after": "e2170521e9600d8343c9a29dd26ce5343e4835e8abb2e3e862352acf1a1e7dc8"
+        },
+        "/playerHistory/generatedAt": {
+          "path": "/playerHistory/generatedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:09Z"
+        },
+        "/playerHistory/sha256": {
+          "path": "/playerHistory/sha256",
+          "before": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c",
+          "after": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b"
+        },
+        "/retrievedAt": {
+          "path": "/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/roster/*/rosterVerification/checkedAt": {
+          "path": "/roster/0/rosterVerification/checkedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:10Z"
+        },
+        "/roster/*/rosterVerification/retrievedAt": {
+          "path": "/roster/0/rosterVerification/retrievedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:10Z"
+        },
+        "/roster/*/rosterVerification/sourceHashes/espn_steelers_roster": {
+          "path": "/roster/0/rosterVerification/sourceHashes/espn_steelers_roster",
+          "before": "36835dd785df06ac092c196999c5e4b69f148ca12b89d458406c66ae476c5fe7",
+          "after": "f1a064d92a8c83b4bf1530bc1810d33919f6c11c88889a1b4a5405ebf4621bd3"
+        },
+        "/roster/*/rosterVerification/sourceHashes/official_steelers_roster": {
+          "path": "/roster/0/rosterVerification/sourceHashes/official_steelers_roster",
+          "before": "c05477565eb91dd796470c5672d0e490d7ec10c8229d05b3d638256699e2a49f",
+          "after": "387c3612edccc6176d438c6089df6ffbffc25c07870b291b204f5b1d58e91417"
+        },
+        "/sources/*/etag": {
+          "path": "/sources/0/etag",
+          "before": "\"00905ccf900a3162b85c833d2849107188695fcc816d179cf46889b91b4bae27\"",
+          "after": "\"bbcd44de913377f2378af060101f305f4f0a4399e98714c9f778280b2ee447e9\""
+        },
+        "/sources/*/retrievedAt": {
+          "path": "/sources/0/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/sources/*/sha256": {
+          "path": "/sources/0/sha256",
+          "before": "c665b32f6a386ac13b66c25c42acb6731c5ebcfb1b6f3b2c089ee2e758fc41bf",
+          "after": "e2170521e9600d8343c9a29dd26ce5343e4835e8abb2e3e862352acf1a1e7dc8"
+        },
+        "/sources/*/bytes": {
+          "path": "/sources/6/bytes",
+          "before": 419872,
+          "after": 450189
+        },
+        "/steelers/matchupsByOpponent/*/context/retrievedAt": {
+          "path": "/steelers/matchupsByOpponent/ATL/context/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        }
+      },
+      "factualDifferences": []
+    },
+    "assets/data/player-history.json": {
+      "beforeSha256": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c",
+      "incomingSha256": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b",
+      "workspaceMatchesIncomingGitObject": true,
+      "dictionaryShapesCompared": 6365,
+      "listLengthsCompared": 2417,
+      "totalScalarsCompared": 339782,
+      "factualScalarsCompared": 337194,
+      "metadataScalarsCompared": 2588,
+      "metadataChangedScalarCount": 1400,
+      "metadataChangesByExactPattern": {
+        "/currentSourceHashes/nflverse_games": 1,
+        "/generatedAt": 1,
+        "/players/*/games/*/retrievedAt": 136,
+        "/players/*/games/*/scheduleRetrievedAt": 1257,
+        "/sources/*/etag": 1,
+        "/sources/*/retrievedAt": 3,
+        "/sources/*/sha256": 1
+      },
+      "metadataChangeExamples": {
+        "/currentSourceHashes/nflverse_games": {
+          "path": "/currentSourceHashes/nflverse_games",
+          "before": "c665b32f6a386ac13b66c25c42acb6731c5ebcfb1b6f3b2c089ee2e758fc41bf",
+          "after": "e2170521e9600d8343c9a29dd26ce5343e4835e8abb2e3e862352acf1a1e7dc8"
+        },
+        "/generatedAt": {
+          "path": "/generatedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:09Z"
+        },
+        "/players/*/games/*/scheduleRetrievedAt": {
+          "path": "/players/00-0023459/games/2008_14_HOU_GB/scheduleRetrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/players/*/games/*/retrievedAt": {
+          "path": "/players/00-0023459/games/2026_01_ATL_PIT/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/sources/*/etag": {
+          "path": "/sources/0/etag",
+          "before": "\"00905ccf900a3162b85c833d2849107188695fcc816d179cf46889b91b4bae27\"",
+          "after": "\"bbcd44de913377f2378af060101f305f4f0a4399e98714c9f778280b2ee447e9\""
+        },
+        "/sources/*/retrievedAt": {
+          "path": "/sources/0/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/sources/*/sha256": {
+          "path": "/sources/0/sha256",
+          "before": "c665b32f6a386ac13b66c25c42acb6731c5ebcfb1b6f3b2c089ee2e758fc41bf",
+          "after": "e2170521e9600d8343c9a29dd26ce5343e4835e8abb2e3e862352acf1a1e7dc8"
+        }
+      },
+      "factualDifferences": []
+    },
+    "assets/data/provenance.json": {
+      "beforeSha256": "ab54bf500421ae1ac2c2f5e26a4e115f00ed170a9cc77c65f66e833e4318257d",
+      "incomingSha256": "5de8f5920b3245af9d57f751183b22fe11ad0c5c1d697f06cea2c0bd3f500315",
+      "workspaceMatchesIncomingGitObject": true,
+      "dictionaryShapesCompared": 63,
+      "totalScalarsCompared": 628,
+      "factualScalarsCompared": 499,
+      "listLengthsCompared": 37,
+      "metadataScalarsCompared": 129,
+      "metadataChangedScalarCount": 26,
+      "metadataChangesByExactPattern": {
+        "/generatedAt": 1,
+        "/playerHistorySha256": 1,
+        "/retrievedAt": 1,
+        "/snapshotSha256CanonicalJson": 1,
+        "/sources/*/bytes": 1,
+        "/sources/*/etag": 1,
+        "/sources/*/retrievedAt": 8,
+        "/sources/*/sha256": 3,
+        "/validation/disagreements/*/checkedAt": 9
+      },
+      "metadataChangeExamples": {
+        "/generatedAt": {
+          "path": "/generatedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:09Z"
+        },
+        "/playerHistorySha256": {
+          "path": "/playerHistorySha256",
+          "before": "017cf4a2d3307008311e596c108afd7404863dc4cd5285a3d42786e51707261c",
+          "after": "3e87fd25b2924e1cbef27701337afa4ae4dfda04f7811ecba736eb0b044b9b7b"
+        },
+        "/retrievedAt": {
+          "path": "/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/snapshotSha256CanonicalJson": {
+          "path": "/snapshotSha256CanonicalJson",
+          "before": "839e23ff4b417a84428183ef4b3016524c6aaa9103bbe23ba681bcbe159f17bc",
+          "after": "826fdf38c8ffd05a6a2ab6af836cae89df1b220c9756983d56b332d998e623ef"
+        },
+        "/sources/*/etag": {
+          "path": "/sources/0/etag",
+          "before": "\"00905ccf900a3162b85c833d2849107188695fcc816d179cf46889b91b4bae27\"",
+          "after": "\"bbcd44de913377f2378af060101f305f4f0a4399e98714c9f778280b2ee447e9\""
+        },
+        "/sources/*/retrievedAt": {
+          "path": "/sources/0/retrievedAt",
+          "before": "2026-10-06T23:17:45Z",
+          "after": "2026-10-07T00:31:07Z"
+        },
+        "/sources/*/sha256": {
+          "path": "/sources/0/sha256",
+          "before": "c665b32f6a386ac13b66c25c42acb6731c5ebcfb1b6f3b2c089ee2e758fc41bf",
+          "after": "e2170521e9600d8343c9a29dd26ce5343e4835e8abb2e3e862352acf1a1e7dc8"
+        },
+        "/sources/*/bytes": {
+          "path": "/sources/6/bytes",
+          "before": 419872,
+          "after": 450189
+        },
+        "/validation/disagreements/*/checkedAt": {
+          "path": "/validation/disagreements/0/checkedAt",
+          "before": "2026-10-06T23:17:47Z",
+          "after": "2026-10-07T00:31:10Z"
+        }
+      },
+      "factualDifferences": []
+    }
+  },
+  "snapshotRetrievalBefore": "2026-10-06T23:17:45Z",
+  "snapshotRetrievalAfter": "2026-10-07T00:31:07Z",
+  "totalMetadataChangedScalarCount": 1776,
+  "totalFactualDifferenceCount": 0,
+  "unchangedNonDataRuntimeAudit": {
+    "originalManifest": "qa/home-neon/local-webkit/results.json",
+    "filesCompared": 180,
+    "method": "Compare each original full-suite non-data SHA-256 to incoming automatic-data Git objects and current workspace bytes.",
+    "mismatches": []
+  }
+}
