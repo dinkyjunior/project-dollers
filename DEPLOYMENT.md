@@ -1,6 +1,12 @@
 # Production publication and verification
 
-## Current Page 1 launch — deployed and verified
+## Current Page 1 neon refinement — locally verified, publication pending
+
+The user-approved Home-only neon refinement is implemented and passes final local Chromium five-size and genuine WebKit two-size QA. It preserves brand/tagline and venue artwork, removes the repeated below-gate sport-name/DATA & RESEARCH block, and adds a thicker entrance gate with much stronger glowing/pulsating ring, entry/selected boxes and walls. Existing four-state functionality, reduced motion, Pages 2–3 and data remain intact; Page 4 remains excluded. Publication and actual-hosted acceptance remain pending. Read `qa/home-neon/RELEASE.md` for exact new results and verify the actual hosted URL after deployment before claiming completion.
+
+The preceding deployment below is verified historical evidence. Its success and captures are not relabelled as proof of the new glow/layout refinements.
+
+## Previous Page 1 launch — deployed and verified
 
 On 7 October 2026 (Australia/Sydney), the approved four-sport Aperture Home launched with "Preview only" removed, Fighters used for UFC, and continuous sport-themed lighting/background motion. Application `ec35fb1b6bcc442cfee89716bc6d1948ba28b557` was published on `codex-rebuild` and `main`. [Pages run 37547594682](https://github.com/dinkyjunior/project-dollers/actions/runs/37547594682) succeeded for that exact commit, including build, deploy and report jobs. Final local Chromium/WebKit QA passed; actual-hosted WebKit passed both primary mobile sizes at 10:44:18 AEDT, and independent hosted 1440×1000 desktop/publication review passed at 10:47:41 AEDT. Pages 2–3 markup and app routing are preserved; Page 4 remains excluded. Read [the release record](qa/home-gate/RELEASE.md) and [actual capture gallery](qa/home-gate/live-captures/index.html).
 

@@ -21,14 +21,14 @@
     <link rel="stylesheet" href="assets/motion.css" />
     <link rel="stylesheet" href="assets/illumination.css" />
     <link rel="stylesheet" href="assets/player-research.css" />
-    <link rel="stylesheet" href="assets/home-premium.css?v=aperture-20261007" />
-    <link rel="stylesheet" href="assets/home-gate-motion.css?v=aperture-20261007" />
+    <link rel="stylesheet" href="assets/home-premium.css?v=neon-20261007" />
+    <link rel="stylesheet" href="assets/home-gate-motion.css?v=neon-20261007" />
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
     <script src="assets/app.js" defer></script>
     <script src="assets/motion.js" defer></script>
-    <script src="assets/home-interactions.js?v=aperture-20261007" defer></script>
-    <script src="assets/home-gate-motion.js?v=aperture-20261007" defer></script>
+    <script src="assets/home-interactions.js?v=neon-20261007" defer></script>
+    <script src="assets/home-gate-motion.js?v=neon-20261007" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -53,6 +53,7 @@
             </header>
             <div class="aperture-stage" aria-hidden="true">
               <div class="aperture-gate">
+                <span class="aperture-neon-halo" aria-hidden="true"></span><span class="aperture-neon-halo-inner" aria-hidden="true"></span>
                 <div class="aperture-venue"><div class="home-scene-drift">
                   <img src="assets/home/gate-scenes-nfl.webp" data-home-scene="nfl" alt="" width="1200" height="1200" decoding="async" fetchpriority="high" />
                   <img src="assets/home/gate-scenes-nba.webp" data-home-scene="nba" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
@@ -66,10 +67,6 @@
                 <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
               </div>
               <div class="aperture-floor-reflection"></div>
-            </div>
-            <div class="home-league">
-              <h2 data-home-title>NFL</h2>
-              <p>DATA &amp; RESEARCH</p>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
               <span data-home-entry-label>ENTER NFL</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>

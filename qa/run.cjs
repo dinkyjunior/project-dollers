@@ -451,12 +451,16 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     assert.equal(await page.locator(".page").count(), 3, "Only Pages 1–3 are in scope");
     const dataset = await datasetCheck(page, data);
     assert.equal(await page.locator("[data-home-select] img").count(), 4);
+    assert.equal(await page.locator('.page[data-page="home"] .home-league, .page[data-page="home"] [data-home-title]').count(),0,'Removed duplicate league heading/subtitle stays absent');
+    assert.equal(await page.locator('.page[data-page="home"] .brand-subtitle').count(),1,'One brand research subtitle remains');
+    assert.match(await page.locator('.page[data-page="home"] .brand-subtitle').innerText(),/^SPORTS DATA & RESEARCH$/);
     captures.home = await capture(page, "home", viewport, outputDir);
     images.home = await imageQuality(page);
     for (const sport of ['nba','nrl','ufc']) {
       await page.locator(`[data-home-select="${sport}"]`).click();
       assert.equal(await page.locator('.page.active').getAttribute('data-page'),'home','Coming-soon sport never opens a fake destination');
       assert.equal(await page.locator('.page.active').getAttribute('data-home-sport'), sport, 'Every sport selector changes the Home environment');
+      assert.match(await page.locator('[data-home-league-logo]').getAttribute('alt'),new RegExp(`^${sport}\\b`,'i'),'Hero logo retains the correct selected-league description');
       assert.equal(await page.locator('[data-home-entry]').isDisabled(), true, 'Coming-soon entry is explicitly disabled');
       assert.match(await page.locator('[data-home-entry-label]').innerText(), new RegExp(`${sport}.*COMING SOON`, 'i'));
       assert.match(await page.locator('.home-availability').innerText(),new RegExp(`${sport}.*coming soon`,'i'),'Every sport tile gives meaningful availability feedback');
@@ -792,6 +796,8 @@ async function availablePort() {
   const port = probe.address().port; await new Promise((resolve) => probe.close(resolve)); return port;
 }
 async function runLocal() {
+  const outputIndex=process.argv.indexOf('--output');
+  const outputDir=path.resolve(outputIndex>=0?process.argv[outputIndex+1]:process.env.PD_QA_OUTPUT||path.join(__dirname,'home-neon','legacy-chromium'));
   const port = await availablePort(), base = `http://127.0.0.1:${port}/project-dollers/`;
   const server = spawn("python3", ["-u", "-m", "http.server", String(port), "--bind", "127.0.0.1", "--directory", path.dirname(ROOT)], { stdio: ["ignore", "ignore", "pipe"] });
   let serverError = "", browser; server.stderr.on("data", (chunk) => { serverError += chunk; });
@@ -802,12 +808,12 @@ async function runLocal() {
       if (n === 49) throw new Error("QA server readiness timeout");
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
-    browser = await launchChromium(); await runQA({ base, browser });
+    browser = await launchChromium(); await runQA({ base, browser, outputDir });
     // Use installed WebKit if present, without downloading a browser during QA.
     const wkPath = webkit.executablePath();
     if (fs.existsSync(wkPath)) {
       const safari = await webkit.launch({ headless: true });
-      try { await runQA({ base, browser: safari, viewports: VIEWPORTS.slice(0,2), outputDir: path.join(__dirname, "webkit"), mode: "Installed Playwright WebKit; local HTTP and external requests blocked" }); }
+      try { await runQA({ base, browser: safari, viewports: VIEWPORTS.slice(0,2), outputDir: path.join(path.dirname(outputDir), "legacy-webkit"), mode: "Installed Playwright WebKit; local HTTP and external requests blocked" }); }
       finally { await safari.close(); }
     } else console.log("WebKit not installed; physical iPhone/Safari remains unverified.");
   } finally {

@@ -62,7 +62,13 @@ Read in this order:
 
 Then continue on `codex-rebuild`, preserving the current user authorization and production/QA rules below.
 
-## Approved Page 1 launch — 7 October 2026 (Australia/Sydney)
+## Current Page 1 neon refinement — 7 October 2026 (Australia/Sydney)
+
+The user-approved further Home-only refinement is implemented and passes final local Chromium/WebKit QA; production publication and actual-hosted acceptance remain pending. The previous verified launch below does not establish completion of these new live-site changes. The existing brand artwork, brand tagline and venue artwork inside the gate are retained. The repeated sport-name and DATA & RESEARCH hero block below the gate is removed; selected controls and entry labels retain an accessible current-sport identity. The entrance gate/ring is thicker and much more prominently illuminated, with stronger neon glow and pulse across the ring, entry button, selected sport boxes and architecture/walls.
+
+Preserve the fixed NFL blue, NBA left-blue/right-red, NRL green and UFC red palettes, real selectors/NFL navigation, Coming-soon restrictions, UFC Fighters label, reduced-motion support and animation lifecycle pauses. Do not change Pages 2–3, data or Page 4. Compare actual mobile/desktop captures with the preceding release to confirm a materially stronger edge/glow, legible controls, clean spacing and no halo covering text. Save new evidence under `qa/home-neon/` and verify the actual hosted site after publication before claiming completion.
+
+## Previous approved Page 1 launch — 7 October 2026 (Australia/Sydney)
 
 The approved Home application is deployed and verified as `ec35fb1b6bcc442cfee89716bc6d1948ba28b557`. Final local Chromium/WebKit QA passed, the exact Pages workflow succeeded, actual-hosted WebKit passed both primary mobile sizes, and independent hosted desktop/publication review passed. Both hosted audits verified all 183 delivered runtime files as HTTP 200 with exact tested hashes. Existing NFL/Steelers markup and `assets/app.js` were retained. Do not touch Page 4. The circular gate uses real, accessible sport selectors and native NFL navigation. NFL is functional; NBA, NRL and UFC are selectable Home states whose entry buttons say Coming soon without "Preview only". UFC's Home navigation label is Fighters; other Home states use Teams. The supplied render's NFA typo is corrected to NFL.
 

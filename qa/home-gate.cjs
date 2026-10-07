@@ -44,8 +44,8 @@ async function geometry(page) {
     const rect=el=>{const r=el.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right};};
     const nav=rect(home.querySelector('.bottom-nav'));
     const controls=[...home.querySelectorAll('[data-home-select],[data-home-entry],.bottom-nav button')].map(el=>{
-      const r=rect(el),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);
-      return{kind:el.hasAttribute('data-home-select')?'selector':el.hasAttribute('data-home-entry')?'entry':'navigation',label:el.innerText.trim(),...r,hitTarget:hit===el||el.contains(hit),disabled:el.disabled};
+      const r=rect(el),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2),style=getComputedStyle(el),label=el.querySelector('[data-home-entry-label],span');
+      return{kind:el.hasAttribute('data-home-select')?'selector':el.hasAttribute('data-home-entry')?'entry':'navigation',label:el.innerText.trim(),...r,hitTarget:hit===el||el.contains(hit),disabled:el.disabled,selected:el.getAttribute('aria-pressed')==='true',borders:[style.borderTopWidth,style.borderRightWidth,style.borderBottomWidth,style.borderLeftWidth].map(parseFloat),boxShadow:style.boxShadow,text:label?rect(label):null};
     });
     return{viewport:{width:innerWidth,height:innerHeight},documentWidth:document.documentElement.scrollWidth,homeWidth:home.scrollWidth,scrollWidth:scroll.scrollWidth,scrollClientWidth:scroll.clientWidth,scrollHeight:scroll.scrollHeight,scrollClientHeight:scroll.clientHeight,nav,controls};
   });
@@ -55,6 +55,10 @@ async function geometry(page) {
   for(const item of data.controls) {
     assert.ok(item.width>=44 && item.height>=44,`44px touch target: ${JSON.stringify(item)}`);
     assert.ok(item.x>=-1 && item.right<=data.viewport.width+1,`Control fits width: ${item.label}`);
+    if(item.kind==='entry')assert.ok(item.borders.every(width=>width>=4),'Entrance CTA has a prominent four-pixel box border');
+    if(item.kind==='selector'&&item.selected)assert.ok(item.borders.every(width=>width>=3),'Selected sport has a prominent three-pixel box border');
+    if(item.kind==='entry'||item.selected)assert.notEqual(item.boxShadow,'none','Prominent box illumination remains present');
+    if(item.text)assert.ok(item.text.x>=item.x-1&&item.text.right<=item.right+1,'Control labels stay inside their box borders');
     if([393,430].includes(data.viewport.width)) {
       assert.ok(item.y>=-1 && item.bottom<=data.viewport.height+1,`Primary mobile control fits viewport: ${item.label}`);
       assert.ok(item.kind==='navigation'||item.bottom<=data.nav.y+1,`Control above navigation: ${item.label}`);
@@ -70,7 +74,10 @@ async function select(page,sport,touch=false) {
   await page.waitForFunction(value=>document.querySelector('.page[data-page="home"]').dataset.homeSport===value,sport);
   assert.equal(await page.locator(`${HOME} [data-home-select][aria-pressed="true"]`).count(),1);
   assert.equal(await button.getAttribute('aria-pressed'),'true');
-  assert.equal((await page.locator('[data-home-title]').innerText()).trim(),sport.toUpperCase());
+  assert.equal(await page.locator(`${HOME} .home-league, ${HOME} [data-home-title]`).count(),0,'The redundant visible league heading/subtitle is removed');
+  assert.equal(await page.locator(`${HOME} .brand-subtitle`).count(),1,'Exactly one brand research subtitle remains');
+  assert.match((await page.locator(`${HOME} .brand-subtitle`).innerText()).trim(),/^SPORTS DATA & RESEARCH$/);
+  assert.match(await page.locator('[data-home-league-logo]').getAttribute('alt'),new RegExp(`^${sport}\\b`,'i'),'Hero logo retains the correct selected-league description');
   assert.equal(await page.locator(`[data-home-scene="${sport}"]`).evaluate(el=>el.hidden),false);
   for(const other of SPORTS.filter(value=>value!==sport)) assert.equal(await page.locator(`[data-home-scene="${other}"]`).evaluate(el=>el.hidden),true);
   const cta=page.locator('[data-home-entry]');
@@ -97,7 +104,7 @@ async function select(page,sport,touch=false) {
 async function screenshot(page,sport,viewport,out) {
   // Restore pointer modality without adding keyboard-only focus rings to a
   // touch screenshot. Status text is a visually hidden accessible live region.
-  await page.locator('[data-home-title]').click();
+  await page.locator(`${HOME} .home-header .brand`).click();
   await page.evaluate(()=>document.querySelector('.page.active .page-scroll').scrollTop=0);
   const layout=await geometry(page),quality=await images(page);
   // Pause only while capturing; motion is tested separately while running.
@@ -117,12 +124,26 @@ async function motion(page) {
   await page.waitForFunction(()=>document.querySelector('.page[data-page="home"]').dataset.homeMotionState==='running');
   const sample=()=>page.evaluate(()=>{
     const home=document.querySelector('.page[data-page="home"]');
-    const read=selector=>{const el=home.querySelector(selector);if(!el)throw new Error(`Missing motion element ${selector}`);const style=getComputedStyle(el);return{transform:style.transform,opacity:style.opacity,animationName:style.animationName,playState:style.animationPlayState};};
-    return{state:home.dataset.homeMotionState,reason:home.dataset.homeMotionReason,sweep:read('.aperture-travel-sweep'),venue:read('img[data-home-scene]:not([hidden])'),rail:getComputedStyle(home.querySelector('.aperture-inset')).backgroundImage};
+    const read=(selector,pseudo=null)=>{const el=home.querySelector(selector);if(!el)throw new Error(`Missing motion element ${selector}`);const style=getComputedStyle(el,pseudo);return{transform:style.transform,opacity:style.opacity,animationName:style.animationName,playState:style.animationPlayState};};
+    return{state:home.dataset.homeMotionState,reason:home.dataset.homeMotionReason,sweep:read('.aperture-travel-sweep'),venue:read('img[data-home-scene]:not([hidden])'),halo:read('.aperture-neon-halo'),innerHalo:read('.aperture-neon-halo-inner'),entryPulse:read('[data-home-entry]','::before'),selectedPulse:read('[data-home-select][aria-pressed="true"]','::before'),rail:getComputedStyle(home.querySelector('.aperture-inset')).backgroundImage};
   });
-  const first=await sample();await page.waitForTimeout(280);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));const second=await sample();
+  const first=await sample(),pulseKeys=['halo','innerHalo','entryPulse','selectedPulse'],samples=[];
+  // A symmetric point in an eased pulse can give equal endpoint opacity. Sample
+  // a bounded sequence of naturally rendered frames, never seek animation time.
+  for(let attempt=0;attempt<4;attempt++) {
+    await page.waitForTimeout(280);
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    samples.push(await sample());
+    if(pulseKeys.every(key=>samples.some(item=>item[key].opacity!==first[key].opacity))&&samples.some(item=>item.sweep.transform!==first.sweep.transform)&&samples.some(item=>item.venue.transform!==first.venue.transform))break;
+  }
+  const second=samples.at(-1);
   assert.notEqual(first.sweep.transform,second.sweep.transform,"Continuous ring highlight physically moves across frames");
   assert.notEqual(first.venue.transform,second.venue.transform,"Venue depth physically moves across frames");
+  for(const key of pulseKeys) {
+    assert.ok(samples.some(item=>item[key].opacity!==first[key].opacity),`${key}: new neon illumination pulses naturally across rendered frames`);
+    assert.notEqual(first[key].animationName,'none',`${key}: pulse animation exists`);
+    assert.equal(first[key].playState,'running',`${key}: pulse runs while Home is active`);
+  }
   assert.equal(first.rail,second.rail,"The base sport palette remains fixed while highlights travel");
   assert.notEqual(first.sweep.animationName,'none');assert.equal(first.sweep.playState,'running');
   const nba=await page.locator(HOME).getAttribute('data-home-sport')==='nba';
@@ -144,9 +165,11 @@ async function motion(page) {
   await page.locator('.aperture-stage').evaluate(el=>el.style.setProperty('transform','translateY(-200vh)'));
   await page.waitForFunction(()=>document.querySelector('.page[data-page="home"]').dataset.homeMotionReason==='offscreen');
   const offscreen=await page.locator(HOME).getAttribute('data-home-motion-state');assert.equal(offscreen,'paused');
+  const pausedPulses=await sample();
+  for(const key of ['halo','innerHalo','entryPulse','selectedPulse'])assert.equal(pausedPulses[key].playState,'paused',`${key}: offscreen pulse is paused`);
   await page.locator('.aperture-stage').evaluate((el,previous)=>{if(previous===null)el.removeAttribute('style');else el.setAttribute('style',previous);},previousStyle);
   await page.waitForFunction(()=>document.querySelector('.page[data-page="home"]').dataset.homeMotionState==='running');
-  return{first,second,stationaryBasePalette:true,reducedMotion:{state:reduced.state,activeInfiniteAnimations:running},offscreen:{state:offscreen,qualification:'Isolated decorative-stage intersection harness; exact inline style restored before screenshots or further controls'}};
+  return{first,second,naturalSamples:samples,stationaryBasePalette:true,reducedMotion:{state:reduced.state,activeInfiniteAnimations:running},offscreen:{state:offscreen,pulseStates:pausedPulses,qualification:'Isolated decorative-stage intersection harness; exact inline style restored before screenshots or further controls'}};
 }
 async function routeGuards(page) {
   const items=[];
@@ -335,7 +358,7 @@ function gallery(out,report) {
 }
 async function main() {
   const args=process.argv.slice(2),value=name=>{const i=args.indexOf(name);return i<0?null:args[i+1];};
-  const engine=value('--engine')||'chromium',hosted=value('--base'),out=path.resolve(value('--output')||path.join(__dirname,'home-gate',hosted?'hosted-'+engine:'local-'+engine));
+  const engine=value('--engine')||'chromium',hosted=value('--base'),out=path.resolve(value('--output')||path.join(__dirname,'home-neon',hosted?'hosted-'+engine:'local-'+engine));
   assert.ok(['chromium','webkit'].includes(engine));fs.mkdirSync(out,{recursive:true});
   let server,browser,base=hosted;
   if(!base){const port=await freePort();base=`http://127.0.0.1:${port}/project-dollers/`;server=spawn('python3',['-u','-m','http.server',String(port),'--bind','127.0.0.1','--directory',path.dirname(ROOT)],{stdio:'ignore'});for(let i=0;i<50;i++){try{if((await fetch(base)).status===200)break;}catch{}if(i===49)throw new Error('Local QA server failed');await sleep(100);}}

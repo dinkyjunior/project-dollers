@@ -19,7 +19,6 @@
   const label = entry.querySelector('[data-home-entry-label]');
   const arrow = entry.querySelector('[data-home-entry-arrow]');
   const leagueLogo = home.querySelector('[data-home-league-logo]');
-  const title = home.querySelector('[data-home-title]');
   const scenes = [...home.querySelectorAll('[data-home-scene]')];
   const teamsLabel = home.querySelector('[data-home-teams-label]') ||
     home.querySelector('.bottom-nav [data-nav="nfl"] span');
@@ -59,7 +58,6 @@
       leagueLogo.setAttribute('alt', details.alt);
       leagueLogo.dataset.sport = sport;
     }
-    if (title) title.textContent = details.title;
     scenes.forEach(scene => { scene.hidden = scene.dataset.homeScene !== sport; });
     const ready = sport === 'nfl';
     const entryText = ready ? 'ENTER NFL' : `${details.title} · COMING SOON`;

@@ -1,6 +1,12 @@
 # Project Dollar$ handoff — premium current-data pass
 
-## Current task — approved Page 1 Aperture launch, 7 October 2026 (Sydney)
+## Current task — stronger Page 1 neon, 7 October 2026 (Sydney)
+
+The user-approved further Home-only neon refinement is implemented and passes final local Chromium at five sizes and genuine WebKit at both primary phone sizes. Publication and actual-hosted acceptance remain pending. Existing Project Dollar brand artwork/tagline and venue artwork are retained; the repeated below-gate sport-name/DATA & RESEARCH block is removed. The thicker entrance gate and stronger ring, CTA, selected-box and wall glow/pulse were inspected in actual captures without label washout or clipping.
+
+The four palettes and functional selector/routing behaviour remain approved: NFL blue, stationary split blue/red NBA, green NRL, red UFC; only NFL enters; other entries say Coming soon; UFC uses Fighters. Preserve reduced motion, inactive/offscreen/hidden pauses, Pages 2–3 and verified data/full-card football motion. No Page 4. New evidence belongs under `qa/home-neon/`; prior `qa/home-gate/` remains immutable evidence for the preceding launch. Read `qa/home-neon/RELEASE.md` for exact current status, final commit and actual hosted checks when available.
+
+## Previous verified Page 1 Aperture launch, 7 October 2026 (Sydney)
 
 The approved four-sport Aperture Home is launched and verified. Application `ec35fb1b6bcc442cfee89716bc6d1948ba28b557` is published on `codex-rebuild` and `main`; [Pages run 37547594682](https://github.com/dinkyjunior/project-dollers/actions/runs/37547594682) succeeded for that exact commit. Final local Chromium passed five sizes and genuine WebKit passed both primary phone sizes. Actual-hosted WebKit mobile checks passed at 10:44:18 AEDT on 7 October; independent hosted 1440×1000 desktop/publication checks passed at 10:47:41 AEDT. Each hosted audit verified all 183 files as HTTP 200 with exact tested hashes and no console/HTTP/external/transport failures. Historical reports below remain separate evidence for earlier releases.
 
