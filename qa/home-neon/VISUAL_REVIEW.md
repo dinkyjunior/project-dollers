@@ -2,7 +2,7 @@
 
 Reviewed 7 October 2026 (Australia/Sydney). Current acceptance covers the approved Home refinement, not a new concept. The original approved gate reference is the chat attachment; original attachment bytes were unavailable for saving or pixel registration.
 
-Two independent QA reviewers inspected all eight final Chromium primary captures against the eight corresponding preceding actual hosted captures, with the approved chat concept available to native vision. The root reviewer separately inspected the final NFL 430, NBA 393 and UFC 430 screens. The complete hosted acceptance and unpaused capture record will be added after deployment.
+Two independent QA reviewers inspected all eight final Chromium primary captures against the eight corresponding preceding actual hosted captures, with the approved chat concept available to native vision. The independent reviewer also inspected all eight final genuine WebKit phone captures. The root reviewer separately inspected the final NFL 430, NBA 393 and UFC 430 screens. The complete hosted acceptance and unpaused capture record will be added after deployment.
 
 ## Visible changes and quality
 
@@ -12,6 +12,7 @@ Two independent QA reviewers inspected all eight final Chromium primary captures
 - Architecture/wall lighting and reflected floor light are stronger without obscuring controls. Generated decorative venue artwork stays inside the gate; legitimate league logos retain their correct proportions and local vector/Retina rendering.
 - NFL blue, NRL green and UFC red themes are visually coherent. NBA's hard ring, entry and selected-box splits remain fixed blue-left/red-right. Increased opposing diffuse blue/red blooms produce a small violet/magenta overlap near the CTA centre/floor; the root reviewer accepted this as natural additive lighting. This is explicitly not a claim of zero optical colour mixing.
 - Both phone sizes retain aligned selectors and navigation, readable labels and no visible clipped controls. UFC displays Fighters. Compact, tablet and desktop geometry is checked in the browser suite.
+- Frozen frames show more floor reflection behind the sport dock in WebKit and more between the ring and entry in Chromium, leaving a darker WebKit gap. Decorative phase/composition differs while core gate, controls and readability remain consistent. No claim of pixel-identical cross-engine decoration is made.
 
 ## Motion and functional evidence
 

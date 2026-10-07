@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -51,6 +51,8 @@ def main():
             draw.text((after_x, 55), f"{width}×{height} · WebKit · DPR2 · {suffix}", font=small_font, fill="#98b4cb")
             board.paste(before, (margin, header))
             board.paste(after, (after_x, header))
+            assert ImageChops.difference(board.crop((margin, header, margin + before.width, header + before.height)), before).getbbox() is None, "Before browser pixels are preserved"
+            assert ImageChops.difference(board.crop((after_x, header, after_x + after.width, header + after.height)), after).getbbox() is None, "After browser pixels are preserved"
             draw.text((margin, header + before.height + 17), "Unaltered browser pixels. This is old actual versus new actual, not a pixel-registered concept comparison.", font=small_font, fill="#98b4cb")
             filename = f"comparison-{sport}-{width}x{height}.png"
             board.save(args.output_dir / filename, optimize=True)
