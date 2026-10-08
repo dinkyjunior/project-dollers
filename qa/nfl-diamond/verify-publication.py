@@ -66,7 +66,15 @@ def main():
         assert report["source"]["runtimeFiles"] == manifest, name
         assert report["unchangedDuringQA"] is True, name
     assert read("preservation.json")["status"] == "passed"
-    assert read("hosted-visual-review.json")["status"] == "accepted"
+    hosted_review = read("hosted-visual-review.json")
+    assert hosted_review["status"] == "accepted actual hosted release"
+    assert hosted_review["runtimeManifest"]["sha256"] == digest((ROOT / PREFIX / "runtime-manifest.json").read_bytes())
+    assert hosted_review["runtimeManifest"]["currentDiskSourceExactlyMatches"] is True
+    assert hosted_review["scope"]["reviewerDidNotMutateRuntime"] is True
+    hosted_mobile = read("hosted-mobile-review.json")
+    assert hosted_mobile["status"] == "passed"
+    assert hosted_mobile["allServedRuntimeFilesHTTP200"] is True
+    assert hosted_mobile["allServedRuntimeBytesMatchReviewedSource"] is True
     for name, expected in manifest.items():
         assert digest((ROOT / name).read_bytes()) == expected, name
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

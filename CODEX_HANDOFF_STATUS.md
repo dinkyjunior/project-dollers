@@ -2,6 +2,8 @@
 
 ## Current NFL dashboard — 8 October 2026
 
+Application `b08fd0b2a8fbd4c0788ac495ed71be5801485585` is deployed and verified by [Pages run 37715762405](https://github.com/dinkyjunior/project-dollers/actions/runs/37715762405). All six specialists accepted the same source. Actual-hosted WebKit passed both requested phones and desktop, with all 203 runtime files HTTP 200/exact hashes, zero browser/network errors, genuine manual refresh and independent visual acceptance. Open [the live NFL screen](https://dinkyjunior.github.io/project-dollers/#nfl), [hosted screenshots](qa/nfl-diamond/live-captures/index.html) and [the release record](qa/nfl-diamond/RELEASE.md). Evidence-only publication preserves the runtime; its final exact-publication receipt is saved outside Git.
+
 Page 2 has been rebuilt against the user's newly approved tall NFL reference. Home and Steelers markup/assets/history remain protected; Page 4 remains excluded. NFL uses Home's compact enclosure with internal scrolling, local genuine conference/team marks, decorative high-resolution helmet artwork, cyan/gold facets and native motion. Future destination buttons respond inline rather than leaving NFL. Data remains verified and traceable; QB/RB/WR lists can expand to 16 source-backed entries. Read `qa/nfl-diamond/RELEASE.md` for exact current validation and publication status.
 
 ## Current Page 1 luxury refinement — deployed and verified
