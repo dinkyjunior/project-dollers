@@ -1,0 +1,110 @@
+{
+  "status": "passed-raw-evidence-review",
+  "agent": "team_controls_audit",
+  "auditedAt": "2026-10-08T11:23:54.375833+00:00",
+  "scope": "Independent read-only full raw CSV comparison; no runtime equivalence exception has been accepted until the exact guard code is reviewed.",
+  "old": {
+    "file": "/workspace/recovery-qa/team-details/source-cache/games.csv",
+    "sha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d"
+  },
+  "new": {
+    "file": "/workspace/recovery-qa/team-details/sources-independent-fd2253/nflverse-games-at-7c7886de.body",
+    "sha256": "a2254c74e90906746f1d2ae159f7b4e5f6a4630c7f0bcfb30c590bcd057ed26d",
+    "providerCommit": "7c7886deaa3e454e42eca7d1be61c5c2669f2df9",
+    "immutableProviderURL": "https://raw.githubusercontent.com/nflverse/nfldata/7c7886deaa3e454e42eca7d1be61c5c2669f2df9/data/games.csv"
+  },
+  "fullSchemaColumns": 46,
+  "rawRows": 7548,
+  "rowIdsAndOrderExactlyEqual": true,
+  "changes": [
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "away_moneyline",
+      "before": "-125",
+      "after": "-130"
+    },
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "home_moneyline",
+      "before": "105",
+      "after": "110"
+    },
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "away_spread_odds",
+      "before": "-112",
+      "after": "-118"
+    },
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "home_spread_odds",
+      "before": "-108",
+      "after": "-102"
+    },
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "under_odds",
+      "before": "-108",
+      "after": "-102"
+    },
+    {
+      "game_id": "2026_05_CHI_GB",
+      "field": "over_odds",
+      "before": "-112",
+      "after": "-118"
+    },
+    {
+      "game_id": "2026_05_MIN_NO",
+      "field": "away_moneyline",
+      "before": "-130",
+      "after": "-135"
+    },
+    {
+      "game_id": "2026_05_MIN_NO",
+      "field": "home_moneyline",
+      "before": "110",
+      "after": "114"
+    },
+    {
+      "game_id": "2026_05_MIN_NO",
+      "field": "away_spread_odds",
+      "before": "-115",
+      "after": "-118"
+    },
+    {
+      "game_id": "2026_05_MIN_NO",
+      "field": "home_spread_odds",
+      "before": "-105",
+      "after": "-102"
+    },
+    {
+      "game_id": "2026_05_IND_PIT",
+      "field": "away_spread_odds",
+      "before": "-105",
+      "after": "-102"
+    },
+    {
+      "game_id": "2026_05_IND_PIT",
+      "field": "home_spread_odds",
+      "before": "-115",
+      "after": "-118"
+    },
+    {
+      "game_id": "2026_05_HOU_TEN",
+      "field": "away_spread_odds",
+      "before": "-110",
+      "after": "-105"
+    },
+    {
+      "game_id": "2026_05_HOU_TEN",
+      "field": "home_spread_odds",
+      "before": "-110",
+      "after": "-115"
+    }
+  ],
+  "changedLeaves": 14,
+  "allOtherRawScalarsExactlyEqual": true,
+  "regular2025And2026ProjectionRows": 544,
+  "regularProjectionExceptExplicitOddsColumnsExactlyEqual": true,
+  "qualification": "This fixed raw pair supports only the exact14 odds leaves on the exact4 events. It is not a waiver for arbitrary source versions, odds values, source IDs, dates, fixtures or consumed data fields. Current published JSON had separately been independently checked for zero factual differences."
+}

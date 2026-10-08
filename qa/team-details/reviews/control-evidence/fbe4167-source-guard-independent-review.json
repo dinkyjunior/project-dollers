@@ -1,0 +1,146 @@
+{
+  "status": "accepted-static-and-readonly-recomputation",
+  "agent": "team_controls_audit",
+  "auditedAt": "2026-10-08T11:36:09.516395+00:00",
+  "scope": "Independent source/guard review for the exact final fbe4167 consumed-projection proof. Genuine native post-refresh and hosted execution remain mandatory.",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "reviewedFiles": {
+    "qa/team-details/post-refresh.cjs": "9b6ae313ed8aa7444fa3013c93c92190e40ad5a02518242796fae4f6cffb43aa",
+    "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+    "qa/team-details/verify-publication.py": "eb52d87353f6f8d1e68ad6dfe680a66e186fb5d79f1fc5e4c48739a2cda88b6f",
+    "qa/team-details/hosted-deployment.cjs": "d98403aedc1bf5b92bfdf71f66418aba1c90fc9f9c6da77ddbfc8ca7453730e0"
+  },
+  "archivedOriginals": [
+    {
+      "file": "qa/team-details/reviews/sources/pre-equivalence/post-refresh-dc18f986.cjs",
+      "sha256": "dc18f986ab771e2db853e6bba37ea4a1c9c6dfeebf40b8393f62de9519fe3a9b"
+    },
+    {
+      "file": "qa/team-details/reviews/sources/pre-equivalence/verify-publication-48579167.py",
+      "sha256": "48579167558adff1b7d24120f96bf8f3422ae4a05e0a017d8c3950e26137a0d6"
+    },
+    {
+      "file": "qa/team-details/reviews/sources/pre-equivalence/hosted-deployment-3b557042.cjs",
+      "sha256": "3b55704250cb1b909d83562a1d52c394703c5350df85912980cafbe5cbb6740c"
+    }
+  ],
+  "classification": {
+    "file": "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json",
+    "sha256": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697"
+  },
+  "equivalence": {
+    "file": "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json",
+    "sha256": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77"
+  },
+  "actualIndependentRecomputation": {
+    "status": "passed",
+    "rawBeforeSha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d",
+    "rawAfterSha256": "65a36db5f65c8de72a887bc1d76514d02fe70fb8c293a05e3b123903604a5d35",
+    "rawMarketFactChanges": 21,
+    "rawChangedGameIds": [
+      "2026_05_CHI_GB",
+      "2026_05_HOU_TEN",
+      "2026_05_IND_PIT",
+      "2026_05_MIN_NO",
+      "2026_05_NYG_WAS",
+      "2026_05_PHI_JAX"
+    ],
+    "rawRows": 7548,
+    "completeRegularGameCount": 544,
+    "completeClubCount": 32,
+    "consumedCoreMarketObjectCount": 446,
+    "consumedCoreMarketProjectionSha256": "32e74218d5d1b8d98085b939936a2f38da18cfa24e1fcc41a3538f08c0dbbe1a",
+    "all32DerivedRecordsAcross38SeasonWeeksSha256": "18a411cc70eef8d9be73f937e55244499656db4e779e95da16ced05332e75731",
+    "nonmarketTeamProjectionSha256": "5ec8c205ae556e28890ae9b5a983fc7e544d16d57e7e986c30a5b06a50ca0a34",
+    "consumedFootballAndStructureChanges": 0,
+    "actualAppMetadataLeaves": 1827,
+    "actualAppMetadataCategories": {
+      "metadata-timestamp": 1638,
+      "metadata-content-hash": 175,
+      "metadata-source-validator": 14
+    }
+  },
+  "checkedAssertions": {
+    "completeNativeScenarioFetchErrorGeometrySourceFocusAndDOMAssertionsByteIdenticalToDC18": true,
+    "hostedFacadeOnlyAddsSourceGuardToFrozenHelperList": true,
+    "allOtherSharedSourceHashesRemainStrictlyEqual": true,
+    "noBareStatusClaimCanWaiveChangedRawHash": true,
+    "actualFullRawSchemaKeysOrderAndCellsIndependentlyCompared": true,
+    "raw21MarketFactsExplicitlyUnequalAndNeverLabelledMetadata": true,
+    "complete446ConsumedMarketValuesAnd544TeamContextsRemainEqual": true,
+    "all32ClubRecordsAndFormsAcross38ContextsRecomputed": true,
+    "actualCurrentIncomingGitBlobsAnd231ManifestBound": true,
+    "onlyThreeMetadataJSONFilesDifferOther228RemainExact": true,
+    "sourceProofCannotAlterPublishedFactsKeysArrayShape": true,
+    "proofAndRetrievalReceiptsHashBoundAndSafeRepoPaths": true,
+    "publicationRecomputesProofAndRequiresNativeReceiptSourceIdentity": true
+  },
+  "isolatedInMemoryRejectionTests": [
+    {
+      "test": "different source ID",
+      "status": "rejected",
+      "error": "Only nflverse_games identity is authorized"
+    },
+    {
+      "test": "different source URL",
+      "status": "rejected",
+      "error": "Only nflverse_games identity is authorized"
+    },
+    {
+      "test": "unreviewed original manifest",
+      "status": "rejected",
+      "error": "Equivalence runtime bounds differ"
+    },
+    {
+      "test": "different published release manifest",
+      "status": "rejected",
+      "error": "Equivalence runtime bounds differ"
+    },
+    {
+      "test": "reverse CSV pair",
+      "status": "rejected",
+      "error": "Raw CSV pair differs: before"
+    },
+    {
+      "test": "arbitrary changed new CSV hash",
+      "status": "rejected",
+      "error": "Raw CSV pair differs: after"
+    },
+    {
+      "test": "altered retrieval evidence hash",
+      "status": "rejected",
+      "error": "Retrieval receipt differs"
+    },
+    {
+      "test": "retained Dallas hash falsely equal",
+      "status": "rejected",
+      "error": "Raw CSV pair differs: before"
+    },
+    {
+      "test": "bare status without qualified scope",
+      "status": "rejected",
+      "error": "Missing explicit qualified equivalence"
+    },
+    {
+      "test": "factual leaf classified as metadata",
+      "status": "rejected",
+      "error": "Changed consumed football fact: assets/data/current.json/steelers/record/w"
+    }
+  ],
+  "negativeTestQualification": "Only QA guard functions received invalid copied proof objects. No source/runtime file, browser response or screenshot dataset was substituted.",
+  "nativeTransitionReadOnlyProbe": {
+    "status": "passed",
+    "metadataLeaves": 1827,
+    "unchangedRuntimeFiles": 228,
+    "footballValueChanges": 0,
+    "sourceProofSha256": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77"
+  },
+  "oldFd225InvestigationHistoricalOnly": true,
+  "appRuntimeOrFrozenV3HelpersMutatedByReview": false,
+  "executionPending": [
+    "Root freezes final helper identities",
+    "Actual post-refresh native Chromium and WebKit both phones",
+    "Actual production deployment and hosted verification"
+  ]
+}

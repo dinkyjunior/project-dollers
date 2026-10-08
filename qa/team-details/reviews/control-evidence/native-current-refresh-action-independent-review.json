@@ -1,0 +1,37 @@
+{
+  "status": "accepted-static-exact-one-call-deletion",
+  "agent": "/root/team_controls_audit",
+  "at": "2026-10-08T12:10:57.212Z",
+  "helper": {
+    "file": "qa/team-details/post-refresh.cjs",
+    "sha256": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff",
+    "archived": "qa/team-details/reviews/integration/pre-native-action/post-refresh-b5063410.cjs",
+    "archiveSha256": "b5063410b55ce634a3e96c20aa4fdf48cbaea8e379601045403bf9bbc028ddba",
+    "byteEquivalenceAfterOneDeletion": true
+  },
+  "failedActualReport": {
+    "file": "qa/team-details/refresh-integration/local-webkit-painted-fbe/results.json",
+    "sha256": "89808a2061fdee9d8e569ea9a84de4167bd4d757c3063dd097dd9333c6e9862a",
+    "status": "failed",
+    "firstCaseRecordedActions": 29,
+    "firstCaseCurrentRefreshAbsent": true,
+    "secondCaseRecordedActions": 31,
+    "secondCasePassed": true
+  },
+  "diagnosis": {
+    "operation": "Explicit locator.scrollIntoViewIfNeeded before Native existing current-data refresh input",
+    "actualStack": "locator.scrollIntoViewIfNeeded: Element is not attached to the DOM\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  - retrying scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n\n    at tap (/workspace/project-dollers/qa/team-details/post-refresh.cjs:112:120)\n    at async scenario (/workspace/project-dollers/qa/team-details/post-refresh.cjs:161:501)\n    at async run (/workspace/project-dollers/qa/team-details/post-refresh.cjs:181:18)",
+    "productionPath": "assets/app.js freshness() replaces #data-status innerHTML when update status changes; preserveScroll restores the semantic refresh focus. Separate pre-scroll resolves an element which can detach before its stability check.",
+    "qualification": "No demonstrated application native tap failure. Native locator.tap()/click() itself handles fresh resolution, scrolling and visibility/stability/enablement/actionability. No custom retry, DOM input or waived acceptance assertion added."
+  },
+  "preserved": [
+    "Unique control assertion",
+    "31 native action inventory and input mode",
+    "Manual refresh reason/new timestamp and real exact HTTP200/304 validation",
+    "Selected filters, six actual Team DOM node identities and focus",
+    "All source/disagreement/projection/math/geometry/image/zero-error assertions",
+    "Natural finite-entry capture readiness and mandatory actual nonblank pixels",
+    "Six frozen full-v3 helper hashes and actual application runtime"
+  ],
+  "pending": "New complete genuine Chromium393/430 and native WebKit393/430 with new exact helper freeze; independent actual-image review. Prior failed report and all prior evidence remain immutable."
+}

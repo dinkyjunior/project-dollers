@@ -1,0 +1,68 @@
+{
+  "status": "failed",
+  "scope": "original-seven-whole-source-hash-coherence",
+  "reviewer": "team_recovery_sources_audit",
+  "checkedAt": "2026-10-08T11:30:33.795719+00:00",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "incomingCommit": "fbe4167ff9ad5ef21721a2fa04ef793020257666",
+  "sharedProviders": [
+    {
+      "id": "nflverse_depth",
+      "currentSourceSha256": "c96ae6673e2eb8f99ee9eb866dfc96e99466ce4baf7c3f349eb0764aacd75e9b",
+      "retainedDallasSourceSha256": "c96ae6673e2eb8f99ee9eb866dfc96e99466ce4baf7c3f349eb0764aacd75e9b",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_games",
+      "currentSourceSha256": "65a36db5f65c8de72a887bc1d76514d02fe70fb8c293a05e3b123903604a5d35",
+      "retainedDallasSourceSha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d",
+      "wholeBodyHashesEqual": false,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_injuries",
+      "currentSourceSha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "retainedDallasSourceSha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_player_stats",
+      "currentSourceSha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+      "retainedDallasSourceSha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_player_stats_2025",
+      "currentSourceSha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "retainedDallasSourceSha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_roster",
+      "currentSourceSha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "retainedDallasSourceSha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    },
+    {
+      "id": "nflverse_teams",
+      "currentSourceSha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "retainedDallasSourceSha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "wholeBodyHashesEqual": true,
+      "sameSourceUrl": true,
+      "bothVerified": true
+    }
+  ],
+  "failure": "nflverse_games raw body checksum changed. The original seven-whole-body-equality gate fails. Later scoped equivalence is separate evidence and does not relabel this failure."
+}

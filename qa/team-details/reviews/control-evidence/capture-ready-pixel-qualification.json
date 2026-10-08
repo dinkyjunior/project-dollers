@@ -1,0 +1,154 @@
+{
+  "status": "passed-read-only-rejection-qualification",
+  "at": "2026-10-08T11:59:13.606Z",
+  "moduleSha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+  "diagnosticReportSha256": "291f395ac6104642d42507c58e9879b563e5a1266d1b2baef1a20bb1c2c36738",
+  "qualification": "No browsers launched or images changed. The preserved blank393 and blank430 are rejected; real naturally painted two-frame screenshots pass. The faded nonblank430 is intentionally not accepted as fidelity by this threshold: natural settle plus genuine frames and independent actual-image review remain mandatory.",
+  "cases": [
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-393-immediate.png",
+      "sha256": "11a8e540c650c36c8b5edfa791ace570e5c1d014a9d4e7cb7fbab83185ded1c0",
+      "expectedBlank": true,
+      "status": "rejected",
+      "result": {
+        "message": "Actual app interior is painted; a blank/faded outer-frame-only screenshot is rejected"
+      },
+      "state": {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "rect": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 756.171875,
+          "right": 393,
+          "bottom": 804.078125
+        }
+      }
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-393-two-natural-frames.png",
+      "sha256": "543c82e52e39934ff04d73f8d7cb668003a818e6afabe83d6aaa100865884502",
+      "expectedBlank": false,
+      "status": "passed",
+      "result": {
+        "width": 786,
+        "height": 1704,
+        "insetCssPixels": 12,
+        "sampleStridePixels": 4,
+        "samples": 67710,
+        "brightSamples": 25817,
+        "brightFraction": 0.38128784522227144,
+        "minimumBrightFraction": 0.01,
+        "brightnessRgbSumThreshold": 210,
+        "status": "passed",
+        "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+      },
+      "state": {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "rect": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 756.171875,
+          "right": 393,
+          "bottom": 804.078125
+        }
+      }
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-430-immediate.png",
+      "sha256": "fc1284ba99e0688e22737b4b006cb127e1d6604209716f8841e823cfa243d74c",
+      "expectedBlank": false,
+      "status": "passed",
+      "result": {
+        "width": 860,
+        "height": 1792,
+        "insetCssPixels": 12,
+        "sampleStridePixels": 4,
+        "samples": 78967,
+        "brightSamples": 4965,
+        "brightFraction": 0.06287436524117669,
+        "minimumBrightFraction": 0.01,
+        "brightnessRgbSumThreshold": 210,
+        "status": "passed",
+        "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+      },
+      "state": {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "rect": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 802.671875,
+          "right": 430,
+          "bottom": 849.328125
+        }
+      }
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-430-two-natural-frames.png",
+      "sha256": "7793ee159fdf08e689f4d9ba501b90fca169371d4fa53703cbea8cfc80d19d87",
+      "expectedBlank": false,
+      "status": "passed",
+      "result": {
+        "width": 860,
+        "height": 1792,
+        "insetCssPixels": 12,
+        "sampleStridePixels": 4,
+        "samples": 78967,
+        "brightSamples": 30042,
+        "brightFraction": 0.3804373979003888,
+        "minimumBrightFraction": 0.01,
+        "brightnessRgbSumThreshold": 210,
+        "status": "passed",
+        "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+      },
+      "state": {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "rect": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 802.671875,
+          "right": 430,
+          "bottom": 849.328125
+        }
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+      "expectedBlank": true,
+      "status": "rejected",
+      "result": {
+        "message": "Actual app interior is painted; a blank/faded outer-frame-only screenshot is rejected"
+      },
+      "state": {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "rect": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 802.671875,
+          "right": 430,
+          "bottom": 849.328125
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "status": "completed-diagnostic",
+  "agent": "team_assets_motion_audit",
+  "auditedAt": "2026-10-08T11:49:37.344589+00:00",
+  "runtimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "runtimeFileCount": 231,
+  "actualRuntimeStillMatches": true,
+  "probe": {
+    "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/probe.cjs",
+    "sha256": "83fc1c654a0b2fa56e75719051f5624ed4136da8fbd60fefd4ce4a0606480925",
+    "bytes": 5543
+  },
+  "report": {
+    "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/results.json",
+    "sha256": "291f395ac6104642d42507c58e9879b563e5a1266d1b2baef1a20bb1c2c36738",
+    "bytes": 275115
+  },
+  "paintMetrics": {
+    "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/png-paint-metrics.json",
+    "sha256": "6334494d1a3b64f3c128d01937c548ee23ce79e4d85ed72bc36762fb4a0ba787",
+    "bytes": 9448
+  },
+  "runtimeManifest": {
+    "file": "qa/team-details/published-runtime-manifest.json",
+    "sha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+    "bytes": 23203
+  },
+  "importedHelpers": [
+    {
+      "file": "qa/team-details/qa.cjs",
+      "sha256": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+      "bytes": 16534
+    },
+    {
+      "file": "qa/nfl-dashboard/qa.cjs",
+      "sha256": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff",
+      "bytes": 6443
+    },
+    {
+      "file": "qa/home-gate.cjs",
+      "sha256": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+      "bytes": 41569
+    },
+    {
+      "file": "qa/hosted-webkit.cjs",
+      "sha256": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad",
+      "bytes": 6599
+    }
+  ],
+  "rejectedOriginalHome": {
+    "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+    "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+    "bytes": 19955
+  },
+  "preservedOriginalFunctionalReport": {
+    "file": "qa/team-details/refresh-integration/local-webkit-fbe/results.json",
+    "sha256": "7f7c5f0e2625c5a7d7924a0b472c1eb18c276f8183aba126fac563dad1a6ba85",
+    "bytes": 329336
+  },
+  "observations": [
+    "Original native430 Home immediate capture remains visually rejected and unchanged. Its complete functional delta report passes both phones, which is a separate claim.",
+    "Fresh untouched native393 immediate capture is blank. Fresh430 immediate capture is faded and incompletely composed; it is not claimed wholly blank.",
+    "Both Home routes paint fully after two genuine requestAnimationFrame callbacks and remain painted at +500ms and +2000ms. All eight diagnostic originals were physically viewed.",
+    "Computed finite page-in effects are finished and root opacity1 in post-screenshot snapshots; these after-shot measurements do not prove the pixel frame itself was already opaque.",
+    "Native page-transition/compositor capture settling is supported; a persistent blank route was not reproduced. No definite lower-level browser cause or physical iPhone claim."
+  ],
+  "qualifications": [
+    "No production source, frozen full QA helper, finite/infinite animation time/playback/media state or response was changed.",
+    "This is a diagnostic receipt, not the final integrated source visual acceptance.",
+    "For a final route screenshot, foreground the genuine page, await finite root transition completion and opacity>=.99, then two natural paint frames, preserving continuous animations. Save fresh artifacts and independently inspect their actual pixels."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "blocked",
+  "agent": "team_visual_audit",
+  "auditedAt": "2026-10-08T11:44:36.146527+00:00",
+  "scope": "Independent actual native430 post-source-refresh Home visual inspection; no final integration acceptance.",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "evidence": {
+    "rejectedOriginal": {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "bytes": 19955,
+      "personallyViewedAtOriginalResolution": true
+    },
+    "completedFunctionalReport": {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/results.json",
+      "sha256": "7f7c5f0e2625c5a7d7924a0b472c1eb18c276f8183aba126fac563dad1a6ba85",
+      "status": "passed",
+      "qualification": "The functional report is passed, but this does not qualify a blank actual screenshot as visually accepted."
+    }
+  },
+  "finding": "All Home content inside the outer frame is black/unpainted in this exact original. Logo, stadium ring, sports controls, diamond CTA and navigation are absent in the raster.",
+  "requiredGate": "Independent targeted native paint/opacity diagnosis and fresh genuine captures, with no reuse or modification of this rejected original. Assets/motion agent owns native probes; this agent does not launch competing WPE.",
+  "causeStatus": "Unresolved; this receipt does not assert a runtime defect or a screenshot-only cause.",
+  "originalEvidencePreservation": "Rejected original and completed report hashes are preserved here; final acceptance will reference a separate reviewed fresh result."
+}

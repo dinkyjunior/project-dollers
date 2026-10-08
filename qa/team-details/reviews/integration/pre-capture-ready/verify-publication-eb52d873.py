@@ -77,40 +77,6 @@ def source_equivalence(incoming_path, original_path, published_path, selected=No
     return value
 
 
-def capture_readiness(row):
-    """Reject an initial transparent frame even when the later DOM is ready."""
-    require(isinstance(row, dict) and SHA256.fullmatch(row.get("sha256", "")) and
-            row.get("bytes", 0) > 0 and row.get("naturalAnimationPhase") is True,
-            "Missing actual unpaused capture bytes")
-    ready = row.get("readiness", {})
-    require(ready.get("status") == "passed" and ready.get("genuineAnimationFrames") == 2 and
-            ready.get("finiteEntryNaturallyFinished") is True and ready.get("noStylesClockOrAnimationMutation") is True,
-            "Capture lacks genuine finite-transition readiness")
-    first, settled = ready.get("initial", {}), ready.get("settled", {})
-    require(isinstance(first.get("page"), str) and first["page"] and first.get("page") == settled.get("page") and
-            isinstance(first.get("hash"), str) and first.get("hash") == settled.get("hash") and
-            settled.get("foreground") == "visible" and settled.get("opacity", 0) >= .999 and
-            settled.get("display") in {"block", "flex", "grid", "flow-root"} and settled.get("visibility") == "visible",
-            "Capture changed route or retained an invisible entry frame")
-    clocks = settled.get("finiteEntryAnimations")
-    require(isinstance(clocks, list) and all(clock.get("name") == "page-in" and
-            clock.get("state") == "finished" and clock.get("progress") == 1 for clock in clocks),
-            "Finite entry animation has not naturally finished")
-    frames = ready.get("frameTimestamps", [])
-    require(len(frames) == 2 and all(type(value) in (int, float) and math.isfinite(value) for value in frames) and
-            frames[1] > frames[0], "Distinct genuine paint frames were not recorded")
-    pixels = ready.get("pixels", {}); viewport = settled.get("viewport", {})
-    require(pixels.get("status") == "passed" and pixels.get("insetCssPixels") == 12 and
-            pixels.get("sampleStridePixels") == 4 and pixels.get("minimumBrightFraction") == .01 and
-            pixels.get("brightnessRgbSumThreshold") == 210 and pixels.get("samples", 0) >= 100 and
-            pixels.get("brightSamples", 0) >= 50 and pixels.get("brightFraction", 0) >= .01 and
-            pixels.get("brightSamples", 0) <= pixels.get("samples", 0) and pixels.get("brightFraction", 0) <= 1 and
-            pixels.get("width") == viewport.get("width", 0) * 2 and
-            pixels.get("height") == viewport.get("height", 0) * 2 and
-            abs(pixels["brightFraction"] - pixels["brightSamples"] / pixels["samples"]) < 1e-12,
-            "Actual interior pixel guard was missing, blank or inconsistent")
-
-
 def manifest(file):
     value = read_json(file)
     require(isinstance(value, dict) and len(value) == 231, "Require the exact 231-file runtime manifest")
@@ -414,7 +380,6 @@ def targeted_refresh(value, published, original_sha, published_sha, incoming_sha
                 "Refresh changed-file receipt differs from the exact classification")
     require(isinstance(source.get("testFiles"), dict) and
             "qa/team-details/post-refresh.cjs" in source["testFiles"] and
-            "qa/team-details/capture-ready.cjs" in source["testFiles"] and
             all(SHA256.fullmatch(digest) for digest in source["testFiles"].values()),
             "Native refresh helper hashes are missing")
     cases = value.get("results", [])
@@ -432,8 +397,6 @@ def targeted_refresh(value, published, original_sha, published_sha, incoming_sha
                 "Actual browser HTTP200 source bytes differ: " + name)
     selectors = {".td-hero", "#team-window-select", "#team-season-select", "#team-venue-select", "[data-team-game]", '[data-td-action="refresh"]'}
     for case in cases:
-        for key in ("homeCapture", "teamCapture", "nflCapture"):
-            capture_readiness(case.get(key))
         mobile = case.get("viewport", {}).get("width", 0) < 600
         require(case.get("mobile") is mobile and case.get("nativeInputMode") == ("touch" if mobile else "pointer"),
                 "Native refresh interaction mode does not match its recorded viewport")
@@ -510,7 +473,6 @@ def hosted_deployment(value, report_file, published, original_sha, published_sha
             source.get("teamFormHash") == TEAM_HASH and source.get("originalManifestSha256") == original_sha and
             source.get("currentManifestSha256") == published_sha and source.get("classificationSha256") == incoming_sha and
             "qa/team-details/hosted-deployment.cjs" in source.get("testFiles", {}) and
-            "qa/team-details/capture-ready.cjs" in source.get("testFiles", {}) and
             value.get("unchangedDuringQA") is True and value.get("testLogicUnchangedDuringQA") is True,
             "Hosted deployment report lacks its exact source/runtime/helper freeze")
     children = value.get("providerRefreshReports", [])
@@ -547,15 +509,13 @@ def hosted_deployment(value, report_file, published, original_sha, published_sha
     require(len(cases) == 3 and {(case.get("viewport", {}).get("width"), case.get("viewport", {}).get("height")) for case in cases} == expected,
             "All three actual hosted phone/desktop cases must complete")
     capture_parent = PurePosixPath(report_file).parent
-    def capture_original(row, require_readiness=False):
+    def capture_original(row):
         require(isinstance(row, dict) and SHA256.fullmatch(row.get("sha256", "")) and row.get("bytes", 0) > 0,
                 "Actual hosted original image hash/body missing")
         image = safe_file((capture_parent / row.get("file", "")).as_posix())
         require(image.suffix == ".png" and sha(image.read_bytes()) == row["sha256"],
                 "Actual hosted original image bytes differ")
         selected.add(image.relative_to(ROOT).as_posix())
-        if require_readiness:
-            capture_readiness(row)
     def animated(motion, home=False):
         require(motion.get("visibleAdvancingClocks", 0) > 0 and
                 motion.get("paint", {}).get("actualNaturalPixelChange") is True and
@@ -604,7 +564,7 @@ def hosted_deployment(value, report_file, published, original_sha, published_sha
                         "coming soon" in guard.get("message", "").lower(), "A coming-soon sport entered the NFL flow")
             require(row.get("images") and row.get("geometry", {}).get("documentWidth", float("inf")) <= case["viewport"]["width"] + 1,
                     "A hosted Home selection has broken image/layout evidence")
-            capture_original(row.get("capture"), require_readiness=True)
+            capture_original(row.get("capture"))
         venue = case.get("venueDestination", {})
         require(len(venue.get("rows", [])) == 4 and {row.get("venue") for row in venue.get("expected", [])} == {"home", "away", "neutral", "unknown"} and
                 venue.get("appliedVenue") == "home" and venue.get("focusRestored") is True,
@@ -893,17 +853,6 @@ def self_test():
                      "tabs": [{"tab": tab} for tab in ("players", "lineup", "form")], "aggregate": [{}] * 6,
                      "report": {"rows": [[]] * 9}, "scheduleEvents": ["fixture"],
                      **{key: {"clipped": []} for key in ("directGeometry", "afterTeamRefreshGeometry", "finalNflGeometry")}}
-            for field, page in (("homeCapture", "home"), ("teamCapture", "team-details"), ("nflCapture", "nfl")):
-                value[field] = {"file": "qualification-fixture.png", "sha256": "9" * 64, "bytes": 100,
-                    "naturalAnimationPhase": True, "readiness": {"status": "passed", "genuineAnimationFrames": 2,
-                    "finiteEntryNaturallyFinished": True, "noStylesClockOrAnimationMutation": True,
-                    "initial": {"page": page, "hash": "#" + page}, "settled": {"page": page, "hash": "#" + page,
-                    "foreground": "visible", "opacity": 1, "display": "block", "visibility": "visible",
-                    "finiteEntryAnimations": [], "viewport": {"width": viewport[0], "height": viewport[1]}},
-                    "frameTimestamps": [100, 116.7], "pixels": {"status": "passed", "insetCssPixels": 12,
-                    "sampleStridePixels": 4, "minimumBrightFraction": .01, "brightnessRgbSumThreshold": 210,
-                    "samples": 100, "brightSamples": 50, "brightFraction": .5,
-                    "width": viewport[0] * 2, "height": viewport[1] * 2}}}
             value["teamRefresh"].update({"filterContextRetained": True, "domIdentity": {
                 "nodes": [{"selector": selector, "exists": True, "connected": True, "same": True} for selector in
                           (".td-hero", "#team-window-select", "#team-season-select", "#team-venue-select", "[data-team-game]", '[data-td-action="refresh"]')],
@@ -921,7 +870,7 @@ def self_test():
                     "footballValueChanges": 0, "typeKeyAndArrayShapeChanges": 0, "unchangedRuntimeFiles": 228,
                     "independentlyVerifiedMetadataLeaves": 3, "categories": incoming["categories"],
                     "baselineCommit": incoming["baselineCommit"], "incomingCommit": incoming["incomingCommit"],
-                    "testFiles": {"qa/team-details/post-refresh.cjs": "8" * 64, "qa/team-details/capture-ready.cjs": "8" * 64},
+                    "testFiles": {"qa/team-details/post-refresh.cjs": "8" * 64},
                     "changedFiles": [{"file": row["path"], "beforeSha256": row["beforeSha256"],
                                       "afterSha256": row["afterSha256"], "metadataLeaves": 1} for row in incoming["files"]]}}
         return report, (published, "5" * 64, "6" * 64, "7" * 64, incoming, current, team)
@@ -952,20 +901,6 @@ def self_test():
         def test_qualified_targeted_fixture_has_expected_schema(self):
             value, args = refresh_fixture()
             self.assertEqual(targeted_refresh(value, *args), "webkit")
-        def test_blank_capture_cannot_pass_with_later_ready_dom(self):
-            value, args = refresh_fixture(); pixels = value["results"][0]["homeCapture"]["readiness"]["pixels"]
-            pixels.update(brightSamples=0, brightFraction=0)
-            with self.assertRaises(VerificationError): targeted_refresh(value, *args)
-        def test_missing_readiness_cannot_count_as_settled_capture(self):
-            value, args = refresh_fixture(); del value["results"][0]["homeCapture"]["readiness"]
-            with self.assertRaises(VerificationError): targeted_refresh(value, *args)
-        def test_unfinished_finite_transition_capture_is_rejected(self):
-            value, args = refresh_fixture()
-            value["results"][0]["homeCapture"]["readiness"]["settled"]["finiteEntryAnimations"] = [{"name": "page-in", "state": "running", "progress": .5}]
-            with self.assertRaises(VerificationError): targeted_refresh(value, *args)
-        def test_duplicate_frame_callbacks_do_not_prove_settled_paint(self):
-            value, args = refresh_fixture(); value["results"][0]["homeCapture"]["readiness"]["frameTimestamps"] = [100, 100]
-            with self.assertRaises(VerificationError): targeted_refresh(value, *args)
         def test_incomplete_phone_run_is_rejected(self):
             value, args = refresh_fixture(); value["results"].pop()
             with self.assertRaises(VerificationError): targeted_refresh(value, *args)

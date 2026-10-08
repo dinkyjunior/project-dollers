@@ -1,0 +1,3540 @@
+{
+  "status": "passed",
+  "agent": "team_data_audit",
+  "auditedAt": "2026-10-08T11:35:57.965920+00:00",
+  "baselineCommit": "cedf2ffbb9f313c2aa5f0f6d4246eb34a4c2d195",
+  "incomingCommit": "fbe4167ff9ad5ef21721a2fa04ef793020257666",
+  "oldSource": {
+    "file": "/workspace/recovery-qa/team-details/source-cache/games.csv",
+    "sha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d"
+  },
+  "newExactSource": {
+    "file": "/workspace/recovery-qa/team-details/sources-independent-fd2253/nflverse-games.body",
+    "sha256": "65a36db5f65c8de72a887bc1d76514d02fe70fb8c293a05e3b123903604a5d35",
+    "matchesIncomingCoreSourceBody": true
+  },
+  "rawComparison": {
+    "rows": 7548,
+    "columns": 46,
+    "sameIdsOrderSchema": true,
+    "changes": [
+      {
+        "gameId": "2026_05_PHI_JAX",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-105",
+        "after": "100"
+      },
+      {
+        "gameId": "2026_05_PHI_JAX",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-115",
+        "after": "-120"
+      },
+      {
+        "gameId": "2026_05_PHI_JAX",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "total_line",
+        "before": "42.5",
+        "after": "41.5"
+      },
+      {
+        "gameId": "2026_05_PHI_JAX",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "under_odds",
+        "before": "-115",
+        "after": "-108"
+      },
+      {
+        "gameId": "2026_05_PHI_JAX",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "over_odds",
+        "before": "-105",
+        "after": "-112"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_moneyline",
+        "before": "-125",
+        "after": "-130"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_moneyline",
+        "before": "105",
+        "after": "110"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-112",
+        "after": "-118"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-108",
+        "after": "-102"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "under_odds",
+        "before": "-108",
+        "after": "-102"
+      },
+      {
+        "gameId": "2026_05_CHI_GB",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "over_odds",
+        "before": "-112",
+        "after": "-118"
+      },
+      {
+        "gameId": "2026_05_MIN_NO",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_moneyline",
+        "before": "-130",
+        "after": "-135"
+      },
+      {
+        "gameId": "2026_05_MIN_NO",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_moneyline",
+        "before": "110",
+        "after": "114"
+      },
+      {
+        "gameId": "2026_05_MIN_NO",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-115",
+        "after": "-118"
+      },
+      {
+        "gameId": "2026_05_MIN_NO",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-105",
+        "after": "-102"
+      },
+      {
+        "gameId": "2026_05_IND_PIT",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-105",
+        "after": "-102"
+      },
+      {
+        "gameId": "2026_05_IND_PIT",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-115",
+        "after": "-118"
+      },
+      {
+        "gameId": "2026_05_HOU_TEN",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-110",
+        "after": "-105"
+      },
+      {
+        "gameId": "2026_05_HOU_TEN",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-110",
+        "after": "-115"
+      },
+      {
+        "gameId": "2026_05_NYG_WAS",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "away_spread_odds",
+        "before": "-108",
+        "after": "-105"
+      },
+      {
+        "gameId": "2026_05_NYG_WAS",
+        "season": "2026",
+        "gameType": "REG",
+        "column": "home_spread_odds",
+        "before": "-112",
+        "after": "-115"
+      }
+    ],
+    "marketValuesAreRealChangesNotMetadata": true,
+    "outOfScopeRowChanges": 0
+  },
+  "teamScope": {
+    "regularSeasonRows": 544,
+    "seasonCounts": {
+      "2025": 272,
+      "2026": 272
+    },
+    "directConsumedColumns": [
+      "game_id",
+      "season",
+      "game_type",
+      "week",
+      "gameday",
+      "gametime",
+      "away_team",
+      "away_score",
+      "home_team",
+      "home_score",
+      "location",
+      "espn",
+      "away_rest",
+      "home_rest",
+      "roof",
+      "surface",
+      "stadium"
+    ],
+    "directFieldComparisons": 9248,
+    "allConsumedColumnsEqual": true,
+    "completeCacheOnlyReplayMatchesFrozen": true,
+    "all32TeamStructuresEqual": true,
+    "all544CompleteGameObjectsEqual": true,
+    "all32RecordsPlayersDepthInjuriesEqual": true,
+    "canonicalTeamStructuresSha256": "e08972ce1e7244b0e0dc92d2afb0bc38aad97bd0c13eaae20a5230ab6e534cd0",
+    "canonicalGameProjectionSha256": "5803830d99eede60a32cb7ff9af15f7121b58e55f1819581b7c76f790750e366",
+    "disagreementsCoverageContextEqual": true,
+    "frozenDatasetSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+    "builderSha256": "0e98507f06f0dac92ed31d027d791865d07edc0e67bd3490f1a75dacdf4bbb37",
+    "coreBuilderSha256": "0c1505564641bc83d541188d011f19941ef2e7c906c3c4a19df8a3dced48c40f",
+    "noNetworkDuringReplay": true,
+    "outputsNotPublished": true,
+    "isolatedMetadataQualification": "Metadata deliberately held constant for old/new derived-field comparison. This replay is not production source provenance; raw changed versions are separately sealed."
+  },
+  "coreDistinction": {
+    "genericFullMarketProjectionEqual": false,
+    "genericChangedMarketGameIds": [
+      "2026_05_PHI_JAX",
+      "2026_05_CHI_GB",
+      "2026_05_MIN_NO"
+    ],
+    "actuallyPublishedGameObjectOccurrences": 658,
+    "actuallyPublishedUniqueGameIds": 143,
+    "allPublishedGameIDsGenericProjectionEqual": true,
+    "changedMarketProjectionIDsExcludedFromPublishedCore": true,
+    "publishedOccurrences": [
+      {
+        "path": "/weeks/1/fixture",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/0",
+        "gameId": "2026_01_NE_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/1",
+        "gameId": "2026_01_SF_LA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/2",
+        "gameId": "2026_01_CHI_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/3",
+        "gameId": "2026_01_TB_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/4",
+        "gameId": "2026_01_NO_DET",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/5",
+        "gameId": "2026_01_BUF_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/6",
+        "gameId": "2026_01_BAL_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/7",
+        "gameId": "2026_01_CLE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/8",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/9",
+        "gameId": "2026_01_NYJ_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/10",
+        "gameId": "2026_01_ARI_LAC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/11",
+        "gameId": "2026_01_MIA_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/12",
+        "gameId": "2026_01_GB_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/13",
+        "gameId": "2026_01_WAS_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/14",
+        "gameId": "2026_01_DAL_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/recap/15",
+        "gameId": "2026_01_DEN_KC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/2/fixture",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/0",
+        "gameId": "2026_02_DET_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/1",
+        "gameId": "2026_02_CAR_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/2",
+        "gameId": "2026_02_NO_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/3",
+        "gameId": "2026_02_MIN_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/4",
+        "gameId": "2026_02_CIN_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/5",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/6",
+        "gameId": "2026_02_GB_NYJ",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/7",
+        "gameId": "2026_02_CLE_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/8",
+        "gameId": "2026_02_PHI_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/9",
+        "gameId": "2026_02_JAX_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/10",
+        "gameId": "2026_02_LV_LAC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/11",
+        "gameId": "2026_02_SEA_ARI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/12",
+        "gameId": "2026_02_WAS_DAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/13",
+        "gameId": "2026_02_MIA_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/14",
+        "gameId": "2026_02_IND_KC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/recap/15",
+        "gameId": "2026_02_NYG_LA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/3/fixture",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/0",
+        "gameId": "2026_03_ATL_GB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/1",
+        "gameId": "2026_03_LAC_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/2",
+        "gameId": "2026_03_CAR_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/3",
+        "gameId": "2026_03_NYJ_DET",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/4",
+        "gameId": "2026_03_HOU_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/5",
+        "gameId": "2026_03_NE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/6",
+        "gameId": "2026_03_KC_MIA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/7",
+        "gameId": "2026_03_TEN_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/8",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/9",
+        "gameId": "2026_03_SEA_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/10",
+        "gameId": "2026_03_ARI_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/11",
+        "gameId": "2026_03_MIN_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/12",
+        "gameId": "2026_03_BAL_DAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/13",
+        "gameId": "2026_03_LV_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/14",
+        "gameId": "2026_03_LA_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/recap/15",
+        "gameId": "2026_03_PHI_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/4/fixture",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/5/fixture",
+        "gameId": "2026_05_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/6/fixture",
+        "gameId": "2026_06_PIT_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/7/fixture",
+        "gameId": "2026_07_PIT_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/8/fixture",
+        "gameId": "2026_08_CLE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/9/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/10/fixture",
+        "gameId": "2026_10_PIT_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/11/fixture",
+        "gameId": "2026_11_PIT_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/12/fixture",
+        "gameId": "2026_12_DEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/13/fixture",
+        "gameId": "2026_13_HOU_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/14/fixture",
+        "gameId": "2026_14_PIT_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/15/fixture",
+        "gameId": "2026_15_BAL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/16/fixture",
+        "gameId": "2026_16_CAR_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/17/fixture",
+        "gameId": "2026_17_PIT_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/1",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/2",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/3",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/4",
+        "gameId": "2026_04_NYJ_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/5",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/6",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/7",
+        "gameId": "2026_04_ARI_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/8",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/9",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/10",
+        "gameId": "2026_04_MIA_MIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/11",
+        "gameId": "2026_04_KC_LV",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/12",
+        "gameId": "2026_04_LAC_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/13",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/14",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/recap/15",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/weeks/18/fixture",
+        "gameId": "2026_18_PIT_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/roster/0/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/0/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/0/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/0/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/1/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/1/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/1/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/1/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/2/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/2/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/2/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/2/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/3/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/3/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/3/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/4/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/4/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/4/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/4/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/5/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/5/last5/1",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/5/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/6/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/6/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/6/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/6/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/7/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/8/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/8/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/8/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/8/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/9/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/9/last5/1",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/10/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/10/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/10/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/10/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/11/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/11/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/11/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/13/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/13/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/13/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/14/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/14/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/14/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/14/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/15/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/15/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/15/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/15/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/16/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/16/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/16/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/16/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/17/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/17/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/17/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/17/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/19/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/19/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/19/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/19/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/20/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/20/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/20/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/20/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/21/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/21/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/21/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/21/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/22/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/22/last5/1",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/22/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/23/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/23/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/23/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/23/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/25/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/25/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/25/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/25/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/26/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/26/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/26/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/26/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/28/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/28/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/28/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/29/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/29/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/29/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/29/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/30/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/30/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/30/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/30/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/32/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/33/last5/0",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/35/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/37/last5/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/38/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/38/last5/1",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/41/last5/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/43/last5/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/43/last5/1",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/44/last5/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/44/last5/1",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/45/last5/0",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/46/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/46/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/46/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/47/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/47/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/47/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/47/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/48/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/49/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/49/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/49/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/50/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/50/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/50/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/51/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/51/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/51/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/51/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/52/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/52/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/52/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/52/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/55/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/55/last5/1",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/55/last5/2",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/64/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/74/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/roster/74/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/schedule/0",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/1",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/2",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/3",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/4",
+        "gameId": "2026_05_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/5",
+        "gameId": "2026_06_PIT_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/6",
+        "gameId": "2026_07_PIT_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/7",
+        "gameId": "2026_08_CLE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/8",
+        "gameId": "2026_10_PIT_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/9",
+        "gameId": "2026_11_PIT_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/10",
+        "gameId": "2026_12_DEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/11",
+        "gameId": "2026_13_HOU_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/12",
+        "gameId": "2026_14_PIT_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/13",
+        "gameId": "2026_15_BAL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/14",
+        "gameId": "2026_16_CAR_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/15",
+        "gameId": "2026_17_PIT_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/schedule/16",
+        "gameId": "2026_18_PIT_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/last5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/last5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/last5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/upcomingGame",
+        "gameId": "2026_05_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/last5/0",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/last5/1",
+        "gameId": "2024_01_PIT_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/last5/2",
+        "gameId": "2022_13_PIT_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/last5/3",
+        "gameId": "2018_05_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/last5/4",
+        "gameId": "2014_15_PIT_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/opponentLast5/0",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/opponentLast5/1",
+        "gameId": "2026_03_ATL_GB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/opponentLast5/2",
+        "gameId": "2026_02_CAR_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/opponentLast5/3",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/historicalPrices/0",
+        "gameId": "2026_01_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/historicalPrices/1",
+        "gameId": "2024_01_PIT_ATL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/historicalPrices/2",
+        "gameId": "2022_13_PIT_ATL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/historicalPrices/3",
+        "gameId": "2018_05_ATL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/ATL/historicalPrices/4",
+        "gameId": "2014_15_PIT_ATL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/last5/0",
+        "gameId": "2025_18_BAL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/last5/1",
+        "gameId": "2025_14_PIT_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/last5/2",
+        "gameId": "2024_19_PIT_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/last5/3",
+        "gameId": "2024_16_PIT_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/last5/4",
+        "gameId": "2024_11_BAL_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/opponentLast5/0",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/opponentLast5/1",
+        "gameId": "2026_03_BAL_DAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/opponentLast5/2",
+        "gameId": "2026_02_NO_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/opponentLast5/3",
+        "gameId": "2026_01_BAL_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/historicalPrices/0",
+        "gameId": "2025_18_BAL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/historicalPrices/1",
+        "gameId": "2025_14_PIT_BAL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/historicalPrices/2",
+        "gameId": "2024_19_PIT_BAL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/historicalPrices/3",
+        "gameId": "2024_16_PIT_BAL",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/BAL/historicalPrices/4",
+        "gameId": "2024_11_BAL_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/last5/0",
+        "gameId": "2022_15_PIT_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/last5/1",
+        "gameId": "2018_10_CAR_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/last5/2",
+        "gameId": "2014_03_PIT_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/last5/3",
+        "gameId": "2010_16_CAR_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/last5/4",
+        "gameId": "2006_15_PIT_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/opponentLast5/0",
+        "gameId": "2026_04_DET_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/opponentLast5/1",
+        "gameId": "2026_03_CAR_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/opponentLast5/2",
+        "gameId": "2026_02_CAR_ATL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/opponentLast5/3",
+        "gameId": "2026_01_CHI_CAR",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/historicalPrices/0",
+        "gameId": "2022_15_PIT_CAR",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/historicalPrices/1",
+        "gameId": "2018_10_CAR_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/historicalPrices/2",
+        "gameId": "2014_03_PIT_CAR",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/historicalPrices/3",
+        "gameId": "2010_16_CAR_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CAR/historicalPrices/4",
+        "gameId": "2006_15_PIT_CAR",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/last5/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/last5/1",
+        "gameId": "2025_11_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/last5/2",
+        "gameId": "2025_07_PIT_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/last5/3",
+        "gameId": "2024_18_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/last5/4",
+        "gameId": "2024_13_PIT_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/opponentLast5/0",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/opponentLast5/1",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/opponentLast5/2",
+        "gameId": "2026_02_CIN_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/opponentLast5/3",
+        "gameId": "2026_01_TB_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/historicalPrices/0",
+        "gameId": "2026_03_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/historicalPrices/1",
+        "gameId": "2025_11_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/historicalPrices/2",
+        "gameId": "2025_07_PIT_CIN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/historicalPrices/3",
+        "gameId": "2024_18_CIN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CIN/historicalPrices/4",
+        "gameId": "2024_13_PIT_CIN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/last5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/last5/1",
+        "gameId": "2025_17_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/last5/2",
+        "gameId": "2025_06_CLE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/last5/3",
+        "gameId": "2024_14_CLE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/last5/4",
+        "gameId": "2024_12_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/opponentLast5/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/opponentLast5/1",
+        "gameId": "2026_03_CAR_CLE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/opponentLast5/2",
+        "gameId": "2026_02_CLE_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/opponentLast5/3",
+        "gameId": "2026_01_CLE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/historicalPrices/0",
+        "gameId": "2026_04_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/historicalPrices/1",
+        "gameId": "2025_17_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/historicalPrices/2",
+        "gameId": "2025_06_CLE_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/historicalPrices/3",
+        "gameId": "2024_14_CLE_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/CLE/historicalPrices/4",
+        "gameId": "2024_12_PIT_CLE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/last5/0",
+        "gameId": "2024_02_PIT_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/last5/1",
+        "gameId": "2021_05_DEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/last5/2",
+        "gameId": "2020_02_DEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/last5/3",
+        "gameId": "2018_12_PIT_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/last5/4",
+        "gameId": "2015_19_PIT_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/opponentLast5/0",
+        "gameId": "2026_04_DEN_SF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/opponentLast5/1",
+        "gameId": "2026_03_LA_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/opponentLast5/2",
+        "gameId": "2026_02_JAX_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/opponentLast5/3",
+        "gameId": "2026_01_DEN_KC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/historicalPrices/0",
+        "gameId": "2024_02_PIT_DEN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/historicalPrices/1",
+        "gameId": "2021_05_DEN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/historicalPrices/2",
+        "gameId": "2020_02_DEN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/historicalPrices/3",
+        "gameId": "2018_12_PIT_DEN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/DEN/historicalPrices/4",
+        "gameId": "2015_19_PIT_DEN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/last5/0",
+        "gameId": "2025_19_HOU_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/last5/1",
+        "gameId": "2023_04_PIT_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/last5/2",
+        "gameId": "2020_03_HOU_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/last5/3",
+        "gameId": "2017_16_PIT_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/last5/4",
+        "gameId": "2014_07_HOU_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/opponentLast5/0",
+        "gameId": "2026_04_DAL_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/opponentLast5/1",
+        "gameId": "2026_03_HOU_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/opponentLast5/2",
+        "gameId": "2026_02_CIN_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/opponentLast5/3",
+        "gameId": "2026_01_BUF_HOU",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/historicalPrices/0",
+        "gameId": "2025_19_HOU_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/historicalPrices/1",
+        "gameId": "2023_04_PIT_HOU",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/historicalPrices/2",
+        "gameId": "2020_03_HOU_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/historicalPrices/3",
+        "gameId": "2017_16_PIT_HOU",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/HOU/historicalPrices/4",
+        "gameId": "2014_07_HOU_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/last5/0",
+        "gameId": "2025_09_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/last5/1",
+        "gameId": "2024_04_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/last5/2",
+        "gameId": "2023_15_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/last5/3",
+        "gameId": "2022_12_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/last5/4",
+        "gameId": "2020_16_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/opponentLast5/0",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/opponentLast5/1",
+        "gameId": "2026_03_HOU_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/opponentLast5/2",
+        "gameId": "2026_02_IND_KC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/opponentLast5/3",
+        "gameId": "2026_01_BAL_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/historicalPrices/0",
+        "gameId": "2025_09_IND_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/historicalPrices/1",
+        "gameId": "2024_04_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/historicalPrices/2",
+        "gameId": "2023_15_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/historicalPrices/3",
+        "gameId": "2022_12_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/IND/historicalPrices/4",
+        "gameId": "2020_16_IND_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/last5/0",
+        "gameId": "2023_08_JAX_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/last5/1",
+        "gameId": "2020_11_PIT_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/last5/2",
+        "gameId": "2018_11_PIT_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/last5/3",
+        "gameId": "2017_19_JAX_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/last5/4",
+        "gameId": "2017_05_JAX_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/opponentLast5/0",
+        "gameId": "2026_04_JAX_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/opponentLast5/1",
+        "gameId": "2026_03_NE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/opponentLast5/2",
+        "gameId": "2026_02_JAX_DEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/opponentLast5/3",
+        "gameId": "2026_01_CLE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/historicalPrices/0",
+        "gameId": "2023_08_JAX_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/historicalPrices/1",
+        "gameId": "2020_11_PIT_JAX",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/historicalPrices/2",
+        "gameId": "2018_11_PIT_JAX",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/historicalPrices/3",
+        "gameId": "2017_19_JAX_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/JAX/historicalPrices/4",
+        "gameId": "2017_05_JAX_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/last5/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/last5/1",
+        "gameId": "2025_03_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/last5/2",
+        "gameId": "2023_14_NE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/last5/3",
+        "gameId": "2022_02_NE_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/last5/4",
+        "gameId": "2019_01_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/opponentLast5/0",
+        "gameId": "2026_04_NE_BUF",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/opponentLast5/1",
+        "gameId": "2026_03_NE_JAX",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/opponentLast5/2",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/opponentLast5/3",
+        "gameId": "2026_01_NE_SEA",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/historicalPrices/0",
+        "gameId": "2026_02_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/historicalPrices/1",
+        "gameId": "2025_03_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/historicalPrices/2",
+        "gameId": "2023_14_NE_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/historicalPrices/3",
+        "gameId": "2022_02_NE_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NE/historicalPrices/4",
+        "gameId": "2019_01_PIT_NE",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/last5/0",
+        "gameId": "2022_10_NO_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/last5/1",
+        "gameId": "2018_16_PIT_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/last5/2",
+        "gameId": "2014_13_NO_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/last5/3",
+        "gameId": "2010_08_PIT_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/last5/4",
+        "gameId": "2006_10_NO_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/opponentLast5/0",
+        "gameId": "2026_04_ATL_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/opponentLast5/1",
+        "gameId": "2026_03_LV_NO",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/opponentLast5/2",
+        "gameId": "2026_02_NO_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/opponentLast5/3",
+        "gameId": "2026_01_NO_DET",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/historicalPrices/0",
+        "gameId": "2022_10_NO_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/historicalPrices/1",
+        "gameId": "2018_16_PIT_NO",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/historicalPrices/2",
+        "gameId": "2014_13_NO_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/historicalPrices/3",
+        "gameId": "2010_08_PIT_NO",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/NO/historicalPrices/4",
+        "gameId": "2006_10_NO_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/last5/0",
+        "gameId": "2024_15_PIT_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/last5/1",
+        "gameId": "2022_08_PIT_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/last5/2",
+        "gameId": "2020_05_PHI_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/last5/3",
+        "gameId": "2016_03_PIT_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/last5/4",
+        "gameId": "2012_05_PHI_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/opponentLast5/0",
+        "gameId": "2026_04_LA_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/opponentLast5/1",
+        "gameId": "2026_03_PHI_CHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/opponentLast5/2",
+        "gameId": "2026_02_PHI_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/opponentLast5/3",
+        "gameId": "2026_01_WAS_PHI",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/historicalPrices/0",
+        "gameId": "2024_15_PIT_PHI",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/historicalPrices/1",
+        "gameId": "2022_08_PIT_PHI",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/historicalPrices/2",
+        "gameId": "2020_05_PHI_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/historicalPrices/3",
+        "gameId": "2016_03_PIT_PHI",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/PHI/historicalPrices/4",
+        "gameId": "2012_05_PHI_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/last5/0",
+        "gameId": "2022_06_TB_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/last5/1",
+        "gameId": "2018_03_PIT_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/last5/2",
+        "gameId": "2014_04_TB_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/last5/3",
+        "gameId": "2010_03_PIT_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/last5/4",
+        "gameId": "2006_13_TB_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/opponentLast5/0",
+        "gameId": "2026_04_GB_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/opponentLast5/1",
+        "gameId": "2026_03_MIN_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/opponentLast5/2",
+        "gameId": "2026_02_CLE_TB",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/opponentLast5/3",
+        "gameId": "2026_01_TB_CIN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/historicalPrices/0",
+        "gameId": "2022_06_TB_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/historicalPrices/1",
+        "gameId": "2018_03_PIT_TB",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/historicalPrices/2",
+        "gameId": "2014_04_TB_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/historicalPrices/3",
+        "gameId": "2010_03_PIT_TB",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TB/historicalPrices/4",
+        "gameId": "2006_13_TB_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/last5/0",
+        "gameId": "2023_09_TEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/last5/1",
+        "gameId": "2021_15_TEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/last5/2",
+        "gameId": "2020_07_PIT_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/last5/3",
+        "gameId": "2017_11_TEN_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/last5/4",
+        "gameId": "2014_11_PIT_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/opponentLast5/0",
+        "gameId": "2026_04_TEN_BAL",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/opponentLast5/1",
+        "gameId": "2026_03_TEN_NYG",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/opponentLast5/2",
+        "gameId": "2026_02_PHI_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/opponentLast5/3",
+        "gameId": "2026_01_NYJ_TEN",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/historicalPrices/0",
+        "gameId": "2023_09_TEN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/historicalPrices/1",
+        "gameId": "2021_15_TEN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/historicalPrices/2",
+        "gameId": "2020_07_PIT_TEN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/historicalPrices/3",
+        "gameId": "2017_11_TEN_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchupsByOpponent/TEN/historicalPrices/4",
+        "gameId": "2014_11_PIT_TEN",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchup/last5/0",
+        "gameId": "2025_09_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/last5/1",
+        "gameId": "2024_04_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/last5/2",
+        "gameId": "2023_15_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/last5/3",
+        "gameId": "2022_12_PIT_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/last5/4",
+        "gameId": "2020_16_IND_PIT",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/opponentLast5/0",
+        "gameId": "2026_04_IND_WAS",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/opponentLast5/1",
+        "gameId": "2026_03_HOU_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/opponentLast5/2",
+        "gameId": "2026_02_IND_KC",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/opponentLast5/3",
+        "gameId": "2026_01_BAL_IND",
+        "marketFieldsPresent": true
+      },
+      {
+        "path": "/steelers/matchup/historicalPrices/0",
+        "gameId": "2025_09_IND_PIT",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchup/historicalPrices/1",
+        "gameId": "2024_04_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchup/historicalPrices/2",
+        "gameId": "2023_15_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchup/historicalPrices/3",
+        "gameId": "2022_12_PIT_IND",
+        "marketFieldsPresent": false
+      },
+      {
+        "path": "/steelers/matchup/historicalPrices/4",
+        "gameId": "2020_16_IND_PIT",
+        "marketFieldsPresent": false
+      }
+    ]
+  },
+  "disposition": "Preserve verified frozen fc77 Team dataset with original bca retrieval/provenance. Permit only an explicitly recorded exact bca/65a36 source-scope equivalence for this fbe416 integration. Do not rewrite old Team source hash as a newer retrieval, claim full market-inclusive raw source equality, or waive arbitrary future hashes. Post-integration native/source gates remain required.",
+  "failures": []
+}

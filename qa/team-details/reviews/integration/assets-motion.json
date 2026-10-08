@@ -1,0 +1,1267 @@
+{
+  "status": "accepted",
+  "agent": "team_assets_motion_audit",
+  "auditedAt": "2026-10-08T12:21:20.709229+00:00",
+  "scope": "Independent supplemental prepublication assets/motion and actual fresh-paint review of an explicitly source-qualified metadata-only integration. Hosted release verification is separate and remains required.",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "runtimeFileCount": 231,
+  "runtimeMatchesDuringReview": true,
+  "originalAcceptance": {
+    "file": "qa/team-details/reviews/final/assets-motion-v3.json",
+    "sha256": "216b6ad72613386b6ed6d91123220ce0cbb828cbf9e98d74ba13f64c8981d92a",
+    "bytes": 20930
+  },
+  "publishedManifest": {
+    "file": "qa/team-details/published-runtime-manifest.json",
+    "sha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+    "bytes": 23203
+  },
+  "changedRuntimeFiles": [
+    {
+      "file": "assets/data/current.json",
+      "beforeSha256": "7eb94f6f5dd1cf84561b131a95e6d896d2bbe0292417b41cc0b09de11da229ac",
+      "afterSha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "beforeSha256": "36f80326de871a91e124774b979e474253cb38e8f6d26c0654a92efd7a64682a",
+      "afterSha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "beforeSha256": "32492be2c491069843d2b3d9ac5f52d69ec3a6ba33a45a2f6bfdf8bb3fb4aad2",
+      "afterSha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+    }
+  ],
+  "unchangedRuntimeFiles": 228,
+  "unchangedRetainedTeamDataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "assetsRevalidated": {
+    "provenance": {
+      "file": "assets/team-details/asset-provenance.json",
+      "sha256": "ded8df249626201b77e86c7cd931d3d7828ba503707432c5d57cb09a63ccac1c"
+    },
+    "files": [
+      {
+        "path": "assets/team-details/dal.svg",
+        "classification": "Official NFL-hosted Dallas Cowboys team identity SVG; team trademark retained as identity artwork, not newly generated branding.",
+        "bytes": 852,
+        "sha256": "205d673b664c1641b0fad2d8d7a87aa2963d8d38d4d96764844a035ffd5045ac",
+        "transformation": "Original response bytes, unchanged. No rasterization, enlargement or path tracing."
+      },
+      {
+        "path": "assets/team-details/home-control-nfl.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "327b929fe88569a3921a6c135e926ecff5287f53f1aa41079f71e00f960a4ba9",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-nba.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "0a6dcd9865531ef80f8baf40c4760f420276694f05c05db5b0dff49d91863b79",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-nrl.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "c59d23d85705bdac5253e69716bf280e69a0d20c23639e9ff4fe04e179baf0a1",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-ufc.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "b9850f51517f98fb4a5597265df308e709ea02d4d688fbe3701bc9a8ac6b70e1",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/tb.svg",
+        "classification": "Official NFL-hosted Tampa Bay Buccaneers team identity SVG; original genuine trademark art, independently overlaid on equipment.",
+        "bytes": 82207,
+        "sha256": "c22a1d7344ab0ec5fabd2fbdecd94edef48af9173819aae5856b518e495e5c8c",
+        "transformation": "Original response bytes, unchanged. No rasterization, enlargement or tracing."
+      },
+      {
+        "path": "assets/team-details/helmet-tb-decorative.webp",
+        "classification": "Generated decorative unbranded empty football equipment. Not an official photograph, authentic product image, verified helmet model or player image.",
+        "bytes": 442164,
+        "sha256": "60420d2f2b9ab4eac778ec0236bbc9cba986e541cc1f477444a871c2c093d1f4",
+        "transformation": "ImageMagick/libwebp native-size quality93 compression, alpha-quality100. Original full-resolution PNG preserved outside repository. No enlargement, crop, stretch or rasterized team mark."
+      }
+    ],
+    "totalNewAssetBytes": 531223,
+    "localAndHashVerified": true,
+    "noActiveOrExternalSVGContent": true,
+    "genuineIdentityVectors": [
+      "DAL",
+      "TB"
+    ],
+    "helmet": "Decorative unbranded empty equipment at native 1254x1254; separately overlaid unchanged genuine official TB vector. Explicitly not an official photograph, authentic product model, player identity or face. No enlargement, crop or stretch."
+  },
+  "sourceQualification": {
+    "classification": {
+      "file": "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json",
+      "sha256": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697",
+      "bytes": 493668
+    },
+    "kernel": {
+      "file": "qa/team-details/verify-source-equivalence.py",
+      "sha256": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+      "bytes": 19919
+    },
+    "projectionProof": {
+      "file": "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json",
+      "sha256": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77",
+      "bytes": 37016
+    },
+    "preservedFailedWholeBodyCoherence": {
+      "file": "qa/team-details/incoming-source/fbe4167-whole-source-coherence-failed.json",
+      "sha256": "334afb5ba5687925457761a35cb5c69460ff27b0edc42fb9d29b095f882464d9",
+      "bytes": 3042
+    },
+    "rawWholeBodyHashesEqual": false,
+    "rawMarketFactChanges": 21,
+    "allConsumedFootballAndStructureChanges": 0,
+    "completeRegularGameCount": 544,
+    "completeClubCount": 32,
+    "consumedCoreMarketObjectCount": 446,
+    "unchangedOtherSharedSourceIds": [
+      "nflverse_depth",
+      "nflverse_injuries",
+      "nflverse_player_stats",
+      "nflverse_player_stats_2025",
+      "nflverse_roster",
+      "nflverse_teams"
+    ],
+    "qualification": "Twenty-one raw upcoming-week market values really changed; they are not claimed equal. The complete nonmarket team projection, all team-record contexts and all market objects actually consumed by published snapshots are independently equal. The fc77 team dataset retains its original source version and retrieval time rather than a false fresh timestamp."
+  },
+  "freshIntegrationQA": [
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/results.json",
+      "sha256": "ad67e797a1128a259b18db6886ba319ccaeec31983a896d2f9c4bdd8c07f8879",
+      "bytes": 345423,
+      "scope": "Fresh source-bound metadata integration delta with naturally settled real paint. It does not relabel the preserved complete original button/motion audit.",
+      "engine": "chromium",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeActions": 31,
+          "actualSourceBodies": [
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/player-history.json",
+              "status": 200,
+              "bytes": 7108758,
+              "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/provenance.json",
+              "status": 200,
+              "bytes": 33508,
+              "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+            }
+          ],
+          "teamRefresh": {
+            "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+            "httpStatus": 200,
+            "responseBytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            "filterContextRetained": true,
+            "domIdentity": {
+              "nodes": [
+                {
+                  "selector": ".td-hero",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-window-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-season-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-venue-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-team-game]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-td-action=\"refresh\"]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                }
+              ],
+              "events": [
+                {
+                  "changed": false,
+                  "recovered": false
+                }
+              ]
+            }
+          },
+          "currentRefresh": {
+            "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "responseBytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T12:11:20.154Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T11:22:00Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            }
+          },
+          "errors": {
+            "javascriptAndConsole": [],
+            "http": [],
+            "external": [],
+            "transport": [],
+            "cancelled": []
+          },
+          "captures": [
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-393x852-metadata-refreshed.png",
+              "sha256": "566bcca444c5cabaf292f6752691710f6dce93c6b68024620bbce536eeff5184",
+              "bytes": 1675858,
+              "actuallyViewedByReviewer": true,
+              "screen": "homeCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-393x852-metadata-refreshed.png",
+              "sha256": "179ed958519e03d26441ebd62b8d2e64246055433b6993c5bfa28f219f3d519f",
+              "bytes": 1199452,
+              "actuallyViewedByReviewer": true,
+              "screen": "teamCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+              "sha256": "aa3f625e1ceb41cd3784f933507ce1aaefc5b5b9a62d157866ec129cad92e515",
+              "bytes": 1201517,
+              "actuallyViewedByReviewer": true,
+              "screen": "nflCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeActions": 31,
+          "actualSourceBodies": [
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/player-history.json",
+              "status": 200,
+              "bytes": 7108758,
+              "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+            },
+            {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/provenance.json",
+              "status": 200,
+              "bytes": 33508,
+              "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+            }
+          ],
+          "teamRefresh": {
+            "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+            "httpStatus": 200,
+            "responseBytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            "filterContextRetained": true,
+            "domIdentity": {
+              "nodes": [
+                {
+                  "selector": ".td-hero",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-window-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-season-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-venue-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-team-game]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-td-action=\"refresh\"]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                }
+              ],
+              "events": [
+                {
+                  "changed": false,
+                  "recovered": false
+                }
+              ]
+            }
+          },
+          "currentRefresh": {
+            "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "responseBytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T12:11:36.871Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T11:22:00Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:38197/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            }
+          },
+          "errors": {
+            "javascriptAndConsole": [],
+            "http": [],
+            "external": [],
+            "transport": [],
+            "cancelled": []
+          },
+          "captures": [
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-430x896-metadata-refreshed.png",
+              "sha256": "50cfbf706f62d0de7f3a8d96307dbe0121187884be4c471ae397df000e037a36",
+              "bytes": 1910673,
+              "actuallyViewedByReviewer": true,
+              "screen": "homeCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-430x896-metadata-refreshed.png",
+              "sha256": "018f96ece72aa546b56f9746a4fb613415537f795f40d2a8714c83dff9f08ccb",
+              "bytes": 1376150,
+              "actuallyViewedByReviewer": true,
+              "screen": "teamCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+              "sha256": "c8fccd042594cf7e5354b677bc2d75097ed78b6b77a6bc593652ad72358d852a",
+              "bytes": 1339012,
+              "actuallyViewedByReviewer": true,
+              "screen": "nflCapture",
+              "engine": "chromium",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            }
+          ]
+        }
+      ],
+      "testFiles": {
+        "qa/team-details/post-refresh.cjs": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff",
+        "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+        "qa/team-details/capture-ready.cjs": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+        "qa/team-details/controls.cjs": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797",
+        "qa/team-details/qa.cjs": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+        "qa/nfl-dashboard/qa.cjs": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff",
+        "qa/home-gate.cjs": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+        "qa/hosted-webkit.cjs": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/results.json",
+      "sha256": "dae6f763a1c82d1c9d4b3c3c9e0460dbee53c0c00e10d5942ab6f229d46e5be2",
+      "bytes": 343965,
+      "scope": "Fresh source-bound metadata integration delta with naturally settled real paint. It does not relabel the preserved complete original button/motion audit.",
+      "engine": "webkit",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeActions": 31,
+          "actualSourceBodies": [
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/player-history.json",
+              "status": 200,
+              "bytes": 7108758,
+              "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/provenance.json",
+              "status": 200,
+              "bytes": 33508,
+              "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+            }
+          ],
+          "teamRefresh": {
+            "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+            "httpStatus": 200,
+            "responseBytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            "filterContextRetained": true,
+            "domIdentity": {
+              "nodes": [
+                {
+                  "selector": ".td-hero",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-window-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-season-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-venue-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-team-game]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-td-action=\"refresh\"]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                }
+              ],
+              "events": [
+                {
+                  "changed": false,
+                  "recovered": false
+                }
+              ]
+            }
+          },
+          "currentRefresh": {
+            "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "responseBytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T12:14:44.433Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T11:22:00Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            }
+          },
+          "errors": {
+            "javascriptAndConsole": [],
+            "http": [],
+            "external": [],
+            "transport": [],
+            "cancelled": []
+          },
+          "captures": [
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-393x852-metadata-refreshed.png",
+              "sha256": "78f10f93caf4f9900fa2b1c08a79ccbdcc0283f1c9f432c000341e0fb8de2271",
+              "bytes": 1783069,
+              "actuallyViewedByReviewer": true,
+              "screen": "homeCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-393x852-metadata-refreshed.png",
+              "sha256": "ea5e5de6092a28bbdba2340c2b3bf1c2ad6e041618b007848a9a50b7d602c6cd",
+              "bytes": 1145412,
+              "actuallyViewedByReviewer": true,
+              "screen": "teamCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+              "sha256": "d8ba0d6c131b6e7d27f668da3498698aa0963d0772cde4b0833e4a1ad4052689",
+              "bytes": 1154377,
+              "actuallyViewedByReviewer": true,
+              "screen": "nflCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 393,
+                "height": 852
+              }
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeActions": 31,
+          "actualSourceBodies": [
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/player-history.json",
+              "status": 200,
+              "bytes": 7108758,
+              "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+            },
+            {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/provenance.json",
+              "status": 200,
+              "bytes": 33508,
+              "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+            }
+          ],
+          "teamRefresh": {
+            "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+            "httpStatus": 200,
+            "responseBytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/team-details.json",
+              "status": 200,
+              "bytes": 2283154,
+              "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+            },
+            "filterContextRetained": true,
+            "domIdentity": {
+              "nodes": [
+                {
+                  "selector": ".td-hero",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-window-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-season-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "#team-venue-select",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-team-game]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                },
+                {
+                  "selector": "[data-td-action=\"refresh\"]",
+                  "exists": true,
+                  "connected": true,
+                  "same": true
+                }
+              ],
+              "events": [
+                {
+                  "changed": false,
+                  "recovered": false
+                }
+              ]
+            }
+          },
+          "currentRefresh": {
+            "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "responseBytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T12:16:51.806Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T11:22:00Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "exactRevalidation": {
+              "url": "http://127.0.0.1:45095/project-dollers/assets/data/current.json",
+              "status": 200,
+              "bytes": 1285416,
+              "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+            }
+          },
+          "errors": {
+            "javascriptAndConsole": [],
+            "http": [],
+            "external": [],
+            "transport": [],
+            "cancelled": []
+          },
+          "captures": [
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-430x896-metadata-refreshed.png",
+              "sha256": "2f27b64009607a751f519288227f68c357bda7a203d7385b2ecce98627e9660e",
+              "bytes": 2039340,
+              "actuallyViewedByReviewer": true,
+              "screen": "homeCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-430x896-metadata-refreshed.png",
+              "sha256": "ecfce058606b9d15cc114e0ce66e267bf911729bd1e7cb2426b55fff8db148fa",
+              "bytes": 1329970,
+              "actuallyViewedByReviewer": true,
+              "screen": "teamCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            },
+            {
+              "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+              "sha256": "83ac88eae888af9590db5ab7789d1039b13cfb9995e2fb37883d43dfc7af0a66",
+              "bytes": 1294381,
+              "actuallyViewedByReviewer": true,
+              "screen": "nflCapture",
+              "engine": "webkit",
+              "viewport": {
+                "width": 430,
+                "height": 896
+              }
+            }
+          ]
+        }
+      ],
+      "testFiles": {
+        "qa/team-details/post-refresh.cjs": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff",
+        "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+        "qa/team-details/capture-ready.cjs": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+        "qa/team-details/controls.cjs": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797",
+        "qa/team-details/qa.cjs": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+        "qa/nfl-dashboard/qa.cjs": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff",
+        "qa/home-gate.cjs": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+        "qa/hosted-webkit.cjs": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+      }
+    }
+  ],
+  "actualFreshImagesViewed": [
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-393x852-metadata-refreshed.png",
+      "sha256": "566bcca444c5cabaf292f6752691710f6dce93c6b68024620bbce536eeff5184",
+      "bytes": 1675858,
+      "actuallyViewedByReviewer": true,
+      "screen": "homeCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-393x852-metadata-refreshed.png",
+      "sha256": "179ed958519e03d26441ebd62b8d2e64246055433b6993c5bfa28f219f3d519f",
+      "bytes": 1199452,
+      "actuallyViewedByReviewer": true,
+      "screen": "teamCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+      "sha256": "aa3f625e1ceb41cd3784f933507ce1aaefc5b5b9a62d157866ec129cad92e515",
+      "bytes": 1201517,
+      "actuallyViewedByReviewer": true,
+      "screen": "nflCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "50cfbf706f62d0de7f3a8d96307dbe0121187884be4c471ae397df000e037a36",
+      "bytes": 1910673,
+      "actuallyViewedByReviewer": true,
+      "screen": "homeCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-430x896-metadata-refreshed.png",
+      "sha256": "018f96ece72aa546b56f9746a4fb613415537f795f40d2a8714c83dff9f08ccb",
+      "bytes": 1376150,
+      "actuallyViewedByReviewer": true,
+      "screen": "teamCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+      "sha256": "c8fccd042594cf7e5354b677bc2d75097ed78b6b77a6bc593652ad72358d852a",
+      "bytes": 1339012,
+      "actuallyViewedByReviewer": true,
+      "screen": "nflCapture",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-393x852-metadata-refreshed.png",
+      "sha256": "78f10f93caf4f9900fa2b1c08a79ccbdcc0283f1c9f432c000341e0fb8de2271",
+      "bytes": 1783069,
+      "actuallyViewedByReviewer": true,
+      "screen": "homeCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-393x852-metadata-refreshed.png",
+      "sha256": "ea5e5de6092a28bbdba2340c2b3bf1c2ad6e041618b007848a9a50b7d602c6cd",
+      "bytes": 1145412,
+      "actuallyViewedByReviewer": true,
+      "screen": "teamCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+      "sha256": "d8ba0d6c131b6e7d27f668da3498698aa0963d0772cde4b0833e4a1ad4052689",
+      "bytes": 1154377,
+      "actuallyViewedByReviewer": true,
+      "screen": "nflCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "2f27b64009607a751f519288227f68c357bda7a203d7385b2ecce98627e9660e",
+      "bytes": 2039340,
+      "actuallyViewedByReviewer": true,
+      "screen": "homeCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-430x896-metadata-refreshed.png",
+      "sha256": "ecfce058606b9d15cc114e0ce66e267bf911729bd1e7cb2426b55fff8db148fa",
+      "bytes": 1329970,
+      "actuallyViewedByReviewer": true,
+      "screen": "teamCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+      "sha256": "83ac88eae888af9590db5ab7789d1039b13cfb9995e2fb37883d43dfc7af0a66",
+      "bytes": 1294381,
+      "actuallyViewedByReviewer": true,
+      "screen": "nflCapture",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      }
+    }
+  ],
+  "preservedOriginalFullQA": [
+    {
+      "file": "qa/team-details/local-chromium-final-v3/results.json",
+      "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46",
+      "scope": "Fresh complete team controls/assets/native-motion audit",
+      "engine": "chromium",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "a952737b00d9ffd3ac5ddf96d76a07b6f94cf31f52defe8065ec739b952c382a",
+              "laterSha256": "86806946779846c647e10545c860dc072bd735ec79deb0bfc20d093b1211b78e",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "reduced",
+              "reason": "reduced-motion"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "7bfba4e6e92bc20eaa05f9a1330f7360fcc99fd9706bbc3028dd02925850a928",
+              "laterSha256": "cc384b4244a82a486429b33bf0b5ea7114027279be239090ca48570655390f09",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "reduced",
+              "reason": "reduced-motion"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/regression-chromium-final-v3/results.json",
+      "sha256": "55da944ae4baaa4e470c519226d84edf5065420fa7d56b2b6f11d7d1042e39d2",
+      "scope": "Complete protected legacy regression including expanded whole-card football path",
+      "engine": "chromium",
+      "runtimeBinding": {
+        "file": "qa/team-details/regression-chromium-final-v3/runtime-binding.json",
+        "sha256": "21ceff15567e11944fd4395ccb7e39824afd897d58b4af5837037f73873cb2aa"
+      },
+      "testHelperSha256": "74a74e5d4f427fbbcd4631ddec4d3f886ec0c23919b505db90d4623e8cc946f2",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.22052001953125,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.22112877296825587,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 700
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.20267777662522116,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.2406005859375,
+          "maxLightPhaseDifferencePercentagePoints": 2.22045e-14,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.2406005859375,
+          "maxLightPhaseDifferencePercentagePoints": 2.22045e-14,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/results.json",
+      "sha256": "35b9d9c471f3d0000fac14f1e680a7d6e7d930d107e9926577de19a416c49e39",
+      "scope": "Fresh complete team controls/assets/native-motion audit",
+      "engine": "webkit",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "708c82d809ea37b24ede5e8a72c116f0735b576bcc5800fcd9b314b7f45ee4c4",
+              "laterSha256": "0606fe5ce740d95be4d5999bb3a7afaffc3ef8b150ddeb7f7dc3508dab5900e7",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "running",
+              "reason": "active"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "8c3f9e9bf37297d1794ebab20b6223e3ef1a7a09b2ecbca3abee50c143e5c986",
+              "laterSha256": "9f1b44dd0678c8fb0e5332e6b8ccfd1de5a7596e36b464394103a529a019886c",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "running",
+              "reason": "active"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/regression-webkit-final-v3/results.json",
+      "sha256": "6f7b9c07cf53d82ed640682e65b64a9ead81e97989098399adf28e3966554849",
+      "scope": "Complete protected legacy regression including expanded whole-card football path",
+      "engine": "webkit",
+      "runtimeBinding": {
+        "file": "qa/team-details/regression-webkit-final-v3/runtime-binding.json",
+        "sha256": "403e4534a127da1e2e3d7b0807525afce92bbea6fe6e39a76c7478d6ba24b7f0"
+      },
+      "testHelperSha256": "74a74e5d4f427fbbcd4631ddec4d3f886ec0c23919b505db90d4623e8cc946f2",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.0002441409815216628,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.0002441410906608432,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        }
+      ]
+    }
+  ],
+  "carriedMotionQualification": "All 228 code/art/CSS/font/motion files are exactly byte-identical to the independently accepted original. The original complete genuine 312-interaction/83-control/17-clock new-screen cases and protected whole-card 32-point football cases remain immutable. Fresh delta cases validate actual revalidation, retained controls/source context and naturally painted route screenshots; they are not claimed full motion-suite reruns.",
+  "paintDiagnosis": {
+    "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/receipt.json",
+    "sha256": "5193f8ebb4da7569c1ddd3e268288561aaaf51a18301d1a9b94a581e180700d5",
+    "bytes": 3636
+  },
+  "preservedRejectedOriginalHome": {
+    "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+    "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+    "bytes": 19955,
+    "disposition": "Remains visually rejected; never substituted or relabelled as accepted."
+  },
+  "visualConclusion": "Physically inspected all twelve fresh two-engine phone originals. Genuine league/team vectors, correct native-size helmet and crop, sharp local branding, diamond CTA, blue/gold frames and readable selectors/tables remain accepted. These captures retain changed Last10/current-season/Home selections, not the default approved-form screenshot state. Reference authority remains the chat attachment; no exact registered pixel-identity claim.",
+  "qualifications": [
+    "The screenshot test helper had revived cancelled fallback animations; paired native/cold/safe-resume diagnostics proved this. Only the test capture restore was corrected; production football bytes and 32-point assertion thresholds were not relaxed.",
+    "WebKit reduced-media emulation may preserve running/active metadata while actual infinite clocks are empty. Acceptance is based on genuine zero running clocks, not uniform metadata or an unproved emulation cause.",
+    "Actual native natural animation clocks and different unmodified foreground paint hashes are recorded separately from controlled legacy phase measurements.",
+    "Mobile browser emulation and native WPE WebKit are not physical iPhone/Safari-toolbar/FPS certification.",
+    "Provider verification is attributed to the independent source specialist report; this agent independently recomputed the committed selected-game display values.",
+    "No source-provider live-push relay is connected; source freshness and unavailable fields retain the documented limitations.",
+    "Fresh route capture awaits only true finite entry completion and two genuine paint frames while continuous lighting remains unpaused. Mandatory interior-pixel checks reject blank artifacts, not all visual defects; independent actual-image inspection is still required.",
+    "Hosted HTTPS release verification remains a separate pending gate."
+  ],
+  "preservedNativeActionFailure": {
+    "file": "qa/team-details/refresh-integration/local-webkit-painted-fbe/results.json",
+    "sha256": "89808a2061fdee9d8e569ea9a84de4167bd4d757c3063dd097dd9333c6e9862a",
+    "bytes": 310738,
+    "disposition": "Remains failed and unaccepted. The failure was in redundant explicit pre-scroll before genuine current-refresh input; fresh reports separately verify the real native tap and exact original assertions."
+  },
+  "captureOnlyReadinessHelper": {
+    "file": "qa/team-details/capture-ready.cjs",
+    "sha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+    "bytes": 4602
+  },
+  "independentHelperActionReview": {
+    "file": "qa/team-details/reviews/control-evidence/native-current-refresh-action-independent-review.json",
+    "sha256": "07e2cfe557c96f21865abcbe5060ca30f1e6ebaafac33a1dd983c21b3ddd845f",
+    "bytes": 2865
+  }
+}

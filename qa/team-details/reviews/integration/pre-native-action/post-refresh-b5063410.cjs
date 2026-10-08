@@ -109,7 +109,7 @@ async function noOverflow(page,selector='.page.active'){
 }
 async function scenario(page,base,viewport,data,manifest,out){
   const mobile=viewport.width<600,result={viewport,mobile,nativeInputMode:mobile?'touch':'pointer',status:'running',nativeActions:[],sourceBodies:[],tabs:[]},team=data.teamForm.teams.DAL;
-  const tap=async(locator,label)=>{assert.equal(await locator.count(),1,'Unique native control: '+label);if(mobile)await locator.tap();else await locator.click();result.nativeActions.push(label);};
+  const tap=async(locator,label)=>{assert.equal(await locator.count(),1,'Unique native control: '+label);await locator.scrollIntoViewIfNeeded();if(mobile)await locator.tap();else await locator.click();result.nativeActions.push(label);};
   const close=async()=>{await tap(page.locator('#team-details-dialog .dialog-close'),'Close team dialog');await page.locator('#team-details-dialog').waitFor({state:'hidden'});};
   const open=async(action,selector)=>{await tap(page.locator(selector||`${TEAM} [data-td-action="${action}"]:visible`).first(),action+' destination');await page.locator('#team-details-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#team-details-dialog').getAttribute('data-view'),action,'Native destination matches its action');await noOverflow(page,'#team-details-dialog');return await page.locator('#team-details-dialog-content').innerText();};
   const dataset=async()=>{assert.deepEqual(await page.evaluate(()=>window.PD_DATA),data.current,'Actual current dataset matches refreshed JSON');assert.deepEqual(await page.evaluate(()=>window.PDTeamDetails.getDataset()),data.teamForm,'Existing complete team dataset remains unchanged');};

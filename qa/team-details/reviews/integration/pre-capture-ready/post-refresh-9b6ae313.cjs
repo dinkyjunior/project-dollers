@@ -6,8 +6,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const {spawn,execFileSync}=require('node:child_process');
 const {once}=require('node:events');
-const {ROOT,TEAM,SHA,WAIT,launch,runtimeManifest,freePort,ready,active,geometry,images}=require('./qa.cjs');
-const {capture}=require('./capture-ready.cjs');
+const {ROOT,TEAM,SHA,WAIT,launch,runtimeManifest,freePort,ready,active,geometry,images,capture}=require('./qa.cjs');
 const legacy=require('../nfl-dashboard/qa.cjs');
 const {eligibleGames,derivedMetrics,numericText}=require('./controls.cjs');
 const ALLOWED=['assets/data/current.json','assets/data/player-history.json','assets/data/provenance.json'];
@@ -109,7 +108,7 @@ async function noOverflow(page,selector='.page.active'){
 }
 async function scenario(page,base,viewport,data,manifest,out){
   const mobile=viewport.width<600,result={viewport,mobile,nativeInputMode:mobile?'touch':'pointer',status:'running',nativeActions:[],sourceBodies:[],tabs:[]},team=data.teamForm.teams.DAL;
-  const tap=async(locator,label)=>{assert.equal(await locator.count(),1,'Unique native control: '+label);if(mobile)await locator.tap();else await locator.click();result.nativeActions.push(label);};
+  const tap=async(locator,label)=>{assert.equal(await locator.count(),1,'Unique native control: '+label);await locator.scrollIntoViewIfNeeded();if(mobile)await locator.tap();else await locator.click();result.nativeActions.push(label);};
   const close=async()=>{await tap(page.locator('#team-details-dialog .dialog-close'),'Close team dialog');await page.locator('#team-details-dialog').waitFor({state:'hidden'});};
   const open=async(action,selector)=>{await tap(page.locator(selector||`${TEAM} [data-td-action="${action}"]:visible`).first(),action+' destination');await page.locator('#team-details-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#team-details-dialog').getAttribute('data-view'),action,'Native destination matches its action');await noOverflow(page,'#team-details-dialog');return await page.locator('#team-details-dialog-content').innerText();};
   const dataset=async()=>{assert.deepEqual(await page.evaluate(()=>window.PD_DATA),data.current,'Actual current dataset matches refreshed JSON');assert.deepEqual(await page.evaluate(()=>window.PDTeamDetails.getDataset()),data.teamForm,'Existing complete team dataset remains unchanged');};
@@ -171,7 +170,7 @@ async function run(options){
   let server,browser,base=options.base;
   try{
     assert.ok(['chromium','webkit'].includes(options.engine),'A genuine supported browser engine is required');const viewports=selectedViewports(options.viewport),bound=transition(options);report.source={...bound.evidence,runtimeFiles:bound.current,testFiles:{}};report.requestedViewports=viewports;
-    for(const file of['qa/team-details/post-refresh.cjs','qa/team-details/verify-source-equivalence.py','qa/team-details/capture-ready.cjs','qa/team-details/controls.cjs','qa/team-details/qa.cjs','qa/nfl-dashboard/qa.cjs','qa/home-gate.cjs','qa/hosted-webkit.cjs'])report.source.testFiles[file]=SHA(fs.readFileSync(path.join(ROOT,file)));
+    for(const file of['qa/team-details/post-refresh.cjs','qa/team-details/verify-source-equivalence.py','qa/team-details/controls.cjs','qa/team-details/qa.cjs','qa/nfl-dashboard/qa.cjs','qa/home-gate.cjs','qa/hosted-webkit.cjs'])report.source.testFiles[file]=SHA(fs.readFileSync(path.join(ROOT,file)));
     const data={current:load(ROOT+'/assets/data/current.json'),teamForm:load(ROOT+'/assets/data/team-details.json')};
     if(!base){const port=await freePort();base=`http://127.0.0.1:${port}/${encodeURIComponent(path.basename(ROOT))}/`;server=spawn('python3',['-u','-m','http.server',String(port),'--bind','127.0.0.1','--directory',path.dirname(ROOT)],{stdio:'ignore'});let online=false;for(let n=0;n<30;n++){try{online=(await fetch(base)).status===200;if(online)break;}catch{}await WAIT(100);}assert.ok(online,'Real local static server becomes ready');}
     if(!base.endsWith('/'))base+='/';if(options.base)assert.equal(new URL(base).protocol,'https:','Hosted evidence requires HTTPS');report.base=base;browser=await launch(options.engine,!!options.base);report.browserVersion=browser.version();

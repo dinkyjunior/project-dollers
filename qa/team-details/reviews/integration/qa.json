@@ -1,0 +1,1202 @@
+{
+  "status": "accepted",
+  "agent": "/root/team_qa_audit",
+  "reviewedAt": "2026-10-08T12:23:21.028817+00:00",
+  "scope": "Prepublication targeted metadata-integration acceptance. Original full local v3 and protected suites remain mandatory historical complete proof; actual hosting verification is pending separately.",
+  "runtimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "runtimeFiles": 231,
+  "unchangedCodeAndAssets": 228,
+  "footballOrTypeKeyShapeChanges": 0,
+  "sourceMetadataLeaves": 1827,
+  "evidence": [
+    {
+      "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+      "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+    },
+    {
+      "file": "qa/team-details/published-runtime-manifest.json",
+      "sha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1"
+    },
+    {
+      "file": "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json",
+      "sha256": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697"
+    },
+    {
+      "file": "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json",
+      "sha256": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77"
+    },
+    {
+      "file": "qa/team-details/refresh-integration/candidate-freeze-fbe-actionable.json",
+      "sha256": "79f09ea600c77a941d256ba80dfc35feb0470c8ebeada62995b52806ff2e4c6b"
+    },
+    {
+      "file": "qa/team-details/hosted-candidate-freeze.json",
+      "sha256": "9f9071eb1dede4061b5b8f33ab3a0f586a2858fd2fe52e89b5c2aed74d01675c"
+    },
+    {
+      "file": "qa/team-details/reviews/final/qa-v3.json",
+      "sha256": "6671a9043ed1d440f6f8860d7e6bb8d64fd34b86059bba7e64305f4636c6809f"
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/native-current-refresh-action-independent-review.json",
+      "sha256": "07e2cfe557c96f21865abcbe5060ca30f1e6ebaafac33a1dd983c21b3ddd845f"
+    },
+    {
+      "file": "qa/team-details/reviews/sources/native-action-source-static-review.json",
+      "sha256": "d03fbb0901ac7f9a55576bc9754f5db4d7b2bdd2437a6811b90dde769374fa27"
+    },
+    {
+      "file": "qa/team-details/reviews/sources/capture-ready-source-static-review.json",
+      "sha256": "896fcded921991f8f605362f53c3ddeb06813f022b9660a2241f645484042552"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/receipt.json",
+      "sha256": "5193f8ebb4da7569c1ddd3e268288561aaaf51a18301d1a9b94a581e180700d5"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/capture-ready-pixel-guard-proof.json",
+      "sha256": "ece066c6610524c4ee3f217d32e32588b6d0320fb9c62c7051c9341deec8df57"
+    },
+    {
+      "file": "qa/team-details/run.cjs",
+      "sha256": "96a16479f70bd1b917fc08001bd6349f1fb80e77f93ae9220ce52c2ec77de874"
+    },
+    {
+      "file": "qa/team-details/qa.cjs",
+      "sha256": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d"
+    },
+    {
+      "file": "qa/team-details/controls.cjs",
+      "sha256": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797"
+    },
+    {
+      "file": "qa/nfl-dashboard/qa.cjs",
+      "sha256": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff"
+    },
+    {
+      "file": "qa/home-gate.cjs",
+      "sha256": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0"
+    },
+    {
+      "file": "qa/hosted-webkit.cjs",
+      "sha256": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+    },
+    {
+      "file": "qa/team-details/post-refresh.cjs",
+      "sha256": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff"
+    },
+    {
+      "file": "qa/team-details/verify-source-equivalence.py",
+      "sha256": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7"
+    },
+    {
+      "file": "qa/team-details/capture-ready.cjs",
+      "sha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80"
+    }
+  ],
+  "targetedNativeReports": [
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/results.json",
+      "sha256": "ad67e797a1128a259b18db6886ba319ccaeec31983a896d2f9c4bdd8c07f8879",
+      "engine": "chromium",
+      "status": "passed",
+      "completedAt": "2026-10-08T12:11:39.483Z",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ],
+      "actualNativeActionsPerPhone": [
+        31,
+        31
+      ],
+      "strictSourceBodiesPerPhone": 4
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/results.json",
+      "sha256": "dae6f763a1c82d1c9d4b3c3c9e0460dbee53c0c00e10d5942ab6f229d46e5be2",
+      "engine": "webkit",
+      "status": "passed",
+      "completedAt": "2026-10-08T12:17:01.581Z",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ],
+      "actualNativeActionsPerPhone": [
+        31,
+        31
+      ],
+      "strictSourceBodiesPerPhone": 4
+    }
+  ],
+  "actualExecution": {
+    "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe-process/exit.json",
+    "sha256": "da82afd559f8370093567a85ff870c901157509b3258736061bb9bc4a6ade339"
+  },
+  "personallyInspectedNativeOriginals": 6,
+  "actualCommonPhoneOriginals": [
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-393x852-metadata-refreshed.png",
+      "sha256": "566bcca444c5cabaf292f6752691710f6dce93c6b68024620bbce536eeff5184",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "home",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 0.222155,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 50.239784240722656,
+            "right": 393,
+            "bottom": 806.4116592407227,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "running",
+              "time": 16.691999998781792,
+              "pending": false,
+              "progress": 0.05961428570993497
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          2440.9,
+          2457.6
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 25470,
+          "brightFraction": 0.37616304829419583,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-393x852-metadata-refreshed.png",
+      "sha256": "179ed958519e03d26441ebd62b8d2e64246055433b6993c5bfa28f219f3d519f",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "team",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          8907.396,
+          8924
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 26565,
+          "brightFraction": 0.3923349579087284,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+      "sha256": "aa3f625e1ceb41cd3784f933507ce1aaefc5b5b9a62d157866ec129cad92e515",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "nfl",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          1195,
+          1211.7
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 26728,
+          "brightFraction": 0.39474228326687344,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "50cfbf706f62d0de7f3a8d96307dbe0121187884be4c471ae397df000e037a36",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "home",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 0,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 49.65625,
+            "right": 430,
+            "bottom": 852.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "running",
+              "time": 0,
+              "pending": true,
+              "progress": 0
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          2343.8,
+          2377.2
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 29593,
+          "brightFraction": 0.3747514784656882,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-430x896-metadata-refreshed.png",
+      "sha256": "018f96ece72aa546b56f9746a4fb613415537f795f40d2a8714c83dff9f08ccb",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "team",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          9143.688,
+          9160.2
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 29200,
+          "brightFraction": 0.36977471602061623,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+      "sha256": "c8fccd042594cf7e5354b677bc2d75097ed78b6b77a6bc593652ad72358d852a",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "nfl",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          1185.6,
+          1202.3
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 30242,
+          "brightFraction": 0.38297010143477656,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": false,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-393x852-metadata-refreshed.png",
+      "sha256": "78f10f93caf4f9900fa2b1c08a79ccbdcc0283f1c9f432c000341e0fb8de2271",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "home",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 718,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          9059,
+          10946
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 25786,
+          "brightFraction": 0.38083001033820707,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-393x852-metadata-refreshed.png",
+      "sha256": "ea5e5de6092a28bbdba2340c2b3bf1c2ad6e041618b007848a9a50b7d602c6cd",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "team",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          76051,
+          78053
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 26596,
+          "brightFraction": 0.3927927927927928,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-393x852-metadata-refreshed.png",
+      "sha256": "d8ba0d6c131b6e7d27f668da3498698aa0963d0772cde4b0833e4a1ad4052689",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "page": "nfl",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 47.90625,
+            "right": 393,
+            "bottom": 804.078125,
+            "width": 393,
+            "height": 756.171875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          2100,
+          3644
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 67710,
+          "brightSamples": 27142,
+          "brightFraction": 0.4008565942992173,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "2f27b64009607a751f519288227f68c357bda7a203d7385b2ecce98627e9660e",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "home",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 0,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 49.65625,
+            "right": 430,
+            "bottom": 852.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "running",
+              "time": 0,
+              "pending": true,
+              "progress": 0
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          11340,
+          11626
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 30040,
+          "brightFraction": 0.3804120708650449,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-430x896-metadata-refreshed.png",
+      "sha256": "ecfce058606b9d15cc114e0ce66e267bf911729bd1e7cb2426b55fff8db148fa",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "team",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "team-details",
+          "hash": "#team/DAL",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          93553,
+          96082
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 30114,
+          "brightFraction": 0.3813491711727684,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-430x896-metadata-refreshed.png",
+      "sha256": "83ac88eae888af9590db5ab7789d1039b13cfb9995e2fb37883d43dfc7af0a66",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "page": "nfl",
+      "actualUnpausedOriginal": true,
+      "mandatoryNaturalCaptureReadiness": {
+        "status": "passed",
+        "initial": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "nfl",
+          "hash": "#nfl",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "rect": {
+            "x": 0,
+            "y": 46.65625,
+            "right": 430,
+            "bottom": 849.328125,
+            "width": 430,
+            "height": 802.671875
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          1882,
+          3973
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 860,
+          "height": 1792,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 78967,
+          "brightSamples": 30244,
+          "brightFraction": 0.3829954284701204,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      },
+      "personallyInspectedByThisAgent": true,
+      "independentAgentVisualInspection": "All12 originals inspected by the visual/assets/source specialists; this QA agent personally inspected all6 native originals."
+    }
+  ],
+  "acceptanceChecks": [
+    "All31 actual native actions on both393x852/430x896 phones in both engines; no simulated application events or response substitution.",
+    "Real HTTP200/hash revalidation of all4 published source bodies, manual team/current refresh and exact source-dialog timestamps/links.",
+    "Unchanged team dataset retains real DOM node identity, native focus, filters and report context across successful revalidation.",
+    "Home/NFL/Dallas roundtrip, direct route/reload, tabs, source-derived totals/report/schedule context and existing Steelers QB/recent/opponent bridge.",
+    "Actual geometry/image decode and no horizontal overflow, recorded console/HTTP/transport errors empty.",
+    "One unpaused original screenshot per capture after natural finite page-entry settlement and two distinct real frames; mandatory read-only PNG interior guard passed for all12.",
+    "Original6 full-v3 helpers and current integration helpers unchanged throughout real execution; all231 current source files match c336."
+  ],
+  "preservedRejectedEvidence": [
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/results.json",
+      "sha256": "7f7c5f0e2625c5a7d7924a0b472c1eb18c276f8183aba126fac563dad1a6ba85",
+      "qualification": "Completed functional pass only. Original native430 Home PNG is blank; no visual acceptance."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+      "qualification": "Original rejected blank preserved unchanged."
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-painted-fbe/results.json",
+      "sha256": "89808a2061fdee9d8e569ea9a84de4167bd4d757c3063dd097dd9333c6e9862a",
+      "qualification": "Overall failed:393 explicit pre-scroll detached before native current Refresh;430 passed. Not relabelled."
+    },
+    {
+      "file": "qa/team-details/reviews/integration/pre-native-action/post-refresh-b5063410.cjs",
+      "sha256": "b5063410b55ce634a3e96c20aa4fdf48cbaea8e379601045403bf9bbc028ddba",
+      "qualification": "Executed failed helper preserved. Current8a removes exactly its redundant pre-scroll; normal native locator actionability and all assertions retained."
+    }
+  ],
+  "qualifications": [
+    "All review agents are AI agents; user approval of the attached reference is distinct from agent visual inspection.",
+    "Linux native WebKit evidence does not establish physical iPhone/Safari hardware performance.",
+    "Read-only nonblank pixel guard is only a rejection gate; actual original visual inspection establishes framing/readability within the reviewed scope.",
+    "Original full native-v3 operational timeout extension2400\u21924800 seconds is preserved in qa-v3.json; this separate targeted run needed no extension and genuinely reaped exit0 in239.36s.",
+    "Hosted target has not yet been accepted by this integration receipt."
+  ]
+}

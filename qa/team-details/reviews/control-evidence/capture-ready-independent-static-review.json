@@ -1,0 +1,76 @@
+{
+  "status": "accepted-static-and-read-only-rejection-qualification",
+  "agent": "/root/team_controls_audit",
+  "reviewedAt": "2026-10-08T11:59:52.957Z",
+  "scope": "Minimal QA-only natural entry settlement and nonblank-interior screenshot guard. Full integration/live acceptance remains pending new genuine browser runs and actual-image review.",
+  "runtimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "captureModuleSha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+  "minimal": [
+    {
+      "file": "qa/team-details/post-refresh.cjs",
+      "sha256": "b5063410b55ce634a3e96c20aa4fdf48cbaea8e379601045403bf9bbc028ddba",
+      "archive": "qa/team-details/reviews/integration/pre-capture-ready/post-refresh-9b6ae313.cjs",
+      "archiveSha256": "9b6ae313ed8aa7444fa3013c93c92190e40ad5a02518242796fae4f6cffb43aa",
+      "assertion": "Whole-file equality after the exact capture-import/hash-list substitutions; all scenarios/native inputs/source/refusal/geometry/math/focus/network assertions unchanged."
+    },
+    {
+      "file": "qa/team-details/hosted-deployment.cjs",
+      "sha256": "b59a1e8689b11fab0f1d53788188b13843180c4c6686985805b3a988b8bc0004",
+      "archive": "qa/team-details/reviews/integration/pre-capture-ready/hosted-deployment-d98403ae.cjs",
+      "archiveSha256": "d98403aedc1bf5b92bfdf71f66418aba1c90fc9f9c6da77ddbfc8ca7453730e0",
+      "assertion": "Whole-file equality after the exact capture-import/hash-list substitutions; all scenarios/native inputs/source/refusal/geometry/math/focus/network assertions unchanged."
+    }
+  ],
+  "originalSixV3HelpersUnchanged": {
+    "qa/team-details/run.cjs": "96a16479f70bd1b917fc08001bd6349f1fb80e77f93ae9220ce52c2ec77de874",
+    "qa/team-details/qa.cjs": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+    "qa/team-details/controls.cjs": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797",
+    "qa/nfl-dashboard/qa.cjs": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff",
+    "qa/home-gate.cjs": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+    "qa/hosted-webkit.cjs": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+  },
+  "evidence": [
+    {
+      "file": "qa/team-details/capture-ready.cjs",
+      "sha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80"
+    },
+    {
+      "file": "qa/team-details/published-runtime-manifest.json",
+      "sha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1"
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/capture-ready-pixel-qualification.json",
+      "sha256": "0419f45de60e059888250385690ca605239197467a47ac7b9c1f833b586e0971"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/receipt.json",
+      "sha256": "5193f8ebb4da7569c1ddd3e268288561aaaf51a18301d1a9b94a581e180700d5"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/results.json",
+      "sha256": "291f395ac6104642d42507c58e9879b563e5a1266d1b2baef1a20bb1c2c36738"
+    }
+  ],
+  "review": [
+    "Waits only for the actual finite page-in animation to finish naturally; intended infinite neon/background animation continues.",
+    "Two distinct real requestAnimationFrame callbacks establish compositor settlement; no style, route, clock, seek or animation pause/resume mutation.",
+    "The original capture helper retains unmodified actual PNG bytes with animations allow; there is one capture and no retry to hide failure.",
+    "Settling preserves active page/hash and requires visible foreground opacity before capture. Reduced-motion absence of page-in is correctly allowed.",
+    "Read-only PNG inspection excludes twelve CSS pixels of the app frame and rejects both preserved blank phone screenshots. Actual two-frame naturally painted screenshots pass.",
+    "Pixel brightness is a blank-image guard only. The nonblank faded430 diagnostic passes the low threshold; this explicitly gives no fidelity acceptance. Natural wait plus distinct frames and independent actual screenshot review remain necessary.",
+    "Existing source/version equivalence, genuine inputs, focus, six-node DOM identity, direct reload, geometry, real source fetch and strict network/zero-error assertions are unchanged."
+  ],
+  "imageReview": {
+    "originalBlank430Reviewed": true,
+    "diagnosticBlank393Reviewed": true,
+    "naturallyPaintedTwoFrame393Reviewed": true,
+    "naturallyPaintedTwoFrame430Reviewed": true,
+    "approvedSource": "User chat attachment; no pixel-identical claim."
+  },
+  "pending": [
+    "Fresh Chromium393/430 local integration against new exact helper hashes.",
+    "Fresh native WebKit393/430 local integration against new exact helper hashes.",
+    "Independent review of actual Home/NFL/Team images and all functional source/hash/DOM/error evidence.",
+    "Hosted genuine deployment/served231-body source verification."
+  ]
+}

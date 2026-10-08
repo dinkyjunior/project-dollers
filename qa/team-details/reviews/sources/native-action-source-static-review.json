@@ -1,0 +1,39 @@
+{
+  "status": "accepted-for-genuine-native-execution",
+  "agent": "team_recovery_sources_audit",
+  "reviewedAt": "2026-10-08T12:14:35.363138+00:00",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "boundFiles": {
+    "qa/team-details/post-refresh.cjs": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff",
+    "qa/team-details/reviews/integration/pre-native-action/post-refresh-b5063410.cjs": "b5063410b55ce634a3e96c20aa4fdf48cbaea8e379601045403bf9bbc028ddba",
+    "qa/team-details/reviews/control-evidence/native-current-refresh-action-independent-review.json": "07e2cfe557c96f21865abcbe5060ca30f1e6ebaafac33a1dd983c21b3ddd845f",
+    "qa/team-details/refresh-integration/local-webkit-painted-fbe/results.json": "89808a2061fdee9d8e569ea9a84de4167bd4d757c3063dd097dd9333c6e9862a",
+    "qa/team-details/capture-ready.cjs": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+    "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+    "qa/team-details/verify-publication.py": "6e13892c87f8be08dd94aea4064eb178fade8bf9e1bf1d0242ba5f96d72b27d6",
+    "qa/team-details/hosted-deployment.cjs": "b59a1e8689b11fab0f1d53788188b13843180c4c6686985805b3a988b8bc0004",
+    "qa/team-details/published-runtime-manifest.json": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+    "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697",
+    "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77"
+  },
+  "exactOneNativePreScrollDeletion": true,
+  "runtime231Unchanged": true,
+  "sourceScenarioAllAssertionsUnchanged": true,
+  "failedOriginalPreserved": {
+    "status": "failed",
+    "phone393RecordedActions": 29,
+    "phone393CurrentRefreshAbsent": true,
+    "phone430RecordedActions": 31,
+    "phone430Passed": true
+  },
+  "correctedDiagnosis": "The 393 failure occurred in the redundant explicit scrollIntoViewIfNeeded call before dispatching Native existing current-data refresh. It did not occur after current-data refresh and was not the Sources click. Recorded freshness markup replacement supports an element-detachment boundary, but no actual native application tap failure was demonstrated.",
+  "nativeActionContract": "Direct Locator.tap()/click() retains Playwright native scrolling, visibility, stability, hit-testing, enabled-state checks and fresh locator resolution. Unique control, native input, manual refresh/HTTP source, focus, DOM identities, all data/projection/geometry/error assertions and genuine capture readiness remain unchanged. No forced input, custom retry, assertion waiver or app/source mutation.",
+  "captureGuardQualification": "Natural finite entry readiness, two genuine animation frames and nonblank actual PNG pixels are retained. Pixel guard alone cannot establish visual fidelity.",
+  "pending": [
+    "Fresh complete Chromium393/430 and native WebKit393/430 using exact8a8fd47d helper",
+    "Personal inspection of all12 actual provider refresh originals",
+    "Six source integration acceptances",
+    "Actual hosted deployment verification and six hosted reviews"
+  ]
+}

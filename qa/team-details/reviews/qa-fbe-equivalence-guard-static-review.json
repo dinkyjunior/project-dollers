@@ -1,0 +1,46 @@
+{
+  "status": "accepted-for-genuine-native-execution",
+  "agent": "/root/team_qa_audit",
+  "scope": "Independent exact raw CSV and projection guard review, plus byte-identical native scenario assertions. This is preparation, not completed browser or hosted acceptance.",
+  "checkedAt": "2026-10-08T11:34:54.329955+00:00",
+  "runtimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "boundFiles": {
+    "qa/team-details/post-refresh.cjs": "9b6ae313ed8aa7444fa3013c93c92190e40ad5a02518242796fae4f6cffb43aa",
+    "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+    "qa/team-details/hosted-deployment.cjs": "d98403aedc1bf5b92bfdf71f66418aba1c90fc9f9c6da77ddbfc8ca7453730e0",
+    "qa/team-details/verify-publication.py": "eb52d87353f6f8d1e68ad6dfe680a66e186fb5d79f1fc5e4c48739a2cda88b6f",
+    "qa/team-details/published-runtime-manifest.json": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+    "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697",
+    "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77",
+    "qa/team-details/reviews/qa-fbe-consumed-equivalence.json": "97457e09a91905ea87b3088f0783f7d3c631071330d6559e83885dd021b592c2",
+    "qa/team-details/reviews/sources/pre-equivalence/post-refresh-dc18f986.cjs": "dc18f986ab771e2db853e6bba37ea4a1c9c6dfeebf40b8393f62de9519fe3a9b",
+    "qa/team-details/reviews/sources/pre-equivalence/hosted-deployment-3b557042.cjs": "3b55704250cb1b909d83562a1d52c394703c5350df85912980cafbe5cbb6740c"
+  },
+  "actualCSVRows": 7548,
+  "rawMarketCellsChanged": 21,
+  "rawMarketEventsChanged": 6,
+  "allOtherRawScalarsEqual": true,
+  "completeRegularGames": 544,
+  "clubRecordsAcrossSeasonWeekContexts": 1216,
+  "completeActualCoreMarketObjects": 446,
+  "actualAppMetadataLeaves": 1827,
+  "consumedFootballAndStructureChanges": 0,
+  "nativeScenarioAssertionsByteIdenticalToDc18": true,
+  "nativeRunDeltaOnlyAddsGuardHashInventory": true,
+  "hostedFacadeDeltaOnlyAddsGuardHashInventory": true,
+  "narrowException": {
+    "sourceId": "nflverse_games",
+    "sameOtherSharedProviderCount": 6,
+    "rawWholeBodyHashesEqual": false,
+    "actualConsumedMarketProjectionUnchanged": true,
+    "rawChangedTotal": {
+      "gameId": "2026_05_PHI_JAX",
+      "before": "42.5",
+      "after": "41.5"
+    },
+    "requiresExactCurrentManifestRawPairClassificationAndReceiptHashes": true,
+    "rejectsOtherProviderChangesAndNonmarketOrConsumedFootballChanges": true
+  },
+  "qualification": "Raw odds facts changed and the original strict seven-whole-hash failure remains preserved. Only the complete application-consumed projection is equivalent for this exact pair; no generic source or factual-equality waiver."
+}

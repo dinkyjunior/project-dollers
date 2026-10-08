@@ -1,0 +1,48 @@
+{
+  "status": "passed-pure-guard-check",
+  "scope": "Read-only actual original PNG checks; no browser, source, pixel or style mutation",
+  "helperSha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+  "evidence": [
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-393-two-natural-frames.png",
+      "sha256": "543c82e52e39934ff04d73f8d7cb668003a818e6afabe83d6aaa100865884502",
+      "disposition": "accepted-nonblank-guard",
+      "pixels": {
+        "width": 786,
+        "height": 1704,
+        "insetCssPixels": 12,
+        "sampleStridePixels": 4,
+        "samples": 67710,
+        "brightSamples": 25817,
+        "brightFraction": 0.38128784522227144,
+        "minimumBrightFraction": 0.01,
+        "brightnessRgbSumThreshold": 210,
+        "status": "passed",
+        "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+      }
+    },
+    {
+      "file": "qa/team-details/reviews/integration/home-webkit-paint-probe/home-430-two-natural-frames.png",
+      "sha256": "7793ee159fdf08e689f4d9ba501b90fca169371d4fa53703cbea8cfc80d19d87",
+      "disposition": "accepted-nonblank-guard",
+      "pixels": {
+        "width": 860,
+        "height": 1792,
+        "insetCssPixels": 12,
+        "sampleStridePixels": 4,
+        "samples": 78967,
+        "brightSamples": 30042,
+        "brightFraction": 0.3804373979003888,
+        "minimumBrightFraction": 0.01,
+        "brightnessRgbSumThreshold": 210,
+        "status": "passed",
+        "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+      }
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "9f9cdacb3ae9e2fdd94328e11cd3b64dcb648918b92b7f18b1ccc5756ecf2b5b",
+      "disposition": "rejected-by-mandatory-nonblank-guard"
+    }
+  ]
+}

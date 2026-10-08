@@ -1,0 +1,91 @@
+{
+  "status": "accepted-static-and-read-only-capture-schema",
+  "agent": "/root/team_controls_audit",
+  "verifierSha256": "6e13892c87f8be08dd94aea4064eb178fade8bf9e1bf1d0242ba5f96d72b27d6",
+  "chromiumReportSha256": "32de288b7eaa5a015bdc0721a349260625bf7224a25e20daab9be9554b1285e2",
+  "checks": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "field": "homeCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/home-393x852-metadata-refreshed.png",
+      "sha256": "54cc2cbdc976b0203953239613972bd78ef46c9a9c728990d0a4f3ba92b27828",
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "field": "teamCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/team-393x852-metadata-refreshed.png",
+      "sha256": "1447f662451f5c817810c880e6ce1443fa6d62412ba9c25ed937d986d2880f45",
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "field": "nflCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/nfl-393x852-metadata-refreshed.png",
+      "sha256": "aa3f625e1ceb41cd3784f933507ce1aaefc5b5b9a62d157866ec129cad92e515",
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "field": "homeCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/home-430x896-metadata-refreshed.png",
+      "sha256": "99bc7d523101dab6584d3044ff84aa550099ecc8eba8d081c2e3c8a36f9b1ab5",
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "field": "teamCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/team-430x896-metadata-refreshed.png",
+      "sha256": "48c6f7899b691c109d790f1e38fc547dbaff93a0a8c581f3d777b3dc8cdc1d63",
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "field": "nflCapture",
+      "file": "qa/team-details/refresh-integration/local-chromium-painted-fbe/nfl-430x896-metadata-refreshed.png",
+      "sha256": "0de6997b89477ed459db4411240843e778086485bbf5e34531b50b61412e4f61",
+      "status": "passed"
+    }
+  ],
+  "isolatedRefusals": [
+    {
+      "case": "blank",
+      "status": "rejected-isolated-fixture",
+      "message": "Actual interior pixel guard was missing, blank or inconsistent"
+    },
+    {
+      "case": "missing",
+      "status": "rejected-isolated-fixture",
+      "message": "Capture lacks genuine finite-transition readiness"
+    },
+    {
+      "case": "unfinished",
+      "status": "rejected-isolated-fixture",
+      "message": "Finite entry animation has not naturally finished"
+    },
+    {
+      "case": "duplicate",
+      "status": "rejected-isolated-fixture",
+      "message": "Distinct genuine paint frames were not recorded"
+    }
+  ],
+  "qualification": "Actual six newly completed Chromium capture schema/hash values checked with the real guard. Four isolated deep-copied malformed receipts rejected. No runtime, helper, source, image, browser or original report bytes changed. Full native/live integration acceptance remains pending."
+}

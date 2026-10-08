@@ -1,0 +1,89 @@
+{
+  "status": "prepared-for-independent-static-review",
+  "reviewedAt": "2026-10-08T11:35:06.307144+00:00",
+  "agent": "team_recovery_sources_audit",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "sourceGuardQualification": "Only a reviewed checksum-bound proof of complete consumed projections permits one changed nflverse_games raw body.21 real upcoming market facts changed; they are not metadata. Other6shared sources and228other runtime files remain identical. Neither scoped/static receipt nor refusal fixtures replace both actual completed native refresh browser reports.",
+  "files": {
+    "qa/team-details/post-refresh.cjs": "9b6ae313ed8aa7444fa3013c93c92190e40ad5a02518242796fae4f6cffb43aa",
+    "qa/team-details/verify-publication.py": "eb52d87353f6f8d1e68ad6dfe680a66e186fb5d79f1fc5e4c48739a2cda88b6f",
+    "qa/team-details/verify-source-equivalence.py": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7",
+    "qa/team-details/test-source-equivalence.py": "67fcacb8e04bf674521e6486abec10a6f12f23ae54de265d23cb2b0df6d9f70b",
+    "qa/team-details/incoming-source/fbe4167-games-consumed-equivalence.json": "b9bfa5638f6a4c830ed2fba9d61cd3fb8a25b481f3eb7d81ddc15f31153eea77",
+    "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697",
+    "qa/team-details/hosted-deployment.cjs": "d98403aedc1bf5b92bfdf71f66418aba1c90fc9f9c6da77ddbfc8ca7453730e0"
+  },
+  "nativeScenarioBytesUnchanged": true,
+  "nativeScenarioSha256": "55480941b54e7540093fb559827c9fc60ae25adc65046beecd1acfce886a8569",
+  "originalSevenWholeHashesFailurePreserved": true,
+  "readOnlyActualTransitionProof": {
+    "file": "qa/team-details/reviews/sources/source-equivalence-preparation/actual-transition-recomputation.json",
+    "sha256": "7a6551806e08036e9390a7cc4825c3ea974b19f26da0e0fc59cb13f1cb1830dd"
+  },
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "qa/team-details/test-source-equivalence.py"
+      ],
+      "exitCode": 0,
+      "file": "qa/team-details/reviews/sources/source-equivalence-preparation/1-qualification.log",
+      "sha256": "8888a6fd2a4b5f013cde29d67258976b2e53db895020ce16520999c90fecdea2",
+      "qualification": "Read-only guard/static/refusal qualification; not actual browser/hosted integration acceptance."
+    },
+    {
+      "command": [
+        "python3",
+        "qa/team-details/verify-publication.py",
+        "--self-test"
+      ],
+      "exitCode": 0,
+      "file": "qa/team-details/reviews/sources/source-equivalence-preparation/2-qualification.log",
+      "sha256": "6dcdf718c1b9719e340cfcac3fac624a47d7c25dc480608bb6863db32d1bb276",
+      "qualification": "Read-only guard/static/refusal qualification; not actual browser/hosted integration acceptance."
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "qa/team-details/post-refresh.cjs"
+      ],
+      "exitCode": 0,
+      "file": "qa/team-details/reviews/sources/source-equivalence-preparation/3-qualification.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualification": "Read-only guard/static/refusal qualification; not actual browser/hosted integration acceptance."
+    },
+    {
+      "command": [
+        "python3",
+        "qa/team-details/verify-source-equivalence.py",
+        "--classification",
+        "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json",
+        "--original-manifest",
+        "qa/team-details/candidate-runtime-manifest.json",
+        "--published-manifest",
+        "qa/team-details/published-runtime-manifest.json"
+      ],
+      "exitCode": 0,
+      "file": "qa/team-details/reviews/sources/source-equivalence-preparation/4-qualification.log",
+      "sha256": "97457e09a91905ea87b3088f0783f7d3c631071330d6559e83885dd021b592c2",
+      "qualification": "Read-only guard/static/refusal qualification; not actual browser/hosted integration acceptance."
+    }
+  ],
+  "qualificationCounts": {
+    "sourceGuardTests": 11,
+    "sourceGuardRefusals": 10,
+    "originalPublicationSchemaTests": 20,
+    "browserRuns": 0,
+    "hostedRuns": 0
+  },
+  "pending": [
+    "Independent controls/QA static acceptance",
+    "Freeze exact helpers",
+    "Actual two-engine two-phone post-integration refresh QA",
+    "Six integration acceptances",
+    "Actual hosted deployment verification and six visual acceptances",
+    "Exact remote publication gate"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "status": "all_six_reviews_accepted",
+  "recordedAt": "2026-10-08T12:25:26.772266+00:00",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "runtimeFiles": 231,
+  "factualChanges": 0,
+  "structuralChanges": 0,
+  "unchangedOtherRuntimeFiles": 228,
+  "incomingAudit": "qa/team-details/incoming-source/fbe4167ff9ad-data-classification.json",
+  "incomingAuditSha256": "d4cc8b18ad51e35eda943aa6326920ec4cbb9ae2235e25f010930040a3962697",
+  "reviewers": [
+    {
+      "name": "team_visual_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/visual.json",
+      "evidenceSha256": "1aa2665bab046f803dafabf748561564e0f3746eead6e561d18eb523de84ba48"
+    },
+    {
+      "name": "team_data_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/data.json",
+      "evidenceSha256": "63155b50af44fc9c2913130b852a38a01c4cd8c7685a5fbb7346d1d73ce35726"
+    },
+    {
+      "name": "team_assets_motion_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/assets-motion.json",
+      "evidenceSha256": "601faaa66f89525f9fa4a09a86d2db9ae84b878ac8d3c417c0c2c96f654a60e4"
+    },
+    {
+      "name": "team_controls_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/controls.json",
+      "evidenceSha256": "b0aa1f3ec39c29c16f3e8dfe8c5e9a2070824059880604f0f896840657ce590b"
+    },
+    {
+      "name": "team_qa_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/qa.json",
+      "evidenceSha256": "bef82dbf1db1c801e53d7142f2763bf9daf9091d506a002f72cf01d03ad4f3c4"
+    },
+    {
+      "name": "team_recovery_sources_audit",
+      "decision": "accepted",
+      "evidence": "qa/team-details/reviews/integration/sources.json",
+      "evidenceSha256": "c808160a5c70fade7c14e7e111b684c607f875a7eaccf391e0db7f5390025d66"
+    }
+  ],
+  "targetedNativeRefreshChecks": [
+    {
+      "file": "qa/team-details/refresh-integration/local-chromium-actionable-fbe/results.json",
+      "sha256": "ad67e797a1128a259b18db6886ba319ccaeec31983a896d2f9c4bdd8c07f8879",
+      "status": "passed"
+    },
+    {
+      "file": "qa/team-details/refresh-integration/local-webkit-actionable-fbe/results.json",
+      "sha256": "dae6f763a1c82d1c9d4b3c3c9e0460dbee53c0c00e10d5942ab6f229d46e5be2",
+      "status": "passed"
+    }
+  ],
+  "commonOriginals": {
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-430x896-metadata-refreshed.png": "c8fccd042594cf7e5354b677bc2d75097ed78b6b77a6bc593652ad72358d852a",
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-393x852-metadata-refreshed.png": "566bcca444c5cabaf292f6752691710f6dce93c6b68024620bbce536eeff5184",
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-393x852-metadata-refreshed.png": "179ed958519e03d26441ebd62b8d2e64246055433b6993c5bfa28f219f3d519f",
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/team-430x896-metadata-refreshed.png": "018f96ece72aa546b56f9746a4fb613415537f795f40d2a8714c83dff9f08ccb",
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/nfl-393x852-metadata-refreshed.png": "aa3f625e1ceb41cd3784f933507ce1aaefc5b5b9a62d157866ec129cad92e515",
+    "qa/team-details/refresh-integration/local-chromium-actionable-fbe/home-430x896-metadata-refreshed.png": "50cfbf706f62d0de7f3a8d96307dbe0121187884be4c471ae397df000e037a36",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-430x896-metadata-refreshed.png": "83ac88eae888af9590db5ab7789d1039b13cfb9995e2fb37883d43dfc7af0a66",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-393x852-metadata-refreshed.png": "78f10f93caf4f9900fa2b1c08a79ccbdcc0283f1c9f432c000341e0fb8de2271",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-393x852-metadata-refreshed.png": "ea5e5de6092a28bbdba2340c2b3bf1c2ad6e041618b007848a9a50b7d602c6cd",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/team-430x896-metadata-refreshed.png": "ecfce058606b9d15cc114e0ce66e267bf911729bd1e7cb2426b55fff8db148fa",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/nfl-393x852-metadata-refreshed.png": "d8ba0d6c131b6e7d27f668da3498698aa0963d0772cde4b0833e4a1ad4052689",
+    "qa/team-details/refresh-integration/local-webkit-actionable-fbe/home-430x896-metadata-refreshed.png": "2f27b64009607a751f519288227f68c357bda7a203d7385b2ecce98627e9660e"
+  },
+  "qualification": "Completed targeted integration acceptance after the separately preserved full six-agent local/protected suites. The retained native393 detached pre-scroll failure and premature blank capture are excluded; actual native input uses its own actionability and all final captures settle naturally. All reviewers are AI agents; no registered reference pixel identity or physical-device FPS claim."
+}
