@@ -90,7 +90,14 @@
    its own positions rather than the former repeated centre-top/centre-bottom
    star sticker. The emission remains visible between gentle native pulses. */
 .page[data-page="nfl"] .nfl-framed::after {
+  content: none;
+  animation: none;
+}
+.page[data-page="nfl"] .nfl-frame-glints {
+  position: absolute;
   inset: -10px -4px;
+  z-index: 6;
+  pointer-events: none;
   background: url("nfl-dashboard/light-flare.svg") no-repeat,
     url("nfl-dashboard/light-flare.svg") no-repeat;
   background-size: 20px 20px, 18px 18px;
@@ -269,7 +276,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page[data-page="nfl"] .nfl-framed::after,
+  .page[data-page="nfl"] .nfl-frame-glints,
   .page[data-page="nfl"] .nfl-league-medallion::before,
   .page[data-page="nfl"] .nfl-ambient-light,
   .page[data-page="nfl"] .nfl-ambient-light::before,
@@ -284,7 +291,7 @@
     animation: none !important;
     will-change: auto;
   }
-  .page[data-page="nfl"] .nfl-framed::after { opacity: .84; }
+  .page[data-page="nfl"] .nfl-frame-glints { opacity: .84; }
   .page[data-page="nfl"] .nfl-league-medallion::before { opacity: .62; }
   .page[data-page="nfl"] .nfl-ambient-light { opacity: .62; }
   .page[data-page="nfl"] .nfl-ambient-light::before { opacity: .74; transform: none; }

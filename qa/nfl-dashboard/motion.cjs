@@ -1,5 +1,6 @@
 'use strict';
 const assert = require('node:assert/strict');
+const { createHash } = require('node:crypto');
 const { NFL, active, ready } = require('./qa.cjs');
 
 async function native(page) {
@@ -24,6 +25,7 @@ async function native(page) {
     return {
       state:n.dataset.nflMotionState,
       reason:n.dataset.nflMotionReason,
+      documentState:{ visibility:document.visibilityState, hasFocus:document.hasFocus() },
       page:{ opacity:Number(style.opacity), transform:style.transform, rect:pageRect },
       zones:zoneElements.map((z,i) => ({ i, visible:z.dataset.nflMotionVisibility,
         visibleGeometry:visibleGeometry(z), label:z.getAttribute('aria-label') || z.className })),
@@ -75,11 +77,28 @@ function assertVisibleClockAdvance(first, second, label, requireMedallion) {
 }
 
 async function naturalPair(page,label,requireMedallion) {
+  // Browser contexts can leave WPE's renderer in a background page even when
+  // document.visibilityState says visible. Use its real foreground operation.
+  await page.bringToFront();
+  // WPE can expose updated DOM geometry while its foreground compositor has
+  // not yet painted or delivered scroll/animation events. Commit a real
+  // browser render before sampling its naturally advancing native clocks.
+  // This does not inject styles, restart animations or write currentTime.
+  await page.screenshot({animations:'allow',timeout:30000});
   await page.waitForTimeout(220);
+  const paint = await page.screenshot({animations:'allow',timeout:30000});
   const first = await native(page);
   await page.waitForTimeout(380);
+  const laterPaint = await page.screenshot({animations:'allow',timeout:30000});
   const second = await native(page);
-  return { first, second, assertions:assertVisibleClockAdvance(first,second,label,requireMedallion) };
+  const paintHash = createHash('sha256').update(paint).digest('hex');
+  const laterPaintHash = createHash('sha256').update(laterPaint).digest('hex');
+  assert.notEqual(paintHash,laterPaintHash,`${label}: actual naturally painted illumination changes between frames`);
+  return { first, second, foregroundPaint:{bytes:paint.length,
+    sha256:paintHash,laterBytes:laterPaint.length,laterSha256:laterPaintHash,
+    naturalPixelChangeVerified:true,
+    qualification:'Genuine foreground browser frames at both natural clock samples; no animation seeking or injected styles'},
+    assertions:assertVisibleClockAdvance(first,second,label,requireMedallion) };
 }
 
 async function motion(page,base) {
@@ -112,7 +131,8 @@ async function motion(page,base) {
   await page.evaluate(() => window.addEventListener('pagehide',() => {
     const n=document.querySelector('.page[data-page="nfl"]');
     sessionStorage.setItem('__nfl_qa_pagehide',JSON.stringify({state:n.dataset.nflMotionState,
-      reason:n.dataset.nflMotionReason,running:n.getAnimations({subtree:true})
+      reason:n.dataset.nflMotionReason,
+      documentState:{ visibility:document.visibilityState, hasFocus:document.hasFocus() },running:n.getAnimations({subtree:true})
         .filter(a => (a.animationName || '').startsWith('nfl-') && a.playState === 'running').length}));
   }));
   await page.goto('about:blank');

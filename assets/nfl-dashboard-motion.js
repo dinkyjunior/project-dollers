@@ -11,15 +11,25 @@
   let pageSuspended = false;
   let inViewport = true;
   let queued = false;
+  let geometryQueued = false;
 
-  const zoneObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      entry.target.dataset.nflMotionVisibility = entry.isIntersecting && entry.intersectionRatio > 0 ? 'in' : 'out';
-    }
+  const zoneObserver = 'IntersectionObserver' in window ? new IntersectionObserver(() => {
+    // WebKit can retain the earlier hidden-route intersection of a masked
+    // scroll root. Read its actual clipping rectangles when the observer fires.
     syncMotion();
   }, { root: nfl.querySelector('.page-scroll'), threshold: [0, .01] }) : null;
 
   function reconcileZones() {
+    // A real decorative layer keeps WebKit's join-light clock independent of
+    // an asynchronously created panel pseudo-element. It has no layout box
+    // in flow and never contains or transforms factual content.
+    nfl.querySelectorAll('.nfl-framed').forEach(frame => {
+      if ([...frame.children].some(child => child.classList.contains('nfl-frame-glints'))) return;
+      const glints = document.createElement('span');
+      glints.className = 'nfl-frame-glints';
+      glints.setAttribute('aria-hidden', 'true');
+      frame.append(glints);
+    });
     for (const zone of zones) {
       if (zone.isConnected && nfl.contains(zone)) continue;
       if (zoneObserver) zoneObserver.unobserve(zone);
@@ -30,6 +40,38 @@
       zones.add(zone);
       zone.dataset.nflMotionVisibility = zoneObserver ? 'out' : 'in';
       if (zoneObserver) zoneObserver.observe(zone);
+    });
+  }
+
+  function refreshZoneGeometry() {
+    if (!nfl.isConnected || nfl.hidden || !nfl.classList.contains('active') || document.hidden || pageSuspended) return;
+    const pageRect = nfl.getBoundingClientRect();
+    const scroller = nfl.querySelector('.page-scroll');
+    const scrollRect = scroller.getBoundingClientRect();
+    inViewport = Math.min(pageRect.right, innerWidth) > Math.max(pageRect.left, 0) &&
+      Math.min(pageRect.bottom, innerHeight) > Math.max(pageRect.top, 0);
+    const left = Math.max(pageRect.left, scrollRect.left, 0);
+    const top = Math.max(pageRect.top, scrollRect.top, 0);
+    const right = Math.min(pageRect.right, scrollRect.right, innerWidth);
+    const bottom = Math.min(pageRect.bottom, scrollRect.bottom, innerHeight);
+    for (const zone of zones) {
+      const r = zone.getBoundingClientRect();
+      const visible = !zone.closest('[hidden]') && r.width > 0 && r.height > 0 &&
+        Math.min(r.right, right) > Math.max(r.left, left) &&
+        Math.min(r.bottom, bottom) > Math.max(r.top, top);
+      const state = visible ? 'in' : 'out';
+      if (zone.dataset.nflMotionVisibility !== state) zone.dataset.nflMotionVisibility = state;
+    }
+  }
+
+  function scheduleGeometrySync() {
+    if (geometryQueued) return;
+    geometryQueued = true;
+    // Coalesce real layout/scroll events in one microtask. This callback never
+    // schedules itself and never drives or seeks the native light clocks.
+    queueMicrotask(() => {
+      geometryQueued = false;
+      syncMotion();
     });
   }
 
@@ -68,6 +110,7 @@
   }
 
   function syncMotion() {
+    refreshZoneGeometry();
     let reason = 'active';
     if (reducedMotion.matches) reason = 'reduced-motion';
     else if (pageSuspended) reason = 'pagehide';
@@ -96,6 +139,7 @@
       queued = false;
       reconcileZones();
       syncMotion();
+      scheduleGeometrySync();
     });
   }
 
@@ -112,10 +156,22 @@
   }
   document.addEventListener('visibilitychange', syncMotion);
   window.addEventListener('pagehide', () => { pageSuspended = true; syncMotion(); });
-  window.addEventListener('pageshow', () => { pageSuspended = false; syncMotion(); });
+  window.addEventListener('pageshow', () => { pageSuspended = false; syncMotion(); scheduleGeometrySync(); });
+  window.addEventListener('resize', scheduleGeometrySync, { passive: true });
+  nfl.querySelector('.page-scroll').addEventListener('scroll', scheduleGeometrySync, { passive: true });
+  if ('ResizeObserver' in window) {
+    const resizeObserver = new ResizeObserver(scheduleGeometrySync);
+    resizeObserver.observe(nfl);
+    resizeObserver.observe(nfl.querySelector('.page-scroll'));
+  }
+  if (document.fonts) {
+    document.fonts.ready.then(scheduleGeometrySync);
+    document.fonts.addEventListener('loadingdone', scheduleGeometrySync);
+  }
   if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', syncMotion);
   else reducedMotion.addListener(syncMotion);
 
   reconcileZones();
   syncMotion();
+  scheduleGeometrySync();
 })();
