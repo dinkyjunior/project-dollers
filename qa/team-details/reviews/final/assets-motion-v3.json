@@ -1,0 +1,458 @@
+{
+  "status": "accepted",
+  "agent": "team_assets_motion_audit",
+  "auditedAt": "2026-10-08T11:06:22.966581+00:00",
+  "scope": "Independent prepublication local assets, premium materials/crops, motion/lifecycle and review of completed real-control/source evidence. Hosted release verification remains a separate required gate.",
+  "runtimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+  },
+  "runtimeFiles": 231,
+  "runtimeMatchesDuringReview": true,
+  "dataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "reference": "User-attached Dallas team-details/Form chat render, 8 October 2026; approved Home diamond button addition. Chat render is visual authority; reference binary was unavailable for exact registered pixel comparison.",
+  "assets": {
+    "provenance": {
+      "file": "assets/team-details/asset-provenance.json",
+      "sha256": "ded8df249626201b77e86c7cd931d3d7828ba503707432c5d57cb09a63ccac1c"
+    },
+    "files": [
+      {
+        "path": "assets/team-details/dal.svg",
+        "classification": "Official NFL-hosted Dallas Cowboys team identity SVG; team trademark retained as identity artwork, not newly generated branding.",
+        "bytes": 852,
+        "sha256": "205d673b664c1641b0fad2d8d7a87aa2963d8d38d4d96764844a035ffd5045ac",
+        "transformation": "Original response bytes, unchanged. No rasterization, enlargement or path tracing."
+      },
+      {
+        "path": "assets/team-details/home-control-nfl.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "327b929fe88569a3921a6c135e926ecff5287f53f1aa41079f71e00f960a4ba9",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-nba.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "0a6dcd9865531ef80f8baf40c4760f420276694f05c05db5b0dff49d91863b79",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-nrl.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "c59d23d85705bdac5253e69716bf280e69a0d20c23639e9ff4fe04e179baf0a1",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/home-control-ufc.svg",
+        "classification": "Original native-vector decorative control housing using existing approved NFL chamfer/frame language. Independent from the live Home button label, icon and behaviour.",
+        "bytes": 1500,
+        "sha256": "b9850f51517f98fb4a5597265df308e709ea02d4d688fbe3701bc9a8ac6b70e1",
+        "transformation": "Native SVG path and gradient geometry, nine-slice CSS border-image. No bitmap enlargement or flattened UI screenshot."
+      },
+      {
+        "path": "assets/team-details/tb.svg",
+        "classification": "Official NFL-hosted Tampa Bay Buccaneers team identity SVG; original genuine trademark art, independently overlaid on equipment.",
+        "bytes": 82207,
+        "sha256": "c22a1d7344ab0ec5fabd2fbdecd94edef48af9173819aae5856b518e495e5c8c",
+        "transformation": "Original response bytes, unchanged. No rasterization, enlargement or tracing."
+      },
+      {
+        "path": "assets/team-details/helmet-tb-decorative.webp",
+        "classification": "Generated decorative unbranded empty football equipment. Not an official photograph, authentic product image, verified helmet model or player image.",
+        "bytes": 442164,
+        "sha256": "60420d2f2b9ab4eac778ec0236bbc9cba986e541cc1f477444a871c2c093d1f4",
+        "transformation": "ImageMagick/libwebp native-size quality93 compression, alpha-quality100. Original full-resolution PNG preserved outside repository. No enlargement, crop, stretch or rasterized team mark."
+      }
+    ],
+    "totalNewAssetBytes": 531223,
+    "localAndHashVerified": true,
+    "noActiveOrExternalSVGContent": true,
+    "genuineIdentityVectors": [
+      "DAL",
+      "TB"
+    ],
+    "helmet": "Decorative unbranded empty equipment at native 1254x1254; separately overlaid unchanged genuine official TB vector. Explicitly not an official photograph, authentic product model, player identity or face. No enlargement, crop or stretch."
+  },
+  "visualReview": {
+    "beforeViewed": [
+      {
+        "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+        "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/team-430x896-full-content.png",
+        "sha256": "466c92770b35c4d9e5ad0f4981ee497954bebfa0c8141b264dea34c8f8180670"
+      }
+    ],
+    "afterViewed": [
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-393x852-full-content.png",
+        "sha256": "0a02547d5816d9d294a2b54e35afc10ed804c83a88c94902ff15693de93a1606"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/home-393x852-diamond.png",
+        "sha256": "d992659377b14ec394681f0d8f0004a991b807e4b131d915bfcba529afd0b6cc"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-top.png",
+        "sha256": "8f1451735bff5d59563c5ca78134f49b2f1586a18151fd449107c4ac49ac9bd9"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-mid.png",
+        "sha256": "923e261f982fb64f6bb0f583a3d3af72d1c52e50c721fa8b8f837c9983484fee"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-bottom.png",
+        "sha256": "c4b2fd3f533eadf7903d1f45c9222410b3c10f818eb26d6a51f04eb2ef7b8a9f"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-final.png",
+        "sha256": "3faa93052f5ade42a5bedbe7bae4ae32f5a668386ae7749124455e5bb86ac881"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/home-393x852-diamond.png",
+        "sha256": "008482e91a8a4e6f9b3a1d806ac42edc3ae911334cdf8c3d2e768bd0b0e5293f"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-430x896-full-content.png",
+        "sha256": "f5b1c872ed3a45fb74a2cc5d44c67056910a88c1389f8f634b3d346ea7871f95"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/home-430x896-diamond.png",
+        "sha256": "27546cb7431b0a83c7af973c42843b9bd05ebadd9c003f322c0b9a44649181bd"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-top.png",
+        "sha256": "cd4f8c05b6bb9ea2046c6941be2b4a957e5c8bdf5c18ae28f627cd1f9c4ec43f"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-mid.png",
+        "sha256": "acb4e0ec6351de9321c4bc341943288662bf13ab23b42cbaf5596b5e9e11fd08"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-bottom.png",
+        "sha256": "d35cd4b338ce2de68a56078d78b5f055de7f749ccb452110513a81f195240e55"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-final.png",
+        "sha256": "4c526da9947648d020ad0a828ce9d0fe57e75d7a36e3e2bc99e87c42f7985d43"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/home-430x896-diamond.png",
+        "sha256": "4315f9020b2ce726f5c97cc2e5d1c7afe52763dc74c0bdf177f8c07d0153d841"
+      }
+    ],
+    "findings": [],
+    "improvement": "The flat opponent flag now has full equipment silhouette and depth. The complete facemask clears the CTA at both widths; Back to Ladder is one line with a left arrow; corrected stat columns and prior-season badge do not wrap. Crops restore green field behind identity and opponent. Native gold/cyan hardware, sharp local brand/marks, diamonds, white typography, every lower action and all numeric panels remain aligned and readable. Home has only the approved diamond CTA addition.",
+    "comparisonQualification": "Physically inspected actual originals against approved chat attachment. Source reference binary was unavailable, so no registered pixel identity or exact replica percentage is claimed."
+  },
+  "completedQA": [
+    {
+      "file": "qa/team-details/local-chromium-final-v3/results.json",
+      "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46",
+      "scope": "Fresh complete team controls/assets/native-motion audit",
+      "engine": "chromium",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "a952737b00d9ffd3ac5ddf96d76a07b6f94cf31f52defe8065ec739b952c382a",
+              "laterSha256": "86806946779846c647e10545c860dc072bd735ec79deb0bfc20d093b1211b78e",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "reduced",
+              "reason": "reduced-motion"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "7bfba4e6e92bc20eaa05f9a1330f7360fcc99fd9706bbc3028dd02925850a928",
+              "laterSha256": "cc384b4244a82a486429b33bf0b5ea7114027279be239090ca48570655390f09",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "reduced",
+              "reason": "reduced-motion"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/regression-chromium-final-v3/results.json",
+      "sha256": "55da944ae4baaa4e470c519226d84edf5065420fa7d56b2b6f11d7d1042e39d2",
+      "scope": "Complete protected legacy regression including expanded whole-card football path",
+      "engine": "chromium",
+      "runtimeBinding": {
+        "file": "qa/team-details/regression-chromium-final-v3/runtime-binding.json",
+        "sha256": "21ceff15567e11944fd4395ccb7e39824afd897d58b4af5837037f73873cb2aa"
+      },
+      "testHelperSha256": "74a74e5d4f427fbbcd4631ddec4d3f886ec0c23919b505db90d4623e8cc946f2",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.22052001953125,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.22112877296825587,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 700
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.20267777662522116,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.2406005859375,
+          "maxLightPhaseDifferencePercentagePoints": 2.22045e-14,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.2406005859375,
+          "maxLightPhaseDifferencePercentagePoints": 2.22045e-14,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/results.json",
+      "sha256": "35b9d9c471f3d0000fac14f1e680a7d6e7d930d107e9926577de19a416c49e39",
+      "scope": "Fresh complete team controls/assets/native-motion audit",
+      "engine": "webkit",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "708c82d809ea37b24ede5e8a72c116f0735b576bcc5800fcd9b314b7f45ee4c4",
+              "laterSha256": "0606fe5ce740d95be4d5999bb3a7afaffc3ef8b150ddeb7f7dc3508dab5900e7",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "running",
+              "reason": "active"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeInteractions": 312,
+          "observedControls": 83,
+          "exercisedControls": 83,
+          "unchangedRefreshKeepsDOM": true,
+          "unchangedRefreshKeepsFocus": true,
+          "nativeMotion": {
+            "visibleAdvancingClocks": 17,
+            "unmodifiedPaint": {
+              "sha256": "8c3f9e9bf37297d1794ebab20b6223e3ef1a7a09b2ecbca3abee50c143e5c986",
+              "laterSha256": "9f1b44dd0678c8fb0e5332e6b8ccfd1de5a7596e36b464394103a529a019886c",
+              "actualNaturalPixelChange": true
+            },
+            "reducedMetadata": {
+              "state": "running",
+              "reason": "active"
+            },
+            "reducedRunningClocks": 0,
+            "inactiveRunningClocks": 0,
+            "inactiveState": "paused"
+          }
+        }
+      ]
+    },
+    {
+      "file": "qa/team-details/regression-webkit-final-v3/results.json",
+      "sha256": "6f7b9c07cf53d82ed640682e65b64a9ead81e97989098399adf28e3966554849",
+      "scope": "Complete protected legacy regression including expanded whole-card football path",
+      "engine": "webkit",
+      "runtimeBinding": {
+        "file": "qa/team-details/regression-webkit-final-v3/runtime-binding.json",
+        "sha256": "403e4534a127da1e2e3d7b0807525afce92bbea6fe6e39a76c7478d6ba24b7f0"
+      },
+      "testHelperSha256": "74a74e5d4f427fbbcd4631ddec4d3f886ec0c23919b505db90d4623e8cc946f2",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.0002441409815216628,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "defaultAndExpandedCardRecords": 10,
+          "maxTrackDistancePx": 0.0002441410906608432,
+          "maxLightPhaseDifferencePercentagePoints": 0,
+          "samplesPerCard": 32,
+          "allFourWholeCardEdges": true
+        }
+      ]
+    }
+  ],
+  "sourceReview": {
+    "file": "qa/team-details/reviews/sources/final-refresh-review.json",
+    "sha256": "4496d73b9de00427c338f735cc69c3a6c7900b4f63b9c4b093fb24c3d96ff83e"
+  },
+  "independentDisplayArithmetic": {
+    "file": "qa/team-details/reviews/assets-motion-data-recompute.json",
+    "sha256": "8587b7cb77724bac0561bd8853a06d8f1a6dc7132a7dd01f95b6baf2641038d3"
+  },
+  "legacyMotionDiagnosis": {
+    "file": "qa/team-details/reviews/motion-probe-cold/receipt.json",
+    "sha256": "db93787c32e40eabc2a3bcc2679d434da2b39896b9d73c3b956879d4bd68132c"
+  },
+  "originalFailuresPreserved": [
+    {
+      "file": "qa/team-details/regression-webkit-final/results.json",
+      "sha256": "6d280d15b9f55adbe8a86ad2e42d4b6c8ddc7636f81dd47e450e40e5f647a4bd"
+    },
+    {
+      "file": "qa/team-details/regression-webkit-final-v2/results.json",
+      "sha256": "114e09396f34d24846b65435da5b5a8c692000bd06c71c4263dceaa031e36884"
+    }
+  ],
+  "qualifications": [
+    "The screenshot test helper had revived cancelled fallback animations; paired native/cold/safe-resume diagnostics proved this. Only the test capture restore was corrected; production football bytes and 32-point assertion thresholds were not relaxed.",
+    "WebKit reduced-media emulation may preserve running/active metadata while actual infinite clocks are empty. Acceptance is based on genuine zero running clocks, not uniform metadata or an unproved emulation cause.",
+    "Actual native natural animation clocks and different unmodified foreground paint hashes are recorded separately from controlled legacy phase measurements.",
+    "Mobile browser emulation and native WPE WebKit are not physical iPhone/Safari-toolbar/FPS certification.",
+    "Provider verification is attributed to the independent source specialist report; this agent independently recomputed the committed selected-game display values.",
+    "No source-provider live-push relay is connected; source freshness and unavailable fields retain the documented limitations."
+  ],
+  "hostedVerification": "pending separate root deployment/live-site gate",
+  "operationalSupervision": {
+    "qualification": "Operational bounded watchdog extension only; accepted QA evidence comes from the unchanged native Node job completing both phones and the original wrapper reaping its real exit. No assertion or browser action was altered. Original watchdog 2400s was explicitly extended to 4800s from the same original start; the wrapper truthfully recorded elapsed 2833.9s and exit0.",
+    "originalWrapperExit": {
+      "file": "qa/team-details/local-webkit-final-v3-process/exit.json",
+      "sha256": "b2073297cd03ef3788cac81f7e6a0286990c74e9ddcf588432bdfa3f298613e6"
+    },
+    "receipts": [
+      {
+        "file": "qa/team-details/local-webkit-final-v3-process/external-supervision/exit.json",
+        "sha256": "f06aa5bb6cbc1575492264153c0b012d944aaebc528cb16cf9c3668d52d63b3c"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3-process/external-supervision/heartbeat.json",
+        "sha256": "1a807b3d9cd7bdd999b01fe1cd07572e7ce511ba3471cbc0c2c2175dbd811c5c"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3-process/external-supervision/started.json",
+        "sha256": "eb95e13ad391fcd9a6a7119735569ac1e51b4ff42fa355be0347a42d5f6e7081"
+      }
+    ]
+  }
+}

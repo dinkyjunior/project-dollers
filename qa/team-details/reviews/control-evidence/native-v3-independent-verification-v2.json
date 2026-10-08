@@ -1,0 +1,53 @@
+{
+  "status": "passed-evidence-review",
+  "agent": "team_controls_audit",
+  "auditedAt": "2026-10-08T11:06:52.865318+00:00",
+  "method": "Read-only independent Python recomputation from actual frozen source JSON; recorded browser expected fields were not trusted.",
+  "reports": [
+    {
+      "file": "qa/team-details/local-chromium-final-v3/results.json",
+      "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46",
+      "status": "passed",
+      "completedAt": "2026-10-08T10:07:19.879Z",
+      "scenarios": 4
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/results.json",
+      "sha256": "35b9d9c471f3d0000fac14f1e680a7d6e7d930d107e9926577de19a416c49e39",
+      "status": "passed",
+      "completedAt": "2026-10-08T10:54:27.168Z",
+      "scenarios": 2
+    }
+  ],
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+    "files": 231
+  },
+  "datasetSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "sourceUIReceipt": {
+    "file": "qa/team-details/reviews/sources/source-ui-refresh-final-audit.json",
+    "sha256": "48f4c0d616c55c6dc4ecb9588cb19f67b4f9a2c4a7448407800dbff2eae3fb0b"
+  },
+  "independentRoutesReceipt": {
+    "file": "qa/team-details/reviews/control-evidence/independent-32-final-fe69378e/results.json",
+    "sha256": "0707f305cfd5d5bc9a9c26e02fbd3184b63dc4759043d8643d61e3f5ced05e62"
+  },
+  "counts": {
+    "cases": 6,
+    "recordedInputs": 1872,
+    "nativeButtonInputs": 1308,
+    "nativeTouches": 872,
+    "pointerClicks": 436,
+    "nativeOptionSelections": 564,
+    "separatePlayerOpenCloseInputs": 996,
+    "filterCases": 144,
+    "yardCells": 1728,
+    "snapshotCells": 1728,
+    "reportCells": 2160,
+    "playerHistoryCells": 6792,
+    "sourceCitations": 62
+  },
+  "qualifiedCounts": "312 recorded interactions per scenario =218 native touches plus94 native option selections.83 disclosures add166 separately observed open/close inputs per scenario. Desktop inputs are pointer clicks.",
+  "protectedNativeGate": "Pending completed protected regression report; no deployment or protected-page acceptance is claimed by this read-only evidence review."
+}

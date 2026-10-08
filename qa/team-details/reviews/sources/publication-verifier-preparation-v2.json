@@ -1,0 +1,201 @@
+{
+  "status": "prepared_not_release_acceptance",
+  "preparedAt": "2026-10-08T10:37:10.398654+00:00",
+  "agent": "team_recovery_sources_audit",
+  "publicationAcceptanceAttempted": false,
+  "verifier": {
+    "file": "qa/team-details/verify-publication.py",
+    "sha256": "110f85b9f3e99fdcdde57f1289c6c53e6b2de78df966d8664206f0b65559dd0c"
+  },
+  "selfTestQualification": "17 isolated schema/refusal tests passed (15 refusal cases and two marked valid-shape fixtures); no actual hosted or browser acceptance from fixtures.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+    "runtimeFiles": 231
+  },
+  "retainedDallasDataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "incomingAudit": {
+    "file": "qa/team-details/incoming-source/cddbe11d4348-data-classification.json",
+    "sha256": "b01db93d70bab8a17d9b79f9e6c89daf450f8523e5bdbdd67f5dd747c50207f7",
+    "baselineCommit": "cedf2ffbb9f313c2aa5f0f6d4246eb34a4c2d195",
+    "incomingCommit": "cddbe11d43480a62d98d41dff2388de4179cace6",
+    "metadataLeafChangesIndependentlyMatched": 1824,
+    "categories": {
+      "metadata-timestamp": 1638,
+      "metadata-content-hash": 175,
+      "metadata-source-validator": 11
+    },
+    "footballChanges": 0,
+    "structureChanges": 0,
+    "files": [
+      {
+        "file": "assets/data/current.json",
+        "beforeSha256": "7eb94f6f5dd1cf84561b131a95e6d896d2bbe0292417b41cc0b09de11da229ac",
+        "afterSha256": "8d520535d35392eb5585baf927186192efdde16eafddef531c36dd8dd09534b3",
+        "metadataLeaves": 371
+      },
+      {
+        "file": "assets/data/player-history.json",
+        "beforeSha256": "36f80326de871a91e124774b979e474253cb38e8f6d26c0654a92efd7a64682a",
+        "afterSha256": "2d47c812d1e0b4266702f6abda3f17043f06fe301c83cbac1ad57a376b992e23",
+        "metadataLeaves": 1420
+      },
+      {
+        "file": "assets/data/provenance.json",
+        "beforeSha256": "32492be2c491069843d2b3d9ac5f52d69ec3a6ba33a45a2f6bfdf8bb3fb4aad2",
+        "afterSha256": "0ba5a74ea4f89e227432a31d8429360cd74bccb6b6e224a424f598d1d973084f",
+        "metadataLeaves": 33
+      }
+    ]
+  },
+  "sharedProviderReceipts": [
+    {
+      "id": "nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "sha256": "c96ae6673e2eb8f99ee9eb866dfc96e99466ce4baf7c3f349eb0764aacd75e9b",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "sha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "sha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "sha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_player_stats_2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "sha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "status": "verified"
+    },
+    {
+      "id": "nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "status": "verified"
+    }
+  ],
+  "DallasRecordAgreesAcrossCurrentAndRetainedDetails": true,
+  "actualCompletedChromiumV3SchemaCheck": {
+    "file": "qa/team-details/local-chromium-final-v3/results.json",
+    "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46",
+    "viewports": [
+      [
+        393,
+        852
+      ],
+      [
+        430,
+        896
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1440,
+        1000
+      ]
+    ],
+    "retainedHelperFiles": [
+      "qa/home-gate.cjs",
+      "qa/hosted-webkit.cjs",
+      "qa/nfl-dashboard/qa.cjs",
+      "qa/team-details/controls.cjs",
+      "qa/team-details/qa.cjs",
+      "qa/team-details/run.cjs"
+    ],
+    "status": "passed"
+  },
+  "targetedRefreshCompatibility": {
+    "helper": "qa/team-details/post-refresh.cjs",
+    "helperSha256": "dc18f986ab771e2db853e6bba37ea4a1c9c6dfeebf40b8393f62de9519fe3a9b",
+    "actualRunnerSchemaInspected": true,
+    "requiredPhones": [
+      [
+        393,
+        852
+      ],
+      [
+        430,
+        896
+      ]
+    ],
+    "fieldsChecked": [
+      "transition source and 231 runtime hashes",
+      "four actual sourceBodies",
+      "team and current exactRevalidation HTTP200 hashes",
+      "six DOM identities, event.changed=false and filter context",
+      "exact dataset source URLs and disagreements",
+      "published current retrieval timestamp",
+      "PIT linked-history checksum",
+      "tabs, season schedule, report and geometry"
+    ],
+    "noCompletedTargetedRunClaim": true,
+    "desktopScope": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "hostedOnly": true,
+      "fullPhoneReportsStillRequired": true,
+      "nativeInput": "pointer",
+      "maximumAppFrameWidth": 400.5,
+      "requestedViewportsMustMatchExecutedCases": true
+    }
+  },
+  "portableOriginalApplication": {
+    "expectedRef": "refs/tags/team-details-reviewed-fe69378e",
+    "requirement": "Actual GitHub lightweight commit ref must equal original applicationCodeHead before and after byte verification; no tag created by auditor."
+  },
+  "stillRequired": [
+    "actual completed two-phone native WebKit v3 functional report",
+    "all six distinct current-candidate release receipts",
+    "actual three-file metadata integration and both completed native targeted reports",
+    "all six hosted visual receipts",
+    "actual hosted full browser reports",
+    "exact branch refs and preserved reviewed application tag",
+    "all three jobs of final and application Pages runs",
+    "strict-TLS byte comparison of all 231 runtime files and selected evidence"
+  ],
+  "supersedesPreparationWithinScope": {
+    "file": "qa/team-details/reviews/sources/publication-verifier-preparation.json",
+    "sha256": "172e25a208c412f986442f40167d02eeab6c11ce34c68eefccc9238708eba9db",
+    "qualification": "Historical two-phone preparer receipt remains preserved; this receipt adds separately qualified hosted desktop smoke support."
+  },
+  "helperExtensionIndependentReview": {
+    "expectedSha256": "dc18f986ab771e2db853e6bba37ea4a1c9c6dfeebf40b8393f62de9519fe3a9b",
+    "actualSha256": "dc18f986ab771e2db853e6bba37ea4a1c9c6dfeebf40b8393f62de9519fe3a9b",
+    "defaultPhonesUnchanged": true,
+    "existingSourceAndDOMAssertionsRetained": true,
+    "desktopInputContext": "isMobile:false / hasTouch:false / genuine locator.click",
+    "independentSelectionTests": {
+      "validDefault": true,
+      "validDesktop": true,
+      "invalidSelectionsRejected": 4,
+      "browserInvoked": false
+    },
+    "retainedSixV3HelperHashesUnchanged": true
+  },
+  "schemaDocumentation": {
+    "file": "qa/team-details/reviews/sources/publication-verifier-schema.md",
+    "sha256": "ed1951d88b2aa1b8dd6ba6951c80423ef7d5fc77be9a846e4f9295b813a288df"
+  }
+}

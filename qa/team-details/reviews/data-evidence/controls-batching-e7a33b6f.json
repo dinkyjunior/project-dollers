@@ -1,0 +1,46 @@
+{
+  "status": "static-review-passed-browser-acceptance-pending",
+  "reviewer": "team_data_audit",
+  "reviewedAt": "2026-10-08T09:56:03.349403+00:00",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+  },
+  "originalHelper": {
+    "file": "qa/team-details/controls.cjs",
+    "sha256": "571f85bfffca3b5862f09c362e558e35445b55cc2ab0cae40a6de6d170bc6a61"
+  },
+  "candidateHelper": {
+    "file": "qa/team-details/controls-batched-candidate.cjs",
+    "sha256": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797"
+  },
+  "sourceCalculationsPrefixByteIdentical": true,
+  "syntaxCheck": {
+    "command": "node --check qa/team-details/controls-batched-candidate.cjs",
+    "exitCode": 0
+  },
+  "independentlyReviewedAreas": [
+    "All native input expressions and loops retained; read-only attributes/enabled reads parallelized after native scrolling",
+    "Exact yard and snapshot metric uniqueness, finite/null numeric comparisons, unchanged tolerances and coverage assertions retained",
+    "Row DOM and public selected-game IDs read atomically, with independent eligibility/order/score/season/week checks retained",
+    "Dialogs retain native visibility wait, focus and overflow; explicit global title/content uniqueness replaces strict locator uniqueness",
+    "Tabs retain selected/tabindex/controls/selected-count, observed controls, overflow and separate native panel isVisible check",
+    "Reports retain activated event ID, all nine metric rows and both teams\u2019 exact source values",
+    "All native player disclosures preserve open/close and every historical row/value assertion",
+    "Final native control inventory still rejects any enabled but unexercised control",
+    "Progress callbacks run only in Node and neither mutate browser data nor certify running stages as passed"
+  ],
+  "coverageUnchanged": {
+    "nativeActionsExpected": 312,
+    "filters": 24,
+    "modesPerFilter": 2,
+    "reachableReports": 20,
+    "scheduleEvents": 17,
+    "positions": 7,
+    "playerDisclosures": 83,
+    "playerHistoryRows": 283,
+    "playerHistoryNumericCells": 1132
+  },
+  "findings": [],
+  "requiredNextStep": "Freeze this helper and execute complete genuine browser runs before release acceptance. This is a static semantic audit only."
+}

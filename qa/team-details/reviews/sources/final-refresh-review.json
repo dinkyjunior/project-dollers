@@ -1,0 +1,183 @@
+{
+  "status": "accepted",
+  "agent": "team_recovery_sources_audit",
+  "auditedAt": "2026-10-08T09:20:25Z",
+  "scope": "Supplemental independent real-data/source/native citation acceptance, actual iteration-5 visuals and isolated natural HTTP refresh behavior. Mandatory broader regression and hosted release gates remain separate.",
+  "reference": "Approved Dallas team-details chat attachment, observed directly; original reference bytes unavailable, no registered pixel identity claimed.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+    "runtimeFiles": 231
+  },
+  "dataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "supersedesWithinScope": {
+    "file": "qa/team-details/reviews/sources/final-crop-review.json",
+    "sha256": "fca77bbd72bed5261179c1edf48fb64e2e5ede22db926407656bcb24e2198435"
+  },
+  "previousManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-4.json",
+    "sha256": "eb9ad5d9d7c06cbe9a3237623c5e93f1af2dad55de77333cd951dfd6a3a620c7"
+  },
+  "runtimeDelta": [
+    {
+      "file": "assets/team-details.js",
+      "previousSha256": "8cb79a770a5fea487e7452e041fa7d8f9c701344a896c9b8d97ee5bfe2fb832f",
+      "finalSha256": "185ab23c1f31d4a9c40a17e67af80254d7790adf4bffedab4857dc85355fd031"
+    }
+  ],
+  "cropInspection": "Actual originals at both phone sizes show the green field restored behind Dallas identity and upcoming opponent. The gold/cyan frames, one-line controls, prior-season badge, numeric columns and Home diamond CTA remain legible and aligned. Data and JavaScript hashes are unchanged.",
+  "evidence": {
+    "sourceAudit": {
+      "file": "qa/team-details/reviews/sources/source-audit.json",
+      "sha256": "fdeb8283bc5d64570d72b5c28beb8e4735d11501da8be90131499b6e9162f8f7"
+    },
+    "nativeSourceUI": {
+      "file": "qa/team-details/reviews/sources/source-ui-refresh-final-audit.json",
+      "sha256": "48f4c0d616c55c6dc4ecb9588cb19f67b4f9a2c4a7448407800dbff2eae3fb0b"
+    },
+    "workflowAudit": {
+      "file": "qa/team-details/reviews/sources/refresh-workflow-audit.json",
+      "sha256": "0e95fcf8222584e2f26c2ca3f31c794f6594a6a0724d64dc4620266aa9333fde"
+    },
+    "beforeViewed": [
+      {
+        "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+        "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/team-430x896-full-content.png",
+        "sha256": "466c92770b35c4d9e5ad0f4981ee497954bebfa0c8141b264dea34c8f8180670"
+      }
+    ],
+    "afterViewed": [
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-393x852-top.png",
+        "sha256": "4236df0ddcdc919ed25151a350d40020b4bb42efc3e8594ea82a42b7f4a7524e"
+      },
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-393x852-bottom.png",
+        "sha256": "4e56dc63475834d118f3b0b0f2551bab919729d5bda5a7cde2c8db80972a0e75"
+      },
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-393x852-full-content.png",
+        "sha256": "b4613a9595049393977a4196da2a1cd58279a734859760f926d69b143aad64f9"
+      },
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-430x896-top.png",
+        "sha256": "ff5fc886849e2961cc1fe26beb4424d856b146512d290d1ffabc4d41f0c937f4"
+      },
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-430x896-bottom.png",
+        "sha256": "d6e863a5789146921e1c4f16a499c7c783cf7cd572cbf291834d05eba22193e7"
+      },
+      {
+        "file": "qa/team-details/iteration-5-chromium/team-430x896-full-content.png",
+        "sha256": "4621b50de9b29a0bc5a4b0282830c42dc93ca63d1b0e8491e73ee73503257b61"
+      }
+    ],
+    "isolatedRefreshIntegration": {
+      "file": "qa/team-details/reviews/sources/refresh-integration-audit.json",
+      "sha256": "3bdc7248d3b43226a022f5c0918ff65b364639722706a07fcb4d132bad7b717c"
+    },
+    "isolatedRefreshReproducer": {
+      "file": "qa/team-details/reviews/sources/refresh-integration-reproducer.json",
+      "sha256": "fd432e4ae465bdb26211a50b4e886ed1d2d7518ea8ef422712210a24afc5dbf4"
+    }
+  },
+  "sourceChecks": {
+    "count": 73244,
+    "failed": 0,
+    "sourceStatus": "passed",
+    "nativePhones": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ]
+      },
+      {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ]
+      }
+    ],
+    "runtimeUnchangedDuringNativeAudit": true
+  },
+  "workflowChecks": {
+    "staticAndIsolatedFailureFixture": "passed",
+    "testsPassed": 40,
+    "testsSkipped": 0,
+    "actualActionsExecutionClaimed": false
+  },
+  "findings": [],
+  "limitations": [
+    "Actual physical iPhone and measured 60fps are not claimed.",
+    "Official Cowboys route was blocked and tested NFL routes were unavailable; ESPN plus nflverse corroboration is recorded.",
+    "No provider live-push relay is connected; scheduled source checks and focus/online snapshot refresh are implemented.",
+    "Other team rosters, verified weather forecasts, confirmed inactives and travel itineraries remain explicitly unavailable where not sourced.",
+    "The second deep matchup render has not been supplied; the existing source-backed matchup route remains available."
+  ],
+  "broaderReleaseGate": {
+    "status": "pending",
+    "reason": "Complete fe69378e native Chromium/WebKit, legacy regression and actual hosted verification must all finish. Earlier failed candidates and fixture assertion mistakes are preserved and are not presented as final passes."
+  },
+  "refreshReview": "Full JSON-content comparison preserves the existing DOM for unchanged responses, applies same-timestamp corrections, retains last good data on errors and rerenders successful error recovery. Native browser source citations and original-club/season context passed again against real repository data.",
+  "isolatedRefreshCases": [
+    {
+      "name": "Unchanged natural HTTP manual refresh preserves DOM, focus and live lighting clock",
+      "status": "passed"
+    },
+    {
+      "name": "Corrected football statistic with identical retrieval timestamp is applied and rendered",
+      "status": "passed"
+    },
+    {
+      "name": "Older snapshot rejects refresh and retains last good fixture",
+      "status": "passed"
+    },
+    {
+      "name": "Identical successful snapshot clears prior older-snapshot error",
+      "status": "passed"
+    },
+    {
+      "name": "Natural HTTP503 retains the last good snapshot and shows the failure",
+      "status": "passed"
+    },
+    {
+      "name": "Identical successful snapshot clears HTTP503 failure and emits recovery",
+      "status": "passed"
+    }
+  ],
+  "isolatedFixtureQualification": "Isolated natural HTTP fixture integration of the exact production module. The server deliberately substitutes ONLY its own local team-data endpoint with marked test fixtures; these values are not current football truth, actual hosted evidence or independent provider verification. Actual repository/runtime/source data remain untouched. No Playwright routing, browser TLS bypass or injected application code."
+}

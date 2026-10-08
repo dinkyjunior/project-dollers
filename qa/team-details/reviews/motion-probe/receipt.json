@@ -1,0 +1,179 @@
+{
+  "status": "natural-and-painted-diagnostic-passed",
+  "auditedAt": "2026-10-08T09:03:15.342315+00:00",
+  "sourceManifestSha256": "eb9ad5d9d7c06cbe9a3237623c5e93f1af2dad55de77333cd951dfd6a3a620c7",
+  "runtimeFiles": 231,
+  "runtimeUnchangedDuringProbe": true,
+  "engine": "genuine native WebKit 26.0",
+  "viewport": {
+    "width": 393,
+    "height": 852,
+    "deviceScaleFactor": 2
+  },
+  "natural": {
+    "samplesPerPlayer": 21,
+    "observedFor": "10 seconds, no animation/style/source changes",
+    "players": {
+      "Aaron Rodgers, QB": {
+        "samples": 21,
+        "phaseDiff": 3.999999989900971e-06,
+        "trackDistance": 6.103620397890378e-05,
+        "borderDistance": 3.7899322509765625,
+        "edges": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "allRunning": true
+      },
+      "Jaylen Warren, RB": {
+        "samples": 21,
+        "phaseDiff": 4.0000000041118255e-06,
+        "trackDistance": 6.151014517439689e-05,
+        "borderDistance": 3.8256988525390625,
+        "edges": [
+          "right",
+          "bottom",
+          "left",
+          "top"
+        ],
+        "allRunning": true
+      },
+      "DK Metcalf, WR": {
+        "samples": 21,
+        "phaseDiff": 2.00000000916134e-06,
+        "trackDistance": 6.518557544950508e-05,
+        "borderDistance": 0.503936767578125,
+        "edges": [
+          "bottom",
+          "top",
+          "right",
+          "left"
+        ],
+        "allRunning": true
+      },
+      "Michael Pittman, WR": {
+        "samples": 21,
+        "phaseDiff": 1.4210854715202004e-14,
+        "trackDistance": 6.103518535382352e-05,
+        "borderDistance": 2.00640869140625,
+        "edges": [
+          "left",
+          "top",
+          "right",
+          "bottom"
+        ],
+        "allRunning": true
+      },
+      "Pat Freiermuth, TE": {
+        "samples": 21,
+        "phaseDiff": 1.0000000081333837e-06,
+        "trackDistance": 6.151014517439689e-05,
+        "borderDistance": 1.1036224365234375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": true
+      }
+    }
+  },
+  "syntheticPainted": {
+    "samplesPerPlayer": 32,
+    "players": {
+      "Aaron Rodgers, QB": {
+        "samples": 32,
+        "phaseDiff": 0,
+        "trackDistance": 6.67572021484375e-05,
+        "borderDistance": 4.623382568359375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": false
+      },
+      "Jaylen Warren, RB": {
+        "samples": 32,
+        "phaseDiff": 0,
+        "trackDistance": 6.67572021484375e-05,
+        "borderDistance": 4.623382568359375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": false
+      },
+      "DK Metcalf, WR": {
+        "samples": 32,
+        "phaseDiff": 0,
+        "trackDistance": 6.67572021484375e-05,
+        "borderDistance": 4.623382568359375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": false
+      },
+      "Michael Pittman, WR": {
+        "samples": 32,
+        "phaseDiff": 0,
+        "trackDistance": 6.67572021484375e-05,
+        "borderDistance": 4.623382568359375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": false
+      },
+      "Pat Freiermuth, TE": {
+        "samples": 32,
+        "phaseDiff": 0,
+        "trackDistance": 6.67572021484375e-05,
+        "borderDistance": 4.623382568359375,
+        "edges": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "allRunning": false
+      }
+    },
+    "qualification": "Separate test-tab pause/seeks followed by two real painted frames. These measurements are diagnostic; natural PNGs were saved beforehand."
+  },
+  "conclusion": "All five footballs and travelling lights naturally remain synchronized around all four complete-card edges. The initial legacy regression synthetic-seek failure was not reproduced in this isolated probe, including paused-seek samples. The exact cause is not proven; broad legacy release gate requires a fresh completed rerun.",
+  "originalFailurePreserved": "qa/team-details/regression-webkit-final/results.json",
+  "artifacts": [
+    {
+      "file": "qa/team-details/reviews/motion-probe/natural-0.png",
+      "sha256": "d36acaf5a14d9c58a4b7957b0bcb1bc1e72c5fd4cc14cffefd2d0ae0d2f3e969",
+      "bytes": 616617
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe/natural-20.png",
+      "sha256": "27f06ea4c58be386dfcf4a2949668c840db2e83cbf78d6b13ff0096487c5d9d8",
+      "bytes": 618582
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe/probe.cjs",
+      "sha256": "2ac53335c423b0f853f39d49e154449110df343647b8eb02ab7c626d605fa3c2",
+      "bytes": 6424
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe/results.json",
+      "sha256": "c17efbed0451860c41458d5a78185b60d37440c590cfed16cdaad70fe7c2d285",
+      "bytes": 346334
+    }
+  ]
+}

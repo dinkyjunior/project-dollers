@@ -109,7 +109,7 @@ async function motion(page,base){
   await page.goto(base+'#home',{waitUntil:'networkidle'});await active(page,'home');const inactive=await nativeMotion(page);assert.equal(inactive.clocks.filter(c=>c.state==='running').length,0,'Inactive team route runs no decorative clocks');
   await page.goto(base+'#team/DAL',{waitUntil:'networkidle'});await ready(page);await active(page);return {first,second,visibleAdvancingClocks:visible.length,paint:{sha256:SHA(paint),laterSha256:SHA(laterPaint),actualNaturalPixelChange:true},reduced,inactive,qualification:'Native clocks and genuine unpaused foreground frames were sampled without seeking, animation mocking or style injection. Mobile emulation does not certify physical iPhone FPS.'};
 }
-async function routeSmoke(page,base,data){
+async function routeSmoke(page,base,data,options={}){
   const results=[];
   for(const [abbr,team] of Object.entries(data.teamForm.teams)){
     await page.goto(base+'#team/'+abbr,{waitUntil:'networkidle'});await ready(page);await active(page);
@@ -126,6 +126,7 @@ async function routeSmoke(page,base,data){
     const sources=await dialog.locator('a[href]').evaluateAll(es=>es.map(e=>e.href));assert.ok(sources.length>0,`${abbr} research exposes source URLs`);for(const source of sources)assert.match(source,/^https:\/\//,'Source links retain HTTPS');
     await dialog.locator('.dialog-close').click();await dialog.waitFor({state:'hidden'});
     results.push({team:abbr,heading,route:'#team/'+abbr,upcomingEvent:upcoming,sourceLinks:sources,geometry:{page:g.page,scroller:g.scroller,clipped:g.clipped,selects:g.selects},images:asset});
+    if(options.onProgress)await options.onProgress({status:'running',teams:Object.keys(data.teamForm.teams).length,results});
   }
   await page.goto(base+'#team/DAL',{waitUntil:'networkidle'});await ready(page);await active(page);
   return {status:'passed',teams:results.length,results,qualification:'Actual direct routes, rendered identities, current event association, local asset decoding, source dialogs and geometry were checked for every wired club. This does not claim exhaustive player/report interaction coverage outside the approved Dallas screen.'};

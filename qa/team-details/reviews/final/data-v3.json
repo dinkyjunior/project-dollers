@@ -1,0 +1,356 @@
+{
+  "status": "accepted",
+  "agent": "team_data_audit",
+  "auditedAt": "2026-10-08T11:10:44.618912+00:00",
+  "scope": "Current prepublication data/provenance/coverage acceptance for Dallas Team Details/Form and Home diamond CTA, with completed current and protected Chromium/native WebKit gates checked. Integration and actual hosted verification remain separate.",
+  "runtimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+  },
+  "runtimeFiles": 231,
+  "dataset": {
+    "file": "assets/data/team-details.json",
+    "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+  },
+  "reference": {
+    "source": "Approved Dallas Form render attached in the chat and the earlier approved Home rendering.",
+    "originalDallasBinaryAvailable": false,
+    "illustrativeValuesUsedAsFacts": false,
+    "pixelIdentityMetricClaimed": false
+  },
+  "evidence": {
+    "chromium": {
+      "file": "qa/team-details/local-chromium-final-v3/results.json",
+      "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46"
+    },
+    "webkit": {
+      "file": "qa/team-details/local-webkit-final-v3/results.json",
+      "sha256": "35b9d9c471f3d0000fac14f1e680a7d6e7d930d107e9926577de19a416c49e39"
+    },
+    "protectedChromium": {
+      "file": "qa/team-details/regression-chromium-final-v3/results.json",
+      "sha256": "55da944ae4baaa4e470c519226d84edf5065420fa7d56b2b6f11d7d1042e39d2"
+    },
+    "protectedChromiumBinding": {
+      "file": "qa/team-details/regression-chromium-final-v3/runtime-binding.json",
+      "sha256": "21ceff15567e11944fd4395ccb7e39824afd897d58b4af5837037f73873cb2aa"
+    },
+    "protectedWebkit": {
+      "file": "qa/team-details/regression-webkit-final-v3/results.json",
+      "sha256": "6f7b9c07cf53d82ed640682e65b64a9ead81e97989098399adf28e3966554849"
+    },
+    "protectedWebkitBinding": {
+      "file": "qa/team-details/regression-webkit-final-v3/runtime-binding.json",
+      "sha256": "403e4534a127da1e2e3d7b0807525afce92bbea6fe6e39a76c7478d6ba24b7f0"
+    },
+    "chromiumArithmetic": {
+      "file": "qa/team-details/reviews/data-evidence/chromium-data-outcomes-v3-fe69378e.json",
+      "sha256": "a2acf65cba5c83f1b4df5ce2f42fdb89fba6785c7658d2e1f58a2da4f989caa8"
+    },
+    "webkitArithmetic": {
+      "file": "qa/team-details/reviews/data-evidence/webkit-data-outcomes-v3-fe69378e.json",
+      "sha256": "9aa5ddc873ab9d0159455ea3e99352521363e685df3ada756e7ad32e1c5c8b76"
+    },
+    "chromiumCoverage": {
+      "file": "qa/team-details/reviews/data-evidence/chromium-coverage-v3-fe69378e.json",
+      "sha256": "45d8fc93bce7f46db13d588ef049028f3483b5c683186d37808bc75117eb54fb"
+    },
+    "webkitCoverage": {
+      "file": "qa/team-details/reviews/data-evidence/webkit-coverage-v3-fe69378e.json",
+      "sha256": "daa48697a3f615bbbc3165806f11d427eaf98c58f5ad3649f6f552cf77cee486"
+    },
+    "independentAll32": {
+      "file": "qa/team-details/reviews/control-evidence/independent-32-final-fe69378e/results.json",
+      "sha256": "0707f305cfd5d5bc9a9c26e02fbd3184b63dc4759043d8643d61e3f5ced05e62"
+    },
+    "independentSourceAudit": {
+      "file": "qa/team-details/reviews/sources/source-audit.json",
+      "sha256": "fdeb8283bc5d64570d72b5c28beb8e4735d11501da8be90131499b6e9162f8f7"
+    },
+    "sourceAndUpdateAcceptance": {
+      "file": "qa/team-details/reviews/sources/final-refresh-review.json",
+      "sha256": "4496d73b9de00427c338f735cc69c3a6c7900b4f63b9c4b093fb24c3d96ff83e"
+    },
+    "workflowAndRawDataTests": {
+      "file": "qa/team-details/reviews/sources/refresh-workflow-audit.json",
+      "sha256": "0e95fcf8222584e2f26c2ca3f31c794f6594a6a0724d64dc4620266aa9333fde"
+    },
+    "builderReplay": {
+      "file": "qa/team-details/reviews/data-evidence/builder-replay-audit.json",
+      "sha256": "374b0cb74b91a72fcf5d0be26190a00b0a64eb63126fe6892d297b2fb2dcf1c8"
+    },
+    "generationOnlyCorrection": {
+      "file": "qa/team-details/reviews/data-evidence/generation-fix-audit.json",
+      "sha256": "8cf592b485559ea26b4ed863593aa8a1f385b74b8a922214165e0404c1c229b2"
+    },
+    "batchedHelperStaticReview": {
+      "file": "qa/team-details/reviews/data-evidence/controls-batching-e7a33b6f.json",
+      "sha256": "7d788a7670bc44ea0127ff03fa9f1e40ba29b65c9c8e99b3c8ffd5b64d3c6966"
+    },
+    "independentArithmeticReproducer": {
+      "file": "qa/team-details/reviews/data-evidence/check-native-data-outcomes.py",
+      "sha256": "e4e36b716ef2e46f83ca7ee115255d315152140e902a34ab80f3bc5d1fd698ac"
+    }
+  },
+  "visualEvidence": {
+    "beforeViewed": [
+      {
+        "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+        "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/team-430x896-full-content.png",
+        "sha256": "466c92770b35c4d9e5ad0f4981ee497954bebfa0c8141b264dea34c8f8180670"
+      },
+      {
+        "file": "qa/team-details/iteration-1b-chromium/home-393x852-diamond.png",
+        "sha256": "d1721d42aca790b20d3f5ef45e91f88b22843886e76dd43544d660d044405ece"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/home-430x896-diamond.png",
+        "sha256": "e65ae23d1d24dbfd4f3918d7d189fa40836c78a39dbcc1c1e5de55b8bb10dff8"
+      }
+    ],
+    "afterViewed": [
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-393x852-top.png",
+        "sha256": "44300f31ca239264b48900b0ef6416b97c059cd9448e6cc05f06d42c1831884c"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-393x852-mid.png",
+        "sha256": "5cb714cbbe3e15c69cb1f9ccbe012ce86d435cd453ae6b92ccff810f3d50d6a4"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-393x852-bottom.png",
+        "sha256": "56ac6fd9779c8fab581cccd37d52207b30cd921dab89202fff352c6261fafb38"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-393x852-full-content.png",
+        "sha256": "0a02547d5816d9d294a2b54e35afc10ed804c83a88c94902ff15693de93a1606"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/home-393x852-diamond.png",
+        "sha256": "d992659377b14ec394681f0d8f0004a991b807e4b131d915bfcba529afd0b6cc"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-430x896-top.png",
+        "sha256": "b8b4de47b36ecc9038b4bd6769d36c17538dab010987e92ba1a0ec53ce5919b9"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-430x896-mid.png",
+        "sha256": "af9d616d769f021c1b9a5c2aee614c308c0bfef8606d062170ce423862aea075"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-430x896-bottom.png",
+        "sha256": "96455de8029e12c0391359f419fb203aafce50ebb1b4b9b1b123be7c9cd477f1"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/team-430x896-full-content.png",
+        "sha256": "f5b1c872ed3a45fb74a2cc5d44c67056910a88c1389f8f634b3d346ea7871f95"
+      },
+      {
+        "file": "qa/team-details/local-chromium-final-v3/home-430x896-diamond.png",
+        "sha256": "27546cb7431b0a83c7af973c42843b9bd05ebadd9c003f322c0b9a44649181bd"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-top.png",
+        "sha256": "8f1451735bff5d59563c5ca78134f49b2f1586a18151fd449107c4ac49ac9bd9"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-mid.png",
+        "sha256": "923e261f982fb64f6bb0f583a3d3af72d1c52e50c721fa8b8f837c9983484fee"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-bottom.png",
+        "sha256": "c4b2fd3f533eadf7903d1f45c9222410b3c10f818eb26d6a51f04eb2ef7b8a9f"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-393x852-full-content.png",
+        "sha256": "d379f0641ddafec4c5a2ddb9b51e87654391cbed7f6d7b1e5000379515a765ca"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/home-393x852-diamond.png",
+        "sha256": "008482e91a8a4e6f9b3a1d806ac42edc3ae911334cdf8c3d2e768bd0b0e5293f"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-top.png",
+        "sha256": "cd4f8c05b6bb9ea2046c6941be2b4a957e5c8bdf5c18ae28f627cd1f9c4ec43f"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-mid.png",
+        "sha256": "acb4e0ec6351de9321c4bc341943288662bf13ab23b42cbaf5596b5e9e11fd08"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-bottom.png",
+        "sha256": "d35cd4b338ce2de68a56078d78b5f055de7f749ccb452110513a81f195240e55"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/team-430x896-full-content.png",
+        "sha256": "ca2b1dc00a45c47c4ddce35b5036489aceb7f000b4a1ee7dd02331ebcc376bed"
+      },
+      {
+        "file": "qa/team-details/local-webkit-final-v3/home-430x896-diamond.png",
+        "sha256": "4315f9020b2ce726f5c97cc2e5d1c7afe52763dc74c0bdf177f8c07d0153d841"
+      }
+    ],
+    "inspection": "Actual Chromium and native WebKit images inspected at both required phone sizes. Dallas headings, dense rows, prior-season badge, source/coverage notes, correctly cropped pitch and Home diamond CTA fit. Chat reference compared visually; no invented similarity metric."
+  },
+  "dataAcceptance": {
+    "teams": 32,
+    "uniqueRegularSeasonGames": 544,
+    "sourceCount": 31,
+    "DallasRoster": 83,
+    "regularSeasonOnly": true,
+    "seasonContext": [
+      2025,
+      2026
+    ],
+    "sourceQuality": "Public nflverse and ESPN bodies, retrieval times and SHA256 provenance are retained. An independent fetch corroborates outcomes and flags disagreements. Blocked official routes were not bypassed or claimed as direct verification.",
+    "invariants": [
+      "Net passing subtracts sack losses once; total offense sums net passing and rushing.",
+      "Season and venue filters apply before last-N selection.",
+      "Percentages use summed numerators/denominators; unavailable or incomplete coverage stays unavailable.",
+      "Missing values remain null; genuine source zero values are preserved.",
+      "Personal history retains the actual original club and available statistical row counts without padding.",
+      "Passing TD is separate from rushing/receiving offensive TD.",
+      "Unconfirmed starters, inactives, weather, itineraries and prices are not fabricated."
+    ],
+    "defaultLastFive": {
+      "currentSeasonGames": 4,
+      "priorSeasonGames": 1,
+      "netPassingGainedPerGame": 235,
+      "rushingGainedPerGame": 100.2,
+      "totalOffenseGainedPerGame": 335.2,
+      "netPassingAllowedPerGame": 235.2,
+      "rushingAllowedPerGame": 152.4,
+      "totalOffenseAllowedPerGame": 387.6,
+      "pointsForPerGame": 27.8,
+      "pointsAgainstPerGame": 29.2,
+      "thirdDownPercentShown": 47.4,
+      "redZonePercentShown": 75,
+      "turnoverMarginPerGame": -0.2,
+      "penaltyYardsPerGame": 70.2
+    },
+    "nextFixture": {
+      "gameId": "2026_05_TB_DAL",
+      "kickoffUtc": "2026-10-09T00:15Z",
+      "shownAEDT": "Fri 9 Oct \u00b7 11:15am AEDT",
+      "venue": "AT&T Stadium",
+      "DallasVenue": "home"
+    },
+    "teamProviderDifferences": [
+      "2025 W17 stadium sponsor names retained and explained.",
+      "2026 W18 timeValid false: provisional kickoff yields TBD.",
+      "Israel Abanikanda jersey 37/25 dispute: unavailable.",
+      "Jordan Hudson jersey 81/18 dispute: unavailable."
+    ],
+    "legacyDatasetSeparate": {
+      "coreRosterEntries": 80,
+      "coreSourceCount": 30,
+      "coreDocumentedDisagreements": 11,
+      "unchangedAndProtected": true
+    },
+    "rawDataTests": {
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0
+    },
+    "independentSourceChecks": {
+      "referenceHashes": 62,
+      "referenceSources": 64,
+      "referenceTimestamps": 31,
+      "context": 3,
+      "provenance": 1212,
+      "primarySourceEvidence": 30,
+      "primarySourceHashes": 60,
+      "primarySourceTimes": 30,
+      "teamCoverage": 32,
+      "gameIdentity": 2176,
+      "schedule": 6528,
+      "kickoff": 1088,
+      "status": 1088,
+      "score": 2176,
+      "venue": 2174,
+      "eventIdentity": 1088,
+      "statsTypes": 12096,
+      "statProvenance": 5796,
+      "statArithmetic": 1344,
+      "nflverseStatCrosscheck": 4032,
+      "records": 192,
+      "rosterUnavailable": 31,
+      "venueConflictDisclosure": 2,
+      "rosterMembership": 1,
+      "rosterIdentity": 249,
+      "playerStatFieldCoverage": 331,
+      "playerSeasonStats": 4224,
+      "playerLast5Coverage": 83,
+      "playerOriginalClub": 849,
+      "playerProvenance": 283,
+      "playerGameStats": 24904,
+      "playerMissingStats": 35,
+      "espnContext": 2,
+      "espnScheduleCoverage": 34,
+      "espnKickoff": 34,
+      "espnVenue": 68,
+      "espnTeams": 68,
+      "espnScores": 68,
+      "espnRecord": 5,
+      "injuryCoverage": 1,
+      "injuryIdentity": 11,
+      "injuryReports": 55,
+      "injuryProvenance": 11,
+      "teamIdentity": 128,
+      "depthChart": 1,
+      "summaryEventIdentity": 21,
+      "espnSummaryStats": 378,
+      "jerseyNumber": 61,
+      "jerseyConflictDisclosure": 2,
+      "nextEvent": 2
+    },
+    "independentBrowserNumericAndIdentityChecks": {
+      "filterSelections": 144,
+      "yardCells": 1728,
+      "snapshotCells": 1728,
+      "reportMetricCells": 2160,
+      "playerHistoryCells": 6792,
+      "scheduleEvents": 102,
+      "visibleControlsInventoried": 498
+    },
+    "coverageDenominatorChecks": 1728,
+    "gameReportLabelChecks": 1080,
+    "nativeCurrentControls": {
+      "ChromiumViewports": 4,
+      "WebKitViewports": 2,
+      "perViewportRecordedActions": 312,
+      "perViewportFilterCases": 24,
+      "perViewportAggregateModes": 48,
+      "distinctReachableReports": 20,
+      "currentScheduleEvents": 17,
+      "rosterDisclosures": 83,
+      "inventoryEnabledUntested": 0,
+      "actualSourceProjectionEqualAcrossEngines": true
+    },
+    "protectedRegression": "Both completed exact-runtime bindings reviewed: real recent/opponent histories, original clubs, missing history and bye context, retained selections and error recovery all passed."
+  },
+  "automaticUpdates": {
+    "workflow": "Shared strict-verification cache and both atomic builders, with real-cache tests, run before publication. Provider-change checks and scheduled refresh are supported.",
+    "browser": "Active/focus/online/manual checks retain unchanged DOM; real HTTP identity/focus checks passed.",
+    "providerPushRelayConfigured": false,
+    "instantLivePlayByPlayClaimed": false
+  },
+  "historicalStaticReviewQualification": "The earlier batched-helper static receipt truthfully retained browser acceptance pending at its original timestamp. Its read-only semantic review is now accompanied by genuinely completed v3 native evidence; the historical receipt was not rewritten.",
+  "limits": [
+    "Other teams have sourced form/schedules; unsourced roster/lineup enrichment is explicitly unavailable.",
+    "New Dallas histories cover sourced 2025/2026 statistical rows; missing appearances are not invented.",
+    "Dataset creation differs from provider retrieval; conservative and per-source times are preserved.",
+    "Earlier incomplete or failed WebKit runs remain preserved and are not acceptance evidence. The completed native v3 run used an explicitly documented extended operational limit, without app/data or assertion substitution.",
+    "Local genuine Chromium/WebKit verification is not a physical iPhone, measured 60fps or hosted HTTPS certification."
+  ],
+  "blockingFindingsWithinScope": [],
+  "releaseGates": {
+    "currentAndProtectedPrepublication": "passed",
+    "incomingMetadataIntegration": "pending separate exact-byte/source audit",
+    "hostedDeploymentVerification": "pending separate actual HTTPS verification"
+  }
+}

@@ -297,7 +297,13 @@ async function capture(page, label, viewport, outputDir, scrollTop = true) {
     assert.ok(item.iconBrightPixels>15 && item.labelBrightPixels>15,`${label}: actual PNG contains every painted navigation icon and label ${JSON.stringify(item)}`);
   // Screenshot consistency does not alter the actual shipped motion behavior.
   await page.evaluate(() => {
-    for (const a of window.__PD_QA_PAUSED || []) a.play();
+    // A measured card path can replace its initial CSS fallback while the
+    // screenshot awaits paint. Resume only clocks that still exist and remain
+    // paused; playing a cancelled fallback would resurrect a second animation.
+    const present = new Set(document.getAnimations());
+    for (const a of window.__PD_QA_PAUSED || []) {
+      if (present.has(a) && a.playState === "paused") a.play();
+    }
     delete window.__PD_QA_PAUSED;
   });
   return { file, capturedAt, sha256: sha256(png), bytes: png.length, viewportCssPixels: viewport, geometry, primaryBounds, navigationRaster };
@@ -324,7 +330,7 @@ async function motionCheck(page) {
     const svg = c.querySelector(".card-perimeter-light"), r = c.getBoundingClientRect();
     return c.classList.contains("motion-track-ready") && svg && Math.abs(svg.viewBox.baseVal.width - r.width) < 1 && Math.abs(svg.viewBox.baseVal.height - r.height) < 1;
   }));
-  const result = await page.locator(".player-card:visible").evaluateAll((cards) => cards.map((card) => {
+  const result = await page.locator(".player-card:visible").evaluateAll(async (cards) => Promise.all(cards.map(async (card) => {
     const ball = card.querySelector(".orbit-football"), light = card.querySelector(".perimeter-light-core");
     if (!ball || !light) throw new Error("Card missing football or travelling perimeter light");
     const ballAnimation = ball.getAnimations()[0], lights = card.querySelectorAll(".card-perimeter-light path");
@@ -339,6 +345,9 @@ async function motionCheck(page) {
       // Start in the second iteration so staggered negative delays never require
       // negative WAAPI times immediately after screenshot pause/play operations.
       for (const a of animations) a.currentTime = timing.delay + timing.duration + i * timing.duration / 32;
+      // Measure the painted phase. WebKit can defer a paused WAAPI seek until
+      // the next frame; a synchronous style read can observe the preceding phase.
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       const b = ball.getBoundingClientRect(), x = b.x + b.width / 2, y = b.y + b.height / 2;
       const distances = { left: Math.abs(x - bounds.left), right: Math.abs(x - bounds.right), top: Math.abs(y - bounds.top), bottom: Math.abs(y - bounds.bottom) };
       const [edge, d] = Object.entries(distances).sort((a,b) => a[1]-b[1])[0];
@@ -357,7 +366,7 @@ async function motionCheck(page) {
     });
     for (const a of animations) a.play();
     return { player: card.getAttribute("aria-label"), width: bounds.width, height: bounds.height, edges: [...edges].sort(), maxBorderDistance, maxTrackDistance, maxLightPhaseDifference, enclosesPortraitNameAndStats: enclosed, expandedResearchVisibleCount: research.length, expanded: card.classList.contains("is-expanded"), samples: 32, durationMs: timing.duration };
-  }));
+  })));
   for (const card of result) {
     assert.deepEqual(card.edges, ["bottom", "left", "right", "top"], `All four outer edges: ${card.player}`);
     assert.ok(card.maxBorderDistance <= 10, `Football leaves outer border: ${JSON.stringify(card)}`);

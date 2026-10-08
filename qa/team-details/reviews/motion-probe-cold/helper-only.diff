@@ -1,0 +1,17 @@
+--- qa/run.cjs before safe resume
++++ qa/run.cjs after safe resume
+@@ -297,7 +297,13 @@
+     assert.ok(item.iconBrightPixels>15 && item.labelBrightPixels>15,`${label}: actual PNG contains every painted navigation icon and label ${JSON.stringify(item)}`);
+   // Screenshot consistency does not alter the actual shipped motion behavior.
+   await page.evaluate(() => {
+-    for (const a of window.__PD_QA_PAUSED || []) a.play();
++    // A measured card path can replace its initial CSS fallback while the
++    // screenshot awaits paint. Resume only clocks that still exist and remain
++    // paused; playing a cancelled fallback would resurrect a second animation.
++    const present = new Set(document.getAnimations());
++    for (const a of window.__PD_QA_PAUSED || []) {
++      if (present.has(a) && a.playState === "paused") a.play();
++    }
+     delete window.__PD_QA_PAUSED;
+   });
+   return { file, capturedAt, sha256: sha256(png), bytes: png.length, viewportCssPixels: viewport, geometry, primaryBounds, navigationRaster };

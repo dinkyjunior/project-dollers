@@ -1,0 +1,26 @@
+{
+  "reviewer": "team_qa_audit",
+  "generatedAt": "2026-10-08T09:55:23.517833+00:00",
+  "status": "static-equivalence-review-passed-functional-reruns-required",
+  "original": {
+    "file": "qa/team-details/controls.cjs",
+    "sha256": "571f85bfffca3b5862f09c362e558e35445b55cc2ab0cae40a6de6d170bc6a61"
+  },
+  "candidate": {
+    "file": "qa/team-details/controls-batched-candidate.cjs",
+    "sha256": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797"
+  },
+  "ownerAssertionMap": {
+    "file": "qa/team-details/reviews/control-evidence/controls-batching-assertion-map.json",
+    "sha256": "3bf684952325a60a3b2391084d4aa4a65f243dff57074b49949d91c84030ad19"
+  },
+  "inspection": [
+    "Strict native unique-control count, scroll/actionability, enabled condition and tap/click sequence remain. Only independent pre-read requests are awaited together.",
+    "Cell uniqueness, all gained/allowed and snapshot values, numerical tolerance, sample coverage and independent source-derived expected values remain.",
+    "Tab selection count, aria-selected/tabindex/panel visibility, button inventory and both overflow thresholds remain.",
+    "Dialog strict heading/content uniqueness, meaningful destination text, native focus and local overflow remain.",
+    "Each player is still natively opened and closed. Real identity, open state, overflow, every season/week/opponent and passing/rushing/receiving/scored-TD cell remain verified.",
+    "Node-only progress receipts add no app writes, source substitution, browser client, animation pause or virtual clock."
+  ],
+  "functionalDisposition": "No actual-browser acceptance is implied by this static review. Fresh complete Chromium and native WebKit runs must bind the promoted exact helper bytes and unchanged app runtime."
+}

@@ -1,0 +1,432 @@
+{
+  "status": "accepted",
+  "agent": "team_visual_audit",
+  "auditedAt": "2026-10-08T09:02:24.308626+00:00",
+  "scope": "Independent top-to-bottom visual implementation and actual-browser review of approved Dallas Form team-details screen at393x852 and430x896, plus approved Home diamond CTA. This receipt accepts the visual scope; it does not replace the complete native-engine and hosted-release gate.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-4.json",
+    "sha256": "eb9ad5d9d7c06cbe9a3237623c5e93f1af2dad55de77333cd951dfd6a3a620c7",
+    "runtimeFiles": 231,
+    "matchesCurrentFiles": true
+  },
+  "reference": {
+    "source": "Approved Dallas Cowboys Form render attached in chat",
+    "originalDimensions": {
+      "width": 724,
+      "height": 2172
+    },
+    "displayedDimensions": {
+      "width": 683,
+      "height": 2048
+    },
+    "attributionFile": "reference/DALLAS_FORM_CHAT_SOURCE.md",
+    "originalAttachmentBytesAvailable": false,
+    "illustrativeFactsUsedAsSourceData": false,
+    "pixelIdenticalClaim": false
+  },
+  "evidence": {
+    "independentlyViewedActualImages": [
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-top.png",
+        "sha256": "0fab3150b325de4865dbe61d1ce839decea31d06daf59223bd9937dd8116e403",
+        "bytes": 1196620,
+        "dimensions": [
+          786,
+          1704
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-mid.png",
+        "sha256": "bf2ac1459463757b550fc21ca6b9272ec657f8c81bcf742b0ad14d414583a514",
+        "bytes": 867083,
+        "dimensions": [
+          786,
+          1704
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-bottom.png",
+        "sha256": "1367db7e5a9b047c5737f4e7c2cb64bca5767decdb2627f25020bdb2e57d1e7b",
+        "bytes": 655273,
+        "dimensions": [
+          786,
+          1704
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-full-content.png",
+        "sha256": "1a5a36b13bbbbf1e1ee44d227228fd2e61187cfcf676f2f1685e2971f4736ce1",
+        "bytes": 1557066,
+        "dimensions": [
+          786,
+          2466
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/home-393x852-diamond.png",
+        "sha256": "9b350217324f8f80677c600c0db285dc031c2aed9a7c6765e49c1e8cfa1c1c69",
+        "bytes": 1673914,
+        "dimensions": [
+          786,
+          1704
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-top.png",
+        "sha256": "b813ccde5da9d46b5e056d7edbcc509e9a7cb89475fd569b96d395a8534754e2",
+        "bytes": 1357600,
+        "dimensions": [
+          860,
+          1792
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-mid.png",
+        "sha256": "59c56f145b082b0c33250e3ff18e87f7b6858bcc4af0524b120d9da5f30854c4",
+        "bytes": 989970,
+        "dimensions": [
+          860,
+          1792
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-bottom.png",
+        "sha256": "fe11da7b4da4dddc9f570e860d1906e49bd3b629e1e55c6ce912483f063a99a4",
+        "bytes": 711550,
+        "dimensions": [
+          860,
+          1792
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-full-content.png",
+        "sha256": "b2d35cfae678ed1de7b449dd18ec71e2f5c977c15ff79df11fa8675c78d6e38a",
+        "bytes": 1736624,
+        "dimensions": [
+          860,
+          2570
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/home-430x896-diamond.png",
+        "sha256": "4c276d9fb4e668c5071fb1986ba3a346a033663f8a726be8191eae9b11f1d0e0",
+        "bytes": 1911069,
+        "dimensions": [
+          860,
+          1792
+        ],
+        "independentlyViewed": true,
+        "actualBrowserOutput": true
+      }
+    ],
+    "actualCaptureReport": {
+      "file": "qa/team-details/iteration-4-chromium/results.json",
+      "sha256": "59cdd3b5b425a3e848c6398efb64c9b518cf0d4b3bc6d6182c6ec8d8174c20f0",
+      "bytes": 10273504
+    },
+    "nativeChromiumFunctionalReport": {
+      "file": "qa/team-details/local-chromium-final/results.json",
+      "sha256": "8123ee374a344862cd673ae330d064c886fd260ddd82f1036318cee84f08d9e4",
+      "bytes": 23150913,
+      "status": "passed",
+      "runtimeMatchesManifest": true
+    },
+    "sourceReview": {
+      "file": "qa/team-details/reviews/sources/final-crop-review.json",
+      "sha256": "fca77bbd72bed5261179c1edf48fb64e2e5ede22db926407656bcb24e2198435",
+      "bytes": 6944,
+      "status": "accepted"
+    },
+    "nativeSourceControlReport": {
+      "file": "qa/team-details/reviews/sources/source-ui-crop-final-audit.json",
+      "sha256": "bdfbeaa515072e9fff7208b7e90c0faf6495ec2f96d31770a8d87bbe98b221ce",
+      "bytes": 46915,
+      "status": "passed"
+    },
+    "independentAll32RoutesReport": {
+      "file": "qa/team-details/reviews/control-evidence/independent-32-final-eb9ad5d9/results.json",
+      "sha256": "d2c9d5bd0ccfaba9351e8957d29105dc316c62994e64b2395c105f7ce5c4eee6",
+      "bytes": 59463,
+      "status": "passed"
+    }
+  },
+  "nativeMeasurements": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "documentWidth": 393,
+      "pageScrollWidth": 393,
+      "scrollHeight": 1150,
+      "clippedElements": [],
+      "backTaglineOverlapArea": 0,
+      "panelHeights": [
+        {
+          "classes": "td-hero td-framed td-motion-zone",
+          "height": 134.796875
+        },
+        {
+          "classes": "td-upcoming td-framed td-motion-zone",
+          "height": 136.59375
+        },
+        {
+          "classes": "td-panel td-games td-framed td-motion-zone",
+          "height": 275.296875
+        },
+        {
+          "classes": "td-panel td-yards td-framed td-motion-zone",
+          "height": 129.1875
+        },
+        {
+          "classes": "td-panel td-snapshot td-framed td-motion-zone",
+          "height": 178
+        },
+        {
+          "classes": "td-diamond-button td-continue td-motion-zone",
+          "height": 39
+        }
+      ],
+      "selectedControls": [
+        {
+          "id": "team-window-select",
+          "text": "Last 5",
+          "selectedTextWidth": 25.51171875,
+          "availableWidth": 35,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        },
+        {
+          "id": "team-season-select",
+          "text": "Cross-season",
+          "selectedTextWidth": 56.38623046875,
+          "availableWidth": 61,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        },
+        {
+          "id": "team-venue-select",
+          "text": "All venues",
+          "selectedTextWidth": 42.50244140625,
+          "availableWidth": 52,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        }
+      ],
+      "errorCounts": {
+        "javascriptAndConsole": 0,
+        "http": 0,
+        "external": 0,
+        "failed": 0,
+        "cancelledNavigation": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "documentWidth": 430,
+      "pageScrollWidth": 430,
+      "scrollHeight": 1202,
+      "clippedElements": [],
+      "backTaglineOverlapArea": 0,
+      "panelHeights": [
+        {
+          "classes": "td-hero td-framed td-motion-zone",
+          "height": 145
+        },
+        {
+          "classes": "td-upcoming td-framed td-motion-zone",
+          "height": 143
+        },
+        {
+          "classes": "td-panel td-games td-framed td-motion-zone",
+          "height": 291.359375
+        },
+        {
+          "classes": "td-panel td-yards td-framed td-motion-zone",
+          "height": 129.1875
+        },
+        {
+          "classes": "td-panel td-snapshot td-framed td-motion-zone",
+          "height": 186.640625
+        },
+        {
+          "classes": "td-diamond-button td-continue td-motion-zone",
+          "height": 39
+        }
+      ],
+      "selectedControls": [
+        {
+          "id": "team-window-select",
+          "text": "Last 5",
+          "selectedTextWidth": 25.51171875,
+          "availableWidth": 44,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        },
+        {
+          "id": "team-season-select",
+          "text": "Cross-season",
+          "selectedTextWidth": 56.38623046875,
+          "availableWidth": 73,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        },
+        {
+          "id": "team-venue-select",
+          "text": "All venues",
+          "selectedTextWidth": 42.50244140625,
+          "availableWidth": 59,
+          "appearance": "none",
+          "font": "10.5px NFLRobotoCondensed, Arial, sans-serif"
+        }
+      ],
+      "errorCounts": {
+        "javascriptAndConsole": 0,
+        "http": 0,
+        "external": 0,
+        "failed": 0,
+        "cancelledNavigation": 0
+      }
+    }
+  ],
+  "visualChecks": [
+    {
+      "component": "Masthead and Back to Ladder",
+      "result": "accepted",
+      "details": "Original crisp local diamond/gold branding; dense stadium header; single-line112x24px left-facing button; zero tagline overlap at both sizes."
+    },
+    {
+      "component": "Breadcrumb and NFL season",
+      "result": "accepted",
+      "details": "Compact NFL > LADDER > DALLAS row; vector NFL mark and season context aligned at right."
+    },
+    {
+      "component": "Cowboys identity",
+      "result": "accepted",
+      "details": "Genuine local Dallas SVG, two-line block identity, cyan metadata, outlined record and form chips; final82% stadium crop includes the lower green field."
+    },
+    {
+      "component": "Upcoming opponent",
+      "result": "accepted",
+      "details": "Opponent, venue and local time fit left; entire contain-fitted local decorative equipment silhouette is visible to right, using the genuine vector TB mark; final94% background crop shows the field; full-width blue diamond CTA does not cover equipment."
+    },
+    {
+      "component": "Tabs and filters",
+      "result": "accepted",
+      "details": "Equal three-tab chamfered controls; active Form blue; all native selected text fits at both sizes including Cross-season, and native functional QA exercises all24 implemented filter cases."
+    },
+    {
+      "component": "Last five games",
+      "result": "accepted",
+      "details": "Dense aligned five-column rows; blue expanded game; gained and allowed stats in paired three-row columns; one-line report CTA; separate gold Prior Season badge; explicit verified neutral venue note."
+    },
+    {
+      "component": "Yards gained and allowed",
+      "result": "accepted",
+      "details": "Compact one-line Dallas panel title, right-aligned per-game/totals controls, aligned metric/gained/allowed table and explicit selected-window/coverage note."
+    },
+    {
+      "component": "Team form snapshot",
+      "result": "accepted",
+      "details": "Six tiles in a consistent3x2 grid; genuine stadium/calendar action icons; both action labels fit on one line; coherent metal/neon frame."
+    },
+    {
+      "component": "Continue and navigation",
+      "result": "accepted",
+      "details": "Full-width illuminated blue diamond continue CTA; framed bottom navigation, proper native icons and cyan selected Teams; source footer remains visible and separate from the internal scroller."
+    },
+    {
+      "component": "Home diamond CTA",
+      "result": "accepted",
+      "details": "Both fresh Home phone screenshots inspected; gem-ended illuminated CTA materially improves brightness and edge refinement while preserving original Home geometry and local high-quality branding."
+    },
+    {
+      "component": "Crispness and lighting",
+      "result": "accepted",
+      "details": "Native DPR2 screenshots inspected at original resolution for top/mid/bottom; native loaded fonts, vector frame/gems/logos, balanced gold/cyan borders and glints with no text-obscuring bloom, stretched logos, visible jagged frame edges or clipped tables."
+    }
+  ],
+  "reviewFixCycles": {
+    "iteration1Rejected": [
+      "Back arrow reversed and tagline clipped",
+      "Overtall panel stack",
+      "Interleaved expanded stats",
+      "Wrapped yardage title",
+      "Concatenated prior-season badge",
+      "Raw logo instead of equipment",
+      "Selected Teams yellow"
+    ],
+    "iteration2Rejected": [
+      "Two-line Back button",
+      "Equipment facemask hidden by CTA",
+      "Last10 select lacked sufficient width"
+    ],
+    "iteration3AcceptedGeometryRemainingCropGap": [
+      "Green field absent in hero and opponent backgrounds"
+    ],
+    "iteration4FinalCorrection": "Exactly two authorized CSS background positions changed: hero82%, upcoming94%; runtime behavior, data, typography and component geometry preserved.",
+    "densityComparison": {
+      "initial393FullHeight": 1402,
+      "final393FullHeight": 1233,
+      "approved393ScaledApproxHeight": 1179,
+      "initialExcessReductionApproxPercent": 76,
+      "final430FullHeight": 1285,
+      "approved430ScaledApproxHeight": 1289,
+      "qualification": "Approximate chat-render height comparison, not registered binary image diff."
+    }
+  },
+  "functionalReviewed": {
+    "engine": "chromium",
+    "viewports": [
+      "393x852",
+      "430x896",
+      "768x1024",
+      "1440x1000"
+    ],
+    "status": "passed",
+    "nativeActionsPerScenario": 312,
+    "filterCasesPerScenario": 24,
+    "reportViewsPerScenario": 20,
+    "eventLinksPerScenario": 17,
+    "playerDisclosuresPerScenario": 83,
+    "all32ClubRouteSmoke": "passed at393x852",
+    "homeSports": "all four themes passed",
+    "phoneMotionReducedAndInactive": "passed",
+    "qualification": "Reported by completed bound QA and independently checked report status and source manifest. This visual specialist did not claim personally clicking all controls."
+  },
+  "releaseGate": {
+    "status": "pending-separate-complete-release-gate",
+    "nativeTeamWebKit": "pending QA specialist completion",
+    "legacyWebKitPerimeterRegression": "known failure under specialist investigation; not counted as passed",
+    "hostedPublicationAndVerification": "parent-owned and pending; no deployment success claimed"
+  },
+  "knownLimits": [
+    "The supplied source is the approved chat attachment; its original binary cannot be registered for a pixel-for-pixel automated comparison.",
+    "The implementation materially matches the approved composition and treatment. Artistic stadium/equipment texture is legitimately labelled decorative; no claim of official venue photography or exact official helmet equipment model is made.",
+    "Visible factual values come from the provenance-backed application dataset and may intentionally differ from illustrative values and dashes in the render.",
+    "Actual Chromium mobile emulation and DPR2 screenshots were inspected; physical iPhone hardware, Safari chrome and real-device frame rate are not claimed.",
+    "This accepted visual scope is not permission to bypass the unfinished full native WebKit, protected regression or hosted-site release checks."
+  ],
+  "blockingFindingsWithinVisualScope": []
+}

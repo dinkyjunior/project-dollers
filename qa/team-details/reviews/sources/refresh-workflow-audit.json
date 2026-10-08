@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "agent": "team_recovery_sources_audit",
+  "auditedAt": "2026-10-08T08:55:49Z",
+  "scope": "Independent workflow static review plus isolated builder failure fixture; does not claim an executed GitHub Actions job.",
+  "files": [
+    {
+      "file": ".github/workflows/refresh-nfl-data.yml",
+      "sha256": "3f7695566c15a57229610a6f405b13674f584724a9e86ab1f5fd428898d7578c"
+    },
+    {
+      "file": "scripts/refresh-data.py",
+      "sha256": "0c1505564641bc83d541188d011f19941ef2e7c906c3c4a19df8a3dced48c40f"
+    },
+    {
+      "file": "scripts/refresh-team-details.py",
+      "sha256": "0e98507f06f0dac92ed31d027d791865d07edc0e67bd3490f1a75dacdf4bbb37"
+    },
+    {
+      "file": "scripts/check-source-updates.py",
+      "sha256": "d8f1f47049094f48682f011cca2dbb9fd3655190b97137a6bee889b04f091f63"
+    },
+    {
+      "file": "qa/team-details/data.test.py",
+      "sha256": "840a91130a7751f5f6633816ac97da9760f4d15674d31fe9c88de340275fb4a8"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Fresh runner cache reaches both builders and the independent raw-source tests",
+      "passed": true,
+      "details": {
+        "cache": "RUNNER_TEMP/project-dollar-source-cache",
+        "durableOldCacheRestored": false
+      }
+    },
+    {
+      "name": "Four validated public files are staged together",
+      "passed": true,
+      "details": {
+        "paths": [
+          "assets/data/current.json",
+          "assets/data/provenance.json",
+          "assets/data/player-history.json",
+          "assets/data/team-details.json"
+        ],
+        "publication": "One Git commit after all validation commands; individual filesystem writes are atomic, not a four-file filesystem transaction."
+      }
+    },
+    {
+      "name": "Failed earlier validation cannot reach publish or Pages request",
+      "passed": true,
+      "details": {
+        "semantics": "GitHub implicitly applies success() to each if without a status function; default bash uses -e and pipefail."
+      }
+    },
+    {
+      "name": "Concurrent refreshes serialize and rebase before push",
+      "passed": true,
+      "details": {
+        "forcedPush": false,
+        "conflictFailure": "An unresolved rebase exits before push."
+      }
+    },
+    {
+      "name": "Pages build is explicitly requested only after successful changed-data push",
+      "passed": true,
+      "details": {
+        "actualWorkflowRunObserved": false,
+        "actualHostedVerification": "Separate release evidence required."
+      }
+    },
+    {
+      "name": "Required-source failure preserves the existing team snapshot bytes",
+      "passed": true,
+      "details": {
+        "fixtureError": "deliberate audit required-source failure",
+        "temporaryFixtureOnly": true,
+        "runtimeChanged": false
+      }
+    },
+    {
+      "name": "Provider push claim is excluded",
+      "passed": true,
+      "details": {
+        "cadence": "Eligibility-gated 15-minute checks around verified NFL/provider windows, hourly fallback, six-hour full-fetch safety interval. GitHub cron may be delayed. Manual force and repository_dispatch are available; no upstream webhook relay is connected."
+      }
+    }
+  ],
+  "dataTests": {
+    "command": "python3 qa/team-details/data.test.py --cache-dir /workspace/recovery-qa/team-details/source-cache",
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "executedAt": "2026-10-08T08:55:49Z"
+  },
+  "findingResolved": "The scheduled workflow initially skipped independent raw source arithmetic because it omitted --cache-dir; root added the fresh shared cache argument before this accepted review.",
+  "additionalValidation": [
+    {
+      "command": "python3 qa/data.test.py",
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "python3 qa/source-updates.test.py",
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  ]
+}

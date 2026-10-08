@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-10-08T09:44:17.957197+00:00",
+  "status": "timed-out-incomplete-not-accepted",
+  "reason": "1200-second owned supervisor watchdog expired during the first phone all-team route sweep. Earlier exhaustive controls and native motion emitted successful completion markers, but their in-flight local evidence was not serialized to the result document, so no completed-case or full acceptance is claimed.",
+  "report": {
+    "file": "qa/team-details/local-webkit-final-v2/results.json",
+    "sha256": "2730edf8313bbfbb371e5c1e3b0b5b7ed85acf1e5b55e37b36b20451ba250437",
+    "status": "running"
+  },
+  "process": {
+    "file": "qa/team-details/local-webkit-final-v2-process/exit.json",
+    "sha256": "3e6725bbb35bff55b9db083e98eb36ff91929a217b1208eddbe570341671ea87",
+    "receipt": {
+      "startedAt": "2026-10-08T09:22:43.335640+00:00",
+      "command": [
+        "node",
+        "qa/team-details/run.cjs",
+        "--engine",
+        "webkit",
+        "--mobile-only",
+        "--output",
+        "qa/team-details/local-webkit-final-v2"
+      ],
+      "output": "/workspace/project-dollers/qa/team-details/local-webkit-final-v2",
+      "timeoutSeconds": 1200,
+      "status": "timed-out-incomplete",
+      "pid": 218818,
+      "exitCode": 124,
+      "completedAt": "2026-10-08T09:42:43.965949+00:00",
+      "elapsedSeconds": 1200.63
+    }
+  },
+  "diagnosticFiles": [
+    "qa/team-details/reviews/webkit-v2-progress-1791452258792.json",
+    "qa/team-details/reviews/webkit-v2-progress-1791452323982.json"
+  ],
+  "qualification": "Owned Node inspector was read-only and never paused browser clocks, attached another WPE client, altered app state or substituted sources. It confirmed advancing callback IDs and actual Players route, not a functional assertion failure.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+  },
+  "sourceStillUnchanged": true,
+  "followOn": "Batch redundant protocol reads while retaining every native input and fact/geometry assertion, flush in-flight phase receipts, then run both actual engines on a new immutable test freeze."
+}

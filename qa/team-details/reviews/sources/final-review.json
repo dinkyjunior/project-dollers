@@ -1,0 +1,218 @@
+{
+  "status": "accepted",
+  "agent": "team_recovery_sources_audit",
+  "auditedAt": "2026-10-08T08:47:02.677108+00:00",
+  "scope": "Independent data, source provenance, source controls and before/after visual review; broader functional/hosted publication requires the separate complete release gate.",
+  "reference": "Approved Dallas team-details chat attachment, not copied illustrative data. Original attachment bytes unavailable; no registered pixel identity claimed.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest.json",
+    "sha256": "6e7e9b3949e3b076dbdca30e5e68b6f04a8242510588ae9aa9590b4eac95b6a3",
+    "files": 231
+  },
+  "dataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "evidence": {
+    "independentSourceAudit": {
+      "file": "qa/team-details/reviews/sources/source-audit.json",
+      "sha256": "fdeb8283bc5d64570d72b5c28beb8e4735d11501da8be90131499b6e9162f8f7"
+    },
+    "nativeSourceUIAudit": {
+      "file": "qa/team-details/reviews/sources/source-ui-final-audit.json",
+      "sha256": "61523b376c88a2403ada366ef0b36ab31565caefdf07876b9aaafb45a3e96054"
+    },
+    "sourceAuditCode": {
+      "file": "qa/team-details/source-audit.py",
+      "sha256": "fd73d35de8b06a1807e285fd7d8881c5236acb62630675a4f17f3533b72ac7a9"
+    },
+    "beforeViewed": [
+      {
+        "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+        "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/team-430x896-full-content.png",
+        "sha256": "466c92770b35c4d9e5ad0f4981ee497954bebfa0c8141b264dea34c8f8180670"
+      }
+    ],
+    "afterViewed": [
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-393x852-top.png",
+        "sha256": "a70ee9179563922288fedea22a40b6b1c8e853967bd8b454d6adb1429d0fb7a9"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-393x852-bottom.png",
+        "sha256": "035ecb4e5bcee62263674363a0c8431e9e5632e70c111fb99b248c08acb307d8"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-393x852-full-content.png",
+        "sha256": "7df7defc21055734af1afe720d1af0a7c0c7b93f9b185497416ee7e6f26a138a"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-430x896-top.png",
+        "sha256": "3acf7348633305d3190798e00459d8c03c0a53a03a863b8c6ce0edd9da51750b"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-430x896-bottom.png",
+        "sha256": "1e825cdd7a480f5ba40b78b31744c096e232f450e559f75d5bef281019b86a40"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/team-430x896-full-content.png",
+        "sha256": "17033083b2cdec8ef48eedaccdb189de2d4e946179a8d1f809ee2371ff21b7c5"
+      },
+      {
+        "file": "qa/team-details/iteration-3-chromium/home-393x852-diamond.png",
+        "sha256": "36874dcab4992fc3404a689351349ed292b3b00eea81780b7c5ec249cb19fe44"
+      }
+    ]
+  },
+  "sourceChecks": {
+    "status": "passed",
+    "count": 73244,
+    "teams": 32,
+    "uniqueGames": 544,
+    "DallasRoster": 83,
+    "playerStatFields": 88,
+    "recordedPlayerGameRows": 283,
+    "ESPNFinalGameSummaries": 21,
+    "publishedDallasInjuries": 11,
+    "providerDifferencesRetained": 4
+  },
+  "nativeChecks": {
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      }
+    ],
+    "results": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ],
+        "historicalReport": {
+          "game": "2025_18_DAL_NYG",
+          "season": 2025,
+          "week": 18,
+          "citations": [
+            "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+            "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963",
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+          ]
+        },
+        "originalClubContext": {
+          "player": "Von Miller",
+          "rows": [
+            {
+              "season": 2025,
+              "week": 18,
+              "team": "WAS",
+              "opponent": "PHI"
+            },
+            {
+              "season": 2025,
+              "week": 17,
+              "team": "WAS",
+              "opponent": "DAL"
+            },
+            {
+              "season": 2025,
+              "week": 16,
+              "team": "WAS",
+              "opponent": "PHI"
+            }
+          ]
+        }
+      },
+      {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ],
+        "historicalReport": {
+          "game": "2025_18_DAL_NYG",
+          "season": 2025,
+          "week": 18,
+          "citations": [
+            "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+            "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963",
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+          ]
+        },
+        "originalClubContext": {
+          "player": "Von Miller",
+          "rows": [
+            {
+              "season": 2025,
+              "week": 18,
+              "team": "WAS",
+              "opponent": "PHI"
+            },
+            {
+              "season": 2025,
+              "week": 17,
+              "team": "WAS",
+              "opponent": "DAL"
+            },
+            {
+              "season": 2025,
+              "week": 16,
+              "team": "WAS",
+              "opponent": "PHI"
+            }
+          ]
+        }
+      }
+    ],
+    "unchangedRuntime": true
+  },
+  "visualFindings": [
+    "Masthead, breadcrumbs, Dallas hero, team form, event-specific upcoming card, tab/filter controls, five-game expansion, yardage table, six snapshot tiles, diamond actions and selected Teams navigation all retain the approved hierarchy.",
+    "The final dense typography, aligned passing/rushing/offence stats, single-line Back/Open-report controls, gold prior-season tag and calendar/venue icons materially reduce the earlier gaps.",
+    "Native top and bottom views at both phone sizes preserve the same app enclosure and readable controls; full-content images are separately qualified capture-only exposures.",
+    "Actual verified yardage and derived form figures replace the approved render’s unverified dashes, with nulls and visible source differences retained.",
+    "Home diamond button is brighter and retains the NFL entry semantics; other theme/interaction coverage belongs to the complete asset/control QA."
+  ],
+  "knownLimits": [
+    "Official Cowboys proxy403 and tested NFL schedule404 are retained; no direct official corroboration claimed.",
+    "Current Dallas data and both regular-season histories are source-backed; other club rosters remain explicitly unavailable in this Dallas pass.",
+    "Upcoming fixture overview is functional; the user’s second deep-matchup render has not been supplied for a separate full-screen build.",
+    "Broader Chromium/WebKit controls, lifecycle/motion, complete hosted and final deployment-byte verification must pass before publication completion."
+  ],
+  "blockingFindingsWithinScope": []
+}

@@ -1,0 +1,422 @@
+{
+  "status": "accepted",
+  "agent": "team_controls_audit",
+  "auditedAt": "2026-10-08T11:09:01.919675+00:00",
+  "runtimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "scope": "Independent complete native interaction, source-derived field/data, route, before/final visual and protected-screen regression acceptance of the frozen Dallas Form implementation and Home diamond CTA. This is local acceptance; source-metadata integration and genuine hosted publication remain separate mandatory gates.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+    "bytes": 23203,
+    "files": 231,
+    "matchesCurrentFiles": true
+  },
+  "testFiles": {
+    "qa/team-details/run.cjs": "96a16479f70bd1b917fc08001bd6349f1fb80e77f93ae9220ce52c2ec77de874",
+    "qa/team-details/qa.cjs": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+    "qa/team-details/controls.cjs": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797",
+    "qa/nfl-dashboard/qa.cjs": "57fa7de95f79e6aff0fddd072ece20b1a17fcbc2621088bc4014574d9bb763ff",
+    "qa/home-gate.cjs": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+    "qa/hosted-webkit.cjs": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad"
+  },
+  "dataFiles": {
+    "assets/data/current.json": "7eb94f6f5dd1cf84561b131a95e6d896d2bbe0292417b41cc0b09de11da229ac",
+    "assets/data/player-history.json": "36f80326de871a91e124774b979e474253cb38e8f6d26c0654a92efd7a64682a",
+    "assets/data/provenance.json": "32492be2c491069843d2b3d9ac5f52d69ec3a6ba33a45a2f6bfdf8bb3fb4aad2",
+    "assets/data/team-details.json": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+  },
+  "reference": {
+    "source": "User-approved Dallas Cowboys Form render attached in chat",
+    "attributionFile": "reference/DALLAS_FORM_CHAT_SOURCE.md",
+    "originalAttachmentBytesAvailable": false,
+    "illustrativeFactsUsedAsSourceData": false,
+    "pixelIdenticalClaim": false
+  },
+  "evidence": [
+    {
+      "file": "qa/team-details/local-chromium-final-v3/results.json",
+      "sha256": "f7223a619e1715481feb582b49d74e21b8ef5f880335a68a6ac67902ca480c46",
+      "bytes": 23157529
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/results.json",
+      "sha256": "35b9d9c471f3d0000fac14f1e680a7d6e7d930d107e9926577de19a416c49e39",
+      "bytes": 11760168
+    },
+    {
+      "file": "qa/team-details/regression-webkit-final-v3/results.json",
+      "sha256": "6f7b9c07cf53d82ed640682e65b64a9ead81e97989098399adf28e3966554849",
+      "bytes": 246949
+    },
+    {
+      "file": "qa/team-details/regression-webkit-final-v3/runtime-binding.json",
+      "sha256": "403e4534a127da1e2e3d7b0807525afce92bbea6fe6e39a76c7478d6ba24b7f0",
+      "bytes": 24627
+    },
+    {
+      "file": "qa/team-details/regression-chromium-final-v3/results.json",
+      "sha256": "55da944ae4baaa4e470c519226d84edf5065420fa7d56b2b6f11d7d1042e39d2",
+      "bytes": 589761
+    },
+    {
+      "file": "qa/team-details/regression-chromium-final-v3/runtime-binding.json",
+      "sha256": "21ceff15567e11944fd4395ccb7e39824afd897d58b4af5837037f73873cb2aa",
+      "bytes": 24627
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/native-v3-independent-verification-v2.json",
+      "sha256": "5b6807344e03d6bb98a5a7dd0107b4ec3d1be5c5a2ad1a4413b9e3b31f38c0ce",
+      "bytes": 2264
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/independent-32-final-fe69378e/results.json",
+      "sha256": "0707f305cfd5d5bc9a9c26e02fbd3184b63dc4759043d8643d61e3f5ced05e62",
+      "bytes": 59463
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/controls-batching-assertion-map.json",
+      "sha256": "370674cf850ffef2a3311464843e28cbf16458337e693df84aebb001ed1724ad",
+      "bytes": 5885
+    },
+    {
+      "file": "qa/team-details/reviews/qa-batched-helper-static-review.json",
+      "sha256": "15581b1661c10259e506a0545069a405ec88079f4f0d24cb79881a3260dc3a9f",
+      "bytes": 1783
+    },
+    {
+      "file": "qa/team-details/reviews/data-evidence/controls-batching-e7a33b6f.json",
+      "sha256": "7d788a7670bc44ea0127ff03fa9f1e40ba29b65c9c8e99b3c8ffd5b64d3c6966",
+      "bytes": 2383
+    },
+    {
+      "file": "qa/team-details/reviews/data-evidence/chromium-data-outcomes-v3-fe69378e.json",
+      "sha256": "a2acf65cba5c83f1b4df5ce2f42fdb89fba6785c7658d2e1f58a2da4f989caa8",
+      "bytes": 8947
+    },
+    {
+      "file": "qa/team-details/reviews/data-evidence/webkit-data-outcomes-v3-fe69378e.json",
+      "sha256": "9aa5ddc873ab9d0159455ea3e99352521363e685df3ada756e7ad32e1c5c8b76",
+      "bytes": 5105
+    },
+    {
+      "file": "qa/team-details/reviews/sources/source-ui-refresh-final-audit.json",
+      "sha256": "48f4c0d616c55c6dc4ecb9588cb19f67b4f9a2c4a7448407800dbff2eae3fb0b",
+      "bytes": 46921
+    },
+    {
+      "file": "qa/team-details/reviews/sources/final-source-native-complete-review.json",
+      "sha256": "0b0fd23f8215052a55607798e3d7074a4b7cfb13a7b7179af56dd701b382658b",
+      "bytes": 6794
+    },
+    {
+      "file": "qa/team-details/reviews/sources/source-audit.json",
+      "sha256": "fdeb8283bc5d64570d72b5c28beb8e4735d11501da8be90131499b6e9162f8f7",
+      "bytes": 35118
+    },
+    {
+      "file": "qa/team-details/reviews/control-evidence/hosted-facade-3b557042-static-review.json",
+      "sha256": "68689f53227d68a7810c26162f4c5b38e9a50d5258a6468f9c8059a5183f9c55",
+      "bytes": 2063
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3-process/exit.json",
+      "sha256": "b2073297cd03ef3788cac81f7e6a0286990c74e9ddcf588432bdfa3f298613e6",
+      "bytes": 576
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3-process/external-supervision/exit.json",
+      "sha256": "f06aa5bb6cbc1575492264153c0b012d944aaebc528cb16cf9c3668d52d63b3c",
+      "bytes": 2655
+    }
+  ],
+  "independentlyViewedActualImages": [
+    {
+      "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+      "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168",
+      "bytes": 1676439,
+      "dimensions": [
+        786,
+        2804
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-393x852-full-content.png",
+      "sha256": "0a02547d5816d9d294a2b54e35afc10ed804c83a88c94902ff15693de93a1606",
+      "bytes": 1556595,
+      "dimensions": [
+        786,
+        2466
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-393x852-mid.png",
+      "sha256": "5cb714cbbe3e15c69cb1f9ccbe012ce86d435cd453ae6b92ccff810f3d50d6a4",
+      "bytes": 866672,
+      "dimensions": [
+        786,
+        1704
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-393x852-bottom.png",
+      "sha256": "56ac6fd9779c8fab581cccd37d52207b30cd921dab89202fff352c6261fafb38",
+      "bytes": 654908,
+      "dimensions": [
+        786,
+        1704
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/home-393x852-diamond.png",
+      "sha256": "d992659377b14ec394681f0d8f0004a991b807e4b131d915bfcba529afd0b6cc",
+      "bytes": 1674154,
+      "dimensions": [
+        786,
+        1704
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-430x896-top.png",
+      "sha256": "b8b4de47b36ecc9038b4bd6769d36c17538dab010987e92ba1a0ec53ce5919b9",
+      "bytes": 1357617,
+      "dimensions": [
+        860,
+        1792
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-430x896-bottom.png",
+      "sha256": "96455de8029e12c0391359f419fb203aafce50ebb1b4b9b1b123be7c9cd477f1",
+      "bytes": 711524,
+      "dimensions": [
+        860,
+        1792
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-chromium-final-v3/team-430x896-full-content.png",
+      "sha256": "f5b1c872ed3a45fb74a2cc5d44c67056910a88c1389f8f634b3d346ea7871f95",
+      "bytes": 1737553,
+      "dimensions": [
+        860,
+        2570
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-393x852-top.png",
+      "sha256": "8f1451735bff5d59563c5ca78134f49b2f1586a18151fd449107c4ac49ac9bd9",
+      "bytes": 1134676,
+      "dimensions": [
+        786,
+        1704
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-393x852-bottom.png",
+      "sha256": "c4b2fd3f533eadf7903d1f45c9222410b3c10f818eb26d6a51f04eb2ef7b8a9f",
+      "bytes": 489964,
+      "dimensions": [
+        786,
+        1704
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-393x852-full-content.png",
+      "sha256": "d379f0641ddafec4c5a2ddb9b51e87654391cbed7f6d7b1e5000379515a765ca",
+      "bytes": 1422838,
+      "dimensions": [
+        786,
+        2450
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-430x896-top.png",
+      "sha256": "cd4f8c05b6bb9ea2046c6941be2b4a957e5c8bdf5c18ae28f627cd1f9c4ec43f",
+      "bytes": 1305471,
+      "dimensions": [
+        860,
+        1792
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-430x896-bottom.png",
+      "sha256": "d35cd4b338ce2de68a56078d78b5f055de7f749ccb452110513a81f195240e55",
+      "bytes": 523236,
+      "dimensions": [
+        860,
+        1792
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/team-430x896-full-content.png",
+      "sha256": "ca2b1dc00a45c47c4ddce35b5036489aceb7f000b4a1ee7dd02331ebcc376bed",
+      "bytes": 1599465,
+      "dimensions": [
+        860,
+        2560
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    },
+    {
+      "file": "qa/team-details/local-webkit-final-v3/home-430x896-diamond.png",
+      "sha256": "4315f9020b2ce726f5c97cc2e5d1c7afe52763dc74c0bdf177f8c07d0153d841",
+      "bytes": 2037558,
+      "dimensions": [
+        860,
+        1792
+      ],
+      "independentlyViewed": true,
+      "actualBrowserOutput": true
+    }
+  ],
+  "completedNativeCoverage": {
+    "chromiumViewports": [
+      [
+        393,
+        852
+      ],
+      [
+        430,
+        896
+      ],
+      [
+        768,
+        1024
+      ],
+      [
+        1440,
+        1000
+      ]
+    ],
+    "webkitViewports": [
+      [
+        393,
+        852
+      ],
+      [
+        430,
+        896
+      ]
+    ],
+    "eachScenario": {
+      "recordedInteractions": 312,
+      "nativeButtonInputs": 218,
+      "nativeOptionSelections": 94,
+      "playerDisclosures": 83,
+      "separatePlayerOpenCloseInputs": 166,
+      "filterCombinations": 24,
+      "aggregateModesPerFilter": 2,
+      "historicalGameReports": 20,
+      "metricRowsPerReport": 9,
+      "scheduleEvents": 17,
+      "positionFilters": 7,
+      "tabs": 3,
+      "dialogOpens": 46,
+      "observedControls": 83,
+      "exercisedControls": 83,
+      "untestedControls": []
+    },
+    "inputQualification": "Phones use218 native touches plus94 real option selections; desktop uses218 pointer clicks plus94 option selections.83 disclosures add166 separate native open/close inputs per scenario. No claim that all312 recorded interactions are taps.",
+    "independentPythonRecomputedFields": {
+      "cases": 6,
+      "recordedInputs": 1872,
+      "nativeButtonInputs": 1308,
+      "nativeTouches": 872,
+      "pointerClicks": 436,
+      "nativeOptionSelections": 564,
+      "separatePlayerOpenCloseInputs": 996,
+      "filterCases": 144,
+      "yardCells": 1728,
+      "snapshotCells": 1728,
+      "reportCells": 2160,
+      "playerHistoryCells": 6792,
+      "sourceCitations": 62
+    },
+    "nativeKeyboard": true,
+    "directURLAndRefresh": true,
+    "realLadderReturnPreservesControls": true,
+    "realManualHTTPRefreshRetainsSevenDOMNodesFocusAndContext": true,
+    "exactlyOneUnchangedRefreshEvent": true,
+    "allErrorArraysEmpty": true
+  },
+  "sourceAndDestinationCoverage": {
+    "all32ClubRoutes": true,
+    "independentlySourceDerived192ClubYardCells": true,
+    "PITBridgeUsesActualExistingSteelersAndChecksumVerifiedHistory": true,
+    "all31ExactHTTPSCitationURLsAndSafeExternalAttributes": true,
+    "allFourProviderDisagreementsVisible": true,
+    "historical2025Week18RetainsSeasonWeekEventAndSpecificSources": true,
+    "unavailableValuesAndMissingCoverageNeverFabricated": true,
+    "weightedPercentagesAndSourceDefinedNetPassingRecomputed": true,
+    "passingRushingReceivingScoredTDHistoriesSourceBound": true,
+    "rosterPositionAndIdentitySourceBound": true,
+    "lineupInjuriesDepthAndHonestUnavailableWeatherTravel": true,
+    "scheduleAndVenueControlsUseRealEventOrFilterDestinations": true
+  },
+  "visualReview": {
+    "beforeAndFinalComparedToApprovedChatReference": true,
+    "correctedGainedAllowedMetricPairing": true,
+    "backButtonOneLineAndTaglineUnobscured": true,
+    "everySelectedFilterLabelFits": true,
+    "priorSeasonBadgeRemainsSeparate": true,
+    "helmetFacemaskContainedAboveCTA": true,
+    "denseGoldCyanMetalFramesAndDiamondActionsPresent": true,
+    "noNewVisualBlockerFound": true,
+    "actualNaturalLightingPaintAndNativeClocksAdvance": true,
+    "reducedAndInactiveMotionPass": true,
+    "physicalIPhoneFPSCertified": false
+  },
+  "protectedRegression": {
+    "actualNativeWebKitBothPhonesCompleted": true,
+    "exact231FileBindingMatches": true,
+    "allExistingHomeNFLSteelersControlsAndHistory": true,
+    "completeCardPerimeterAndExpandedResearch": true,
+    "isolatedFailureRecoveryTestsClearlySeparateFromNaturalScreenshotData": true,
+    "qualification": "All32 assigned phase points measured after two genuine animation frames; original geometry and phase thresholds retained. Screenshot capture resumes only saved animations still present and paused, preserving cancelled/replaced CSS animation state. Earlier failed runs and paired cold/natural/safe-resume diagnostics are retained."
+  },
+  "preservedHistory": {
+    "oldDetachedDOMFailurePreserved": true,
+    "oldWatchdogIncompleteRunsNotAccepted": true,
+    "batchingOnlyCoherentReadonlySnapshotsAllAssertionsAndNativeActionsRetained": true,
+    "original571fHelperArchived": true,
+    "actualWPEv3CompletedWithUnchangedSixHelpers": true,
+    "WPEv3OperationalDeadlineExtendedFrom2400To4800WithExplicitBoundedOwnedProcessReceipt": true,
+    "actualOriginalWrapperReapedZeroAndPassedQA": true,
+    "initialIndependentReviewCountLabelCorrectedInImmutableV2Receipt": true
+  },
+  "publicationPending": [
+    "Fetch/rebase and independently classify metadata-only source integration",
+    "Complete local post-refresh source validation",
+    "Complete actual hosted Chromium/WebKit targeted deployment checks at both phones and desktop",
+    "Verify all231 actual production responses match release bytes"
+  ],
+  "blockers": [],
+  "runtimeOrFrozenHelperChangesByThisFinalReview": false
+}

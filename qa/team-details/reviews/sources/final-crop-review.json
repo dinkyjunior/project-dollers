@@ -1,0 +1,155 @@
+{
+  "status": "accepted",
+  "agent": "team_recovery_sources_audit",
+  "auditedAt": "2026-10-08T08:59:49Z",
+  "scope": "Supplemental independent source/data/native source-controls acceptance and actual final crop visual inspection; broader regression and hosted publication are separate mandatory release gates.",
+  "reference": "Approved Dallas team-details chat attachment, observed directly; original reference bytes unavailable, no registered pixel identity claimed.",
+  "runtimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-4.json",
+    "sha256": "eb9ad5d9d7c06cbe9a3237623c5e93f1af2dad55de77333cd951dfd6a3a620c7",
+    "runtimeFiles": 231
+  },
+  "dataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "supersedesWithinScope": {
+    "file": "qa/team-details/reviews/sources/final-review.json",
+    "sha256": "667792a95f2cd0c5191abdcd573e9b518b8835f8d1f747cca9c515ecb2b7a5f0"
+  },
+  "previousManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-3.json",
+    "sha256": "6e7e9b3949e3b076dbdca30e5e68b6f04a8242510588ae9aa9590b4eac95b6a3"
+  },
+  "runtimeDelta": [
+    {
+      "file": "assets/team-details.css",
+      "previousSha256": "4ce8afe4afbc1c760f3828c87f141162e784bc2e415d6b81bb53875b74e173ae",
+      "finalSha256": "ae56d2a8e03abc0327eb52f3bc0ecdf8463894acc2430119fa76aca5f0f5bda7"
+    }
+  ],
+  "cropInspection": "Actual originals at both phone sizes show the green field restored behind Dallas identity and upcoming opponent. The gold/cyan frames, one-line controls, prior-season badge, numeric columns and Home diamond CTA remain legible and aligned. Data and JavaScript hashes are unchanged.",
+  "evidence": {
+    "sourceAudit": {
+      "file": "qa/team-details/reviews/sources/source-audit.json",
+      "sha256": "fdeb8283bc5d64570d72b5c28beb8e4735d11501da8be90131499b6e9162f8f7"
+    },
+    "nativeSourceUI": {
+      "file": "qa/team-details/reviews/sources/source-ui-crop-final-audit.json",
+      "sha256": "bdfbeaa515072e9fff7208b7e90c0faf6495ec2f96d31770a8d87bbe98b221ce"
+    },
+    "workflowAudit": {
+      "file": "qa/team-details/reviews/sources/refresh-workflow-audit.json",
+      "sha256": "0e95fcf8222584e2f26c2ca3f31c794f6594a6a0724d64dc4620266aa9333fde"
+    },
+    "beforeViewed": [
+      {
+        "file": "qa/team-details/iteration-1b-chromium/team-393x852-full-content.png",
+        "sha256": "b6c58050f68e976a14d7b258c875b1092676cb4973b2319698c1507406feb168"
+      },
+      {
+        "file": "qa/team-details/iteration-2-chromium/team-430x896-full-content.png",
+        "sha256": "466c92770b35c4d9e5ad0f4981ee497954bebfa0c8141b264dea34c8f8180670"
+      }
+    ],
+    "afterViewed": [
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-top.png",
+        "sha256": "0fab3150b325de4865dbe61d1ce839decea31d06daf59223bd9937dd8116e403"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-bottom.png",
+        "sha256": "1367db7e5a9b047c5737f4e7c2cb64bca5767decdb2627f25020bdb2e57d1e7b"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-393x852-full-content.png",
+        "sha256": "1a5a36b13bbbbf1e1ee44d227228fd2e61187cfcf676f2f1685e2971f4736ce1"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-top.png",
+        "sha256": "b813ccde5da9d46b5e056d7edbcc509e9a7cb89475fd569b96d395a8534754e2"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-bottom.png",
+        "sha256": "fe11da7b4da4dddc9f570e860d1906e49bd3b629e1e55c6ce912483f063a99a4"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/team-430x896-full-content.png",
+        "sha256": "b2d35cfae678ed1de7b449dd18ec71e2f5c977c15ff79df11fa8675c78d6e38a"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/home-393x852-diamond.png",
+        "sha256": "9b350217324f8f80677c600c0db285dc031c2aed9a7c6765e49c1e8cfa1c1c69"
+      },
+      {
+        "file": "qa/team-details/iteration-4-chromium/home-430x896-diamond.png",
+        "sha256": "4c276d9fb4e668c5071fb1986ba3a346a033663f8a726be8191eae9b11f1d0e0"
+      }
+    ]
+  },
+  "sourceChecks": {
+    "count": 73244,
+    "failed": 0,
+    "sourceStatus": "passed",
+    "nativePhones": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ]
+      },
+      {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "status": "passed",
+        "checks": [
+          "native source button",
+          "31exact HTTPSdestinations",
+          "target_blank/noopener/noreferrer",
+          "source statuses and retrieval timestamps",
+          "all4provider differences",
+          "native prior-season game expand/report",
+          "correct2025season/week/event",
+          "exact event-specific citation URLs",
+          "personal historical rows explicitly retain originalclub/opponent",
+          "both disputed player numbers unavailable/explained",
+          "personal-history recorded-row qualification",
+          "lineup unavailable itinerary/weather not fabricated"
+        ]
+      }
+    ],
+    "runtimeUnchangedDuringNativeAudit": true
+  },
+  "workflowChecks": {
+    "staticAndIsolatedFailureFixture": "passed",
+    "testsPassed": 40,
+    "testsSkipped": 0,
+    "actualActionsExecutionClaimed": false
+  },
+  "findings": [],
+  "limitations": [
+    "Actual physical iPhone and measured 60fps are not claimed.",
+    "Official Cowboys route was blocked and tested NFL routes were unavailable; ESPN plus nflverse corroboration is recorded.",
+    "No provider live-push relay is connected; scheduled source checks and focus/online snapshot refresh are implemented.",
+    "Other team rosters, verified weather forecasts, confirmed inactives and travel itineraries remain explicitly unavailable where not sourced.",
+    "The second deep matchup render has not been supplied; the existing source-backed matchup route remains available."
+  ],
+  "broaderReleaseGate": {
+    "status": "pending",
+    "reason": "Full native Chromium/WebKit audit and actual hosted verification have not all completed. Preserved old WebKit regression track failure is being independently diagnosed; it is not silently accepted."
+  }
+}

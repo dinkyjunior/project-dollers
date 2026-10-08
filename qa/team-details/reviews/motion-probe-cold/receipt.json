@@ -1,0 +1,494 @@
+{
+  "status": "causal-test-helper-defect-demonstrated-and-fixed",
+  "auditedAt": "2026-10-08T10:09:01.173577+00:00",
+  "agent": "team_assets_motion_audit",
+  "applicationRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "runtimeFiles": 231,
+  "baselineLegacyScriptSha256": "cf396d1af0963e3321e5d0a2be1a19d14d6a024bf18f68ac54ccf61c4a39a5f2",
+  "fixedLegacyScriptSha256": "74a74e5d4f427fbbcd4631ddec4d3f886ec0c23919b505db90d4623e8cc946f2",
+  "runtimeChanged": false,
+  "finding": "The legacy screenshot helper stored initial perimeter-motion CSS animations before measured card paths replaced them, then blindly played the stored cancelled clocks. This resurrected a second replacing offsetDistance animation. The rendered football followed that competing fallback while the sought premium clock and light had the correct time, stable identity and resolved pending state.",
+  "controlledCausalComparison": [
+    {
+      "case": "capture-resurrects-fallback",
+      "status": "diagnosed",
+      "sourceManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+      "runtimeUnchanged": true,
+      "captureResume": [],
+      "players": [
+        {
+          "player": "Aaron Rodgers, QB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter",
+            "perimeter-motion"
+          ],
+          "cold": {
+            "maxTrackDistance": 338.8576990444862,
+            "maxPhaseDiff": 39.159027,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 341.0707493208793,
+            "maxPhaseDiff": 84.777779,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Jaylen Warren, RB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter",
+            "perimeter-motion"
+          ],
+          "cold": {
+            "maxTrackDistance": 353.5252281580077,
+            "maxPhaseDiff": 58.799999,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 252.10586547851562,
+            "maxPhaseDiff": 31.198265000000006,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "DK Metcalf, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter",
+            "perimeter-motion"
+          ],
+          "cold": {
+            "maxTrackDistance": 357.6139535886481,
+            "maxPhaseDiff": 78.800003,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 343.69509056928894,
+            "maxPhaseDiff": 43.073265000000006,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Michael Pittman, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter",
+            "perimeter-motion"
+          ],
+          "cold": {
+            "maxTrackDistance": 89.26055908203418,
+            "maxPhaseDiff": 98.800003,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 361.23429792563655,
+            "maxPhaseDiff": 54.948265000000006,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Pat Freiermuth, TE",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter",
+            "perimeter-motion"
+          ],
+          "cold": {
+            "maxTrackDistance": 188.19246146269674,
+            "maxPhaseDiff": 21.486111,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 354.7719153439454,
+            "maxPhaseDiff": 64.777779,
+            "identities": true,
+            "pending": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "native-capture-control",
+      "status": "diagnosed",
+      "sourceManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+      "runtimeUnchanged": true,
+      "captureResume": [],
+      "players": [
+        {
+          "player": "Aaron Rodgers, QB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Jaylen Warren, RB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "DK Metcalf, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Michael Pittman, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Pat Freiermuth, TE",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "safe-resume-control",
+      "status": "diagnosed",
+      "sourceManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+      "runtimeUnchanged": true,
+      "captureResume": [
+        {
+          "name": "perimeter-motion",
+          "state": "idle",
+          "present": false,
+          "connected": true,
+          "player": "Aaron Rodgers, QB"
+        },
+        {
+          "name": "perimeter-motion",
+          "state": "idle",
+          "present": false,
+          "connected": true,
+          "player": "Jaylen Warren, RB"
+        },
+        {
+          "name": "perimeter-motion",
+          "state": "idle",
+          "present": false,
+          "connected": true,
+          "player": "DK Metcalf, WR"
+        },
+        {
+          "name": "perimeter-motion",
+          "state": "idle",
+          "present": false,
+          "connected": true,
+          "player": "Michael Pittman, WR"
+        },
+        {
+          "name": "perimeter-motion",
+          "state": "idle",
+          "present": false,
+          "connected": true,
+          "player": "Pat Freiermuth, TE"
+        }
+      ],
+      "players": [
+        {
+          "player": "Aaron Rodgers, QB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Jaylen Warren, RB",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "DK Metcalf, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Michael Pittman, WR",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        },
+        {
+          "player": "Pat Freiermuth, TE",
+          "initialFootballAnimationNames": [
+            "premium-card-perimeter"
+          ],
+          "cold": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          },
+          "readyAwaited": {
+            "maxTrackDistance": 6.67572021484375e-05,
+            "maxPhaseDiff": 0,
+            "identities": true,
+            "pending": false
+          }
+        }
+      ]
+    }
+  ],
+  "fix": "Only resume previously saved animations still present in document.getAnimations() and still paused. Cancelled/replaced animations remain cancelled; current animation timing, sample count and every motion assertion threshold are unchanged.",
+  "releaseGate": "These are intentionally stopped diagnostics, not a completed broad suite. A fresh complete legacy regression with the repaired capture helper remains required.",
+  "originalFailuresPreserved": [
+    "qa/team-details/regression-webkit-final/results.json",
+    "qa/team-details/regression-webkit-final-v2/results.json"
+  ],
+  "qualifications": [
+    "The native-capture-control screenshots occur before controlled phase seeking and have no capture pause/seek writes. Other case screenshots preserve the legacy consistency helper and are labelled controlled diagnostics.",
+    "No production CSS/JS, datasets, assets or frozen team v3 helper files were edited.",
+    "Awaited ready alone fails in the reproduced conflicting-clock case; it is not offered as a fix."
+  ],
+  "artifacts": [
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/README.md",
+      "sha256": "ad93984fc70156b8a24bc315c69666ab47c6b9eb75d19fc9129cd5b2996b5793",
+      "bytes": 1785
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/cold-flow-context/failure-393.png",
+      "sha256": "83d7600491e4cceb79a99b9e466c20888265e0ea4c327e34755fdf52cff36d7c",
+      "bytes": 616163
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/cold-flow-context/home-393.png",
+      "sha256": "0a56ee006819d965fdf61f46076daba452545b4dc27ba7e03529f193a8c4b81f",
+      "bytes": 1779763
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/cold-flow-context/nfl-393.png",
+      "sha256": "fcffe305b3d3b5751105d8e0e8f419ee9d3ad010c2c6208c4b0ce288b3cd92d2",
+      "bytes": 1154189
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/cold-flow-context/results.json",
+      "sha256": "aa1ae994786f45115ebd21065cd5053129ccf6f15442d24116a573336bb1fe80",
+      "bytes": 7480
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/cold-flow-context/steelers-393.png",
+      "sha256": "de1662d55b9b866c9ecb7e0806561ad90ca2048f3e0801334936a0d08668e212",
+      "bytes": 613553
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/executed-legacy-instrumented.cjs",
+      "sha256": "c30974d0cca7c793b1ab63efc8e2fbaee1e5363035291dc7816626bd92466dfc",
+      "bytes": 64888
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/results.json",
+      "sha256": "155fc2e125ab2e650873413beb3ef6a7f819912d0704aa1322840b13313b967b",
+      "bytes": 1869242
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/helper-only.diff",
+      "sha256": "2c3f448bdd5c6b555a4c1bd2c3d2a740558fb15726d351262837cb8e5012661b",
+      "bytes": 1029
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/legacy-run-before-safe-resume.cjs",
+      "sha256": "cf396d1af0963e3321e5d0a2be1a19d14d6a024bf18f68ac54ccf61c4a39a5f2",
+      "bytes": 69275
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/cold-flow-context/failure-393.png",
+      "sha256": "225cf382508362996dd2d210a1c0bc88940b6416913659019084a4be1becbcd1",
+      "bytes": 618464
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/cold-flow-context/home-393.png",
+      "sha256": "21a6a7dd9fee0304c36eb583c19033da06df4aa6e0217da0dce8c22f55a30c8c",
+      "bytes": 1780814
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/cold-flow-context/nfl-393.png",
+      "sha256": "2b473b07053af0fa6468da17f360f9db4b9165674fb3a00d0c8bace457a23c2c",
+      "bytes": 1152667
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/cold-flow-context/results.json",
+      "sha256": "82d318d992c049ee26c2af8a1f687f05f7fc3aedc375a7786dd7483842849c90",
+      "bytes": 7480
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/cold-flow-context/steelers-393.png",
+      "sha256": "791e8b00885c7ae1cc7ffaf4f26eec700c0ca86af9e7b502d86ad165104fc387",
+      "bytes": 613413
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/executed-legacy-instrumented.cjs",
+      "sha256": "d6d077092f2c55a20efe6a75df3f7f8869e6d253c23cae314d436abbd404e6c7",
+      "bytes": 64453
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/native-capture-control/results.json",
+      "sha256": "e061d6456de3b3ec051157eb25041dad84cb3963eff9f04bae240b4e00154600",
+      "bytes": 1552667
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/probe-executed-safe-resume.cjs",
+      "sha256": "b87fd5413b809044a071da0f59779344726583e4a0b7c6c4aebcd3fc7f91cff3",
+      "bytes": 9602
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/probe.cjs",
+      "sha256": "e7eba4207c316304b0e0077900de76741ce8d530c4ca315f2408a11c5faee9ac",
+      "bytes": 9858
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/cold-flow-context/failure-393.png",
+      "sha256": "6aeaa8695c98fc4dfbf384c9fefce6725f2461afa37dee087ebf2e0fb41965a2",
+      "bytes": 618143
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/cold-flow-context/home-393.png",
+      "sha256": "0a56ee006819d965fdf61f46076daba452545b4dc27ba7e03529f193a8c4b81f",
+      "bytes": 1779763
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/cold-flow-context/nfl-393.png",
+      "sha256": "fcffe305b3d3b5751105d8e0e8f419ee9d3ad010c2c6208c4b0ce288b3cd92d2",
+      "bytes": 1154189
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/cold-flow-context/results.json",
+      "sha256": "7c0b7a173f14ac058c1e2c0fd6d0c1fff662d587c5e62a19bbdef897169190d4",
+      "bytes": 7517
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/cold-flow-context/steelers-393.png",
+      "sha256": "c4379e4e3844e72979cb148f3d4526202ccaae94423fa65b9a1a58ef952c2594",
+      "bytes": 615782
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/executed-legacy-instrumented.cjs",
+      "sha256": "333f6594d0bdfae612d106d18759a6d0d872d939180a30a783eb71f25dbd722e",
+      "bytes": 65345
+    },
+    {
+      "file": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/results.json",
+      "sha256": "938df0e0db87421520681e482f627de858f45d029115a332ac108f04a926d052",
+      "bytes": 1553191
+    }
+  ]
+}

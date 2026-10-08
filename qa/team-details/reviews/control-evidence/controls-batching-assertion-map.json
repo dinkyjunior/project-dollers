@@ -1,0 +1,93 @@
+{
+  "status": "independently-reviewed-promoted-awaiting-genuine-v3-acceptance",
+  "preparedAt": "2026-10-08T09:52:48.254Z",
+  "runtimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "original": {
+    "file": "qa/team-details/reviews/control-evidence/controls-pre-batching-571f85b.cjs",
+    "sha256": "571f85bfffca3b5862f09c362e558e35445b55cc2ab0cae40a6de6d170bc6a61",
+    "livePathBeforePromotion": "qa/team-details/controls.cjs",
+    "qualification": "Exact originally executed bytes preserved; historical archive is not an independently relocated executable runner."
+  },
+  "candidate": {
+    "file": "qa/team-details/controls-batched-candidate.cjs",
+    "sha256": "e7a33b6ff231ff533c8a044f1b2976334d5318d58bdf26e891d1c689ccf4b797"
+  },
+  "independentlyCheckedCodeFacts": {
+    "nativeInputExpressionSequenceIdentical": true,
+    "nativeInputExpressionSites": 28,
+    "pureSourceMathByteIdentical": true,
+    "explicitClickCountScrollEnabledAndNativeActionCallsPreserved": true,
+    "sourceAndResponseSubstitution": false,
+    "browserExecutionOfCandidate": false
+  },
+  "coverageContract": {
+    "primaryRecordedNativeInteractions": 312,
+    "filterCombinations": 24,
+    "aggregationModesPerFilter": 2,
+    "distinctHistoricalReports": 20,
+    "playerDisclosures": 83,
+    "playerLastFiveRowsPerScenario": 283,
+    "playerHistoryValueAssertionsPerScenario": 1132,
+    "playerHistoryValueAssertionsAcrossFourChromiumScenarios": 4528,
+    "currentSeasonScheduleEvents": 17,
+    "enabledInventoryKeys": 83,
+    "primaryPhoneNativeTouches": 218,
+    "primaryNativeOptionSelections": 94,
+    "additionalNativePlayerDisclosureOpenCloseTouches": 166,
+    "finalEnabledControlCompleteness": "Original final assertion remains mandatory: coverage.untested must equal[]. No claim that the newly promoted helper has executed yet."
+  },
+  "semanticAssertionMap": [
+    {
+      "area": "click",
+      "before": "Strict unique count, native scrollIntoViewIfNeeded, actual attributes, native isEnabled, real touch/pointer action, inventory key and evidence",
+      "after": "Same explicit unique count, same actual native scrolling, same native isEnabled and real tap/click. Only independent attribute and native enabled reads run in one awaited Promise.all after scrolling; both same assertions and inventory identity remain mandatory. Optional Node-only progress follows every25 primary inputs."
+    },
+    {
+      "area": "filter game rows",
+      "before": "Rendered source rows and public selected-game IDs read independently with two protocol calls",
+      "after": "Same actual DOM rows and same public selected IDs in one coherent read; exact independent newest-first source-ID, season/week and score assertions unchanged"
+    },
+    {
+      "area": "yards and snapshot",
+      "before": "Separate locator count, text and coverage reads for every one of 12 displayed metrics after each of 48 native modes",
+      "after": "One actual team DOM snapshot per mode; independent Node matching arrays still assert exactly one cell per metric/side, identical values/tolerances and exact field coverage. No mode/filter/value is skipped"
+    },
+    {
+      "area": "tabs",
+      "before": "Separate selected/tabindex/controls/panel-visible/selected-count/inventory/overflow reads",
+      "after": "One actual tab snapshot for attributes/count/inventory/overflow; native Playwright panel isVisible remains separately asserted. Every role/focus-order/selection and geometry predicate retained"
+    },
+    {
+      "area": "dialogs",
+      "before": "Separate heading/content/native-focus/inventory/overflow reads",
+      "after": "One actual dialog snapshot with identical content/focus/control/geometry assertions and explicit global uniqueness counts for title/content, matching the prior strict locators"
+    },
+    {
+      "area": "event report",
+      "before": "Separate event-ID and all nine rows read",
+      "after": "One actual dialog snapshot for same event-ID and same nine metric rows, with unchanged source calculations for both teams"
+    },
+    {
+      "area": "player disclosures",
+      "before": "Same actual native summary scroll/tap, then individual open/text/history/overflow reads; native close and open=false assertion",
+      "after": "Identical native open/close sequence; one coherent actual card snapshot for open/name/history/overflow. Every 283 history rows and 1132 numeric source assertions remains unchanged per scenario"
+    },
+    {
+      "area": "pure calculations and all other assertions",
+      "before": "Independent eligibility, derived values, source provenance, last-five context, all 17 schedule entries, position identities, keyboard tabs, breadcrumbs, Home sport gates, direct reload, real refresh/focus/DOM identity, final inventory completeness",
+      "after": "Original source math prefix byte-identical; all remaining loops/actions/assertions retained. No retries, relaxed thresholds, new mock inputs or ignored failures"
+    },
+    {
+      "area": "progress output",
+      "before": "Controls retained only after whole function returns",
+      "after": "Optional awaited Node-only onProgress({phase,evidence}) checkpoints after major source/control loops and each 10 native player disclosures. Running checkpoints are not acceptance and change no browser/app/data state"
+    }
+  ],
+  "acceptanceGate": "This mapping is a static review artifact, not acceptance proof. The new exact helper hash requires complete genuine Chromium and WebKit reruns against the frozen app candidate; all original incomplete and successful reports remain immutable.",
+  "promotedAt": "2026-10-08T09:57:58.978Z",
+  "promotedTo": "qa/team-details/controls.cjs",
+  "reviewReceipts": [
+    "qa/team-details/reviews/qa-batched-helper-static-review.json",
+    "qa/team-details/reviews/data-evidence/controls-batching-e7a33b6f.json"
+  ]
+}

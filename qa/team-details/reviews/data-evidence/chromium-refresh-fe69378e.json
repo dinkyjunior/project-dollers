@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-08T09:30:05.566801+00:00",
+  "reviewer": "team_data_audit",
+  "scope": "Fresh complete native Chromium outcomes preserve all independently computed eb9 candidate numeric cells after unchanged-refresh fix",
+  "oldReport": {
+    "file": "qa/team-details/local-chromium-final/results.json",
+    "sha256": "8123ee374a344862cd673ae330d064c886fd260ddd82f1036318cee84f08d9e4"
+  },
+  "newReport": {
+    "file": "qa/team-details/local-chromium-final-v2/results.json",
+    "sha256": "fe48f26264e728b551e8e11f92d6752e35d975884d6b5842bd5685a2ffb08fc0"
+  },
+  "newRuntimeManifest": {
+    "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+    "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+    "files": 231
+  },
+  "numericOutcomeProjectionExactlyEqual": true,
+  "independentArithmeticReceipt": {
+    "file": "qa/team-details/reviews/data-evidence/chromium-data-outcomes-eb9ad5d9.json",
+    "sha256": "7031b2ee974f5caebc6e456fda86a4453cca3f3f0586f3eeaab60cb9f2bdd018"
+  },
+  "unchangedRefresh": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "httpStatus": 200,
+      "connectedIdenticalNodes": 7,
+      "focusPreserved": true,
+      "events": [
+        {
+          "changed": false
+        }
+      ],
+      "untested": []
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "httpStatus": 200,
+      "connectedIdenticalNodes": 7,
+      "focusPreserved": true,
+      "events": [
+        {
+          "changed": false
+        }
+      ],
+      "untested": []
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "httpStatus": 200,
+      "connectedIdenticalNodes": 7,
+      "focusPreserved": true,
+      "events": [
+        {
+          "changed": false
+        }
+      ],
+      "untested": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "httpStatus": 200,
+      "connectedIdenticalNodes": 7,
+      "focusPreserved": true,
+      "events": [
+        {
+          "changed": false
+        }
+      ],
+      "untested": []
+    }
+  ],
+  "fullWebKitAcceptance": "pending"
+}

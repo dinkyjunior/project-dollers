@@ -1,0 +1,1172 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-08T08:28:15.643434+00:00",
+  "dataFile": "assets/data/team-details.json",
+  "dataSha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4",
+  "season": 2026,
+  "snapshotRetrievedAt": "2026-10-08T06:28:00Z",
+  "teams": 32,
+  "uniqueGames": 544,
+  "checks": {
+    "referenceHashes": 62,
+    "referenceSources": 64,
+    "referenceTimestamps": 31,
+    "context": 3,
+    "provenance": 1212,
+    "primarySourceEvidence": 30,
+    "primarySourceHashes": 60,
+    "primarySourceTimes": 30,
+    "teamCoverage": 32,
+    "gameIdentity": 2176,
+    "schedule": 6528,
+    "kickoff": 1088,
+    "status": 1088,
+    "score": 2176,
+    "venue": 2174,
+    "eventIdentity": 1088,
+    "statsTypes": 12096,
+    "statProvenance": 5796,
+    "statArithmetic": 1344,
+    "nflverseStatCrosscheck": 4032,
+    "records": 192,
+    "rosterUnavailable": 31,
+    "venueConflictDisclosure": 2,
+    "rosterMembership": 1,
+    "rosterIdentity": 249,
+    "playerStatFieldCoverage": 331,
+    "playerSeasonStats": 4224,
+    "playerLast5Coverage": 83,
+    "playerOriginalClub": 849,
+    "playerProvenance": 283,
+    "playerGameStats": 24904,
+    "playerMissingStats": 35,
+    "espnContext": 2,
+    "espnScheduleCoverage": 34,
+    "espnKickoff": 34,
+    "espnVenue": 68,
+    "espnTeams": 68,
+    "espnScores": 68,
+    "espnRecord": 5,
+    "injuryCoverage": 1,
+    "injuryIdentity": 11,
+    "injuryReports": 55,
+    "injuryProvenance": 11,
+    "teamIdentity": 128,
+    "depthChart": 1,
+    "summaryEventIdentity": 21,
+    "espnSummaryStats": 378,
+    "jerseyNumber": 61,
+    "jerseyConflictDisclosure": 2,
+    "nextEvent": 2
+  },
+  "failures": [],
+  "documentedProviderDifferences": [
+    {
+      "game": "2025_17_DAL_WAS",
+      "field": "venue",
+      "candidate": "Northwest Stadium",
+      "nflverse": "FedExField",
+      "disclosure": [
+        {
+          "gameId": "2025_17_DAL_WAS",
+          "field": "venue",
+          "issue": "Venue display names differ between providers",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_schedule_DAL_2025"
+          ],
+          "values": [
+            "FedExField",
+            "Northwest Stadium"
+          ],
+          "action": "Display current ESPN event venue with both source labels retained"
+        }
+      ]
+    },
+    {
+      "game": "2025_17_DAL_WAS",
+      "field": "venue",
+      "candidate": "Northwest Stadium",
+      "nflverse": "FedExField",
+      "disclosure": [
+        {
+          "gameId": "2025_17_DAL_WAS",
+          "field": "venue",
+          "issue": "Venue display names differ between providers",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_schedule_DAL_2025"
+          ],
+          "values": [
+            "FedExField",
+            "Northwest Stadium"
+          ],
+          "action": "Display current ESPN event venue with both source labels retained"
+        }
+      ]
+    },
+    {
+      "player": "00-0038389",
+      "field": "jersey",
+      "nflverse": 37,
+      "ESPN": 25,
+      "disclosure": [
+        {
+          "playerId": "00-0038389",
+          "team": "DAL",
+          "field": "jersey",
+          "issue": "Jersey numbers disagree",
+          "sourceIds": [
+            "nflverse_roster",
+            "espn_roster_DAL"
+          ],
+          "values": [
+            37,
+            25
+          ],
+          "action": "Jersey number unavailable pending reconciliation"
+        }
+      ]
+    },
+    {
+      "player": "00-0040934",
+      "field": "jersey",
+      "nflverse": 81,
+      "ESPN": 18,
+      "disclosure": [
+        {
+          "playerId": "00-0040934",
+          "team": "DAL",
+          "field": "jersey",
+          "issue": "Jersey numbers disagree",
+          "sourceIds": [
+            "nflverse_roster",
+            "espn_roster_DAL"
+          ],
+          "values": [
+            81,
+            18
+          ],
+          "action": "Jersey number unavailable pending reconciliation"
+        }
+      ]
+    }
+  ],
+  "facts": {
+    "DallasNextGame": {
+      "gameId": "2026_05_TB_DAL",
+      "eventId": "401872980",
+      "home": "DAL",
+      "away": "TB",
+      "venue": "AT&T Stadium",
+      "week": 5,
+      "kickoffUtc": "2026-10-09T00:15:00+00:00",
+      "kickoffSydney": "2026-10-09T11:15:00+11:00"
+    },
+    "DallasRecord": {
+      "w": 2,
+      "l": 2,
+      "ties": 0,
+      "record": "2–2",
+      "pct": 0.5,
+      "pointsFor": 122,
+      "pointsAgainst": 112,
+      "form": [
+        "L",
+        "W",
+        "L",
+        "W"
+      ],
+      "games": 4,
+      "status": "verified",
+      "origin": "computed",
+      "sourceIds": [
+        "nflverse_games"
+      ]
+    },
+    "DallasLast5": [
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "season": 2026,
+        "week": 4,
+        "home": "HOU",
+        "away": "DAL",
+        "homeScore": 30,
+        "awayScore": 34,
+        "neutral": false
+      },
+      {
+        "gameId": "2026_03_BAL_DAL",
+        "season": 2026,
+        "week": 3,
+        "home": "DAL",
+        "away": "BAL",
+        "homeScore": 31,
+        "awayScore": 34,
+        "neutral": true
+      },
+      {
+        "gameId": "2026_02_WAS_DAL",
+        "season": 2026,
+        "week": 2,
+        "home": "DAL",
+        "away": "WAS",
+        "homeScore": 37,
+        "awayScore": 20,
+        "neutral": false
+      },
+      {
+        "gameId": "2026_01_DAL_NYG",
+        "season": 2026,
+        "week": 1,
+        "home": "NYG",
+        "away": "DAL",
+        "homeScore": 28,
+        "awayScore": 20,
+        "neutral": false
+      },
+      {
+        "gameId": "2025_18_DAL_NYG",
+        "season": 2025,
+        "week": 18,
+        "home": "NYG",
+        "away": "DAL",
+        "homeScore": 34,
+        "awayScore": 17,
+        "neutral": false
+      }
+    ],
+    "DallasRosterCrosschecks": [
+      {
+        "name": "Von Miller",
+        "espnId": "13976",
+        "espnName": "Von Miller",
+        "candidateJersey": 40,
+        "espnJersey": "40",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Bryan Anger",
+        "espnId": "14950",
+        "espnName": "Bryan Anger",
+        "candidateJersey": 5,
+        "espnJersey": "5",
+        "candidatePosition": "P",
+        "espnPosition": "P"
+      },
+      {
+        "name": "Dak Prescott",
+        "espnId": "2577417",
+        "espnName": "Dak Prescott",
+        "candidateJersey": 4,
+        "espnJersey": "4",
+        "candidatePosition": "QB",
+        "espnPosition": "QB"
+      },
+      {
+        "name": "Jonathan Bullard",
+        "espnId": "2980097",
+        "espnName": "Jonathan Bullard",
+        "candidateJersey": 90,
+        "espnJersey": "90",
+        "candidatePosition": "DL",
+        "espnPosition": "DT"
+      },
+      {
+        "name": "Kenny Clark",
+        "espnId": "3122752",
+        "espnName": "Kenny Clark",
+        "candidateJersey": 97,
+        "espnJersey": "97",
+        "candidatePosition": "DL",
+        "espnPosition": "DT"
+      },
+      {
+        "name": "Malik Hooker",
+        "espnId": "3121415",
+        "espnName": "Malik Hooker",
+        "candidateJersey": 24,
+        "espnJersey": "24",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Rashan Gary",
+        "espnId": "4046523",
+        "espnName": "Rashan Gary",
+        "candidateJersey": 7,
+        "espnJersey": "7",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "P.J. Locke",
+        "espnId": "3929850",
+        "espnName": "P.J. Locke",
+        "candidateJersey": 1,
+        "espnJersey": "1",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Jalen Thompson",
+        "espnId": "4043089",
+        "espnName": "Jalen Thompson",
+        "candidateJersey": 34,
+        "espnJersey": "34",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Quinnen Williams",
+        "espnId": "4040982",
+        "espnName": "Quinnen Williams",
+        "candidateJersey": 92,
+        "espnJersey": "92",
+        "candidatePosition": "DL",
+        "espnPosition": "DT"
+      },
+      {
+        "name": "CeeDee Lamb",
+        "espnId": "4241389",
+        "espnName": "CeeDee Lamb",
+        "candidateJersey": 88,
+        "espnJersey": "88",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Curtis Robinson",
+        "espnId": "4044448",
+        "espnName": "Curtis Robinson",
+        "candidateJersey": 42,
+        "espnJersey": "42",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Javonte Williams",
+        "espnId": "4361579",
+        "espnName": "Javonte Williams",
+        "candidateJersey": 33,
+        "espnJersey": "33",
+        "candidatePosition": "RB",
+        "espnPosition": "RB"
+      },
+      {
+        "name": "Elijah Garcia",
+        "espnId": "4039170",
+        "espnName": "Elijah Garcia",
+        "candidateJersey": 93,
+        "espnJersey": "93",
+        "candidatePosition": "DL",
+        "espnPosition": "DE"
+      },
+      {
+        "name": "Sam Howell",
+        "espnId": "4426875",
+        "espnName": "Sam Howell",
+        "candidateJersey": 16,
+        "espnJersey": "16",
+        "candidatePosition": "QB",
+        "espnPosition": "QB"
+      },
+      {
+        "name": "Tyler Goodson",
+        "espnId": "4429676",
+        "espnName": "Tyler Goodson",
+        "candidateJersey": 32,
+        "espnJersey": "32",
+        "candidatePosition": "RB",
+        "espnPosition": "RB"
+      },
+      {
+        "name": "George Pickens",
+        "espnId": "4426354",
+        "espnName": "George Pickens",
+        "candidateJersey": 3,
+        "espnJersey": "3",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Otito Ogbonnia",
+        "espnId": "4367210",
+        "espnName": "Otito Ogbonnia",
+        "candidateJersey": 91,
+        "espnJersey": "91",
+        "candidatePosition": "DL",
+        "espnPosition": "DT"
+      },
+      {
+        "name": "DaRon Bland",
+        "espnId": "4248911",
+        "espnName": "DaRon Bland",
+        "candidateJersey": 26,
+        "espnJersey": "26",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "James Mitchell",
+        "espnId": "4361988",
+        "espnName": "James Mitchell",
+        "candidateJersey": 84,
+        "espnJersey": null,
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "James Houston",
+        "espnId": "4240608",
+        "espnName": "James Houston",
+        "candidateJersey": 41,
+        "espnJersey": "41",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Markquese Bell",
+        "espnId": "4241921",
+        "espnName": "Markquese Bell",
+        "candidateJersey": 14,
+        "espnJersey": "14",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Malik Davis",
+        "espnId": "4240603",
+        "espnName": "Malik Davis",
+        "candidateJersey": 20,
+        "espnJersey": "20",
+        "candidatePosition": "RB",
+        "espnPosition": "RB"
+      },
+      {
+        "name": "Juanyeh Thomas",
+        "espnId": "4360590",
+        "espnName": "Juanyeh Thomas",
+        "candidateJersey": 43,
+        "espnJersey": "43",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Brandon Aubrey",
+        "espnId": "3953687",
+        "espnName": "Brandon Aubrey",
+        "candidateJersey": 17,
+        "espnJersey": "17",
+        "candidatePosition": "K",
+        "espnPosition": "PK"
+      },
+      {
+        "name": "KaVontae Turpin",
+        "espnId": "3676833",
+        "espnName": "KaVontae Turpin",
+        "candidateJersey": 9,
+        "espnJersey": "9",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Cobie Durant",
+        "espnId": "4384549",
+        "espnName": "Cobie Durant",
+        "candidateJersey": 2,
+        "espnJersey": "2",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Derion Kendrick",
+        "espnId": "4360307",
+        "espnName": "Derion Kendrick",
+        "candidateJersey": 15,
+        "espnJersey": "15",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Jake Ferguson",
+        "espnId": "4242355",
+        "espnName": "Jake Ferguson",
+        "candidateJersey": 87,
+        "espnJersey": "87",
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "Israel Abanikanda",
+        "espnId": "4429202",
+        "espnName": "Israel Abanikanda",
+        "candidateJersey": null,
+        "espnJersey": "25",
+        "candidatePosition": "RB",
+        "espnPosition": "RB"
+      },
+      {
+        "name": "Luke Schoonmaker",
+        "espnId": "4372096",
+        "espnName": "Luke Schoonmaker",
+        "candidateJersey": 86,
+        "espnJersey": "86",
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "DeMarvion Overshown",
+        "espnId": "4362088",
+        "espnName": "DeMarvion Overshown",
+        "candidateJersey": 0,
+        "espnJersey": "0",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Ameer Speed",
+        "espnId": "4259546",
+        "espnName": "Ameer Speed",
+        "candidateJersey": 23,
+        "espnJersey": "23",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Dee Winters",
+        "espnId": "4428914",
+        "espnName": "Dee Winters",
+        "candidateJersey": 53,
+        "espnJersey": "53",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Alex Austin",
+        "espnId": "4426599",
+        "espnName": "Alex Austin",
+        "candidateJersey": 38,
+        "espnJersey": null,
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Emari Demercado",
+        "espnId": "4362478",
+        "espnName": "Emari Demercado",
+        "candidateJersey": 31,
+        "espnJersey": "31",
+        "candidatePosition": "RB",
+        "espnPosition": "RB"
+      },
+      {
+        "name": "Princeton Fant",
+        "espnId": "4242442",
+        "espnName": "Princeton Fant",
+        "candidateJersey": 85,
+        "espnJersey": "85",
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "Isaiah Land",
+        "espnId": "4574551",
+        "espnName": "Isaiah Land",
+        "candidateJersey": 58,
+        "espnJersey": "58",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Hunter Luepke",
+        "espnId": "4383396",
+        "espnName": "Hunter Luepke",
+        "candidateJersey": 30,
+        "espnJersey": "30",
+        "candidatePosition": "RB",
+        "espnPosition": "FB"
+      },
+      {
+        "name": "Tyrus Wheat",
+        "espnId": "4689333",
+        "espnName": "Tyrus Wheat",
+        "candidateJersey": 59,
+        "espnJersey": "59",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Jonathan Mingo",
+        "espnId": "4426485",
+        "espnName": "Jonathan Mingo",
+        "candidateJersey": 18,
+        "espnJersey": "18",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Joey Porter Jr.",
+        "espnId": "4426506",
+        "espnName": "Joey Porter Jr.",
+        "candidateJersey": 25,
+        "espnJersey": "25",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Marist Liufau",
+        "espnId": "4427816",
+        "espnName": "Marist Liufau",
+        "candidateJersey": 35,
+        "espnJersey": "35",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Caelen Carson",
+        "espnId": "4431006",
+        "espnName": "Caelen Carson",
+        "candidateJersey": 21,
+        "espnJersey": "21",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Joe Milton III",
+        "espnId": "4360698",
+        "espnName": "Joe Milton III",
+        "candidateJersey": 10,
+        "espnJersey": "10",
+        "candidatePosition": "QB",
+        "espnPosition": "QB"
+      },
+      {
+        "name": "Ryan Flournoy",
+        "espnId": "5083754",
+        "espnName": "Ryan Flournoy",
+        "candidateJersey": 19,
+        "espnJersey": "19",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Reddy Steward",
+        "espnId": "4428584",
+        "espnName": "Reddy Steward",
+        "candidateJersey": 27,
+        "espnJersey": "27",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Brevyn Spann-Ford",
+        "espnId": "4360967",
+        "espnName": "Brevyn Spann-Ford",
+        "candidateJersey": 89,
+        "espnJersey": "89",
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "Tyrek Funderburk",
+        "espnId": "4367330",
+        "espnName": "Tyrek Funderburk",
+        "candidateJersey": 39,
+        "espnJersey": null,
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Shavon Revel Jr.",
+        "espnId": "5095865",
+        "espnName": "Shavon Revel Jr.",
+        "candidateJersey": 28,
+        "espnJersey": "28",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "Shemar James",
+        "espnId": "4685400",
+        "espnName": "Shemar James",
+        "candidateJersey": 50,
+        "espnJersey": "50",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Justin Barron",
+        "espnId": "4429249",
+        "espnName": "Justin Barron",
+        "candidateJersey": 45,
+        "espnJersey": "45",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Alijah Clark",
+        "espnId": "4595352",
+        "espnName": "Alijah Clark",
+        "candidateJersey": 11,
+        "espnJersey": "11",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Donovan Ezeiruaku",
+        "espnId": "4683848",
+        "espnName": "Donovan Ezeiruaku",
+        "candidateJersey": 6,
+        "espnJersey": "6",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Caleb Downs",
+        "espnId": "4870706",
+        "espnName": "Caleb Downs",
+        "candidateJersey": 13,
+        "espnJersey": "13",
+        "candidatePosition": "DB",
+        "espnPosition": "S"
+      },
+      {
+        "name": "Jaishawn Barham",
+        "espnId": "4685266",
+        "espnName": "Jaishawn Barham",
+        "candidateJersey": 55,
+        "espnJersey": "55",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      },
+      {
+        "name": "Devin Moore",
+        "espnId": "4702577",
+        "espnName": "Devin Moore",
+        "candidateJersey": 29,
+        "espnJersey": "29",
+        "candidatePosition": "DB",
+        "espnPosition": "CB"
+      },
+      {
+        "name": "LT Overton",
+        "espnId": "4870960",
+        "espnName": "LT Overton",
+        "candidateJersey": 99,
+        "espnJersey": "99",
+        "candidatePosition": "DL",
+        "espnPosition": "DT"
+      },
+      {
+        "name": "Anthony Smith",
+        "espnId": "4685110",
+        "espnName": "Anthony Smith",
+        "candidateJersey": 83,
+        "espnJersey": "83",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Camden Brown",
+        "espnId": "4808759",
+        "espnName": "Camden Brown",
+        "candidateJersey": 80,
+        "espnJersey": "80",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Jordan Hudson",
+        "espnId": "4685409",
+        "espnName": "Jordan Hudson",
+        "candidateJersey": null,
+        "espnJersey": "18",
+        "candidatePosition": "WR",
+        "espnPosition": "WR"
+      },
+      {
+        "name": "Michael Trigg",
+        "espnId": "4594749",
+        "espnName": "Michael Trigg",
+        "candidateJersey": 46,
+        "espnJersey": "46",
+        "candidatePosition": "TE",
+        "espnPosition": "TE"
+      },
+      {
+        "name": "Malachi Lawrence",
+        "espnId": "4710067",
+        "espnName": "Malachi Lawrence",
+        "candidateJersey": 57,
+        "espnJersey": "57",
+        "candidatePosition": "LB",
+        "espnPosition": "LB"
+      }
+    ]
+  },
+  "independentSources": [
+    {
+      "id": "nflverse-games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "retrievedAt": "2026-10-08T08:26:49.660688+00:00",
+      "httpStatus": 200,
+      "sha256": "bca61696e892eba9679670d87648ac1b8c493a24d430b82d49d9490b8273b47d",
+      "bytes": 2183215,
+      "etag": "\"67b15f1877f22da3075ee0f671c91cd6a593e621627bfabee5a700fe36fc40a3\"",
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-dal-schedule-2025",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2",
+      "retrievedAt": "2026-10-08T08:26:49.663847+00:00",
+      "httpStatus": 200,
+      "sha256": "3d3a8b7f8353d4bede1490f45a7cb8e2cfc8103628fb03451cd1b787040b04b1",
+      "bytes": 366872,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-dal-schedule-2026",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2",
+      "retrievedAt": "2026-10-08T08:26:49.662459+00:00",
+      "httpStatus": 200,
+      "sha256": "1989dc1a9afbfbe3a1bffd6b5936916761e34ab7aa3799c9aeff90c6639c61df",
+      "bytes": 269859,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-dal-team",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal",
+      "retrievedAt": "2026-10-08T08:26:49.661695+00:00",
+      "httpStatus": 200,
+      "sha256": "ae9b96e0e734959236aa10cf6142a3688fc86c9f870ce4896f22aed30364b902",
+      "bytes": 23517,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-dal-roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster",
+      "retrievedAt": "2026-10-08T08:26:49.664656+00:00",
+      "httpStatus": 200,
+      "sha256": "147f1ea2ecfeff0e9e1c3c3abd42b5db84b39f6efebce56128079e4320d3638a",
+      "bytes": 380610,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "official-cowboys-schedule",
+      "url": "https://www.dallascowboys.com/schedule/",
+      "retrievedAt": "2026-10-08T08:26:49.916835+00:00",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "official-nfl-dal-schedule-root",
+      "url": "https://www.nfl.com/teams/dallas-cowboys/schedule/",
+      "retrievedAt": "2026-10-08T08:26:49.920631+00:00",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "nflverse-player-stats-2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "retrievedAt": "2026-10-08T08:26:49.979341+00:00",
+      "httpStatus": 200,
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "bytes": 8656387,
+      "etag": "\"0x8DEF95B1AFD7169\"",
+      "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+      "status": "retrieved"
+    },
+    {
+      "id": "nflverse-player-stats-2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "retrievedAt": "2026-10-08T08:26:50.010023+00:00",
+      "httpStatus": 200,
+      "sha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+      "bytes": 1981105,
+      "etag": "\"0x8DF248FD241614A\"",
+      "lastModified": "Wed, 07 Oct 2026 16:27:03 GMT",
+      "status": "retrieved"
+    },
+    {
+      "id": "nflverse-roster-2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "retrievedAt": "2026-10-08T08:26:49.665295+00:00",
+      "httpStatus": 200,
+      "sha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "bytes": 963300,
+      "etag": "\"0x8DF2501C2026D19\"",
+      "lastModified": "Thu, 08 Oct 2026 06:02:39 GMT",
+      "status": "retrieved"
+    },
+    {
+      "id": "nflverse-injuries-2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "retrievedAt": "2026-10-08T08:26:49.818129+00:00",
+      "httpStatus": 200,
+      "sha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "bytes": 143977,
+      "etag": "\"0x8DF250197D7271F\"",
+      "lastModified": "Thu, 08 Oct 2026 06:01:28 GMT",
+      "status": "retrieved"
+    },
+    {
+      "id": "nflverse-teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "retrievedAt": "2026-10-08T08:26:49.872605+00:00",
+      "httpStatus": 200,
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "bytes": 18919,
+      "etag": "\"0x8DE8C1878E14FA9\"",
+      "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772510",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510",
+      "retrievedAt": "2026-10-08T08:26:51.576940+00:00",
+      "httpStatus": 200,
+      "sha256": "b4a07e0a488fed28783389c268b5acadad0e8570c27e8ce27606c61d626d7078",
+      "bytes": 405196,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772694",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694",
+      "retrievedAt": "2026-10-08T08:26:51.300708+00:00",
+      "httpStatus": 200,
+      "sha256": "b363427d1215bf25d6cd7124641606b97c221ec34c8baad9d65af98d6651ea4a",
+      "bytes": 563404,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772710",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710",
+      "retrievedAt": "2026-10-08T08:26:51.141158+00:00",
+      "httpStatus": 200,
+      "sha256": "23a5935bd294a826876bd2508248e93fec44fd009a3fe5312d77426d8974cff0",
+      "bytes": 568430,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772762",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762",
+      "retrievedAt": "2026-10-08T08:26:51.414685+00:00",
+      "httpStatus": 200,
+      "sha256": "2add8be275cfd211183af9ee1cc3ca2f7bfaccfb9713c293135add31be9e6d3d",
+      "bytes": 582862,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772818",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818",
+      "retrievedAt": "2026-10-08T08:26:51.377155+00:00",
+      "httpStatus": 200,
+      "sha256": "c4fa665057f34ab8894630212efeb6e470f2c19fe60eed78a685c47064bbe566",
+      "bytes": 548775,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772819",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819",
+      "retrievedAt": "2026-10-08T08:26:51.367735+00:00",
+      "httpStatus": 200,
+      "sha256": "882d53252c9fb7c5f21aca599f81a8f5710ddbf5d39988e95e31c1b3980a27e9",
+      "bytes": 554159,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772834",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834",
+      "retrievedAt": "2026-10-08T08:26:51.569832+00:00",
+      "httpStatus": 200,
+      "sha256": "ec7fcd107098b9fcd61a3e98b2f796783fdbbd977db0e85d1a0cac93fd43539b",
+      "bytes": 666253,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772844",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844",
+      "retrievedAt": "2026-10-08T08:26:51.560700+00:00",
+      "httpStatus": 200,
+      "sha256": "35315949b3724f40ecd34065e90ea11b0fb07eb2e043d2c23e72661bb2f14021",
+      "bytes": 544367,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772850",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850",
+      "retrievedAt": "2026-10-08T08:26:51.495978+00:00",
+      "httpStatus": 200,
+      "sha256": "777f493e9906f7666dea600a9bdaa2a26ef66b3de77861136e158212ba4a9d21",
+      "bytes": 601106,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772858",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858",
+      "retrievedAt": "2026-10-08T08:26:51.460979+00:00",
+      "httpStatus": 200,
+      "sha256": "d1b31f6bc6634e21301067c623ec40468db5016bf51166d6a5070214c8d280da",
+      "bytes": 534355,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772864",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864",
+      "retrievedAt": "2026-10-08T08:26:51.449934+00:00",
+      "httpStatus": 200,
+      "sha256": "62bf2064e6fbc42a7ed72d90715a3caa1bb8f7100bdcaf76a63f57b745739073",
+      "bytes": 584223,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772890",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890",
+      "retrievedAt": "2026-10-08T08:26:51.362395+00:00",
+      "httpStatus": 200,
+      "sha256": "b6b39bdc06eda39d01152f993a4463543e50fe6cba945b2e588229cbba8daf9a",
+      "bytes": 580916,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772910",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910",
+      "retrievedAt": "2026-10-08T08:26:51.233890+00:00",
+      "httpStatus": 200,
+      "sha256": "d743c0088d0d59555404aeaa4fdebfefe5f93cc441e7dae579541730a5b86e50",
+      "bytes": 516212,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772921",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921",
+      "retrievedAt": "2026-10-08T08:26:51.540664+00:00",
+      "httpStatus": 200,
+      "sha256": "5c11931c43dbde07c2b892b5ab135d048fd471e394e7da20462fbcb432dd21ba",
+      "bytes": 626561,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772933",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933",
+      "retrievedAt": "2026-10-08T08:26:51.263337+00:00",
+      "httpStatus": 200,
+      "sha256": "8d1f5a512c5f044ff2bf0ddf227fb8cc883e794a94d83e5f3268274701cc4be6",
+      "bytes": 559897,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772947",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947",
+      "retrievedAt": "2026-10-08T08:26:51.281219+00:00",
+      "httpStatus": 200,
+      "sha256": "312def96183f864e27535c49461709ef45dcd381c6cb9f78f1567e159cfc8f7b",
+      "bytes": 616282,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401772963",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963",
+      "retrievedAt": "2026-10-08T08:26:51.140668+00:00",
+      "httpStatus": 200,
+      "sha256": "a35e6246c81c2f49856f7eb0f2d73d8a86ccb9e5e1b43641007c02b6fb36e4f2",
+      "bytes": 552591,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401872930",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930",
+      "retrievedAt": "2026-10-08T08:26:51.139374+00:00",
+      "httpStatus": 200,
+      "sha256": "4fe95fc23d8558aa62397884f1617b9aeaeb2caa8505c24c7f70cbe0d502a1c4",
+      "bytes": 512612,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401872944",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944",
+      "retrievedAt": "2026-10-08T08:26:51.138797+00:00",
+      "httpStatus": 200,
+      "sha256": "1ee569714bc15ed3d1a936db6851e7fc6b05380f4e1bc93fdd2e57fc9014d172",
+      "bytes": 535060,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401872960",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960",
+      "retrievedAt": "2026-10-08T08:26:51.138107+00:00",
+      "httpStatus": 200,
+      "sha256": "a66e2e4336734f1f5df6a4fd1d75d7b51bb8874aec698c23c33732c93d807771",
+      "bytes": 595764,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    },
+    {
+      "id": "espn-summary-401872967",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967",
+      "retrievedAt": "2026-10-08T08:26:51.137016+00:00",
+      "httpStatus": 200,
+      "sha256": "ec144d8fd92a48836b234037364e10fd6adc68c997f0cf0e9b14339ab5dfe16b",
+      "bytes": 589853,
+      "etag": null,
+      "lastModified": null,
+      "status": "retrieved"
+    }
+  ],
+  "officialSourceLimitation": "Official team domain was blocked by proxy and NFL team schedule returned404. ESPN plus independently retrieved nflverse corroboration is recorded; no direct official corroboration is claimed.",
+  "limitations": [
+    "No claim that polling provides an upstream live push feed.",
+    "Future injury/inactive publications cannot be inferred from absence.",
+    "This receipt verifies snapshot data, not browser rendering or every UI interaction."
+  ]
+}
