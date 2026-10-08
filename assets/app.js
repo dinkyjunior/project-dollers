@@ -107,6 +107,10 @@
     return `${note}${players}${games.length ? `<section class="research-panel"><h3>Week ${snapshot.leadersWeek ?? snapshot.throughWeek} results</h3>${games.map(game => `<div class="recap-game"><span>${esc(teamName(game.away_team))} @ ${esc(teamName(game.home_team))}</span><b>${number(game.away_score)}–${number(game.home_score)}</b></div>`).join('')}</section>` : `<p class="section-note">No verified results are available for the recap week.</p>`}${sourceNote('leaders', `${data.season} · Week ${snapshot.leadersWeek ?? snapshot.throughWeek}`)}`;
   }
   function renderDashboard() {
+    if (window.PDNFLDashboard) {
+      window.PDNFLDashboard.render({data,state,assets,esc,number,logo,teamName,date,time,timestamp,sourceNote});
+      return;
+    }
     const snapshot = data.weeks[state.week];
     $('week-select').value = state.week;
     document.querySelectorAll('[data-week]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.week === state.week)));

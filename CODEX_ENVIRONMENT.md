@@ -1,5 +1,9 @@
 # Codex Cloud Environment — Project Dollar$
 
+## Current NFL dashboard — 8 October 2026
+
+The new tall NFL chat render supersedes the earlier NFL panel for Page 2 only. Its approved implementation, source provenance, independent reviews and mobile evidence are recorded in `qa/nfl-diamond/RELEASE.md` and `reference/NFL_DIAMOND_CHAT_SOURCE.md`. Existing Home and Steelers code is protected; Page 4 remains excluded. Work on `codex-rebuild`; fetch/rebase both current remote branches before every ordinary push, preserve source updates and verify the actual hosted site after the user-authorized publication.
+
 ## Current Page 1 luxury refinement — deployed and verified
 
 The further Page 1 pass is deployed at https://dinkyjunior.github.io/project-dollers/. The compact polished chrome/glass entrance, coherent illuminated corridor, native licensed Archivo Black/Inter typography, stronger sport-coloured control edges and natural travelling highlights materially reduce the approved render gap. The original diamond/gold/emerald brand, real sport marks and venue artwork remain. All four sport selectors work; only NFL enters; Coming soon has no Preview only and UFC uses Fighters. Page 4 remains excluded; existing Pages 2–3 and whole-card football research remain protected.

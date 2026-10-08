@@ -1,0 +1,4233 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-08T01:30:22.161Z",
+  "frozenManifestSha256": "96db9765a12552148b165f270b0dbea60b321c640a5b2bcea6866e03e47670ba",
+  "frozenFileCount": 203,
+  "sourceUnmodified": true,
+  "testScriptSha256": "9090d7f0380c4ab7344388cdd01b94cea9d5abdfbe39310cbe6b876d0251f87f",
+  "engine": "webkit",
+  "physicalIPhoneTested": false,
+  "hardwareFPSMeasured": false,
+  "method": "Actual loopback browser. Native animation times sampled naturally; no clock seeking, app DOM/style changes or artificial screenshots. New NFL-page-only opaque WebKit clipping mask verified against native clocks. Existing root mobile QA separately covers full lifecycle.",
+  "results": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "first": {
+        "at": 16713,
+        "state": "running",
+        "reason": "active",
+        "clocks": [
+          {
+            "name": "nfl-ambient-emission",
+            "target": "nfl-ambient-light",
+            "pseudo": null,
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13969
+          },
+          {
+            "name": "nfl-stadium-light-drift",
+            "target": "nfl-ambient-light",
+            "pseudo": "::before",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13969
+          },
+          {
+            "name": "nfl-venue-depth",
+            "target": "",
+            "pseudo": null,
+            "zoneIndex": 0,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-league-circuit",
+            "target": "nfl-league-medallion",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-left",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-right",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-matchup-light-drift",
+            "target": "nfl-matchup-art",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 11743
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13969
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13969
+          }
+        ],
+        "rows": [
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          }
+        ],
+        "page": {
+          "width": 393,
+          "height": 756.171875
+        },
+        "document": {
+          "width": 393,
+          "viewportWidth": 393
+        },
+        "mask": "-webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0))",
+        "borderRadius": "18px",
+        "resources": [
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/styles.css",
+            "initiator": "link",
+            "encodedBytes": 31715,
+            "transferBytes": 32015,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+            "initiator": "link",
+            "encodedBytes": 20432,
+            "transferBytes": 20732,
+            "duration": 24.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDArchivoBlack-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 26648,
+            "transferBytes": 26948,
+            "duration": 24.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDInter-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 149332,
+            "transferBytes": 149632,
+            "duration": 25
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/BarlowCondensed-SemiBold.woff2",
+            "initiator": "link",
+            "encodedBytes": 18872,
+            "transferBytes": 19172,
+            "duration": 7
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/refinements.css",
+            "initiator": "link",
+            "encodedBytes": 19931,
+            "transferBytes": 20231,
+            "duration": 12
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/premium.css",
+            "initiator": "link",
+            "encodedBytes": 18831,
+            "transferBytes": 19131,
+            "duration": 10.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.css",
+            "initiator": "link",
+            "encodedBytes": 7136,
+            "transferBytes": 7436,
+            "duration": 13.000000000000002
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-typography.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 580,
+            "transferBytes": 880,
+            "duration": 13.000000000000002
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 9719,
+            "transferBytes": 10019,
+            "duration": 13.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-premium.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 24361,
+            "transferBytes": 24661,
+            "duration": 14.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 9894,
+            "transferBytes": 10194,
+            "duration": 15.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 39692,
+            "transferBytes": 39992,
+            "duration": 17
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/illumination.css",
+            "initiator": "link",
+            "encodedBytes": 3743,
+            "transferBytes": 4043,
+            "duration": 9.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.css",
+            "initiator": "link",
+            "encodedBytes": 5120,
+            "transferBytes": 5420,
+            "duration": 9.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-corridor.webp",
+            "initiator": "img",
+            "encodedBytes": 436118,
+            "transferBytes": 436418,
+            "duration": 28
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/app.js?v=diamond20261008",
+            "initiator": "script",
+            "encodedBytes": 40558,
+            "transferBytes": 40858,
+            "duration": 23
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.js",
+            "initiator": "script",
+            "encodedBytes": 13971,
+            "transferBytes": 14271,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-interactions.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 5484,
+            "transferBytes": 5784,
+            "duration": 21
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 4760,
+            "transferBytes": 5060,
+            "duration": 21
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 4568,
+            "transferBytes": 4868,
+            "duration": 20
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 26836,
+            "transferBytes": 27136,
+            "duration": 19
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.js",
+            "initiator": "script",
+            "encodedBytes": 4546,
+            "transferBytes": 4846,
+            "duration": 18
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data-updates.js",
+            "initiator": "script",
+            "encodedBytes": 15136,
+            "transferBytes": 15436,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-portal.webp",
+            "initiator": "img",
+            "encodedBytes": 643560,
+            "transferBytes": 643860,
+            "duration": 32
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-brand.webp",
+            "initiator": "img",
+            "encodedBytes": 488590,
+            "transferBytes": 488890,
+            "duration": 31
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nfl.svg",
+            "initiator": "img",
+            "encodedBytes": 4232,
+            "transferBytes": 4532,
+            "duration": 29
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "initiator": "img",
+            "encodedBytes": 438290,
+            "transferBytes": 438590,
+            "duration": 31
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/icons.svg",
+            "initiator": "use",
+            "encodedBytes": 1248,
+            "transferBytes": 1548,
+            "duration": 2
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nba.svg",
+            "initiator": "img",
+            "encodedBytes": 9533,
+            "transferBytes": 9833,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/nrl.webp",
+            "initiator": "img",
+            "encodedBytes": 17422,
+            "transferBytes": 17722,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/afc.svg",
+            "initiator": "img",
+            "encodedBytes": 1795,
+            "transferBytes": 2095,
+            "duration": 2.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ufc.svg",
+            "initiator": "img",
+            "encodedBytes": 2525,
+            "transferBytes": 2825,
+            "duration": 2.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/nfc.svg",
+            "initiator": "img",
+            "encodedBytes": 1690,
+            "transferBytes": 1990,
+            "duration": 5.999999999999993
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/pit.webp",
+            "initiator": "img",
+            "encodedBytes": 28692,
+            "transferBytes": 28992,
+            "duration": 7
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/football-stadium.webp",
+            "initiator": "css",
+            "encodedBytes": 422220,
+            "transferBytes": 422520,
+            "duration": 2.000000000000014
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/diamond.svg",
+            "initiator": "css",
+            "encodedBytes": 1924,
+            "transferBytes": 2224,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/bevel-corner.svg",
+            "initiator": "css",
+            "encodedBytes": 1043,
+            "transferBytes": 1343,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/light-flare.svg",
+            "initiator": "css",
+            "encodedBytes": 586,
+            "transferBytes": 886,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data/current.json",
+            "initiator": "fetch",
+            "encodedBytes": 1277832,
+            "transferBytes": 1278132,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-assets.json",
+            "initiator": "fetch",
+            "encodedBytes": 47625,
+            "transferBytes": 47925,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Anton-Regular.woff2",
+            "initiator": "css",
+            "encodedBytes": 15584,
+            "transferBytes": 15884,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/kc.webp",
+            "initiator": "img",
+            "encodedBytes": 16580,
+            "transferBytes": 16880,
+            "duration": 2.9999999999997726
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/jax.webp",
+            "initiator": "img",
+            "encodedBytes": 46552,
+            "transferBytes": 46852,
+            "duration": 5.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/lv.webp",
+            "initiator": "img",
+            "encodedBytes": 46010,
+            "transferBytes": 46310,
+            "duration": 5.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/bal.webp",
+            "initiator": "img",
+            "encodedBytes": 35664,
+            "transferBytes": 35964,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-pit.webp",
+            "initiator": "img",
+            "encodedBytes": 352156,
+            "transferBytes": 352456,
+            "duration": 3.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ind.webp",
+            "initiator": "img",
+            "encodedBytes": 24858,
+            "transferBytes": 25158,
+            "duration": 6
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-ind.webp",
+            "initiator": "img",
+            "encodedBytes": 433618,
+            "transferBytes": 433918,
+            "duration": 7.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/8439.webp",
+            "initiator": "img",
+            "encodedBytes": 24100,
+            "transferBytes": 24400,
+            "duration": 1.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4569987.webp",
+            "initiator": "img",
+            "encodedBytes": 40996,
+            "transferBytes": 41296,
+            "duration": 3.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4047650.webp",
+            "initiator": "img",
+            "encodedBytes": 36276,
+            "transferBytes": 36576,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4035687.webp",
+            "initiator": "img",
+            "encodedBytes": 30214,
+            "transferBytes": 30514,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4361411.webp",
+            "initiator": "img",
+            "encodedBytes": 30746,
+            "transferBytes": 31046,
+            "duration": 4
+          }
+        ]
+      },
+      "second": {
+        "at": 25820,
+        "state": "running",
+        "reason": "active",
+        "clocks": [
+          {
+            "name": "nfl-ambient-emission",
+            "target": "nfl-ambient-light",
+            "pseudo": null,
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 25753
+          },
+          {
+            "name": "nfl-stadium-light-drift",
+            "target": "nfl-ambient-light",
+            "pseudo": "::before",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 25753
+          },
+          {
+            "name": "nfl-venue-depth",
+            "target": "",
+            "pseudo": null,
+            "zoneIndex": 0,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-league-circuit",
+            "target": "nfl-league-medallion",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-left",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-right",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-matchup-light-drift",
+            "target": "nfl-matchup-art",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23527
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 25753
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 25753
+          }
+        ],
+        "rows": [
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          }
+        ],
+        "page": {
+          "width": 393,
+          "height": 756.171875
+        },
+        "document": {
+          "width": 393,
+          "viewportWidth": 393
+        },
+        "mask": "-webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0))",
+        "borderRadius": "18px",
+        "resources": [
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/styles.css",
+            "initiator": "link",
+            "encodedBytes": 31715,
+            "transferBytes": 32015,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+            "initiator": "link",
+            "encodedBytes": 20432,
+            "transferBytes": 20732,
+            "duration": 24.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDArchivoBlack-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 26648,
+            "transferBytes": 26948,
+            "duration": 24.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDInter-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 149332,
+            "transferBytes": 149632,
+            "duration": 25
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/BarlowCondensed-SemiBold.woff2",
+            "initiator": "link",
+            "encodedBytes": 18872,
+            "transferBytes": 19172,
+            "duration": 7
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/refinements.css",
+            "initiator": "link",
+            "encodedBytes": 19931,
+            "transferBytes": 20231,
+            "duration": 12
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/premium.css",
+            "initiator": "link",
+            "encodedBytes": 18831,
+            "transferBytes": 19131,
+            "duration": 10.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.css",
+            "initiator": "link",
+            "encodedBytes": 7136,
+            "transferBytes": 7436,
+            "duration": 13.000000000000002
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-typography.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 580,
+            "transferBytes": 880,
+            "duration": 13.000000000000002
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 9719,
+            "transferBytes": 10019,
+            "duration": 13.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-premium.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 24361,
+            "transferBytes": 24661,
+            "duration": 14.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 9894,
+            "transferBytes": 10194,
+            "duration": 15.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 39692,
+            "transferBytes": 39992,
+            "duration": 17
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/illumination.css",
+            "initiator": "link",
+            "encodedBytes": 3743,
+            "transferBytes": 4043,
+            "duration": 9.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.css",
+            "initiator": "link",
+            "encodedBytes": 5120,
+            "transferBytes": 5420,
+            "duration": 9.999999999999998
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-corridor.webp",
+            "initiator": "img",
+            "encodedBytes": 436118,
+            "transferBytes": 436418,
+            "duration": 28
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/app.js?v=diamond20261008",
+            "initiator": "script",
+            "encodedBytes": 40558,
+            "transferBytes": 40858,
+            "duration": 23
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.js",
+            "initiator": "script",
+            "encodedBytes": 13971,
+            "transferBytes": 14271,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-interactions.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 5484,
+            "transferBytes": 5784,
+            "duration": 21
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 4760,
+            "transferBytes": 5060,
+            "duration": 21
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 4568,
+            "transferBytes": 4868,
+            "duration": 20
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 26836,
+            "transferBytes": 27136,
+            "duration": 19
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.js",
+            "initiator": "script",
+            "encodedBytes": 4546,
+            "transferBytes": 4846,
+            "duration": 18
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data-updates.js",
+            "initiator": "script",
+            "encodedBytes": 15136,
+            "transferBytes": 15436,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-portal.webp",
+            "initiator": "img",
+            "encodedBytes": 643560,
+            "transferBytes": 643860,
+            "duration": 32
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-brand.webp",
+            "initiator": "img",
+            "encodedBytes": 488590,
+            "transferBytes": 488890,
+            "duration": 31
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nfl.svg",
+            "initiator": "img",
+            "encodedBytes": 4232,
+            "transferBytes": 4532,
+            "duration": 29
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "initiator": "img",
+            "encodedBytes": 438290,
+            "transferBytes": 438590,
+            "duration": 31
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/icons.svg",
+            "initiator": "use",
+            "encodedBytes": 1248,
+            "transferBytes": 1548,
+            "duration": 2
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nba.svg",
+            "initiator": "img",
+            "encodedBytes": 9533,
+            "transferBytes": 9833,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/nrl.webp",
+            "initiator": "img",
+            "encodedBytes": 17422,
+            "transferBytes": 17722,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/afc.svg",
+            "initiator": "img",
+            "encodedBytes": 1795,
+            "transferBytes": 2095,
+            "duration": 2.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ufc.svg",
+            "initiator": "img",
+            "encodedBytes": 2525,
+            "transferBytes": 2825,
+            "duration": 2.000000000000007
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/nfc.svg",
+            "initiator": "img",
+            "encodedBytes": 1690,
+            "transferBytes": 1990,
+            "duration": 5.999999999999993
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/pit.webp",
+            "initiator": "img",
+            "encodedBytes": 28692,
+            "transferBytes": 28992,
+            "duration": 7
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/football-stadium.webp",
+            "initiator": "css",
+            "encodedBytes": 422220,
+            "transferBytes": 422520,
+            "duration": 2.000000000000014
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/diamond.svg",
+            "initiator": "css",
+            "encodedBytes": 1924,
+            "transferBytes": 2224,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/bevel-corner.svg",
+            "initiator": "css",
+            "encodedBytes": 1043,
+            "transferBytes": 1343,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/light-flare.svg",
+            "initiator": "css",
+            "encodedBytes": 586,
+            "transferBytes": 886,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data/current.json",
+            "initiator": "fetch",
+            "encodedBytes": 1277832,
+            "transferBytes": 1278132,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-assets.json",
+            "initiator": "fetch",
+            "encodedBytes": 47625,
+            "transferBytes": 47925,
+            "duration": 3
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Anton-Regular.woff2",
+            "initiator": "css",
+            "encodedBytes": 15584,
+            "transferBytes": 15884,
+            "duration": 1
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/kc.webp",
+            "initiator": "img",
+            "encodedBytes": 16580,
+            "transferBytes": 16880,
+            "duration": 2.9999999999997726
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/jax.webp",
+            "initiator": "img",
+            "encodedBytes": 46552,
+            "transferBytes": 46852,
+            "duration": 5.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/lv.webp",
+            "initiator": "img",
+            "encodedBytes": 46010,
+            "transferBytes": 46310,
+            "duration": 5.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/bal.webp",
+            "initiator": "img",
+            "encodedBytes": 35664,
+            "transferBytes": 35964,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-pit.webp",
+            "initiator": "img",
+            "encodedBytes": 352156,
+            "transferBytes": 352456,
+            "duration": 3.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ind.webp",
+            "initiator": "img",
+            "encodedBytes": 24858,
+            "transferBytes": 25158,
+            "duration": 6
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-ind.webp",
+            "initiator": "img",
+            "encodedBytes": 433618,
+            "transferBytes": 433918,
+            "duration": 7.000000000000227
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/8439.webp",
+            "initiator": "img",
+            "encodedBytes": 24100,
+            "transferBytes": 24400,
+            "duration": 1.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4569987.webp",
+            "initiator": "img",
+            "encodedBytes": 40996,
+            "transferBytes": 41296,
+            "duration": 3.0000000000002274
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4047650.webp",
+            "initiator": "img",
+            "encodedBytes": 36276,
+            "transferBytes": 36576,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4035687.webp",
+            "initiator": "img",
+            "encodedBytes": 30214,
+            "transferBytes": 30514,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4361411.webp",
+            "initiator": "img",
+            "encodedBytes": 30746,
+            "transferBytes": 31046,
+            "duration": 4
+          }
+        ]
+      },
+      "advances": [
+        {
+          "name": "nfl-ambient-emission",
+          "target": "nfl-ambient-light",
+          "pseudo": null,
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 25753,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-stadium-light-drift",
+          "target": "nfl-ambient-light",
+          "pseudo": "::before",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 25753,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-venue-depth",
+          "target": "",
+          "pseudo": null,
+          "zoneIndex": 0,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-league-circuit",
+          "target": "nfl-league-medallion",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-diamond-scintillation",
+          "target": "nfl-diamond-glint is-left",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-diamond-scintillation",
+          "target": "nfl-diamond-glint is-right",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-matchup-light-drift",
+          "target": "nfl-matchup-art",
+          "pseudo": "::before",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23527,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 25753,
+          "delta": 11784
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 25753,
+          "delta": 11784
+        }
+      ],
+      "faults": {
+        "js": [],
+        "console": [],
+        "http": [],
+        "external": [],
+        "failed": []
+      },
+      "coldResourceEncodedBytes": 5460144,
+      "screenshots": [
+        {
+          "file": "native-webkit-393-phase-a.png",
+          "sha256": "5e9907f7546733eb967c45680ce3c9d549d18721de3fb2ba3cb9bc8e7ba380c3",
+          "bytes": 1086842
+        },
+        {
+          "file": "native-webkit-393-phase-b.png",
+          "sha256": "d2a2e68a04e8decff167cef2ad6aa07125e994332cef0ddded822b230014c250",
+          "bytes": 1089277
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "first": {
+        "at": 33880,
+        "state": "running",
+        "reason": "active",
+        "clocks": [
+          {
+            "name": "nfl-ambient-emission",
+            "target": "nfl-ambient-light",
+            "pseudo": null,
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 27936
+          },
+          {
+            "name": "nfl-stadium-light-drift",
+            "target": "nfl-ambient-light",
+            "pseudo": "::before",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 27936
+          },
+          {
+            "name": "nfl-venue-depth",
+            "target": "",
+            "pseudo": null,
+            "zoneIndex": 0,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-league-circuit",
+            "target": "nfl-league-medallion",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-left",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-right",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-matchup-light-drift",
+            "target": "nfl-matchup-art",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 13437
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 27936
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 27936
+          }
+        ],
+        "rows": [
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          }
+        ],
+        "page": {
+          "width": 430,
+          "height": 802.671875
+        },
+        "document": {
+          "width": 430,
+          "viewportWidth": 430
+        },
+        "mask": "-webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0))",
+        "borderRadius": "18px",
+        "resources": [
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDInter-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 149332,
+            "transferBytes": 149632,
+            "duration": 107.99999999999999
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDArchivoBlack-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 26648,
+            "transferBytes": 26948,
+            "duration": 106.99999999999999
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+            "initiator": "link",
+            "encodedBytes": 20432,
+            "transferBytes": 20732,
+            "duration": 102.00000000000001
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/BarlowCondensed-SemiBold.woff2",
+            "initiator": "link",
+            "encodedBytes": 18872,
+            "transferBytes": 19172,
+            "duration": 102.00000000000001
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.css",
+            "initiator": "link",
+            "encodedBytes": 5120,
+            "transferBytes": 5420,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/styles.css",
+            "initiator": "link",
+            "encodedBytes": 31715,
+            "transferBytes": 32015,
+            "duration": 8.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.js",
+            "initiator": "script",
+            "encodedBytes": 4546,
+            "transferBytes": 4846,
+            "duration": 44.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/app.js?v=diamond20261008",
+            "initiator": "script",
+            "encodedBytes": 40558,
+            "transferBytes": 40858,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 26836,
+            "transferBytes": 27136,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.js",
+            "initiator": "script",
+            "encodedBytes": 13971,
+            "transferBytes": 14271,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 39692,
+            "transferBytes": 39992,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data-updates.js",
+            "initiator": "script",
+            "encodedBytes": 15136,
+            "transferBytes": 15436,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 9894,
+            "transferBytes": 10194,
+            "duration": 39.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-premium.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 24361,
+            "transferBytes": 24661,
+            "duration": 38.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 9719,
+            "transferBytes": 10019,
+            "duration": 37.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.css",
+            "initiator": "link",
+            "encodedBytes": 7136,
+            "transferBytes": 7436,
+            "duration": 34.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-typography.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 580,
+            "transferBytes": 880,
+            "duration": 23.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/premium.css",
+            "initiator": "link",
+            "encodedBytes": 18831,
+            "transferBytes": 19131,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/refinements.css",
+            "initiator": "link",
+            "encodedBytes": 19931,
+            "transferBytes": 20231,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/illumination.css",
+            "initiator": "link",
+            "encodedBytes": 3743,
+            "transferBytes": 4043,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-interactions.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 5484,
+            "transferBytes": 5784,
+            "duration": 80
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 4760,
+            "transferBytes": 5060,
+            "duration": 80
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 4568,
+            "transferBytes": 4868,
+            "duration": 84
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-corridor.webp",
+            "initiator": "img",
+            "encodedBytes": 436118,
+            "transferBytes": 436418,
+            "duration": 116
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-portal.webp",
+            "initiator": "img",
+            "encodedBytes": 643560,
+            "transferBytes": 643860,
+            "duration": 132
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-brand.webp",
+            "initiator": "img",
+            "encodedBytes": 488590,
+            "transferBytes": 488890,
+            "duration": 120
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nfl.svg",
+            "initiator": "img",
+            "encodedBytes": 4232,
+            "transferBytes": 4532,
+            "duration": 106
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "initiator": "img",
+            "encodedBytes": 438290,
+            "transferBytes": 438590,
+            "duration": 116
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/icons.svg",
+            "initiator": "use",
+            "encodedBytes": 1248,
+            "transferBytes": 1548,
+            "duration": 17
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nba.svg",
+            "initiator": "img",
+            "encodedBytes": 9533,
+            "transferBytes": 9833,
+            "duration": 5
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/nrl.webp",
+            "initiator": "img",
+            "encodedBytes": 17422,
+            "transferBytes": 17722,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ufc.svg",
+            "initiator": "img",
+            "encodedBytes": 2525,
+            "transferBytes": 2825,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/afc.svg",
+            "initiator": "img",
+            "encodedBytes": 1795,
+            "transferBytes": 2095,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/nfc.svg",
+            "initiator": "img",
+            "encodedBytes": 1690,
+            "transferBytes": 1990,
+            "duration": 5
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/football-stadium.webp",
+            "initiator": "css",
+            "encodedBytes": 422220,
+            "transferBytes": 422520,
+            "duration": 32
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/pit.webp",
+            "initiator": "img",
+            "encodedBytes": 28692,
+            "transferBytes": 28992,
+            "duration": 36
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/diamond.svg",
+            "initiator": "css",
+            "encodedBytes": 1924,
+            "transferBytes": 2224,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/bevel-corner.svg",
+            "initiator": "css",
+            "encodedBytes": 1043,
+            "transferBytes": 1343,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/light-flare.svg",
+            "initiator": "css",
+            "encodedBytes": 586,
+            "transferBytes": 886,
+            "duration": 3.999999999999943
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data/current.json",
+            "initiator": "fetch",
+            "encodedBytes": 1277832,
+            "transferBytes": 1278132,
+            "duration": 18
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Anton-Regular.woff2",
+            "initiator": "css",
+            "encodedBytes": 15584,
+            "transferBytes": 15884,
+            "duration": 26
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-assets.json",
+            "initiator": "fetch",
+            "encodedBytes": 47625,
+            "transferBytes": 47925,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/kc.webp",
+            "initiator": "img",
+            "encodedBytes": 16580,
+            "transferBytes": 16880,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/jax.webp",
+            "initiator": "img",
+            "encodedBytes": 46552,
+            "transferBytes": 46852,
+            "duration": 15
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/lv.webp",
+            "initiator": "img",
+            "encodedBytes": 46010,
+            "transferBytes": 46310,
+            "duration": 50.99999999999909
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/bal.webp",
+            "initiator": "img",
+            "encodedBytes": 35664,
+            "transferBytes": 35964,
+            "duration": 42
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-pit.webp",
+            "initiator": "img",
+            "encodedBytes": 352156,
+            "transferBytes": 352456,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ind.webp",
+            "initiator": "img",
+            "encodedBytes": 24858,
+            "transferBytes": 25158,
+            "duration": 39
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-ind.webp",
+            "initiator": "img",
+            "encodedBytes": 433618,
+            "transferBytes": 433918,
+            "duration": 39
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/8439.webp",
+            "initiator": "img",
+            "encodedBytes": 24100,
+            "transferBytes": 24400,
+            "duration": 12
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4035687.webp",
+            "initiator": "img",
+            "encodedBytes": 30214,
+            "transferBytes": 30514,
+            "duration": 15
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4569987.webp",
+            "initiator": "img",
+            "encodedBytes": 40996,
+            "transferBytes": 41296,
+            "duration": 16.00000000000091
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4361411.webp",
+            "initiator": "img",
+            "encodedBytes": 30746,
+            "transferBytes": 31046,
+            "duration": 47
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4047650.webp",
+            "initiator": "img",
+            "encodedBytes": 36276,
+            "transferBytes": 36576,
+            "duration": 48.00000000000091
+          }
+        ]
+      },
+      "second": {
+        "at": 43879,
+        "state": "running",
+        "reason": "active",
+        "clocks": [
+          {
+            "name": "nfl-ambient-emission",
+            "target": "nfl-ambient-light",
+            "pseudo": null,
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 37953
+          },
+          {
+            "name": "nfl-stadium-light-drift",
+            "target": "nfl-ambient-light",
+            "pseudo": "::before",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 37953
+          },
+          {
+            "name": "nfl-venue-depth",
+            "target": "",
+            "pseudo": null,
+            "zoneIndex": 0,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-league-circuit",
+            "target": "nfl-league-medallion",
+            "pseudo": "::after",
+            "zoneIndex": 1,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 2,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-left",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-diamond-scintillation",
+            "target": "nfl-diamond-glint is-right",
+            "pseudo": "::after",
+            "zoneIndex": 3,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-matchup-light-drift",
+            "target": "nfl-matchup-art",
+            "pseudo": "::before",
+            "zoneIndex": 4,
+            "zoneVisibility": "in",
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 23454
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 5,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 6,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::before",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-edge-reflection",
+            "target": "nfl-frame-shimmer",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": 7,
+            "zoneVisibility": "out",
+            "nativeState": "paused",
+            "pending": false,
+            "currentTime": 0
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-tr",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 37953
+          },
+          {
+            "name": "nfl-corner-diamond-breathe",
+            "target": "nfl-bevel-corner is-bl",
+            "pseudo": "::after",
+            "zoneIndex": -1,
+            "nativeState": "running",
+            "pending": false,
+            "currentTime": 37953
+          }
+        ],
+        "rows": [
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none"
+          }
+        ],
+        "page": {
+          "width": 430,
+          "height": 802.671875
+        },
+        "document": {
+          "width": 430,
+          "viewportWidth": 430
+        },
+        "mask": "-webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0))",
+        "borderRadius": "18px",
+        "resources": [
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDInter-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 149332,
+            "transferBytes": 149632,
+            "duration": 107.99999999999999
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/PDArchivoBlack-Latin.woff2",
+            "initiator": "link",
+            "encodedBytes": 26648,
+            "transferBytes": 26948,
+            "duration": 106.99999999999999
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Barlow-BlackItalic.woff2",
+            "initiator": "link",
+            "encodedBytes": 20432,
+            "transferBytes": 20732,
+            "duration": 102.00000000000001
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/BarlowCondensed-SemiBold.woff2",
+            "initiator": "link",
+            "encodedBytes": 18872,
+            "transferBytes": 19172,
+            "duration": 102.00000000000001
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.css",
+            "initiator": "link",
+            "encodedBytes": 5120,
+            "transferBytes": 5420,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/styles.css",
+            "initiator": "link",
+            "encodedBytes": 31715,
+            "transferBytes": 32015,
+            "duration": 8.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/motion.js",
+            "initiator": "script",
+            "encodedBytes": 4546,
+            "transferBytes": 4846,
+            "duration": 44.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/app.js?v=diamond20261008",
+            "initiator": "script",
+            "encodedBytes": 40558,
+            "transferBytes": 40858,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 26836,
+            "transferBytes": 27136,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.js",
+            "initiator": "script",
+            "encodedBytes": 13971,
+            "transferBytes": 14271,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 39692,
+            "transferBytes": 39992,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data-updates.js",
+            "initiator": "script",
+            "encodedBytes": 15136,
+            "transferBytes": 15436,
+            "duration": 43.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.css?v=diamond-20261008-v1",
+            "initiator": "link",
+            "encodedBytes": 9894,
+            "transferBytes": 10194,
+            "duration": 39.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-premium.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 24361,
+            "transferBytes": 24661,
+            "duration": 38.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 9719,
+            "transferBytes": 10019,
+            "duration": 37.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-research.css",
+            "initiator": "link",
+            "encodedBytes": 7136,
+            "transferBytes": 7436,
+            "duration": 34.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-typography.css?v=luxury-20261007-v1",
+            "initiator": "link",
+            "encodedBytes": 580,
+            "transferBytes": 880,
+            "duration": 23.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/premium.css",
+            "initiator": "link",
+            "encodedBytes": 18831,
+            "transferBytes": 19131,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/refinements.css",
+            "initiator": "link",
+            "encodedBytes": 19931,
+            "transferBytes": 20231,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/illumination.css",
+            "initiator": "link",
+            "encodedBytes": 3743,
+            "transferBytes": 4043,
+            "duration": 19.999999999999986
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-interactions.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 5484,
+            "transferBytes": 5784,
+            "duration": 80
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home-gate-motion.js?v=luxury-20261007-v1",
+            "initiator": "script",
+            "encodedBytes": 4760,
+            "transferBytes": 5060,
+            "duration": 80
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard-motion.js?v=diamond-20261008-v1",
+            "initiator": "script",
+            "encodedBytes": 4568,
+            "transferBytes": 4868,
+            "duration": 84
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-corridor.webp",
+            "initiator": "img",
+            "encodedBytes": 436118,
+            "transferBytes": 436418,
+            "duration": 116
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/luxury-portal.webp",
+            "initiator": "img",
+            "encodedBytes": 643560,
+            "transferBytes": 643860,
+            "duration": 132
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-brand.webp",
+            "initiator": "img",
+            "encodedBytes": 488590,
+            "transferBytes": 488890,
+            "duration": 120
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nfl.svg",
+            "initiator": "img",
+            "encodedBytes": 4232,
+            "transferBytes": 4532,
+            "duration": 106
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/gate-scenes-nfl.webp",
+            "initiator": "img",
+            "encodedBytes": 438290,
+            "transferBytes": 438590,
+            "duration": 116
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/icons.svg",
+            "initiator": "use",
+            "encodedBytes": 1248,
+            "transferBytes": 1548,
+            "duration": 17
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/home/nba.svg",
+            "initiator": "img",
+            "encodedBytes": 9533,
+            "transferBytes": 9833,
+            "duration": 5
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/nrl.webp",
+            "initiator": "img",
+            "encodedBytes": 17422,
+            "transferBytes": 17722,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ufc.svg",
+            "initiator": "img",
+            "encodedBytes": 2525,
+            "transferBytes": 2825,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/afc.svg",
+            "initiator": "img",
+            "encodedBytes": 1795,
+            "transferBytes": 2095,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/nfc.svg",
+            "initiator": "img",
+            "encodedBytes": 1690,
+            "transferBytes": 1990,
+            "duration": 5
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/football-stadium.webp",
+            "initiator": "css",
+            "encodedBytes": 422220,
+            "transferBytes": 422520,
+            "duration": 32
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/pit.webp",
+            "initiator": "img",
+            "encodedBytes": 28692,
+            "transferBytes": 28992,
+            "duration": 36
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/diamond.svg",
+            "initiator": "css",
+            "encodedBytes": 1924,
+            "transferBytes": 2224,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/bevel-corner.svg",
+            "initiator": "css",
+            "encodedBytes": 1043,
+            "transferBytes": 1343,
+            "duration": 4
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/light-flare.svg",
+            "initiator": "css",
+            "encodedBytes": 586,
+            "transferBytes": 886,
+            "duration": 3.999999999999943
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/data/current.json",
+            "initiator": "fetch",
+            "encodedBytes": 1277832,
+            "transferBytes": 1278132,
+            "duration": 18
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/fonts/Anton-Regular.woff2",
+            "initiator": "css",
+            "encodedBytes": 15584,
+            "transferBytes": 15884,
+            "duration": 26
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/player-assets.json",
+            "initiator": "fetch",
+            "encodedBytes": 47625,
+            "transferBytes": 47925,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/kc.webp",
+            "initiator": "img",
+            "encodedBytes": 16580,
+            "transferBytes": 16880,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/jax.webp",
+            "initiator": "img",
+            "encodedBytes": 46552,
+            "transferBytes": 46852,
+            "duration": 15
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/lv.webp",
+            "initiator": "img",
+            "encodedBytes": 46010,
+            "transferBytes": 46310,
+            "duration": 50.99999999999909
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/bal.webp",
+            "initiator": "img",
+            "encodedBytes": 35664,
+            "transferBytes": 35964,
+            "duration": 42
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-pit.webp",
+            "initiator": "img",
+            "encodedBytes": 352156,
+            "transferBytes": 352456,
+            "duration": 8
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/logos/ind.webp",
+            "initiator": "img",
+            "encodedBytes": 24858,
+            "transferBytes": 25158,
+            "duration": 39
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/nfl-dashboard/helmet-ind.webp",
+            "initiator": "img",
+            "encodedBytes": 433618,
+            "transferBytes": 433918,
+            "duration": 39
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/8439.webp",
+            "initiator": "img",
+            "encodedBytes": 24100,
+            "transferBytes": 24400,
+            "duration": 12
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4035687.webp",
+            "initiator": "img",
+            "encodedBytes": 30214,
+            "transferBytes": 30514,
+            "duration": 15
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4569987.webp",
+            "initiator": "img",
+            "encodedBytes": 40996,
+            "transferBytes": 41296,
+            "duration": 16.00000000000091
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4361411.webp",
+            "initiator": "img",
+            "encodedBytes": 30746,
+            "transferBytes": 31046,
+            "duration": 47
+          },
+          {
+            "url": "http://127.0.0.1:8086/project-dollers/assets/players/4047650.webp",
+            "initiator": "img",
+            "encodedBytes": 36276,
+            "transferBytes": 36576,
+            "duration": 48.00000000000091
+          }
+        ]
+      },
+      "advances": [
+        {
+          "name": "nfl-ambient-emission",
+          "target": "nfl-ambient-light",
+          "pseudo": null,
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 37953,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-stadium-light-drift",
+          "target": "nfl-ambient-light",
+          "pseudo": "::before",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 37953,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-venue-depth",
+          "target": "",
+          "pseudo": null,
+          "zoneIndex": 0,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-league-circuit",
+          "target": "nfl-league-medallion",
+          "pseudo": "::after",
+          "zoneIndex": 1,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 2,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-diamond-scintillation",
+          "target": "nfl-diamond-glint is-left",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-diamond-scintillation",
+          "target": "nfl-diamond-glint is-right",
+          "pseudo": "::after",
+          "zoneIndex": 3,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::before",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-edge-reflection",
+          "target": "nfl-frame-shimmer",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-matchup-light-drift",
+          "target": "nfl-matchup-art",
+          "pseudo": "::before",
+          "zoneIndex": 4,
+          "zoneVisibility": "in",
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 23454,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-tr",
+          "pseudo": "::after",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 37953,
+          "delta": 10017
+        },
+        {
+          "name": "nfl-corner-diamond-breathe",
+          "target": "nfl-bevel-corner is-bl",
+          "pseudo": "::after",
+          "zoneIndex": -1,
+          "nativeState": "running",
+          "pending": false,
+          "currentTime": 37953,
+          "delta": 10017
+        }
+      ],
+      "faults": {
+        "js": [],
+        "console": [],
+        "http": [],
+        "external": [],
+        "failed": []
+      },
+      "coldResourceEncodedBytes": 5460144,
+      "screenshots": [
+        {
+          "file": "native-webkit-430-phase-a.png",
+          "sha256": "69596e5b51ce7644440a73f43f822a7bcbcd3bf505581d029571e0eb16add226",
+          "bytes": 1213838
+        },
+        {
+          "file": "native-webkit-430-phase-b.png",
+          "sha256": "00bf2852533f01c8066fb53c0bf3d7b87d54e9b0ecba4532cb3ae70345c1342d",
+          "bytes": 1210135
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-10-08T01:31:59.026Z"
+}

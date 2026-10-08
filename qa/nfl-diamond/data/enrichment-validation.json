@@ -1,0 +1,284 @@
+{
+  "status": "passed",
+  "sourceRawSha256": "4783f7c943064e80793d221edfd5db211303a69a32a0bcad9c3176b1e4a8b7cb",
+  "sourceRetrievalPreserved": "2026-10-08T00:30:20Z",
+  "enrichmentVerifiedAt": "2026-10-08T00:40:59Z",
+  "sourceRows": 4449,
+  "corroboratedCompletedGames": 64,
+  "rosterCount": 79,
+  "rosterPreserved": true,
+  "steelersEntireDatasetPreserved": true,
+  "historyBytesSha256Preserved": "b3bc6d93029e59780cda98f4bdca0996f356d79f2ee335483499268dc26576f8",
+  "historySourceMetadataPreserved": true,
+  "allSourceMetadataPreserved": true,
+  "allQB_RBOriginalPrefixesPreserved": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true,
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true,
+    "14": true,
+    "15": true,
+    "16": true,
+    "17": true,
+    "18": true
+  },
+  "onlyLeadersAndLeaderProvenanceChanged": true,
+  "currentWeek": 5,
+  "leaderWeek": 4,
+  "currentLeaderCounts": {
+    "QB": 16,
+    "RB": 16,
+    "WR": 16
+  },
+  "currentWRTopFive": [
+    {
+      "name": "Tetairoa McMillan",
+      "short": "T.McMillan",
+      "playerId": "00-0040124",
+      "position": "WR",
+      "team": "CAR",
+      "yards": 192,
+      "td": 2
+    },
+    {
+      "name": "CeeDee Lamb",
+      "short": "C.Lamb",
+      "playerId": "00-0036358",
+      "position": "WR",
+      "team": "DAL",
+      "yards": 189,
+      "td": 1
+    },
+    {
+      "name": "Tee Higgins",
+      "short": "T.Higgins",
+      "playerId": "00-0036410",
+      "position": "WR",
+      "team": "CIN",
+      "yards": 157,
+      "td": 0
+    },
+    {
+      "name": "Carnell Tate",
+      "short": "C.Tate",
+      "playerId": "00-0041438",
+      "position": "WR",
+      "team": "TEN",
+      "yards": 145,
+      "td": 0
+    },
+    {
+      "name": "Puka Nacua",
+      "short": "P.Nacua",
+      "playerId": "00-0039075",
+      "position": "WR",
+      "team": "LA",
+      "yards": 125,
+      "td": 0
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "teamCount": 32,
+    "rosterCount": 79,
+    "activeRosterCount": 53,
+    "season": 2026,
+    "currentWeek": 5,
+    "throughWeek": 4,
+    "featured": [
+      "Aaron Rodgers",
+      "Jaylen Warren",
+      "DK Metcalf",
+      "Michael Pittman",
+      "Pat Freiermuth"
+    ],
+    "disagreements": [
+      {
+        "playerId": "00-0035239",
+        "name": "Sean Murphy-Bunting",
+        "field": "jersey",
+        "primary": "26",
+        "official": 27,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038395",
+        "name": "Terell Smith",
+        "field": "jersey",
+        "primary": "36",
+        "official": 39,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039883",
+        "name": "Daequan Hardy",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "PIT",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039626",
+        "name": "Cole Burgess",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "PIT",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0040176",
+        "name": "Bradyn Swinson",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "No matched roster entry",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster",
+          "espn_athlete_4431424"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038388",
+        "name": "Darius Rush",
+        "field": "jersey",
+        "primary": "36",
+        "official": 38,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038581",
+        "name": "K.J. Henry",
+        "field": "position",
+        "primary": "DL",
+        "official": "LB",
+        "espn": "LB",
+        "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039054",
+        "name": "Marte Mapu",
+        "field": "jersey",
+        "primary": "14",
+        "official": 48,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0037382",
+        "name": "Brandon Johnson",
+        "field": "jersey",
+        "primary": "82",
+        "official": 89,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0036165",
+        "name": "Isaiah Hodgins",
+        "field": "jersey",
+        "primary": "89",
+        "official": 82,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0040618",
+        "name": "Max Hurleman",
+        "field": "position",
+        "primary": "WR",
+        "official": "WR",
+        "espn": "RB",
+        "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-08T00:30:23Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      }
+    ]
+  }
+}

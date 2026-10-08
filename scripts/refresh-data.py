@@ -127,6 +127,31 @@ def source_specs(season):
     }
 
 
+LEADER_FIELDS = {
+    "QB": ("passing_yards", "passing_tds"),
+    "RB": ("rushing_yards", "rushing_tds"),
+    "WR": ("receiving_yards", "receiving_tds"),
+}
+LEADER_LIMIT = 16
+
+
+def collect_weekly_leaders(stats, leader_week):
+    """Rank verified weekly values; missing yards or TDs never become zero.
+
+    Callers pass only regular-season rows corroborated by final game scores.
+    The UI presents five initially and can expand this bounded source list.
+    """
+    leaders = {}
+    for position, (yards, touchdowns) in LEADER_FIELDS.items():
+        rows = [row for row in stats if row["position"] == position and int(row["week"]) == leader_week
+                and number(row.get(yards)) is not None and number(row.get(touchdowns)) is not None]
+        rows.sort(key=lambda row: (-number(row[yards]), -number(row[touchdowns]), row["player_display_name"]))
+        leaders[position] = [{"name": row["player_display_name"], "short": row["player_name"], "playerId": row["player_id"],
+                              "position": position, "team": row["team"], "yards": number(row[yards]), "td": number(row[touchdowns])}
+                             for row in rows[:LEADER_LIMIT]]
+    return leaders
+
+
 def archive_source_specs(season, player_ids):
     release = "https://github.com/nflverse/nflverse-data/releases/download/stats_player"
     return {f"nflverse_player_stats_{year}": {
@@ -859,12 +884,7 @@ def build_snapshot(datasets, metadata, now, requested_season):
         through = min(week if week == current_week else week - 1, through_week)
         records, standings_groups = standings(teams, raw_games, through)
         leader_week = min(week - 1, stats_week) if stats_week and week > 1 else None
-        leaders = {}
-        for position, yards, touchdowns in [("QB", "passing_yards", "passing_tds"), ("RB", "rushing_yards", "rushing_tds")]:
-            rows = sorted([r for r in stats if r["position"] == position and int(r["week"]) == leader_week],
-                          key=lambda r: (-(number(r[yards]) or 0), -(number(r[touchdowns]) or 0), r["player_display_name"]))
-            leaders[position] = [{"name": r["player_display_name"], "short": r["player_name"], "playerId": r["player_id"], "position": position,
-                                  "team": r["team"], "yards": number(r[yards]), "td": number(r[touchdowns])} for r in rows[:5]]
+        leaders = collect_weekly_leaders(stats, leader_week)
         fixture_raw = next((g for g in raw_games if int(g["week"]) == week and "PIT" in (g["home_team"], g["away_team"])), None)
         weeks[str(week)] = {"throughWeek": through, "leadersWeek": leader_week, "recapWeek": leader_week, "conferences": standings_groups, "leaders": leaders,
                             "recap": [normalize_game(g, standings(teams, raw_games, max(0, int(g["week"]) - 1))[0]) for g in raw_games if int(g["week"]) == leader_week and g.get("away_score")],
@@ -916,7 +936,10 @@ def build_snapshot(datasets, metadata, now, requested_season):
     provenance = {
         "standings": {"status": "derived", "sourceIds": ["nflverse_games", "nflverse_teams"], "season": requested_season, "throughWeek": through_week,
                       "note": "Calculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null."},
-        "weeklyLeaders": {"status": "verified", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week, "note": "Previous available week's yards; future selected weeks explicitly retain latest verified leader week."},
+        "weeklyLeaders": {"status": "verified", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week,
+                          "limit": LEADER_LIMIT,
+                          "positions": {position: {"yardsField": fields[0], "touchdownsField": fields[1]} for position, fields in LEADER_FIELDS.items()},
+                          "note": "Up to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week."},
         "roster": {"status": "verified", "sourceIds": ["nflverse_roster"], "season": requested_season, "week": current_week, "note": "Current retained roster: active, reserve and practice squad; cut players excluded."},
         "playerStats": {"status": "derived" if stats else "unavailable", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week, "note": "Summed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT."},
         "teamStats": {"status": "derived" if game_count else "unavailable", "sourceIds": ["nflverse_games", "nflverse_player_stats"], "season": requested_season, "throughWeek": pit_stats_week, "coverageGameIds": sorted(pit_stat_game_ids), "note": "Gross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals."},

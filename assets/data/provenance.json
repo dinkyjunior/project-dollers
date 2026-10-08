@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-10-08T01:21:18Z",
   "retrievedAt": "2026-10-08T01:21:16Z",
-  "snapshotSha256CanonicalJson": "22ef0cb11b400bb6640c343c655282a09799cca25badcca1f5e792744d6345f4",
+  "snapshotSha256CanonicalJson": "7fe500b7735ae6f37bed610ff7e79e8b30fab3535e264240797e1547688c42f5",
   "sources": [
     {
       "id": "nflverse_games",
@@ -413,7 +413,23 @@
       ],
       "season": 2026,
       "throughWeek": 4,
-      "note": "Previous available week's yards; future selected weeks explicitly retain latest verified leader week."
+      "note": "Up to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.",
+      "limit": 16,
+      "positions": {
+        "QB": {
+          "yardsField": "passing_yards",
+          "touchdownsField": "passing_tds"
+        },
+        "RB": {
+          "yardsField": "rushing_yards",
+          "touchdownsField": "rushing_tds"
+        },
+        "WR": {
+          "yardsField": "receiving_yards",
+          "touchdownsField": "receiving_tds"
+        }
+      },
+      "enrichedAt": "2026-10-08T00:40:59Z"
     },
     "roster": {
       "status": "verified",

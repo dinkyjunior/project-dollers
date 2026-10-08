@@ -1,5 +1,9 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Current NFL dashboard — 8 October 2026
+
+Page 2 has been rebuilt against the user's newly approved tall NFL reference. Home and Steelers markup/assets/history remain protected; Page 4 remains excluded. NFL uses Home's compact enclosure with internal scrolling, local genuine conference/team marks, decorative high-resolution helmet artwork, cyan/gold facets and native motion. Future destination buttons respond inline rather than leaving NFL. Data remains verified and traceable; QB/RB/WR lists can expand to 16 source-backed entries. Read `qa/nfl-diamond/RELEASE.md` for exact current validation and publication status.
+
 ## Current Page 1 luxury refinement — deployed and verified
 
 The further Page 1 pass is deployed at https://dinkyjunior.github.io/project-dollers/. The compact polished chrome/glass entrance, coherent illuminated corridor, native licensed Archivo Black/Inter typography, stronger sport-coloured control edges and natural travelling highlights materially reduce the approved render gap. The original diamond/gold/emerald brand, real sport marks and venue artwork remain. All four sport selectors work; only NFL enters; Coming soon has no Preview only and UFC uses Fighters. Page 4 remains excluded; existing Pages 2–3 and whole-card football research remain protected.

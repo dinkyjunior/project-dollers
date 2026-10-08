@@ -1,5 +1,9 @@
 # Production publication and verification
 
+## Current NFL dashboard — 8 October 2026
+
+The user authorized this NFL build and the existing publication workflow after all visual and functional checks. Read `qa/nfl-diamond/RELEASE.md` for current status. The dashboard's future destination buttons deliberately stay on NFL, and Home/Steelers code remains protected. Publish with ordinary pushes after fetching/rebasing both branches. Verify the exact successful Pages SHA/jobs and genuine hosted mobile rendering, asset/data hashes, navigation, motion and native refresh before declaring completion.
+
 ## Current Page 1 luxury refinement — deployed and verified
 
 The further Page 1 pass is deployed at https://dinkyjunior.github.io/project-dollers/. The compact polished chrome/glass entrance, coherent illuminated corridor, native licensed Archivo Black/Inter typography, stronger sport-coloured control edges and natural travelling highlights materially reduce the approved render gap. The original diamond/gold/emerald brand, real sport marks and venue artwork remain. All four sport selectors work; only NFL enters; Coming soon has no Preview only and UFC uses Fighters. Page 4 remains excluded; existing Pages 2–3 and whole-card football research remain protected.

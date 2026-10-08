@@ -110,12 +110,19 @@ async function gameValues(page, player, history, expectedIds) {
   return { games: ids.length, comparedFields: fields, gameIds: ids };
 }
 async function selectedFixtureCheck(page, data, week) {
-  await page.locator('.page.active [data-open="nfl"]').first().click(); await active(page,"nfl");
+  if(await page.locator('.page.active').getAttribute('data-page')!=='nfl') await page.locator('.page.active [data-open="nfl"]').first().click();
+  await active(page,"nfl");
   await page.locator('#week-select').selectOption(String(week));
   const fixture = data.weeks[week].fixture;
-  if (fixture) await page.locator('#featured-matchup [data-matchup-entry]').click();
-  else await page.locator('.page.active [data-shortcut="matchups"]').click();
+  await page.locator(fixture ? '#featured-matchup [data-nfl-action="matchup"]' : '.page.active [data-nfl-action="matchups"]').click();
+  await active(page,"nfl");
+  assert.equal(await page.locator('#nfl-inline-preview').isVisible(),true,'NFL matchup responds inline without opening a destination');
+  await page.locator('[data-nfl-action="close-preview"]').click();
+  // The approved dashboard intentionally keeps destination buttons on Page 2.
+  // Exercise the preserved Page 3 separately through its existing direct URL.
+  await page.evaluate(()=>{location.hash='steelers';});
   await active(page,"steelers");
+  await page.locator('[data-team-tab="matchups"]').click();
   assert.equal(await page.locator('#team-panel-matchups').isVisible(), true);
   const text = await page.locator('#team-matchup').innerText();
   if (!fixture) {
@@ -133,7 +140,7 @@ async function detailedHistoryCheck(page, data, history, viewport) {
   const opponent = fixture ? fixture.home_team === 'PIT' ? fixture.away_team : fixture.home_team : null;
   await page.locator('.page.active [data-open="nfl"]').first().click(); await active(page,"nfl");
   await page.locator('#week-select').selectOption(String(data.currentWeek));
-  await page.locator('.page.active [data-shortcut="matchups"]').click(); await active(page,"steelers");
+  await page.evaluate(()=>{location.hash='steelers';}); await active(page,"steelers");
   await page.locator('[data-team-tab="roster"]').click();
   const players = data.roster.filter(player => player.featured).slice(0,viewport.width === 393 ? 5 : 1);
   if (viewport.width === 393) for (const group of ['DEF','K']) {
@@ -264,7 +271,7 @@ async function capture(page, label, viewport, outputDir, scrollTop = true) {
   });
   const geometry = await layout(page, label);
   const primaryBounds = await page.evaluate((screen) => {
-    const selector = { home: ".aperture-stage, .home-entry, .home-sport-option", nfl: "#featured-matchup .game-card, #featured-matchup .bye-card", steelers: ".player-card" }[screen];
+    const selector = { home: ".aperture-stage, .home-entry, .home-sport-option", nfl: ".league-header", steelers: ".player-card" }[screen];
     if (!selector) return [];
     const scroll = document.querySelector(".page.active .page-scroll").getBoundingClientRect();
     const nav = document.querySelector(".page.active .bottom-nav").getBoundingClientRect();
@@ -402,10 +409,16 @@ async function standingsValues(page, data, conference) {
   for (const row of actual) {
     const team = expected.find((t) => t.name === row[1]);
     assert.ok(team, `Displayed team must be in ${conference}: ${row[1]}`);
-    assert.equal(row[0], team.rank === null ? "—" : String(team.rank));
+    const sorted=[...expected].sort((a,b)=>Number(b.pct)-Number(a.pct) || Number(b.pointDifferential)-Number(a.pointDifferential) || a.abbr.localeCompare(b.abbr));
+    assert.equal(row[0],String(sorted.indexOf(team)+1),'Row number is sorted record order, not official playoff seeding');
     assert.equal(row[2], String(team.w));
     assert.equal(row[3], String(team.l) + (team.ties ? `+${team.ties}T` : ""));
-    assert.equal(row[4], team.pct); assert.equal(row[5], team.streak || "—");
+    assert.equal(row[4],team.pct);
+    assert.equal(row[5],String(team.pointsFor)); assert.equal(row[6],String(team.pointsAgainst));
+    assert.equal(row[7],`${team.pointDifferential>0?'+':''}${team.pointDifferential}`);
+    const games=[...new Map(Object.values(data.weeks).flatMap(w=>w.recap||[]).filter(g=>g.status==='final' && g.season===data.season && g.week<=data.weeks[week].throughWeek).map(g=>[g.id,g])).values()].filter(g=>g.home_team===team.abbr || g.away_team===team.abbr).sort((a,b)=>Number(a.week)-Number(b.week)||String(a.gameday).localeCompare(String(b.gameday))||a.id.localeCompare(b.id));
+    const form=games.map(g=>{const own=g.home_team===team.abbr?g.home_score:g.away_score,other=g.home_team===team.abbr?g.away_score:g.home_score;return own>other?'W':own<other?'L':'T';}).slice(-4).join('');
+    assert.equal(row[8],form||'—','Form matches retained verified final scores');
   }
 }
 async function datasetCheck(page, expected) {
@@ -475,7 +488,7 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     assert.equal(await page.locator('[data-home-entry]').isDisabled(), false, 'NFL entry becomes available again');
     await page.locator("[data-home-entry]").click(); await active(page, "nfl");
     assert.equal(await page.locator(".stand-row:visible").count(), 5, "Default dashboard preserves five selected-team density");
-    assert.equal(await page.locator(".leader-row:visible").count(), 10);
+    assert.equal(await page.locator(".leader-row:visible").count(),15,'Five verified QB, RB and WR leaders are visible');
     assert.ok(await page.locator(".steelers-row").count(), "Selected AFC contains Steelers entry point");
     await standingsValues(page, data, "AFC");
     captures.nfl = await capture(page, "nfl", viewport, outputDir);
@@ -486,7 +499,11 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
       assert.equal(await page.locator("#team-panel-matchups").isVisible(), true, "Featured fixture opens sourced matchup research within Page 3");
       await page.locator(".team-back").click(); await active(page, "nfl");
     }
-    await page.locator(".steelers-row button").click(); await active(page, "steelers");
+    await page.locator(".steelers-row button").click(); await active(page,"nfl");
+    assert.equal(await page.locator('.steelers-row button').getAttribute('aria-expanded'),'false','Team selection collapses the inline summary without leaving NFL');
+    await page.locator(".steelers-row button").click();
+    assert.equal(await page.locator('.steelers-row button').getAttribute('aria-expanded'),'true');
+    await page.evaluate(()=>{location.hash='steelers';}); await active(page,"steelers");
     assert.equal(await page.locator("#team-panel-roster").isVisible(), true, "Steelers standings roster entry opens Roster after visiting Matchups");
     assert.equal(await page.locator(".player-card:visible").count(), rosterForFilter(data, "ALL", false).length);
     await rosterValues(page, data);
@@ -584,8 +601,8 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
       await standingsValues(page, data, "AFC");
       await layout(page, `week-${week}`);
     }
-    for (const week of await page.locator("[data-week]").evaluateAll((bs) => bs.map((b)=>b.dataset.week))) {
-      await page.locator(`[data-week="${week}"]`).click();
+    for (const week of await page.locator("[data-week]:visible").evaluateAll((bs) => bs.map((b)=>b.dataset.week))) {
+      await page.locator(`[data-week="${week}"]:visible`).click();
       assert.equal(await page.locator("#week-select").inputValue(), week);
     }
     for (const tab of ["players", "recap", "ladder"]) {
@@ -602,16 +619,14 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     await page.locator('.page.active [data-open="nfl"]').first().click(); await active(page,'nfl');
     await page.locator('[data-nfl-tab="ladder"]').focus(); await page.keyboard.press("ArrowRight");
     assert.equal(await page.locator('[data-nfl-tab="players"]').getAttribute("aria-selected"), "true");
-    await page.locator('.page.active [data-shortcut="matchups"]').click();
-    await active(page, "steelers");
-    assert.equal(await page.locator("#team-panel-matchups").isVisible(), true);
-    await page.locator('.page.active [data-shortcut="insights"]').click();
-    await active(page, "nfl");
-    assert.equal(await page.locator("#panel-players").isVisible(), true);
-    await page.locator(".page.active [data-more]").click();
-    assert.equal(await page.locator("#about-dialog").isVisible(), true);
-    await page.keyboard.press("Escape"); assert.equal(await page.locator("#about-dialog").isVisible(), false);
-    const sourceButton = page.locator(".page.active [data-sources]").first();
+    for(const action of ['matchups','insights','more']) {
+      await page.locator(`.page.active [data-nfl-action="${action}"]`).click();
+      await active(page,'nfl');
+      assert.equal(await page.locator('#nfl-inline-preview').isVisible(),true,`${action}: dashboard responds inline`);
+      await page.locator('[data-nfl-action="close-preview"]').click();
+      assert.equal(await page.locator('#nfl-inline-preview').isVisible(),false);
+    }
+    const sourceButton = page.locator(".page.active [data-sources]:visible").first();
     if (await sourceButton.count()) {
       await sourceButton.click(); assert.equal(await page.locator("#sources-dialog").isVisible(), true);
       assert.match(await page.locator("#sources-dialog").innerText(), /source|retriev|verified/i);
@@ -717,7 +732,7 @@ async function updatePreservation(browser, base, data) {
     await page.locator('#week-select').selectOption('1');
     await page.locator('[data-conference="NFC"]').click(); await page.locator('[data-standings-toggle]').click();
     await page.locator('[data-nfl-tab="players"]').click();
-    await page.locator('.page.active [data-shortcut="matchups"]').click(); await active(page,'steelers');
+    await page.evaluate(()=>{location.hash='steelers';}); await active(page,'steelers');
     await page.locator('[data-team-tab="roster"]').click();
     await page.locator('[data-roster-toggle]').click(); await page.locator('[data-filter="QB"]').click();
     const player = data.roster.find(value=>value.featured && value.position==='QB');
@@ -765,6 +780,7 @@ async function runQA({ base, outputDir = __dirname, mode = "Local HTTP under /pr
   const history = historySnapshot(source.data);
   const startedAt = new Date().toISOString();
   const runtimeFiles = ["index.html", "assets/app.js", "assets/styles.css", "assets/refinements.css", "assets/premium.css", "assets/motion.css", "assets/motion.js", "assets/data-updates.js", "assets/player-research.js", "assets/player-research.css", "assets/home-premium.css", "assets/home-interactions.js", "assets/home-gate-motion.css", "assets/home-gate-motion.js", "assets/home/gate-brand.webp", "assets/home/gate-scenes-nfl.webp", "assets/home/gate-scenes-nba.webp", "assets/home/gate-scenes-nrl.webp", "assets/home/gate-scenes-ufc.webp", "assets/home/nfl.svg", "assets/home/nba.svg", "assets/illumination.css", "assets/data/current.json", "assets/data/player-history.json"];
+  runtimeFiles.push('assets/nfl-dashboard.css','assets/nfl-dashboard.js','assets/nfl-dashboard-motion.css','assets/nfl-dashboard-motion.js',...fs.readdirSync(path.join(ROOT,'assets/nfl-dashboard')).map(file=>`assets/nfl-dashboard/${file}`));
   const runtimeManifest = Object.fromEntries(runtimeFiles.map((file) => [file, sha256(fs.readFileSync(path.join(ROOT, file)))]));
   const report = { runtimeManifest, testScriptSha256: sha256(fs.readFileSync(__filename)), worktreeStatus: execFileSync("git", ["status", "--porcelain"], { cwd: ROOT, encoding: "utf8" }).trim().split("\n").filter(Boolean), startedAt, browser: await browser.version(), mode, gitHead: execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8" }).trim(), source: { path: "assets/data/current.json", sha256: source.sha256, bytes: source.bytes }, results: [] };
   try {

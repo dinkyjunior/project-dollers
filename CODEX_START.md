@@ -1,5 +1,11 @@
 # Codex Start Here
 
+## Current NFL dashboard — 8 October 2026
+
+The user's new tall NFL chat render is the Page 2 authority. The NFL dashboard now uses the same compact enclosure as the locked Home screen, with internal scrolling, faceted cyan/gold hardware, local helmet artwork and separate QB/RB/WR tables. Conference, week, division, form and sort controls work. Destination buttons respond inline on NFL; the existing Steelers screen remains available by direct URL. Do not reconnect those destinations or add Page 4 without a new instruction.
+
+Home and Steelers markup and their protected runtime files remain unchanged. The new reference's sample figures are replaced by sourced 2026 records. Read `reference/NFL_DIAMOND_CHAT_SOURCE.md` and `qa/nfl-diamond/RELEASE.md` for the current evidence and publication status. Preserve historical QA; run the shared suite with `npm test -- --output <fresh-directory>` and integration checks with `npm run test:integration -- --output <fresh-report-path>`.
+
 ## Current Page 1 luxury refinement — deployed and verified
 
 The further Page 1 pass is deployed at https://dinkyjunior.github.io/project-dollers/. The compact polished chrome/glass entrance, coherent illuminated corridor, native licensed Archivo Black/Inter typography, stronger sport-coloured control edges and natural travelling highlights materially reduce the approved render gap. The original diamond/gold/emerald brand, real sport marks and venue artwork remain. All four sport selectors work; only NFL enters; Coming soon has no Preview only and UFC uses Fighters. Page 4 remains excluded; existing Pages 2–3 and whole-card football research remain protected.

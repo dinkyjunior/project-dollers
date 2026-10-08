@@ -62,10 +62,9 @@ async function viewState(page){return page.evaluate(playerId=>({
   await page.goto(`http://127.0.0.1:${server.address().port}/project-dollers/#nfl`);await page.waitForFunction(()=>PD_DATA&&PD_UPDATE_STATUS);
   assert.equal(requests.length,1,'app-open check is not duplicated');
   await page.locator('[data-conference="NFC"]').click();await page.locator('#week-select').selectOption('2');await page.locator('[data-nfl-tab="players"]').click();
-  await page.locator('.page.active [data-nav="steelers"]').count().then(async count=>{
-    if(count)await page.locator('.page.active [data-nav="steelers"]').click();
-    else await page.evaluate(()=>document.querySelector('[data-open="steelers"]')?.click());
-  });
+  // NFL destination controls intentionally remain inline in this approved pass.
+  // Audit the preserved research screen through its existing direct hash URL.
+  await page.evaluate(()=>{location.hash='steelers';});
   await page.waitForFunction(()=>document.querySelector('.page.active').dataset.page==='steelers');
   await page.locator('[data-team-tab="roster"]').click();await page.locator('[data-filter="WR"]').click();
   await page.locator(`[data-player="${playerId}"]`).click();await page.waitForFunction(()=>window.PD_HISTORY&&document.querySelector('.player-detail[data-player-history-state="ready"]'));
@@ -118,6 +117,9 @@ async function viewState(page){return page.evaluate(playerId=>({
   assert.match(await page.locator('.player-detail:not([hidden])').textContent(),/original source times/);
   const sourceCopy=await page.locator('#sources-content').textContent();assert.match(sourceCopy,/not live play-by-play/);assert.match(sourceCopy,/push feed is not connected/);
   report={status:focusPreserved&&historyScrollPreserved?'passed':'passed-with-findings',checkedAt:new Date().toISOString(),browser:browser.version(),viewport:{width:393,height:852},appSha256:require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(ROOT,'assets/app.js'))).digest('hex'),checks:preserved,focusPreserved,sourceFocusPreserved,historyScrollPreserved,historyBeforeScroll:historyBefore.scroll,historyAfterScroll:historyAfter.scroll,focusBefore:before.focus,focusAfter:after.focus,requestCount:requests.length,requests,pageErrors:errors,failedRequests,nestedInvalidPreserved:true,rendererRollbackPreserved:true,historyChecksumFailureRetained:true,sourceClaim:'Accurately states verified publication checks; no live play-by-play or configured push feed.',before:{...before,sourceText:undefined,fixtureText:undefined},after:{...after,sourceText:undefined,fixtureText:undefined},failure:{...failed,sourceText:undefined,fixtureText:undefined}};
-  fs.writeFileSync(path.join(ROOT,'qa/next-pass/auto-update-integration.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,focusPreserved,sourceFocusPreserved,historyScrollPreserved,historyBeforeScroll:historyBefore.scroll,historyAfterScroll:historyAfter.scroll,checks:preserved,requestCount:requests.length,pageErrors:errors,failedRequests},null,2));
+  const outputIndex=process.argv.indexOf('--output');
+  const reportPath=outputIndex>=0?path.resolve(process.argv[outputIndex+1]):path.join(ROOT,'qa/next-pass/auto-update-integration.json');
+  fs.mkdirSync(path.dirname(reportPath),{recursive:true});
+  fs.writeFileSync(reportPath,JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,focusPreserved,sourceFocusPreserved,historyScrollPreserved,historyBeforeScroll:historyBefore.scroll,historyAfterScroll:historyAfter.scroll,checks:preserved,requestCount:requests.length,pageErrors:errors,failedRequests},null,2));
  }finally{await browser.close();server.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

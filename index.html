@@ -26,12 +26,16 @@
     <link rel="stylesheet" href="assets/home-typography.css?v=luxury-20261007-v1" />
     <link rel="stylesheet" href="assets/home-premium.css?v=luxury-20261007-v1" />
     <link rel="stylesheet" href="assets/home-gate-motion.css?v=luxury-20261007-v1" />
+    <link rel="stylesheet" href="assets/nfl-dashboard.css?v=diamond-20261008-v1" />
+    <link rel="stylesheet" href="assets/nfl-dashboard-motion.css?v=diamond-20261008-v1" />
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/app.js" defer></script>
+    <script src="assets/nfl-dashboard.js?v=diamond-20261008-v1" defer></script>
+    <script src="assets/app.js?v=diamond20261008" defer></script>
     <script src="assets/motion.js" defer></script>
     <script src="assets/home-interactions.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
+    <script src="assets/nfl-dashboard-motion.js?v=diamond-20261008-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -108,160 +112,69 @@
           <button data-more><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#more"></use></svg><span>More</span></button>
         </nav>
       </section>
-      <section class="page" data-page="nfl" aria-label="NFL dashboard" hidden>
+      <section class="page nfl-premium-dashboard nfl-dashboard-root" data-page="nfl" aria-label="NFL dashboard" hidden>
+        <div class="nfl-ambient-light" aria-hidden="true"></div>
         <div class="page-scroll">
           <div class="frame nfl-frame">
-            <div class="status-row" aria-hidden="true">
-              <span>9:41</span
-              ><span class="status-icons"
-                ><svg class="icon" aria-hidden="true">
-                  <use href="assets/icons.svg#signal"></use></svg
-                ><svg class="icon" aria-hidden="true">
-                  <use href="assets/icons.svg#battery"></use></svg
-              ></span>
-            </div>
-            <header class="league-header">
-              <img
-                src="assets/logos/nfl.webp"
-                alt="NFL"
-                width="500"
-                height="500"
-              />
-              <div>
-                <h1>NFL</h1>
-                <p id="season-context">NFL REGULAR SEASON</p>
-              </div>
-              <label class="week-select"
-                ><span class="sr-only">Select NFL week</span
-                ><select id="week-select" disabled><option>Loading…</option></select
-                ><svg class="icon" aria-hidden="true">
-                  <use href="assets/icons.svg#down"></use></svg
-              ></label>
+            <header class="nfl-brand-stage nfl-motion-zone" aria-label="Project Dollar sports data and research">
+              <div class="nfl-stadium-drift" aria-hidden="true"><img src="assets/home/gate-scenes-nfl.webp" alt="" width="1200" height="1200" decoding="async" /></div>
+              <img class="nfl-brand-mark" src="assets/home/gate-brand.webp" alt="Project Dollar" width="1800" height="693" decoding="async" />
+              <p class="nfl-brand-subtitle">SPORTS DATA &amp; RESEARCH</p>
             </header>
-            <div
-              class="tabs primary-tabs"
-              role="tablist"
-              aria-label="NFL research"
-            >
-              <button
-                id="tab-ladder"
-                role="tab"
-                aria-selected="true"
-                aria-controls="panel-ladder"
-                data-nfl-tab="ladder"
-              >
-                Ladder
-              </button>
-              <button
-                id="tab-players"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-players"
-                data-nfl-tab="players"
-                tabindex="-1"
-              >
-                Top Players
-              </button>
-              <button
-                id="tab-recap"
-                role="tab"
-                aria-selected="false"
-                aria-controls="panel-recap"
-                data-nfl-tab="recap"
-                tabindex="-1"
-              >
-                Weekly Recap
-              </button>
+            <header class="league-header nfl-framed nfl-motion-zone">
+              <span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span>
+              <div class="nfl-league-medallion"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500" decoding="async" /></div>
+              <div class="nfl-league-title"><h1>NFL</h1><p id="season-context">NFL REGULAR SEASON</p><p class="nfl-verification-label">VERIFIED SPORTS DATA</p></div>
+              <label class="week-select"><span class="sr-only">Select NFL week</span><select id="week-select" disabled><option>Loading…</option></select><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#down"></use></svg></label>
+            </header>
+            <div class="tabs primary-tabs" role="tablist" aria-label="NFL research">
+              <button id="tab-ladder" role="tab" aria-selected="true" aria-controls="panel-ladder" data-nfl-tab="ladder">Ladder</button>
+              <button id="tab-players" role="tab" aria-selected="false" aria-controls="panel-players" data-nfl-tab="players" tabindex="-1">Top Players</button>
+              <button id="tab-recap" role="tab" aria-selected="false" aria-controls="panel-recap" data-nfl-tab="recap" tabindex="-1">Weekly Recap</button>
             </div>
             <div id="panel-ladder" role="tabpanel" aria-labelledby="tab-ladder">
-              <div
-                class="conference-toggle"
-                role="group"
-                aria-label="Conference"
-              >
-                <button data-conference="AFC" aria-pressed="true">AFC</button
-                ><button data-conference="NFC" aria-pressed="false">NFC</button>
+              <div class="conference-toggle nfl-framed nfl-motion-zone" role="group" aria-label="Conference">
+                <span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span>
+                <button data-conference="AFC" aria-pressed="true"><img src="assets/nfl-dashboard/afc.svg" alt="" width="50" height="50" />AFC</button>
+                <button data-conference="NFC" aria-pressed="false"><img src="assets/nfl-dashboard/nfc.svg" alt="" width="50" height="50" />NFC</button>
               </div>
-              <div class="table-label">
-                <div><span id="table-caption">AFC TEAM RECORDS</span><span class="through-week">LOADING DATA</span></div><button class="subtle-button standings-toggle" data-standings-toggle aria-expanded="false">All conference teams</button>
-              </div>
-              <div
-                class="standings"
-                role="table"
-                aria-label="Conference records sorted by win percentage; not official playoff seeding"
-              >
-                <div class="stand-head" role="row">
-                  <span role="columnheader">#</span
-                  ><span role="columnheader">TEAM</span
-                  ><span role="columnheader">W</span
-                  ><span role="columnheader">L</span
-                  ><span role="columnheader">PCT</span
-                  ><span role="columnheader">STRK</span>
+              <section class="nfl-standings-panel nfl-framed nfl-motion-zone" aria-label="Conference standings">
+                <span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span>
+                <div class="table-label"><img id="nfl-conference-mark" src="assets/nfl-dashboard/afc.svg" alt="" width="50" height="50" /><div><h2 id="table-caption">AFC STANDINGS</h2><span class="through-week">LOADING DATA</span></div><button class="nfl-info-button" data-sources aria-label="Standings data sources and context"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg></button></div>
+                <div class="nfl-standings-filters" role="group" aria-label="Standings filters">
+                  <label><span class="sr-only">Division</span><span aria-hidden="true">Division:</span><select id="division-select"><option value="all">All</option><option value="east">East</option><option value="north">North</option><option value="south">South</option><option value="west">West</option></select><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#down"></use></svg></label>
+                  <label><span class="sr-only">Recent form window</span><span aria-hidden="true">Form:</span><select id="form-select"><option value="4">Last 4</option><option value="5">Last 5</option></select><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#down"></use></svg></label>
+                  <label class="nfl-sort-control"><span class="sr-only">Sort standings</span><span aria-hidden="true">Sort:</span><select id="standings-sort"><option value="PCT">PCT</option><option value="PF">PF</option><option value="PA">PA</option><option value="DIFF">DIFF</option></select><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#down"></use></svg></label>
                 </div>
-                <div id="standings-rows" role="rowgroup"></div>
-              </div>
-              <div id="ladder-leaders" class="leader-grid"></div>
+                <p id="nfl-filter-note" class="nfl-filter-note" role="status" aria-live="polite" hidden></p>
+                <div class="standings" role="table" aria-label="Conference records sorted by win percentage; not official playoff seeding">
+                  <div class="stand-head" role="row"><span role="columnheader">#</span><span role="columnheader">TEAM</span><span role="columnheader">W</span><span role="columnheader">L</span><span role="columnheader" class="nfl-sort-heading">PCT</span><span role="columnheader">PF</span><span role="columnheader">PA</span><span role="columnheader">+/−</span><span role="columnheader">FORM</span></div>
+                  <div id="standings-rows" role="rowgroup"></div>
+                </div>
+                <button class="subtle-button standings-toggle nfl-all-teams" data-standings-toggle aria-expanded="false"><span class="nfl-diamond-glint is-left" aria-hidden="true"></span><span>View all 16 teams</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg><span class="nfl-diamond-glint is-right" aria-hidden="true"></span></button>
+              </section>
+              <section class="matchup-section nfl-framed nfl-motion-zone" aria-label="Featured Steelers fixture">
+                <span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span>
+                <div class="section-heading"><h2>FEATURED MATCHUP</h2><span id="fixture-context">CURRENT SEASON</span></div>
+                <div id="featured-matchup"></div>
+              </section>
+              <div id="ladder-leaders" class="leader-grid nfl-leader-stack"></div>
             </div>
-            <div
-              id="panel-players"
-              role="tabpanel"
-              aria-labelledby="tab-players"
-              hidden
-            >
-              <p class="section-note">
-                League leaders by passing and rushing yards.
-              </p>
-              <div id="players-leaders" class="leader-grid"></div>
-            </div>
-            <div
-              id="panel-recap"
-              class="recap-panel"
-              role="tabpanel"
-              aria-labelledby="tab-recap"
-              hidden
-            >
-              <span class="eyebrow">WEEKLY RESEARCH</span>
-              <h2 id="recap-title">Week 3 in numbers</h2>
-              <div id="recap-content"></div>
-            </div>
-            <div class="week-row" role="group" aria-label="Week selection"></div>
-            <section class="matchup-section" aria-label="Steelers fixture">
-              <div class="section-heading">
-                <h2>FEATURED MATCHUP</h2>
-                <span id="fixture-context">CURRENT SEASON</span>
-              </div>
-              <div id="featured-matchup"></div>
-            </section>
-            <div class="data-status" id="data-status"><span>Loading verified data…</span><button data-sources>Sources</button></div>
+            <div id="panel-players" role="tabpanel" aria-labelledby="tab-players" hidden><div id="players-leaders" class="leader-grid nfl-leader-stack"></div></div>
+            <div id="panel-recap" class="recap-panel nfl-framed nfl-motion-zone" role="tabpanel" aria-labelledby="tab-recap" hidden><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><span class="eyebrow">WEEKLY RESEARCH</span><h2 id="recap-title">Verified weekly recap</h2><div id="recap-content"></div></div>
+            <div class="week-row nfl-week-shortcuts" role="group" aria-label="Week selection" hidden></div>
+            <div id="nfl-inline-preview" class="nfl-inline-preview" tabindex="-1" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+            <p id="nfl-data-context" class="nfl-dataset-note"></p>
           </div>
         </div>
-        <nav class="bottom-nav" aria-label="Main navigation">
-          <button data-open="home" data-nav="home">
-            <svg class="icon" aria-hidden="true">
-              <use href="assets/icons.svg#home"></use></svg
-            ><span>Home</span>
-          </button>
-          <button data-open="nfl" data-nav="nfl">
-            <svg class="icon" aria-hidden="true">
-              <use href="assets/icons.svg#teams"></use></svg
-            ><span>Teams</span>
-          </button>
-          <button data-shortcut="matchups">
-            <svg class="icon" aria-hidden="true">
-              <use href="assets/icons.svg#matchups"></use></svg
-            ><span>Matchups</span>
-          </button>
-          <button data-shortcut="insights">
-            <svg class="icon" aria-hidden="true">
-              <use href="assets/icons.svg#insights"></use></svg
-            ><span>Insights</span>
-          </button>
-          <button data-more>
-            <svg class="icon" aria-hidden="true">
-              <use href="assets/icons.svg#more"></use></svg
-            ><span>More</span>
-          </button>
+        <nav class="bottom-nav nfl-framed" aria-label="NFL navigation"><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span>
+          <button data-open="home" data-nav="home"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg><span>Home</span></button>
+          <button data-nfl-action="teams"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#teams"></use></svg><span>Teams</span></button>
+          <button data-nfl-action="matchups"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#matchups"></use></svg><span>Matchups</span></button>
+          <button data-nfl-action="insights"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#insights"></use></svg><span>Insights</span></button>
+          <button data-nfl-action="more"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#more"></use></svg><span>More</span></button>
         </nav>
+        <footer class="nfl-source-footer"><div class="data-status" id="data-status"><span>Loading verified data…</span><button data-sources>Sources</button></div></footer>
       </section>
       <section
         class="page"
