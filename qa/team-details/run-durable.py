@@ -55,6 +55,19 @@ def main():
                     print(f"QA heartbeat {heartbeat['elapsedSeconds']}s: " + " | ".join(lines[-2:]), flush=True)
             if receipt["status"] == "running":
                 receipt.update(status="passed-process" if child.returncode == 0 else "failed-process", exitCode=child.returncode)
+                results_path = output / "results.json"
+                try:
+                    results = json.loads(results_path.read_text())
+                    receipt["qaReportStatus"] = results.get("status")
+                    receipt["qaReportCompletedAt"] = results.get("completedAt")
+                    if not results.get("completedAt"):
+                        receipt.update(status="incomplete-not-accepted", qaExitCode=1)
+                    elif results.get("status") not in ["passed", "captured-not-accepted"]:
+                        receipt.update(status="failed-qa", qaExitCode=1)
+                    elif child.returncode == 0:
+                        receipt.update(status="passed-qa" if results["status"] == "passed" else "captured-not-accepted", qaExitCode=0)
+                except (OSError, ValueError) as error:
+                    receipt.update(status="incomplete-not-accepted", qaExitCode=1, qaReportError=str(error))
         except BaseException as error:
             receipt.update(status="interrupted-incomplete", error=str(error), exitCode=1)
             if child is not None and child.poll() is None:
@@ -68,7 +81,7 @@ def main():
             receipt.update(completedAt=utc(), elapsedSeconds=round(time.monotonic() - started, 2))
             (logs / "exit.json").write_text(json.dumps(receipt, indent=2) + "\n")
             print(json.dumps(receipt), flush=True)
-    return receipt["exitCode"]
+    return receipt.get("qaExitCode", receipt["exitCode"])
 
 
 if __name__ == "__main__":

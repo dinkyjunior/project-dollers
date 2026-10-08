@@ -200,8 +200,14 @@
         const response = await fetch('assets/data/team-details.json',{cache:'no-cache',signal:controller.signal}); if (!response.ok) throw new Error(`Verified team feed returned HTTP ${response.status}`);
         const value = await response.json(); if (value.schemaVersion !== 1 || !value.teams?.DAL?.games || !Number.isFinite(Date.parse(value.retrievedAt)) || !value.sources?.length) throw new Error('Verified team dataset is invalid');
         if (dataset && Date.parse(value.retrievedAt) < Date.parse(dataset.retrievedAt)) throw new Error('Older team snapshot rejected; preceding verified snapshot retained');
-        dataset = value; error = null; document.documentElement.dataset.teamDataReady = 'true';
-        if (active()) { render(); const dialog = $('team-details-dialog'); if (dialog.open) show(dialog.dataset.view,dialog.dataset.game); } document.dispatchEvent(new CustomEvent('pd:team-data-ready'));
+        const changed = !dataset || JSON.stringify(dataset) !== JSON.stringify(value), recovered = error !== null;
+        if (changed) dataset = value;
+        error = null; document.documentElement.dataset.teamDataReady = 'true';
+        // A successful check of the same snapshot keeps live controls and their
+        // animation clocks intact. Full-content comparison still applies source
+        // corrections that share a retrieval timestamp; recovery clears errors.
+        if (active() && (changed || recovered)) { render(); const dialog = $('team-details-dialog'); if (dialog.open) show(dialog.dataset.view,dialog.dataset.game); }
+        document.dispatchEvent(new CustomEvent('pd:team-data-ready',{detail:{changed,recovered,checkedAt:new Date().toISOString()}}));
       } catch (err) {
         error = `${dataset ? 'Retained preceding verified data. ' : ''}${err.name === 'AbortError' ? 'Team source request timed out.' : err.message}`;
         document.documentElement.dataset.teamDataReady = dataset ? 'true' : 'error'; if (active()) render();
