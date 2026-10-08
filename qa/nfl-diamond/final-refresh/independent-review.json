@@ -1,0 +1,165 @@
+{
+  "kind": "Independent final automatic refresh review after tested hosted release",
+  "status": "accepted metadata-only refresh with two explicitly recorded metadata key removals",
+  "reviewedAt": "2026-10-08T02:24:17.522905+00:00",
+  "beforeTestedApplicationCommit": "b08fd0b2a8fbd4c0788ac495ed71be5801485585",
+  "incomingAutomaticRefreshCommit": "a6d26f576203fe538d9fc951c57006ad17c94850",
+  "currentRebasedHead": "170bd51e9ad8154599b95b80648dd0d49c695788",
+  "runtimeManifest": {
+    "path": "/workspace/recovery-qa/nfl-diamond/independent/frozen-runtime-final-refresh.json",
+    "sha256": "ce9c1e6263faa5fa7432b4fcbe4b60c01ed35f715efc8d49d1661f005d72c665",
+    "fileCount": 203
+  },
+  "changedRuntimeFiles": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "preservedNonDataRuntimeFiles": 200,
+  "allCurrentRuntimeHashesComputed": true,
+  "allThreeCurrentDataFilesByteExactIncomingRefresh": true,
+  "files": [
+    {
+      "file": "assets/data/current.json",
+      "beforeSha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+      "incomingAndCurrentSha256": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+      "currentEqualsIncomingBytes": true,
+      "recursiveDifferences": 363,
+      "metadataValueDifferences": 362,
+      "metadataKeySetChanges": 1,
+      "otherFactualTypeKeyOrListChanges": 0,
+      "normalizedFactsEqual": true,
+      "normalizedFactsSha256Before": "68b25477085fc3313a2a78c5fc2b34cc52ecca809de2d9cc2c7db362b3f88a46",
+      "normalizedFactsSha256Current": "68b25477085fc3313a2a78c5fc2b34cc52ecca809de2d9cc2c7db362b3f88a46",
+      "classifiedDifferences": {
+        "path": "/workspace/recovery-qa/nfl-diamond/independent/final-refresh-current-classified-differences.json",
+        "sha256": "636d9921e487fa30605f80145a39ebe9f9786e81e4930839d3efe7eb32340623"
+      }
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "beforeSha256": "7ecf6e7debee5d2926185422d528ffa8805e0913e14e06eadc81104c4e295aea",
+      "incomingAndCurrentSha256": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+      "currentEqualsIncomingBytes": true,
+      "recursiveDifferences": 1415,
+      "metadataValueDifferences": 1415,
+      "metadataKeySetChanges": 0,
+      "otherFactualTypeKeyOrListChanges": 0,
+      "normalizedFactsEqual": true,
+      "normalizedFactsSha256Before": "c7df61ed74345d60405a270aa68aa58570613c28a5a49f7ffd2ff43bbd4f99a6",
+      "normalizedFactsSha256Current": "c7df61ed74345d60405a270aa68aa58570613c28a5a49f7ffd2ff43bbd4f99a6",
+      "classifiedDifferences": {
+        "path": "/workspace/recovery-qa/nfl-diamond/independent/final-refresh-player-history-classified-differences.json",
+        "sha256": "b6d1d8eb491ad1c895753254b7092be75ebf58ae7d647a3aa53a013bf7bf120a"
+      }
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "beforeSha256": "7777dbc4c9af769a28d918ff6927a11d4bbb627552046ea4ef6b4ed21a79eb1b",
+      "incomingAndCurrentSha256": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+      "currentEqualsIncomingBytes": true,
+      "recursiveDifferences": 30,
+      "metadataValueDifferences": 29,
+      "metadataKeySetChanges": 1,
+      "otherFactualTypeKeyOrListChanges": 0,
+      "normalizedFactsEqual": true,
+      "normalizedFactsSha256Before": "3f77b1ca9d2dc3d589d446e1ba961f6d1cd03b575b29890db4fc9040cfb4aa5d",
+      "normalizedFactsSha256Current": "3f77b1ca9d2dc3d589d446e1ba961f6d1cd03b575b29890db4fc9040cfb4aa5d",
+      "classifiedDifferences": {
+        "path": "/workspace/recovery-qa/nfl-diamond/independent/final-refresh-provenance-classified-differences.json",
+        "sha256": "845a78b2affeb4d2d3d37b3045fdbf8eb8b39a746cee42152323f9a2968924f9"
+      }
+    }
+  ],
+  "metadataRecursiveDifferenceCount": 1808,
+  "metadataValueDifferenceCount": 1806,
+  "metadataKeySetChanges": [
+    {
+      "file": "assets/data/current.json",
+      "path": [
+        "provenance",
+        "weeklyLeaders"
+      ],
+      "kind": "keyset",
+      "beforeKeys": [
+        "enrichedAt",
+        "limit",
+        "note",
+        "positions",
+        "season",
+        "sourceIds",
+        "status",
+        "throughWeek"
+      ],
+      "afterKeys": [
+        "limit",
+        "note",
+        "positions",
+        "season",
+        "sourceIds",
+        "status",
+        "throughWeek"
+      ],
+      "removed": {
+        "enrichedAt": "2026-10-08T00:40:59Z"
+      },
+      "added": {},
+      "classification": "metadata key removal"
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "path": [
+        "datasets",
+        "weeklyLeaders"
+      ],
+      "kind": "keyset",
+      "beforeKeys": [
+        "enrichedAt",
+        "limit",
+        "note",
+        "positions",
+        "season",
+        "sourceIds",
+        "status",
+        "throughWeek"
+      ],
+      "afterKeys": [
+        "limit",
+        "note",
+        "positions",
+        "season",
+        "sourceIds",
+        "status",
+        "throughWeek"
+      ],
+      "removed": {
+        "enrichedAt": "2026-10-08T00:40:59Z"
+      },
+      "added": {},
+      "classification": "metadata key removal"
+    }
+  ],
+  "otherFactualTypeKeyOrListChanges": 0,
+  "all816LeaderRowsPreservedExactly": true,
+  "retainedRosterPlayers": 79,
+  "retainedHistoryGames": 1272,
+  "sourceSnapshotRetrievedAt": "2026-10-08T02:19:37Z",
+  "canonicalCurrentChecksumVerified": true,
+  "canonicalCurrentChecksum": "949ef437014f2d3bffe14ce8ead449da739790a15f096702eb1c2fb31dfa1eea",
+  "historyChecksumVerified": true,
+  "publishedDataIntent": "Retain the newest official automatic snapshot metadata without discarding incoming changes or the approved 16-row QB/RB/WR data pipeline.",
+  "priorHostedAcceptancePreserved": {
+    "path": "/workspace/recovery-qa/nfl-diamond/independent/hosted-visual-review.json",
+    "sha256": "68a0db61d40973c48de979af04b404e0e67f2e9a4960b815a283393b5b977e23",
+    "applicationCommit": "b08fd0b2a8fbd4c0788ac495ed71be5801485585",
+    "runtimeManifestSha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1"
+  },
+  "classificationMethod": "Every recursive value/type/key/list difference is recorded. Only explicit complete path whitelists classify metadata. The two removal paths are individually recorded with their original values; every other value, type, key and list is compared after excluding only declared metadata.",
+  "qualifications": [
+    "There ARE two metadata key-set changes: the historical one-time enrichedAt key is removed from current.provenance.weeklyLeaders and provenance.datasets.weeklyLeaders by the new scheduled refresh pipeline. No statistical, source-selection, season/week, record, game, leader, roster or UI field changes remain.",
+    "Raw source-response SHA/ETag changes are recorded without inferring why external bytes changed or claiming facts outside these three retained JSON files are unchanged.",
+    "Prior full hosted visual/functionality acceptance is preserved for its exact b08/eeb source. The new publication requires fresh actual-hosted targeted data-refresh/source/geometry proof; the old receipt is not relabeled as testing new bytes."
+  ],
+  "reviewerDidNotMutateRuntime": true,
+  "noNetworkRequestsOrRebasePerformedByReviewer": true
+}

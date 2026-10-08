@@ -75,6 +75,43 @@ def main():
     assert hosted_mobile["status"] == "passed"
     assert hosted_mobile["allServedRuntimeFilesHTTP200"] is True
     assert hosted_mobile["allServedRuntimeBytesMatchReviewedSource"] is True
+    # Keep complete application/visual receipts bound to their original snapshot.
+    # A later automated source refresh gets its own explicit difference proof and
+    # targeted native checks rather than relabelling the original full suites.
+    reviewed_manifest = dict(manifest)
+    manifest = read("final-runtime-manifest.json")
+    changed_latest = {name for name in manifest if manifest[name] != reviewed_manifest[name]}
+    assert changed_latest == {"assets/data/current.json", "assets/data/player-history.json", "assets/data/provenance.json"}
+    refresh = read("final-refresh/source-proof.json")
+    assert refresh["status"] == "passed"
+    assert refresh["previousRuntimeManifest"] == reviewed_manifest
+    assert refresh["currentRuntimeManifest"] == manifest
+    assert refresh["factualOrStructuralDifferences"] == []
+    assert refresh["metadataValueChanges"] == 1806
+    assert refresh["removedMetadataKeys"] == [
+        "assets/data/current.json:/provenance/weeklyLeaders/enrichedAt",
+        "assets/data/provenance.json:/datasets/weeklyLeaders/enrichedAt"]
+    assert refresh["unchangedNonDataRuntimeFiles"] == 200
+    assert refresh["allRetainedLeaderRowsExact"] == 816
+    for name in ["final-refresh/local-chromium.json", "final-refresh/local-webkit.json",
+                 "final-refresh/hosted-webkit.json"]:
+        report = read(name)
+        assert report["status"] == "passed", name
+        assert report["source"]["runtimeFiles"] == manifest, name
+        assert report["unchangedDuringQA"] is True, name
+        assert len(report["results"]) == 2, name
+        for case in report["results"]:
+            assert case["status"] == "passed", name
+            assert case["manualRefresh"]["httpStatus"] == 200, name
+            assert case["manualRefresh"]["sha256"] == manifest["assets/data/current.json"], name
+    latest_hosted = read("final-refresh/hosted-webkit.json")
+    assert latest_hosted["qualification"]["strictTLS"] is True
+    served = latest_hosted["servedRuntime"]
+    assert len(served) == 203
+    assert {entry["file"] for entry in served} == set(manifest)
+    for entry in served:
+        assert entry["status"] == 200
+        assert entry["sha256"] == manifest[entry["file"]]
     for name, expected in manifest.items():
         assert digest((ROOT / name).read_bytes()) == expected, name
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

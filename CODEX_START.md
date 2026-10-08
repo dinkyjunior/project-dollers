@@ -2,6 +2,8 @@
 
 ## Current NFL dashboard — 8 October 2026
 
+The mandatory final fetch also preserved automatic source update `a6d26f5`, retrieved `2026-10-08T02:19:37Z`. Its 1,806 metadata value changes and two removed obsolete leader-enrichment timestamp keys are explicitly audited; all statistics, 816 leader rows and 200 nondata runtime files remain unchanged. Original full hosted evidence retains its original source identity; separate final-refresh checks verify the newer snapshot.
+
 Application `b08fd0b2a8fbd4c0788ac495ed71be5801485585` is deployed and verified by [Pages run 37715762405](https://github.com/dinkyjunior/project-dollers/actions/runs/37715762405). All six specialists accepted the same source. Actual-hosted WebKit passed both requested phones and desktop, with all 203 runtime files HTTP 200/exact hashes, zero browser/network errors, genuine manual refresh and independent visual acceptance. Open [the live NFL screen](https://dinkyjunior.github.io/project-dollers/#nfl), [hosted screenshots](qa/nfl-diamond/live-captures/index.html) and [the release record](qa/nfl-diamond/RELEASE.md). Evidence-only publication preserves the runtime; its final exact-publication receipt is saved outside Git.
 
 The user's new tall NFL chat render is the Page 2 authority. The NFL dashboard now uses the same compact enclosure as the locked Home screen, with internal scrolling, faceted cyan/gold hardware, local helmet artwork and separate QB/RB/WR tables. Conference, week, division, form and sort controls work. Destination buttons respond inline on NFL; the existing Steelers screen remains available by direct URL. Do not reconnect those destinations or add Page 4 without a new instruction.

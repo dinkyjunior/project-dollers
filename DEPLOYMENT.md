@@ -2,6 +2,8 @@
 
 ## Current NFL dashboard — 8 October 2026
 
+The mandatory final fetch also preserved automatic source update `a6d26f5`, retrieved `2026-10-08T02:19:37Z`. Its 1,806 metadata value changes and two removed obsolete leader-enrichment timestamp keys are explicitly audited; all statistics, 816 leader rows and 200 nondata runtime files remain unchanged. Original full hosted evidence retains its original source identity; separate final-refresh checks verify the newer snapshot.
+
 Application `b08fd0b2a8fbd4c0788ac495ed71be5801485585` is deployed and verified by [Pages run 37715762405](https://github.com/dinkyjunior/project-dollers/actions/runs/37715762405). All six specialists accepted the same source. Actual-hosted WebKit passed both requested phones and desktop, with all 203 runtime files HTTP 200/exact hashes, zero browser/network errors, genuine manual refresh and independent visual acceptance. Open [the live NFL screen](https://dinkyjunior.github.io/project-dollers/#nfl), [hosted screenshots](qa/nfl-diamond/live-captures/index.html) and [the release record](qa/nfl-diamond/RELEASE.md). Evidence-only publication preserves the runtime; its final exact-publication receipt is saved outside Git.
 
 The user authorized this NFL build and the existing publication workflow after all visual and functional checks. Read `qa/nfl-diamond/RELEASE.md` for current status. The dashboard's future destination buttons deliberately stay on NFL, and Home/Steelers code remains protected. Publish with ordinary pushes after fetching/rebasing both branches. Verify the exact successful Pages SHA/jobs and genuine hosted mobile rendering, asset/data hashes, navigation, motion and native refresh before declaring completion.
