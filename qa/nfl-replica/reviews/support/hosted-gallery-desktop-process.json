@@ -1,0 +1,102 @@
+{
+  "status": "completed",
+  "startedAt": "2026-10-08T05:11:56.830583+00:00",
+  "command": [
+    "node",
+    "/workspace/recovery-qa/nfl-replica/mobile/hosted-gallery.cjs",
+    "--base",
+    "https://dinkyjunior.github.io/project-dollers/",
+    "--manifest",
+    "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+    "--freeze",
+    "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+    "--output",
+    "/workspace/project-dollers/qa/nfl-replica/hosted-gallery-desktop"
+  ],
+  "expectedRuntimeFreezeSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "sourceManifest": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "sourceRepository": "/workspace/project-dollers",
+  "runtimeFileCount": 216,
+  "watchdogSeconds": 300,
+  "qualification": "Durable real child-process stdout/exit record; no result or source substitution. Original runner report remains authoritative.",
+  "progress": [
+    {
+      "at": "2026-10-08T05:11:59.867324+00:00",
+      "line": "GALLERY native image 1/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:11:59.929554+00:00",
+      "line": "GALLERY native image 2/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:11:59.996910+00:00",
+      "line": "GALLERY native image 3/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.179912+00:00",
+      "line": "GALLERY native image 4/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.241426+00:00",
+      "line": "GALLERY native image 5/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.351902+00:00",
+      "line": "GALLERY native image 6/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.422027+00:00",
+      "line": "GALLERY native image 7/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.511195+00:00",
+      "line": "GALLERY native image 8/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.660724+00:00",
+      "line": "GALLERY native image 9/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.761901+00:00",
+      "line": "GALLERY native image 10/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.801507+00:00",
+      "line": "GALLERY native image 11/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:00.920561+00:00",
+      "line": "GALLERY native image 12/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:01.028285+00:00",
+      "line": "GALLERY native image 13/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:01.146715+00:00",
+      "line": "GALLERY native image 14/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:01.215208+00:00",
+      "line": "GALLERY native image 15/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:01.261543+00:00",
+      "line": "GALLERY native image 16/16 decoded"
+    },
+    {
+      "at": "2026-10-08T05:12:02.035541+00:00",
+      "line": "PASSED gallery desktop:16 native decoded/original HTTP200 images exact"
+    },
+    {
+      "at": "2026-10-08T05:12:02.091324+00:00",
+      "line": "Evidence /workspace/project-dollers/qa/nfl-replica/hosted-gallery-desktop/results.json"
+    }
+  ],
+  "pid": 188053,
+  "exitCode": 0,
+  "completedAt": "2026-10-08T05:12:02.100541+00:00",
+  "elapsedSeconds": 5.27,
+  "rawManifestUnchanged": true,
+  "runtimeUnchanged": true
+}

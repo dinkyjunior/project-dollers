@@ -53,6 +53,18 @@ def main():
         assert row["decision"] == "accepted"
         assert sha((ROOT / row["evidence"]).read_bytes()) == row["evidenceSha256"]
     assert integration["unchangedOtherRuntimeFiles"] == len(manifest) - len(changed)
+    hosted_review = json.loads((ROOT / PREFIX / "hosted-review.json").read_bytes())
+    assert hosted_review["status"] == "all_six_hosted_visual_reviews_accepted"
+    assert hosted_review["runtimeManifestSha256"] == sha(manifest_file.read_bytes())
+    assert len(hosted_review["reviewers"]) == 6
+    for row in hosted_review["reviewers"]:
+        assert row["decision"] == "accepted"
+        assert sha((ROOT / row["evidence"]).read_bytes()) == row["evidenceSha256"]
+    hosted = json.loads((ROOT / PREFIX / "hosted-verification.json").read_bytes())
+    assert hosted["status"] == "passed" and hosted["runtimeManifestSha256"] == sha(manifest_file.read_bytes())
+    for row in hosted["checks"]:
+        assert row["status"] == "passed"
+        assert sha((ROOT / row["file"]).read_bytes()) == row["sha256"]
     for file, expected in manifest.items():
         assert sha((ROOT / file).read_bytes()) == expected, file
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()

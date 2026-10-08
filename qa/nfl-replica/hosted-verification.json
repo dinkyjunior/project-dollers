@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-08T05:16:23.129549+00:00",
+  "applicationHead": "5e6c21fca12cd8693c163cfcd66b1f3ad86c2c9b",
+  "applicationPagesRun": 37729699058,
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeFiles": 216,
+  "checks": [
+    {
+      "file": "qa/nfl-replica/hosted-webkit-mobile/results.json",
+      "sha256": "7864668d598a5bba926c6164bcce28f3fe29a45c2d4f0c5107ef5eaa32531f4d",
+      "status": "passed",
+      "completedAt": "2026-10-08T05:06:43.515Z",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/hosted-webkit-desktop/results.json",
+      "sha256": "72c88887e973e667d0acea1c922277c6ceb9010e2426585ee5feed64e4b03808",
+      "status": "passed",
+      "completedAt": "2026-10-08T05:11:32.896Z",
+      "cases": 1
+    },
+    {
+      "file": "qa/nfl-replica/hosted-manual-refresh/results.json",
+      "sha256": "37e3a6543035bb78f87a7d39f8eb7139e5bfabdca4bbfb682777b43b87857010",
+      "status": "passed",
+      "completedAt": "2026-10-08T05:14:48.028Z",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/hosted-gallery-desktop/results.json",
+      "sha256": "823bb297a5f4ba6508e5cb1ae3504940eecc0e341136380b11e6bbdd87e7bf4b",
+      "status": "passed",
+      "originalImages": 16
+    }
+  ],
+  "allSixHostedVisualReviews": {
+    "file": "qa/nfl-replica/hosted-review.json",
+    "sha256": "b3a810c694950a02017bc018d7ef49f0f8d004b89f228ef16cb4751cd84fa464"
+  },
+  "qualification": "Actual strict-TLS WebKit hosted browser checks pass, without substituted data/site responses. The stopped hosted Chromium proxy-certificate failure is retained and is not counted as successful hosted coverage. Physical iPhone hardware/Safari controls/FPS and registered approved-reference pixel identity are unmeasured. Evidence-only follow-up publication retains all 216 tested runtime bytes and separately verifies its exact public file hashes and successful Pages head."
+}

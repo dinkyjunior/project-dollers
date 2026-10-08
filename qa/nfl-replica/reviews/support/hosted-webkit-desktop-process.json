@@ -1,0 +1,46 @@
+{
+  "status": "completed",
+  "startedAt": "2026-10-08T05:07:49.402794+00:00",
+  "command": [
+    "node",
+    "qa/nfl-dashboard/run.cjs",
+    "--engine",
+    "webkit",
+    "--desktop-only",
+    "--base",
+    "https://dinkyjunior.github.io/project-dollers/",
+    "--output",
+    "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-desktop"
+  ],
+  "expectedRuntimeFreezeSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "sourceManifest": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "sourceRepository": "/workspace/project-dollers",
+  "runtimeFileCount": 216,
+  "watchdogSeconds": 600,
+  "qualification": "Durable real child-process stdout/exit record; no result or source substitution. Original runner report remains authoritative.",
+  "progress": [
+    {
+      "at": "2026-10-08T05:09:32.653549+00:00",
+      "line": "CHECK controls webkit 1440"
+    },
+    {
+      "at": "2026-10-08T05:11:14.965610+00:00",
+      "line": "CHECK controls passed webkit 1440"
+    },
+    {
+      "at": "2026-10-08T05:11:24.873050+00:00",
+      "line": "PASSED webkit 1440x1000"
+    },
+    {
+      "at": "2026-10-08T05:11:32.898425+00:00",
+      "line": "Evidence /workspace/project-dollers/qa/nfl-replica/hosted-webkit-desktop/results.json"
+    }
+  ],
+  "pid": 187692,
+  "lastHeartbeatAt": "2026-10-08T05:11:02.729440+00:00",
+  "exitCode": 0,
+  "completedAt": "2026-10-08T05:11:32.919605+00:00",
+  "elapsedSeconds": 223.52,
+  "rawManifestUnchanged": true,
+  "runtimeUnchanged": true
+}

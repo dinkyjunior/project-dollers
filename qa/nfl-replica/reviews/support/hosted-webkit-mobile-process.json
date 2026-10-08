@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "startedAt": "2026-10-08T04:56:59.378893+00:00",
+  "command": [
+    "node",
+    "qa/nfl-dashboard/run.cjs",
+    "--engine",
+    "webkit",
+    "--mobile-only",
+    "--base",
+    "https://dinkyjunior.github.io/project-dollers/",
+    "--output",
+    "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile"
+  ],
+  "expectedRuntimeFreezeSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "sourceManifest": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "sourceRepository": "/workspace/project-dollers",
+  "runtimeFileCount": 216,
+  "watchdogSeconds": 1200,
+  "qualification": "Durable real child-process stdout/exit record; no result or source substitution. Original runner report remains authoritative.",
+  "progress": [
+    {
+      "at": "2026-10-08T04:58:25.328003+00:00",
+      "line": "CHECK controls webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:00:21.478043+00:00",
+      "line": "CHECK controls passed webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:01:27.454633+00:00",
+      "line": "CHECK motion webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:01:27.455062+00:00",
+      "line": "CHECK motion passed webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:01:32.534296+00:00",
+      "line": "CHECK Page3 webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:01:50.994241+00:00",
+      "line": "CHECK Page3 passed webkit 393"
+    },
+    {
+      "at": "2026-10-08T05:01:56.146369+00:00",
+      "line": "PASSED webkit 393x852"
+    },
+    {
+      "at": "2026-10-08T05:03:25.572881+00:00",
+      "line": "CHECK controls webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:04:53.442805+00:00",
+      "line": "CHECK controls passed webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:06:03.039642+00:00",
+      "line": "CHECK motion webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:06:03.039954+00:00",
+      "line": "CHECK motion passed webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:06:07.444141+00:00",
+      "line": "CHECK Page3 webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:06:28.249373+00:00",
+      "line": "CHECK Page3 passed webkit 430"
+    },
+    {
+      "at": "2026-10-08T05:06:34.554452+00:00",
+      "line": "PASSED webkit 430x896"
+    },
+    {
+      "at": "2026-10-08T05:06:43.525121+00:00",
+      "line": "Evidence /workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/results.json"
+    }
+  ],
+  "pid": 186192,
+  "lastHeartbeatAt": "2026-10-08T05:06:22.457689+00:00",
+  "exitCode": 0,
+  "completedAt": "2026-10-08T05:06:43.548262+00:00",
+  "elapsedSeconds": 584.17,
+  "rawManifestUnchanged": true,
+  "runtimeUnchanged": true
+}

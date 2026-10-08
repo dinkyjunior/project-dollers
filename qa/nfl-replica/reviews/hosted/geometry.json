@@ -1,0 +1,248 @@
+{
+  "decision": "accepted",
+  "acceptanceScope": "visual-only",
+  "reviewer": "/root/nfl_replica_geometry",
+  "reviewedAt": "2026-10-08T05:06:33.612669+00:00",
+  "liveBase": "https://dinkyjunior.github.io/project-dollers/",
+  "actualHostedBrowser": "Playwright WebKit/WPE, DPR2 phone contexts owned by mobile reviewer",
+  "runtimeManifestFile": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeManifestSha256Definition": "SHA256 of exact raw published manifest file bytes.",
+  "runtimeFileCount": 216,
+  "actual216RuntimeFilesMatchPublishedManifest": true,
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "unchangedNonDataFiles": 213,
+  "exactChangedDataFiles": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "applicationReleaseAudit": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/publication/application-release.json",
+    "sha256": "010caf7531498b9b8179b059df90c5f07d604b004b21dcef4f48e41b75e50b31",
+    "status": "passed",
+    "strictTLS": true,
+    "fileCount": 553,
+    "all216HostedRuntimeSha256MatchPublishedSource": true,
+    "productionCommit": "5e6c21fca12cd8693c163cfcd66b1f3ad86c2c9b",
+    "matchingRemoteRefs": {
+      "main": "5e6c21fca12cd8693c163cfcd66b1f3ad86c2c9b",
+      "codex-rebuild": "5e6c21fca12cd8693c163cfcd66b1f3ad86c2c9b"
+    },
+    "qualification": "Read and independently checked the complete recorded HTTP200/path/hash evidence. This agent did not rerun or substitute that HTTP audit."
+  },
+  "screenshots": [
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-top.png",
+      "sha256": "a3186acb2abc6633ec4e2d26c05456ae0b50c3cd3df7ed8be934d8a4b05ee956",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "pixels": [
+        786,
+        1704
+      ],
+      "bytes": 1154125,
+      "kind": "top",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": true,
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+        "sha256": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Untouched native phone viewport at natural animation phase."
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-full-content.png",
+      "sha256": "283e21dacfc16c63025822caf58ce3e6719d4146648968574db2d6ed22dc1162",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "pixels": [
+        786,
+        2408
+      ],
+      "bytes": 1451881,
+      "kind": "full-content",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": true,
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+        "sha256": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Qualified isolated actual hosted app page exposure; no substitute art/data/control mocks; untouched top and scroll-2 originals establish phone geometry."
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-scroll-2.png",
+      "sha256": "ead73ded6aefb6d27462662c3b469d41efe88e978e8b65ea2e9a06df4375705f",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "pixels": [
+        786,
+        1704
+      ],
+      "bytes": 914323,
+      "kind": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": true,
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+        "sha256": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Untouched native phone viewport at natural animation phase."
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-top.png",
+      "sha256": "5c97be8c8103245ad69c93bcc650f1140b3663eb9ebaeef196c78eb83407d0d2",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "pixels": [
+        860,
+        1792
+      ],
+      "bytes": 1289946,
+      "kind": "top",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": "Pending owner case aggregation; original PNG independently inspected and hashed.",
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+        "sha256": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Untouched native phone viewport at natural animation phase."
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-full-content.png",
+      "sha256": "8ed300647ddf7290da4ca2ba04620e7533e04488cf55307f0506808a109141a1",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "pixels": [
+        860,
+        2584
+      ],
+      "bytes": 1631055,
+      "kind": "full-content",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": "Pending owner case aggregation; original PNG independently inspected and hashed.",
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+        "sha256": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Qualified isolated actual hosted app page exposure; no substitute art/data/control mocks; untouched top and scroll-2 originals establish phone geometry."
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-scroll-2.png",
+      "sha256": "f71eebc69560236177da9f26d97b4e2ae38a716fff5082d4ad985322131c17b7",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "pixels": [
+        860,
+        1792
+      ],
+      "bytes": 1043432,
+      "kind": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "hostedCaptureHashMatchedCompletedCaseMetadata": "Pending owner case aggregation; original PNG independently inspected and hashed.",
+      "localOriginalComparison": {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+        "sha256": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f",
+        "sameDimensions": true,
+        "sameGeometryAndFactualContent": "Personally compared against previously inspected local native original. Runtime metadata-only integration leaves all layout and factual values unchanged; footer retrieval is newer and natural light phases differ."
+      },
+      "fullSheetQualification": "Untouched native phone viewport at natural animation phase."
+    }
+  ],
+  "personallyInspectedOriginalCount": 6,
+  "approvedSource": "Latest approved tall NFL dashboard chat attachment; compared manually against real hosted originals and accepted local common-WebKit originals.",
+  "sectionNotes": [
+    {
+      "section": "Phone enclosure and masthead",
+      "finding": "Both hosted phone frames remain the accepted Home-sized enclosure. Diamond/gold branding, compact header proportion and local blue stadium are sharp, with no restored football/green repeats outside the featured pitch."
+    },
+    {
+      "section": "NFL medallion and week",
+      "finding": "Layered metal/cyan vector ring encloses an enlarged genuine shield. Native week selector stays contained and aligned; verified context and broad NFL heading remain legible."
+    },
+    {
+      "section": "Tabs, conference and filter controls",
+      "finding": "Three evenly proportioned research tabs, framed conference row and compact chamfered selectors match accepted local bounds and the source hierarchy. No clipping or extra native select height is visible."
+    },
+    {
+      "section": "Standings and summary",
+      "finding": "Nine aligned columns remain readable with five visible source-backed rows and truthful Pittsburgh rank 9. Team details stays one line, form chips stay inside the right column, and the four-crystal View 16 action preserves clear label/arrow space."
+    },
+    {
+      "section": "Featured matchup",
+      "finding": "Native undistorted upright helmets with genuine separate badges, gold/ice labels, metallic VS and wide central pitch match accepted local geometry. Verified venue/time and all three angular actions are readable in untouched native bottom PNGs."
+    },
+    {
+      "section": "Leader cards and bottom",
+      "finding": "All fifteen leader rows including final rank/TD values are visibly complete in the actual hosted bottom originals. Three broad heading blocks, aligned statistical columns, continuous cut-corner rails and fixed nav/footer retain accepted density."
+    },
+    {
+      "section": "Live metadata change",
+      "finding": "Footer reads Verified snapshot \u00b7 Oct 8, 3:21 PM GMT+11, consistent with incoming retrieval 2026-10-08T04:21:34Z. Local original footer was 1:19 PM. No factual table or equipment/layout differences were introduced by integration."
+    },
+    {
+      "section": "Tall reference proportions",
+      "finding": "Live WebKit full sheets are 786\u00d72408 and 860\u00d72584, exactly the accepted local sheet dimensions, with height/width 3.064 and 3.005 against attached source 2.999. Both material density and top-to-bottom hierarchy remain improved over the rejected ~3.28 baseline."
+    }
+  ],
+  "originalVisualReceipt": {
+    "file": "/workspace/recovery-qa/nfl-replica/geometry/final-review.json",
+    "sha256": "9be77ac6708f8c3205bc7c36c0b1981ef5e08e812e175df0e19d43a11bbbeab4",
+    "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "originalEvidencePreserved": true
+  },
+  "supplementalIntegrationReceipt": {
+    "file": "/workspace/recovery-qa/nfl-replica/geometry/integration-review.json",
+    "sha256": "1fd4f00fd54ec4539b1700b213eb5da092012946a9fff6f75d953844f468abad",
+    "publishedRuntimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+    "zeroFactualOrStructuralChanges": true
+  },
+  "hostedMobileOwnerReportAtReview": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/hosted-webkit-mobile/results.json",
+    "sha256AtRead": "ec106b809478ad69f2f2d8c77b65c1600f487fae25a81e42bdc7655b0f1eceb3",
+    "statusAtRead": "running",
+    "completedCasesAtRead": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "status": "passed"
+      }
+    ],
+    "runtimeSourceMapMatchesPublishedManifest": true,
+    "qualification": "The mobile owner may still finalize later interaction/motion/Page3 and served-runtime aggregate checks. This visual-only gate does not declare the whole hosted suite complete."
+  },
+  "blockers": [],
+  "residualAndMeasurementLimits": [
+    "Approved attachment bytes remain unavailable for registered pixel equality; this is a human replica comparison with measured final dimensions, not exact-pixel identity.",
+    "Verified sports data deliberately differ from illustrative sample concept records and receiving leaders. Fine gear pose/source fonts are materially closer rather than identical raster pixels.",
+    "Full sheets are qualified isolated real-page exposures. Untouched native top/bottom PNGs establish actual phone behavior.",
+    "Playwright WebKit is not physical iPhone Safari hardware and no physical FPS claim is made.",
+    "This review accepts live visual presentation only; root and mobile owner own complete hosted interaction, source loading, errors and motion acceptance."
+  ],
+  "newBrowserRunByThisReviewer": false,
+  "runtimeWrites": false
+}

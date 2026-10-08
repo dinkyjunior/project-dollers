@@ -1,0 +1,52 @@
+{
+  "status": "all_six_hosted_visual_reviews_accepted",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeFiles": 216,
+  "reviewers": [
+    {
+      "name": "geometry",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/geometry.json",
+      "evidenceSha256": "737bd02ee23f082dc3fc59b09bf43a519b617c39897a61cc64ed2dc8ccb9d0e4"
+    },
+    {
+      "name": "chrome",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/chrome.json",
+      "evidenceSha256": "2b24819bfa30ce0ee96ef1b8f2b2f746c8c42460931c999bddeab9005fcbb59b"
+    },
+    {
+      "name": "assets",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/assets.json",
+      "evidenceSha256": "1ac2cf855f32838c53489bbe87dfac980be069579a8e5c4d156547226f94e462"
+    },
+    {
+      "name": "motion",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/motion.json",
+      "evidenceSha256": "40f4957efcd049a0812bcebe2775978fae6a68ba46d41f3e2ef16d60b510eaed"
+    },
+    {
+      "name": "controls",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/controls.json",
+      "evidenceSha256": "76d00eff55f625f46942262cbae14c25bd4f4782e69abaf4576d4085728a3fc1"
+    },
+    {
+      "name": "mobile",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/hosted/mobile.json",
+      "evidenceSha256": "ba9706eca58456618b38ca178c20a18cdb7d85ec210f6d0059a87c49b26e7813"
+    }
+  ],
+  "personallyInspectedCommonHostedOriginals": {
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-top.png": "a3186acb2abc6633ec4e2d26c05456ae0b50c3cd3df7ed8be934d8a4b05ee956",
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-full-content.png": "283e21dacfc16c63025822caf58ce3e6719d4146648968574db2d6ed22dc1162",
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-393x852-scroll-2.png": "ead73ded6aefb6d27462662c3b469d41efe88e978e8b65ea2e9a06df4375705f",
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-top.png": "5c97be8c8103245ad69c93bcc650f1140b3663eb9ebaeef196c78eb83407d0d2",
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-full-content.png": "8ed300647ddf7290da4ca2ba04620e7533e04488cf55307f0506808a109141a1",
+    "qa/nfl-replica/hosted-webkit-mobile/nfl-430x896-scroll-2.png": "f71eebc69560236177da9f26d97b4e2ae38a716fff5082d4ad985322131c17b7"
+  },
+  "qualification": "All six accepted the same genuine hosted WebKit mobile originals against the chat render and local acceptance. Full hosted functional/desktop/manual-refresh reports remain separate release gates."
+}
