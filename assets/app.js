@@ -45,6 +45,9 @@
     return `<p class="source-note">${esc(context || `${provenance?.season || data.season} · through Week ${provenance?.throughWeek ?? data.throughWeek}`)} · ${esc(names.join(', ') || 'nflverse')}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p>`;
   };
   function openPage(id, writeHash = true) {
+    const teamRoute = /^team\//i.test(id);
+    const requestedRoute = id;
+    if (teamRoute) id = 'team-details';
     if (!pages.some(page => page.dataset.page === id)) id = 'home';
     const changed = document.querySelector('.page.active')?.dataset.page !== id;
     pages.forEach(page => {
@@ -56,7 +59,9 @@
       if (button.dataset.nav === (id === 'steelers' ? 'nfl' : id)) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');
     });
-    if (writeHash && location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+    if (writeHash && location.hash !== `#${teamRoute ? requestedRoute : id}`) history.pushState(null, '', `#${teamRoute ? requestedRoute : id}`);
+    if (teamRoute) window.PDTeamDetails?.route(requestedRoute);
+    document.dispatchEvent(new CustomEvent('pd:route-change', {detail:{page:id}}));
   }
   function selectTab(type, value) {
     document.querySelectorAll(`[data-${type}-tab]`).forEach(tab => {
@@ -393,6 +398,19 @@
       document.documentElement.dataset.dataReady='error';
     }
   }
+  window.PDApp = {
+    openPage,
+    getContext: () => ({data,state,assets,esc,number,logo,teamName,date,time,timestamp}),
+    openLadder: (abbr, direct = false) => {
+      if (direct && data) {
+        state.conference = data.teams.find(team => team.abbr === abbr)?.conference || 'NFC';
+        state.nflExpandedTeam = abbr;
+      }
+      selectTab('nfl','ladder');
+      if (data) renderDashboard();
+      openPage('nfl');
+    }
+  };
   openPage(location.hash.slice(1),false);
   loadData();
 })();

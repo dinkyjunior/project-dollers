@@ -1,0 +1,95 @@
+/* Approved Home CTA refinement only. Native vector housing and gems retain
+   the fixed sport hues and the existing accessible button/hit area. */
+.page[data-page="home"] .home-entry {
+  border-radius: 0;
+  border-color: transparent;
+  border-image: url("team-details/home-control-nfl.svg") 18 fill / 8px / 0 stretch;
+  background: none;
+  padding-inline: 48px;
+  box-shadow: -3px 0 5px rgb(var(--home-left-rgb) / .96),
+    3px 0 5px rgb(var(--home-right-rgb) / .96),
+    -5px 0 14px rgb(var(--home-left-rgb) / .62),
+    5px 0 14px rgb(var(--home-right-rgb) / .62),
+    inset 0 1px 0 #efffff63, 0 5px 8px #000b;
+}
+.page[data-page="home"][data-home-sport="nba"] .home-entry {
+  border-image-source: url("team-details/home-control-nba.svg");
+}
+.page[data-page="home"][data-home-sport="nrl"] .home-entry {
+  border-image-source: url("team-details/home-control-nrl.svg");
+}
+.page[data-page="home"][data-home-sport="ufc"] .home-entry {
+  border-image-source: url("team-details/home-control-ufc.svg");
+}
+.page[data-page="home"] .home-entry::before {
+  border-radius: 3px;
+}
+.page[data-page="home"] .home-entry::after {
+  inset: 1px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.page[data-page="home"] .home-entry [data-home-entry-label] {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 2px #001529, 0 0 8px #d7faff24;
+}
+.page[data-page="home"] .home-entry [data-home-entry-arrow] {
+  right: 42px;
+}
+.page[data-page="home"] .home-entry-diamond {
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  width: 38px;
+  height: 46px;
+  transform: translateY(-50%);
+  background: url("nfl-dashboard/diamond-premium.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 4px #50dfff);
+  pointer-events: none;
+  z-index: 3;
+}
+.page[data-page="home"] .home-entry-diamond.is-right {
+  left: auto;
+  right: -4px;
+}
+.page[data-page="home"][data-home-sport="nba"] .home-entry-diamond.is-right,
+.page[data-page="home"][data-home-sport="ufc"] .home-entry-diamond {
+  filter: url(#home-light-red) drop-shadow(0 0 4px #ff354f);
+}
+.page[data-page="home"][data-home-sport="nrl"] .home-entry-diamond {
+  filter: url(#home-light-green) drop-shadow(0 0 4px #36ff8c);
+}
+.page[data-page="home"] .home-entry-diamond::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(90deg, transparent 45%, #fff 49% 51%, transparent 55%),
+    linear-gradient(0deg, transparent 46%, #fff 49% 51%, transparent 54%);
+  opacity: .18;
+  animation: pd-home-cta-diamond 8.7s ease-in-out infinite;
+  animation-play-state: var(--home-motion-play-state, paused);
+  pointer-events: none;
+}
+.page[data-page="home"] .home-entry-diamond.is-right::after {
+  animation-delay: -4.1s;
+}
+@keyframes pd-home-cta-diamond {
+  0%, 38%, 57%, 100% { opacity: .12; transform: scale(.84); }
+  45% { opacity: .88; transform: scale(1.08); }
+  49% { opacity: .18; transform: scale(.9); }
+  53% { opacity: .52; transform: scale(1); }
+}
+@media (max-width: 360px) {
+  .page[data-page="home"] .home-entry { padding-inline: 38px; }
+  .page[data-page="home"] .home-entry [data-home-entry-arrow] { right: 32px; width: 20px; }
+  .page[data-page="home"] .home-entry-diamond { width: 30px; height: 39px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page[data-page="home"] .home-entry-diamond::after {
+    animation: none;
+    opacity: .18;
+    transform: none;
+  }
+}

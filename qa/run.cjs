@@ -461,7 +461,7 @@ async function testViewport(browser, { base, outputDir, viewport, data, history 
     const response = await page.goto(base + "#home", { waitUntil: "networkidle" });
     assert.equal(response?.status(), 200, `Hosted/local main document HTTP ${response?.status()}`);
     await ready(page); await active(page, "home");
-    assert.equal(await page.locator(".page").count(), 3, "Only Pages 1–3 are in scope");
+    assert.deepEqual(await page.locator(".page").evaluateAll(nodes => nodes.map(node => node.dataset.page)), ["home","nfl","steelers","team-details"], "Only existing screens and the newly authorized team details route are present");
     const dataset = await datasetCheck(page, data);
     assert.equal(await page.locator("[data-home-select] img").count(), 4);
     assert.equal(await page.locator('.page[data-page="home"] .home-league, .page[data-page="home"] [data-home-title]').count(),0,'Removed duplicate league heading/subtitle stays absent');
