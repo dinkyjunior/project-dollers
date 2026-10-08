@@ -1,0 +1,256 @@
+{
+  "status": "accepted",
+  "decision": "accepted",
+  "reviewer": "nfl_replica_chrome",
+  "scope": "Independent chrome and top-to-bottom visual refinement review of candidate2; hosted publication and broad functional QA remain separate gates.",
+  "reviewedAt": "2026-10-08T04:39:35.082Z",
+  "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "source": {
+    "candidate": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+    "runtimeManifestPath": "qa/nfl-replica/after-runtime-manifest.json",
+    "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "fileCount": 216,
+    "allCurrentRuntimeFilesMatchFrozenManifest": true
+  },
+  "approvedReference": {
+    "source": "Latest approved tall NFL dashboard render attached by the user in this chat",
+    "originalDimensions": [
+      724,
+      2172
+    ],
+    "visibleChatDimensions": [
+      683,
+      2048
+    ],
+    "personallyComparedBeforeAndAfter": true,
+    "originalReferenceBytesAvailable": false,
+    "registeredPixelIdentity": false
+  },
+  "beforeEvidence": [
+    {
+      "file": "qa/nfl-replica/before-webkit/nfl-430x896-full-content.png",
+      "sha256": "51764b486ee535a16883d190d6bf4b107de28fc5fb5e2e3a39238b0e12a9d23b",
+      "personallyViewed": true
+    },
+    {
+      "file": "qa/nfl-replica/before-chromium/nfl-393x852-top.png",
+      "sha256": "bd668eb5e92a322dabc3fa1e845e97e002a14577c1447e72b3f8e154205d2c18",
+      "personallyViewed": true
+    }
+  ],
+  "beforeCritique": [
+    "The baseline rounded cards and thick gradient band with pasted corners did not reproduce the source continuous eight-point metallic enclosures.",
+    "Week select protruded beyond its intended NFL wrapper with generic opaque rounded styling. Tabs and actions had inconsistent rounded geometries and bland narrow type.",
+    "The simple medallion donut and flat diamonds did not reproduce the source mechanical segmentation and detailed luminous crystal facets.",
+    "Large repetitive diagonal stripes and identical centred star glints competed with factual content and flattened the lighting hierarchy.",
+    "The earlier composition was too tall, with broadly spaced cards and low-profile helmet cropping rather than the reference condensed upright matchup."
+  ],
+  "screenshots": [
+    {
+      "engine": "chromium",
+      "viewport": "393x852",
+      "kind": "top",
+      "file": "qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+      "sha256": "97253a3bfb4f38445ce3ade46867aba30f2e7c08a80dced3fb0f14826a294ea3",
+      "bytes": 1201984,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "chromium",
+      "viewport": "393x852",
+      "kind": "full-content",
+      "file": "qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+      "sha256": "374b009c884c023e928ffd70b05c01b1e0913f54d73c61dc7645edc2976e48c6",
+      "bytes": 1548821,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Actual rendered content exposed for a qualified full-content screenshot; the source, fonts, data and native animation phases are unchanged."
+    },
+    {
+      "engine": "chromium",
+      "viewport": "393x852",
+      "kind": "scroll-2",
+      "file": "qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+      "sha256": "4b4ad7b0182099ec5eec4f6177bf3cfdda572274ac9ee7eec299c77906710717",
+      "bytes": 992146,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "chromium",
+      "viewport": "430x896",
+      "kind": "top",
+      "file": "qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+      "sha256": "4512feb2f351bac3dfc996f5d944bc37f3aa3687eed53122554f3177f02bd6d6",
+      "bytes": 1339730,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "chromium",
+      "viewport": "430x896",
+      "kind": "full-content",
+      "file": "qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+      "sha256": "2bf1cffe7947b23675eb8b501460f81b4cc63ea97ab8092a7328c0cc2f186a3d",
+      "bytes": 1751223,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Actual rendered content exposed for a qualified full-content screenshot; the source, fonts, data and native animation phases are unchanged."
+    },
+    {
+      "engine": "chromium",
+      "viewport": "430x896",
+      "kind": "scroll-2",
+      "file": "qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+      "sha256": "26dc80086f63bb35842b16c5530a4d91aee2ed9b3fd7da7778cb3ebab2ab628e",
+      "bytes": 1121162,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "393x852",
+      "kind": "top",
+      "file": "qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+      "sha256": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+      "bytes": 1154258,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "393x852",
+      "kind": "full-content",
+      "file": "qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+      "sha256": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+      "bytes": 1448276,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Actual rendered content exposed for a qualified full-content screenshot; the source, fonts, data and native animation phases are unchanged."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "393x852",
+      "kind": "scroll-2",
+      "file": "qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+      "sha256": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+      "bytes": 912879,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "430x896",
+      "kind": "top",
+      "file": "qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+      "sha256": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+      "bytes": 1289272,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "430x896",
+      "kind": "full-content",
+      "file": "qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+      "sha256": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+      "bytes": 1632761,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Actual rendered content exposed for a qualified full-content screenshot; the source, fonts, data and native animation phases are unchanged."
+    },
+    {
+      "engine": "webkit",
+      "viewport": "430x896",
+      "kind": "scroll-2",
+      "file": "qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+      "absolutePath": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+      "sha256": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f",
+      "bytes": 1042988,
+      "personallyViewed": true,
+      "unchangedOriginal": true,
+      "qualification": "Untouched natural browser screenshot of the real phone enclosure; no app styles were altered for this image."
+    }
+  ],
+  "nativeCaptureRuns": [
+    {
+      "engine": "chromium",
+      "file": "qa/nfl-replica/common-chromium/results.json",
+      "sha256": "6c26fe8a9d58dde91d4cbe24afb3145fa6b3afdf0d6f3094d456984e1b1d4f58",
+      "gitHead": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+      "status": "passed"
+    },
+    {
+      "engine": "webkit",
+      "file": "qa/nfl-replica/common-webkit/results.json",
+      "sha256": "e780764925ecdf10a0f26e0bc9a0e1242b53a5e8e34bf3f23d94dd36ecd253a9",
+      "gitHead": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+      "status": "passed"
+    }
+  ],
+  "sectionNotes": [
+    {
+      "section": "Masthead and league header",
+      "after": "Branding remains centered over the stadium. The NFL medallion now has crisp segmented silver/cyan anatomy; the header uses continuous gold hardware, black grooves, cyan core and thin white highlights. Its faint inner glass facets remain below text and clear of the luminous rail.",
+      "referenceAssessment": "Reference identity, mechanical silhouette, controlled depth and visual hierarchy are substantially closer."
+    },
+    {
+      "section": "Week, tabs and conference selector",
+      "after": "Native week control fits the angular wrapper in both engines. Ladder and AFC paint saturated cobalt centers; inactive selectors are opaque dark glass with matching chamfered double outlines. All labels and down chevrons remain unobstructed.",
+      "referenceAssessment": "Generic rounded control skins have been replaced with the source angular vocabulary and active-state hierarchy."
+    },
+    {
+      "section": "Standings and team details",
+      "after": "Conference mark/title now align with the source grouping. Division, Form and Sort have crisp native outlined skins. Nine columns, team logos, form chips, selected Steelers row and inline summary remain aligned and readable, with the details control inside its own angular outline.",
+      "referenceAssessment": "The dense table, bright selected row and nested summary reproduce the source composition while displaying verified source values."
+    },
+    {
+      "section": "View all sixteen teams",
+      "after": "Four sharp crystals now sit at the ends and inner positions of the cobalt control; its arrow and central label are clear of ornaments. The outer mechanical enclosure remains continuous.",
+      "referenceAssessment": "The formerly incomplete two-end-jewel presentation is materially closer to the approved control."
+    },
+    {
+      "section": "Featured matchup and its actions",
+      "after": "Upright crisp helmets, authentic team-logo overlays, illuminated stadium/field, metallic team typography and central VS fill the compact featured panel. Blue View Matchup with end jewels and two gold-rimmed dark actions share angular rails and clear chevrons.",
+      "referenceAssessment": "The source matchup proportions and action hierarchy are represented far more closely than the stretched low-profile baseline."
+    },
+    {
+      "section": "QB, RB and WR boxes",
+      "after": "All three distinct five-row panels use the same complete metallic enclosure, faint faceted glass, bright jewel View all controls and consistent larger block headings. Rank5, player names, yards and touchdown glyphs remain intact in every full and native bottom screenshot.",
+      "referenceAssessment": "The separate source panels, density, type hierarchy and rail anatomy now agree consistently from top to bottom."
+    },
+    {
+      "section": "Navigation and provenance footer",
+      "after": "Navigation remains in the compact enclosure on untouched phone views, with clear icons/labels and matching mechanical gold/cyan frame. The source/footer context remains visible below it. Internal scrolling does not enlarge the outer phone shell.",
+      "referenceAssessment": "The bottom framing is coherent with the source and the locked Home enclosure."
+    }
+  ],
+  "residualDifferencesAndMeasurementLimits": [
+    "The approved image contains illustrative records and leader values; verified current data and its source/time context are preserved instead of copying those sample facts.",
+    "The native reconstruction uses real fonts/vector controls and reconstructed decorative helmet/lighting artwork. Individual equipment reflections, tiny material facets and natural animation phases are not claimed to be registered pixel-identical to the single static approved render.",
+    "Full-content screenshots temporarily expose the internal scroller, as explicitly qualified in their reports; top and bottom phone screenshots are untouched native enclosure views.",
+    "These are genuine Chromium/WebKit browser renders at DPR2, not physical iPhone/Safari-chrome tests or a measured hardware frame-rate result.",
+    "The chat attachment was visually accessible but no original binary was available, so no numeric pixel-difference claim is made."
+  ],
+  "remainingChromeBlockers": [],
+  "conclusion": "Accepted for candidate2 chrome and visual-composition scope after personally inspecting all eight shared top/full originals plus all four untouched native bottom screenshots and comparing the baseline and latest approved render. Major rounded-outline, weak hardware, select-skin, diamond, type, crop and density mismatches are resolved. Final site publication still requires the other specialist approvals and live verification."
+}

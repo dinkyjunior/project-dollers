@@ -1,6 +1,14 @@
 # Codex Start Here
 
-## Current NFL dashboard — 8 October 2026
+## Current NFL replica refinement — 8 October 2026 (Sydney)
+
+The user requested a second top-to-bottom Page 2 refinement against the tall NFL chat render. The candidate now has dense condensed native typography, continuous chamfered gold/cyan metal rails, equal illuminated controls, a segmented league medallion, refined local gems, upright Retina helmet artwork and robust native travelling light. Home and Steelers remain locked; no Page 4. Verified records and source timestamps are retained instead of copying illustrative numbers.
+
+Runtime is frozen at 216 files with manifest SHA-256 `674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286`. Final review/publication facts belong in [the release record](qa/nfl-replica/RELEASE.md), [original browser comparisons](qa/nfl-replica/index.html) and [six-specialist receipt](qa/nfl-replica/release-review.json). Do not apply old acceptance to this candidate. Native top/bottom screenshots establish phone framing; full-content images are qualified capture-only exposures. The approved source is the chat attachment; its original binary was unavailable, so no registered pixel identity is claimed.
+
+Publication is pending final six-agent acceptance, complete cross-engine QA and actual hosted verification. Fetch/rebase both latest remote branches before every ordinary push and preserve automatic source updates. Historical reports below remain immutable evidence for their original source.
+
+## Previous NFL dashboard — superseded visual acceptance
 
 The mandatory final fetch also preserved automatic source update `a6d26f5`, retrieved `2026-10-08T02:19:37Z`. Its 1,806 metadata value changes and two removed obsolete leader-enrichment timestamp keys are explicitly audited; all statistics, 816 leader rows and 200 nondata runtime files remain unchanged. Original full hosted evidence retains its original source identity; separate final-refresh checks verify the newer snapshot.
 

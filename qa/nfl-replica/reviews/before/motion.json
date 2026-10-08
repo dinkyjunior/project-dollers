@@ -1,0 +1,63 @@
+{
+  "status": "audit_complete",
+  "createdAt": "2026-10-08T03:10:47.119989+00:00",
+  "reference": "Latest approved tall NFL render attached by user in chat. Binary reference unavailable; not a registered pixel comparison.",
+  "personallyViewedBefore": [
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png",
+      "sha256": "ccb68edaa7d53c3228c76f921acb0d1320e77acef9c58811d68687bd88f4d2f1"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png",
+      "sha256": "0cef34a57a4ff95cfca0f9a235bef35b01dd6d60eb855735735191610325c478"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-top.png",
+      "sha256": "5d3a48717145344da45279ed90919ea0c3a0d4279b9e825bd140e58bb052f284"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-final.png",
+      "sha256": "7bf51c08f7b8fd085c66fa7850565a63d1e0b4c8707a8c596646c8313797ee5f"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-final.png",
+      "sha256": "8d024be0861887b84e658f017cb3c8fe04b335ee8872d205b8145e7e76f0ff7c"
+    }
+  ],
+  "mismatches": [
+    {
+      "zone": "all panel outlines",
+      "observed": "Broad blended cyan/gold rail bands, rounded corners.",
+      "reference": "Separated thin electric blue and white emission lines, black channel, distinct angular gold plates."
+    },
+    {
+      "zone": "all panel seams",
+      "observed": "Uniform identical centered top and bottom star.",
+      "reference": "Asymmetric small sun hits on corner intersections and mechanical joins."
+    },
+    {
+      "zone": "active tabs and conference",
+      "observed": "Broad flat vivid cyan fill.",
+      "reference": "Deep royal-blue center with narrow hot white/cyan lit edge."
+    },
+    {
+      "zone": "NFL medallion",
+      "observed": "Flat blue disk with large empty blue halo.",
+      "reference": "Segmented silver/electric ring, four focused radial light hits, larger inner shield."
+    },
+    {
+      "zone": "panel surfaces",
+      "observed": "Strong identical repeating diagonal charcoal bands.",
+      "reference": "Subdued black faceted background with hot edge pools and localized blue lighting."
+    }
+  ],
+  "lifecycleReview": {
+    "nativeTransformOpacityOnly": true,
+    "noRAFOrIntervalPolling": true,
+    "offscreenIntersectionPausing": true,
+    "inactiveRoutePausing": true,
+    "pagehideAndVisibilityPausing": true,
+    "reducedMotionStaticFallback": true
+  },
+  "initialEditsMade": false
+}

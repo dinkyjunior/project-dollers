@@ -1,0 +1,68 @@
+{
+  "reviewedAt": "2026-10-08T03:10:30.011922+00:00",
+  "reviewer": "nfl_replica_assets",
+  "reference": "Latest reattached NFL tall dashboard chat image; personally inspected original in conversation",
+  "referenceBinaryAvailable": false,
+  "originalsViewed": [
+    {
+      "path": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png",
+      "sha256": "ccb68edaa7d53c3228c76f921acb0d1320e77acef9c58811d68687bd88f4d2f1"
+    },
+    {
+      "path": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png",
+      "sha256": "0cef34a57a4ff95cfca0f9a235bef35b01dd6d60eb855735735191610325c478"
+    },
+    {
+      "path": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-final.png",
+      "sha256": "8d024be0861887b84e658f017cb3c8fe04b335ee8872d205b8145e7e76f0ff7c"
+    }
+  ],
+  "sourceHead": "7c3eba4713c346521732f6c1f0ac523d717a30d7",
+  "status": "changes required",
+  "findings": [
+    {
+      "region": "whole-page atmosphere",
+      "difference": "Repeating giant brown football source behind panels disagrees with blue stadium/crowd reference",
+      "action": "Use existing locally bundled native1200 blue arena as NFL-only ambient source/crop; do not alter shared file."
+    },
+    {
+      "region": "NFL medallion",
+      "difference": "Flat dark-blue disc with thin outline lacks concentric metallic structure, radial ring ticks and light hotspots",
+      "action": "Add independently rendered NFL-only vector ring with metallic annuli and cyan tracks; keep genuine shield independent and larger."
+    },
+    {
+      "region": "matchup",
+      "difference": "Broad low helmet composition blocks central field; wide shallow wordmarks lack reference tall dimensional hierarchy",
+      "action": "Reduce broad helmet occupation, preserve nativeaspect/official overlays, taller condensed team text and open central stadium."
+    },
+    {
+      "region": "panel crystals",
+      "difference": "Low-facet polygonal diamond lacks reference dense crystal glints",
+      "action": "Denser original vector facet structure with sharp asymmetric glints, no rasterupscaling."
+    },
+    {
+      "region": "stadium crop",
+      "difference": "Existing nativearena useful, but current headerdarkening/crop removes stronger reference-lightarc",
+      "action": "Tune NFL-only brightness/saturation/crop, retaining separately accessible live text."
+    },
+    {
+      "region": "corners",
+      "difference": "Current repeated rounded symmetrical rails differ from sharp faceted angular reference",
+      "action": "Coordinate NFL-only eight-sided trim and recessed cyan rails with layout owner."
+    }
+  ],
+  "unchangedSource": true,
+  "legitimateExistingAssets": {
+    "NFL": "assets/home/nfl.svg official SVG",
+    "AFC": "assets/nfl-dashboard/afc.svg original NFL vector",
+    "NFC": "assets/nfl-dashboard/nfc.svg original NFL vector",
+    "stadium": "assets/home/gate-scenes-nfl.webp native1200\u00d71200 decorative venue no player faces",
+    "branding": "assets/home/gate-brand.webp native1800\u00d7693 approved branding",
+    "helmets": "assets/nfl-dashboard/helmet-{pit,ind}.webp native1448\u00d71086 decorative equipment; official marks separately overlay"
+  },
+  "limitations": [
+    "No flattened attachment bytes exposed; no invented reference file or registered pixel identity",
+    "Decorative helmet equipment is not official photo; no generated player faces",
+    "All after-review must personally inspect fresh native browser originals; prior acceptance does not carry forward"
+  ]
+}

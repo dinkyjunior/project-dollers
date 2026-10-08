@@ -1,0 +1,106 @@
+{
+  "status": "all_six_reviews_accepted",
+  "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "runtimeFiles": 216,
+  "applicationCodeHead": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+  "reference": "Approved tall NFL chat attachment; original binary unavailable",
+  "reviewers": [
+    {
+      "name": "geometry",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/geometry.json",
+      "evidenceSha256": "9be77ac6708f8c3205bc7c36c0b1981ef5e08e812e175df0e19d43a11bbbeab4",
+      "personallyInspectedOriginalImages": 12
+    },
+    {
+      "name": "chrome",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/chrome.json",
+      "evidenceSha256": "9431b19be2281cdfd969f78a54e06482deed8db1f82d6b2676da293ea22404fa",
+      "personallyInspectedOriginalImages": 12
+    },
+    {
+      "name": "assets",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/assets.json",
+      "evidenceSha256": "8e4357ad299aba02f83edc0f4ffdf9f90dda0df5915bf5bfd3343d2535a9c640",
+      "personallyInspectedOriginalImages": 12
+    },
+    {
+      "name": "motion",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/motion.json",
+      "evidenceSha256": "c9c3616cfc346748192f31e2696d9b7998a9783cad385a26343d48b67551c6ee",
+      "personallyInspectedOriginalImages": 12
+    },
+    {
+      "name": "controls",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/controls.json",
+      "evidenceSha256": "2c6314216ca2519783c2a339cc23f07ee2b6eff8a12d43dfd867f3b22cfd969a",
+      "personallyInspectedOriginalImages": 12
+    },
+    {
+      "name": "mobile",
+      "decision": "accepted",
+      "evidence": "qa/nfl-replica/reviews/final/mobile.json",
+      "evidenceSha256": "e2dbc27657fde88aa2710a008e1b45914bb24c656fa9d4d64e4139425e8d5042",
+      "personallyInspectedOriginalImages": 12
+    }
+  ],
+  "commonOriginals": {
+    "qa/nfl-replica/common-chromium/nfl-393x852-top.png": "97253a3bfb4f38445ce3ade46867aba30f2e7c08a80dced3fb0f14826a294ea3",
+    "qa/nfl-replica/common-chromium/nfl-393x852-full-content.png": "374b009c884c023e928ffd70b05c01b1e0913f54d73c61dc7645edc2976e48c6",
+    "qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png": "4b4ad7b0182099ec5eec4f6177bf3cfdda572274ac9ee7eec299c77906710717",
+    "qa/nfl-replica/common-chromium/nfl-430x896-top.png": "4512feb2f351bac3dfc996f5d944bc37f3aa3687eed53122554f3177f02bd6d6",
+    "qa/nfl-replica/common-chromium/nfl-430x896-full-content.png": "2bf1cffe7947b23675eb8b501460f81b4cc63ea97ab8092a7328c0cc2f186a3d",
+    "qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png": "26dc80086f63bb35842b16c5530a4d91aee2ed9b3fd7da7778cb3ebab2ab628e",
+    "qa/nfl-replica/common-webkit/nfl-393x852-top.png": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+    "qa/nfl-replica/common-webkit/nfl-393x852-full-content.png": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+    "qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+    "qa/nfl-replica/common-webkit/nfl-430x896-top.png": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+    "qa/nfl-replica/common-webkit/nfl-430x896-full-content.png": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+    "qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f"
+  },
+  "primaryReview": "qa/nfl-replica/reviews/primary-final-review.json",
+  "qualification": "All six independently accepted the same original source and twelve actual captures. Complete local QA, integration of incoming automatic updates and actual hosted verification remain separate publication gates; this does not itself claim deployment.",
+  "completeLocalChecks": [
+    {
+      "file": "qa/nfl-replica/common-chromium/results.json",
+      "sha256": "6c26fe8a9d58dde91d4cbe24afb3145fa6b3afdf0d6f3094d456984e1b1d4f58",
+      "status": "passed",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/common-webkit/results.json",
+      "sha256": "e780764925ecdf10a0f26e0bc9a0e1242b53a5e8e34bf3f23d94dd36ecd253a9",
+      "status": "passed",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/after-retry-chromium/results.json",
+      "sha256": "b9703dcc3fb91d5a41ae36ac31ed065fd8909d5834487ce5c336c311e71864a8",
+      "status": "passed",
+      "cases": 5
+    },
+    {
+      "file": "qa/nfl-replica/after-retry-webkit/results.json",
+      "sha256": "34a0a1cb1c5056daa6981828a3c20e31cbe174b94427b8dcf9e133857bb347bd",
+      "status": "passed",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/local-refresh-chromium/results.json",
+      "sha256": "3be26f53f7c13e06a81861806edd3a4b8450974dfdd074fee5a42311e7600647",
+      "status": "passed",
+      "cases": 2
+    },
+    {
+      "file": "qa/nfl-replica/local-refresh-webkit/results.json",
+      "sha256": "acdfdb41488c1d4c4f44fa16ea104bdc819d730d47351371fcc90bcd458a7d56",
+      "status": "passed",
+      "cases": 2
+    }
+  ],
+  "completeLocalChecksStatus": "passed"
+}

@@ -1,0 +1,663 @@
+{
+  "reviewer": "nfl_replica_motion",
+  "decision": "accepted",
+  "status": "passed",
+  "reviewedAt": "2026-10-08T04:40:22.821962+00:00",
+  "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "runtimeFileCount": 216,
+  "candidate": "candidate2",
+  "reference": "Latest approved tall NFL render attached by user in chat. Binary reference unavailable; not a registered pixel comparison.",
+  "comparisonMethod": "Personally inspected five saved prior native originals before editing and all twelve final common originals using view_image; human comparison to the approved tall chat render, no registered pixel identity. Strong native clock and genuinely painted phase assertions tested the exact final runtime.",
+  "beforeAudit": {
+    "file": "/workspace/recovery-qa/nfl-replica/motion/initial-audit.json",
+    "sha256": "c3f6c3ad5940e0dd4c2063a0a621b45a2267738c7f9d060fd57cda42e230cff3",
+    "personallyViewedOriginals": [
+      {
+        "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png",
+        "sha256": "ccb68edaa7d53c3228c76f921acb0d1320e77acef9c58811d68687bd88f4d2f1"
+      },
+      {
+        "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png",
+        "sha256": "0cef34a57a4ff95cfca0f9a235bef35b01dd6d60eb855735735191610325c478"
+      },
+      {
+        "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-top.png",
+        "sha256": "5d3a48717145344da45279ed90919ea0c3a0d4279b9e825bd140e58bb052f284"
+      },
+      {
+        "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-final.png",
+        "sha256": "7bf51c08f7b8fd085c66fa7850565a63d1e0b4c8707a8c596646c8313797ee5f"
+      },
+      {
+        "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-final.png",
+        "sha256": "8d024be0861887b84e658f017cb3c8fe04b335ee8872d205b8145e7e76f0ff7c"
+      }
+    ],
+    "mismatches": [
+      {
+        "zone": "all panel outlines",
+        "observed": "Broad blended cyan/gold rail bands, rounded corners.",
+        "reference": "Separated thin electric blue and white emission lines, black channel, distinct angular gold plates."
+      },
+      {
+        "zone": "all panel seams",
+        "observed": "Uniform identical centered top and bottom star.",
+        "reference": "Asymmetric small sun hits on corner intersections and mechanical joins."
+      },
+      {
+        "zone": "active tabs and conference",
+        "observed": "Broad flat vivid cyan fill.",
+        "reference": "Deep royal-blue center with narrow hot white/cyan lit edge."
+      },
+      {
+        "zone": "NFL medallion",
+        "observed": "Flat blue disk with large empty blue halo.",
+        "reference": "Segmented silver/electric ring, four focused radial light hits, larger inner shield."
+      },
+      {
+        "zone": "panel surfaces",
+        "observed": "Strong identical repeating diagonal charcoal bands.",
+        "reference": "Subdued black faceted background with hot edge pools and localized blue lighting."
+      }
+    ]
+  },
+  "personallyViewedAfter": [
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+      "sha256": "97253a3bfb4f38445ce3ade46867aba30f2e7c08a80dced3fb0f14826a294ea3",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "top",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+      "sha256": "374b009c884c023e928ffd70b05c01b1e0913f54d73c61dc7645edc2976e48c6",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "full",
+      "captureQualification": "Actual isolated app tab, temporary internal-scroll exposure only; factual UI/source identity checked and original functional tab untouched"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+      "sha256": "4b4ad7b0182099ec5eec4f6177bf3cfdda572274ac9ee7eec299c77906710717",
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "untouched native bottom",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+      "sha256": "4512feb2f351bac3dfc996f5d944bc37f3aa3687eed53122554f3177f02bd6d6",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "top",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+      "sha256": "2bf1cffe7947b23675eb8b501460f81b4cc63ea97ab8092a7328c0cc2f186a3d",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "full",
+      "captureQualification": "Actual isolated app tab, temporary internal-scroll exposure only; factual UI/source identity checked and original functional tab untouched"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+      "repositoryPath": "qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+      "sha256": "26dc80086f63bb35842b16c5530a4d91aee2ed9b3fd7da7778cb3ebab2ab628e",
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "untouched native bottom",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+      "sha256": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "top",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+      "sha256": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "full",
+      "captureQualification": "Actual isolated app tab, temporary internal-scroll exposure only; factual UI/source identity checked and original functional tab untouched"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+      "sha256": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "viewedPersonally": true,
+      "role": "untouched native bottom",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+      "sha256": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "top",
+      "captureQualification": "Genuine untouched native viewport"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+      "sha256": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "full",
+      "captureQualification": "Actual isolated app tab, temporary internal-scroll exposure only; factual UI/source identity checked and original functional tab untouched"
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+      "repositoryPath": "qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+      "sha256": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f",
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "viewedPersonally": true,
+      "role": "untouched native bottom",
+      "captureQualification": "Genuine untouched native viewport"
+    }
+  ],
+  "observedImprovements": [
+    "Angular gold hardware, black channels and separate crisp white/cyan emission now replace blended rounded bands from league header through standings, matchup, three leader panels and navigation.",
+    "Selected controls now have deep cobalt interiors and localized hot edges; factual rows and glyphs remain sharp, stationary and uncovered by broad animated light washes.",
+    "The NFL shield sits in a segmented silver/electric-blue medallion with four small radial hits and a continuous thin orbit.",
+    "Asymmetric fine join glints, animated edge reflections and diamond highlights are placed on hardware seams and control ends, retaining a steady luminous floor.",
+    "All final native top and lower viewport originals remain opaque and correctly clipped in both engines at both phones; previous WebKit blank-parent and clipped-symbol artifacts are absent."
+  ],
+  "nativeMotionProof": {
+    "file": "/workspace/recovery-qa/nfl-replica/motion/stable-real-glints-painted-phases-native/results.json",
+    "sha256": "6fe62a87b0fb954e0a7719f29487c9da83b3ab59b026356782c20ee8ca02ad8f",
+    "status": "passed",
+    "runtimeFilesMatchFrozen": true,
+    "actualPaths": [
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "initial",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "af2bcf3f2f968d23f50c1cfa0b2a18adadae63ddb452d7e85902d74ec71b8824",
+        "secondPaintSha256": "e98813ac88c0ce68d4d605591343e20462a626f0296f268f0c9fd4c6370cae6c",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "lower",
+        "visibleAdvancingClocks": 16,
+        "visiblePanelClocks": 10,
+        "medallionVerified": false,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "6afaf7cc6241fec69c84c397a1ad0aa9e86e390c2da4fef35c4f07730e00202f",
+        "secondPaintSha256": "21f2c4b793f2f0a02140e5d80cf4d9a81d5a59b0e280b4de5cb265fb72247c82",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "returned",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "9bf00d70bc10d89300590406b52db0a99d6236758771a22fc54b580efc515c47",
+        "secondPaintSha256": "cbbce61f3632d5b3d2481ef7d2353a3b8fe0f024bc1d0e254df2c3724f03ff05",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "restored",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "68bdaaa92b412b3b21a1f853b9f7367c4d97da762a124f260285352840b48799",
+        "secondPaintSha256": "edf4512c03db9584f51b610bbbdeb0bbfd7d4b6f46b75e453c197dc8addff6ed",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "direct",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "efa48cc550520ce52a764876c3824bac27f77627d020cd566aa0fe9a6030215a",
+        "secondPaintSha256": "b9e4f77b0d8e9c283a6db1a66a72d8452c79fe932d83d57515b2c46ee954a8d4",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "reloaded",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "5854c64ee1334951f03a66fec6259a079a9bdb0b2f9fb83e399de16212ddf935",
+        "secondPaintSha256": "15c69f204e56666acab6f1bd4500130930c0f1fd3c34621d8ed3d1916a18006c",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "initial",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "c7e52a6a2567e2519f4783d7cbce05027cee6fec51e31cf97891348dde0c8731",
+        "secondPaintSha256": "6b2836e35b1ddeb09f90b6b440b42e9fadad6d026777335cc1574adf5e63ba12",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "lower",
+        "visibleAdvancingClocks": 16,
+        "visiblePanelClocks": 10,
+        "medallionVerified": false,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "ca8b591467b68dbba521bb7b738ad4405017be0e7efc3665046947ee117ac6a8",
+        "secondPaintSha256": "e1ed0355b4aec1e4923329e8d5136d20225483de7fdcfad8cf73f06668e15748",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "returned",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "d7b872a269f085cced8c7ec4894e8275fff629b2149eba31ea3deecfd1aba1e3",
+        "secondPaintSha256": "4dba9f5bef3fea858c63faf6adb11e9689bb338fc5ae6d07e874f07269e08650",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "restored",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "5ae15fd5d0f07efb49e3401ee5f0fd68a4d629b1c91a70d24a84a2503e53c7f2",
+        "secondPaintSha256": "06ad9bc89d475bc9ca4105b55d109ac94ae05bb2378922f019a0c43896176d23",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "direct",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "121fa5ab6456a0a100c079687497ea98eab9f5d5d1c93884245774ada92e90a0",
+        "secondPaintSha256": "61e95bdda3585928f93e8e4f53082de7bba9925a58755d9f27210d895bdfb5af",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "reloaded",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "0bbb9ab8f5896518f4fde425deb08e843e79e6f827d1cfad1640e329fdc3b1e1",
+        "secondPaintSha256": "1c2498eb2fcdc57ead1a0400b7c12cc65a8f1cf1f1c716c9245f1f1be7cfc549",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "initial",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "7f0525bd0ceb4e8f94e96b513f0d46c55485faf5572dce5b32ef5b1f47a5a3ca",
+        "secondPaintSha256": "199817bf21fc71149c0cd18a32e69019674214d2fb659b98a74ad613cea5b369",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "lower",
+        "visibleAdvancingClocks": 16,
+        "visiblePanelClocks": 10,
+        "medallionVerified": false,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "3977ae630d482bb8f46882c7d0ab31d1ff385e040d4a5350aacef37ffd7b0be9",
+        "secondPaintSha256": "a84361509ed730f07aed861d8520124ffd00f2bbd752bcf62e9466924cb6b9fd",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "returned",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "304aa30f3be8b797398dd6935517ebd277da35d2628696a236eb91092534e182",
+        "secondPaintSha256": "5c3854a8de9f7ad1d94366bb656ccc1e97ef98f6befa140bb1fb5b833d1a338e",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "restored",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "dd4056b2018fd585840df4f38b4f329be87973e53cd55500a1d83cbdd554c14c",
+        "secondPaintSha256": "1b82f591fec56ab19c287da0a8e4adc9073b83e2094863d615a2b3f890edb804",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "direct",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "27be05a2b6b8c95cd590e48c69953446a31ae84a25f8625540f68836104290f3",
+        "secondPaintSha256": "9372451bf522a41a83a814f21328dd097b3359060ba82860cf036dc5aa314d6c",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "path": "reloaded",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "f4e6a06472b7fa6397ba3ef14ba1f585ebf712ec645a5950915aaf0f65fe508b",
+        "secondPaintSha256": "d2e246f35e7bbb088326b8bac52943aa11bcfe9beb7f440bccd746afd7c436ba",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "initial",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "f297dafb693d7e58bb6fdfe8d349ec5f9c94289c7ee268e6eea45070561fd7bd",
+        "secondPaintSha256": "4da20d61c7259cb877e0e641beb35523992053d2dd1d54dbcdc4c58b9a8eb141",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "lower",
+        "visibleAdvancingClocks": 16,
+        "visiblePanelClocks": 10,
+        "medallionVerified": false,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "c2eb4392c97b7af4216a4a3ca3b855ee505a2403872afd07038f6a4c15722f02",
+        "secondPaintSha256": "9f7d44006349eaf67ae937669d6065e14bb02b705ce022b94b5210d01d9ba166",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "returned",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "afe34dfe0132cb940b5df637e59fb004068e4291fd5630d1b8277d40e463f9fd",
+        "secondPaintSha256": "85a5c6fc89522946ccbcefcb21f6106ff0b89844fca5a778771392370febb362",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "restored",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "508b169eef6049412549dc1f1481a51b3ae12a3e12f90bc17b42c550666afb9b",
+        "secondPaintSha256": "12bd1787f2111195b97b8f5ff8efa9a52669b7e61c3aaa72c0a4bc26ec818512",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "direct",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "f1aa45a494980f4061e2643e33fbb9260dd186f22847f64b0701def47b218ec0",
+        "secondPaintSha256": "0c0ac1a1495dca6654b56755cf432b990016b7d18770f71616ca60625318c66c",
+        "actualPixelChangeVerified": true
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "path": "reloaded",
+        "visibleAdvancingClocks": 15,
+        "visiblePanelClocks": 8,
+        "medallionVerified": true,
+        "naturalTimeVerified": true,
+        "firstPaintSha256": "22e3a6b3475413841c90e26cf8c81149602e6475143430fb76e6641e28a10862",
+        "secondPaintSha256": "2e3272813d8877216be358a459621fb11c94ad1d35016082ef9ae22acb8baa92",
+        "actualPixelChangeVerified": true
+      }
+    ],
+    "runtimeUnchangedDuringQA": true,
+    "naturalPhasePaintQualification": "Genuine foreground browser render commits layout, then separately painted frames at each natural native clock sample. No animation time seeking, paused-clock exemption, injected style, substituted source or retry-until-success loop. Both real phase hashes differ on all 24 paths.",
+    "lifecycleChecks": [
+      "Reduced motion removes active infinite clocks and keeps steady emission.",
+      "Hidden or inactive routes and pagehide pause owned decorative clocks.",
+      "Out-of-view and visually hidden decorative layers remain paused.",
+      "Direct load, native internal scrolling, Home return, document back, direct URL and reload preserve fully opaque NFL shell and advance each visible medallion, reflection and join clock."
+    ],
+    "runtimeImplementation": "NFL-only stable shell and event-driven geometric intersection fallback on real activation, scroll, resize and observer events; one real aria-hidden join-light span per frame. No polling or requestAnimationFrame light driver; native transform/opacity clocks own decoration, factual text stays static."
+  },
+  "commonCaptureReceipts": [
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/results.json",
+      "sha256": "6c26fe8a9d58dde91d4cbe24afb3145fa6b3afdf0d6f3094d456984e1b1d4f58",
+      "status": "passed",
+      "runtimeFilesMatchFrozen": true
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/results.json",
+      "sha256": "e780764925ecdf10a0f26e0bc9a0e1242b53a5e8e34bf3f23d94dd36ecd253a9",
+      "status": "passed",
+      "runtimeFilesMatchFrozen": true
+    }
+  ],
+  "finalBroadChromeReceipt": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/after-retry-chromium/results.json",
+    "sha256": "b9703dcc3fb91d5a41ae36ac31ed065fd8909d5834487ce5c336c311e71864a8",
+    "status": "passed",
+    "runtimeFilesMatchFrozen": true,
+    "testedSizes": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      },
+      {
+        "width": 320,
+        "height": 700
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 1440,
+        "height": 1000
+      }
+    ]
+  },
+  "durablePixelProof": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/reviews/support/motion-natural-pixel-change.json",
+    "sha256": "0bf18d10bee51198cd3114084379cbce4273836f2e7fcbc5562dda2b36c7da91",
+    "sourceFile": "/workspace/recovery-qa/nfl-replica/motion/stable-real-glints-painted-phases-native/natural-pixel-change.json",
+    "sourceSha256": "0bf18d10bee51198cd3114084379cbce4273836f2e7fcbc5562dda2b36c7da91",
+    "runtimeFilesMatchFrozen": true
+  },
+  "residuals": [
+    "Current verified standings, season/week labels, opponent/date context and source strip differ from illustrative concept values; they are retained as factual UI rather than fabricated to match artwork.",
+    "Legitimate bundled stadium/equipment artwork and runtime font rasterization have different fine perspective/texture from the supplied render; no pixel-identical reconstruction claim.",
+    "Full-content originals are diagnostic isolated-tab exposure of the actual app, not a continuous native phone viewport. Untouched top and scroll-2 originals independently verify the genuine phone framing.",
+    "Headless Chromium/WebKit mobile emulation is verified; physical iPhone Safari controls, battery use and measured 60fps hardware performance are not claimed."
+  ],
+  "blockingFindings": [],
+  "runtimeEditsAfterFreeze": false
+}

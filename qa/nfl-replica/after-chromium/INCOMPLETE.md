@@ -1,0 +1,1 @@
+This interrupted native QA job has no successful completion receipt and is not a final pass. Its untouched original files are preserved at /workspace/recovery-qa/nfl-replica/interrupted-native-jobs/after-chromium. Completed replacement evidence is in the separate after-retry directory. Archived file hashes are recorded in archive-manifest.json.

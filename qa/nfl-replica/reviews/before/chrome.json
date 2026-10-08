@@ -1,0 +1,16 @@
+{
+  "status": "requires_refinement",
+  "reviewer": "nfl_replica_chrome",
+  "source": "Latest approved tall NFL render attached in this chat, original 724 x 2172; visible chat render 683 x 2048",
+  "actuals": ["qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png", "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png"],
+  "findings": [
+    "Rounded 6 px panels and a single broad gradient band differ from the reference continuous chamfered gold/black/cyan mechanical rails.",
+    "Reference panel silhouettes have clipped mechanical corners and nested dark separation between thin luminous edges, not corner stickers over a rounded rectangle.",
+    "Week, tabs, conference, Sort, Team details, View all and matchup buttons require angular multi-stroke outlines and deeper cobalt active fill.",
+    "The week select inherits a generic 44 px minimum height and opaque rounded skin inside a 30 px wrapper, concealing the intended angular rail.",
+    "Broad alternating diagonal panel stripes are too prominent relative to the restrained dark blue glass in the reference.",
+    "Repeated identical centred seam stars flatten the lighting hierarchy; motion owner will place asymmetric controlled highlights.",
+    "Medallion requires a mechanical segmented rim rather than a simple smooth neon donut; assets and geometry owners will rebuild this."
+  ],
+  "scope": "NFL-only standalone chrome stylesheet and new native SVG rails; no source data, navigation destination, Home, Steelers or Page 4 changes"
+}

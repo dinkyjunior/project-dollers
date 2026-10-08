@@ -1,0 +1,73 @@
+{
+  "status": "changes-required",
+  "reviewer": "nfl_replica_controls",
+  "at": "2026-10-08T03:11:49.376442+00:00",
+  "gitHead": "7c3eba4713c346521732f6c1f0ac523d717a30d7",
+  "reference": "Latest tall approved NFL render attached in this chat; visually inspected directly. Original binary not yet available; not a registered pixel comparison.",
+  "sourceAtBaseline": {
+    "index.html": "479c3581e15b1aeaccea95e1be65b42be428f319b2edd98e48e4c77b6ca0457f",
+    "assets/nfl-dashboard.css": "7d18396d8e1fd98b7153a007d80639621426f90a59cb3357b48040614eab605d",
+    "assets/nfl-dashboard.js": "5b377121765bd3cd652570418fc7b600b485b5bb2caba53f1ec39e96052b502c",
+    "assets/data/current.json": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+    "assets/data/player-history.json": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+    "assets/data/provenance.json": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5"
+  },
+  "personallyViewedOriginals": [
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png",
+      "sha256": "ccb68edaa7d53c3228c76f921acb0d1320e77acef9c58811d68687bd88f4d2f1"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png",
+      "sha256": "0cef34a57a4ff95cfca0f9a235bef35b01dd6d60eb855735735191610325c478"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-final.png",
+      "sha256": "7bf51c08f7b8fd085c66fa7850565a63d1e0b4c8707a8c596646c8313797ee5f"
+    }
+  ],
+  "findingsTopToBottom": [
+    {
+      "area": "league header/week",
+      "finding": "Week dropdown keeps inherited native select rounded border/background inside NFL wrapper; actual silhouette differs from narrow chamfer reference. Reset only NFL native SELECT border/background/radius and enforce outer geometry."
+    },
+    {
+      "area": "tabs/conference",
+      "finding": "Generic rounded rectangle silhouettes and smooth gradients differ from angular clipped reference with double cyan edges and luminous corners."
+    },
+    {
+      "area": "standings heading/filters",
+      "finding": "Anton is overly tall/narrow versus broader block reference heading. Filter controls and sort control need chamfer outlines; keep readable labels and actual selected metric."
+    },
+    {
+      "area": "standings table",
+      "finding": "Row density is already near reference. Reference sample standings cannot be copied as live values. Keep sourced PCT order, real Pittsburgh row number, nine readable columns and complete source-derived form."
+    },
+    {
+      "area": "team summary/view all",
+      "finding": "Team-details rectangle and View16 side rails need angular outline and richer diamond/highlight treatment. Keep exact PF/PA/DIFF/home/away values."
+    },
+    {
+      "area": "featured matchup/actions",
+      "finding": "Current three action buttons are rounded and flat compared with chamfer metal/gold frames and sharp cyan primary. Preserve useful inline responses, no destination screen construction."
+    },
+    {
+      "area": "leader tables/view all",
+      "finding": "Headers/fonts and small Viewall outlines require closer reference matching. Keep non-overlapping edge ornaments, exact source names/YDS/TD and measured thin cyan separators."
+    },
+    {
+      "area": "navigation/footer",
+      "finding": "Reference bottom tray is cut metal rather than generic rounded frame; source footer must remain factual and usable, not false concept metadata."
+    }
+  ],
+  "functionalAcceptancePlan": [
+    "Source-bound fresh browser originals after source freeze",
+    "Exact 9-column conference/filter/sort/source values",
+    "All available weeks and visible stats context",
+    "Five-to-all leaders never invented",
+    "Inline future buttons click and Enter/Space, preview focus and close-focus restoration",
+    "Homeback/direct URL/reload",
+    "Native selects remain interactable despite clip/glow overlays",
+    "No horizontal overflow, hidden glyphs, broken local images, console or HTTP errors"
+  ]
+}

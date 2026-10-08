@@ -1,0 +1,360 @@
+{
+  "decision": "accepted",
+  "reviewer": "nfl_replica_controls",
+  "reviewedAt": "2026-10-08T04:45:07.980147+00:00",
+  "candidate": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+  "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "runtimeManifestFile": "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+  "runtimeFiles": 216,
+  "reference": {
+    "source": "Latest approved tall NFL dashboard image attached in this chat; personally inspected directly.",
+    "sourceBinaryAvailable": false,
+    "registeredPixelIdentityClaim": false,
+    "scope": "NFL Page 2 only; preserve compact Home framing, internal scroll, verified facts and future inline actions."
+  },
+  "beforeCritique": {
+    "report": {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/before-reference-review.json",
+      "sha256": "2cb2831ccfbd98075ebc022a09c028890d630ab4e419261f065bdc5cbe81ceec",
+      "bytes": 4050
+    },
+    "freshOriginalsPersonallyInspected": [
+      {
+        "file": "/workspace/recovery-qa/nfl-replica/mobile/before-native-chromium/nfl-393x852-top.png",
+        "sha256": "bd668eb5e92a322dabc3fa1e845e97e002a14577c1447e72b3f8e154205d2c18",
+        "bytes": 1068488,
+        "personallyInspectedOriginal": true
+      },
+      {
+        "file": "/workspace/recovery-qa/nfl-replica/mobile/before-native-chromium/nfl-430x896-full-content.png",
+        "sha256": "c9cd18e55935353d655570551ce514207f62d7cc43a6207179456ac22824b791",
+        "bytes": 1651990,
+        "personallyInspectedOriginal": true
+      }
+    ],
+    "issues": "Rounded generic controls, unequal tab widths, cramped initial spacing, narrow heading typography, weak metal/cyan rail detailing and broad helmet silhouettes were materially below the approved visual treatment."
+  },
+  "sectionNotes": [
+    {
+      "section": "Brand, league header and native week control",
+      "before": "The inherited rounded week select produced a generic oversized dark box, alongside narrow headings and a simpler flat medallion.",
+      "after": "Sharper locally bundled block type, layered native vector ring, faceted glass and cut gold/cyan framing match the approved hierarchy. Native week select is square, enclosed and center-hit tested; its source value survives change and restore.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Three primary tabs and AFC/NFC strip",
+      "before": "Primary rounded tabs had unequal flex widths and broad generic rounding; selected treatment needed stronger reference-like cobalt. An intermediate draft was specifically rejected when selected cobalt paint disappeared.",
+      "after": "Three equal grid tracks confirmed in both engines and sizes; chamfered double rails and visible electric cobalt make selection clear. Border shorthand and SVG slice fixes are present in the actual final PNGs. Native ArrowRight/End/Home behavior passes.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Standings heading, division/form/sort outlines",
+      "before": "Weak generic rounded boxes and repetitive coarse diagonal stripes reduced reference fidelity.",
+      "after": "Broader condensed block heading, dark faceted surface, cyan/gold perimeter and clean angular native control outlines. All four selects remain reachable and change/restore correctly with native focus. Labels do not overlap arrows.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Nine-column standings, form chips and Pittsburgh summary",
+      "before": "393px Team details wrapped and text arrows were less crisp. Name and number density lacked the reference polish.",
+      "after": "Every source cell remains aligned across nine columns; rank 9 for Pittsburgh is honestly preserved. The single-line Team details uses a genuine native SVG chevron. Summary metrics, chip colors, row separators and focus painting are legible without bloom over data.",
+      "decision": "accepted"
+    },
+    {
+      "section": "View all 16 teams, highlighted borders and diamonds",
+      "before": "Generic blue rectangular control and simplified large gems needed sharper framing.",
+      "after": "Centered readable label, crisp angular cyan rails and multifaceted local vector diamonds better match the reference. No text collision. Full-source table rows are checked independently in the adapted shared control suite.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Featured matchup and three actions",
+      "before": "Wide horizontal helmet silhouettes, broad plain surrounds and text chevrons felt less like the upright reference composition.",
+      "after": "Square upright locally bundled equipment, separately genuine team marks, constrained team names and bright VS improve reference proportion. Three angular action boxes have native SVG arrows and functional inline previews; source date and venue remain factual.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Top QB/RB/WR panels and View all buttons",
+      "before": "Player initials lacked readable spacing; condensed table weight and rounded buttons weakened the reference density.",
+      "after": "All fifteen displayed player rows match source names, full-name title, YDS and TD. Initial spacing is display-only. All three compact leader tables have consistent five-row geometry, bright framed headings and native vector action chevrons.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Native bottom, fixed navigation and source footer",
+      "before": "App enclosure behavior already worked and had to remain compact.",
+      "after": "Personally checked untouched natural scroll-2 originals in both engines and sizes: all five final WR rows and last cells can be read, the fixed navigation stays within the compact enclosure, internal scrolling reaches all panels, and source controls remain visible. No horizontal overflow. Home returns normally; four future nav actions stay inline with focus return.",
+      "decision": "accepted"
+    },
+    {
+      "section": "Source and page protections",
+      "before": "Approved data and Home/Steelers needed exact preservation.",
+      "after": "197 existing protected runtime files and complete Home/Steelers sections are byte-identical against shared fresh BEFORE; source current/player-history/provenance JSON remain exact. Only approved NFL assets/code changed; exactly three existing pages remain.",
+      "decision": "accepted"
+    }
+  ],
+  "commonOriginalsPersonallyInspected": [
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+      "sha256": "97253a3bfb4f38445ce3ade46867aba30f2e7c08a80dced3fb0f14826a294ea3",
+      "bytes": 1201984,
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "top",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+      "sha256": "374b009c884c023e928ffd70b05c01b1e0913f54d73c61dc7645edc2976e48c6",
+      "bytes": 1548821,
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "full-content",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+      "sha256": "4b4ad7b0182099ec5eec4f6177bf3cfdda572274ac9ee7eec299c77906710717",
+      "bytes": 992146,
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+      "sha256": "4512feb2f351bac3dfc996f5d944bc37f3aa3687eed53122554f3177f02bd6d6",
+      "bytes": 1339730,
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "top",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+      "sha256": "2bf1cffe7947b23675eb8b501460f81b4cc63ea97ab8092a7328c0cc2f186a3d",
+      "bytes": 1751223,
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "full-content",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+      "sha256": "26dc80086f63bb35842b16c5530a4d91aee2ed9b3fd7da7778cb3ebab2ab628e",
+      "bytes": 1121162,
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+      "sha256": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+      "bytes": 1154258,
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "top",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+      "sha256": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+      "bytes": 1448276,
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "full-content",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+      "sha256": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+      "bytes": 912879,
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "capture": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+      "sha256": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+      "bytes": 1289272,
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "top",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+      "sha256": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+      "bytes": 1632761,
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "full-content",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    },
+    {
+      "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+      "sha256": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f",
+      "bytes": 1042988,
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "capture": "scroll-2",
+      "personallyInspectedOriginal": true,
+      "editedOrComposited": false
+    }
+  ],
+  "keyboardFocusOriginalsPersonallyInspected": [
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-chromium/controls-393-keyboard-focus.png",
+      "sha256": "ccd6591b9535ab3ec6fb128d081c9e8aa167b5873e6ae610573618fea99bcb10",
+      "bytes": 1200331,
+      "engine": "chromium",
+      "personallyInspectedOriginal": true
+    },
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-chromium/controls-430-keyboard-focus.png",
+      "sha256": "fd8fa95cf4f3d18553c648d862a1fc0dad2bb44bb81fe492278d961a055e1f1e",
+      "bytes": 1337794,
+      "engine": "chromium",
+      "personallyInspectedOriginal": true
+    },
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-webkit/controls-393-keyboard-focus.png",
+      "sha256": "0fe21515a11576bfb1e90e20b04bd556cfcd0efdc463ff4f3d301cade4ee6333",
+      "bytes": 1153594,
+      "engine": "webkit",
+      "personallyInspectedOriginal": true
+    },
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-webkit/controls-430-keyboard-focus.png",
+      "sha256": "c8bd7f9d42d261c57477c4bf61553d723b33945a59bb915de371c1031f304d78",
+      "bytes": 1293533,
+      "engine": "webkit",
+      "personallyInspectedOriginal": true
+    }
+  ],
+  "focusedControlQA": [
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-chromium/results.json",
+      "sha256": "76d316100e4976bf4fd1ef0a868e4d37af9539aa09f01515ef134dc07ec4f274",
+      "bytes": 130825,
+      "engine": "chromium",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ],
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "runtimeMapEqualsFrozenManifest": true,
+      "summary": "Exact source rows/leaders and full-name titles, seven SVG chevrons, equal tabs, eight native keyboard inline actions with focus return, four native selects, tab arrow navigation, Home return, direct NFL load/reload, no runtime/console/network errors."
+    },
+    {
+      "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-natural-webkit/results.json",
+      "sha256": "f1a7660583b0c3b650ef1a0ec5327cca6611b99d1f654e15c8d6a4c7b304854a",
+      "bytes": 130051,
+      "engine": "webkit",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ],
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "runtimeMapEqualsFrozenManifest": true,
+      "summary": "Exact source rows/leaders and full-name titles, seven SVG chevrons, equal tabs, eight native keyboard inline actions with focus return, four native selects, tab arrow navigation, Home return, direct NFL load/reload, no runtime/console/network errors."
+    }
+  ],
+  "protectionEvidence": {
+    "file": "/workspace/recovery-qa/nfl-replica/controls/candidate2-owned-protection.json",
+    "sha256": "1a646aecc39296c2e7c52051cda5f4449284cdf72cb9d8abdf13a1a2004dcc13",
+    "bytes": 26002,
+    "status": "passed",
+    "protectedRuntimeFiles": 197,
+    "completeProtectedMarkup": {
+      "home": {
+        "byteIdentical": true,
+        "sha256": "cdafef2c84280a58dd7bc1c54d549ea6ec568afae19abe06f09807005202e724",
+        "bytes": 7661
+      },
+      "steelers": {
+        "byteIdentical": true,
+        "sha256": "b7addc79a84d88c7399143c95f69ab6d2cf607805d7fb6c14bd4e187d268247e",
+        "bytes": 6141
+      }
+    },
+    "exactUnmodifiedDataFiles": {
+      "assets/data/current.json": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+      "assets/data/player-history.json": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+      "assets/data/provenance.json": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5"
+    },
+    "threeExistingPagesOnly": true
+  },
+  "challengeCycle": [
+    "Rejected the first dark selected-tab chrome using actual native screenshot pixel paint; it was not accepted as a viewer issue. Selected cobalt and complete inner rails are now visible in the final originals.",
+    "Required equal tab tracks, one-line mobile Team details, genuine local SVG chevrons and display/source independence before accepting.",
+    "Preserved failed first QA-helper runs and the superseded candidate1 WebKit source guard failure; final acceptance rests only on fresh candidate2 results with exact stable raw manifest."
+  ],
+  "residuals": [
+    "The approved render contains illustrative standings and leaders. Verified source values and true Pittsburgh rank 9 differ deliberately; no data was fabricated or reordered to imitate the sample.",
+    "This is a materially closer implementation based on direct visual comparison to the chat render, not a registered pixel-identical reproduction of unavailable original image bytes.",
+    "QA used genuine desktop Chromium and WebKit with both requested mobile viewports at 2x. It is not a physical iPhone or measured 60fps certification; final publication/live-site verification belongs to the parent task."
+  ],
+  "blockers": [],
+  "runtimeEditsDuringFinalReview": false
+}

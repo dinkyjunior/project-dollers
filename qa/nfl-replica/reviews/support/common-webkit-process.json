@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "startedAt": "2026-10-08T04:30:28.774995+00:00",
+  "command": [
+    "node",
+    "/workspace/recovery-qa/nfl-replica/mobile/capture-frozen.cjs",
+    "--engine",
+    "webkit",
+    "--manifest",
+    "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+    "--freeze",
+    "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "--output",
+    "/workspace/project-dollers/qa/nfl-replica/common-webkit"
+  ],
+  "expectedRuntimeFreezeSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "runtimeFileCount": 216,
+  "watchdogSeconds": 900,
+  "qualification": "Durable real child-process stdout/exit record; no result or source substitution. Original runner report remains authoritative.",
+  "progress": [
+    {
+      "at": "2026-10-08T04:32:44.674098+00:00",
+      "line": "webkit 393 passed"
+    },
+    {
+      "at": "2026-10-08T04:34:39.193636+00:00",
+      "line": "webkit 430 passed"
+    },
+    {
+      "at": "2026-10-08T04:34:39.335502+00:00",
+      "line": "/workspace/project-dollers/qa/nfl-replica/common-webkit/results.json"
+    }
+  ],
+  "pid": 176161,
+  "lastHeartbeatAt": "2026-10-08T04:34:29.795544+00:00",
+  "exitCode": 0,
+  "completedAt": "2026-10-08T04:34:39.369256+00:00",
+  "elapsedSeconds": 250.59,
+  "runtimeUnchanged": true
+}

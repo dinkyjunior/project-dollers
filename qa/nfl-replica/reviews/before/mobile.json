@@ -1,0 +1,37 @@
+{
+  "status": "changes-required",
+  "reviewer": "nfl_replica_mobile_review",
+  "reviewedAt": "2026-10-08T03:11:36.455135+00:00",
+  "reference": "Latest reattached tall NFL dashboard chat image; approved binary is not locally available",
+  "personallyInspected": [
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-full.png",
+      "sha256": "ccb68edaa7d53c3228c76f921acb0d1320e77acef9c58811d68687bd88f4d2f1"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-393x852-top.png",
+      "sha256": "0cef34a57a4ff95cfca0f9a235bef35b01dd6d60eb855735735191610325c478"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-top.png",
+      "sha256": "5d3a48717145344da45279ed90919ea0c3a0d4279b9e825bd140e58bb052f284"
+    },
+    {
+      "file": "qa/nfl-diamond/final-refresh/captures/nfl-430x896-final.png",
+      "sha256": "8d024be0861887b84e658f017cb3c8fe04b335ee8872d205b8145e7e76f0ff7c"
+    }
+  ],
+  "scope": "NFL Page 2 only. Home, Steelers and Page 4 preserved. Compact Home enclosure and internal scrolling retained. Verified facts are not replaced by sample reference values.",
+  "visualGaps": [
+    "Nested cut-corner structural frame lacks reference depth; current simple rounded rail is generic.",
+    "Selected tabs and View all 16 button are uniform blue fills; reference shows illuminated angular surfaces.",
+    "NFL medallion uses plain blue disc rather than articulated rim/orbit.",
+    "Strong repeated diagonal stripes flatten card faces; reference uses quieter dimensional textures.",
+    "Plain narrow condensed typography lacks reference width and block heading edge definition.",
+    "Matchup helmets are oversized with weak plain VS; stadium breathing room and stronger angled hierarchy needed.",
+    "Full content rhythm is taller/looser than reference; control/row spacing and extra context lines need tighter handling.",
+    "Footer Sources row has excess prominence relative to compact reference footer."
+  ],
+  "viewerQualification": "430 final initially appeared to omit logos in cached image viewer. Exact byte-identical SHA-named alias displayed all correctly. This is not considered a proven native runtime defect.",
+  "gate": "Inspect new untouched 393/430 native top, full, lower and settled PNGs after frozen runtime; test native Chromium and WebKit, controls, glyphs, overflow, sources/refresh/direct load, motion and Page 3 regression before acceptance."
+}

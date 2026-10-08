@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-08T03:58:43.300661+00:00",
+  "qualification": "Recorded observed successful command outputs from this pass; relevant data/update inputs remain byte-identical before and after NFL visual refinements. This does not replace native UI QA.",
+  "sourceInputs": {
+    "assets/data/current.json": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+    "assets/data/player-history.json": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+    "assets/data/provenance.json": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+    "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07"
+  },
+  "commands": [
+    {
+      "command": "npm run test:data",
+      "exitCode": 0,
+      "tests": 22
+    },
+    {
+      "command": "npm run test:sources",
+      "exitCode": 0,
+      "tests": 7
+    },
+    {
+      "command": "npm run test:updates",
+      "exitCode": 0,
+      "behaviorGroups": 8
+    }
+  ]
+}
