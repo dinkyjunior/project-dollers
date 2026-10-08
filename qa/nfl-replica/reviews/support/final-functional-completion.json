@@ -1,0 +1,165 @@
+{
+  "reviewer": "nfl_replica_mobile_review",
+  "decision": "accepted",
+  "status": "passed",
+  "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "runtimeFileCount": 216,
+  "sourceManifest": "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+  "runtimeUnchanged": true,
+  "completedAt": "2026-10-08T04:46:55.183Z",
+  "visualReceipt": "/workspace/recovery-qa/nfl-replica/mobile/final-review.json",
+  "visualReceiptSha256": "e2dbc27657fde88aa2710a008e1b45914bb24c656fa9d4d64e4139425e8d5042",
+  "reports": [
+    {
+      "engine": "chromium",
+      "report": "/workspace/project-dollers/qa/nfl-replica/after-retry-chromium/results.json",
+      "reportSha256": "b9703dcc3fb91d5a41ae36ac31ed065fd8909d5834487ce5c336c311e71864a8",
+      "process": "/workspace/recovery-qa/nfl-replica/mobile/after-retry-chromium.process.json",
+      "processSha256": "589a0e3cb3fa12169386ba3c246151526a466e590cb6d037a2d333b95a165021",
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "exitCode": 0,
+      "elapsedSeconds": 258.79,
+      "completedAt": "2026-10-08T04:34:47.535Z",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "motion",
+            "page3",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "motion",
+            "page3",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 700
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "motion",
+            "page3",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "report": "/workspace/project-dollers/qa/nfl-replica/after-retry-webkit/results.json",
+      "reportSha256": "34a0a1cb1c5056daa6981828a3c20e31cbe174b94427b8dcf9e133857bb347bd",
+      "process": "/workspace/recovery-qa/nfl-replica/mobile/after-retry-webkit.process.json",
+      "processSha256": "f30d28692c3aa8f60b5c1e04dbd342e67abf03b926c5e6f3b84ee16fc64298b4",
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "exitCode": 0,
+      "elapsedSeconds": 645.41,
+      "completedAt": "2026-10-08T04:46:55.183Z",
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "motion",
+            "page3",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "testedSections": [
+            "initialGeometry",
+            "images",
+            "controls",
+            "motion",
+            "page3",
+            "directLoadReload",
+            "finalVisibleImages",
+            "errors"
+          ]
+        }
+      ]
+    }
+  ],
+  "qualification": [
+    "These complete native browser reports supersede no prior records; incomplete initial reports remain preserved.",
+    "Chromium: five sizes including both phones,320 mobile,tablet anddesktop. WebKit: both requested phones.",
+    "Each mobile case includes natural clock and paint motion, original Page3 roster/history/perimeter regression, verifieddata controls, directload/refresh and image/network/error/overflow checks.",
+    "No source or site data substitution; no physical iPhone or registered pixel-identity claim.",
+    "This receipt validates candidate2 RAW674 only. Later rebase/deployment requires a distinct audited effective manifest and hosted evidence."
+  ],
+  "blockingFindings": []
+}

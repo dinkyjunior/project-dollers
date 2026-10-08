@@ -1,0 +1,104 @@
+{
+  "reviewer": "/root/nfl_replica_chrome",
+  "decision": "accepted",
+  "status": "accepted-supplemental-source-integration",
+  "reviewedAt": "2026-10-08T04:52:03.527879+00:00",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "publishedRuntimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "originalRuntimeManifestPath": "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+  "publishedRuntimeManifestPath": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "incomingAuditPath": "/workspace/project-dollers/qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+  "incomingAuditSha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+  "incomingCommit": "aacb047fe5632a9dcde35410613ffab6b1ec095b",
+  "originalCandidateCommit": "83414b7fdcb9b6d72cdcc9b454bd78e70ce46553",
+  "runtimeFileCount": 216,
+  "nondataFilesExactlyRetained": 213,
+  "actualRuntimeMatchesPublishedManifest": true,
+  "manifestFileKeysUnchanged": true,
+  "changedRuntimePaths": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "strictChangedLeaves": 1806,
+  "factualChanges": 0,
+  "structuralChanges": 0,
+  "files": [
+    {
+      "file": "assets/data/current.json",
+      "reviewedRawSha256": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+      "publishedRawSha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e",
+      "publishedActualMatchesIncomingCommit": true,
+      "changedLeaves": 362,
+      "metadataCategories": {
+        "retrieval-timestamp": 103,
+        "generation-timestamp": 2,
+        "next-refresh-threshold": 1,
+        "verification-check-timestamp": 90,
+        "source-checksum-map": 160,
+        "provider-entity-validator": 1,
+        "content-checksum": 5
+      },
+      "factualChanges": 0,
+      "typeChanges": 0,
+      "objectKeyChanges": 0,
+      "orderedArrayShapeChanges": 0,
+      "independentChangesExactlyMatchPeerAudit": true
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "reviewedRawSha256": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+      "publishedRawSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+      "publishedActualMatchesIncomingCommit": true,
+      "changedLeaves": 1415,
+      "metadataCategories": {
+        "generation-timestamp": 1,
+        "source-checksum-map": 1,
+        "retrieval-timestamp": 139,
+        "schedule-retrieval-timestamp": 1272,
+        "provider-entity-validator": 1,
+        "content-checksum": 1
+      },
+      "factualChanges": 0,
+      "typeChanges": 0,
+      "objectKeyChanges": 0,
+      "orderedArrayShapeChanges": 0,
+      "independentChangesExactlyMatchPeerAudit": true
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "reviewedRawSha256": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+      "publishedRawSha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b",
+      "publishedActualMatchesIncomingCommit": true,
+      "changedLeaves": 29,
+      "metadataCategories": {
+        "generation-timestamp": 1,
+        "retrieval-timestamp": 10,
+        "canonical-snapshot-checksum": 1,
+        "provider-entity-validator": 1,
+        "content-checksum": 4,
+        "verification-check-timestamp": 11,
+        "history-content-checksum": 1
+      },
+      "factualChanges": 0,
+      "typeChanges": 0,
+      "objectKeyChanges": 0,
+      "orderedArrayShapeChanges": 0,
+      "independentChangesExactlyMatchPeerAudit": true
+    }
+  ],
+  "verificationMethod": "Independently SHA256-hashed complete actual index.html/assets runtime map once; compared every reviewed/published manifest key and byte hash; loaded original candidate and incoming Git object bytes for each of exactly three changed JSON files; recursively compared strict types, object keys, ordered array lengths and all leaf values. Individually classified all changed leaves, then checked their paths/old/new/categories against peer audit.",
+  "qualification": "Only freshness/retrieval timestamps, provider validators and checksum metadata change. Normalized standings, records, roster, player statistics, matchup names, source identities/statuses and ordered data shapes are identical. Source-footer retrieval time and source-dialog freshness/provenance values can update. Changed provider raw hashes do not establish raw provider response identity; acceptance concerns normalized app facts and preserved reviewed code/assets.",
+  "originalVisualAcceptance": {
+    "path": "/workspace/recovery-qa/nfl-replica/chrome/final-review.json",
+    "sha256": "9431b19be2281cdfd969f78a54e06482deed8db1f82d6b2676da293ea22404fa",
+    "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "retained": true,
+    "relabelledAsPublishedScreenshots": false
+  },
+  "noNewBrowserCaptureClaim": true,
+  "runtimeFilesEdited": false,
+  "browserWritesPerformed": false,
+  "networkOrExternalMutation": false
+}

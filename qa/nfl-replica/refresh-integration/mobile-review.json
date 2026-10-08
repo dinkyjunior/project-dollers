@@ -1,0 +1,49 @@
+{
+  "reviewer": "nfl_replica_mobile_review",
+  "decision": "accepted-integration-source",
+  "reviewedAt": "2026-10-08T04:50:23.933669+00:00",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeFileCount": 216,
+  "originalAcceptanceManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "exactNonDataRuntimeHashesPreserved": 213,
+  "changedRuntimeFiles": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "allIntegratedRuntimeFilesMatchPublishedManifest": true,
+  "incomingCommit": "aacb047fe5632a9dcde35410613ffab6b1ec095b",
+  "currentGitHead": "0ba9d700322d7bbb6a7940c810e185cc0a64a18b",
+  "independentIncomingAudit": "/workspace/project-dollers/qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+  "independentIncomingAuditSha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+  "recheckedGitBlobAndMetadataProof": [
+    {
+      "file": "assets/data/current.json",
+      "actualMatchesIncomingGitBytes": true,
+      "typesKeysArrayLengthsAndOrderingPreserved": true,
+      "independentlyEnumeratedChangedLeaves": 362,
+      "exactlyMatchesClassifiedMetadataAudit": true,
+      "sha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e"
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "actualMatchesIncomingGitBytes": true,
+      "typesKeysArrayLengthsAndOrderingPreserved": true,
+      "independentlyEnumeratedChangedLeaves": 1415,
+      "exactlyMatchesClassifiedMetadataAudit": true,
+      "sha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a"
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "actualMatchesIncomingGitBytes": true,
+      "typesKeysArrayLengthsAndOrderingPreserved": true,
+      "independentlyEnumeratedChangedLeaves": 29,
+      "exactlyMatchesClassifiedMetadataAudit": true,
+      "sha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b"
+    }
+  ],
+  "totalChangedMetadataLeaves": 1806,
+  "newRetrievalTimestamp": "2026-10-08T04:21:34Z",
+  "qualification": "Original RAW674 visual/common/broad-browser receipts remain immutable and bound to that source. Integrated source preserves all213 nondata bytes and exact factual/structural data; a new actual hosted run against this distinct manifest remains required. No app or source data replacement was performed.",
+  "hostedVerification": "pending-publication-notification"
+}

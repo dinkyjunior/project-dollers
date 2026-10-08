@@ -1,0 +1,169 @@
+{
+  "decision": "accepted",
+  "reviewer": "/root/nfl_replica_geometry",
+  "reviewedAt": "2026-10-08T04:50:08.893618+00:00",
+  "scope": "Supplemental source integration gate after original exact-source visual acceptance. No new layout/design acceptance asserted from reused images.",
+  "gitHead": "0ba9d700322d7bbb6a7940c810e185cc0a64a18b",
+  "integratedIncomingCommit": "aacb047fe5632a9dcde35410613ffab6b1ec095b",
+  "runtimeManifestFile": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeManifestSha256Definition": "SHA256 of exact raw published manifest file bytes.",
+  "runtimeFileCount": 216,
+  "actualRuntimeManifestExactMatch": true,
+  "originalRuntimeManifestFile": "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "originalRawManifestPreserved": true,
+  "exactChangedFiles": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "unchangedNonDataRuntimeFileCount": 213,
+  "all213NonDataFilesByteIdenticalToOriginalVisualFreeze": true,
+  "integratedDataFiles": [
+    {
+      "file": "assets/data/current.json",
+      "actualSha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e",
+      "originalSha256": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+      "incomingGitBlobSha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e",
+      "actualBytes": 1277796,
+      "exactIncomingGitBlobMatch": true,
+      "strictRecursiveAuditMetadataChanges": 362,
+      "factualChanges": 0,
+      "structuralChanges": 0
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "actualSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+      "originalSha256": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+      "incomingGitBlobSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+      "actualBytes": 7099921,
+      "exactIncomingGitBlobMatch": true,
+      "strictRecursiveAuditMetadataChanges": 1415,
+      "factualChanges": 0,
+      "structuralChanges": 0
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "actualSha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b",
+      "originalSha256": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+      "incomingGitBlobSha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b",
+      "actualBytes": 33511,
+      "exactIncomingGitBlobMatch": true,
+      "strictRecursiveAuditMetadataChanges": 29,
+      "factualChanges": 0,
+      "structuralChanges": 0
+    }
+  ],
+  "strictSourceAudit": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+    "sha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+    "status": "passed-metadata-only-audit",
+    "metadataChangedLeaves": 1806,
+    "factualChangedLeaves": 0,
+    "typeKeyOrCollectionShapeChanges": 0,
+    "qualification": "Incoming normalized application facts compare strictly equal at every nonmetadata leaf and ordered structure. Provider raw content checksums changed; raw remote entity equality is not claimed."
+  },
+  "actualIntegratedDataValidation": {
+    "snapshotStatus": "passed",
+    "historyStatus": "passed",
+    "season": 2026,
+    "currentWeek": 5,
+    "throughWeek": 4,
+    "teamCount": 32,
+    "rosterCount": 79,
+    "historyPlayerCount": 79,
+    "historyGameRows": 1272,
+    "canonicalSnapshotSha256": "5a51e606ecb0dde4334ddcb13bf57d0c48682343137b9a511ef903d3acfadfc0",
+    "canonicalProvenanceChecksumMatch": true,
+    "historyRawSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+    "historySnapshotProvenanceChecksumMatch": true,
+    "sourcesAndDatasetProvenanceMatch": true,
+    "validatorOutputsMatchSavedProvenance": true,
+    "historyCurrentSourceHashesAndTimestampsMatch": true,
+    "validatorFile": "scripts/refresh-data.py",
+    "validatorSha256": "0c1505564641bc83d541188d011f19941ef2e7c906c3c4a19df8a3dced48c40f",
+    "networkFetched": false
+  },
+  "originalVisualAcceptance": {
+    "file": "/workspace/recovery-qa/nfl-replica/geometry/final-review.json",
+    "sha256": "9be77ac6708f8c3205bc7c36c0b1981ef5e08e812e175df0e19d43a11bbbeab4",
+    "decision": "accepted",
+    "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "twelveOriginalScreenshotHashesPreserved": true,
+    "screenshots": [
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-top.png",
+        "sha256": "97253a3bfb4f38445ce3ade46867aba30f2e7c08a80dced3fb0f14826a294ea3",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-full-content.png",
+        "sha256": "374b009c884c023e928ffd70b05c01b1e0913f54d73c61dc7645edc2976e48c6",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-top.png",
+        "sha256": "4512feb2f351bac3dfc996f5d944bc37f3aa3687eed53122554f3177f02bd6d6",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-full-content.png",
+        "sha256": "2bf1cffe7947b23675eb8b501460f81b4cc63ea97ab8092a7328c0cc2f186a3d",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-top.png",
+        "sha256": "21d2926cf0655886bc2e80f9e9f54dd65e7349a6f316d713c8cb458c0b0b12e6",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-full-content.png",
+        "sha256": "f9ac6803fa67597d17ee71385727c4173b88be2b6aa4c770775f783b46d67183",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-top.png",
+        "sha256": "29416c17cc52c84a7a6e7636c35273049da1dea9f751d72dd266580beff99c33",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-full-content.png",
+        "sha256": "72acabdd8b44d728908f880d01eefd9e67c70277d0ec8a1dec9176b480a08278",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-393x852-scroll-2.png",
+        "sha256": "4b4ad7b0182099ec5eec4f6177bf3cfdda572274ac9ee7eec299c77906710717",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-chromium/nfl-430x896-scroll-2.png",
+        "sha256": "26dc80086f63bb35842b16c5530a4d91aee2ed9b3fd7da7778cb3ebab2ab628e",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-393x852-scroll-2.png",
+        "sha256": "bca051be60255a7260e99f3d06c221bb94345e12973c59b3b4e55e20203fa509",
+        "originalExactHashPreserved": true
+      },
+      {
+        "file": "/workspace/project-dollers/qa/nfl-replica/common-webkit/nfl-430x896-scroll-2.png",
+        "sha256": "48b25c3bf9ce2f5c1adaad23b55b03bb7d7df9a169ffddc51dd372671057297f",
+        "originalExactHashPreserved": true
+      }
+    ],
+    "qualification": "The original 12 screenshot acceptance remains bound to the original 674 manifest only. All 213 nondata runtime files and normalized facts are unchanged, so this supplemental gate preserves its geometry conclusions without relabeling those old screenshots as new-source captures."
+  },
+  "displayImpactQualification": {
+    "currentRetrievedAt": "2026-10-08T04:21:34Z",
+    "generatedAt": "2026-10-08T04:21:36Z",
+    "historicalArchiveRetrievedAt": "2026-10-07T06:25:45Z",
+    "visibleChanges": "Footer and source-dialog retrieval time, verification/check timestamps and provider provenance hashes. Facts, standings order, leader rows, roster membership, controls, layout, artwork and motion source bytes remain unchanged.",
+    "currentContextUnchanged": "2026 season, current Week 5, through Week 4",
+    "freshHostedVerificationRequired": "Root and mobile reviewer will verify the actual served final runtime and current retrieval metadata after deployment; this receipt does not claim hosted verification."
+  },
+  "runtimeWritesDuringReview": false,
+  "browserSuiteDuplicated": false,
+  "blockers": []
+}

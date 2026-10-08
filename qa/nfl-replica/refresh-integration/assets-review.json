@@ -1,0 +1,83 @@
+{
+  "reviewer": "/root/nfl_replica_assets",
+  "reviewedAt": "2026-10-08T04:50:25.082589+00:00",
+  "decision": "accepted",
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "publishedRuntimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "originalManifestPath": "/workspace/project-dollers/qa/nfl-replica/after-runtime-manifest.json",
+  "publishedManifestPath": "/workspace/project-dollers/qa/nfl-replica/published-runtime-manifest.json",
+  "incomingAuditPath": "/workspace/project-dollers/qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+  "incomingAuditSha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+  "verification": "Independently compared both 216-file maps, hashed all current runtime files, verified every 213 unchanged non-data byte hash, then recursively compared original committed JSON bytes against each published JSON file with strict types, object key sets and ordered-array lengths. This does not merely inherit the incoming audit conclusion.",
+  "runtimeFileCount": 216,
+  "unchangedNonDataFiles": 213,
+  "unchangedFontAndArtworkFiles": 178,
+  "assetProvenanceEntriesVerified": 17,
+  "changedFiles": [
+    {
+      "file": "assets/data/current.json",
+      "oldRawSha256": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+      "publishedRawSha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e",
+      "strictChangedLeaves": 362,
+      "factualChanges": 0,
+      "typeOrShapeChanges": 0,
+      "metadataLeafNames": [
+        "checkedAt",
+        "espn_athlete_4431424",
+        "espn_steelers_roster",
+        "etag",
+        "generatedAt",
+        "nflverse_games",
+        "official_steelers_roster",
+        "refreshAfter",
+        "retrievedAt",
+        "sha256"
+      ]
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "oldRawSha256": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+      "publishedRawSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+      "strictChangedLeaves": 1415,
+      "factualChanges": 0,
+      "typeOrShapeChanges": 0,
+      "metadataLeafNames": [
+        "etag",
+        "generatedAt",
+        "nflverse_games",
+        "retrievedAt",
+        "scheduleRetrievedAt",
+        "sha256"
+      ]
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "oldRawSha256": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+      "publishedRawSha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b",
+      "strictChangedLeaves": 29,
+      "factualChanges": 0,
+      "typeOrShapeChanges": 0,
+      "metadataLeafNames": [
+        "checkedAt",
+        "etag",
+        "generatedAt",
+        "playerHistorySha256",
+        "retrievedAt",
+        "sha256",
+        "snapshotSha256CanonicalJson"
+      ]
+    }
+  ],
+  "metadataChangedLeaves": 1806,
+  "factualChanges": 0,
+  "typeChanges": 0,
+  "structureChanges": 0,
+  "original12ReviewedScreenshotsUnchanged": true,
+  "unchangedAssets": "All reviewed artwork, font, vector, stylesheet, JavaScript and markup bytes match the original accepted visual candidate. All 17 asset provenance entries match their exact asset bytes.",
+  "qualification": "Only source retrieval/generation/check timestamps, next refresh thresholds, provider validators, source byte counts and checksum metadata changed. Source-footer timestamp display may differ from the earlier visual screenshots. Normalized football facts, data types and collection shapes are unchanged. Provider raw hashes can change without normalized facts changing; this is not a claim that raw remote source entities were identical.",
+  "publicationQualification": "This supplemental asset/source acceptance is bound to the published runtime map, preserves original visual evidence and authorizes no runtime or browser edits. Hosted deployment verification remains the parent task.",
+  "runtimeWrites": false,
+  "browserWrites": false,
+  "blockers": []
+}

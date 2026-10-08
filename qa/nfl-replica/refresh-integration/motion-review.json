@@ -1,0 +1,75 @@
+{
+  "reviewer": "nfl_replica_motion",
+  "decision": "accepted",
+  "status": "passed",
+  "reviewedAt": "2026-10-08T04:51:12.194826+00:00",
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "publishedRuntimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "runtimeFileCount": 216,
+  "incomingAudit": {
+    "file": "/workspace/project-dollers/qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+    "sha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+    "baselineCommit": "7c3eba4713c346521732f6c1f0ac523d717a30d7",
+    "incomingCommit": "aacb047fe5632a9dcde35410613ffab6b1ec095b",
+    "metadataLeavesChanged": 1806,
+    "factualChanges": 0,
+    "structuralChanges": 0
+  },
+  "independentActualSourceCheck": {
+    "all216CurrentFilesEqualPublishedMap": true,
+    "sameRuntimePathSet": true,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json"
+    ],
+    "unchangedRuntimeFiles": 213,
+    "unchangedFilesOutsideAssetsData": 211,
+    "unchangedDataFiles": 2,
+    "all211NonDataFilesExactReviewedBytes": true,
+    "motionStylesheetExactReviewedBytes": true,
+    "motionControllerExactReviewedBytes": true,
+    "independentMethod": "Decoded old and incoming committed JSON blobs. Recursively compared exact Python JSON types, object key sets and ordered array lengths/values. Verified all1806 differing primitive leaves exactly match the audit entries and only approved metadata keys or source-checksum maps. No factual values or shapes were ignored. Actual published data bytes equal the audited incoming blobs.",
+    "dataFiles": [
+      {
+        "file": "assets/data/current.json",
+        "oldSha256": "8b23b3fa045ce919946598148553ebded39ba625f2e8ef999b7b328ef8460a75",
+        "publishedSha256": "63a1ce039e7226b4008797f3941c9e1629dd283a6a7b9e3b5a9edf0ae39d665e",
+        "independentlyComparedMetadataLeaves": 362,
+        "factualChanges": 0,
+        "typeOrShapeChanges": 0,
+        "publishedBytesEqualIncomingBlob": true
+      },
+      {
+        "file": "assets/data/player-history.json",
+        "oldSha256": "7115bfe397e917f4d22b7d0d12908e7ce50f9b8d46e2a88777667235dad1db3e",
+        "publishedSha256": "42a1d6a182c57f09a9e022d0148c9bea94adc0e6775907aab0f57ef891228e8a",
+        "independentlyComparedMetadataLeaves": 1415,
+        "factualChanges": 0,
+        "typeOrShapeChanges": 0,
+        "publishedBytesEqualIncomingBlob": true
+      },
+      {
+        "file": "assets/data/provenance.json",
+        "oldSha256": "1702f3fbcf983620bab302f5c883f1469d9ce4f2d1cd9d292afb667980206ee5",
+        "publishedSha256": "0913be845de6b879cfff4844e39d15c51973b26df50a20a69347c93dce13ac9b",
+        "independentlyComparedMetadataLeaves": 29,
+        "factualChanges": 0,
+        "typeOrShapeChanges": 0,
+        "publishedBytesEqualIncomingBlob": true
+      }
+    ]
+  },
+  "preservedOriginalReview": {
+    "file": "/workspace/recovery-qa/nfl-replica/motion/final-review.json",
+    "sha256": "c9c3616cfc346748192f31e2696d9b7998a9783cad385a26343d48b67551c6ee",
+    "decision": "accepted",
+    "runtimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+    "personallyViewedOriginalPNGs": 12,
+    "originalReviewUnmodified": true
+  },
+  "qualification": "Original twelve image reviews,24-natural-path motion proof and complete native browser receipts remain bound to original674 data bytes. This supplemental acceptance does not relabel them as browser runs on publishedf162. The actual motion/controller/chrome/geometry/art/font source is byte-identical; changed retrieval/check/provider/checksum metadata can update source/footer time. Provider raw entities may differ even though normalized application sports facts/types/shapes do not. No new browser run or physical-device performance claim.",
+  "runtimeEdits": false,
+  "browserOrNetworkWrites": false,
+  "blockingFindings": []
+}

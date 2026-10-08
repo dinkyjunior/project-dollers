@@ -1,0 +1,77 @@
+{
+  "status": "all_six_reviews_accepted",
+  "recordedAt": "2026-10-08T04:53:10.415954+00:00",
+  "originalRuntimeManifestSha256": "674253c96429997b1afafeed5b89e903baa544586867b1069509d1d626ce3286",
+  "publishedRuntimeManifestSha256": "f162bd181a850f3a2dd568050016d6d50f8864172d6b86e44858e9cca465068c",
+  "incomingCommit": "aacb047fe5632a9dcde35410613ffab6b1ec095b",
+  "incomingAudit": "qa/nfl-replica/refresh-integration/incoming-aacb047.json",
+  "incomingAuditSha256": "40cc80c933ceb791506ee8d8a509f62ee3ea2fa31c49a49e6d0eb7fb634e6c0a",
+  "changedRuntimeFiles": [
+    "assets/data/current.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "metadataChanges": 1806,
+  "factualChanges": 0,
+  "structuralChanges": 0,
+  "unchangedOtherRuntimeFiles": 213,
+  "unchangedOutsideDataDirectory": 211,
+  "unchangedRetainedDataFiles": 2,
+  "reviewers": [
+    {
+      "name": "geometry",
+      "decision": "accepted",
+      "originalDecision": "accepted",
+      "evidence": "qa/nfl-replica/refresh-integration/geometry-review.json",
+      "evidenceSha256": "1fd4f00fd54ec4539b1700b213eb5da092012946a9fff6f75d953844f468abad"
+    },
+    {
+      "name": "chrome",
+      "decision": "accepted",
+      "originalDecision": "accepted",
+      "evidence": "qa/nfl-replica/refresh-integration/chrome-review.json",
+      "evidenceSha256": "2a216d3474d621f5143c7af04131f73f0515551614ea9430b5226373dd56e0cd"
+    },
+    {
+      "name": "assets",
+      "decision": "accepted",
+      "originalDecision": "accepted",
+      "evidence": "qa/nfl-replica/refresh-integration/assets-review.json",
+      "evidenceSha256": "7b38be9ce6511ead8d6e99dcc6bae25ec4febbc89e3a0cdbfccfe9635cf6d7ad"
+    },
+    {
+      "name": "motion",
+      "decision": "accepted",
+      "originalDecision": "accepted",
+      "evidence": "qa/nfl-replica/refresh-integration/motion-review.json",
+      "evidenceSha256": "564d922f6f6b2e6dc21466a2083b318b415785f1434f91b702f4a148b7b0d11f"
+    },
+    {
+      "name": "controls",
+      "decision": "accepted",
+      "originalDecision": "accepted",
+      "evidence": "qa/nfl-replica/refresh-integration/controls-review.json",
+      "evidenceSha256": "2ce41ff59b2d7e969d078cf9b282e96f9f6d8237f757c50c770cde4b62110691"
+    },
+    {
+      "name": "mobile",
+      "decision": "accepted",
+      "originalDecision": "accepted-integration-source",
+      "evidence": "qa/nfl-replica/refresh-integration/mobile-review.json",
+      "evidenceSha256": "3972d328afd2a8e12337eb7d7167ec4a7de1805e920d6b4929b93709f354c31e"
+    }
+  ],
+  "targetedNativeRefreshChecks": [
+    {
+      "file": "qa/nfl-replica/refresh-integration/local-chromium/results.json",
+      "sha256": "08c7753e3cb875e8db93ce0615c6206d74c78eff987b7709921e48f3be7b1177",
+      "status": "passed"
+    },
+    {
+      "file": "qa/nfl-replica/refresh-integration/local-webkit/results.json",
+      "sha256": "e18929630b820c3f98e59fbc044a493c89cf7f1c5ad337a90dd5f67e1b48a629",
+      "status": "passed"
+    }
+  ],
+  "qualification": "Original complete suites/visual screenshots remain immutable and bind original source only. All six supplemental source reviews confirm every other application byte and every factual/structural data value unchanged. Fresh native manual refresh/direct reload verifies the effective source at both phones in both engines; actual hosted verification follows separately."
+}

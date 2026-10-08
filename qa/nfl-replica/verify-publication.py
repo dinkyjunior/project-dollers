@@ -52,7 +52,7 @@ def main():
     for row in integration["reviewers"]:
         assert row["decision"] == "accepted"
         assert sha((ROOT / row["evidence"]).read_bytes()) == row["evidenceSha256"]
-    assert integration["nonDataRuntimeFilesUnchanged"] == len(manifest) - len(changed)
+    assert integration["unchangedOtherRuntimeFiles"] == len(manifest) - len(changed)
     for file, expected in manifest.items():
         assert sha((ROOT / file).read_bytes()) == expected, file
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
