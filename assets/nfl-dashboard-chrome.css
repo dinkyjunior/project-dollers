@@ -1,0 +1,120 @@
+/* Page 2 only: native scalable metal rails and chamfered control edges.
+   Nine-slice vector painting preserves live content and existing hit areas. */
+.nfl-premium-dashboard .nfl-framed {
+  --nfl-panel-glass: linear-gradient(125deg, #020912f7, #061527f7 47%, #01070ff7);
+  border-radius: 0;
+  border-image: url("nfl-dashboard/frame-rail.svg") 32 fill / 14px / 4px stretch;
+  background: none;
+  box-shadow: 0 0 2px #8af6ffc2, 0 0 7px #008cffc2, 0 0 14px #005fff75, 0 0 21px #003dff26;
+}
+.nfl-premium-dashboard .nfl-framed::before {
+  inset: -2px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+  z-index: -1;
+}
+.nfl-premium-dashboard .nfl-bevel-corner { visibility: hidden; }
+.nfl-premium-dashboard .nfl-frame-shimmer {
+  inset: -2px;
+  border-radius: 0;
+  clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0 calc(100% - 9px), 0 9px);
+}
+.nfl-premium-dashboard .primary-tabs button,
+.nfl-premium-dashboard .conference-toggle button,
+.nfl-premium-dashboard .week-select,
+.nfl-premium-dashboard .nfl-standings-filters label,
+.nfl-premium-dashboard .nfl-detail-button,
+.nfl-premium-dashboard .nfl-all-teams,
+.nfl-premium-dashboard .nfl-matchup-action,
+.nfl-premium-dashboard .nfl-view-all {
+  border-color: transparent;
+  border-radius: 0;
+  border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 6px / 0 stretch;
+  background: none;
+  box-shadow: 0 0 3px #008bd95c, 0 0 6px #0048b233;
+}
+.nfl-premium-dashboard .primary-tabs button[aria-selected="true"],
+.nfl-premium-dashboard .conference-toggle button[aria-pressed="true"],
+.nfl-premium-dashboard .nfl-all-teams,
+.nfl-premium-dashboard .nfl-matchup-action:first-child {
+  border-color: transparent;
+  border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 6px / 0 stretch;
+  background: none;
+  box-shadow: 0 0 2px #ccffffd9, 0 0 7px #00aeffde, 0 0 12px #0659ff9c;
+  color: #fff;
+  text-shadow: 0 1px 1px #001532;
+}
+.nfl-premium-dashboard .nfl-matchup-action:not(:first-child) {
+  border-color: transparent;
+  border-image: url("nfl-dashboard/control-gold.svg") 18 fill / 6px / 0 stretch;
+  background: none;
+  box-shadow: 0 0 3px #ffe39a66, 0 0 6px #cc8a2433;
+}
+.nfl-premium-dashboard .week-select,
+.nfl-premium-dashboard .nfl-standings-filters .nfl-sort-control,
+.nfl-premium-dashboard .nfl-view-all {
+  border-color: transparent;
+  box-shadow: 0 0 2px #bafcffb3, 0 0 6px #029affad, 0 0 10px #004dff42;
+}
+.nfl-premium-dashboard .week-select select,
+.nfl-premium-dashboard .nfl-standings-filters select {
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.nfl-premium-dashboard .nfl-view-all { border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 6px / 0 stretch; }
+.nfl-premium-dashboard .nfl-view-all::before,
+.nfl-premium-dashboard .nfl-view-all::after,
+.nfl-premium-dashboard .nfl-diamond-glint { background-image: url("nfl-dashboard/diamond-premium.svg"); }
+.nfl-premium-dashboard .nfl-all-teams::before,
+.nfl-premium-dashboard .nfl-all-teams::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  width: 13px;
+  height: 18px;
+  background: url("nfl-dashboard/diamond-premium.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 3px #25cfff);
+  pointer-events: none;
+}
+.nfl-premium-dashboard .nfl-all-teams::before { left: 24%; }
+.nfl-premium-dashboard .nfl-all-teams::after { right: 24%; }
+.nfl-premium-dashboard .nfl-matchup-action:first-child { position: relative; }
+.nfl-premium-dashboard .nfl-matchup-action:first-child::before,
+.nfl-premium-dashboard .nfl-matchup-action:first-child::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 8px);
+  width: 11px;
+  height: 16px;
+  background: url("nfl-dashboard/diamond-premium.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 3px #25cfff);
+  pointer-events: none;
+}
+.nfl-premium-dashboard .nfl-matchup-action:first-child::before { left: -4px; }
+.nfl-premium-dashboard .nfl-matchup-action:first-child::after { right: -4px; }
+.nfl-premium-dashboard .nfl-matchup-art::after {
+  background-image: url("nfl-dashboard/diamond-premium.svg"), url("nfl-dashboard/diamond-premium.svg"), url("nfl-dashboard/diamond-premium.svg"), url("nfl-dashboard/diamond-premium.svg"), url("nfl-dashboard/diamond-premium.svg"), url("nfl-dashboard/diamond-premium.svg");
+}
+.nfl-premium-dashboard .standings,
+.nfl-premium-dashboard .nfl-team-summary,
+.nfl-premium-dashboard .leader-columns,
+.nfl-premium-dashboard .leader-row:last-of-type { border-radius: 0; }
+.nfl-premium-dashboard .standings { border-color: #257c9f; box-shadow: 0 0 4px #008ce72e; }
+.nfl-premium-dashboard .nfl-team-summary { border-color: #27d8f5; box-shadow: inset 0 0 6px #006de54d; }
+.nfl-premium-dashboard .form-chip { border-radius: 2px; box-shadow: inset 0 1px 1px #cdfff53d, 0 0 2px #007f733b; }
+.nfl-premium-dashboard .form-chip.loss { box-shadow: inset 0 1px 1px #ffc7b93d, 0 0 2px #a6202c3b; }
+.nfl-premium-dashboard button:focus-visible,
+.nfl-premium-dashboard select:focus-visible { outline-offset: -3px; }
+@media (hover: hover) and (pointer: fine) {
+  .nfl-premium-dashboard .primary-tabs button:hover,
+  .nfl-premium-dashboard .conference-toggle button:hover,
+  .nfl-premium-dashboard .nfl-detail-button:hover,
+  .nfl-premium-dashboard .nfl-all-teams:hover,
+  .nfl-premium-dashboard .nfl-matchup-action:hover,
+  .nfl-premium-dashboard .nfl-view-all:hover { filter: brightness(1.13); }
+}

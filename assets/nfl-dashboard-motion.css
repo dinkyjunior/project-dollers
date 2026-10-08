@@ -3,6 +3,13 @@
 .page[data-page="nfl"].nfl-dashboard-root {
   --nfl-motion-play-state: paused;
 }
+/* Keep this masked phone enclosure stationary on entry. In WebKit, the
+   inherited whole-page transform can leave inner-scroll intersections stale
+   and the page-in opacity at zero after restoration. Lighting and controls
+   retain their own native transitions inside the fixed shell. */
+.page[data-page="nfl"].nfl-dashboard-root.active {
+  animation: none;
+}
 .page[data-page="nfl"].nfl-dashboard-root[data-nfl-motion-state="running"] {
   --nfl-motion-play-state: running;
 }
@@ -18,7 +25,7 @@
   overflow: hidden;
   contain: paint;
   opacity: .62;
-  animation: nfl-ambient-emission 8.2s ease-in-out infinite;
+  animation: nfl-ambient-emission 10.8s ease-in-out infinite;
   animation-play-state: var(--nfl-motion-play-state);
 }
 .page[data-page="nfl"] .nfl-ambient-light::before {
@@ -35,12 +42,12 @@
 
 .page[data-page="nfl"] .nfl-frame-shimmer {
   position: absolute;
-  inset: 1px;
+  inset: -2px;
   z-index: 4;
   border-radius: inherit;
   pointer-events: none;
   overflow: hidden;
-  clip-path: inherit;
+  clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% calc(100% - 9px), calc(100% - 9px) 100%, 9px 100%, 0 calc(100% - 9px), 0 9px);
   /* A reflection is restricted to the edge. Unsupported masking receives
      the composition's steady neon instead of a wash across factual content. */
 }
@@ -48,7 +55,7 @@
 .page[data-page="nfl"] .nfl-frame-shimmer::after {
   content: "";
   position: absolute;
-  inset: -45% -110%;
+  inset: -30% -85%;
   opacity: 0;
   pointer-events: none;
 }
@@ -61,24 +68,47 @@
     mask-composite: exclude;
   }
   .page[data-page="nfl"] .nfl-frame-shimmer::before {
-    opacity: .92;
+    opacity: .94;
     background: linear-gradient(112deg,
-      transparent 40%, #55d6ff00 44%, #7feaff4d 47%,
-      #d5fcffb8 49%, #ffffff 50%, #d7fcffcc 51%,
-      #37cfff42 53%, transparent 57%);
-    animation: nfl-edge-reflection 7.8s linear infinite;
+      transparent 44%, #187bff00 46.5%, #20bdff66 48.5%,
+      #9deaffb8 49.6%, #fff 50%, #d4ffffeb 50.4%,
+      #1b99ff4d 51.5%, transparent 54%);
+    animation: nfl-edge-reflection 8.8s linear infinite;
     animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
   }
   .page[data-page="nfl"] .nfl-frame-shimmer::after {
-    opacity: .42;
+    opacity: .34;
     background: linear-gradient(68deg,
-      transparent 43%, #ffc66100 46%, #fff3cf99 49.8%,
-      #fff9e6 50%, #ffd57a66 50.3%, transparent 54%);
-    animation: nfl-edge-reflection 13.2s linear infinite reverse;
+      transparent 45%, #ffc66100 47.5%, #ffe7ab80 49.6%,
+      #fff7dbd9 50%, #ffcd7166 50.3%, transparent 52.5%);
+    animation: nfl-edge-reflection 15.4s linear infinite reverse;
     animation-delay: -4.8s;
     animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
   }
 }
+/* Small specular hits belong to mechanical joins. Every section receives
+   its own positions rather than the former repeated centre-top/centre-bottom
+   star sticker. The emission remains visible between gentle native pulses. */
+.page[data-page="nfl"] .nfl-framed::after {
+  inset: -10px -4px;
+  background: url("nfl-dashboard/light-flare.svg") no-repeat,
+    url("nfl-dashboard/light-flare.svg") no-repeat;
+  background-size: 20px 20px, 18px 18px;
+  background-position: var(--nfl-top-glint-x, 19%) top,
+    var(--nfl-bottom-glint-x, 79%) bottom;
+  opacity: .82;
+  animation: nfl-join-scintillation 11.8s ease-in-out infinite;
+  animation-delay: var(--nfl-glint-phase, -2.1s);
+  animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
+}
+.page[data-page="nfl"] .league-header { --nfl-top-glint-x: 66%; --nfl-bottom-glint-x: 24%; --nfl-glint-phase: -4.2s; }
+.page[data-page="nfl"] .conference-toggle { --nfl-top-glint-x: 13%; --nfl-bottom-glint-x: 72%; --nfl-glint-phase: -8.1s; }
+.page[data-page="nfl"] .nfl-standings-panel { --nfl-top-glint-x: 82%; --nfl-bottom-glint-x: 47%; --nfl-glint-phase: -1.8s; }
+.page[data-page="nfl"] .matchup-section { --nfl-top-glint-x: 31%; --nfl-bottom-glint-x: 87%; --nfl-glint-phase: -6.4s; }
+.page[data-page="nfl"] .nfl-leader-panel { --nfl-top-glint-x: 58%; --nfl-bottom-glint-x: 29%; --nfl-glint-phase: -3.7s; }
+.page[data-page="nfl"] .nfl-leader-panel:nth-child(2) { --nfl-top-glint-x: 26%; --nfl-bottom-glint-x: 81%; --nfl-glint-phase: -7.2s; }
+.page[data-page="nfl"] .nfl-leader-panel:nth-child(3) { --nfl-top-glint-x: 73%; --nfl-bottom-glint-x: 42%; --nfl-glint-phase: -10.3s; }
+.page[data-page="nfl"] .bottom-nav.nfl-framed { --nfl-top-glint-x: 14%; --nfl-bottom-glint-x: 66%; --nfl-glint-phase: -5.9s; }
 .page[data-page="nfl"] .nfl-motion-zone:nth-of-type(3n) .nfl-frame-shimmer::before {
   animation-delay: -2.6s;
 }
@@ -88,19 +118,19 @@
 .page[data-page="nfl"] .nfl-diamond-glint::after {
   content: "";
   position: absolute;
-  inset: 3px;
+  inset: 1px 2px;
   z-index: 5;
   pointer-events: none;
-  opacity: .3;
+  opacity: .24;
   /* Crisp star rays over the existing vector facets, with a small static
      blue bloom. The raster/diamond artwork itself stays completely still. */
   background:
     radial-gradient(circle, #ffffff 0 6%, #e6fcffcc 8%, #19bcff40 23%, transparent 50%),
     linear-gradient(90deg, transparent 43%, #b3f3ffbb 49%, #fff 50%, #b3f3ffbb 51%, transparent 57%),
     linear-gradient(0deg, transparent 43%, #b3f3ffbb 49%, #fff 50%, #b3f3ffbb 51%, transparent 57%);
-  filter: drop-shadow(0 0 3px #23c7ffb8);
+  filter: drop-shadow(0 0 2px #148cffb8);
   transform-origin: center;
-  animation: nfl-diamond-scintillation 9.6s ease-in-out infinite;
+  animation: nfl-diamond-scintillation 10.6s ease-in-out infinite;
   animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
 }
 .page[data-page="nfl"] .nfl-diamond-glint:nth-of-type(even)::after {
@@ -140,16 +170,33 @@
   .page[data-page="nfl"] .nfl-league-medallion::after {
     content: "";
     position: absolute;
-    inset: -4px;
+    inset: -3px;
     border-radius: 50%;
     pointer-events: none;
-    background: conic-gradient(transparent 0deg 250deg, #98f2ff00 270deg, #a9f5ff5c 293deg, #efffff 306deg, #fff 310deg 314deg, #29d0ff80 318deg, transparent 331deg 360deg);
-    -webkit-mask: radial-gradient(circle, transparent 0 61%, #fff 63% 68%, transparent 70%);
-    mask: radial-gradient(circle, transparent 0 61%, #fff 63% 68%, transparent 70%);
+    background: conic-gradient(transparent 0deg 275deg, #179fff00 286deg, #2bdcff80 298deg, #dbffff 307deg, #fff 309deg 312deg, #23baff99 316deg, transparent 327deg 360deg);
+    -webkit-mask: radial-gradient(circle, transparent 0 64%, #fff 65% 68%, transparent 69%);
+    mask: radial-gradient(circle, transparent 0 64%, #fff 65% 68%, transparent 69%);
     opacity: .92;
-    animation: nfl-league-circuit 10.2s linear infinite;
+    animation: nfl-league-circuit 8.4s linear infinite;
     animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
   }
+}
+
+/* The medallion artwork supplies sharp cardinal glints. These faint blue
+   pools illuminate the same rim without covering the NFL shield. */
+.page[data-page="nfl"] .nfl-league-medallion::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 3%, #0d8fff80, transparent 17%),
+    radial-gradient(ellipse at 97% 50%, #00d9ff66, transparent 17%),
+    radial-gradient(ellipse at 50% 97%, #0879ff6b, transparent 17%),
+    radial-gradient(ellipse at 3% 50%, #00bcff70, transparent 17%);
+  opacity: .62;
+  animation: nfl-medallion-emission 7.2s ease-in-out infinite;
+  animation-play-state: var(--nfl-zone-play-state, var(--nfl-motion-play-state));
 }
 
 .page[data-page="nfl"] [data-nfl-action],
@@ -181,8 +228,8 @@
   to { transform: translate3d(24%, 0, 0); }
 }
 @keyframes nfl-ambient-emission {
-  0%, 100% { opacity: .55; }
-  50% { opacity: .76; }
+  0%, 100% { opacity: .59; }
+  50% { opacity: .67; }
 }
 @keyframes nfl-stadium-light-drift {
   0%, 100% { transform: translate3d(-4%, -.2%, 0); opacity: .72; }
@@ -201,10 +248,20 @@
   to { transform: rotate(360deg); }
 }
 @keyframes nfl-diamond-scintillation {
-  0%, 32%, 54%, 100% { opacity: .3; transform: scale(.88); }
-  40% { opacity: 1; transform: scale(1.1); }
-  45% { opacity: .42; transform: scale(.95); }
-  48% { opacity: .84; transform: scale(1.03); }
+  0%, 32%, 54%, 100% { opacity: .24; transform: scale(.94); }
+  40% { opacity: .94; transform: scale(1.04); }
+  45% { opacity: .34; transform: scale(.98); }
+  48% { opacity: .78; transform: scale(1.01); }
+}
+@keyframes nfl-join-scintillation {
+  0%, 30%, 62%, 100% { opacity: .76; }
+  43% { opacity: 1; }
+  49% { opacity: .84; }
+  55% { opacity: .97; }
+}
+@keyframes nfl-medallion-emission {
+  0%, 100% { opacity: .55; }
+  50% { opacity: .78; }
 }
 @keyframes nfl-corner-diamond-breathe {
   0%, 100% { opacity: .84; }
@@ -212,6 +269,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .page[data-page="nfl"] .nfl-framed::after,
+  .page[data-page="nfl"] .nfl-league-medallion::before,
   .page[data-page="nfl"] .nfl-ambient-light,
   .page[data-page="nfl"] .nfl-ambient-light::before,
   .page[data-page="nfl"] .nfl-frame-shimmer::before,
@@ -225,6 +284,8 @@
     animation: none !important;
     will-change: auto;
   }
+  .page[data-page="nfl"] .nfl-framed::after { opacity: .84; }
+  .page[data-page="nfl"] .nfl-league-medallion::before { opacity: .62; }
   .page[data-page="nfl"] .nfl-ambient-light { opacity: .62; }
   .page[data-page="nfl"] .nfl-ambient-light::before { opacity: .74; transform: none; }
   .page[data-page="nfl"] .nfl-frame-shimmer::before { transform: translate3d(8%, 0, 0); opacity: .7; }

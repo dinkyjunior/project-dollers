@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" fill="none">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="240" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#020912"/><stop offset=".47" stop-color="#061527"/><stop offset="1" stop-color="#01070f"/></linearGradient>
+    <linearGradient id="facet" x1="28" y1="138" x2="203" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#031020" stop-opacity="0"/><stop offset=".35" stop-color="#244969" stop-opacity=".11"/><stop offset=".63" stop-color="#132f4d" stop-opacity=".16"/><stop offset="1" stop-color="#061526" stop-opacity="0"/></linearGradient>
+    <linearGradient id="reflection" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#e9fff9" stop-opacity="0"/><stop offset=".12" stop-color="#f5ffff" stop-opacity="0"/><stop offset=".19" stop-color="#f1ffff" stop-opacity=".64"/><stop offset=".235" stop-color="#91e8ff" stop-opacity="0"/><stop offset=".61" stop-color="#9feeff" stop-opacity="0"/><stop offset=".685" stop-color="#f5faff" stop-opacity=".51"/><stop offset=".76" stop-color="#fff7de" stop-opacity="0"/><stop offset="1" stop-color="#fff7de" stop-opacity="0"/></linearGradient>
+    <clipPath id="glass-inset"><path d="M37 22H203L218 37V123L203 138H37L22 123V37Z"/></clipPath>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#fff9d0"/><stop offset=".045" stop-color="#dcaa3f"/><stop offset=".1" stop-color="#4e3410"/><stop offset=".38" stop-color="#ddb452"/><stop offset=".47" stop-color="#fff4b2"/><stop offset=".55" stop-color="#694510"/><stop offset=".82" stop-color="#bc8d30"/><stop offset=".95" stop-color="#fff4b4"/><stop offset="1" stop-color="#815613"/></linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="240" y2="160" gradientUnits="userSpaceOnUse"><stop stop-color="#f4fdff"/><stop offset=".13" stop-color="#467286"/><stop offset=".3" stop-color="#0c273c"/><stop offset=".51" stop-color="#9edee9"/><stop offset=".62" stop-color="#244359"/><stop offset=".87" stop-color="#d5eff7"/><stop offset="1" stop-color="#224b69"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#00dcff"/><stop offset=".11" stop-color="#057aff"/><stop offset=".3" stop-color="#43eaff"/><stop offset=".48" stop-color="#00adff"/><stop offset=".72" stop-color="#93faff"/><stop offset=".9" stop-color="#0073ff"/><stop offset="1" stop-color="#0ce3ff"/></linearGradient>
+  </defs>
+  <path d="M28 1H212L239 28V132L212 159H28L1 132V28Z" fill="url(#glass)" stroke="#102333" stroke-width="2"/>
+  <g clip-path="url(#glass-inset)">
+    <path d="M2 150 86 10h31L33 150Zm46 0L132 10h16L64 150Zm39 0L171 10h28l-84 140Z" fill="url(#facet)"/>
+    <path d="m37 138 71-116h6L43 138Zm96 0 70-116h8l-70 116Z" fill="#000813" fill-opacity=".1"/>
+    <path d="m43 138 71-116m26 116 71-116" stroke="#5c96b0" stroke-opacity=".045" stroke-width=".7"/>
+  </g>
+  <path d="M29 3H211L237 29V131L211 157H29L3 131V29Z" stroke="#ffefb3" stroke-width="1.4"/>
+  <path d="M30 6H210L234 30V130L210 154H30L6 130V30Z" stroke="url(#metal)" stroke-width="6.3"/>
+  <path d="M30 5H210M30 155H210" stroke="url(#reflection)" stroke-width="1.4"/>
+  <path d="M32 10H208L230 32V128L208 150H32L10 128V32Z" stroke="#000710" stroke-width="3.7"/>
+  <path d="M33 12H207L228 33V127L207 148H33L12 127V33Z" stroke="url(#steel)" stroke-width="1.2"/>
+  <path d="M34 15H206L225 34V126L206 145H34L15 126V34Z" stroke="#006cff" stroke-width="6.3"/>
+  <path d="M34 15H206L225 34V126L206 145H34L15 126V34Z" stroke="url(#beam)" stroke-width="2.8"/>
+  <path d="M35 17.5H205L222.5 35V125L205 142.5H35L17.5 125V35Z" stroke="#e4ffff" stroke-opacity=".92" stroke-width="1.25"/>
+  <path d="M36 20H204L220 36V124L204 140H36L20 124V36Z" stroke="#062b43" stroke-width="1.2"/>
+  <path d="M28 3H50M3 28V50M212 3H190M237 28V50M3 132V110M28 157H50M237 132V110M212 157H190" stroke="#fff8d6" stroke-width="1.25"/>
+  <path d="M30 6V11M6 30H11M210 6V11M234 30H229M6 130H11M30 154V149M234 130H229M210 154V149" stroke="#050b13" stroke-width="2"/>
+</svg>

@@ -17,7 +17,7 @@
       entry.target.dataset.nflMotionVisibility = entry.isIntersecting && entry.intersectionRatio > 0 ? 'in' : 'out';
     }
     syncMotion();
-  }, { threshold: [0, .01] }) : null;
+  }, { root: nfl.querySelector('.page-scroll'), threshold: [0, .01] }) : null;
 
   function reconcileZones() {
     for (const zone of zones) {
@@ -51,6 +51,7 @@
       const zone = target.closest('.nfl-motion-zone');
       const style = getComputedStyle(target, effect.pseudoElement || null);
       const eligible = state === 'running' && !target.closest('[hidden]') &&
+        style.visibility !== 'hidden' && style.display !== 'none' &&
         (!zone || zone.dataset.nflMotionVisibility === 'in') && style.animationPlayState !== 'paused';
       if (!eligible) {
         if (animation.playState === 'running') {
@@ -74,6 +75,15 @@
     else if (!nfl.isConnected || nfl.hidden || !nfl.classList.contains('active')) reason = 'inactive';
     else if (!inViewport) reason = 'offscreen';
     const state = reason === 'active' ? 'running' : reason === 'reduced-motion' ? 'reduced' : 'paused';
+    if (state === 'running' && nfl.dataset.nflMotionState !== state && zoneObserver) {
+      // A masked scroll root may first be observed while its route is hidden.
+      // Request fresh intersection entries on actual activation/restoration,
+      // rather than retaining WebKit's earlier hidden-layout intersections.
+      for (const zone of zones) {
+        zoneObserver.unobserve(zone);
+        zoneObserver.observe(zone);
+      }
+    }
     if (nfl.dataset.nflMotionState !== state) nfl.dataset.nflMotionState = state;
     if (nfl.dataset.nflMotionReason !== reason) nfl.dataset.nflMotionReason = reason;
     syncNativePlayback(state);

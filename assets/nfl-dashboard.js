@@ -11,6 +11,9 @@
   const exists = value => value !== null && value !== undefined && value !== '';
   const finite = value => exists(value) && Number.isFinite(Number(value));
   const getAbbr = team => team.abbr || String(team.id || '').toUpperCase();
+  const rightChevron = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>';
+  // Give source initials readable spacing without changing the stored name.
+  const readablePlayerName = player => String(player.short || player.name || '').replace(/^([A-Za-z]{1,3}\.)(?=\S)/, '$1 ');
 
   function completedGames(data, throughWeek) {
     if (cachedData !== data) {
@@ -97,7 +100,7 @@
     const diff = differential(team);
     const value = finite(diff) ? `${diff > 0 ? '+' : ''}${number(diff)}` : '—';
     const metrics = [['PF',number(team.pointsFor)],['PA',number(team.pointsAgainst)],['DIFF',value],['HOME',record(result.home)],['AWAY',record(result.away)]];
-    return `<div class="nfl-team-summary" role="row"><div class="nfl-summary-content" role="cell" aria-colspan="9"><div class="nfl-summary-identity"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><div><small>${esc(team.fullName?.replace(team.name,'').trim() || abbr)}</small><strong>${esc(team.name)}</strong></div></div><div class="nfl-summary-metrics">${metrics.map(([label,metric]) => `<div class="nfl-summary-metric${label === 'DIFF' ? ` ${diff > 0 ? 'positive' : diff < 0 ? 'negative' : ''}` : ''}"><small>${label}</small><strong>${esc(metric)}</strong></div>`).join('')}</div><button id="nfl-team-details-${esc(abbr.toLowerCase())}" class="nfl-detail-button" data-nfl-action="team-details" data-team="${esc(abbr)}">Team details <span aria-hidden="true">›</span></button></div></div>`;
+    return `<div class="nfl-team-summary" role="row"><div class="nfl-summary-content" role="cell" aria-colspan="9"><div class="nfl-summary-identity"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><div><small>${esc(team.fullName?.replace(team.name,'').trim() || abbr)}</small><strong>${esc(team.name)}</strong></div></div><div class="nfl-summary-metrics">${metrics.map(([label,metric]) => `<div class="nfl-summary-metric${label === 'DIFF' ? ` ${diff > 0 ? 'positive' : diff < 0 ? 'negative' : ''}` : ''}"><small>${label}</small><strong>${esc(metric)}</strong></div>`).join('')}</div><button id="nfl-team-details-${esc(abbr.toLowerCase())}" class="nfl-detail-button" data-nfl-action="team-details" data-team="${esc(abbr)}">Team details ${rightChevron}</button></div></div>`;
   }
 
   function standings(snapshot) {
@@ -169,7 +172,7 @@
       const expanded = state.nflLeaderExpanded.has(position);
       const shown = expanded ? players : players.slice(0,5);
       const week = snapshot.leadersWeek ?? snapshot.throughWeek;
-      return `<section class="leader-panel nfl-leader-panel nfl-framed nfl-motion-zone" data-nfl-leader-panel="${position}"><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><div class="nfl-leader-heading"><div><h2>TOP ${position}s</h2><span>${labels[position]} · ${finite(week) && Number(week) > 0 ? `WEEK ${week}` : 'AWAITING VERIFIED WEEK'}</span></div><button id="nfl-${panel}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="leaders" data-position="${position}" aria-expanded="${expanded}" aria-label="${expanded ? 'Collapse' : 'View all available'} ${position} leaders">${expanded ? 'Show less' : 'View all'} <span aria-hidden="true">›</span></button></div><div class="leader-columns"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div>${shown.length ? shown.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(player.short || player.name)}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</section>`;
+      return `<section class="leader-panel nfl-leader-panel nfl-framed nfl-motion-zone" data-nfl-leader-panel="${position}"><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><div class="nfl-leader-heading"><div><h2>TOP ${position}s</h2><span>${labels[position]} · ${finite(week) && Number(week) > 0 ? `WEEK ${week}` : 'AWAITING VERIFIED WEEK'}</span></div><button id="nfl-${panel}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="leaders" data-position="${position}" aria-expanded="${expanded}" aria-label="${expanded ? 'Collapse' : 'View all available'} ${position} leaders">${expanded ? 'Show less' : 'View all'} ${rightChevron}</button></div><div class="leader-columns"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div>${shown.length ? shown.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(readablePlayerName(player))}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</section>`;
     }).join('');
   }
 
@@ -179,19 +182,19 @@
     if (!game) return `<div class="nfl-bye-state"><img src="${esc(logo('pit'))}" alt="Pittsburgh Steelers" width="500" height="500"><strong>No Steelers fixture this week</strong><span>Week ${esc(state.week)} · ${data.season}</span><button data-nfl-action="schedule">View available schedule</button></div>`;
     const opponent = game.home_team === 'PIT' ? game.away_team : game.home_team;
     const info = abbr => (data.teams || []).find(team => getAbbr(team) === abbr);
-    const equipment = {PIT:'assets/nfl-dashboard/helmet-pit.webp',IND:'assets/nfl-dashboard/helmet-ind.webp'};
+    const equipment = {PIT:'assets/nfl-dashboard/helmet-pit-upright.webp',IND:'assets/nfl-dashboard/helmet-ind-upright.webp'};
     const side = (abbr,sideClass) => {
       const team = info(abbr);
       const short = team?.name || teamName(abbr);
       const city = team?.fullName?.replace(short,'').trim() || abbr;
       const helmet = equipment[abbr];
-      return `<div class="nfl-matchup-team ${sideClass}${helmet ? ' has-helmet' : ' has-team-logo'}"><div class="nfl-equipment-wrap"><img class="nfl-matchup-helmet" src="${esc(helmet || logo(abbr))}" alt="${esc(team?.fullName || short)}${helmet ? ' decorative helmet' : ''}" width="${helmet ? '1448' : '500'}" height="${helmet ? '1086' : '500'}" decoding="async">${helmet ? `<img class="nfl-matchup-mark" src="${esc(logo(abbr))}" alt="" width="500" height="500" decoding="async">` : ''}</div><small>${esc(city)}</small><strong>${esc(short)}</strong></div>`;
+      return `<div class="nfl-matchup-team ${sideClass}${helmet ? ' has-helmet has-upright-helmet' : ' has-team-logo'}"><div class="nfl-equipment-wrap"><img class="nfl-matchup-helmet" src="${esc(helmet || logo(abbr))}" alt="${esc(team?.fullName || short)}${helmet ? ' decorative helmet' : ''}" width="${helmet ? '1254' : '500'}" height="${helmet ? '1254' : '500'}" decoding="async">${helmet ? `<img class="nfl-matchup-mark" src="${esc(logo(abbr))}" alt="" width="500" height="500" decoding="async">` : ''}</div><small>${esc(city)}</small><strong>${esc(short)}</strong></div>`;
     };
     const final = game.status === 'final';
     const ownScore = game.home_team === 'PIT' ? game.home_score : game.away_score;
     const otherScore = game.home_team === 'PIT' ? game.away_score : game.home_score;
     const when = final ? `FINAL · ${number(ownScore)}–${number(otherScore)} · ${date(game)}` : `${date(game)} · ${time(game)}`;
-    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">VIEW MATCHUP <span aria-hidden="true">›</span></button><button class="nfl-matchup-action" data-nfl-action="compare">COMPARE TEAMS <span aria-hidden="true">›</span></button><button class="nfl-matchup-action" data-nfl-action="team-form">TEAM FORM <span aria-hidden="true">›</span></button></div>`;
+    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">VIEW MATCHUP ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">COMPARE TEAMS ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">TEAM FORM ${rightChevron}</button></div>`;
   }
 
   function recap(snapshot) {
