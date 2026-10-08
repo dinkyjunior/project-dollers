@@ -327,9 +327,23 @@ async function controls(page, base, data, options={}) {
   const nflCrumb=page.locator(`${TEAM} [data-td-action="nfl"]`);await click(nflCrumb,'NFL breadcrumb');await active(page,'nfl');await enter();
   const responseWait=page.waitForResponse(response=>new URL(response.url()).pathname.endsWith('/assets/data/team-details.json'));
   const beforeRefresh={state:await page.evaluate(()=>window.PDTeamDetails.getState()),dataset:await page.evaluate(()=>window.PDTeamDetails.getDataset())};
+  // Keep real DOM references outside application state. A successful identical
+  // refresh must preserve an in-flight interaction instead of replacing cards.
+  const unchangedDOM=await page.evaluateHandle(()=>{
+    const selectors=['.td-hero','#team-panel-form','#team-window-select','#team-season-select','#team-venue-select','[data-team-game]','[data-td-action="refresh"]'];
+    const root=document.querySelector('.page[data-page="team-details"]'),nodes=selectors.map(selector=>({selector,node:root.querySelector(selector)})),events=[];
+    const listener=event=>events.push({changed:event.detail?.changed,retrievedAt:event.detail?.retrievedAt});
+    document.addEventListener('pd:team-data-ready',listener);return{nodes,events,listener};
+  });
+  try {
   await page.locator(`${TEAM} [data-td-action="refresh"]`).focus();await click(page.locator(`${TEAM} [data-td-action="refresh"]`),'Refresh team research');const response=await responseWait;assert.ok([200,304].includes(response.status()),'Manual source refresh performs actual successful HTTP validation');await page.waitForFunction(()=>document.querySelector('.page.active [data-td-action="refresh"]')?.getAttribute('aria-busy')==='false');
   assert.equal(await page.locator(`${TEAM} [data-td-action="refresh"]`).evaluate(element=>element===document.activeElement),true,'Keyboard refresh retains focus on its restored control');
-  assert.deepEqual(await page.evaluate(()=>window.PDTeamDetails.getSelectedGames().map(game=>game.id)),eligibleGames(team,teamData.season,{window:beforeRefresh.state.window,season:beforeRefresh.state.season,venue:beforeRefresh.state.venue}).map(game=>game.id),'Refresh retains selected game context');evidence.manualRefresh={status:response.status(),url:response.url()};
+  assert.deepEqual(await page.evaluate(()=>window.PDTeamDetails.getDataset()),beforeRefresh.dataset,'Unchanged native refresh retains the exact source dataset');
+  const identity=await unchangedDOM.evaluate(probe=>({nodes:probe.nodes.map(({selector,node})=>({selector,exists:!!node,connected:!!node?.isConnected,same:document.querySelector('.page[data-page="team-details"]').querySelector(selector)===node})),events:probe.events}));
+  for(const node of identity.nodes){assert.equal(node.exists,true,'Unchanged refresh probe targets an existing real node: '+node.selector);assert.equal(node.connected,true,'Unchanged refresh keeps the existing DOM connected: '+node.selector);assert.equal(node.same,true,'Unchanged refresh preserves DOM node identity: '+node.selector);}
+  assert.equal(identity.events.length,1,'One actual successful native refresh emits exactly one ready event');assert.equal(identity.events[0].changed,false,'Identical actual HTTP source response announces unchanged data');
+  assert.deepEqual(await page.evaluate(()=>window.PDTeamDetails.getSelectedGames().map(game=>game.id)),eligibleGames(team,teamData.season,{window:beforeRefresh.state.window,season:beforeRefresh.state.season,venue:beforeRefresh.state.venue}).map(game=>game.id),'Refresh retains selected game context');evidence.manualRefresh={status:response.status(),url:response.url(),domIdentity:identity,focusPreserved:true};
+  } finally {await unchangedDOM.evaluate(probe=>document.removeEventListener('pd:team-data-ready',probe.listener));await unchangedDOM.dispose();}
   const home=page.locator(`${TEAM} .bottom-nav [data-open="home"]`);assert.equal(await home.count(),1,'Team navigation has a Home control');await click(home,'Bottom Home');await active(page,'home');
   evidence.homeSports=[];
   for(const sport of ['nba','nrl','ufc','nfl']) {
