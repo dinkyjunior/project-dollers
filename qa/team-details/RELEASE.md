@@ -1,6 +1,6 @@
 # Dallas team-details release record
 
-Status: all six full prepublication reviews and [all six latest source-integration reviews](refresh-integration/release-integration.json) accepted. Fresh Chromium and native WebKit integration checks passed at both requested phone sizes. Production publication and actual hosted verification remain pending; this is not yet a publication claim.
+Status: deployed and verified. All six full local, latest source-integration and actual hosted reviews accepted. Genuine hosted WebKit passed both requested phone sizes and desktop; all 231 served runtime files match the reviewed bytes.
 
 The user-approved Dallas Form chat attachment authorizes the new team-details destination and Home's diamond entry treatment. The implementation retains the compact Home-sized enclosure, internal scrolling, original branding, genuine local team vectors and existing Steelers player research. The attachment remains the visual authority; its original binary was unavailable, so no registered pixel identity is claimed.
 
@@ -41,7 +41,7 @@ The native run used a documented operational extension from 2400 to 4800 seconds
 
 ## Retained intermediate evidence
 
-All final version-three screenshots, the active before/after gallery and required source/failure proof are retained for publication. To avoid duplicating rejected capture sets in the Pages artifact, 142 previously untracked intermediate PNGs remain in the saved workspace and a separately CRC/hash-verified recovery ZIP. [The exact archive inventory](intermediate-image-archive.json) records every original. Older intermediate galleries referring to those local-only PNGs are historical evidence and are not represented as self-contained hosted galleries. No previously tracked screenshot was removed.
+All final version-three screenshots, the active before/after gallery and required source/failure proof are published. To avoid duplicating rejected capture sets in the Pages artifact, 142 previously untracked intermediate PNGs remain in the saved workspace and a separately CRC/hash-verified recovery ZIP. [The exact archive inventory](intermediate-image-archive.json) records every original. Older intermediate galleries referring to those local-only PNGs are historical evidence and are not represented as self-contained hosted galleries. No previously tracked screenshot was removed.
 
 ## Latest source integration and capture verification
 
@@ -52,3 +52,11 @@ The raw nflverse CSV genuinely changed 21 market cells in six games. It is not d
 Fresh targeted integration passed in [Chromium](refresh-integration/local-chromium-actionable-fbe/results.json) and [genuine native WebKit](refresh-integration/local-webkit-actionable-fbe/results.json). Both sizes complete 31 native actions, exact source-body and manual-refresh checks, filter/focus/DOM retention, existing Steelers research, direct loads and reloads, and fully painted Home/Team/NFL screenshots. Runtime and helper hashes stayed unchanged, and browser/request error lists are empty. These targeted checks supplement the mandatory full local suites; they do not claim those full suites were repeated.
 
 Two capture/automation problems were rejected and retained before the final pass. An early native Home screenshot captured before its finite page-entry paint; the QA-only boundary now waits for natural entry completion and two genuine frames, then checks the original PNG interior without altering styles, clocks or pixels. A separate native pre-scroll step held a replaced existing refresh-status control before input dispatch. Removing that redundant step delegates scrolling and current-element actionability to the same native tap/click. Every source, focus, HTTP and control assertion remains. Original full-suite helpers and application bytes are unchanged; failed reports remain failed.
+
+## Actual hosted acceptance
+
+Application `56fdbe955b274e7f3b4fd36ef9de762e3763bda6` was successfully published by [Pages run 37777138988](https://github.com/dinkyjunior/project-dollers/actions/runs/37777138988), all three jobs successful. [The completed genuine hosted report](hosted-webkit/results.json) records successful phone and desktop provider-refresh and extra-layout/motion scenarios, exact HTTP 200 hashes for all 231 runtime files, unchanged runtime/helpers and no browser/request errors. Its real durable wrapper exited 0. [All six hosted reviewers](hosted-review.json) personally inspected [all 36 original PNGs](hosted-originals.json); [the desktop-friendly gallery](live-captures/index.html) links those unchanged originals. Normal viewport and full-scroll-content captures are labelled separately.
+
+The broad local 312-action/83-disclosure suites and protected-screen audits were completed before publication. The hosted report is explicitly targeted deployment verification, not a claim that those full suites were repeated on the host. Final evidence-only publication is separately checked against both exact branch refs, the successful Pages commit/jobs, every runtime body and selected original review/report/image bytes.
+
+A brief reversible release window kept repository source snapshots stable during exact publication verification; browser source revalidation remained enabled. The actual workflow restoration/API-state receipt is separate operational evidence and must be checked before task completion. It does not replace functional source/refresh acceptance. The compact checked website-source ZIP is at [backups/project-dollar-website-source.zip](backups/project-dollar-website-source.zip); the larger retained intermediate-image archive remains separately recorded.

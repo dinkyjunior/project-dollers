@@ -1,0 +1,626 @@
+{
+  "status": "accepted",
+  "agent": "/root/team_qa_audit",
+  "reviewedAt": "2026-10-08T12:57:56.003493+00:00",
+  "scope": "Completed genuine native-WebKit verification of the actual hosted release across both phone widths and desktop. Mandatory full local Chromium4/WebKit2 and protected regressions remain separately accepted, unchanged historical proof.",
+  "runtimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "originalRuntimeManifestSha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01",
+  "publishedRuntimeManifestSha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1",
+  "url": "https://dinkyjunior.github.io/project-dollers/",
+  "actualApplicationDeploymentHead": "56fdbe955b274e7f3b4fd36ef9de762e3763bda6",
+  "runtimeFiles": 231,
+  "report": {
+    "file": "qa/team-details/hosted-webkit/results.json",
+    "sha256": "1d0cbd1885854b3b1a18014ca354d8985bfa19bf537d88d7b12f699312d9c330"
+  },
+  "actualExitReceipt": {
+    "file": "qa/team-details/hosted-webkit-process/exit.json",
+    "sha256": "6d01e366619a5f4b4f8fd5cec6297b7a6dbaf64580aa40a2562c334744fedcd2"
+  },
+  "providerRefreshReports": [
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/results.json",
+      "sha256": "0fdfa0d91eeee38d3adca4b2da58752fc2e16365d5f20ed8635685ae42e03162",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ],
+      "status": "passed",
+      "completedAt": "2026-10-08T12:37:56.726Z",
+      "nativeActionsPerCase": [
+        31,
+        31
+      ],
+      "actualFourSourceBodiesPerCase": [
+        [
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+            "status": 200,
+            "bytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/team-details.json",
+            "status": 200,
+            "bytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/player-history.json",
+            "status": 200,
+            "bytes": 7108758,
+            "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/provenance.json",
+            "status": 200,
+            "bytes": 33508,
+            "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+          }
+        ],
+        [
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+            "status": 200,
+            "bytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/team-details.json",
+            "status": 200,
+            "bytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/player-history.json",
+            "status": 200,
+            "bytes": 7108758,
+            "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/provenance.json",
+            "status": 200,
+            "bytes": 33508,
+            "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+          }
+        ]
+      ]
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-desktop/results.json",
+      "sha256": "3947d7d8f250dbca3226eedf2a1eddd96be7a2b9457434ee142318371158d45d",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "status": "passed",
+      "completedAt": "2026-10-08T12:40:36.736Z",
+      "nativeActionsPerCase": [
+        31
+      ],
+      "actualFourSourceBodiesPerCase": [
+        [
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+            "status": 200,
+            "bytes": 1285416,
+            "sha256": "d7549a710d0680f75dd182effab3bc5ed48ee20cb38c3d7e9c31fe35a3dc6cd1"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/team-details.json",
+            "status": 200,
+            "bytes": 2283154,
+            "sha256": "fc77b349652f8894fe5478b6541f25d9de15b97e84fa3ea3ddae84e30d7187c4"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/player-history.json",
+            "status": 200,
+            "bytes": 7108758,
+            "sha256": "38e90fd9ab83c5096814322fb6c81b7655d0a66bc27bca1ca10386e9177619b6"
+          },
+          {
+            "url": "https://dinkyjunior.github.io/project-dollers/assets/data/provenance.json",
+            "status": 200,
+            "bytes": 33508,
+            "sha256": "d3416ed3ff8df9cffacd91a67051a1aa9293b4260628d38fb72cc85790c46260"
+          }
+        ]
+      ]
+    }
+  ],
+  "extras": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "nativeActions": 10,
+      "homeSportColoursAndSelection": [
+        "nfl",
+        "nba",
+        "nrl",
+        "ufc"
+      ],
+      "venueSourceRows": [
+        {
+          "venue": "home",
+          "games": 1,
+          "record": "1-0"
+        },
+        {
+          "venue": "away",
+          "games": 2,
+          "record": "1-1"
+        },
+        {
+          "venue": "neutral",
+          "games": 1,
+          "record": "0-1"
+        },
+        {
+          "venue": "unknown",
+          "games": 0,
+          "record": "0-0"
+        }
+      ],
+      "venueNativeFocusRestored": true,
+      "naturallyAdvancingHomeClocks": 18,
+      "naturallyAdvancingTeamClocks": 17,
+      "reducedAndInactiveActualRunningClocks": 0,
+      "actualNaturalPaintChange": true,
+      "directLoadReload": true,
+      "errorListsEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "nativeActions": 10,
+      "homeSportColoursAndSelection": [
+        "nfl",
+        "nba",
+        "nrl",
+        "ufc"
+      ],
+      "venueSourceRows": [
+        {
+          "venue": "home",
+          "games": 1,
+          "record": "1-0"
+        },
+        {
+          "venue": "away",
+          "games": 2,
+          "record": "1-1"
+        },
+        {
+          "venue": "neutral",
+          "games": 1,
+          "record": "0-1"
+        },
+        {
+          "venue": "unknown",
+          "games": 0,
+          "record": "0-0"
+        }
+      ],
+      "venueNativeFocusRestored": true,
+      "naturallyAdvancingHomeClocks": 18,
+      "naturallyAdvancingTeamClocks": 17,
+      "reducedAndInactiveActualRunningClocks": 0,
+      "actualNaturalPaintChange": true,
+      "directLoadReload": true,
+      "errorListsEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "passed",
+      "nativeActions": 10,
+      "homeSportColoursAndSelection": [
+        "nfl",
+        "nba",
+        "nrl",
+        "ufc"
+      ],
+      "venueSourceRows": [
+        {
+          "venue": "home",
+          "games": 1,
+          "record": "1-0"
+        },
+        {
+          "venue": "away",
+          "games": 2,
+          "record": "1-1"
+        },
+        {
+          "venue": "neutral",
+          "games": 1,
+          "record": "0-1"
+        },
+        {
+          "venue": "unknown",
+          "games": 0,
+          "record": "0-0"
+        }
+      ],
+      "venueNativeFocusRestored": true,
+      "naturallyAdvancingHomeClocks": 18,
+      "naturallyAdvancingTeamClocks": 17,
+      "reducedAndInactiveActualRunningClocks": 0,
+      "actualNaturalPaintChange": true,
+      "directLoadReload": true,
+      "errorListsEmpty": true
+    }
+  ],
+  "commonOriginalsMap": {
+    "file": "qa/team-details/hosted-originals.json",
+    "sha256": "6af9c9ccb918a204d2b1c3cb2ed734ae8f699a4fe2b18159f810d5cfd4f96e07"
+  },
+  "originalCount": 36,
+  "personallyInspectedOriginals": [
+    {
+      "file": "qa/team-details/hosted-webkit/home-nba-1440x1000-hosted.png",
+      "sha256": "bacf93c6b1f186097edffa44fb439110b75d61c407783581163473b46c7967e4",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nba-393x852-hosted.png",
+      "sha256": "8e0b03b3390135c2b947b18626f75103e19c637d4f7dacea1c855ba091dcda43",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nba-430x896-hosted.png",
+      "sha256": "663bc0865131a1b53c51dda49e478ea57e5b46ce9c5e60ab9bf0a5ee5768836b",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nfl-1440x1000-hosted.png",
+      "sha256": "516a4b01dd10cd8b08f5eeddb0418acc9fa8ca78065d9afc5920b84d29533292",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nfl-393x852-hosted.png",
+      "sha256": "769107294a5d1ac305adc19e264fd90e8d6d0570574acf15cdf54a01ed0636f1",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nfl-430x896-hosted.png",
+      "sha256": "b40e28c012cb8af9ce1d40d8d09a55356f36a1a0812e097ad2bbd7112613eb93",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nrl-1440x1000-hosted.png",
+      "sha256": "5ef0e695cfe5483b0b028fa9f490727e81060f7a7c6e8a6e12e3aa306591c240",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nrl-393x852-hosted.png",
+      "sha256": "bec261cbb2621922d541d2c0d23948035ea924d4d489294282fe9f7ab26c906d",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-nrl-430x896-hosted.png",
+      "sha256": "7ad9e99be94ac2152c8271960a48f3b4afcc3434e347bc119c577a07ef78bf25",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-ufc-1440x1000-hosted.png",
+      "sha256": "527351f0729160942f0e4666844f3fdc189a74c68ce777bdb12107972b17b626",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-ufc-393x852-hosted.png",
+      "sha256": "8d97f3649fc92606b2b4f8af8f0abd38ae0d2a477c9fbb76e1089f7832774acf",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/home-ufc-430x896-hosted.png",
+      "sha256": "a1ea807f6a79334fa33fa7e5b1029c8ca0c31ce785126daa05f9fbbdb41907ca",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-desktop/home-1440x1000-metadata-refreshed.png",
+      "sha256": "1310b79370bed58f2a08fb29936a719c3cd38bab49fc6af4bec9c710b5d0bc20",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-desktop/nfl-1440x1000-metadata-refreshed.png",
+      "sha256": "31548c92d7822466b4e293ea43340b2791ccaaf6db26a11a4b4e30fa26164b94",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-desktop/team-1440x1000-metadata-refreshed.png",
+      "sha256": "5ed6133bc104d09630646112bdcdabad2b0d4c7e653a94f809738dbd300cc204",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/home-393x852-metadata-refreshed.png",
+      "sha256": "144abe9065de58f207d20e5740215df37514fd6bed58172f3cfb1879ceb4f6fc",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/home-430x896-metadata-refreshed.png",
+      "sha256": "fc8f33bd40170ea578d7b6b762fa84162b9d213cd4d6bd9f6422ee90ac7f2549",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/nfl-393x852-metadata-refreshed.png",
+      "sha256": "1f44b4170b6e407654a1191ed633e6ccee9553fba4aed33560caab6cfa0cd214",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/nfl-430x896-metadata-refreshed.png",
+      "sha256": "45f63c63a94694a27c06ca1da252acd857b26ac38bb621257d8853085c6b4b07",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/team-393x852-metadata-refreshed.png",
+      "sha256": "7a0680536a58a0b6bbcf171761bb12365bbac1777c06de39d56945b0d02f675e",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/provider-refresh-phones/team-430x896-metadata-refreshed.png",
+      "sha256": "76571911f8214c4e44d42fb681b8e7a791686de7cd8f3068571ba6554da870bf",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-1440x1000-bottom.png",
+      "sha256": "f0577fcc3607ac64be69f0cbcebb70f1d294270a3bb83e9816b25b6bef090c90",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-1440x1000-final.png",
+      "sha256": "d6edd8d004a056877d81db59a91788f561591f7b6aec63ef406a47cd59514496",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-1440x1000-full-content.png",
+      "sha256": "786a49e6cd7a198ea100f036bd17511dbf5a44dba0f9ca0b7154e748d6116867",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-1440x1000-mid.png",
+      "sha256": "cd280864d1afc22817260df4aff470d21ae202ca85e420cb0a72bc908a342462",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-1440x1000-top.png",
+      "sha256": "d80875dfd6c44798c229ab2d5964a7c936abacfef9ca28c50417a630330090bd",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-393x852-bottom.png",
+      "sha256": "560cfa297a6d2e4bdc4ddf28ef19055957c9391e8373ceabfd18b7ffba495403",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-393x852-final.png",
+      "sha256": "76b11fa5255c925d95858b59b77a218e62951abf27ec297898d7a1707c66c5bf",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-393x852-full-content.png",
+      "sha256": "2c19eabda6e6991daab381c15fe92ee9203d26071097b3e56b1a8fe82d655035",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-393x852-mid.png",
+      "sha256": "bb26c09701794d6e84f26f289a909c2f479e8ae8886afa7497a28bf3e55535d8",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-393x852-top.png",
+      "sha256": "c4a684e6313d11ebabdd612feadaabc09d28f13d8b5c2834cdc8d858927de34c",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-430x896-bottom.png",
+      "sha256": "bb59cf050a7a58bb480054455e2acf0da8669a428326aec9ae1d0b047aa4a988",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-430x896-final.png",
+      "sha256": "d58635bd44f7c45b3693f17b5429ff06ca791fb7217707ed64f6f2734625b0a2",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-430x896-full-content.png",
+      "sha256": "60ae6967ca1d8bbbd30b16cbf047a69ea21d80879d5774d4883db3de7297d041",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-430x896-mid.png",
+      "sha256": "7843f40b52915111cb3da2bef1e0b21d014eb79f73e5d1e373f67b02d0f01014",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    },
+    {
+      "file": "qa/team-details/hosted-webkit/team-430x896-top.png",
+      "sha256": "7643b0c53ffac7262de783367101bebe2b6d0483f6b140fe03aca01e404264c4",
+      "actualOriginal": true,
+      "personallyInspectedByThisAiAgent": true,
+      "visualDisposition": "accepted"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "qa/team-details/published-runtime-manifest.json",
+      "sha256": "c336c3cb9907628c96483fd41dd980110789ffab3b96b802d66abb07ad089de1"
+    },
+    {
+      "file": "qa/team-details/candidate-runtime-manifest-iteration-5.json",
+      "sha256": "fe69378eb4a1fb9d7e766788b80410b6b568c834359bc9805c802820ed5d2e01"
+    },
+    {
+      "file": "qa/team-details/hosted-candidate-freeze.json",
+      "sha256": "9f9071eb1dede4061b5b8f33ab3a0f586a2858fd2fe52e89b5c2aed74d01675c"
+    },
+    {
+      "file": "qa/team-details/reviews/final/qa-v3.json",
+      "sha256": "6671a9043ed1d440f6f8860d7e6bb8d64fd34b86059bba7e64305f4636c6809f"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/qa.json",
+      "sha256": "bef82dbf1db1c801e53d7142f2763bf9daf9091d506a002f72cf01d03ad4f3c4"
+    },
+    {
+      "file": "qa/team-details/reviews/integration/qa-personal-visual-supplement.json",
+      "sha256": "4c163bddf3482772f268af84fe9605664d780e7a4a697a54d8a4e75e54f7c101"
+    },
+    {
+      "file": "qa/team-details/reviews/hosted/sources.json",
+      "sha256": "2e54523f535504aa2a6d56150369c91ccf3b54733d08dbd81d6c61a747651a2f"
+    },
+    {
+      "file": "qa/team-details/reviews/hosted/controls.json",
+      "sha256": "53398af370698ba462c4bbfebc098b3de37902ae794bf376bc09943777e57d8a"
+    },
+    {
+      "file": "qa/team-details/capture-ready.cjs",
+      "sha256": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80"
+    },
+    {
+      "file": "qa/team-details/post-refresh.cjs",
+      "sha256": "8a8fd47d7bf8a1d9ff53f147b22c9c2bc9e3a7eba71aced50957b950f173bcff"
+    },
+    {
+      "file": "qa/team-details/hosted-deployment.cjs",
+      "sha256": "b59a1e8689b11fab0f1d53788188b13843180c4c6686985805b3a988b8bc0004"
+    },
+    {
+      "file": "qa/team-details/verify-source-equivalence.py",
+      "sha256": "df9257a39352f43f6446b5a063220250bc0b77cd114c4d596e16264ad09ceff7"
+    },
+    {
+      "file": "qa/team-details/verify-publication.py",
+      "sha256": "6e13892c87f8be08dd94aea4064eb178fade8bf9e1bf1d0242ba5f96d72b27d6"
+    }
+  ],
+  "servedRuntime": {
+    "status": "passed",
+    "actualHttp200Sha256Bodies": 231,
+    "strictTls": true,
+    "sameOriginActualBodies": true,
+    "noResponseInterceptionOrSubstitution": true
+  },
+  "inputScope": {
+    "providerNativeActions": 93,
+    "extraNativeActions": 30,
+    "totalRecordedTargetedNativeInputs": 123,
+    "qualification": "Targeted deployment-difference proof, not a repetition of every312-control/83-disclosure local audit on the host."
+  },
+  "captureScope": {
+    "mandatoryNaturalFiniteEntryTwoFramesAndPixelGuardOriginals": 24,
+    "untouchedTopMidBottomOriginals": 9,
+    "isolatedFullContentOriginals": 3,
+    "qualification": "Full-content originals use a separate genuine same-context source-matched app page with temporary block-flow exposure. Normal top/mid/bottom originals retain untouched functional geometry; original PNG pixels are never modified."
+  },
+  "singleImageGemReinspection": {
+    "finding": "An initial grouped overview absence concern was withdrawn after this agent, root, visual and assets specialists independently reopened exact hash-bound full originals singly. Both correct gems are visibly present; no application change, recapture or image mutation occurred.",
+    "originals": [
+      {
+        "file": "qa/team-details/hosted-webkit/home-nba-430x896-hosted.png",
+        "sha256": "663bc0865131a1b53c51dda49e478ea57e5b46ce9c5e60ab9bf0a5ee5768836b",
+        "beforeAfterHashesIdentical": true,
+        "leftAndRightCtaDiamondsVisiblyPresent": true
+      },
+      {
+        "file": "qa/team-details/hosted-webkit/home-nrl-430x896-hosted.png",
+        "sha256": "7ad9e99be94ac2152c8271960a48f3b4afcc3434e347bc119c577a07ef78bf25",
+        "beforeAfterHashesIdentical": true,
+        "leftAndRightCtaDiamondsVisiblyPresent": true
+      }
+    ]
+  },
+  "qualifications": [
+    "All36 actual originals were personally inspected by this AI QA agent; independent design/data/source/control/motion specialists retain their separate acceptance receipts.",
+    "Actual native Home18 and Team17 visible clocks advanced at allthree sizes with unmodified natural paint changes; reduced/inactive conditions suppressed actual running infinite clocks. WPE reduced metadata can retain running/active with clocks[], so metadata uniformity is not asserted.",
+    "Linux genuine WebKit/mobile emulation does not certify physical iPhone/Safari hardware FPS.",
+    "All current231 source and nine executed hosted helper hashes remain unchanged. Earlier failed/blank/timeout local artifacts stay immutable with their separate rejected qualifications.",
+    "No human visual-review claim; the reference is the user-approved Dallas Form attachment."
+  ]
+}
