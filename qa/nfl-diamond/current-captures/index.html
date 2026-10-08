@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Project Dollar — NFL browser QA</title>
+  <style>
+    :root { color-scheme:dark; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#080d13; color:#e9f2fa; }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    main { max-width:1120px; margin:auto; padding:28px 20px 48px; }
+    h1 { margin:0 0 12px; font-size:clamp(24px,3vw,34px); line-height:1.15; letter-spacing:-.035em; }
+    p { margin:0 0 12px; max-width:86ch; color:#b4c4d3; font-size:14px; line-height:1.6; }
+    a { color:#66d5ff; text-underline-offset:3px; }
+    .note { border-left:3px solid #299fca; background:#0d1924; padding:12px 15px; margin:20px 0; border-radius:0 8px 8px 0; }
+    .note p:last-child { margin:0; }
+    .controls { display:flex; flex-wrap:wrap; gap:12px 18px; margin:22px 0; padding:16px; background:#101b26; border:1px solid #243748; border-radius:12px; }
+    label { display:grid; gap:6px; min-width:160px; color:#c4d5e4; font-size:12px; font-weight:650; }
+    select { width:100%; border:1px solid #41596d; border-radius:6px; padding:9px 32px 9px 10px; background:#0b141e; color:#f4f9fd; font:inherit; font-size:14px; }
+    select:focus-visible,a:focus-visible { outline:3px solid #62d8ff; outline-offset:3px; }
+    #selection { color:#eef5fa; margin:0 0 16px; }
+    .captures { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:24px; }
+    .captures.single { grid-template-columns:minmax(0,1fr); max-width:530px; margin-inline:auto; }
+    figure { margin:0; min-width:0; }
+    figcaption { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:8px; margin:0 0 12px; font-size:14px; }
+    figcaption strong { font-size:16px; }
+    .links { display:flex; flex-wrap:wrap; gap:14px; font-size:12px; }
+    .image-well { display:flex; justify-content:center; align-items:flex-start; min-height:180px; background:#000; border:1px solid #243443; border-radius:8px; overflow:hidden; }
+    .image-well img { display:block; width:100%; max-width:430px; height:auto; }
+    .dimensions { margin-top:8px; font-size:11px; color:#809bb0; font-variant-numeric:tabular-nums; }
+    .missing { padding:24px; color:#ffcc89; line-height:1.5; }
+    footer { margin-top:28px; border-top:1px solid #20313e; padding-top:16px; }
+    code { overflow-wrap:anywhere; color:#bcd6e9; font-size:11px; }
+    @media(max-width:700px) { main { padding:22px 14px 36px; } .captures { grid-template-columns:minmax(0,1fr); gap:28px; } label { flex:1; min-width:140px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Project Dollar — NFL browser QA</h1>
+    <p>Original captures of the implemented NFL dashboard at both requested iPhone viewport sizes. Compare browser engines and inspect the top, middle, lower panels or full scrollable screen.</p>
+    <div class="note">
+      <p><strong>Approved visual source:</strong> the tall NFL render attached in the project chat, originally 724 × 2172. Its image bytes were not available for this gallery. Compare these screenshots with that attachment; this page does not contain a recreated reference or claim pixel identity.</p>
+      <p>The controls in the screenshots are real components. Verified sports records replace the render’s illustrative sample values. <a href="../../../reference/NFL_DIAMOND_CHAT_SOURCE.md">Reference provenance</a></p>
+    </div>
+    <div class="controls" aria-label="Choose screenshots">
+      <label>Viewport
+        <select id="viewport"><option value="393x852">393 × 852</option><option value="430x896">430 × 896</option></select>
+      </label>
+      <label>Browser
+        <select id="engine"><option value="both">Both engines</option><option value="chromium">Chromium</option><option value="webkit">WebKit</option></select>
+      </label>
+      <label>Capture
+        <select id="view"><option value="top">Top — natural viewport</option><option value="full-content">Full scrollable content</option><option value="scroll-1">Middle — natural viewport</option><option value="scroll-2">Lower panels — natural viewport</option></select>
+      </label>
+    </div>
+    <p id="selection" role="status" aria-live="polite"></p>
+    <div id="captures" class="captures"></div>
+    <noscript><p>JavaScript only switches the displayed files. Open the originals directly: <a href="chromium/integration-chromium-393x852-top.png">Chromium 393 top</a>, <a href="webkit/integration-webkit-393x852-top.png">WebKit 393 top</a>, <a href="chromium/integration-chromium-430x896-top.png">Chromium 430 top</a>, <a href="webkit/integration-webkit-430x896-top.png">WebKit 430 top</a>.</p></noscript>
+    <footer>
+      <p>PNG files are unchanged browser originals. Full-content captures temporarily unroll the internal scroller for evidence; top, middle and lower captures preserve the normal viewport. Browser emulation does not certify physical iPhone performance or Safari’s device controls.</p>
+      <p>Accepted runtime manifest: <code>eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1</code> — 203 runtime files.</p>
+    </footer>
+  </main>
+  <script>
+    (() => {
+      const viewport = document.getElementById('viewport');
+      const engine = document.getElementById('engine');
+      const view = document.getElementById('view');
+      const captures = document.getElementById('captures');
+      const selection = document.getElementById('selection');
+      const names = {chromium:'Chromium',webkit:'WebKit'};
+      function render() {
+        const engines = engine.value === 'both' ? ['chromium','webkit'] : [engine.value];
+        captures.replaceChildren();
+        captures.classList.toggle('single',engines.length === 1);
+        selection.textContent = `${viewport.options[viewport.selectedIndex].text} · ${view.options[view.selectedIndex].text}`;
+        for (const browser of engines) {
+          const path = `${browser}/integration-${browser}-${viewport.value}-${view.value}.png`;
+          const figure = document.createElement('figure');
+          const caption = document.createElement('figcaption');
+          const name = document.createElement('strong');
+          name.textContent = names[browser];
+          const links = document.createElement('span');
+          links.className = 'links';
+          const original = document.createElement('a');
+          original.href = path; original.textContent = 'Open original PNG';
+          original.target = '_blank'; original.rel = 'noopener';
+          const report = document.createElement('a');
+          report.href = `${browser}/results.json`; report.textContent = 'QA report';
+          report.target = '_blank'; report.rel = 'noopener';
+          links.append(original,report); caption.append(name,links);
+          const well = document.createElement('div'); well.className = 'image-well';
+          const image = document.createElement('img');
+          image.style.maxWidth = `${viewport.value.split('x')[0]}px`;
+          image.alt = `NFL dashboard, ${names[browser]}, ${viewport.options[viewport.selectedIndex].text}, ${view.options[view.selectedIndex].text}`;
+          const dimensions = document.createElement('p'); dimensions.className = 'dimensions';
+          image.addEventListener('load',() => { dimensions.textContent = `Original PNG: ${image.naturalWidth} × ${image.naturalHeight} pixels · DPR 2`; });
+          image.addEventListener('error',() => { const warning = document.createElement('p'); warning.className = 'missing'; warning.textContent = `Capture unavailable in this folder: ${path}`; well.replaceChildren(warning); dimensions.textContent = ''; });
+          image.src = path;
+          well.append(image); figure.append(caption,well,dimensions); captures.append(figure);
+        }
+      }
+      for (const control of [viewport,engine,view]) control.addEventListener('change',render);
+      render();
+    })();
+  </script>
+</body>
+</html>

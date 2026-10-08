@@ -1,0 +1,3332 @@
+{
+  "status": "accepted-for-current-integrated-NFL-controls-and-source",
+  "reviewer": "/root/nfl_data_controls",
+  "completedAt": "2026-10-08T01:54:31.068730+00:00",
+  "noRuntimeWrites": true,
+  "frozenRuntime": {
+    "path": "/workspace/recovery-qa/nfl-diamond/frozen-runtime.json",
+    "sha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+    "files": 203,
+    "allCurrentBytesMatch": true
+  },
+  "identityProof": {
+    "priorAcceptedReceipt": "/workspace/recovery-qa/nfl-diamond/controls/final-rounded-review.json",
+    "priorReceiptSha256": "d4cd47a01e83d0bce8d26f2c37a74c95ad9d955fc1bcbfd63c55398324045d64",
+    "unchangedRuntimeFiles": 200,
+    "changedRuntimeFiles": [
+      "assets/data/current.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json"
+    ],
+    "moduleAppHTMLStyleMotionAndUpdaterByteIdenticalToAccepted96db": true
+  },
+  "personallyReproducedIntegratedFactProof": {
+    "explicitRecursiveMetadataChanges": 1808,
+    "files": [
+      {
+        "file": "assets/data/current.json",
+        "differences": 363,
+        "metadataOnly": 363,
+        "factualOrTypeOrKeyOrListChanges": 0,
+        "normalizedFactsEqual": true,
+        "normalizedFactsSha256": "5d9d91759f60a40a97f1ccd12b6473ffec04cc09361d21d338fe81041e026b54",
+        "metadataPathsExactlyMatchExplicitIncomingAudit": true,
+        "enrichedDatasetChecksumOverridePaths": []
+      },
+      {
+        "file": "assets/data/player-history.json",
+        "differences": 1415,
+        "metadataOnly": 1415,
+        "factualOrTypeOrKeyOrListChanges": 0,
+        "normalizedFactsEqual": true,
+        "normalizedFactsSha256": "e1c6f4b63b2ebcf031c2b5e873c9a0ab15394280e221a930524ee610dbbb9c3c",
+        "metadataPathsExactlyMatchExplicitIncomingAudit": true,
+        "enrichedDatasetChecksumOverridePaths": []
+      },
+      {
+        "file": "assets/data/provenance.json",
+        "differences": 30,
+        "metadataOnly": 30,
+        "factualOrTypeOrKeyOrListChanges": 0,
+        "normalizedFactsEqual": true,
+        "normalizedFactsSha256": "f2cd261695e05364e8416cd455fd341fe54cef8b391c848f3847705c306bb0a8",
+        "metadataPathsExactlyMatchExplicitIncomingAudit": true,
+        "enrichedDatasetChecksumOverridePaths": [
+          "/snapshotSha256CanonicalJson"
+        ]
+      }
+    ],
+    "approvedLeaderRowsExact": 816,
+    "currentCanonicalDatasetChecksumMatchesProvenance": true,
+    "playerHistoryBytesExactlyMatchIncoming4bebe": true,
+    "sourceProofReceipts": [
+      {
+        "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/incoming-auto-refresh.json",
+        "sha256": "c220c359426a83db8f1f011120f3d94195f2f6fd55ed7115f89529ea6545ac59",
+        "status": "metadata-only changes in all three compared files"
+      },
+      {
+        "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/integrated-source.json",
+        "sha256": "ef1477523e268fbd4c8ee7ec991919a47237abd0b9efb1b809a82d0848f85e32",
+        "status": "passed"
+      },
+      {
+        "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/data-check.json",
+        "sha256": "80ccb83ba82899f8813b81700c1100721a190d7e5c5a0dea26804d0ba6822578",
+        "status": "passed"
+      }
+    ],
+    "qualification": "Only exact metadata paths already explicitly classified in the audited incoming refresh are normalized. Actual recursive comparison has zero type/key/list changes. All values match incoming metadata changes except the verified canonical checksum for the approved enriched dataset."
+  },
+  "currentFocusedBrowserReports": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/results.json",
+      "sha256": "50e5717c8baf0b8830c343ca80172b4a5f9c74ff327ed1d5f88a7c915d41d296",
+      "status": "passed",
+      "exactCurrentRuntimeFiles": 203
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/results.json",
+      "sha256": "28387431fe5e27a2fb6aca1c6952ed678ddeb975b35256cc02abe19df6c975be",
+      "status": "passed",
+      "exactCurrentRuntimeFiles": 203
+    }
+  ],
+  "freshFourPhoneEngineCases": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "manualRefresh": {
+        "url": "http://127.0.0.1:44329/project-dollers/assets/data/current.json",
+        "httpStatus": 200,
+        "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+        "status": {
+          "state": "unchanged",
+          "mode": "event-revalidation",
+          "source": "/project-dollers/assets/data/current.json",
+          "streamState": "not-configured",
+          "lastCheckedAt": "2026-10-08T01:49:49.298Z",
+          "lastChangedAt": null,
+          "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+          "nextCheckAt": null,
+          "reason": "manual",
+          "message": "Checked: no new published data is available."
+        },
+        "focusPreserved": true
+      },
+      "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\n\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\n\nWeekly leaders\nverified\n\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\n\nCurrent roster\nverified\n\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\n\nPlayer statistics\nderived\n\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\n\nTeam statistics\nderived\n\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\n\nSchedule & results\nverified\n\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\n\nInjury & practice reports\nunavailable\n\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\n\nDepth chart\nverified\n\nLatest published ESPN-derived depth order, not a confirmed starter designation.\n\nOpponent positional allowance\nderived\n\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\n\nPrevious meetings\nverified\n\nMost recent five completed meetings; each game carries its original season/week.\n\nweekly Opponent Research\nderived\n\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\n\nArchival lines (provider/time unavailable)\nverified\n\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\n\nexact Pre Game Prices\nunavailable\n\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\n\nWeather forecast\nunavailable\n\nNo verified current forecast is available.\n\ntravel\nunavailable\n\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\n\ncross Checks\npartial\n\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\n\nroster Verification\npartial\n\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\n\nplayer History\nderived\n\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\n\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nTerell Smith\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nDaequan Hardy\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nCole Burgess\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBradyn Swinson\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\n\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\n\nDarius Rush\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nK.J. Henry\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMarte Mapu\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBrandon Johnson\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nIsaiah Hodgins\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMax Hurleman\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+      "nativeGeometry": {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "page": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 756.171875,
+          "right": 393,
+          "bottom": 804.078125
+        },
+        "frame": {
+          "x": 10,
+          "y": 47.90625,
+          "width": 373,
+          "height": 1208.46875,
+          "right": 383,
+          "bottom": 1256.375
+        },
+        "documentWidth": 393,
+        "pageScrollWidth": 393,
+        "scroller": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 666.171875,
+          "right": 393,
+          "bottom": 714.078125,
+          "scrollWidth": 393,
+          "clientWidth": 393,
+          "scrollHeight": 1220,
+          "clientHeight": 666,
+          "scrollTop": 0
+        },
+        "nav": {
+          "x": 10,
+          "y": 720.078125,
+          "width": 373,
+          "height": 53,
+          "right": 383,
+          "bottom": 773.078125
+        },
+        "rows": [
+          {
+            "x": 20,
+            "y": 356.25,
+            "width": 353,
+            "height": 20,
+            "right": 373,
+            "bottom": 376.25,
+            "text": "#\nTEAM\nW\nL\nPCT\nPF\nPA\n+/\u2212\nFORM"
+          },
+          {
+            "x": 20,
+            "y": 376.25,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 399.25,
+            "text": "1\nChiefs\n4\n0\n1.000\n118\n77\n+41\nW\nW\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 399.25,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 422.25,
+            "text": "2\nJaguars\n3\n1\n0.750\n104\n53\n+51\nW\nL\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 422.25,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 445.25,
+            "text": "3\nRaiders\n3\n1\n0.750\n115\n84\n+31\nW\nW\nW\nL"
+          },
+          {
+            "x": 20,
+            "y": 445.25,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 468.25,
+            "text": "4\nRavens\n3\n1\n0.750\n116\n96\n+20\nW\nL\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 468.25,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 491.25,
+            "text": "9\nSteelers\n2\n2\n0.500\n77\n87\n-10\nW\nL\nW\nL"
+          },
+          {
+            "x": 19,
+            "y": 864.9375,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 880.9375,
+            "text": "1\nJ.Burrow\n428\n1"
+          },
+          {
+            "x": 19,
+            "y": 880.9375,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 896.9375,
+            "text": "2\nJ.Goff\n412\n1"
+          },
+          {
+            "x": 19,
+            "y": 896.9375,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 912.9375,
+            "text": "3\nK.Cousins\n365\n2"
+          },
+          {
+            "x": 19,
+            "y": 912.9375,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 928.9375,
+            "text": "4\nC.Stroud\n347\n2"
+          },
+          {
+            "x": 19,
+            "y": 928.9375,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 944.9375,
+            "text": "5\nD.Prescott\n335\n1"
+          },
+          {
+            "x": 19,
+            "y": 1011.28125,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1027.28125,
+            "text": "1\nK.Walker\n177\n2"
+          },
+          {
+            "x": 19,
+            "y": 1027.28125,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1043.28125,
+            "text": "2\nK.Monangai\n146\n2"
+          },
+          {
+            "x": 19,
+            "y": 1043.28125,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1059.28125,
+            "text": "3\nBi.Robinson\n145\n2"
+          },
+          {
+            "x": 19,
+            "y": 1059.28125,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1075.28125,
+            "text": "4\nC.Hubbard\n122\n2"
+          },
+          {
+            "x": 19,
+            "y": 1075.28125,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1091.28125,
+            "text": "5\nO.Gordon\n100\n1"
+          },
+          {
+            "x": 19,
+            "y": 1157.625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1173.625,
+            "text": "1\nT.McMillan\n192\n2"
+          },
+          {
+            "x": 19,
+            "y": 1173.625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1189.625,
+            "text": "2\nC.Lamb\n189\n1"
+          },
+          {
+            "x": 19,
+            "y": 1189.625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1205.625,
+            "text": "3\nT.Higgins\n157\n0"
+          },
+          {
+            "x": 19,
+            "y": 1205.625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1221.625,
+            "text": "4\nC.Tate\n145\n0"
+          },
+          {
+            "x": 19,
+            "y": 1221.625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1237.625,
+            "text": "5\nP.Nacua\n125\n0"
+          }
+        ],
+        "controls": [
+          {
+            "tag": "SELECT",
+            "text": "Week 1\nWeek 2\nWeek 3\nWeek 4\nWeek 5 \u00b7 Current\nWeek 6\nWeek 7\nWeek 8\nWeek 9\nWeek 10\nWeek 11\nWeek 12\nWeek 13\nWeek 14\nWeek 15\nWeek 16\nWeek 17\nWeek 18",
+            "x": 258,
+            "y": 147.90625,
+            "width": 115,
+            "height": 44,
+            "right": 373,
+            "bottom": 191.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "LADDER",
+            "x": 10,
+            "y": 208.90625,
+            "width": 123,
+            "height": 29,
+            "right": 133,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "true",
+              "aria-controls": "panel-ladder",
+              "data-nfl-tab": "ladder"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TOP PLAYERS",
+            "x": 137,
+            "y": 208.90625,
+            "width": 121,
+            "height": 29,
+            "right": 258,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-players",
+              "data-nfl-tab": "players"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "WEEKLY RECAP",
+            "x": 262,
+            "y": 208.90625,
+            "width": 121,
+            "height": 29,
+            "right": 383,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-recap",
+              "data-nfl-tab": "recap"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "AFC",
+            "x": 15,
+            "y": 246.90625,
+            "width": 179.5,
+            "height": 29,
+            "right": 194.5,
+            "bottom": 275.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "AFC",
+              "aria-pressed": "true"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "NFC",
+            "x": 198.5,
+            "y": 246.90625,
+            "width": 179.5,
+            "height": 29,
+            "right": 378,
+            "bottom": 275.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "NFC",
+              "aria-pressed": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Standings data sources and context",
+            "x": 350,
+            "y": 294.078125,
+            "width": 24,
+            "height": 30,
+            "right": 374,
+            "bottom": 324.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": "",
+              "aria-label": "Standings data sources and context"
+            }
+          },
+          {
+            "tag": "SELECT",
+            "text": "All\nWest\nSouth\nNorth\nEast",
+            "x": 58.59375,
+            "y": 330.25,
+            "width": 81.1875,
+            "height": 20,
+            "right": 139.78125,
+            "bottom": 350.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": "Last 4\nLast 5",
+            "x": 190.296875,
+            "y": 330.25,
+            "width": 66.765625,
+            "height": 20,
+            "right": 257.0625,
+            "bottom": 350.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": "PCT\nPF\nPA\nDIFF",
+            "x": 303.90625,
+            "y": 330.25,
+            "width": 53.078125,
+            "height": 20,
+            "right": 356.984375,
+            "bottom": 350.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Chiefs",
+            "x": 37,
+            "y": 376.25,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 399.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "KC",
+              "aria-expanded": "false",
+              "aria-label": "Kansas City Chiefs record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Jaguars",
+            "x": 37,
+            "y": 399.25,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 422.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "JAX",
+              "aria-expanded": "false",
+              "aria-label": "Jacksonville Jaguars record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Raiders",
+            "x": 37,
+            "y": 422.25,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 445.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "LV",
+              "aria-expanded": "false",
+              "aria-label": "Las Vegas Raiders record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Ravens",
+            "x": 37,
+            "y": 445.25,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 468.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "BAL",
+              "aria-expanded": "false",
+              "aria-label": "Baltimore Ravens record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Steelers",
+            "x": 37,
+            "y": 468.25,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 491.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "PIT",
+              "aria-expanded": "true",
+              "aria-label": "Pittsburgh Steelers record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Team details\n\u203a",
+            "x": 303,
+            "y": 497.25,
+            "width": 65,
+            "height": 24,
+            "right": 368,
+            "bottom": 521.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-details",
+              "data-team": "PIT"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW ALL 16 TEAMS",
+            "x": 15,
+            "y": 532.25,
+            "width": 363,
+            "height": 27,
+            "right": 378,
+            "bottom": 559.25,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-standings-toggle": "",
+              "aria-expanded": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW MATCHUP\n\u203a",
+            "x": 18,
+            "y": 770.59375,
+            "width": 134.65625,
+            "height": 27,
+            "right": 152.65625,
+            "bottom": 797.59375,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchup"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "COMPARE TEAMS\n\u203a",
+            "x": 157.65625,
+            "y": 770.59375,
+            "width": 108.75,
+            "height": 27,
+            "right": 266.40625,
+            "bottom": 797.59375,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "compare"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TEAM FORM\n\u203a",
+            "x": 271.40625,
+            "y": 770.59375,
+            "width": 103.578125,
+            "height": 27,
+            "right": 374.984375,
+            "bottom": 797.59375,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-form"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 321.40625,
+            "y": 820.765625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 844.765625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "QB",
+              "aria-expanded": "false",
+              "aria-label": "View all available QB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 321.40625,
+            "y": 967.109375,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 991.109375,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "RB",
+              "aria-expanded": "false",
+              "aria-label": "View all available RB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 321.40625,
+            "y": 1113.453125,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 1137.453125,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "WR",
+              "aria-expanded": "false",
+              "aria-label": "View all available WR leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Home",
+            "x": 15,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 87.59375,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-open": "home",
+              "data-nav": "home"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Teams",
+            "x": 87.59375,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 160.1875,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "teams"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Matchups",
+            "x": 160.1875,
+            "y": 724.078125,
+            "width": 72.609375,
+            "height": 45,
+            "right": 232.796875,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchups"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Insights",
+            "x": 232.796875,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 305.390625,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "insights"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "More",
+            "x": 305.390625,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 377.984375,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "more"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\u21bb",
+            "x": 308.4375,
+            "y": 779.078125,
+            "width": 36,
+            "height": 22,
+            "right": 344.4375,
+            "bottom": 801.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-refresh": "",
+              "aria-label": "Refresh verified data",
+              "aria-busy": "false",
+              "aria-disabled": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Sources",
+            "x": 346.4375,
+            "y": 779.078125,
+            "width": 36.5625,
+            "height": 22,
+            "right": 383,
+            "bottom": 801.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": ""
+            }
+          }
+        ],
+        "clipped": []
+      },
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigations": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "manualRefresh": {
+        "url": "http://127.0.0.1:44329/project-dollers/assets/data/current.json",
+        "httpStatus": 200,
+        "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+        "status": {
+          "state": "unchanged",
+          "mode": "event-revalidation",
+          "source": "/project-dollers/assets/data/current.json",
+          "streamState": "not-configured",
+          "lastCheckedAt": "2026-10-08T01:49:57.765Z",
+          "lastChangedAt": null,
+          "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+          "nextCheckAt": null,
+          "reason": "manual",
+          "message": "Checked: no new published data is available."
+        },
+        "focusPreserved": true
+      },
+      "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\n\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\n\nWeekly leaders\nverified\n\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\n\nCurrent roster\nverified\n\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\n\nPlayer statistics\nderived\n\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\n\nTeam statistics\nderived\n\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\n\nSchedule & results\nverified\n\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\n\nInjury & practice reports\nunavailable\n\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\n\nDepth chart\nverified\n\nLatest published ESPN-derived depth order, not a confirmed starter designation.\n\nOpponent positional allowance\nderived\n\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\n\nPrevious meetings\nverified\n\nMost recent five completed meetings; each game carries its original season/week.\n\nweekly Opponent Research\nderived\n\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\n\nArchival lines (provider/time unavailable)\nverified\n\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\n\nexact Pre Game Prices\nunavailable\n\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\n\nWeather forecast\nunavailable\n\nNo verified current forecast is available.\n\ntravel\nunavailable\n\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\n\ncross Checks\npartial\n\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\n\nroster Verification\npartial\n\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\n\nplayer History\nderived\n\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\n\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nTerell Smith\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nDaequan Hardy\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nCole Burgess\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBradyn Swinson\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\n\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\n\nDarius Rush\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nK.J. Henry\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMarte Mapu\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBrandon Johnson\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nIsaiah Hodgins\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMax Hurleman\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+      "nativeGeometry": {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "page": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 802.671875,
+          "right": 430,
+          "bottom": 849.328125
+        },
+        "frame": {
+          "x": 10,
+          "y": 46.65625,
+          "width": 410,
+          "height": 1315.65625,
+          "right": 420,
+          "bottom": 1362.3125
+        },
+        "documentWidth": 430,
+        "pageScrollWidth": 430,
+        "scroller": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 712.671875,
+          "right": 430,
+          "bottom": 759.328125,
+          "scrollWidth": 430,
+          "clientWidth": 430,
+          "scrollHeight": 1328,
+          "clientHeight": 713,
+          "scrollTop": 0
+        },
+        "nav": {
+          "x": 10,
+          "y": 765.328125,
+          "width": 410,
+          "height": 53,
+          "right": 420,
+          "bottom": 818.328125
+        },
+        "rows": [
+          {
+            "x": 20,
+            "y": 379,
+            "width": 390,
+            "height": 20,
+            "right": 410,
+            "bottom": 399,
+            "text": "#\nTEAM\nW\nL\nPCT\nPF\nPA\n+/\u2212\nFORM"
+          },
+          {
+            "x": 20,
+            "y": 399,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 425,
+            "text": "1\nChiefs\n4\n0\n1.000\n118\n77\n+41\nW\nW\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 425,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 451,
+            "text": "2\nJaguars\n3\n1\n0.750\n104\n53\n+51\nW\nL\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 451,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 477,
+            "text": "3\nRaiders\n3\n1\n0.750\n115\n84\n+31\nW\nW\nW\nL"
+          },
+          {
+            "x": 20,
+            "y": 477,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 503,
+            "text": "4\nRavens\n3\n1\n0.750\n116\n96\n+20\nW\nL\nW\nW"
+          },
+          {
+            "x": 20,
+            "y": 503,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 529,
+            "text": "9\nSteelers\n2\n2\n0.500\n77\n87\n-10\nW\nL\nW\nL"
+          },
+          {
+            "x": 19,
+            "y": 932.875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 950.875,
+            "text": "1\nJ.Burrow\n428\n1"
+          },
+          {
+            "x": 19,
+            "y": 950.875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 968.875,
+            "text": "2\nJ.Goff\n412\n1"
+          },
+          {
+            "x": 19,
+            "y": 968.875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 986.875,
+            "text": "3\nK.Cousins\n365\n2"
+          },
+          {
+            "x": 19,
+            "y": 986.875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1004.875,
+            "text": "4\nC.Stroud\n347\n2"
+          },
+          {
+            "x": 19,
+            "y": 1004.875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1022.875,
+            "text": "5\nD.Prescott\n335\n1"
+          },
+          {
+            "x": 19,
+            "y": 1093.21875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1111.21875,
+            "text": "1\nK.Walker\n177\n2"
+          },
+          {
+            "x": 19,
+            "y": 1111.21875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1129.21875,
+            "text": "2\nK.Monangai\n146\n2"
+          },
+          {
+            "x": 19,
+            "y": 1129.21875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1147.21875,
+            "text": "3\nBi.Robinson\n145\n2"
+          },
+          {
+            "x": 19,
+            "y": 1147.21875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1165.21875,
+            "text": "4\nC.Hubbard\n122\n2"
+          },
+          {
+            "x": 19,
+            "y": 1165.21875,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1183.21875,
+            "text": "5\nO.Gordon\n100\n1"
+          },
+          {
+            "x": 19,
+            "y": 1253.5625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1271.5625,
+            "text": "1\nT.McMillan\n192\n2"
+          },
+          {
+            "x": 19,
+            "y": 1271.5625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1289.5625,
+            "text": "2\nC.Lamb\n189\n1"
+          },
+          {
+            "x": 19,
+            "y": 1289.5625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1307.5625,
+            "text": "3\nT.Higgins\n157\n0"
+          },
+          {
+            "x": 19,
+            "y": 1307.5625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1325.5625,
+            "text": "4\nC.Tate\n145\n0"
+          },
+          {
+            "x": 19,
+            "y": 1325.5625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1343.5625,
+            "text": "5\nP.Nacua\n125\n0"
+          }
+        ],
+        "controls": [
+          {
+            "tag": "SELECT",
+            "text": "Week 1\nWeek 2\nWeek 3\nWeek 4\nWeek 5 \u00b7 Current\nWeek 6\nWeek 7\nWeek 8\nWeek 9\nWeek 10\nWeek 11\nWeek 12\nWeek 13\nWeek 14\nWeek 15\nWeek 16\nWeek 17\nWeek 18",
+            "x": 285,
+            "y": 158.65625,
+            "width": 125,
+            "height": 44,
+            "right": 410,
+            "bottom": 202.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "LADDER",
+            "x": 10,
+            "y": 223.65625,
+            "width": 135.328125,
+            "height": 32,
+            "right": 145.328125,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "true",
+              "aria-controls": "panel-ladder",
+              "data-nfl-tab": "ladder"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TOP PLAYERS",
+            "x": 149.328125,
+            "y": 223.65625,
+            "width": 133.34375,
+            "height": 32,
+            "right": 282.671875,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-players",
+              "data-nfl-tab": "players"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "WEEKLY RECAP",
+            "x": 286.671875,
+            "y": 223.65625,
+            "width": 133.328125,
+            "height": 32,
+            "right": 420,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-recap",
+              "data-nfl-tab": "recap"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "AFC",
+            "x": 15,
+            "y": 264.65625,
+            "width": 198,
+            "height": 30,
+            "right": 213,
+            "bottom": 294.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "AFC",
+              "aria-pressed": "true"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "NFC",
+            "x": 217,
+            "y": 264.65625,
+            "width": 198,
+            "height": 30,
+            "right": 415,
+            "bottom": 294.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "NFC",
+              "aria-pressed": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Standings data sources and context",
+            "x": 387,
+            "y": 313.828125,
+            "width": 24,
+            "height": 30,
+            "right": 411,
+            "bottom": 343.828125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": "",
+              "aria-label": "Standings data sources and context"
+            }
+          },
+          {
+            "tag": "SELECT",
+            "text": "All\nWest\nSouth\nNorth\nEast",
+            "x": 61.640625,
+            "y": 351,
+            "width": 92.921875,
+            "height": 22,
+            "right": 154.5625,
+            "bottom": 373,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": "Last 4\nLast 5",
+            "x": 207.125,
+            "y": 351,
+            "width": 76.765625,
+            "height": 22,
+            "right": 283.890625,
+            "bottom": 373,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": "PCT\nPF\nPA\nDIFF",
+            "x": 332.453125,
+            "y": 351,
+            "width": 61.53125,
+            "height": 22,
+            "right": 393.984375,
+            "bottom": 373,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Chiefs",
+            "x": 39,
+            "y": 399,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 425,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "KC",
+              "aria-expanded": "false",
+              "aria-label": "Kansas City Chiefs record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Jaguars",
+            "x": 39,
+            "y": 425,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 451,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "JAX",
+              "aria-expanded": "false",
+              "aria-label": "Jacksonville Jaguars record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Raiders",
+            "x": 39,
+            "y": 451,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 477,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "LV",
+              "aria-expanded": "false",
+              "aria-label": "Las Vegas Raiders record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Ravens",
+            "x": 39,
+            "y": 477,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 503,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "BAL",
+              "aria-expanded": "false",
+              "aria-label": "Baltimore Ravens record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Steelers",
+            "x": 39,
+            "y": 503,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 529,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "PIT",
+              "aria-expanded": "true",
+              "aria-label": "Pittsburgh Steelers record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Team details\n\u203a",
+            "x": 332,
+            "y": 537,
+            "width": 73,
+            "height": 24,
+            "right": 405,
+            "bottom": 561,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-details",
+              "data-team": "PIT"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW ALL 16 TEAMS",
+            "x": 15,
+            "y": 574,
+            "width": 400,
+            "height": 30,
+            "right": 415,
+            "bottom": 604,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-standings-toggle": "",
+              "aria-expanded": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW MATCHUP\n\u203a",
+            "x": 18,
+            "y": 831.53125,
+            "width": 148.234375,
+            "height": 30,
+            "right": 166.234375,
+            "bottom": 861.53125,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchup"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "COMPARE TEAMS\n\u203a",
+            "x": 172.234375,
+            "y": 831.53125,
+            "width": 119.734375,
+            "height": 30,
+            "right": 291.96875,
+            "bottom": 861.53125,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "compare"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TEAM FORM\n\u203a",
+            "x": 297.96875,
+            "y": 831.53125,
+            "width": 114.015625,
+            "height": 30,
+            "right": 411.984375,
+            "bottom": 861.53125,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-form"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 358.40625,
+            "y": 885.703125,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 909.703125,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "QB",
+              "aria-expanded": "false",
+              "aria-label": "View all available QB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 358.40625,
+            "y": 1046.046875,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 1070.046875,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "RB",
+              "aria-expanded": "false",
+              "aria-label": "View all available RB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a",
+            "x": 358.40625,
+            "y": 1206.390625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 1230.390625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "WR",
+              "aria-expanded": "false",
+              "aria-label": "View all available WR leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Home",
+            "x": 15,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 95,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-open": "home",
+              "data-nav": "home"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Teams",
+            "x": 95,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 175,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "teams"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Matchups",
+            "x": 175,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 255,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchups"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Insights",
+            "x": 255,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 335,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "insights"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "More",
+            "x": 335,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 415,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "more"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\u21bb",
+            "x": 345.4375,
+            "y": 824.328125,
+            "width": 36,
+            "height": 22,
+            "right": 381.4375,
+            "bottom": 846.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-refresh": "",
+              "aria-label": "Refresh verified data",
+              "aria-busy": "false",
+              "aria-disabled": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Sources",
+            "x": 383.4375,
+            "y": 824.328125,
+            "width": 36.5625,
+            "height": 22,
+            "right": 420,
+            "bottom": 846.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": ""
+            }
+          }
+        ],
+        "clipped": []
+      },
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "manualRefresh": {
+        "url": "http://127.0.0.1:35627/project-dollers/assets/data/current.json",
+        "httpStatus": 200,
+        "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+        "status": {
+          "state": "unchanged",
+          "mode": "event-revalidation",
+          "source": "/project-dollers/assets/data/current.json",
+          "streamState": "not-configured",
+          "lastCheckedAt": "2026-10-08T01:51:02.618Z",
+          "lastChangedAt": null,
+          "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+          "nextCheckAt": null,
+          "reason": "manual",
+          "message": "Checked: no new published data is available."
+        },
+        "focusPreserved": true
+      },
+      "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\nWeekly leaders\nverified\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\nCurrent roster\nverified\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\nPlayer statistics\nderived\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\nTeam statistics\nderived\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\nSchedule & results\nverified\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\nInjury & practice reports\nunavailable\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\nDepth chart\nverified\nLatest published ESPN-derived depth order, not a confirmed starter designation.\nOpponent positional allowance\nderived\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\nPrevious meetings\nverified\nMost recent five completed meetings; each game carries its original season/week.\nweekly Opponent Research\nderived\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\nArchival lines (provider/time unavailable)\nverified\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\nexact Pre Game Prices\nunavailable\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\nWeather forecast\nunavailable\nNo verified current forecast is available.\ntravel\nunavailable\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\ncross Checks\npartial\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\nroster Verification\npartial\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\nplayer History\nderived\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\n\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nTerell Smith\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nDaequan Hardy\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nCole Burgess\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBradyn Swinson\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\nDarius Rush\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nK.J. Henry\n\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMarte Mapu\n\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBrandon Johnson\n\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nIsaiah Hodgins\n\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMax Hurleman\n\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+      "nativeGeometry": {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "page": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 756.171875,
+          "right": 393,
+          "bottom": 804.078125
+        },
+        "frame": {
+          "x": 10,
+          "y": 47.90625,
+          "width": 373,
+          "height": 1206,
+          "right": 383,
+          "bottom": 1253.90625
+        },
+        "documentWidth": 393,
+        "pageScrollWidth": 393,
+        "scroller": {
+          "x": 0,
+          "y": 47.90625,
+          "width": 393,
+          "height": 666.171875,
+          "right": 393,
+          "bottom": 714.078125,
+          "scrollWidth": 393,
+          "clientWidth": 393,
+          "scrollHeight": 1218,
+          "clientHeight": 666,
+          "scrollTop": 0
+        },
+        "nav": {
+          "x": 10,
+          "y": 720.078125,
+          "width": 373,
+          "height": 53,
+          "right": 383,
+          "bottom": 773.078125
+        },
+        "rows": [
+          {
+            "x": 20,
+            "y": 355.90625,
+            "width": 353,
+            "height": 20,
+            "right": 373,
+            "bottom": 375.90625,
+            "text": "#\nTEAM\nW\nL\nPCT\nPF\nPA\n+/\u2212\nFORM\n"
+          },
+          {
+            "x": 20,
+            "y": 375.90625,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 398.90625,
+            "text": "1\n\nChiefs\n4\n0\n1.000\n118\n77\n+41\nW\nW\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 398.90625,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 421.90625,
+            "text": "2\n\nJaguars\n3\n1\n0.750\n104\n53\n+51\nW\nL\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 421.90625,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 444.90625,
+            "text": "3\n\nRaiders\n3\n1\n0.750\n115\n84\n+31\nW\nW\nW\nL\n"
+          },
+          {
+            "x": 20,
+            "y": 444.90625,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 467.90625,
+            "text": "4\n\nRavens\n3\n1\n0.750\n116\n96\n+20\nW\nL\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 467.90625,
+            "width": 353,
+            "height": 23,
+            "right": 373,
+            "bottom": 490.90625,
+            "text": "9\n\nSteelers\n2\n2\n0.500\n77\n87\n-10\nW\nL\nW\nL\n"
+          },
+          {
+            "x": 19,
+            "y": 863.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 879.90625,
+            "text": "1\nJ.Burrow\n428\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 879.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 895.90625,
+            "text": "2\nJ.Goff\n412\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 895.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 911.90625,
+            "text": "3\nK.Cousins\n365\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 911.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 927.90625,
+            "text": "4\nC.Stroud\n347\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 927.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 943.90625,
+            "text": "5\nD.Prescott\n335\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1009.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1025.90625,
+            "text": "1\nK.Walker\n177\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1025.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1041.90625,
+            "text": "2\nK.Monangai\n146\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1041.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1057.90625,
+            "text": "3\nBi.Robinson\n145\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1057.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1073.90625,
+            "text": "4\nC.Hubbard\n122\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1073.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1089.90625,
+            "text": "5\nO.Gordon\n100\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1155.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1171.90625,
+            "text": "1\nT.McMillan\n192\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1171.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1187.90625,
+            "text": "2\nC.Lamb\n189\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1187.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1203.90625,
+            "text": "3\nT.Higgins\n157\n0\n"
+          },
+          {
+            "x": 19,
+            "y": 1203.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1219.90625,
+            "text": "4\nC.Tate\n145\n0\n"
+          },
+          {
+            "x": 19,
+            "y": 1219.90625,
+            "width": 355,
+            "height": 16,
+            "right": 374,
+            "bottom": 1235.90625,
+            "text": "5\nP.Nacua\n125\n0\n"
+          }
+        ],
+        "controls": [
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 258,
+            "y": 147.90625,
+            "width": 115,
+            "height": 44,
+            "right": 373,
+            "bottom": 191.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "LADDER",
+            "x": 10,
+            "y": 208.90625,
+            "width": 123,
+            "height": 29,
+            "right": 133,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "true",
+              "aria-controls": "panel-ladder",
+              "data-nfl-tab": "ladder"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TOP PLAYERS",
+            "x": 137,
+            "y": 208.90625,
+            "width": 121,
+            "height": 29,
+            "right": 258,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-players",
+              "data-nfl-tab": "players"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "WEEKLY RECAP",
+            "x": 262,
+            "y": 208.90625,
+            "width": 121,
+            "height": 29,
+            "right": 383,
+            "bottom": 237.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-recap",
+              "data-nfl-tab": "recap"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "AFC",
+            "x": 15,
+            "y": 246.90625,
+            "width": 179.5,
+            "height": 29,
+            "right": 194.5,
+            "bottom": 275.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "AFC",
+              "aria-pressed": "true"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "NFC",
+            "x": 198.5,
+            "y": 246.90625,
+            "width": 179.5,
+            "height": 29,
+            "right": 378,
+            "bottom": 275.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "NFC",
+              "aria-pressed": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Standings data sources and context",
+            "x": 350,
+            "y": 293.90625,
+            "width": 24,
+            "height": 30,
+            "right": 374,
+            "bottom": 323.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": "",
+              "aria-label": "Standings data sources and context"
+            }
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 58.59375,
+            "y": 329.90625,
+            "width": 81.1875,
+            "height": 20,
+            "right": 139.78125,
+            "bottom": 349.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 190.296875,
+            "y": 329.90625,
+            "width": 66.765625,
+            "height": 20,
+            "right": 257.0625,
+            "bottom": 349.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 303.90625,
+            "y": 329.90625,
+            "width": 53.078125,
+            "height": 20,
+            "right": 356.984375,
+            "bottom": 349.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nChiefs\n",
+            "x": 37,
+            "y": 375.90625,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 398.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "KC",
+              "aria-expanded": "false",
+              "aria-label": "Kansas City Chiefs record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nJaguars\n",
+            "x": 37,
+            "y": 398.90625,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 421.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "JAX",
+              "aria-expanded": "false",
+              "aria-label": "Jacksonville Jaguars record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nRaiders\n",
+            "x": 37,
+            "y": 421.90625,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 444.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "LV",
+              "aria-expanded": "false",
+              "aria-label": "Las Vegas Raiders record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nRavens\n",
+            "x": 37,
+            "y": 444.90625,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 467.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "BAL",
+              "aria-expanded": "false",
+              "aria-label": "Baltimore Ravens record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nSteelers\n",
+            "x": 37,
+            "y": 467.90625,
+            "width": 134,
+            "height": 23,
+            "right": 171,
+            "bottom": 490.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "PIT",
+              "aria-expanded": "true",
+              "aria-label": "Pittsburgh Steelers record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Team details\n\u203a\n",
+            "x": 303,
+            "y": 496.90625,
+            "width": 65,
+            "height": 24,
+            "right": 368,
+            "bottom": 520.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-details",
+              "data-team": "PIT"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW ALL 16 TEAMS\n",
+            "x": 15,
+            "y": 531.90625,
+            "width": 363,
+            "height": 27,
+            "right": 378,
+            "bottom": 558.90625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-standings-toggle": "",
+              "aria-expanded": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW MATCHUP\n\u203a\n",
+            "x": 18,
+            "y": 769.90625,
+            "width": 134.65625,
+            "height": 27,
+            "right": 152.65625,
+            "bottom": 796.90625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchup"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "COMPARE TEAMS\n\u203a\n",
+            "x": 157.65625,
+            "y": 769.90625,
+            "width": 108.75,
+            "height": 27,
+            "right": 266.40625,
+            "bottom": 796.90625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "compare"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TEAM FORM\n\u203a\n",
+            "x": 271.40625,
+            "y": 769.90625,
+            "width": 103.578125,
+            "height": 27,
+            "right": 374.984375,
+            "bottom": 796.90625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-form"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 321.40625,
+            "y": 819.90625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 843.90625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "QB",
+              "aria-expanded": "false",
+              "aria-label": "View all available QB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 321.40625,
+            "y": 965.90625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 989.90625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "RB",
+              "aria-expanded": "false",
+              "aria-label": "View all available RB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 321.40625,
+            "y": 1111.90625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 373,
+            "bottom": 1135.90625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "WR",
+              "aria-expanded": "false",
+              "aria-label": "View all available WR leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Home\n",
+            "x": 15,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 87.59375,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-open": "home",
+              "data-nav": "home"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Teams\n",
+            "x": 87.59375,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 160.1875,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "teams"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Matchups\n",
+            "x": 160.1875,
+            "y": 724.078125,
+            "width": 72.609375,
+            "height": 45,
+            "right": 232.796875,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchups"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Insights\n",
+            "x": 232.796875,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 305.390625,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "insights"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "More\n",
+            "x": 305.390625,
+            "y": 724.078125,
+            "width": 72.59375,
+            "height": 45,
+            "right": 377.984375,
+            "bottom": 769.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "more"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\u21bb",
+            "x": 308.4375,
+            "y": 779.078125,
+            "width": 36,
+            "height": 22,
+            "right": 344.4375,
+            "bottom": 801.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-refresh": "",
+              "aria-label": "Refresh verified data",
+              "aria-busy": "false",
+              "aria-disabled": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Sources",
+            "x": 346.4375,
+            "y": 779.078125,
+            "width": 36.5625,
+            "height": 22,
+            "right": 383,
+            "bottom": 801.078125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": ""
+            }
+          }
+        ],
+        "clipped": []
+      },
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigations": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "manualRefresh": {
+        "url": "http://127.0.0.1:35627/project-dollers/assets/data/current.json",
+        "httpStatus": 200,
+        "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+        "status": {
+          "state": "unchanged",
+          "mode": "event-revalidation",
+          "source": "/project-dollers/assets/data/current.json",
+          "streamState": "not-configured",
+          "lastCheckedAt": "2026-10-08T01:51:43.401Z",
+          "lastChangedAt": null,
+          "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+          "nextCheckAt": null,
+          "reason": "manual",
+          "message": "Checked: no new published data is available."
+        },
+        "focusPreserved": true
+      },
+      "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\nWeekly leaders\nverified\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\nCurrent roster\nverified\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\nPlayer statistics\nderived\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\nTeam statistics\nderived\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\nSchedule & results\nverified\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\nInjury & practice reports\nunavailable\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\nDepth chart\nverified\nLatest published ESPN-derived depth order, not a confirmed starter designation.\nOpponent positional allowance\nderived\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\nPrevious meetings\nverified\nMost recent five completed meetings; each game carries its original season/week.\nweekly Opponent Research\nderived\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\nArchival lines (provider/time unavailable)\nverified\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\nexact Pre Game Prices\nunavailable\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\nWeather forecast\nunavailable\nNo verified current forecast is available.\ntravel\nunavailable\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\ncross Checks\npartial\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\nroster Verification\npartial\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\nplayer History\nderived\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\n\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nTerell Smith\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nDaequan Hardy\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nCole Burgess\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBradyn Swinson\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\nDarius Rush\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nK.J. Henry\n\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMarte Mapu\n\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBrandon Johnson\n\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nIsaiah Hodgins\n\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMax Hurleman\n\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+      "nativeGeometry": {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "page": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 802.671875,
+          "right": 430,
+          "bottom": 849.328125
+        },
+        "frame": {
+          "x": 10,
+          "y": 46.65625,
+          "width": 410,
+          "height": 1313,
+          "right": 420,
+          "bottom": 1359.65625
+        },
+        "documentWidth": 430,
+        "pageScrollWidth": 430,
+        "scroller": {
+          "x": 0,
+          "y": 46.65625,
+          "width": 430,
+          "height": 712.671875,
+          "right": 430,
+          "bottom": 759.328125,
+          "scrollWidth": 430,
+          "clientWidth": 430,
+          "scrollHeight": 1325,
+          "clientHeight": 713,
+          "scrollTop": 0
+        },
+        "nav": {
+          "x": 10,
+          "y": 765.328125,
+          "width": 410,
+          "height": 53,
+          "right": 420,
+          "bottom": 818.328125
+        },
+        "rows": [
+          {
+            "x": 20,
+            "y": 378.65625,
+            "width": 390,
+            "height": 20,
+            "right": 410,
+            "bottom": 398.65625,
+            "text": "#\nTEAM\nW\nL\nPCT\nPF\nPA\n+/\u2212\nFORM\n"
+          },
+          {
+            "x": 20,
+            "y": 398.65625,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 424.65625,
+            "text": "1\n\nChiefs\n4\n0\n1.000\n118\n77\n+41\nW\nW\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 424.65625,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 450.65625,
+            "text": "2\n\nJaguars\n3\n1\n0.750\n104\n53\n+51\nW\nL\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 450.65625,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 476.65625,
+            "text": "3\n\nRaiders\n3\n1\n0.750\n115\n84\n+31\nW\nW\nW\nL\n"
+          },
+          {
+            "x": 20,
+            "y": 476.65625,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 502.65625,
+            "text": "4\n\nRavens\n3\n1\n0.750\n116\n96\n+20\nW\nL\nW\nW\n"
+          },
+          {
+            "x": 20,
+            "y": 502.65625,
+            "width": 390,
+            "height": 26,
+            "right": 410,
+            "bottom": 528.65625,
+            "text": "9\n\nSteelers\n2\n2\n0.500\n77\n87\n-10\nW\nL\nW\nL\n"
+          },
+          {
+            "x": 19,
+            "y": 931.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 949.65625,
+            "text": "1\nJ.Burrow\n428\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 949.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 967.65625,
+            "text": "2\nJ.Goff\n412\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 967.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 985.65625,
+            "text": "3\nK.Cousins\n365\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 985.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1003.65625,
+            "text": "4\nC.Stroud\n347\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1003.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1021.65625,
+            "text": "5\nD.Prescott\n335\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1091.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1109.65625,
+            "text": "1\nK.Walker\n177\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1109.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1127.65625,
+            "text": "2\nK.Monangai\n146\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1127.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1145.65625,
+            "text": "3\nBi.Robinson\n145\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1145.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1163.65625,
+            "text": "4\nC.Hubbard\n122\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1163.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1181.65625,
+            "text": "5\nO.Gordon\n100\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1251.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1269.65625,
+            "text": "1\nT.McMillan\n192\n2\n"
+          },
+          {
+            "x": 19,
+            "y": 1269.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1287.65625,
+            "text": "2\nC.Lamb\n189\n1\n"
+          },
+          {
+            "x": 19,
+            "y": 1287.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1305.65625,
+            "text": "3\nT.Higgins\n157\n0\n"
+          },
+          {
+            "x": 19,
+            "y": 1305.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1323.65625,
+            "text": "4\nC.Tate\n145\n0\n"
+          },
+          {
+            "x": 19,
+            "y": 1323.65625,
+            "width": 392,
+            "height": 18,
+            "right": 411,
+            "bottom": 1341.65625,
+            "text": "5\nP.Nacua\n125\n0\n"
+          }
+        ],
+        "controls": [
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 285,
+            "y": 158.65625,
+            "width": 125,
+            "height": 44,
+            "right": 410,
+            "bottom": 202.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "LADDER",
+            "x": 10,
+            "y": 223.65625,
+            "width": 135.328125,
+            "height": 32,
+            "right": 145.328125,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "true",
+              "aria-controls": "panel-ladder",
+              "data-nfl-tab": "ladder"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TOP PLAYERS",
+            "x": 149.328125,
+            "y": 223.65625,
+            "width": 133.328125,
+            "height": 32,
+            "right": 282.65625,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-players",
+              "data-nfl-tab": "players"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "WEEKLY RECAP",
+            "x": 286.65625,
+            "y": 223.65625,
+            "width": 133.328125,
+            "height": 32,
+            "right": 419.984375,
+            "bottom": 255.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "aria-selected": "false",
+              "aria-controls": "panel-recap",
+              "data-nfl-tab": "recap"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "AFC",
+            "x": 15,
+            "y": 264.65625,
+            "width": 198,
+            "height": 30,
+            "right": 213,
+            "bottom": 294.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "AFC",
+              "aria-pressed": "true"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "NFC",
+            "x": 217,
+            "y": 264.65625,
+            "width": 198,
+            "height": 30,
+            "right": 415,
+            "bottom": 294.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-conference": "NFC",
+              "aria-pressed": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Standings data sources and context",
+            "x": 387,
+            "y": 313.65625,
+            "width": 24,
+            "height": 30,
+            "right": 411,
+            "bottom": 343.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": "",
+              "aria-label": "Standings data sources and context"
+            }
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 61.640625,
+            "y": 350.65625,
+            "width": 92.921875,
+            "height": 22,
+            "right": 154.5625,
+            "bottom": 372.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 207.125,
+            "y": 350.65625,
+            "width": 76.765625,
+            "height": 22,
+            "right": 283.890625,
+            "bottom": 372.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "SELECT",
+            "text": null,
+            "x": 332.453125,
+            "y": 350.65625,
+            "width": 61.53125,
+            "height": 22,
+            "right": 393.984375,
+            "bottom": 372.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nChiefs\n",
+            "x": 39,
+            "y": 398.65625,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 424.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "KC",
+              "aria-expanded": "false",
+              "aria-label": "Kansas City Chiefs record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nJaguars\n",
+            "x": 39,
+            "y": 424.65625,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 450.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "JAX",
+              "aria-expanded": "false",
+              "aria-label": "Jacksonville Jaguars record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nRaiders\n",
+            "x": 39,
+            "y": 450.65625,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 476.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "LV",
+              "aria-expanded": "false",
+              "aria-label": "Las Vegas Raiders record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nRavens\n",
+            "x": 39,
+            "y": 476.65625,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 502.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "BAL",
+              "aria-expanded": "false",
+              "aria-label": "Baltimore Ravens record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\nSteelers\n",
+            "x": 39,
+            "y": 502.65625,
+            "width": 149,
+            "height": 26,
+            "right": 188,
+            "bottom": 528.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team",
+              "data-team": "PIT",
+              "aria-expanded": "true",
+              "aria-label": "Pittsburgh Steelers record details"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Team details\n\u203a\n",
+            "x": 332,
+            "y": 536.65625,
+            "width": 73,
+            "height": 24,
+            "right": 405,
+            "bottom": 560.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-details",
+              "data-team": "PIT"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW ALL 16 TEAMS\n",
+            "x": 15,
+            "y": 573.65625,
+            "width": 400,
+            "height": 30,
+            "right": 415,
+            "bottom": 603.65625,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-standings-toggle": "",
+              "aria-expanded": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "VIEW MATCHUP\n\u203a\n",
+            "x": 18,
+            "y": 830.65625,
+            "width": 148.234375,
+            "height": 30,
+            "right": 166.234375,
+            "bottom": 860.65625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchup"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "COMPARE TEAMS\n\u203a\n",
+            "x": 172.234375,
+            "y": 830.65625,
+            "width": 119.734375,
+            "height": 30,
+            "right": 291.96875,
+            "bottom": 860.65625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "compare"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "TEAM FORM\n\u203a\n",
+            "x": 297.96875,
+            "y": 830.65625,
+            "width": 114.03125,
+            "height": 30,
+            "right": 412,
+            "bottom": 860.65625,
+            "hit": false,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "team-form"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 358.40625,
+            "y": 884.65625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 908.65625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "QB",
+              "aria-expanded": "false",
+              "aria-label": "View all available QB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 358.40625,
+            "y": 1044.65625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 1068.65625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "RB",
+              "aria-expanded": "false",
+              "aria-label": "View all available RB leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "View all\n\u203a\n",
+            "x": 358.40625,
+            "y": 1204.65625,
+            "width": 51.59375,
+            "height": 24,
+            "right": 410,
+            "bottom": 1228.65625,
+            "hit": null,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "leaders",
+              "data-position": "WR",
+              "aria-expanded": "false",
+              "aria-label": "View all available WR leaders"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Home\n",
+            "x": 15,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 95,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-open": "home",
+              "data-nav": "home"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Teams\n",
+            "x": 95,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 175,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "teams"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Matchups\n",
+            "x": 175,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 255,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "matchups"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Insights\n",
+            "x": 255,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 335,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "insights"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "More\n",
+            "x": 335,
+            "y": 769.328125,
+            "width": 80,
+            "height": 45,
+            "right": 415,
+            "bottom": 814.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-nfl-action": "more"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "\u21bb",
+            "x": 345.4375,
+            "y": 824.328125,
+            "width": 36,
+            "height": 22,
+            "right": 381.4375,
+            "bottom": 846.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-refresh": "",
+              "aria-label": "Refresh verified data",
+              "aria-busy": "false",
+              "aria-disabled": "false"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Sources",
+            "x": 383.4375,
+            "y": 824.328125,
+            "width": 36.5625,
+            "height": 22,
+            "right": 420,
+            "bottom": 846.328125,
+            "hit": true,
+            "disabled": false,
+            "attributes": {
+              "data-sources": ""
+            }
+          }
+        ],
+        "clipped": []
+      },
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigations": []
+      }
+    }
+  ],
+  "verifiedCurrentScreenshotBytes": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-top.png",
+      "sha256": "c1e4e148eb1982cade783a4b28a424f694162f222c0329895a9ab3b0068d56ab",
+      "bytes": 1068909,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-scroll-0.png",
+      "sha256": "a96a22a4907bbd625e32e8a62c44a09ee5e470aa728898794198310f9fd012e9",
+      "bytes": 1069161,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-scroll-1.png",
+      "sha256": "2ab600d321fbca03370b4a670efbb2d4c43eb5f2b3eb322f7617eee6ef23f08b",
+      "bytes": 840680,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-scroll-2.png",
+      "sha256": "75eda22e2b45dc79ff1ae94b7a3d13e9ecce82ff87109be665ebbe65d45592e3",
+      "bytes": 825482,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-full-content.png",
+      "sha256": "dea0764a008e87c710b6f5f95e8e4f4995726a740719d7689f85fd12cea76fca",
+      "bytes": 1485806,
+      "qualification": "Entire actual rendered NFL content exposed by temporary scroller/shell height and position styles plus a stable block-flow exposure for one screenshot. Normal phone viewport captures use unmodified geometry. Source files and animation phases are unchanged."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-final.png",
+      "sha256": "ffdf99ed401fb530f6f1ada66a159626a2e0afe86ee4920c48f1596d89618f25",
+      "bytes": 1077586,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-top.png",
+      "sha256": "d5bc9928ca7127549c841e69a17ce8417ce755e1f351923e6085c717d67dfed8",
+      "bytes": 1181239,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-scroll-0.png",
+      "sha256": "a5c1f4a111bb18b8b3925046287b2c850b569ce90d528af90024c71bb8069b8b",
+      "bytes": 1181288,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-scroll-1.png",
+      "sha256": "ed045c0cc5503dcb07894cc20ece3fb6f853ba13a297b7d8752f51a12934adbd",
+      "bytes": 971785,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-scroll-2.png",
+      "sha256": "ab63d106b322e808fdd722cac927cd1657dcc44eeec4000be22b7767fef93e39",
+      "bytes": 905733,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-full-content.png",
+      "sha256": "e799bb1ca8961d832cb8c19aa59d073247e06408860e95143f6b72cf0b9d04cd",
+      "bytes": 1650786,
+      "qualification": "Entire actual rendered NFL content exposed by temporary scroller/shell height and position styles plus a stable block-flow exposure for one screenshot. Normal phone viewport captures use unmodified geometry. Source files and animation phases are unchanged."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-final.png",
+      "sha256": "cfc307ebff1b3fb25ff84579154bc93dfdc7067702a3fd6c6ffb12ae2498f0ab",
+      "bytes": 1191732,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-top.png",
+      "sha256": "2184b6ae5f17b4b3958b915fd6827e7454b606feaaa575fd929fee8341972957",
+      "bytes": 1082934,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-scroll-0.png",
+      "sha256": "eb5d15ab967f97eac72805acf58e500226f26cebbbf841c5c6b004a3a12cd9cf",
+      "bytes": 1096984,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-scroll-1.png",
+      "sha256": "18b34cbad0502591fa5552555969205fe6c34d0bd6a8d9c804a26f3d6309cc0e",
+      "bytes": 879806,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-scroll-2.png",
+      "sha256": "29ac9b56a3ebd222f52df3bcfd75263fe491059d68f9406bef98ca23fd87e2e2",
+      "bytes": 857030,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-full-content.png",
+      "sha256": "b71b0e2f37579b8ad43d1ac3a444da4883d1d762be24f67acc0511e8f194c96c",
+      "bytes": 1539950,
+      "qualification": "Entire actual rendered NFL content exposed by temporary scroller/shell height and position styles plus a stable block-flow exposure for one screenshot. Normal phone viewport captures use unmodified geometry. Source files and animation phases are unchanged."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-final.png",
+      "sha256": "90f8a75dcbcfc8caa5d41796ec4c3c09ed75a941917983d4f300cc32f5183673",
+      "bytes": 1088466,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-top.png",
+      "sha256": "2d4dff7352cb9dc948f06eb5206d7ba1a8ec166a3fe70932556a27887e6ec93f",
+      "bytes": 1202277,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-scroll-0.png",
+      "sha256": "c6ab74c248e860072a9f30db9e1fd6488e09be1c70edc95bfeedc7937baf8a9d",
+      "bytes": 1211945,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-scroll-1.png",
+      "sha256": "8af309de4d38f215a370367f22ad40327bf0c6c6ed60b90142945a1bad93b14c",
+      "bytes": 1015438,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-scroll-2.png",
+      "sha256": "6c720c85e9e4712c9b96019eb8d4864d634a8f293049effc95c93064317cefe8",
+      "bytes": 948167,
+      "qualification": "native phone viewport with natural animation phase"
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-full-content.png",
+      "sha256": "757b36bcd9cee3c2971dd2cbd0ddbf27c87a8b5b3128e73f972164eb74d34b5e",
+      "bytes": 1706455,
+      "qualification": "Entire actual rendered NFL content exposed by temporary scroller/shell height and position styles plus a stable block-flow exposure for one screenshot. Normal phone viewport captures use unmodified geometry. Source files and animation phases are unchanged."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-final.png",
+      "sha256": "31a580f11498d74d99ca8bb6b9480f68ce1b16e29b95f07959c2514cff8d7e27",
+      "bytes": 1198381,
+      "qualification": "native phone viewport with natural animation phase"
+    }
+  ],
+  "personallyInspectedCurrentNativeScreenshots": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-top.png",
+      "sha256": "c1e4e148eb1982cade783a4b28a424f694162f222c0329895a9ab3b0068d56ab",
+      "personallyVisuallyInspected": true
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-top.png",
+      "sha256": "d5bc9928ca7127549c841e69a17ce8417ce755e1f351923e6085c717d67dfed8",
+      "personallyVisuallyInspected": true
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-top.png",
+      "sha256": "2184b6ae5f17b4b3958b915fd6827e7454b606feaaa575fd929fee8341972957",
+      "personallyVisuallyInspected": true
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-top.png",
+      "sha256": "2d4dff7352cb9dc948f06eb5206d7ba1a8ec166a3fe70932556a27887e6ec93f",
+      "personallyVisuallyInspected": true
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-scroll-2.png",
+      "sha256": "75eda22e2b45dc79ff1ae94b7a3d13e9ecce82ff87109be665ebbe65d45592e3",
+      "personallyVisuallyInspected": true
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-scroll-2.png",
+      "sha256": "6c720c85e9e4712c9b96019eb8d4864d634a8f293049effc95c93064317cefe8",
+      "personallyVisuallyInspected": true
+    }
+  ],
+  "inheritedOwnedModuleProofs": {
+    "focusedTests": "/workspace/recovery-qa/nfl-diamond/applied-controls-focused-tests.json",
+    "focusedModuleSha256": "5b377121765bd3cd652570418fc7b600b485b5bb2caba53f1ec39e96052b502c",
+    "sameActualModuleBytes": true,
+    "realRefreshStateReceipt": "/workspace/recovery-qa/nfl-diamond/data-controls-refresh-audit.json",
+    "inheritanceReason": "All UI and updater bytes are unchanged; all retained factual values and complete leader arrays are proven identical. Metadata retrieval times/hashes changed through legitimate upstream refresh. Current focused manual refresh, source dialog, direct load/reload, real records and leaders passed all four cases."
+  },
+  "currentRootUpdaterIntegration": {
+    "path": "/workspace/recovery-qa/nfl-diamond/root-integrated-integration.json",
+    "sha256": "0f4c192387bab66864ae8268e4e482dbca16c3a62582f917de3061212f02af56",
+    "status": "passed",
+    "checks": [
+      "activePage",
+      "week",
+      "conference",
+      "nflTab",
+      "teamTab",
+      "filter",
+      "expanded",
+      "historyMode",
+      "historyWeek",
+      "seasonOpen",
+      "gameOpen",
+      "extraOpen",
+      "scroll",
+      "historyPresent"
+    ],
+    "focusPreserved": true,
+    "sourceFocusPreserved": true,
+    "historyScrollPreserved": true
+  },
+  "visualAcceptance": "The integrated native output preserves the approved compact phone enclosure, bright gold/cyan framing, aligned dense standings, highlighted Steelers row, fixture equipment presentation and readable leader tables. Source retrieval timestamp correctly advances to the integrated snapshot. No pixel-identity or physical-hardware claim is made.",
+  "knownQATestCorrection": "The initial integration batch used an ambiguous Sources locator matching two legitimate buttons. Failed receipts were preserved; the QA-only scoped locator correction passes in the current canonical retry reports. No application fix was required.",
+  "remainingOwnedBlockers": [],
+  "qualifications": [
+    "Approved reference source is the supplied chat attachment; original attachment bytes were unavailable for registered image diff.",
+    "Native PNGs preserve actual viewport geometry and natural animation; full-content evidence is explicitly qualified temporary internal-scroll exposure.",
+    "Phone dimensions are browser emulation, not physical iPhone or measured hardware FPS.",
+    "Helmet equipment artwork is generated decoration with separate legitimate team marks.",
+    "Hosted deployment and live URL verification are parent-owned and not claimed by this local receipt."
+  ]
+}

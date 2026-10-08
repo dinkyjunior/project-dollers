@@ -78,3 +78,14 @@ comparison uses the chat attachment and does not claim registered pixel
 identity. Engine emulation does not establish physical iPhone frame rate,
 background-tab behavior or Safari browser-control coverage. Preserve failed runs
 and save a separately named retry after a supported diagnosis.
+
+For the separately audited metadata-only integration in this release,
+`integration.cjs --engine chromium --run-name unique-name --freeze <manifest-SHA>`
+runs focused source, refresh, geometry and native-motion checks at both phones.
+Repeat with `--engine webkit`. It requires exactly the three declared data files
+to differ from the approved implementation manifest and preserves all 200 other
+runtime hashes. `--manifest` and `--previous-manifest` can name alternate JSON
+manifests; defaults use the saved NFL release manifests. This helper does not
+establish that arbitrary data changes are metadata-only: the independent source
+comparison must already prove that, and the original complete suites remain
+separate evidence.

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "method": "Independently compare source bytes retained at accepted96db against integrated runtime; recurse types, dictionary key sets, list structure, values. Changed values must match exact metadata JSON-pointer paths already explicitly recorded in incoming-auto-refresh proof.",
+  "initialProbeCorrection": "A first exploratory print incorrectly assumed leaders were a root key; current data stores leaderboard blocks in weeks. No application fault or mutation occurred. Corrected full recursive comparison below executed both datasets.",
+  "results": [
+    {
+      "file": "assets/data/current.json",
+      "approvedOldSHA256": "be2c3ec983d6f6a9b5f5d4567e918dca5b2e0dcc36ca4e8a3614c5f6be76c5ec",
+      "currentSHA256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+      "recursiveDifferences": 363,
+      "types": {
+        "value": 363
+      },
+      "unknownDifferences": [],
+      "allDifferencesPreviouslyExplicitMetadata": true,
+      "weekObjectKeys": [
+        "throughWeek",
+        "leadersWeek",
+        "recapWeek",
+        "conferences",
+        "leaders",
+        "recap",
+        "fixture",
+        "standingsContext",
+        "completedGamesInThroughWeek",
+        "scheduledGamesInThroughWeek"
+      ],
+      "changedWeekPaths": [],
+      "teamsExactlyEqual": true
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "approvedOldSHA256": "b3bc6d93029e59780cda98f4bdca0996f356d79f2ee335483499268dc26576f8",
+      "currentSHA256": "7ecf6e7debee5d2926185422d528ffa8805e0913e14e06eadc81104c4e295aea",
+      "recursiveDifferences": 1415,
+      "types": {
+        "value": 1415
+      },
+      "unknownDifferences": [],
+      "allDifferencesPreviouslyExplicitMetadata": true
+    }
+  ]
+}

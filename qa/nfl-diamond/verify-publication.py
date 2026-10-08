@@ -46,6 +46,19 @@ def main():
     for reviewer in acceptance["reviewers"]:
         assert reviewer["decision"] == "accepted"
         assert digest((ROOT / reviewer["evidence"]).read_bytes()) == reviewer["evidenceSha256"]
+    original_manifest = read("approved-runtime-manifest.json")
+    for name in ["approved-local/chromium/results.json", "approved-local/webkit/results.json"]:
+        original = read(name)
+        assert original["status"] == "passed" and original["unchangedDuringQA"] is True
+        assert original["source"]["runtimeFiles"] == original_manifest
+    changed = {name for name in manifest if manifest[name] != original_manifest[name]}
+    assert changed == {"assets/data/current.json", "assets/data/player-history.json", "assets/data/provenance.json"}
+    integration = read("refresh-integration/integrated-source.json")
+    assert integration["status"] == "passed" and integration["unchangedNonDataRuntimeFiles"] == 200
+    assert integration["currentRuntimeManifest"] == manifest
+    assert integration["allApprovedEnrichedLeaderRowsPreserved"] == 816
+    assert integration["allIncomingCurrentFieldsPreservedExceptApprovedLeaderEnrichment"] is True
+    assert integration["incomingHistoryBytesExact"] is True
     for name in ["local-chromium/results.json", "local-webkit/results.json",
                  "hosted-webkit/results.json", "hosted-desktop/results.json"]:
         report = read(name)

@@ -1,0 +1,1001 @@
+{
+  "status": "accepted",
+  "reviewer": "nfl_motion_controls_review",
+  "completedAt": "2026-10-08T01:55:13.005520+00:00",
+  "source": {
+    "runtimeManifest": {
+      "path": "/workspace/recovery-qa/nfl-diamond/frozen-runtime.json",
+      "sha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+      "bytes": 20166
+    },
+    "runtimeManifestSha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+    "runtimeFileCount": 203,
+    "allCurrentBytesIndependentlyGuarded": true,
+    "approvedPriorManifestSha256": "96db9765a12552148b165f270b0dbea60b321c640a5b2bcea6866e03e47670ba",
+    "nonDataFilesExactlyIdenticalToAcceptedPrior": 200,
+    "changedFiles": [
+      "assets/data/current.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json"
+    ],
+    "unchangedCriticalFiles": {
+      "assets/nfl-dashboard-motion.css": "6fce7186a26ec789a34d6575a49c11a8a0b957032123dd7825992b9ac923a16d",
+      "assets/nfl-dashboard-motion.js": "7da8f77361d3e27255a2c0c44b301918760b72014d7d76c87cc51e7ee9033c19",
+      "assets/nfl-dashboard.css": "7d18396d8e1fd98b7153a007d80639621426f90a59cb3357b48040614eab605d",
+      "assets/nfl-dashboard.js": "5b377121765bd3cd652570418fc7b600b485b5bb2caba53f1ec39e96052b502c",
+      "assets/app.js": "64944a353c1dec478cf7748a4984e7bd95907e1a14a105da9a14cd0bd2eede06",
+      "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+      "index.html": "479c3581e15b1aeaccea95e1be65b42be428f319b2edd98e48e4c77b6ca0457f"
+    },
+    "retrievedAt": "2026-10-08T01:21:16Z"
+  },
+  "priorReceiptPreserved": {
+    "path": "/workspace/recovery-qa/nfl-diamond/motion/final-review.json",
+    "sha256": "f3885d28947684936c44984f7b08f7bf10f3ed768d41ba5c691b161e95aef49d",
+    "bytes": 37551
+  },
+  "integrationEvidence": [
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/incoming-auto-refresh.json",
+      "sha256": "c220c359426a83db8f1f011120f3d94195f2f6fd55ed7115f89529ea6545ac59",
+      "bytes": 663903
+    },
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/integrated-source.json",
+      "sha256": "ef1477523e268fbd4c8ee7ec991919a47237abd0b9efb1b809a82d0848f85e32",
+      "bytes": 21672
+    },
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/data-check.json",
+      "sha256": "80ccb83ba82899f8813b81700c1100721a190d7e5c5a0dea26804d0ba6822578",
+      "bytes": 7597
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/motion/integrated-independent-facts-check.json",
+      "sha256": "f94a7b2a244899e522b0cb5ec2ea15a48577b2c96d4f2c7b11f03fd724d60b86",
+      "bytes": 1764
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/root-integrated-integration.json",
+      "sha256": "0f4c192387bab66864ae8268e4e482dbca16c3a62582f917de3061212f02af56",
+      "bytes": 4298
+    }
+  ],
+  "independentFactComparison": {
+    "status": "passed",
+    "method": "Independently compare source bytes retained at accepted96db against integrated runtime; recurse types, dictionary key sets, list structure, values. Changed values must match exact metadata JSON-pointer paths already explicitly recorded in incoming-auto-refresh proof.",
+    "initialProbeCorrection": "A first exploratory print incorrectly assumed leaders were a root key; current data stores leaderboard blocks in weeks. No application fault or mutation occurred. Corrected full recursive comparison below executed both datasets.",
+    "results": [
+      {
+        "file": "assets/data/current.json",
+        "approvedOldSHA256": "be2c3ec983d6f6a9b5f5d4567e918dca5b2e0dcc36ca4e8a3614c5f6be76c5ec",
+        "currentSHA256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+        "recursiveDifferences": 363,
+        "types": {
+          "value": 363
+        },
+        "unknownDifferences": [],
+        "allDifferencesPreviouslyExplicitMetadata": true,
+        "weekObjectKeys": [
+          "throughWeek",
+          "leadersWeek",
+          "recapWeek",
+          "conferences",
+          "leaders",
+          "recap",
+          "fixture",
+          "standingsContext",
+          "completedGamesInThroughWeek",
+          "scheduledGamesInThroughWeek"
+        ],
+        "changedWeekPaths": [],
+        "teamsExactlyEqual": true
+      },
+      {
+        "file": "assets/data/player-history.json",
+        "approvedOldSHA256": "b3bc6d93029e59780cda98f4bdca0996f356d79f2ee335483499268dc26576f8",
+        "currentSHA256": "7ecf6e7debee5d2926185422d528ffa8805e0913e14e06eadc81104c4e295aea",
+        "recursiveDifferences": 1415,
+        "types": {
+          "value": 1415
+        },
+        "unknownDifferences": [],
+        "allDifferencesPreviouslyExplicitMetadata": true
+      }
+    ]
+  },
+  "freshFocusedNativeChecks": [
+    {
+      "engine": "chromium",
+      "report": {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/results.json",
+        "sha256": "50e5717c8baf0b8830c343ca80172b4a5f9c74ff327ed1d5f88a7c915d41d296",
+        "bytes": 229615
+      },
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeClockCount": 37,
+          "naturallyAdvancingVisibleClocks": 25,
+          "travellingReflectionAdvances": [
+            {
+              "name": "nfl-ambient-emission",
+              "target": "nfl-ambient-light",
+              "pseudo": null,
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-stadium-light-drift",
+              "target": "nfl-ambient-light",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-venue-depth",
+              "target": "",
+              "pseudo": null,
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-league-circuit",
+              "target": "nfl-league-medallion",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-left",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-right",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-matchup-light-drift",
+              "target": "nfl-matchup-art",
+              "pseudo": "::before",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 333.32000000000016
+            }
+          ],
+          "offscreenClocksPaused": true,
+          "factualTextStatic": true,
+          "manualRefresh": {
+            "url": "http://127.0.0.1:44329/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T01:49:49.298Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "focusPreserved": true
+          },
+          "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\n\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\n\nWeekly leaders\nverified\n\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\n\nCurrent roster\nverified\n\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\n\nPlayer statistics\nderived\n\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\n\nTeam statistics\nderived\n\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\n\nSchedule & results\nverified\n\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\n\nInjury & practice reports\nunavailable\n\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\n\nDepth chart\nverified\n\nLatest published ESPN-derived depth order, not a confirmed starter designation.\n\nOpponent positional allowance\nderived\n\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\n\nPrevious meetings\nverified\n\nMost recent five completed meetings; each game carries its original season/week.\n\nweekly Opponent Research\nderived\n\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\n\nArchival lines (provider/time unavailable)\nverified\n\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\n\nexact Pre Game Prices\nunavailable\n\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\n\nWeather forecast\nunavailable\n\nNo verified current forecast is available.\n\ntravel\nunavailable\n\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\n\ncross Checks\npartial\n\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\n\nroster Verification\npartial\n\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\n\nplayer History\nderived\n\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\n\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nTerell Smith\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nDaequan Hardy\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nCole Burgess\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBradyn Swinson\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\n\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\n\nDarius Rush\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nK.J. Henry\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMarte Mapu\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBrandon Johnson\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nIsaiah Hodgins\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMax Hurleman\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+          "originals": [
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-top.png",
+              "sha256": "c1e4e148eb1982cade783a4b28a424f694162f222c0329895a9ab3b0068d56ab",
+              "bytes": 1068909
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-full-content.png",
+              "sha256": "dea0764a008e87c710b6f5f95e8e4f4995726a740719d7689f85fd12cea76fca",
+              "bytes": 1485806
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-final.png",
+              "sha256": "ffdf99ed401fb530f6f1ada66a159626a2e0afe86ee4920c48f1596d89618f25",
+              "bytes": 1077586
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeClockCount": 37,
+          "naturallyAdvancingVisibleClocks": 25,
+          "travellingReflectionAdvances": [
+            {
+              "name": "nfl-ambient-emission",
+              "target": "nfl-ambient-light",
+              "pseudo": null,
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-stadium-light-drift",
+              "target": "nfl-ambient-light",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-venue-depth",
+              "target": "",
+              "pseudo": null,
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-league-circuit",
+              "target": "nfl-league-medallion",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-left",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-right",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-matchup-light-drift",
+              "target": "nfl-matchup-art",
+              "pseudo": "::before",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 316.6299999999999
+            }
+          ],
+          "offscreenClocksPaused": true,
+          "factualTextStatic": true,
+          "manualRefresh": {
+            "url": "http://127.0.0.1:44329/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T01:49:57.765Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "focusPreserved": true
+          },
+          "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\n\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\n\nWeekly leaders\nverified\n\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\n\nCurrent roster\nverified\n\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\n\nPlayer statistics\nderived\n\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\n\nTeam statistics\nderived\n\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\n\nSchedule & results\nverified\n\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\n\nInjury & practice reports\nunavailable\n\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\n\nDepth chart\nverified\n\nLatest published ESPN-derived depth order, not a confirmed starter designation.\n\nOpponent positional allowance\nderived\n\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\n\nPrevious meetings\nverified\n\nMost recent five completed meetings; each game carries its original season/week.\n\nweekly Opponent Research\nderived\n\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\n\nArchival lines (provider/time unavailable)\nverified\n\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\n\nexact Pre Game Prices\nunavailable\n\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\n\nWeather forecast\nunavailable\n\nNo verified current forecast is available.\n\ntravel\nunavailable\n\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\n\ncross Checks\npartial\n\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\n\nroster Verification\npartial\n\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\n\nplayer History\nderived\n\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\n\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nTerell Smith\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Active \u00b7 ESPN roster: defense\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nDaequan Hardy\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nCole Burgess\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBradyn Swinson\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\n\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\n\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\n\nDarius Rush\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nK.J. Henry\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMarte Mapu\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nBrandon Johnson\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nIsaiah Hodgins\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\n\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMax Hurleman\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\n\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\n\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\n\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+          "originals": [
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-top.png",
+              "sha256": "d5bc9928ca7127549c841e69a17ce8417ce755e1f351923e6085c717d67dfed8",
+              "bytes": 1181239
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-full-content.png",
+              "sha256": "e799bb1ca8961d832cb8c19aa59d073247e06408860e95143f6b72cf0b9d04cd",
+              "bytes": 1650786
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-final.png",
+              "sha256": "cfc307ebff1b3fb25ff84579154bc93dfdc7067702a3fd6c6ffb12ae2498f0ab",
+              "bytes": 1191732
+            }
+          ]
+        }
+      ],
+      "scope": {
+        "genuineNativeBrowsers": true,
+        "deviceScaleFactor": 2,
+        "physicalIPhone": false,
+        "responseOrDataSubstitution": false,
+        "scope": "Targeted integration after independently proved metadata-only upstream changes. Prior complete 96db application/visual/regression suites remain immutable; this check does not repeat those broader tests."
+      }
+    },
+    {
+      "engine": "webkit",
+      "report": {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/results.json",
+        "sha256": "28387431fe5e27a2fb6aca1c6952ed678ddeb975b35256cc02abe19df6c975be",
+        "bytes": 228117
+      },
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeClockCount": 37,
+          "naturallyAdvancingVisibleClocks": 25,
+          "travellingReflectionAdvances": [
+            {
+              "name": "nfl-ambient-emission",
+              "target": "nfl-ambient-light",
+              "pseudo": null,
+              "delta": 319
+            },
+            {
+              "name": "nfl-stadium-light-drift",
+              "target": "nfl-ambient-light",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-venue-depth",
+              "target": "",
+              "pseudo": null,
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-league-circuit",
+              "target": "nfl-league-medallion",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-left",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-right",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-matchup-light-drift",
+              "target": "nfl-matchup-art",
+              "pseudo": "::before",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 319
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 319
+            }
+          ],
+          "offscreenClocksPaused": true,
+          "factualTextStatic": true,
+          "manualRefresh": {
+            "url": "http://127.0.0.1:35627/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T01:51:02.618Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "focusPreserved": true
+          },
+          "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\nWeekly leaders\nverified\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\nCurrent roster\nverified\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\nPlayer statistics\nderived\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\nTeam statistics\nderived\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\nSchedule & results\nverified\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\nInjury & practice reports\nunavailable\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\nDepth chart\nverified\nLatest published ESPN-derived depth order, not a confirmed starter designation.\nOpponent positional allowance\nderived\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\nPrevious meetings\nverified\nMost recent five completed meetings; each game carries its original season/week.\nweekly Opponent Research\nderived\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\nArchival lines (provider/time unavailable)\nverified\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\nexact Pre Game Prices\nunavailable\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\nWeather forecast\nunavailable\nNo verified current forecast is available.\ntravel\nunavailable\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\ncross Checks\npartial\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\nroster Verification\npartial\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\nplayer History\nderived\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\n\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nTerell Smith\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nDaequan Hardy\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nCole Burgess\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBradyn Swinson\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\nDarius Rush\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nK.J. Henry\n\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMarte Mapu\n\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBrandon Johnson\n\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nIsaiah Hodgins\n\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMax Hurleman\n\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+          "originals": [
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-top.png",
+              "sha256": "2184b6ae5f17b4b3958b915fd6827e7454b606feaaa575fd929fee8341972957",
+              "bytes": 1082934
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-full-content.png",
+              "sha256": "b71b0e2f37579b8ad43d1ac3a444da4883d1d762be24f67acc0511e8f194c96c",
+              "bytes": 1539950
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-final.png",
+              "sha256": "90f8a75dcbcfc8caa5d41796ec4c3c09ed75a941917983d4f300cc32f5183673",
+              "bytes": 1088466
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeClockCount": 37,
+          "naturallyAdvancingVisibleClocks": 25,
+          "travellingReflectionAdvances": [
+            {
+              "name": "nfl-ambient-emission",
+              "target": "nfl-ambient-light",
+              "pseudo": null,
+              "delta": 313
+            },
+            {
+              "name": "nfl-stadium-light-drift",
+              "target": "nfl-ambient-light",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-venue-depth",
+              "target": "",
+              "pseudo": null,
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-league-circuit",
+              "target": "nfl-league-medallion",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-left",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-diamond-scintillation",
+              "target": "nfl-diamond-glint is-right",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-edge-reflection",
+              "target": "nfl-frame-shimmer",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-matchup-light-drift",
+              "target": "nfl-matchup-art",
+              "pseudo": "::before",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-tr",
+              "pseudo": "::after",
+              "delta": 313
+            },
+            {
+              "name": "nfl-corner-diamond-breathe",
+              "target": "nfl-bevel-corner is-bl",
+              "pseudo": "::after",
+              "delta": 313
+            }
+          ],
+          "offscreenClocksPaused": true,
+          "factualTextStatic": true,
+          "manualRefresh": {
+            "url": "http://127.0.0.1:35627/project-dollers/assets/data/current.json",
+            "httpStatus": 200,
+            "sha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+            "status": {
+              "state": "unchanged",
+              "mode": "event-revalidation",
+              "source": "/project-dollers/assets/data/current.json",
+              "streamState": "not-configured",
+              "lastCheckedAt": "2026-10-08T01:51:43.401Z",
+              "lastChangedAt": null,
+              "sourceRetrievedAt": "2026-10-08T01:21:16Z",
+              "nextCheckAt": null,
+              "reason": "manual",
+              "message": "Checked: no new published data is available."
+            },
+            "focusPreserved": true
+          },
+          "sourceDialog": "2026 regular season \u00b7 Week 5\nRetrieved Oct 8, 12:21 PM GMT+11\n\nRecords and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.\n\nThe app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider\u2019s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.\n\nConference records\nderived\nCalculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null.\nWeekly leaders\nverified\nUp to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week.\nCurrent roster\nverified\nCurrent retained roster: active, reserve and practice squad; cut players excluded.\nPlayer statistics\nderived\nSummed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT.\nTeam statistics\nderived\nGross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals.\nSchedule & results\nverified\nKickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions.\nInjury & practice reports\nunavailable\nPractice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable.\nDepth chart\nverified\nLatest published ESPN-derived depth order, not a confirmed starter designation.\nOpponent positional allowance\nderived\nOpponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable.\nPrevious meetings\nverified\nMost recent five completed meetings; each game carries its original season/week.\nweekly Opponent Research\nderived\nEvery scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates.\nArchival lines (provider/time unavailable)\nverified\nArchival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price.\nexact Pre Game Prices\nunavailable\nArchived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price.\nWeather forecast\nunavailable\nNo verified current forecast is available.\ntravel\nunavailable\nTeam travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule.\ncross Checks\npartial\nCurrent roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields.\nroster Verification\npartial\nOptional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten.\nplayer History\nderived\nCompleted regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset.\nRoster source differences\n\nConfirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.\n\nSean Murphy-Bunting\n\nRoster sources differ\nJersey number: primary 26 \u00b7 Steelers 27 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nTerell Smith\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 39 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Active \u00b7 ESPN roster: defense\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nDaequan Hardy\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nCole Burgess\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN PIT\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBradyn Swinson\n\nRoster sources differ\nTeam membership: primary PIT \u00b7 Steelers No matched entry in complete current roster \u00b7 ESPN No matched roster entry\nCurrent official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\nSteelers roster: No matched entry \u00b7 ESPN roster: Unavailable\nofficial steelers roster \u00b7 espn steelers roster \u00b7 espn athlete 4431424\nChecked Oct 8, 12:21 PM GMT+11\nDarius Rush\n\nRoster sources differ\nJersey number: primary 36 \u00b7 Steelers 38 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nK.J. Henry\n\nRoster sources differ\nPosition: primary DL \u00b7 Steelers LB \u00b7 ESPN LB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMarte Mapu\n\nRoster sources differ\nJersey number: primary 14 \u00b7 Steelers 48 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nBrandon Johnson\n\nRoster sources differ\nJersey number: primary 82 \u00b7 Steelers 89 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nIsaiah Hodgins\n\nRoster sources differ\nJersey number: primary 89 \u00b7 Steelers 82 \u00b7 ESPN unavailable\nVerified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\nSteelers roster: Practice Squad \u00b7 ESPN roster: practiceSquad\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMax Hurleman\n\nRoster sources differ\nPosition: primary WR \u00b7 Steelers WR \u00b7 ESPN RB\nProviders report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\nSteelers roster: Practice Squad/Injured \u00b7 ESPN roster: injuredReserveOrOut\nofficial steelers roster \u00b7 espn steelers roster\nChecked Oct 8, 12:21 PM GMT+11\nMissing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.\n\nnflverse games\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse teams\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse depth\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse injuries\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nofficial steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn steelers roster\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nespn athlete 4431424\nverified \u00b7 Oct 8, 12:21 PM GMT+11\nnflverse player stats 2005\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2006\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2007\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2008\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2009\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2010\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2011\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2012\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2013\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2014\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2015\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2016\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2017\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2018\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2019\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2020\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2021\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2022\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2023\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2024\nverified \u00b7 Oct 7, 5:25 PM GMT+11\nnflverse player stats 2025\nverified \u00b7 Oct 7, 5:25 PM GMT+11",
+          "originals": [
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-top.png",
+              "sha256": "2d4dff7352cb9dc948f06eb5206d7ba1a8ec166a3fe70932556a27887e6ec93f",
+              "bytes": 1202277
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-full-content.png",
+              "sha256": "757b36bcd9cee3c2971dd2cbd0ddbf27c87a8b5b3128e73f972164eb74d34b5e",
+              "bytes": 1706455
+            },
+            {
+              "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-final.png",
+              "sha256": "31a580f11498d74d99ca8bb6b9480f68ce1b16e29b95f07959c2514cff8d7e27",
+              "bytes": 1198381
+            }
+          ]
+        }
+      ],
+      "scope": {
+        "genuineNativeBrowsers": true,
+        "deviceScaleFactor": 2,
+        "physicalIPhone": false,
+        "responseOrDataSubstitution": false,
+        "scope": "Targeted integration after independently proved metadata-only upstream changes. Prior complete 96db application/visual/regression suites remain immutable; this check does not repeat those broader tests."
+      }
+    }
+  ],
+  "visualReview": {
+    "actuallyViewedFreshOriginals": [
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-top.png",
+        "sha256": "c1e4e148eb1982cade783a4b28a424f694162f222c0329895a9ab3b0068d56ab",
+        "bytes": 1068909
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-393x852-full-content.png",
+        "sha256": "dea0764a008e87c710b6f5f95e8e4f4995726a740719d7689f85fd12cea76fca",
+        "bytes": 1485806
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-top.png",
+        "sha256": "d5bc9928ca7127549c841e69a17ce8417ce755e1f351923e6085c717d67dfed8",
+        "bytes": 1181239
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/integration-chromium-430x896-full-content.png",
+        "sha256": "e799bb1ca8961d832cb8c19aa59d073247e06408860e95143f6b72cf0b9d04cd",
+        "bytes": 1650786
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-top.png",
+        "sha256": "2184b6ae5f17b4b3958b915fd6827e7454b606feaaa575fd929fee8341972957",
+        "bytes": 1082934
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-393x852-full-content.png",
+        "sha256": "b71b0e2f37579b8ad43d1ac3a444da4883d1d762be24f67acc0511e8f194c96c",
+        "bytes": 1539950
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-top.png",
+        "sha256": "2d4dff7352cb9dc948f06eb5206d7ba1a8ec166a3fe70932556a27887e6ec93f",
+        "bytes": 1202277
+      },
+      {
+        "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/integration-webkit-430x896-full-content.png",
+        "sha256": "757b36bcd9cee3c2971dd2cbd0ddbf27c87a8b5b3128e73f972164eb74d34b5e",
+        "bytes": 1706455
+      }
+    ],
+    "acceptedFindings": [
+      "All four current native phone views retain the accepted clean rounded corners, outer chrome, typography, bright blue/gold faceted lighting and dense composition.",
+      "The verified retrieval footer now shows the incoming12:21PMGMT+11 snapshot; it remains readable and does not overlap the fixed navigation.",
+      "Complete weekly leaders, conference records, recaps and fixture facts are unchanged by the metadata refresh; all source-dependent controls and refresh execute against the actual integrated JSON bytes.",
+      "Travelling border clocks advance naturally on both engines; offscreen clocks pause and factual rows remain static."
+    ],
+    "remainingBlockingVisualIssues": []
+  },
+  "acceptanceScope": "Rebind prior full visual, lifecycle, reduced-motion, Home and Page3 acceptance through200 identical non-data files and exact unchanged default weekly facts, plus fresh focused integrated native browser checks at393\u00d7852 and430\u00d7896 in both engines. No duplicate broad suite was run.",
+  "qualification": {
+    "pixelRegisteredIdentityClaimed": false,
+    "physicalIPhoneTested": false,
+    "hardwareFPSMeasured": false,
+    "forcedNativeAnimationPhases": false,
+    "responseOrDataSubstitution": false,
+    "hostedDeploymentVerifiedHere": false,
+    "fullContentImages": "Mobile runner records temporary internal-scroll unrolling for full-composition captures; native normal viewport images remain unmodified.",
+    "excludedInitialRuns": "final-integrated-chromium and final-integrated-webkit failed on an ambiguous test-only Sources locator; original failed receipts are preserved and excluded from acceptance. Fresh retry results above passed."
+  }
+}

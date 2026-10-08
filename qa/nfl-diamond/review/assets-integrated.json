@@ -1,0 +1,375 @@
+{
+  "reviewedAtUTC": "2026-10-08T01:59:13.585875+00:00",
+  "reviewer": "nfl_visual_assets",
+  "decision": "ACCEPT",
+  "scope": "Final integrated local NFL dashboard asset and visual acceptance after independently verified automatic metadata-only refresh; no runtime edits.",
+  "source": {
+    "manifestPath": "/workspace/recovery-qa/nfl-diamond/frozen-runtime.json",
+    "sha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+    "runtimeFileCount": 203,
+    "allCurrentFileHashesMatch": true,
+    "unchangedApplicationAndAssetFilesFromPriorAcceptedSource": 200,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json"
+    ]
+  },
+  "preservedPriorCompleteAcceptance": {
+    "path": "/workspace/recovery-qa/nfl-diamond/assets/final-review.json",
+    "sha256": "d913f4b9155041f2084da2fbc453db317252c86535d9a6cda0e839eb8f417817",
+    "sourceManifestSha256": "96db9765a12552148b165f270b0dbea60b321c640a5b2bcea6866e03e47670ba",
+    "decision": "ACCEPT",
+    "qualification": "The prior complete runtime/motion/control/regression/visual receipts remain immutable and belong to source96db. Current integrated acceptance carries forward their 200 byte-identical application/art files with independently proved metadata-only changes and four fresh focused genuine-browser phone cases; it does not relabel the broader old suites as newly rerun."
+  },
+  "independentSourceProof": {
+    "path": "/workspace/recovery-qa/nfl-diamond/assets/independent-integrated-source-proof.json",
+    "sha256": "c9d3aa8356fc2eaf9a7ee81757e44530092a64b03d4f73c5bcb823bc82a257c6",
+    "status": "passed",
+    "independentlyRecomputedMetadataValueChanges": 1808,
+    "zeroFactTypeKeyOrListChanges": true,
+    "acceptedLeaderRowsPreserved": 816,
+    "incomingHistoryBytesExact": true,
+    "canonicalSnapshotSha256": "7fe500b7735ae6f37bed610ff7e79e8b30fab3535e264240797e1547688c42f5"
+  },
+  "additionalIntegrationProofs": [
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/incoming-auto-refresh.json",
+      "sha256": "c220c359426a83db8f1f011120f3d94195f2f6fd55ed7115f89529ea6545ac59"
+    },
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/integrated-source.json",
+      "sha256": "ef1477523e268fbd4c8ee7ec991919a47237abd0b9efb1b809a82d0848f85e32"
+    },
+    {
+      "path": "/workspace/project-dollers/qa/nfl-diamond/refresh-integration/data-check.json",
+      "sha256": "80ccb83ba82899f8813b81700c1100721a190d7e5c5a0dea26804d0ba6822578"
+    }
+  ],
+  "freshFocusedBrowserEvidence": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/results.json",
+      "sha256": "50e5717c8baf0b8830c343ca80172b4a5f9c74ff327ed1d5f88a7c915d41d296",
+      "engine": "chromium",
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "sourceManifestSha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+      "viewportCases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "zeroRuntimeErrors": true,
+          "manualRefreshHTTPStatus": 200,
+          "manualRefreshBodySha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+          "refreshFocusPreserved": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "zeroRuntimeErrors": true,
+          "manualRefreshHTTPStatus": 200,
+          "manualRefreshBodySha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+          "refreshFocusPreserved": true
+        }
+      ],
+      "qualification": {
+        "genuineNativeBrowsers": true,
+        "deviceScaleFactor": 2,
+        "physicalIPhone": false,
+        "responseOrDataSubstitution": false,
+        "scope": "Targeted integration after independently proved metadata-only upstream changes. Prior complete 96db application/visual/regression suites remain immutable; this check does not repeat those broader tests."
+      }
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/results.json",
+      "sha256": "28387431fe5e27a2fb6aca1c6952ed678ddeb975b35256cc02abe19df6c975be",
+      "engine": "webkit",
+      "status": "passed",
+      "unchangedDuringQA": true,
+      "sourceManifestSha256": "eeb862f1476ed5502f0cb894542d58d3420e737fb24f7c165c0f4916b5007bd1",
+      "viewportCases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "zeroRuntimeErrors": true,
+          "manualRefreshHTTPStatus": 200,
+          "manualRefreshBodySha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+          "refreshFocusPreserved": true
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "zeroRuntimeErrors": true,
+          "manualRefreshHTTPStatus": 200,
+          "manualRefreshBodySha256": "aaf1d054ad040f06159fccf951a95dad14f56cd5d6d6181617aa9923d8ecb6f3",
+          "refreshFocusPreserved": true
+        }
+      ],
+      "qualification": {
+        "genuineNativeBrowsers": true,
+        "deviceScaleFactor": 2,
+        "physicalIPhone": false,
+        "responseOrDataSubstitution": false,
+        "scope": "Targeted integration after independently proved metadata-only upstream changes. Prior complete 96db application/visual/regression suites remain immutable; this check does not repeat those broader tests."
+      }
+    }
+  ],
+  "personallyInspectedOriginals": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-393x852-top-c1e4e148eb19.png",
+      "sha256": "c1e4e148eb1982cade783a4b28a424f694162f222c0329895a9ab3b0068d56ab",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-393x852-full-content-dea0764a008e.png",
+      "sha256": "dea0764a008e87c710b6f5f95e8e4f4995726a740719d7689f85fd12cea76fca",
+      "pixelDimensions": [
+        786,
+        2606
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-430x896-top-d5bc9928ca71.png",
+      "sha256": "d5bc9928ca7127549c841e69a17ce8417ce755e1f351923e6085c717d67dfed8",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-430x896-full-content-e799bb1ca896.png",
+      "sha256": "e799bb1ca8961d832cb8c19aa59d073247e06408860e95143f6b72cf0b9d04cd",
+      "pixelDimensions": [
+        860,
+        2822
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-393x852-top-2184b6ae5f17.png",
+      "sha256": "2184b6ae5f17b4b3958b915fd6827e7454b606feaaa575fd929fee8341972957",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-393x852-full-content-b71b0e2f3757.png",
+      "sha256": "b71b0e2f37579b8ad43d1ac3a444da4883d1d762be24f67acc0511e8f194c96c",
+      "pixelDimensions": [
+        786,
+        2602
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-430x896-top-2d4dff7352cb.png",
+      "sha256": "2d4dff7352cb9dc948f06eb5206d7ba1a8ec166a3fe70932556a27887e6ec93f",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-430x896-full-content-757b36bcd9ce.png",
+      "sha256": "757b36bcd9cee3c2971dd2cbd0ddbf27c87a8b5b3128e73f972164eb74d34b5e",
+      "pixelDimensions": [
+        860,
+        2816
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-393x852-scroll-2-75eda22e2b45.png",
+      "sha256": "75eda22e2b45dc79ff1ae94b7a3d13e9ecce82ff87109be665ebbe65d45592e3",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-393x852-final-ffdf99ed401f.png",
+      "sha256": "ffdf99ed401fb530f6f1ada66a159626a2e0afe86ee4920c48f1596d89618f25",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-430x896-scroll-2-ab63d106b322.png",
+      "sha256": "ab63d106b322e808fdd722cac927cd1657dcc44eeec4000be22b7767fef93e39",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-chromium/original-integration-chromium-430x896-final-cfc307ebff1b.png",
+      "sha256": "cfc307ebff1b3fb25ff84579154bc93dfdc7067702a3fd6c6ffb12ae2498f0ab",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-393x852-scroll-2-29ac9b56a3eb.png",
+      "sha256": "29ac9b56a3ebd222f52df3bcfd75263fe491059d68f9406bef98ca23fd87e2e2",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-393x852-final-90f8a75dcbcf.png",
+      "sha256": "90f8a75dcbcfc8caa5d41796ec4c3c09ed75a941917983d4f300cc32f5183673",
+      "pixelDimensions": [
+        786,
+        1704
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-430x896-scroll-2-6c720c85e9e4.png",
+      "sha256": "6c720c85e9e4712c9b96019eb8d4864d634a8f293049effc95c93064317cefe8",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-integrated-retry-webkit/original-integration-webkit-430x896-final-31a580f11498.png",
+      "sha256": "31a580f11498d74d99ca8bb6b9480f68ce1b16e29b95f07959c2514cff8d7e27",
+      "pixelDimensions": [
+        860,
+        1792
+      ],
+      "personallyViewedOriginalPixels": true,
+      "hashMatchesCaptureReportedByGenuineBrowserSuite": true,
+      "captureQualification": "Actual native browser screenshot at deviceScaleFactor 2; full-content files expose the real internal scroller with temporary capture-only styles, while top/scroll/final preserve normal phone geometry."
+    }
+  ],
+  "assetProvenance": {
+    "files": [
+      {
+        "path": "assets/nfl-dashboard/afc.svg",
+        "sha256": "7f8460467be6819eee12b83205db2a2758710b6df6174a8f63117a17ed4d9869",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/asset-provenance.json",
+        "sha256": "f0e19c9b60b3b55cd61962560ec9e97afe6bebb069f78d3e4ba36b09db6bc9ca",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/bevel-corner.svg",
+        "sha256": "3b5d745a9f4f1bbe1c38dae9b456c15f6114c14972cb9d2ae48f4839d53ba2cf",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/diamond.svg",
+        "sha256": "3cd4e84b084c42519af91c38aef27c99c24a983a29db914fe5cfbabb95d07005",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-ind.webp",
+        "sha256": "6c5922dc0beea714488445a49a20034a9b418b463f59738ec452535fc8c3c3c5",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-pit.webp",
+        "sha256": "de25ecfad1a8f43db6aa9560a2a9365ed66a7dc5b86bc93b7d6c753f17d323c4",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/light-flare.svg",
+        "sha256": "e6c5327ff62711550efa450e83c98ce965332326a6cd80cbbab813d189c8f83d",
+        "unchangedSincePriorAccepted96db": true
+      },
+      {
+        "path": "assets/nfl-dashboard/nfc.svg",
+        "sha256": "8c98f10887fc2f249abe4a4213bfe482f680c7cdf48d4d2a45fb5f38118897ff",
+        "unchangedSincePriorAccepted96db": true
+      }
+    ],
+    "trueMarks": "Official local NFL/AFC/NFC vectors and team mark overlays remain independent of decorative equipment.",
+    "helmets": "Native-resolution generated unbranded decorative equipment, not official photography or asserted exact team helmet models; no generated player faces.",
+    "runtimeHotlinks": false
+  },
+  "visualFindings": [
+    "Personally inspected 16 fresh SHA-bound native top/full/scroll/final originals across393x852 and430x896 Chromium and WebKit. The diamond/gold brand, complete subtitle, official shield/conference marks and genuine team badges are painted and proportionate.",
+    "The dense approved hierarchy remains inside the shared rounded phone enclosure. Faceted gold/metal corners, bright layered cyan rails, narrow glints and crystalline matchup edges remain crisp; no material asset or layout regression follows the refresh.",
+    "The native-resolution helmet/stadium composition remains large and sharp with correct independent team marks and readable gold/ice names.",
+    "Scrolled native views show all five rows of QB/RB/WR data with unobscured rank-five and TD glyphs. Fresh targeted suites preserve current sourced records and leader values. Prior full native glyph/motion proofs remain bound to unchanged app/art bytes.",
+    "Native initial and final WebKit originals retain clean exterior upper-left geometry and painted true marks; the previously diagnosed corner patch does not recur.",
+    "Current rendered provenance footer reads Oct8,12:21PM GMT+11, corresponding to01:21:16UTC snapshot. Manual source refresh reportsHTTP200 and exact current body SHA in all four native cases with focus preserved."
+  ],
+  "resolvedCaptureIssues": [
+    "Initial integration runs are preserved as failed evidence because an ambiguous Sources locator matched two legitimate controls; the corrected explicit test selector passed in new retry directories without a runtime change.",
+    "SHA-named aliases are byte-identical to reported original captures and avoid the tool preview cache issue; no image replacement or response/data substitution was used."
+  ],
+  "limitations": [
+    "Human material-fidelity review against the chat-attached approved concept, not a numerical pixel-identical comparison; original attachment bytes were unavailable.",
+    "Desktop/tablet and broader complete motion/regression suites were not repeated for this proved metadata-only integration. Their prior source qualifications remain unchanged.",
+    "Genuine Chromium and WebKit emulate phone viewports at2x; physical iPhone hardware, Safari browser controls and real-device FPS are not asserted.",
+    "This is local source-bound acceptance. The deployed actual GitHub Pages URL still requires separate post-publication verification."
+  ],
+  "writesByThisReviewer": [
+    "This standalone integrated QA receipt only; prior accepted receipt and all runtime/source assets preserved."
+  ]
+}
