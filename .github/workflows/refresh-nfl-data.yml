@@ -59,25 +59,29 @@ jobs:
         env:
           REFRESH_HISTORY: ${{ inputs.refresh_history }}
         run: |
-          args=()
+          pd_source_cache="$RUNNER_TEMP/project-dollar-source-cache"
+          args=(--cache-dir "$pd_source_cache")
           if [ "$REFRESH_HISTORY" = "true" ]; then
             args+=(--refresh-history)
           fi
           python3 scripts/refresh-data.py "${args[@]}"
           python3 scripts/refresh-data.py --check
+          python3 scripts/refresh-team-details.py --cache-dir "$pd_source_cache"
+          python3 scripts/refresh-team-details.py --check
+          python3 qa/team-details/data.test.py --cache-dir "$pd_source_cache"
           python3 qa/data.test.py
           python3 qa/source-updates.test.py
       - name: Publish the validated snapshot
         id: publish
         if: steps.sources.outputs.should_refresh == 'true'
         run: |
-          if git diff --quiet -- assets/data/current.json assets/data/provenance.json assets/data/player-history.json; then
+          if git diff --quiet -- assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json; then
             echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/data/current.json assets/data/provenance.json assets/data/player-history.json
+          git add assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json
           git commit -m 'Refresh verified NFL snapshot'
           git pull --rebase origin main
           git push origin HEAD:main

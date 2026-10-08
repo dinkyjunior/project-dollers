@@ -1,5 +1,11 @@
 # Codex Start Here
 
+## New authorized Dallas team-details pass — 8 October 2026
+
+The latest user attachment authorizes the generic team-details/Form destination, starting with Dallas, its functional tabs/game reports/schedule/venue controls, and a diamond Home entry button. This supersedes the prior NFL-only inline team-details hold. Preserve the existing Steelers research, football motion and automatic updates; do not add unrelated old Page 4/player-profile features. Work on codex-rebuild, fetch/rebase both remote branches before every ordinary push, and publish only after six independent visual/function/data reviews and actual hosted verification. Read reference/DALLAS_FORM_CHAT_SOURCE.md and the current qa/team-details evidence. Earlier release reports below remain immutable historical acceptance for their original sources.
+
+The team dataset is assets/data/team-details.json, produced by scripts/refresh-team-details.py after the existing snapshot updater. It contains source-linked 2025/2026 regular-season form/schedules for all 32 clubs and enriched Dallas roster/depth/injury statistics. Required-source failures retain the preceding published snapshot; nulls and disputes are explicit. Browser checks on entry/focus/resume/reconnect/manual refresh retain filters, disclosure state and focus; this remains source-driven snapshots, not an upstream live push feed. No final release acceptance is asserted by this setup note.
+
 ## Current NFL replica refinement — 8 October 2026 (Sydney)
 
 The user requested a second top-to-bottom Page 2 refinement against the tall NFL chat render. The candidate now has dense condensed native typography, continuous chamfered gold/cyan metal rails, equal illuminated controls, a segmented league medallion, refined local gems, upright Retina helmet artwork and robust native travelling light. Home and Steelers remain locked; no Page 4. Verified records and source timestamps are retained instead of copying illustrative numbers.

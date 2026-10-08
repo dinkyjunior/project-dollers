@@ -294,6 +294,10 @@
       if (!action && !button.dataset.conference && !button.hasAttribute('data-standings-toggle')) return;
       // Prevent the legacy page navigation handler from opening future screens.
       event.stopImmediatePropagation();
+      if (action === 'team-details') {
+        window.PDTeamDetails?.enter(button.dataset.team);
+        return;
+      }
       if (button.dataset.conference) { state.conference = button.dataset.conference; state.nflDivision = 'all'; }
       else if (button.hasAttribute('data-standings-toggle')) state.standingsExpanded = !state.standingsExpanded;
       else if (action === 'team') state.nflExpandedTeam = state.nflExpandedTeam === button.dataset.team ? null : button.dataset.team;

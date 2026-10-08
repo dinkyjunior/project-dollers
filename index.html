@@ -29,10 +29,15 @@
     <link rel="stylesheet" href="assets/nfl-dashboard.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/nfl-dashboard-chrome.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/nfl-dashboard-motion.css?v=replica-20261008-v2" />
+    <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
+    <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
+    <script src="assets/team-details.js?v=20261008-v1" defer></script>
+    <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
+    <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/nfl-dashboard.js?v=replica-20261008-v2" defer></script>
-    <script src="assets/app.js?v=diamond20261008" defer></script>
+    <script src="assets/nfl-dashboard.js?v=team-form-20261008-v1" defer></script>
+    <script src="assets/app.js?v=team-form-20261008-v1" defer></script>
     <script src="assets/motion.js" defer></script>
     <script src="assets/home-interactions.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
@@ -338,6 +343,17 @@
           </button>
         </nav>
       </section>
+      <section class="page team-details-page" data-page="team-details" aria-label="NFL team details" hidden>
+        <div class="page-scroll"><div class="team-details-content" id="team-details-content"><p class="notice">Loading verified team research…</p></div></div>
+        <nav class="bottom-nav td-bottom-nav td-framed" aria-label="Team navigation">
+          <button data-open="home"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#home"></use></svg><span>Home</span></button>
+          <button data-td-action="ladder" aria-current="page"><svg class="icon" aria-hidden="true"><use href="assets/team-details/ui-icons.svg#shield"></use></svg><span>Teams</span></button>
+          <button data-td-action="matchup"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#matchups"></use></svg><span>Matchups</span></button>
+          <button data-td-action="insights"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#insights"></use></svg><span>Insights</span></button>
+          <button data-td-action="sources"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#more"></use></svg><span>More</span></button>
+        </nav>
+        <footer class="td-footer" id="team-details-footer">Source-backed research · missing fields remain unavailable</footer>
+      </section>
     </main>
     <dialog id="about-dialog" aria-labelledby="about-title">
       <form method="dialog">
@@ -362,6 +378,10 @@
       <form method="dialog"><button class="dialog-close" aria-label="Close data sources">×</button></form>
       <span class="eyebrow">DATA INTEGRITY</span><h2 id="sources-title">Sources &amp; freshness</h2>
       <div id="sources-content"></div>
+    </dialog>
+    <dialog id="team-details-dialog" class="td-dialog" aria-labelledby="team-details-dialog-title">
+      <form method="dialog"><button class="dialog-close" aria-label="Close team research">×</button></form>
+      <h2 id="team-details-dialog-title"></h2><div id="team-details-dialog-content"></div>
     </dialog>
     <noscript
       ><p class="noscript">

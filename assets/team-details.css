@@ -1,0 +1,409 @@
+/* The approved team/Form composition, painted with native HTML and local
+   nine-slice SVG hardware. Everything here is isolated to team details. */
+body:has(.page[data-page="team-details"].active) {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  background: radial-gradient(ellipse at 15% 32%, #002f543b, transparent 45%), radial-gradient(ellipse at 85% 70%, #00274132, transparent 47%), #010205;
+}
+.app-shell:has(.page[data-page="team-details"].active) {
+  width: 100%;
+  max-width: 430px;
+  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 262.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
+  margin: auto;
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px #52657538, 0 0 0 5px #02070b, 0 0 0 6px #7188972b, 0 22px 55px #000b;
+}
+.app-shell:has(.page[data-page="team-details"].active)::after {
+  inset: 0;
+  border: 1px solid #7b95a74a;
+  border-radius: 18px;
+  box-shadow: inset 1px 0 0 #e1effe20, inset -1px 0 0 #000c;
+}
+.page[data-page="team-details"] {
+  --td-cyan: #08efff;
+  --td-blue: #006cff;
+  --td-muted: #a0bed1;
+  --td-text: NFLRobotoCondensed, Arial, sans-serif;
+  --td-display: NFLTeko, Impact, sans-serif;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  background: #010813;
+  color: #f1f8ff;
+  font: 500 13px/1.15 var(--td-text);
+  font-synthesis: none;
+}
+.page[data-page="team-details"].active { animation: none; }
+[data-page="team-details"] .page-scroll {
+  inset: 0 0 calc(90px + env(safe-area-inset-bottom, 0px));
+  padding: calc(3px + env(safe-area-inset-top, 0px)) 10px 12px;
+  overflow-x: hidden;
+  scroll-padding-block: 8px 28px;
+}
+[data-page="team-details"] .team-details-content {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  container-type: inline-size;
+  isolation: isolate;
+}
+[data-page="team-details"] .td-ambient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#00102d66, #00040bc9 58%, #001529b3), url("home/gate-scenes-nfl.webp") center top / 100% auto repeat-y;
+  background-blend-mode: normal, luminosity;
+  pointer-events: none;
+}
+[data-page="team-details"] button, [data-page="team-details"] select {
+  font-family: var(--td-text);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+[data-page="team-details"] button:focus-visible,
+[data-page="team-details"] select:focus-visible,
+[data-page="team-details"] a:focus-visible { outline: 2px solid #fff; outline-offset: -3px; }
+[data-page="team-details"] button:active { filter: brightness(1.16); }
+[data-page="team-details"] .icon { width: 16px; height: 16px; color: var(--td-cyan); }
+[data-page="team-details"] .team-brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 82px;
+  margin: -3px -10px 0;
+  padding-top: 4px;
+  overflow: hidden;
+  background: linear-gradient(transparent 65%, #010914), url("home/gate-scenes-nfl.webp") center 24% / 100% auto;
+}
+[data-page="team-details"] .td-brand-mark { display: block; width: 44%; height: auto; filter: drop-shadow(0 2px 3px #000c); }
+[data-page="team-details"] .td-brand-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 1px 0 0;
+  font: 500 8.5px/1 var(--td-text);
+  letter-spacing: .7px;
+  text-shadow: 0 1px 2px #000;
+}
+[data-page="team-details"] .td-brand-subtitle::before,
+[data-page="team-details"] .td-brand-subtitle::after { content: ""; width: 11px; height: 1px; background: #03eaff; box-shadow: 0 0 5px #008cff; }
+[data-page="team-details"] .td-back {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 112px;
+  min-width: 0;
+  min-height: 24px;
+  padding: 2px 5px 0 3px;
+  margin: -22px 0 5px;
+  border: 1px solid transparent;
+  border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 6px / 0 stretch;
+  background: none;
+  font: 600 14px/1 var(--td-display);
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 0 7px #009bffb0;
+}
+[data-page="team-details"] .td-back .icon { width: 12px; height: 14px; }
+[data-page="team-details"] .td-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  min-height: 25px;
+  padding: 2px 9px;
+  margin-bottom: 6px;
+  border: 1px solid #0a86b1;
+  background: linear-gradient(100deg, #001327ed, #010711dd);
+  box-shadow: 0 0 4px #0098ff90, inset 0 0 5px #0069c950;
+}
+[data-page="team-details"] .td-crumbs { display: flex; align-items: center; gap: 7px; min-width: 0; font: 500 15px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-crumbs button { padding: 2px 0; border: 0; background: transparent; font: inherit; }
+[data-page="team-details"] .td-crumbs .icon { width: 9px; height: 12px; }
+[data-page="team-details"] .td-season { display: flex; gap: 4px; align-items: center; font: 500 12px/.93 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-season img { width: 30px; height: 35px; object-fit: contain; margin-top: -10px; }
+[data-page="team-details"] .td-season strong, [data-page="team-details"] .td-season span { display: block; }
+[data-page="team-details"] .td-framed {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  margin-bottom: 7px;
+  border: 3px solid transparent;
+  border-radius: 0;
+  border-image: url("nfl-dashboard/frame-rail.svg") 32 fill / 14px / 3px stretch;
+  background: none;
+  box-shadow: 0 0 2px #a8fbffe0, 0 0 7px #0096ffd6, 0 0 15px #006aff73, 0 0 23px #0042ff24;
+}
+[data-page="team-details"] .td-framed::after {
+  content: "";
+  position: absolute;
+  inset: -10px -2px;
+  z-index: 5;
+  pointer-events: none;
+  background: url("nfl-dashboard/light-flare.svg") 42% top / 24px 24px no-repeat, url("nfl-dashboard/light-flare.svg") 68% bottom / 24px 24px no-repeat;
+  opacity: .9;
+}
+[data-page="team-details"] .td-hero {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  min-height: 134px;
+  padding: 8px 9px 8px 7px;
+}
+[data-page="team-details"] .td-hero::before,
+[data-page="team-details"] .td-upcoming::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #00111d35, #00081245), url("home/gate-scenes-nfl.webp") center 82% / cover;
+  opacity: .82;
+}
+[data-page="team-details"] .td-team-logo { width: 112px; height: 112px; object-fit: contain; filter: drop-shadow(0 0 3px #047bff77) drop-shadow(0 2px 2px #000); }
+[data-page="team-details"] .td-hero-copy { min-width: 0; }
+[data-page="team-details"] .td-hero h1 { margin: 0 0 3px; text-transform: uppercase; font-family: PDArchivoBlack, Arial, sans-serif; font-weight: 400; line-height: 1; letter-spacing: -.8px; color: #f4faff; text-shadow: 0 1px 0 #bed5e5, 0 2px 0 #5c81aa, 0 3px 0 #152c51, 0 4px 3px #000; }
+[data-page="team-details"] .td-city { display: block; font-size: clamp(23px, 7.1cqw, 29px); }
+[data-page="team-details"] .td-name { display: block; font-size: clamp(26px, 8.1cqw, 34px); }
+[data-page="team-details"] .td-name.is-long { font-size: clamp(22px, 6.9cqw, 28px); }
+[data-page="team-details"] .td-city.is-long { font-size: clamp(18px, 5.6cqw, 23px); }
+[data-page="team-details"] .td-hero-meta { margin: 5px 0 7px; color: #6ce9ec; font: 500 11px/1.1 var(--td-text); text-transform: uppercase; letter-spacing: .6px; }
+[data-page="team-details"] .td-hero-bottom { display: grid; grid-template-columns: minmax(68px, 1fr) minmax(85px, 1fr); gap: 9px; align-items: center; }
+[data-page="team-details"] .td-record { display: grid; place-items: center; min-height: 31px; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 6px / 0 stretch; font: 700 28px/1 var(--td-display); letter-spacing: 2px; text-shadow: 0 2px 0 #304555; }
+[data-page="team-details"] .td-form > small { display: block; margin-bottom: 4px; font: 500 10px/1 var(--td-text); text-transform: uppercase; white-space: nowrap; }
+[data-page="team-details"] .td-form-chips { display: flex; gap: 3px; }
+[data-page="team-details"] .td-form-chip { display: grid; place-items: center; min-width: 16px; height: 18px; padding: 1px 2px; border-radius: 2px; color: #fff; background: #22465b; font: 700 12px/1 var(--td-text); box-shadow: inset 0 1px 1px #faffff50, 0 0 3px #00385e; }
+[data-page="team-details"] .td-form-chip.is-win { background: linear-gradient(#1cb97a, #087948); }
+[data-page="team-details"] .td-form-chip.is-loss { background: linear-gradient(#e84442, #ab171f); }
+[data-page="team-details"] .td-upcoming { min-height: 132px; padding: 8px 10px 7px; overflow: visible; }
+[data-page="team-details"] .td-upcoming::before { background-position: center 94%; opacity: .82; }
+[data-page="team-details"] .td-upcoming-info { position: relative; z-index: 1; min-height: 76px; padding-right: 102px; }
+[data-page="team-details"] .td-upcoming-info h2 { margin: 0 0 4px; font: 700 22px/1 var(--td-display); text-transform: uppercase; letter-spacing: .15px; }
+[data-page="team-details"] .td-upcoming-info h3 { margin: 0 0 4px; font: 600 20px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-upcoming-info p { margin: 2px 0; font: 500 12px/1.15 var(--td-text); text-shadow: 0 1px 2px #000; }
+[data-page="team-details"] .td-upcoming-info small { font: 500 10px/1.2 var(--td-text); color: #afcede; }
+[data-page="team-details"] .td-upcoming-helmet { position: absolute; z-index: 0; right: 8px; top: 7px; width: 116px; height: 99px; object-fit: contain; object-position: center; filter: drop-shadow(0 3px 3px #000b); }
+[data-page="team-details"] .td-upcoming-equipment { position: absolute; z-index: 0; right: 7px; top: 0; width: 119px; height: 90px; pointer-events: none; }
+[data-page="team-details"] .td-upcoming-equipment .td-upcoming-helmet { inset: 0; width: 100%; height: 100%; }
+[data-page="team-details"] .td-equipment-mark { position: absolute; left: 54%; top: 28%; width: 28%; height: 28%; object-fit: contain; transform: rotate(10deg); filter: drop-shadow(0 1px 1px #0008); }
+[data-page="team-details"] .td-diamond-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 36px;
+  padding: 3px 27px 0;
+  border: 1px solid transparent;
+  border-radius: 0;
+  border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 7px / 0 stretch;
+  background: none;
+  font: 600 21px/1 var(--td-display);
+  text-transform: uppercase;
+  letter-spacing: .15px;
+  text-shadow: 0 1px 1px #00132b;
+  box-shadow: 0 0 2px #cbffff, 0 0 8px #00b9ffcd, 0 0 15px #0065ff8c;
+}
+[data-page="team-details"] .td-diamond-button::before,
+[data-page="team-details"] .td-diamond-button::after { content: ""; position: absolute; top: calc(50% - 17px); width: 26px; height: 34px; background: url("nfl-dashboard/diamond-premium.svg") center / contain no-repeat; filter: drop-shadow(0 0 4px #00bfff); pointer-events: none; }
+[data-page="team-details"] .td-diamond-button::before { left: 3px; }
+[data-page="team-details"] .td-diamond-button::after { right: 3px; }
+[data-page="team-details"] .td-diamond-button .icon { width: 14px; height: 18px; }
+[data-page="team-details"] .td-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin: 0 0 6px; padding: 0; }
+[data-page="team-details"] .td-tabs button { min-width: 0; min-height: 31px; padding: 4px 2px 0; border: 1px solid transparent; border-radius: 0; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 6px / 0 stretch; background: none; font: 600 19px/1 var(--td-display); text-transform: uppercase; white-space: nowrap; color: #eaf5fd; }
+[data-page="team-details"] .td-tabs button[aria-selected="true"] { border-image-source: url("nfl-dashboard/control-blue.svg"); box-shadow: 0 0 2px #e3ffff, 0 0 8px #00b4ffe0, 0 0 13px #005dff90; color: #fff; }
+[data-page="team-details"] .td-filters { display: grid; grid-template-columns: 1.09fr 1.38fr .84fr .97fr; align-items: stretch; gap: 4px; margin: 0 0 8px; }
+[data-page="team-details"] .td-filters label { position: relative; display: flex; align-items: center; gap: 3px; min-width: 0; min-height: 29px; padding: 3px 13px 3px 4px; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 5px / 0 stretch; background: none; font: 400 10.5px/1 var(--td-text); }
+[data-page="team-details"] .td-filters label > span:not(.sr-only) { flex: 0 0 auto; }
+[data-page="team-details"] .td-filters select { appearance: none; -webkit-appearance: none; min-width: 0; min-height: 24px; width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; font: inherit; }
+[data-page="team-details"] .td-filters .icon { position: absolute; right: 3px; width: 11px; height: 11px; transform: rotate(90deg); pointer-events: none; }
+[data-page="team-details"] .td-filter-note { margin: 0; padding: 1px 0; color: #c7dbea; font: 400 8.3px/1.1 var(--td-text); }
+[data-page="team-details"] .td-panel { padding: 5px 7px 7px; }
+[data-page="team-details"] .td-panel-head { display: flex; align-items: center; gap: 5px; min-height: 25px; margin-bottom: 2px; min-width: 0; }
+[data-page="team-details"] .td-team-emblem { flex: 0 0 auto; width: 28px; height: 25px; object-fit: contain; }
+[data-page="team-details"] .td-panel h2 { margin: 0; font: 700 25px/.95 var(--td-display); text-transform: uppercase; letter-spacing: .15px; color: #f4faff; text-shadow: 0 1px 0 #6b859e, 0 2px 2px #000; }
+[data-page="team-details"] .td-table-head,
+[data-page="team-details"] .td-game-row { display: grid; grid-template-columns: 20% 28% 18% 17% 17%; align-items: center; gap: 0; width: 100%; min-width: 0; padding: 0 5px; text-align: left; font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-table-head { min-height: 20px; background: #04233ac2; border-top: 1px solid #048fbc; border-bottom: 1px solid #24678a; color: #b8d4e7; font: 500 9.4px/1 var(--td-text); text-transform: uppercase; }
+[data-page="team-details"] .td-table-head > :nth-child(n+3),
+[data-page="team-details"] .td-game-row > :nth-child(n+3):not(svg) { text-align: center; }
+[data-page="team-details"] .td-game-row { position: relative; min-height: 24px; padding-block: 2px; border: 0; border-bottom: 1px solid #1c587a8c; border-radius: 0; background: #000b17c9; color: #edf5fd; font: 500 12px/1.2 var(--td-text); }
+[data-page="team-details"] .td-game-row > span { min-width: 0; overflow-wrap: anywhere; }
+[data-page="team-details"] .td-game-row > span:last-of-type { padding-right: 11px; }
+[data-page="team-details"] .td-game-row[aria-expanded="true"] { border: 1px solid transparent; border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 6px / 0 stretch; padding-inline: 4px; box-shadow: 0 0 3px #00c9ff, 0 0 8px #005aff90; color: white; }
+[data-page="team-details"] .td-row-chevron { position: absolute; right: 2px; width: 12px; height: 14px; }
+[data-page="team-details"] .td-game-row[aria-expanded="true"] .td-row-chevron { transform: rotate(90deg); }
+[data-page="team-details"] .td-win, [data-page="team-details"] .positive { color: #98ec29; }
+[data-page="team-details"] .td-loss, [data-page="team-details"] .negative { color: #ff483c; }
+[data-page="team-details"] .td-game-tag { display: inline-block; margin-inline-start: 2px; padding: 2px; border-radius: 1px; background: #e9ad19; color: #08101b; font: 700 7px/1 var(--td-text); text-transform: uppercase; }
+[data-page="team-details"] .td-game-report { border: 1px solid #0299c8; border-top: 0; padding: 5px 7px 6px; background: linear-gradient(100deg, #011126f5, #000a16f5); }
+[data-page="team-details"] .td-game-report h3 { margin: 0 0 5px; font: 600 18px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-game-report-body { display: grid; grid-template-columns: minmax(0, 1fr) 105px; align-items: center; gap: 6px; }
+[data-page="team-details"] .td-game-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 3px 10px; margin: 0; font: 400 10px/1.15 var(--td-text); }
+[data-page="team-details"] .td-game-stat { display: flex; justify-content: space-between; gap: 4px; min-width: 0; }
+[data-page="team-details"] .td-game-stat > span:first-child { min-width: 0; }
+[data-page="team-details"] .td-game-stat > :last-child { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-game-stats dl { margin: 0; }
+[data-page="team-details"] .td-game-stats dt { color: #d1e3ee; }
+[data-page="team-details"] .td-game-stats dd { margin: 0; }
+[data-page="team-details"] .td-game-open { display: flex; align-items: center; justify-content: center; gap: 0; min-height: 29px; padding: 3px 2px 0; border: 1px solid transparent; border-image: url("nfl-dashboard/control-blue.svg") 18 fill / 6px / 0 stretch; background: none; font: 600 13px/1 var(--td-display); text-transform: uppercase; white-space: nowrap; box-shadow: 0 0 7px #00a0ffab; }
+[data-page="team-details"] .td-game-open .icon { width: 10px; height: 14px; }
+[data-page="team-details"] .td-table-note, [data-page="team-details"] .td-source-note { margin: 4px 2px 0; color: #a9c7dc; font: 400 9px/1.2 var(--td-text); }
+[data-page="team-details"] .td-mode-controls { display: grid; grid-template-columns: 1fr 1fr; flex: 0 0 auto; margin-left: auto; }
+[data-page="team-details"] .td-mode-controls button { min-height: 25px; padding: 3px 6px; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 5px / 0 stretch; background: none; font: 500 11px/1 var(--td-text); }
+[data-page="team-details"] .td-mode-controls button[aria-pressed="true"] { border-image-source: url("nfl-dashboard/control-blue.svg"); box-shadow: 0 0 5px #00acffb3; }
+[data-page="team-details"] .td-yards .td-panel-head h2 { font-size: 15.5px; white-space: nowrap; letter-spacing: 0; }
+[data-page="team-details"] .td-yards { padding-block: 3px 5px; }
+[data-page="team-details"] .td-yards .td-team-emblem { width: 26px; height: 25px; }
+[data-page="team-details"] .td-yards-table, [data-page="team-details"] .td-data-table { width: 100%; table-layout: fixed; border-collapse: collapse; background: #000a15c9; border: 1px solid #08779a; font: 500 12px/1.15 var(--td-text); font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-yards-table th, [data-page="team-details"] .td-yards-table td,
+[data-page="team-details"] .td-data-table th, [data-page="team-details"] .td-data-table td { padding: 4px 5px; border: 1px solid #145477b3; text-align: center; overflow-wrap: anywhere; }
+[data-page="team-details"] .td-yards-table th { font: 500 11px/1 var(--td-text); text-transform: uppercase; color: #bbdbea; }
+[data-page="team-details"] .td-yards-table th:first-child { width: 47%; }
+[data-page="team-details"] .td-yards-table td:first-child, [data-page="team-details"] .td-data-table td:first-child { text-align: left; }
+[data-page="team-details"] .td-yards-table td:first-child small { font-size: 9px; }
+[data-page="team-details"] .td-yards-table tbody th { font: 400 11px/1.2 var(--td-text); text-transform: none; text-align: left; color: #e1edf5; }
+[data-page="team-details"] .td-yards-table tbody th small { font-size: 9px; }
+[data-page="team-details"] .td-yards-table th, [data-page="team-details"] .td-yards-table td { padding-block: 2px; }
+[data-page="team-details"] .td-stat-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+[data-page="team-details"] .td-stat-tile { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2px; min-height: 44px; padding: 3px; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 6px / 0 stretch; background: none; }
+[data-page="team-details"] .td-stat-tile span, [data-page="team-details"] .td-stat-tile small { color: #d3e7f4; font: 500 15px/1 var(--td-display); text-transform: uppercase; text-align: center; }
+[data-page="team-details"] .td-stat-tile strong { font: 600 19px/1 var(--td-display); font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-snapshot-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
+[data-page="team-details"] .td-snapshot-actions button { display: flex; align-items: center; justify-content: center; gap: 3px; min-height: 34px; padding: 3px 4px 0; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 6px / 0 stretch; background: none; font: 500 16px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-snapshot-actions .icon:first-child { width: 19px; height: 21px; color: #eff8ff; }
+[data-page="team-details"] .td-snapshot-actions .icon:last-child { width: 10px; height: 14px; }
+[data-page="team-details"] .td-continue { min-height: 39px; margin: 9px 0 5px; }
+[data-page="team-details"] .td-bottom-nav { position: absolute; inset: auto 10px calc(31px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: auto; height: 53px; min-height: 53px; padding: 1px 2px; margin: 0; z-index: 12; }
+[data-page="team-details"] .td-bottom-nav button { min-width: 0; min-height: 44px; padding: 1px 0; color: #e0ebf4; font: 500 15px/1 var(--td-display); gap: 3px; }
+[data-page="team-details"] .td-bottom-nav .icon { width: 22px; height: 22px; color: #ecf5fc; }
+.page[data-page="team-details"] .td-bottom-nav button[aria-current="page"],
+.page[data-page="team-details"] .td-bottom-nav button[aria-current="page"] > span { color: var(--td-cyan); }
+.page[data-page="team-details"] .td-bottom-nav button[aria-current="page"] .icon { color: var(--td-cyan); filter: drop-shadow(0 0 5px #008cff); }
+[data-page="team-details"] .td-bottom-nav button[aria-current="page"]::before { top: auto; bottom: 0; width: 27px; height: 2px; background: #06edff; box-shadow: 0 0 7px #008cff; }
+[data-page="team-details"] .td-footer { position: absolute; inset: auto 10px calc(5px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; justify-content: space-between; gap: 5px; min-height: 22px; margin: 0; padding: 1px 0; z-index: 12; background: #010a14; color: #a6c5d9; font: 400 9px/1.15 var(--td-text); }
+[data-page="team-details"] .td-footer > span { min-width: 0; }
+[data-page="team-details"] .td-footer button { display: flex; align-items: center; gap: 3px; flex: 0 0 auto; min-height: 24px; padding: 2px 4px; border: 0; background: transparent; color: var(--td-cyan); font: 500 11px/1 var(--td-text); }
+[data-page="team-details"] .td-footer button .icon { width: 12px; height: 12px; }
+[data-page="team-details"] .td-prior-season { display: inline-block; margin-left: 3px; padding: 2px; border-radius: 1px; background: #eeb326; color: #031323; font: 700 7px/1 var(--td-text); white-space: nowrap; }
+[data-page="team-details"] .td-neutral-note, [data-page="team-details"] .td-coverage-note { margin: 4px 2px 0; color: #a9c7dc; font: 400 9px/1.2 var(--td-text); }
+[data-page="team-details"] .td-disagreement { margin: 5px 0 0; color: #ffe09a; font: 500 10px/1.2 var(--td-text); }
+[data-page="team-details"] .td-content-note, [data-page="team-details"] .td-empty { margin: 7px 0; padding: 7px; color: #c4dceb; font: 400 12px/1.3 var(--td-text); }
+[data-page="team-details"] .td-player-list { display: grid; gap: 4px; }
+[data-page="team-details"] .td-player-row { display: grid; grid-template-columns: 37px minmax(0, 1fr) auto; align-items: center; gap: 6px; min-width: 0; padding: 4px; background: #021021; border-bottom: 1px solid #145a80; }
+[data-page="team-details"] .td-player-row img { width: 37px; height: 37px; object-fit: cover; object-position: center 16%; }
+[data-page="team-details"] .td-player-row strong { display: block; font: 600 15px/1.1 var(--td-text); }
+[data-page="team-details"] .td-player-row small { display: block; margin-top: 2px; color: #a9c9de; font: 400 11px/1.2 var(--td-text); }
+[data-page="team-details"] .td-report-heading { margin: 7px 0; font: 700 26px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-report-context { margin: 5px 0; font: 500 12px/1.3 var(--td-text); color: #a9cadd; }
+[data-page="team-details"] .td-position-controls { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; margin: 8px 0; }
+[data-page="team-details"] .td-position-controls button { min-width: 0; min-height: 27px; padding: 3px; border: 1px solid transparent; border-image: url("nfl-dashboard/control-cyan.svg") 18 fill / 5px / 0 stretch; background: none; font: 600 17px/1 var(--td-display); }
+[data-page="team-details"] .td-position-controls button[aria-pressed="true"] { border-image-source: url("nfl-dashboard/control-blue.svg"); box-shadow: 0 0 5px #00aaffb0; }
+[data-page="team-details"] .td-player { margin: 0 0 5px; border: 1px solid #14668c; background: linear-gradient(120deg, #04172c, #020a16); }
+[data-page="team-details"] .td-player summary { display: grid; grid-template-columns: minmax(0, 1fr) 141px; align-items: center; gap: 6px; padding: 8px 6px; cursor: pointer; list-style: none; }
+[data-page="team-details"] .td-player summary::-webkit-details-marker { display: none; }
+[data-page="team-details"] .td-player[open] summary { background: #073060; border-bottom: 1px solid #0e91bb; }
+[data-page="team-details"] .td-player-name { min-width: 0; }
+[data-page="team-details"] .td-player-name b { display: block; font: 600 14px/1.15 var(--td-text); }
+[data-page="team-details"] .td-player-name > small { display: block; margin-top: 4px; color: #a8c8dc; font: 400 10px/1.2 var(--td-text); }
+[data-page="team-details"] .td-player-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; text-align: center; }
+[data-page="team-details"] .td-player-metrics small { display: block; color: #8fc1db; font: 500 8px/1 var(--td-text); }
+[data-page="team-details"] .td-player-metrics b { display: block; margin-top: 3px; font: 500 12px/1 var(--td-text); font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-player-history { padding: 7px; }
+[data-page="team-details"] .td-player-history h3, [data-page="team-details"] .td-panel > h3 { margin: 9px 0 6px; font: 600 22px/1 var(--td-display); text-transform: uppercase; }
+[data-page="team-details"] .td-player-history p { margin: 7px 0 2px; color: #b5cddd; font: 400 11px/1.3 var(--td-text); }
+[data-page="team-details"] .td-player-history table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 400 10px/1.2 var(--td-text); }
+[data-page="team-details"] .td-player-history th, [data-page="team-details"] .td-player-history td { padding: 4px 2px; border-bottom: 1px solid #175171; text-align: center; font-variant-numeric: tabular-nums; }
+[data-page="team-details"] .td-player-history th:first-child { width: 34%; text-align: left; }
+[data-page="team-details"] .td-info-grid { display: grid; grid-template-columns: 43% minmax(0, 1fr); gap: 0; margin: 0 0 9px; font: 400 12px/1.3 var(--td-text); }
+[data-page="team-details"] .td-info-grid dt, [data-page="team-details"] .td-info-grid dd { padding: 5px 4px; margin: 0; border-bottom: 1px solid #135475; }
+[data-page="team-details"] .td-info-grid dt { color: #9fc4dc; }
+[data-page="team-details"] .td-panel > p:not(.td-coverage-note):not(.td-neutral-note) { font: 400 12px/1.35 var(--td-text); color: #c4dbe9; }
+/* The native top-layer dialog lives outside the page element. Its paint is
+   still conditional on this route, so other screens' dialogs are untouched. */
+body:has(.page[data-page="team-details"].active) .td-dialog { width: min(400px, calc(100vw - 28px)); max-height: calc(100dvh - 32px); margin: auto; padding: 15px 13px; border: 3px solid transparent; border-radius: 0; border-image: url("nfl-dashboard/frame-rail.svg") 32 fill / 14px / 2px stretch; color: #edf7ff; background: #020b16; box-shadow: 0 0 5px #00b4ffe0, 0 0 18px #006aff88, 0 14px 60px #000c; font: 400 13px/1.35 NFLRobotoCondensed, Arial, sans-serif; }
+body:has(.page[data-page="team-details"].active) .td-dialog::backdrop { background: #000d; backdrop-filter: blur(4px); }
+body:has(.page[data-page="team-details"].active) .td-dialog h2 { margin: 7px 35px 11px 0; font: 700 27px/1 NFLTeko, Impact, sans-serif; text-transform: uppercase; color: #f5fbff; }
+body:has(.page[data-page="team-details"].active) .td-dialog h3 { margin: 12px 0 5px; font: 600 22px/1 NFLTeko, Impact, sans-serif; text-transform: uppercase; }
+body:has(.page[data-page="team-details"].active) .td-dialog p { font: 400 12px/1.4 NFLRobotoCondensed, Arial, sans-serif; color: #b9d4e6; }
+body:has(.page[data-page="team-details"].active) .td-dialog .dialog-close { color: #d8edf9; border: 1px solid #145a83; background: #041529; width: 33px; height: 33px; }
+body:has(.page[data-page="team-details"].active) .td-dialog table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 10px 0; font: 400 12px/1.3 NFLRobotoCondensed, Arial, sans-serif; background: #021123; }
+body:has(.page[data-page="team-details"].active) .td-dialog th, body:has(.page[data-page="team-details"].active) .td-dialog td { padding: 5px; border: 1px solid #175b81; text-align: center; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+body:has(.page[data-page="team-details"].active) .td-dialog th:first-child { width: 48%; text-align: left; font-weight: 500; }
+body:has(.page[data-page="team-details"].active) .td-dialog a { color: #29e7fa; text-decoration-thickness: 1px; text-underline-offset: 2px; overflow-wrap: anywhere; }
+body:has(.page[data-page="team-details"].active) .td-dialog ul { padding-left: 18px; font: 400 11px/1.4 NFLRobotoCondensed, Arial, sans-serif; color: #9fbed4; }
+body:has(.page[data-page="team-details"].active) .td-dialog li { margin: 8px 0; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-report-score { color: #eaf7ff; font: 600 23px/1.1 NFLTeko, Impact, sans-serif; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-source-context { margin-top: 13px; padding-top: 8px; border-top: 1px solid #115178; color: #9dbdd3; font-size: 11px; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-dialog-matchup { display: grid; grid-template-columns: 1fr 35px 1fr; align-items: center; justify-items: center; margin: 12px 0; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-dialog-matchup img { width: 85px; height: 85px; object-fit: contain; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-dialog-matchup strong { font: 700 26px/1 NFLTeko, Impact, sans-serif; color: #78efff; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-schedule-list { display: grid; gap: 4px; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-schedule-list button { display: grid; grid-template-columns: minmax(0, 1fr) 120px; align-items: center; gap: 6px; width: 100%; min-height: 36px; padding: 6px; border: 1px solid #14658c; background: #03213b; color: #e0f2fc; font: 400 12px/1.2 NFLRobotoCondensed, Arial, sans-serif; text-align: left; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-schedule-list button span { color: #a6c8e1; text-align: right; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-venue-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+body:has(.page[data-page="team-details"].active) .td-dialog .td-venue-actions button { min-height: 34px; padding: 5px; border: 1px solid #0e83a7; background: #03243f; color: #c6f6ff; font: 400 12px/1 NFLRobotoCondensed, Arial, sans-serif; }
+@media (hover: hover) and (pointer: fine) {
+  [data-page="team-details"] button:hover { filter: brightness(1.12); }
+}
+@media (min-width: 415px) and (max-width: 699px) {
+  [data-page="team-details"] .team-brand { height: 90px; }
+  [data-page="team-details"] .td-hero { min-height: 145px; grid-template-columns: 123px minmax(0, 1fr); }
+  [data-page="team-details"] .td-team-logo { width: 123px; height: 123px; }
+  [data-page="team-details"] .td-upcoming { min-height: 143px; }
+  [data-page="team-details"] .td-upcoming-info { min-height: 86px; }
+  [data-page="team-details"] .td-upcoming-helmet { width: 128px; height: 108px; }
+  [data-page="team-details"] .td-upcoming-equipment { width: 131px; height: 96px; }
+  [data-page="team-details"] .td-tabs button { min-height: 34px; font-size: 21px; }
+  [data-page="team-details"] .td-game-row { min-height: 26px; font-size: 13px; }
+  [data-page="team-details"] .td-table-head { min-height: 22px; font-size: 10px; }
+  [data-page="team-details"] .td-game-stats { font-size: 11px; }
+  [data-page="team-details"] .td-stat-tile { min-height: 48px; }
+  [data-page="team-details"] .td-panel h2 { font-size: 27px; }
+  [data-page="team-details"] .td-yards .td-panel-head h2 { font-size: 17.5px; }
+}
+@media (min-width: 700px) {
+  body:has(.page[data-page="team-details"].active) { padding: 32px 0; }
+  .app-shell:has(.page[data-page="team-details"].active) { width: 400px; max-width: 400px; height: min(calc(100dvh - 64px), 770px); }
+}
+@media (max-width: 360px) {
+  [data-page="team-details"] .page-scroll { padding-inline: 7px; }
+  [data-page="team-details"] .team-brand { margin-inline: -7px; height: 79px; }
+  [data-page="team-details"] .td-hero { grid-template-columns: 91px minmax(0, 1fr); gap: 5px; padding-inline: 6px; min-height: 125px; }
+  [data-page="team-details"] .td-team-logo { width: 91px; height: 99px; }
+  [data-page="team-details"] .td-hero-meta { font-size: 9px; }
+  [data-page="team-details"] .td-hero-bottom { grid-template-columns: minmax(58px, 1fr) minmax(69px, 1fr); gap: 4px; }
+  [data-page="team-details"] .td-form > small { font-size: 8px; }
+  [data-page="team-details"] .td-form-chips { gap: 2px; }
+  [data-page="team-details"] .td-form-chip { min-width: 12px; height: 16px; font-size: 10px; }
+  [data-page="team-details"] .td-tabs button { font-size: 16px; }
+  [data-page="team-details"] .td-filters { grid-template-columns: 1fr 1.2fr .8fr; }
+  [data-page="team-details"] .td-filter-note { grid-column: 1 / -1; }
+  [data-page="team-details"] .td-game-row { font-size: 11px; }
+  [data-page="team-details"] .td-table-head { font-size: 9px; }
+  [data-page="team-details"] .td-game-report-body { grid-template-columns: minmax(0, 1fr) 72px; gap: 4px; }
+  [data-page="team-details"] .td-game-stats { font-size: 9px; gap: 4px; }
+  [data-page="team-details"] .td-game-open { font-size: 14px; }
+  [data-page="team-details"] .td-yards .td-panel-head h2 { font-size: 13px; }
+  [data-page="team-details"] .td-mode-controls button { font-size: 10px; padding-inline: 4px; }
+  [data-page="team-details"] .td-snapshot-actions button { font-size: 15px; }
+  [data-page="team-details"] .td-upcoming-info { padding-right: 78px; }
+  [data-page="team-details"] .td-upcoming-helmet { width: 94px; }
+  [data-page="team-details"] .td-upcoming-equipment { width: 98px; height: 84px; }
+  [data-page="team-details"] .td-upcoming-info h2 { font-size: 21px; }
+  [data-page="team-details"] .td-upcoming-info h3 { font-size: 18px; }
+  [data-page="team-details"] .td-diamond-button { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-page="team-details"] *, [data-page="team-details"] *::before, [data-page="team-details"] *::after { scroll-behavior: auto; transition: none; }
+}
