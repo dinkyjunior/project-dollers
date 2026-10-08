@@ -1,0 +1,958 @@
+{
+  "status": "accepted-for-current-frozen-NFL-controls-and-visual-source",
+  "reviewer": "/root/nfl_data_controls",
+  "completedAt": "2026-10-08T01:46:11.832258+00:00",
+  "noRuntimeEdits": true,
+  "frozenRuntime": {
+    "path": "/workspace/recovery-qa/nfl-diamond/frozen-runtime.json",
+    "sha256": "96db9765a12552148b165f270b0dbea60b321c640a5b2bcea6866e03e47670ba",
+    "files": 203,
+    "allCurrentFileBytesMatch": true
+  },
+  "identityProofAgainstPreviouslyAccepted0f61": {
+    "priorReceipt": "/workspace/recovery-qa/nfl-diamond/controls/final-review.json",
+    "priorReceiptSha256": "fc66ee8c4ad5a1e36306c11be57fe9e81996681fce6439e5e01f1e76049eb31f",
+    "priorRuntimeReport": "/workspace/recovery-qa/nfl-diamond/mobile/current-final-cache-chromium/results.json",
+    "priorRuntimeReportSha256": "99414751c9d8a72d67e31e81fbddd5d37ff26d01a065063ac42f5adec85e3d5d",
+    "unchangedRuntimeFiles": 202,
+    "changedRuntimeFiles": [
+      "assets/nfl-dashboard.css"
+    ],
+    "moduleAppDataUpdatersAndSourceFactsByteIdentical": true,
+    "changedCSSPurpose": "Opaque rounded page mask and explanatory comment for WebKit; no module, app or data mutation."
+  },
+  "focusedTests": {
+    "path": "/workspace/recovery-qa/nfl-diamond/applied-controls-focused-tests.json",
+    "sha256": "58490bc7cb5276eabf116a9520247d7a5bf650d7f9f63a75d0250b3cbd4aa8ea",
+    "status": "passed",
+    "moduleSha256": "5b377121765bd3cd652570418fc7b600b485b5bb2caba53f1ec39e96052b502c",
+    "moduleByteIdenticalToTestedVersion": true,
+    "defaultGeneratedHTMLByteIdentical": true,
+    "sortContexts": 6,
+    "fiveFeaturedRowFixtures": "PIT in sorted slots 1 through 6, plus NFC and expanded16 all passed",
+    "productCopyCases": 3
+  },
+  "inheritedRealUpdaterProof": {
+    "path": "/workspace/recovery-qa/nfl-diamond/data-controls-refresh-audit.json",
+    "sha256": "0bbe5138c51176cd0f837e5547451040b34b3f195db866433fecc5c4dca0b7e8",
+    "status": "passed-four-phone-engine-cases",
+    "unchangedTestedFunctionalFiles": [
+      "index.html",
+      "assets/app.js",
+      "assets/nfl-dashboard.js",
+      "assets/nfl-dashboard-motion.css",
+      "assets/nfl-dashboard-motion.js",
+      "assets/data/current.json",
+      "assets/data-updates.js"
+    ],
+    "differentTestedFile": "assets/nfl-dashboard.css",
+    "inheritanceReason": "State, render and updater code, HTML, data facts and animation controllers are byte-identical; only the rounded WebKit mask CSS changed. Current broad native controls and Page3 regression are independently retested below.",
+    "cases": [
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "passed": true,
+        "changedCallbackCount": 2,
+        "division": "AFC North",
+        "form": "5",
+        "sort": "PF",
+        "standingsExpanded": true,
+        "SteelersExpanded": true,
+        "WRExpandedRows": 16,
+        "leaderFocusPreserved": true,
+        "previewFocusPreserved": true,
+        "closeFocusRestored": true,
+        "scrollBefore": 531,
+        "scrollAfter": 531,
+        "errors": []
+      },
+      {
+        "engine": "chromium",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "passed": true,
+        "changedCallbackCount": 2,
+        "division": "AFC North",
+        "form": "5",
+        "sort": "PF",
+        "standingsExpanded": true,
+        "SteelersExpanded": true,
+        "WRExpandedRows": 16,
+        "leaderFocusPreserved": true,
+        "previewFocusPreserved": true,
+        "closeFocusRestored": true,
+        "scrollBefore": 589,
+        "scrollAfter": 589,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "passed": true,
+        "changedCallbackCount": 2,
+        "division": "AFC North",
+        "form": "5",
+        "sort": "PF",
+        "standingsExpanded": true,
+        "SteelersExpanded": true,
+        "WRExpandedRows": 16,
+        "leaderFocusPreserved": true,
+        "previewFocusPreserved": true,
+        "closeFocusRestored": true,
+        "scrollBefore": 529,
+        "scrollAfter": 529,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "passed": true,
+        "changedCallbackCount": 2,
+        "division": "AFC North",
+        "form": "5",
+        "sort": "PF",
+        "standingsExpanded": true,
+        "SteelersExpanded": true,
+        "WRExpandedRows": 16,
+        "leaderFocusPreserved": true,
+        "previewFocusPreserved": true,
+        "closeFocusRestored": true,
+        "scrollBefore": 586,
+        "scrollAfter": 586,
+        "errors": []
+      }
+    ],
+    "fixtureQualification": "Actual onSnapshot callback preserves dashboard state"
+  },
+  "freshCanonicalMobileReports": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/results.json",
+      "sha256": "51479f2cae81bfa81f5c9daae0af1bfaf74004f9c3faa8a1808da71cf9b328d5",
+      "status": "passed",
+      "exactFrozenFiles": 203
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/results.json",
+      "sha256": "803fb87d09d236e91eb876156a9578bd944cdc7d9f63a16d946881ad8b15de49",
+      "status": "passed",
+      "exactFrozenFiles": 203
+    }
+  ],
+  "freshCases": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "controlGroups": [
+        "NFC",
+        "AFC",
+        "divisions",
+        "sorts",
+        "teamSummaries",
+        "preview",
+        "playerLeaders",
+        "leaders",
+        "weeks"
+      ],
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigation": []
+      },
+      "cornerGlyphEvidence": [
+        {
+          "position": "QB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 375,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 85,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "QB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 327,
+            "y": 375,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 59,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 521,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 85,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 327,
+            "y": 521,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 59,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 668,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 85,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "td",
+          "text": "0",
+          "clip": {
+            "x": 327,
+            "y": 668,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 95,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "controlGroups": [
+        "NFC",
+        "AFC",
+        "divisions",
+        "sorts",
+        "teamSummaries",
+        "preview",
+        "playerLeaders",
+        "leaders",
+        "weeks"
+      ],
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigation": []
+      },
+      "cornerGlyphEvidence": [
+        {
+          "position": "QB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 390,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 106,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "QB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 364,
+            "y": 390,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 63,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 550,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 106,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 364,
+            "y": 550,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 63,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 711,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 106,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "td",
+          "text": "0",
+          "clip": {
+            "x": 364,
+            "y": 711,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 109,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "controlGroups": [
+        "NFC",
+        "AFC",
+        "divisions",
+        "sorts",
+        "teamSummaries",
+        "preview",
+        "playerLeaders",
+        "leaders",
+        "weeks"
+      ],
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigation": []
+      },
+      "cornerGlyphEvidence": [
+        {
+          "position": "QB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 376,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 91,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "QB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 327,
+            "y": 376,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 56,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 522,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 91,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 327,
+            "y": 522,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 56,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 668,
+            "width": 25,
+            "height": 15
+          },
+          "whiteGlyphPixels": 91,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "td",
+          "text": "0",
+          "clip": {
+            "x": 327,
+            "y": 668,
+            "width": 40,
+            "height": 15
+          },
+          "whiteGlyphPixels": 104,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "controlGroups": [
+        "NFC",
+        "AFC",
+        "divisions",
+        "sorts",
+        "teamSummaries",
+        "preview",
+        "playerLeaders",
+        "leaders",
+        "weeks"
+      ],
+      "errors": {
+        "javascriptAndConsole": [],
+        "http": [],
+        "external": [],
+        "failed": [],
+        "cancelledNavigation": []
+      },
+      "cornerGlyphEvidence": [
+        {
+          "position": "QB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 392,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 104,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "QB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 364,
+            "y": 392,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 62,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 552,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 104,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "RB",
+          "field": "td",
+          "text": "1",
+          "clip": {
+            "x": 364,
+            "y": 552,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 62,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "rank",
+          "text": "5",
+          "clip": {
+            "x": 26,
+            "y": 712,
+            "width": 25,
+            "height": 17
+          },
+          "whiteGlyphPixels": 104,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        },
+        {
+          "position": "WR",
+          "field": "td",
+          "text": "0",
+          "clip": {
+            "x": 364,
+            "y": 712,
+            "width": 40,
+            "height": 17
+          },
+          "whiteGlyphPixels": 116,
+          "ornamentChangedGlyphPixels": 0,
+          "maximumChannelDelta": 0
+        }
+      ]
+    }
+  ],
+  "canonicalMobileReview": {
+    "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-review.json",
+    "sha256": "580b97dda7e1836423d3e92003554d3993b06c6652094437e2ca01269ef25dd7",
+    "exactManifestMatch": true
+  },
+  "verifiedOriginalScreenshotBytes": [
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-top.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-top-81c2d5f3f2ab.png",
+      "sha256": "81c2d5f3f2abb2f0ae363a9cf1adc73dfbe7915ea9023c53745a8051c0d2b61c",
+      "bytes": 1079537
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-natural-second.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-natural-second-2bafc0abff74.png",
+      "sha256": "2bafc0abff74efdcc0a4220243b65a7dc924796e7bc3ae322cab5eb9922d3d2a",
+      "bytes": 1073869
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-scroll-0.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-scroll-0-c9ac390eb8a4.png",
+      "sha256": "c9ac390eb8a427cfe2be7c2eec835447f4e425e9c5598af6bc805e700b9c2bbd",
+      "bytes": 1061816
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-scroll-1.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-scroll-1-45b053a61f92.png",
+      "sha256": "45b053a61f92e0cb0d5cde97011652f9bc9dc30e1871a26fca9a5b6baf6f1c10",
+      "bytes": 837426
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-scroll-2.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-scroll-2-24d640d570b9.png",
+      "sha256": "24d640d570b93f87163ac1e809b8aed2f0f526795ef6e6f0eb617a616578e2ed",
+      "bytes": 827975
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-full-content.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-full-content-f52130ec99ef.png",
+      "sha256": "f52130ec99efda6e503de2ec5b49a4b7f6f3830ef5a946940ca1de005d3ba885",
+      "bytes": 1478354
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-final.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-final-550e5a4d102a.png",
+      "sha256": "550e5a4d102ac24dc055f10f4e51f5dd5cd2517f3635da743b63609baf49e4c0",
+      "bytes": 1068280
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-top.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-top-e2f06dd14a49.png",
+      "sha256": "e2f06dd14a49174a506763219c68edb9babf847ebc2250c661338f7b0a26758b",
+      "bytes": 1186481
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-natural-second.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-natural-second-570f64a35c89.png",
+      "sha256": "570f64a35c89a1e4cc969f6b76887ee706ee5e4d5de3db8f57d2553d909bf3e4",
+      "bytes": 1196173
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-scroll-0.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-scroll-0-aad28699aab7.png",
+      "sha256": "aad28699aab7e1714350c34b2d958b493bc300e0aeab70ac942eabcdba31bc2a",
+      "bytes": 1189547
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-scroll-1.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-scroll-1-48cdbab2fdf8.png",
+      "sha256": "48cdbab2fdf85ea0d9e706ebb76e9be199ad7b62757c99cf1cfe716d7015907a",
+      "bytes": 963379
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-scroll-2.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-scroll-2-5424e27410cf.png",
+      "sha256": "5424e27410cff24a754bbda62b7ffb6fc8b9cfed0b24e946a7ee900e9eb5ee9b",
+      "bytes": 896420
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-full-content.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-full-content-99941c898020.png",
+      "sha256": "99941c898020da844227d2cd416edd830fd9f54f04bc1257c1ff73a42730e81c",
+      "bytes": 1647640
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-final.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-final-33062c98b72b.png",
+      "sha256": "33062c98b72b56becc961d16b8fdc2d66a663c813da089068f7360600b421cea",
+      "bytes": 1180361
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-top.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-top-ce78c933e1b6.png",
+      "sha256": "ce78c933e1b67c8ba6ab04fd30fdfdf69bae010b1e14ba36884f37213dbdde32",
+      "bytes": 1086633
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-natural-second.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-natural-second-04b2183cfd66.png",
+      "sha256": "04b2183cfd668acb0e719e812fffa3338e27bd7b2faeec55c06792c3bc9f0352",
+      "bytes": 1086416
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-scroll-0.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-scroll-0-9eb9d0a32742.png",
+      "sha256": "9eb9d0a32742c3e637da0068e16de0577e4d406ce702bf3c800d4db8c5d67949",
+      "bytes": 1083048
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-scroll-1.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-scroll-1-9a2934a8209b.png",
+      "sha256": "9a2934a8209b145b2676201163055f371394f80a0f0c3f01fa16e4e74bb4286d",
+      "bytes": 870580
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-scroll-2.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-scroll-2-64171dd236d2.png",
+      "sha256": "64171dd236d201d4fe832fc161cd65a8ecc476772138949368a847f52c0a44fa",
+      "bytes": 856742
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-full-content.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-full-content-bfc9782e4941.png",
+      "sha256": "bfc9782e49415d3a562d17dba898385ff0a8c200e9273b5b309051f0fe64496b",
+      "bytes": 1527778
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-final.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-final-170fd631ae39.png",
+      "sha256": "170fd631ae3929875af54c3d61badaaf2b63fb6b2952c03ea0988fe01ba0d22a",
+      "bytes": 1094215
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-top.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-top-0200bc321e1d.png",
+      "sha256": "0200bc321e1d2ddfcc99b391f5720be2e939901e6225afaecfb249a45816a685",
+      "bytes": 1200298
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-natural-second.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-natural-second-075253adedf8.png",
+      "sha256": "075253adedf8128c930ebbbfcae30432cd9d2622307a8ed0a8783f6f2964b59f",
+      "bytes": 1213511
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-scroll-0.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-scroll-0-b260faf638ba.png",
+      "sha256": "b260faf638ba51230589a7a1df0f1fe9b5af51f29cc6c2cf1c840e2ef9f37434",
+      "bytes": 1202217
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-scroll-1.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-scroll-1-85ec39202b84.png",
+      "sha256": "85ec39202b840566bcaa11bf62d836d58163b39badb488c021db2dfe85a8b498",
+      "bytes": 1003493
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-scroll-2.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-scroll-2-58a6ca5bfde4.png",
+      "sha256": "58a6ca5bfde4954fb8da48cf0dd0d421d1c0f32bbd75254f23ca21ae69e3ae3c",
+      "bytes": 962345
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-full-content.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-full-content-8d997996bc3f.png",
+      "sha256": "8d997996bc3f496671e2657395f4d22475fb10d0e3c63e69c2640221ad7dcc8f",
+      "bytes": 1686927
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-final.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-final-481f21df3d76.png",
+      "sha256": "481f21df3d7651d56743147c92cb5086aa808c95d5a886f65ae539d06a62270b",
+      "bytes": 1213692
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-first.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-first.png",
+      "sha256": "d292edc6f233e042a089ee3b0532ac3117581854b2b91837a4796523635e7f11",
+      "bytes": 1098396
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-500ms.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-500ms.png",
+      "sha256": "d01d54538721d8d1a64acf4952c96eb32aa87c8b098988dd9a352b2c36285238",
+      "bytes": 1089716
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-1000ms.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-393x852-1000ms.png",
+      "sha256": "9d941bc08df10b914be5616e3fa08757e460eb54628fb0eb66b6db8f600ddc50",
+      "bytes": 1085851
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-first.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-first.png",
+      "sha256": "4f0466ca6953b89453d11f394010fccff11b090463edc50932598b0dcc6a56d3",
+      "bytes": 1200406
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-500ms.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-500ms.png",
+      "sha256": "d69c0d1d3e368eff70ee61eadfc758d3bc73867684a5955bef271f421ef2fc8c",
+      "bytes": 1201496
+    },
+    {
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-1000ms.png",
+      "alias": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-clean-webkit/clean-native-WebKit-430x896-1000ms.png",
+      "sha256": "5baf76a2ab47ac04919baa1e61d81d21755f25fa66c820b16288cc0f9f854970",
+      "bytes": 1213441
+    }
+  ],
+  "personallyInspectedCurrentOriginals": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-top.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-top-81c2d5f3f2ab.png",
+      "sha256": "81c2d5f3f2abb2f0ae363a9cf1adc73dfbe7915ea9023c53745a8051c0d2b61c",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-393x852-scroll-2.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-393x852-scroll-2-24d640d570b9.png",
+      "sha256": "24d640d570b93f87163ac1e809b8aed2f0f526795ef6e6f0eb617a616578e2ed",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-top.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-top-e2f06dd14a49.png",
+      "sha256": "e2f06dd14a49174a506763219c68edb9babf847ebc2250c661338f7b0a26758b",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/nfl-430x896-scroll-2.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-chromium/original-chromium-nfl-430x896-scroll-2-5424e27410cf.png",
+      "sha256": "5424e27410cff24a754bbda62b7ffb6fc8b9cfed0b24e946a7ee900e9eb5ee9b",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-top.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-top-ce78c933e1b6.png",
+      "sha256": "ce78c933e1b67c8ba6ab04fd30fdfdf69bae010b1e14ba36884f37213dbdde32",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-393x852-scroll-2.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-393x852-scroll-2-64171dd236d2.png",
+      "sha256": "64171dd236d201d4fe832fc161cd65a8ecc476772138949368a847f52c0a44fa",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-top.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-top-0200bc321e1d.png",
+      "sha256": "0200bc321e1d2ddfcc99b391f5720be2e939901e6225afaecfb249a45816a685",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "path": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/nfl-430x896-scroll-2.png",
+      "viewerCacheSafeByteIdenticalPath": "/workspace/recovery-qa/nfl-diamond/mobile/final-rounded-webkit/original-webkit-nfl-430x896-scroll-2-58a6ca5bfde4.png",
+      "sha256": "58a6ca5bfde4954fb8da48cf0dd0d421d1c0f32bbd75254f23ca21ae69e3ae3c",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "qualifiedTemporaryScrollExposure": false,
+      "personallyVisuallyInspected": true
+    }
+  ],
+  "visualAcceptance": [
+    "All eight native top/lower originals personally inspected across Chromium and WebKit at393x852 and430x896.",
+    "The WebKit outer corner black rectangle and escaped arc are resolved. Native curved enclosure, masthead art, illuminated gold/cyan framing, strong selection states and data density remain intact.",
+    "Leaderboard titles and row-five ranks, yards and touchdowns remain completely readable. All current canonical glyph-paint tests have zero ornament occlusions.",
+    "Source-backed controls, all18week contexts at393, both conferences, divisions, sort semantics, all16inline team summaries, expanded leaders and in-place deferred actions pass in the current engine reports.",
+    "The current screen materially follows the approved tall chat render while retaining verified source values. No exact-pixel claim is made."
+  ],
+  "remainingOwnedBlockers": [],
+  "qualifications": [
+    "The approved source is the chat attachment; original bytes were unavailable for registered pixel-diff comparisons.",
+    "Native viewport evidence preserves actual phone geometry and natural animation. Full-content PNGs are explicitly qualified temporary internal-scroll unrolls.",
+    "Desktop Chromium and genuine configured WPE WebKit emulate the phone dimensions; no physical iPhone or measured hardware-FPS claim is made.",
+    "Helmet equipment art is generated decoration with separate legitimate team marks, not official photographs.",
+    "Deployment, upstream integration and actual hosted-site verification remain parent-owned and are not claimed by this local acceptance."
+  ]
+}

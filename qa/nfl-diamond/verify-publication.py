@@ -58,9 +58,11 @@ def main():
         assert digest((ROOT / name).read_bytes()) == expected, name
     commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     run = api("actions/runs/" + args.pages_run)
+    assert run["name"] == "pages build and deployment", "Require the actual Pages deployment run"
     assert run["head_sha"] == commit and run["status"] == "completed" and run["conclusion"] == "success"
     jobs = api("actions/runs/" + args.pages_run + "/jobs")["jobs"]
     assert jobs and all(j["status"] == "completed" and j["conclusion"] == "success" for j in jobs)
+    assert {j["name"] for j in jobs} >= {"build", "report-build-status", "deploy"}
     refs = {b: api("git/ref/heads/" + b)["object"]["sha"] for b in ["main", "codex-rebuild"]}
     assert all(value == commit for value in refs.values()), refs
     for p in (ROOT / PREFIX).rglob("*"):
