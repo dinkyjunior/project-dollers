@@ -1,8 +1,8 @@
 /* Compact framing of the approved gemstone entrance. All existing sport,
    research and navigation controls remain separate, native app elements. */
 .page[data-page="home"] .home-header .brand {
-  width: 80%;
-  max-width: 328px;
+  width: 76%;
+  max-width: 312px;
 }
 .page[data-page="home"] .home-header .brand-subtitle {
   margin-top: 4px;
@@ -11,21 +11,21 @@
 }
 .page[data-page="home"] .home-entry {
   width: calc(100% - 8px);
-  height: 54px;
+  height: 58px;
 }
 .app-shell:has(.page[data-page="home"].active) {
-  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 240.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
+  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 229.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
 }
 /* At the full-height phone target, every control fits above navigation. The
    reflected background extends below the frame, but must not create a scroll
    gesture that moves those controls underneath the fixed navigation. Shorter
    viewports retain native scrolling for access to all controls. */
-@media (min-width: 380px) and (min-height: 800px) {
+@media (min-width: 380px) and (max-width: 699px) and (min-height: 800px) {
   .page[data-page="home"] .page-scroll { overflow-y: hidden; }
 }
 @media (min-width: 700px) {
   .app-shell:has(.page[data-page="home"].active) {
-    height: min(calc(100dvh - 64px), 746px);
+    height: min(calc(100dvh - 64px), 772px);
   }
 }
 @media (max-width: 360px) {
@@ -35,4 +35,73 @@
     letter-spacing: 1.1px;
   }
   .page[data-page="home"] .home-entry { height: 50px; }
+}
+
+/* Deep sapphire glass retains brilliant local emission without turning the
+   entire entrance or corridor into a pale cyan strip. White metal stays white. */
+.page[data-page="home"][data-home-sport="nfl"],
+.page[data-page="home"][data-home-sport="nba"] {
+  --home-left: #245aff;
+  --home-left-rgb: 36 90 255;
+}
+.page[data-page="home"][data-home-sport="nfl"] {
+  --home-right: #245aff;
+  --home-right-rgb: 36 90 255;
+  --home-accent: #5983ff;
+}
+.page[data-page="home"][data-home-sport="nba"] {
+  --home-accent: #5983ff;
+}
+.page[data-page="home"][data-home-sport="nfl"] .home-corridor,
+.page[data-page="home"][data-home-sport="nba"] .home-corridor:not(.home-corridor-half) {
+  filter: url(#home-light-sapphire);
+}
+.page[data-page="home"] .aperture-league-logo {
+  width: 49%;
+  height: 62%;
+  left: 25.5%;
+  top: calc(var(--aperture-art-center-y) - 31%);
+}
+.page[data-page="home"][data-home-sport="nba"] .aperture-league-logo {
+  width: 45%;
+  height: 53%;
+  left: 27.5%;
+  top: calc(var(--aperture-art-center-y) - 26.5%);
+}
+.page[data-page="home"][data-home-sport="nrl"] .aperture-league-logo {
+  width: 49%;
+  height: 61%;
+  left: 25.5%;
+  top: calc(var(--aperture-art-center-y) - 30.5%);
+}
+.page[data-page="home"][data-home-sport="ufc"] .aperture-league-logo {
+  width: 59%;
+  height: 29%;
+  left: 20.5%;
+  top: calc(var(--aperture-art-center-y) - 14.5%);
+}
+
+.page[data-page="home"] .home-frame {
+  grid-template-rows: auto auto 76px 74px;
+  grid-template-areas: "brand" "gate" "entry" "dock";
+}
+@media (max-width: 360px) {
+  .page[data-page="home"] .home-frame {
+    grid-template-rows: auto auto 62px 68px;
+  }
+}
+
+/* The latest source begins with the brand. The phone supplies its real status
+   bar; the decorative fixed 9:41 row should not stretch the web composition. */
+.page[data-page="home"] .home-frame > .status-row { display: none; }
+.page[data-page="home"] .home-entry { align-self: start; }
+
+/* Apply the same blue-light selection to corridor metal and its reflected
+   floor: neutral steel cannot become magenta in an emerald environment. */
+.page[data-page="home"][data-home-sport="nrl"] .home-corridor {
+  filter: url(#home-metal-light-green);
+}
+.page[data-page="home"][data-home-sport="ufc"] .home-corridor,
+.page[data-page="home"][data-home-sport="nba"] .home-corridor-half {
+  filter: url(#home-metal-light-red);
 }

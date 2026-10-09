@@ -1,0 +1,71 @@
+{
+  "status": "preflight-not-accepted",
+  "reviewer": "controls-audit",
+  "recordedAt": "2026-10-09T10:57:23.468704+00:00",
+  "baselineUserDisposition": "Rejected; user rated the last Home approximately 65%.",
+  "reference": {
+    "source": "Latest visible chat attachment plus explicit user rejection/steering passed by root",
+    "sourceBinaryAvailable": false,
+    "pixelRegistrationClaimed": false
+  },
+  "baselineProtection": {
+    "path": "qa/home-gem-point/reviews/controls-protected-baseline.json",
+    "sha256": "ee2a7bc9425e93f0aef41d6a1cc030d44585afb917a2e3f49060e6baa4c5e859"
+  },
+  "criticalCriteria": [
+    {
+      "id": "aperture-silhouette",
+      "priority": "critical",
+      "requirement": "The metal entrance must taper to a clear upper point/apex and carry substantially wider, heavier lower structure; a circular or uniformly elliptical halo fails.",
+      "currentBaseline": "User rejected the rounded upper silhouette. Awaiting fresh original baseline image inspection.",
+      "requiredEvidence": "Actual candidate browser originals in all four sport states at both phone sizes, compared directly with the visible chat reference."
+    },
+    {
+      "id": "navy-sapphire-palette",
+      "priority": "critical",
+      "requirement": "NFL illumination reads as saturated deep sapphire/blue over navy; cyan and white are highlights, not a turquoise wash. Preserve controlled blue/red NBA split, emerald NRL and ruby UFC.",
+      "currentBaseline": "User rejected the cyan-heavy baseline.",
+      "requiredEvidence": "Unmodified actual phone originals; inspect ring, floor, portal background, CTA and controls together."
+    },
+    {
+      "id": "refracting-gem-entry",
+      "priority": "critical",
+      "requirement": "The whole Enter button must look like a luminous cut gemstone with volumetric facets and refraction; dark triangular metal grid, hollow capsule or a gem icon attached to an ordinary bar fails.",
+      "currentBaseline": "User rejected the dark metal-grid appearance.",
+      "requiredEvidence": "Whole-button and native-resolution actual captures, including natural glints, all four colour states and both phone widths."
+    },
+    {
+      "id": "continuous-premium-motion",
+      "priority": "critical",
+      "requirement": "Actual native rendered ring/perimeter highlights and glints visibly progress, including all four selectors, and resume after returning Home. Every required path must be exercised; running CSS state alone does not pass.",
+      "requiredEvidence": "Natural unpaused browser frames with saved original body and pixel hashes, read-only computed progression, native reduced-motion and inactive-route checks; no clock/style/data substitution."
+    },
+    {
+      "id": "native-control-contracts",
+      "priority": "critical",
+      "requirement": "All four sports select by touch and keyboard, only NFL enters, coming-soon controls preserve their selection, UFC says Fighters, repeated sport/subtitle and Preview only remain absent, and decorations never intercept input.",
+      "requiredEvidence": "Fresh native actions, selected/disabled/accessible state, real saved-selection reload, keyboard focus and pointer-target checks; do not weaken existing helpers."
+    },
+    {
+      "id": "phone-framing-and-crispness",
+      "priority": "critical",
+      "requirement": "393\u00d7852 and 430\u00d7896 preserve density and hierarchy without horizontal scroll, clipped primary controls, distorted logos/text or blurred/pixelated assets.",
+      "requiredEvidence": "Native viewport originals with actual image dimensions/fit, geometry and minimum touch targets. Responsive tablet/desktop review remains required."
+    },
+    {
+      "id": "protected-screen-and-data-regression",
+      "priority": "critical",
+      "requirement": "NFL, Team and Matchup routing, filters/tabs and direct refresh retain their actual native behaviour; this Home pass does not alter nonHome UI/data logic or introduce NBA screen work. Automatic source changes must be preserved and separately audited.",
+      "requiredEvidence": "Fresh protected native journeys/direct reloads plus exact nonHome source/HTML/test hashes and any separate legitimate incoming-source receipt."
+    },
+    {
+      "id": "fresh-independent-release-review",
+      "priority": "critical",
+      "requirement": "Every active reviewer personally checks the same fresh before/after originals and signs a source-bound revised-candidate receipt. All critical defects must be resolved before publication. Historical acceptance is not candidate approval.",
+      "requiredEvidence": "New complete evidence hashes and explicit visual decisions from all six specialist reviewers, with no conditional acceptance or old screenshot relabelling."
+    }
+  ],
+  "candidateAcceptance": false,
+  "pending": "Fresh actual before originals, actual reference inspection in context, revised candidate originals, native controls/regression results and all independent reviews.",
+  "reviewChangedRuntime": false
+}

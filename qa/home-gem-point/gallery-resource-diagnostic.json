@@ -1,0 +1,49 @@
+{
+  "status": "diagnostic",
+  "startedAt": "2026-10-09T12:14:09.320Z",
+  "qualification": "Read-only actual Chromium browser diagnostic after strict gallery audit failed; no error filtering, response or DOM substitution.",
+  "console": [
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "location": {
+        "url": "http://127.0.0.1:8876/favicon.ico",
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "http": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/index.html",
+      "kind": "document"
+    },
+    {
+      "url": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/baseline-chromium/chromium-393-nfl.png",
+      "kind": "image"
+    },
+    {
+      "url": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/final-chromium/chromium-393-nfl.png",
+      "kind": "image"
+    }
+  ],
+  "performance": [
+    {
+      "name": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/baseline-chromium/chromium-393-nfl.png",
+      "initiatorType": "img",
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/final-chromium/chromium-393-nfl.png",
+      "initiatorType": "img",
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8876/favicon.ico",
+      "initiatorType": "other",
+      "responseStatus": 404
+    }
+  ],
+  "browserClosed": true,
+  "completedAt": "2026-10-09T12:14:11.295Z"
+}

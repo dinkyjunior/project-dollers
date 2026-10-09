@@ -1,25 +1,38 @@
-/* A dimensioned casting for the Home entrance. 1315 × 1196 is its intentional
-   perspective envelope; neither the venue nor the league mark is stretched. */
+/* Actual native 1315 × 1197 tapered casting. The upper crown is narrow,
+   lower toroidal mass is broad; venue and vector marks keep natural ratios. */
 .page[data-page="home"] {
-  --gate-ratio: 1.0994983278;
-  --aperture-art-center-y: 50.42%;
-  --aperture-track-x: 37.34%;
-  --aperture-track-y: 38.04%;
-  --aperture-chrome-x: 46.6%;
-  --aperture-chrome-y: 48.6%;
+  --gate-ratio: 1.0985797828;
+  --aperture-art-center-y: 44%;
 }
 .page[data-page="home"] .aperture-gate {
   aspect-ratio: var(--gate-ratio);
-  filter: drop-shadow(0 9px 5px #000c);
+  filter: drop-shadow(0 7px 5px #000b);
 }
 .page[data-page="home"] .aperture-venue {
-  width: 72%;
-  aspect-ratio: 862 / 784;
-  top: 50.42%;
-  box-shadow: inset 0 0 15px #000b;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1315 / 1197;
+  top: 50%;
+  border-radius: 0;
+  background: #010821;
+  clip-path: polygon(49.962% 13.116%, 44.791% 13.868%, 40.608% 14.871%, 38.099% 15.873%, 35.970% 16.876%, 34.144% 17.878%, 32.700% 18.881%, 31.407% 19.883%, 30.190% 20.886%, 29.125% 21.888%, 28.137% 22.891%, 27.148% 23.893%, 26.464% 24.896%, 25.627% 25.898%, 24.943% 26.901%, 24.183% 27.903%, 23.574% 28.906%, 22.890% 29.908%, 22.433% 30.911%, 21.825% 31.913%, 21.369% 32.916%, 20.913% 33.918%, 20.532% 34.921%, 20.152% 35.923%, 19.772% 36.926%, 19.468% 37.928%, 19.163% 38.931%, 18.935% 39.933%, 18.707% 40.936%, 18.707% 41.938%, 18.555% 42.941%, 18.403% 43.943%, 17.947% 44.946%, 17.947% 45.948%, 18.023% 46.951%, 18.327% 47.953%, 18.403% 48.956%, 18.555% 49.958%, 18.327% 50.961%, 18.935% 51.963%, 19.163% 52.966%, 19.392% 53.968%, 19.772% 54.971%, 20.152% 55.973%, 20.532% 56.976%, 21.065% 57.978%, 21.597% 58.981%, 22.205% 59.983%, 22.890% 60.986%, 23.574% 61.988%, 24.411% 62.991%, 25.247% 63.993%, 26.388% 64.996%, 27.376% 65.998%, 28.517% 67.001%, 29.810% 68.003%, 31.331% 69.006%, 32.852% 70.008%, 34.905% 71.011%, 37.338% 72.013%, 40.304% 73.016%, 45.475% 74.018%, 49.658% 74.269%, 49.962% 74.770%, 50.266% 74.269%, 54.449% 74.018%, 59.544% 73.016%, 62.662% 72.013%, 65.019% 71.011%, 66.996% 70.008%, 68.593% 69.006%, 70.114% 68.003%, 71.407% 67.001%, 72.548% 65.998%, 73.612% 64.996%, 74.677% 63.993%, 75.589% 62.991%, 76.350% 61.988%, 77.034% 60.986%, 77.719% 59.983%, 78.327% 58.981%, 78.859% 57.978%, 79.392% 56.976%, 79.772% 55.973%, 80.152% 54.971%, 80.532% 53.968%, 80.760% 52.966%, 80.989% 51.963%, 81.521% 50.961%, 81.369% 49.958%, 81.521% 48.956%, 81.521% 47.953%, 81.901% 46.951%, 81.901% 45.948%, 81.901% 44.946%, 81.445% 43.943%, 81.369% 42.941%, 81.217% 41.938%, 81.141% 40.936%, 80.913% 39.933%, 80.684% 38.931%, 80.380% 37.928%, 80.076% 36.926%, 79.696% 35.923%, 79.392% 34.921%, 78.935% 33.918%, 78.479% 32.916%, 78.023% 31.913%, 77.490% 30.911%, 76.958% 29.908%, 76.274% 28.906%, 75.665% 27.903%, 74.905% 26.901%, 74.221% 25.898%, 73.384% 24.896%, 72.700% 23.893%, 71.711% 22.891%, 70.722% 21.888%, 69.658% 20.886%, 68.441% 19.883%, 67.148% 18.881%, 65.703% 17.878%, 63.878% 16.876%, 61.825% 15.873%, 59.240% 14.871%, 55.285% 13.868%);
+  box-shadow: none;
+}
+/* Scene bounds follow the native alpha opening, with breathing room under the
+   inner chrome. Cover crops photography; neither venue nor emblem is stretched. */
+.page[data-page="home"] .aperture-venue .home-scene-drift {
+  inset: auto;
+  left: 17%;
+  top: 11.5%;
+  width: 66%;
+  height: 64.8%;
+}
+.page[data-page="home"] .aperture-venue::after {
+  background: linear-gradient(180deg, #00082019, transparent 46%, #0005180e);
+  box-shadow: none;
 }
 .page[data-page="home"] .aperture-metal-housing:not(.aperture-crafted-housing),
-.page[data-page="home"] :is(.aperture-rail, .aperture-inset, .aperture-travel-light, .aperture-metal-glint) {
+.page[data-page="home"] :is(.aperture-rail, .aperture-inset, .aperture-travel-light, .aperture-metal-glint, .aperture-neon-halo, .aperture-neon-halo-inner) {
   display: none;
 }
 .page[data-page="home"] .aperture-crafted-housing {
@@ -29,42 +42,24 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  aspect-ratio: 1315 / 1196;
+  aspect-ratio: 1315 / 1197;
   transform: none;
-  clip-path: none;
+  clip-path: var(--aperture-physical-clip, none);
   z-index: 3;
   pointer-events: none;
 }
 .page[data-page="home"] .aperture-crafted-half { display: none; }
 .page[data-page="home"][data-home-sport="nba"] .aperture-crafted-half {
   display: block;
-  filter: url(#home-light-red);
-  -webkit-mask: linear-gradient(90deg, transparent 49.4%, #000 50.6%);
-  mask: linear-gradient(90deg, transparent 49.4%, #000 50.6%);
+  filter: url(#home-metal-light-red);
+  -webkit-mask: linear-gradient(90deg, transparent 49.6%, #000 50.4%);
+  mask: linear-gradient(90deg, transparent 49.6%, #000 50.4%);
 }
-.page[data-page="home"][data-home-sport="nrl"] .aperture-crafted-housing { filter: url(#home-light-green); }
-.page[data-page="home"][data-home-sport="ufc"] .aperture-crafted-housing { filter: url(#home-light-red); }
-.page[data-page="home"] .aperture-neon-halo {
-  width: 77.8%;
-  height: 80%;
-  aspect-ratio: auto;
-  top: 50.42%;
-  box-shadow: -5px -3px 9px rgb(var(--home-left-rgb) / .98),
-    5px 3px 9px rgb(var(--home-right-rgb) / .98),
-    -8px -5px 22px rgb(var(--home-left-rgb) / .7),
-    8px 7px 22px rgb(var(--home-right-rgb) / .7),
-    -9px -4px 37px rgb(var(--home-left-rgb) / .32),
-    9px 6px 37px rgb(var(--home-right-rgb) / .32);
-}
-.page[data-page="home"] .aperture-neon-halo-inner {
-  width: 65.55%;
-  height: 65.55%;
-  aspect-ratio: auto;
-  top: 50.42%;
-  box-shadow: inset 4px 0 8px rgb(var(--home-left-rgb) / .84),
-    inset -4px 0 8px rgb(var(--home-right-rgb) / .84),
-    inset 0 0 15px rgb(var(--home-left-rgb) / .25);
-}
+.page[data-page="home"][data-home-sport="nrl"] .aperture-crafted-housing,
+.page[data-page="home"][data-home-sport="nrl"] .home-metal-reflection-image { filter: url(#home-metal-light-green); }
+.page[data-page="home"][data-home-sport="ufc"] .aperture-crafted-housing,
+.page[data-page="home"][data-home-sport="ufc"] .home-metal-reflection-image { filter: url(#home-metal-light-red); }
+.page[data-page="home"][data-home-sport="nba"] .home-metal-reflection-half { filter: url(#home-metal-light-red); }
 .page[data-page="home"] .aperture-channel-art {
   position: absolute;
   inset: 0;
@@ -78,63 +73,59 @@
 .page[data-page="home"] .aperture-channel-art .aperture-neon-track {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 36;
-  /* The photographic optical-glass reflections remain visible beneath the
-     coloured emission. A flat opaque strip would erase its material depth. */
-  opacity: .4;
+  stroke-width: 42;
+  /* Saturated glass/reflection detail stays photographic beneath emission. */
+  opacity: .18;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-bloom {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 55;
-  opacity: .62;
+  stroke-width: 52;
+  opacity: .32;
   filter: url(#home-aperture-bloom);
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-core {
   fill: none;
-  stroke: #e8fcff;
-  stroke-width: 4.5;
-  opacity: .94;
+  stroke: #abbfff;
+  stroke-width: 1.7;
+  opacity: .55;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-inner-track {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 4.4;
-  opacity: .94;
+  stroke-width: 2.2;
+  opacity: .38;
 }
-.page[data-page="home"] .aperture-channel-art .aperture-neon-outer-track {
-  fill: none;
-  stroke: url(#home-aperture-colour);
-  stroke-width: 4;
-  opacity: .95;
-}
+/* The photographic toroid defines the outer casting. An extra synthetic edge
+   does not improve its material and must not draw a circular halo or foot. */
+.page[data-page="home"] .aperture-channel-art .aperture-neon-outer-track { display: none; }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-runner {
   fill: none;
-  stroke: #f5feff;
-  stroke-width: 10;
+  stroke: url(#home-aperture-moving-specular);
+  stroke-width: 5.5;
   stroke-linecap: round;
   stroke-dasharray: 18 165 8 310 20 479;
-  opacity: .97;
+  opacity: .8;
   filter: url(#home-aperture-hotspot);
 }
 .page[data-page="home"] .aperture-channel-art .aperture-metal-runner {
   fill: none;
-  stroke: #edfaff;
-  stroke-width: 9;
+  stroke: #dadce2;
+  stroke-width: 3.5;
   stroke-linecap: round;
   stroke-dasharray: 10 990;
-  opacity: .68;
+  opacity: .42;
 }
 .page[data-page="home"] .aperture-floor-reflection {
   left: -2%;
   right: -2%;
-  height: 33px;
-  bottom: -5px;
-  opacity: .68;
+  height: 30px;
+  bottom: -4px;
+  opacity: .5;
 }
 .page[data-page="home"] .aperture-floor-reflection .home-metal-reflection-image {
   object-fit: contain;
-  aspect-ratio: 1315 / 1196;
+  aspect-ratio: 1315 / 1197;
 }
 @media (prefers-reduced-motion: reduce) {
   .page[data-page="home"] .aperture-neon-runner,

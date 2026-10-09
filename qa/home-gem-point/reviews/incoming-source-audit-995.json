@@ -1,0 +1,3667 @@
+{
+  "status": "passed-read-only-source-delta-audit-for-995-integration",
+  "completedAt": "2026-10-09T12:07:21.014090+00:00",
+  "reviewer": "home_incoming_source_audit",
+  "scope": "Incoming remote NFL data preservation and business-contract checks for Home-only visual release; existing approved research remains unchanged in code; no NBA statistics added.",
+  "hashes": {
+    "localHEAD": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+    "originMainFetchedByCoordinator": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+    "originCodexRebuildFetchedByCoordinator": "3e047c86df61208a6675bf60fbd8e98051566cbf",
+    "testedLocalRuntimeManifestSha256": "be79f233d716077ba4a0fe11b5cdc2de825d841608075c9995ba521cf1c58724",
+    "runtimeFiles": 247
+  },
+  "actualObservedRefs": {
+    "HEAD": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+    "origin/main": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+    "origin/codex-rebuild": "3e047c86df61208a6675bf60fbd8e98051566cbf"
+  },
+  "ancestry": [
+    {
+      "ancestor": "3e047c86df61208a6675bf60fbd8e98051566cbf",
+      "descendant": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+      "exitCode": 0,
+      "isAncestor": true
+    },
+    {
+      "ancestor": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+      "descendant": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+      "exitCode": 0,
+      "isAncestor": true
+    },
+    {
+      "ancestor": "3e047c86df61208a6675bf60fbd8e98051566cbf",
+      "descendant": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+      "exitCode": 0,
+      "isAncestor": true
+    }
+  ],
+  "incomingCommits": [
+    {
+      "commit": "49ef2f8f6926326019e86b9439a1f1bc17da3bd3",
+      "parents": [
+        "b62b9be1c45233d78fce12b81111ac9762132ec5"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T08:40:30Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    },
+    {
+      "commit": "905809872059acec6026118988f21835ac4414d1",
+      "parents": [
+        "49ef2f8f6926326019e86b9439a1f1bc17da3bd3"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T09:02:34Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    },
+    {
+      "commit": "a65d9998678227d0c1fa5fcb844556c73d953751",
+      "parents": [
+        "905809872059acec6026118988f21835ac4414d1"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T09:29:44Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    },
+    {
+      "commit": "f029ad0ac61ed493e0ac5ced0e6d5a13b772e47f",
+      "parents": [
+        "a65d9998678227d0c1fa5fcb844556c73d953751"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T09:37:39Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    },
+    {
+      "commit": "dd21216e239927dd892948662339f0b108d87669",
+      "parents": [
+        "f029ad0ac61ed493e0ac5ced0e6d5a13b772e47f"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T10:29:34Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    },
+    {
+      "commit": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+      "parents": [
+        "dd21216e239927dd892948662339f0b108d87669"
+      ],
+      "author": "github-actions[bot]",
+      "authorEmail": "41898282+github-actions[bot]@users.noreply.github.com",
+      "committedAt": "2026-10-09T11:26:29Z",
+      "subject": "Refresh verified NFL snapshot",
+      "files": [
+        "assets/data/current.json",
+        "assets/data/matchup-breakdown.json",
+        "assets/data/player-history.json",
+        "assets/data/provenance.json",
+        "assets/data/team-details.json"
+      ],
+      "classification": "Existing automated NFL source snapshot only",
+      "exactFiveAllowedDatasets": true
+    }
+  ],
+  "exactFiveIncomingDatasets": [
+    "assets/data/current.json",
+    "assets/data/provenance.json",
+    "assets/data/player-history.json",
+    "assets/data/team-details.json",
+    "assets/data/matchup-breakdown.json"
+  ],
+  "snapshotFiles": {
+    "current.json": {
+      "beforeSha256": "4ab8d157a71529e8d0fe919bdbd80ba1852bd40fbd7239b6171c2b3b0d79ccc8",
+      "incomingSha256": "f9dc4188121872a2eb2ff51d7413bc89e32146d67f46aced94ebb78252127f0e",
+      "beforeBytes": 1085331,
+      "incomingBytes": 1085443,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "retrievedAt": "2026-10-09T11:25:55Z"
+      }
+    },
+    "provenance.json": {
+      "beforeSha256": "59e17ef40ce8ccbbbd5d0a71fd7039b8455730353fbf7d0a0db5bd7d2683da72",
+      "incomingSha256": "e28f1dff21beb3926d562c1fb5d13549028a5f2d73236a5c6029b7ab1c11516f",
+      "beforeBytes": 33508,
+      "incomingBytes": 33508,
+      "identity": {
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "retrievedAt": "2026-10-09T11:25:55Z"
+      }
+    },
+    "player-history.json": {
+      "beforeSha256": "b73a50cf02885410e7ab6b99439282f651e4b37d2310f31b577af63710c9f7e3",
+      "incomingSha256": "31b54437bd94299289bd38d9d4067c44c12f6e2a9d4fb13729de0561b13dd7d1",
+      "beforeBytes": 7108758,
+      "incomingBytes": 7108758,
+      "identity": {
+        "season": 2026,
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "retrievedAt": "2026-10-08T06:28:03Z"
+      }
+    },
+    "team-details.json": {
+      "beforeSha256": "a5746a9ded8c79c3a553ca8ca768983a0c07c645be2dcf117cba19fe18235ae1",
+      "incomingSha256": "7f730444474ec34c30ed84f2f43f345f66f042834d9af46209c40d7cffe29e47",
+      "beforeBytes": 2292679,
+      "incomingBytes": 2292695,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T11:26:01Z",
+        "retrievedAt": "2026-10-09T11:25:55Z"
+      }
+    },
+    "matchup-breakdown.json": {
+      "beforeSha256": "a8a6a8c95209d62a74decc193d4cedc05777504dbf3da30d812941d5246947fb",
+      "incomingSha256": "e4ade85b47650666aa1d8f78d4365e4cdc50454e12ede70d2d56dfebc0d29e78",
+      "beforeBytes": 28046812,
+      "incomingBytes": 28048444,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T11:26:14Z",
+        "retrievedAt": "2026-10-09T11:25:55Z"
+      }
+    }
+  },
+  "sourceHashChangesAndDomainFacts": {
+    "current.json": {
+      "count": 30,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_athlete_4431424",
+          "before": "b0c4186a98ffeb82f058e4c035acf6038e3e3ebcee3efdb24bbec0ceea913789",
+          "incoming": "c29bd428951d0f7d5cca16c123eb01b96b2908d060e2fa18b9ca8f2c2ce948bc",
+          "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424"
+        },
+        {
+          "id": "espn_steelers_roster",
+          "before": "fdf3449e7fe931a25d13c6d6e11795c3be83d8fd30b145ff07e920a8fa2dca5c",
+          "incoming": "882f08dce0cd5647a55757c78545c3ab0cc3f095e90bcf1a6b9a613629239a5e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        },
+        {
+          "id": "official_steelers_roster",
+          "before": "07b32349948067e757c2ed00ac45691bd93d82288d7bef0cdab98656e709e5e6",
+          "incoming": "6476f779e93a0fb82fc5b1d9ac844074c40aca2a292fffbd9fbbfee2e984f6cb",
+          "url": "https://www.steelers.com/team/players-roster/"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com",
+        "www.steelers.com"
+      ]
+    },
+    "provenance.json": {
+      "count": 30,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_athlete_4431424",
+          "before": "b0c4186a98ffeb82f058e4c035acf6038e3e3ebcee3efdb24bbec0ceea913789",
+          "incoming": "c29bd428951d0f7d5cca16c123eb01b96b2908d060e2fa18b9ca8f2c2ce948bc",
+          "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424"
+        },
+        {
+          "id": "espn_steelers_roster",
+          "before": "fdf3449e7fe931a25d13c6d6e11795c3be83d8fd30b145ff07e920a8fa2dca5c",
+          "incoming": "882f08dce0cd5647a55757c78545c3ab0cc3f095e90bcf1a6b9a613629239a5e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        },
+        {
+          "id": "official_steelers_roster",
+          "before": "07b32349948067e757c2ed00ac45691bd93d82288d7bef0cdab98656e709e5e6",
+          "incoming": "6476f779e93a0fb82fc5b1d9ac844074c40aca2a292fffbd9fbbfee2e984f6cb",
+          "url": "https://www.steelers.com/team/players-roster/"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com",
+        "www.steelers.com"
+      ]
+    },
+    "player-history.json": {
+      "count": 24,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com"
+      ]
+    },
+    "team-details.json": {
+      "count": 32,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_roster_DAL",
+          "before": "41f86adcf2ae0c3ec674b8e0a3a9258c96ecd299a2f58813c4f87bef66e1a15d",
+          "incoming": "3af79831c87b8011b55a0d90e8749e77016861071cf9b978ca406ba7de0f8ea9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "espn_schedule_DAL_2025",
+          "before": "be9d748aa11c7f4e3afe478f29813a8320fe22669a930cceb9084863dfe86893",
+          "incoming": "33c57ec1657691f99a208e67dc970e3a83fa1b0ea9188288406941f28d2649b1",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+        },
+        {
+          "id": "espn_schedule_DAL_2026",
+          "before": "6dc4f32649643c80478c3b71443911e5b569e4417c13cec72837afe3a55c556a",
+          "incoming": "08243cda3a14292f5342e9e7f675c4fafba01721a66043b597de5914677c6ebf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2"
+        },
+        {
+          "id": "espn_summary_401772510",
+          "before": "f68e34fe983f79ae6f1baae33994a87db4ad51d7d007923a392e71fe4e9d14a5",
+          "incoming": "340f708937b764c11cd38d6d3f93a016655d327dfbe4e5d4f32c8556266ade07",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510"
+        },
+        {
+          "id": "espn_summary_401772694",
+          "before": "5b28edbd71f1d682c2febef4618b912f06899b23b0248c459f30f7b8eb480c09",
+          "incoming": "9191ab3a1a4d35082eea1691bc8811d45788aea9ec3b82eb6a45be36a6f7d7e7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694"
+        },
+        {
+          "id": "espn_summary_401772710",
+          "before": "512286658275614b893c7f9aa21631268418c76dc912174741bd2c1a7a007dee",
+          "incoming": "3aa8a6e14e2d3927ee3a6c9f763b0809d844aeb07ac3c2bc8ff5ae97ccc2df7a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710"
+        },
+        {
+          "id": "espn_summary_401772762",
+          "before": "b99e6a0cbfeb89fbd64ca63ac90ac80e6ca405e0c68c2229f6c7f5e8c347b1a6",
+          "incoming": "8319b092943dc98a4676487370e8b4bca5468031ce484c052f327f57bc67115d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762"
+        },
+        {
+          "id": "espn_summary_401772818",
+          "before": "36d05df263ce53d8a363be1ce6a25c1b9ed40c283228e85d844c95b6c6882a24",
+          "incoming": "6e0c18957d12a9207888c0d49ec9818f668e21638e9b80a6ca0f2fc8bcbe4aef",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818"
+        },
+        {
+          "id": "espn_summary_401772819",
+          "before": "5ea9e1f5d7044c62d1c2e098a3580164ac0a47566e955c41fd290c0bbb0eb2bc",
+          "incoming": "5fc7b4449a1a33b86da35564c4f5c94c2a21714d8c0ddd5f5f81eecc439b4d5b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819"
+        },
+        {
+          "id": "espn_summary_401772834",
+          "before": "9fda8bb2d566a56229dd12a35c1da783606cb0008f6fd8ce924f88b1253bb223",
+          "incoming": "1a922edc04349aefd3be20ac5464f9144d18de40f9e07b1258f32f5d78c6ea6f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834"
+        },
+        {
+          "id": "espn_summary_401772844",
+          "before": "af22666dd569d95510abb9dadcfe157e24c9373d96674037f1ec1eab68cd4738",
+          "incoming": "69d7158787f2ca37111fb98db19e5bd19860438419477cc0827304e34c59cd79",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844"
+        },
+        {
+          "id": "espn_summary_401772850",
+          "before": "9c56b8bcd6928e7711e46788bce6e261ecc66a8706c42fcbd2d1f686ec6eecf1",
+          "incoming": "9b551bc556d22bd48b51b1b755cf5cefe32fc27690350878d6409ad000313554",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850"
+        },
+        {
+          "id": "espn_summary_401772858",
+          "before": "c3a3c4adc2b53deb164a73741e78019fb4d044180033a1d36f1b2ea4ce02b552",
+          "incoming": "6fbed6d1631bd813b719e4abb5946988db799c28c841a75b4b91146824e4b01d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858"
+        },
+        {
+          "id": "espn_summary_401772864",
+          "before": "17e82b452a13ba6ffdb1086d793087aeefd0effd6b2160ea55f7a53d830947f1",
+          "incoming": "babfa4d762ed1ec14ac261ef7419aec46adfc71758e4b0e2b9db2d524c8f6285",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864"
+        },
+        {
+          "id": "espn_summary_401772890",
+          "before": "645bf263adf33817de601934b95a2753d17bfba9bbc43abcaac6204cc9a0105a",
+          "incoming": "997bf712573fca8bbcd6485b5ba95319af646124317676d1084ffb6ec8a5fbbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890"
+        },
+        {
+          "id": "espn_summary_401772910",
+          "before": "85d81dcb7cdb3d2856dc66c584f52c1a57bfcaa56e6e8fbe7d40223abe17002a",
+          "incoming": "7b14ae54ba68d19624cd93383baf59531bbb64c487281771f921fc49d159f25f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910"
+        },
+        {
+          "id": "espn_summary_401772921",
+          "before": "056b4c9e42172d5afcca72e197d0fb4cc3db68494e74d0b06a533ee9afd5dc8f",
+          "incoming": "bd518a7750e0988c5c8d617df13dfb0c6b1509088b11e1276c1d4a71ff4ab14d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921"
+        },
+        {
+          "id": "espn_summary_401772933",
+          "before": "c3d9f04addb17d57a3eb2fccd615d5c01954d32f6e4777374f07ca453ab81d13",
+          "incoming": "e9e5d5d2708d96863cb40fc995447f60458703b58aa63831ae15141aacbbcea5",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933"
+        },
+        {
+          "id": "espn_summary_401772947",
+          "before": "60dd571bc987cb9d073bc338c97070b118912b3596e50197c0073fd32e48c0fd",
+          "incoming": "a30c70c5c60b9a9782a40027646997843e27bc0153670fb89b0d47551fe0b722",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947"
+        },
+        {
+          "id": "espn_summary_401772963",
+          "before": "e5961a4dc795762bea5841ddfd86cce179aa6b3237690aa3a9d9ba3ef62555fd",
+          "incoming": "1a7afdee5397005b8d152bf38ff9c00c60b06739ffbc7dacfd88f5c7c83ab202",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963"
+        },
+        {
+          "id": "espn_summary_401872930",
+          "before": "730a44c8c37a3b95277ab129270db760dce96dd47dad7dc5f98ab874adf9579d",
+          "incoming": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "espn_summary_401872944",
+          "before": "2f1956c18aa77c1c1b91a95aaff408e1a1a6d1571ba74e66d54beac2f1d6aa99",
+          "incoming": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "espn_summary_401872960",
+          "before": "4d84e509b090ed350a7f4a38e0cb8cfdca388caf80efc63f0a5675ffde3b6270",
+          "incoming": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "espn_summary_401872967",
+          "before": "503b5db4f3e5792a4f77f5a9291aa58a1b248b3f1d88f7d437fa4bb484c9d29e",
+          "incoming": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "espn_summary_401872980",
+          "before": "14a55bdeaee5a8103911c171773e63e0d1bdde69fcdfce770ac4c7b83981fa86",
+          "incoming": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com"
+      ]
+    },
+    "matchup-breakdown.json": {
+      "count": 125,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_fixture_summary_401872980",
+          "before": "14a55bdeaee5a8103911c171773e63e0d1bdde69fcdfce770ac4c7b83981fa86",
+          "incoming": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "espn_fixture_summary_401872981",
+          "before": "3d446e2e0a57a2cfbc22a28da5ac65a160ca26c8f087347e63e4be3d1add0874",
+          "incoming": "780ef61326e51a1a2368315acbc35b3ad888e7ea65188af9598b83339d299560",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872981"
+        },
+        {
+          "id": "espn_fixture_summary_401872982",
+          "before": "a11332c40549a08afec1485dc979b7319d2422d5ad1a6fa80315ba677c0eaafd",
+          "incoming": "459f6a3046bd0d7c68cf682364e935dfda172bc6c227e043f84b23e70b69fa99",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872982"
+        },
+        {
+          "id": "espn_fixture_summary_401872983",
+          "before": "32380d7b97f1df8fbb25fac07749bfbd5ee75c002c2749c29bf60d5dcbb37366",
+          "incoming": "bce24747ba5b47ffb75a971af5ad5a76ddd0415fc039750df2e224a955ef4a72",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983"
+        },
+        {
+          "id": "espn_fixture_summary_401872984",
+          "before": "25a3061c6dc7fd56e5d52eb041af87024d98e0ab65774ede66a708854b36a2f0",
+          "incoming": "1ecb4910368abb82b836d11ab7e18a851efabfa280954d9c0f4302d862fa163d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984"
+        },
+        {
+          "id": "espn_fixture_summary_401872985",
+          "before": "2ad06865d12eb29acd96c517099823cc2b36651722dbfe15864b292b55fae968",
+          "incoming": "b23dd1e510084ae1b26a1c46a440fcc393859d71f2698f9aef8ab1c5009a5cbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872985"
+        },
+        {
+          "id": "espn_fixture_summary_401872986",
+          "before": "ba1937598bbefb57016b2d92feb0aaf1c6ae6a10bec3db3c5cb82c2f40895859",
+          "incoming": "f69437db4b9016bf556ac52d057237b0193e307e6e163d72d0530ab3c1ebf482",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872986"
+        },
+        {
+          "id": "espn_fixture_summary_401872987",
+          "before": "a2239a3bc64fb5a3daf47f61d21cf4303832c0db7f7baad80484e28b56864a9b",
+          "incoming": "608d3117615468332372e7f066d88d71c1cdc850380f6da3216ef019d40daf13",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872987"
+        },
+        {
+          "id": "espn_fixture_summary_401872988",
+          "before": "9e666256333cd1a92577a39e8ae2025cc9940ddf73d81736dfdc216f286e367b",
+          "incoming": "4a0d468148564d0d5860a4fcd1542b19b9687e465d0a2ccf9f384b6140a391bb",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+        },
+        {
+          "id": "espn_fixture_summary_401872989",
+          "before": "82fa309820cc483823c8688f44ee0e0b05ac365692c1d735a3a5f686c933e369",
+          "incoming": "a24383c49ef960e5105b92cb18ba0c2b368647d944eb271c871a7ab42d69bf67",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872989"
+        },
+        {
+          "id": "espn_fixture_summary_401872990",
+          "before": "4da2dc526b5e904bf7c0cd270d4734017aaff106041020f41b0e10a7cfa3cfca",
+          "incoming": "ad9df0c90f2ee84546b3f1abc4a2c654315b5287e45edb21781bd07c7e2c24ba",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990"
+        },
+        {
+          "id": "espn_fixture_summary_401872991",
+          "before": "4d6c90b6634449fbbff101e5e80d2b986d3a7de33f24c8b594fb00bd75708a8c",
+          "incoming": "eb631ac38bb5eb1439e40731df8cc7e4880010017cc6bac3e23b5395504fb691",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872991"
+        },
+        {
+          "id": "espn_fixture_summary_401872992",
+          "before": "cda48ace09adcf05ab83a7daa3db873d7fa9b955a913bece2cf9650fc5ba823f",
+          "incoming": "60bd14c78a33cf1b28b84099bae3bb63d4e9118eddbdf24d47d0166846b97c22",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872992"
+        },
+        {
+          "id": "espn_fixture_summary_401872993",
+          "before": "6a389d0013428ce6132dc1352ae42d0596df71476ab510a72648a3e74a79d269",
+          "incoming": "d76075d2edf805266bfba8cf771a2b69409c903834155ded0a70e4a8abde4559",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872993"
+        },
+        {
+          "id": "espn_fixture_summary_401872994",
+          "before": "7415cabf6b3bfd3b1bcc3ed7fc5e72ef055cdc29394a36d07bcd0396329f8787",
+          "incoming": "958a9149f4c29f071347be50d7e1935b2895fc7eab5b8234a19cdd79acafdcf9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872994"
+        },
+        {
+          "id": "espn_fixture_summary_401872998",
+          "before": "45a5d7969e62343ea3a2a0407e42ea3aad5685b42c553397e5fd23281af1e341",
+          "incoming": "48bc3c4b837b4c03c043b598b597124879a6b8ab068fb831529cad5b605228de",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872998"
+        },
+        {
+          "id": "espn_fixture_summary_401873002",
+          "before": "3c9e2f5081b3d7c1028a08bb051c8759f281f11ab01a487d2bc649e2b5d26a60",
+          "incoming": "28e671a9506e1cfdbc237e8efd701b4f0ad78891e37d07c0435f5cf3835aaa99",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873002"
+        },
+        {
+          "id": "espn_fixture_summary_401873006",
+          "before": "dfdd2c69c26951442820186a648b0f4f9f0781ee9c500ae9caf289da39c54f85",
+          "incoming": "18ef3a51eeef765db5a2693163f40642c69dc5be7b71bc8d0cb6f8d1af411ba5",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873006"
+        },
+        {
+          "id": "espn_fixture_summary_401873007",
+          "before": "0c775203d7ef97a186ca67d61ef6fdb87d6d88f1a788176fa216604db1ed5915",
+          "incoming": "702a40f4fa219a10aafed0f44a9d3ff4a76ba2f64b6ebe8b3214dd3e3c1023d4",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873007"
+        },
+        {
+          "id": "espn_matchup_depth_DAL",
+          "before": "f105bd8f9fc442e23bb087befa9c419c3d77c128fc97ab2461532d13ada385e6",
+          "incoming": "e191030aacfcb4bd1d0a722378f675fc22dbae3c844900d4422ef2e47092d124",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/depthcharts"
+        },
+        {
+          "id": "espn_matchup_depth_PIT",
+          "before": "33c8f26ecd45d2081c7f270a67ad3a5f83088d17fcf08f186f117cc7bfcdd387",
+          "incoming": "7d6c21d46faad56eac4f259948d4f286f5ef8183b5f8ca270897f5d8b39e902f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/depthcharts"
+        },
+        {
+          "id": "espn_matchup_depth_TB",
+          "before": "fc936393e20513dc3c5094fb29116ddff4b61eab54db3e937f1eba69e08def30",
+          "incoming": "6a6b23c26749f92694ce010ea6db7e8c39b6c3970f67d4c3ac2a8e7625db6f8c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/depthcharts"
+        },
+        {
+          "id": "espn_matchup_roster_DAL",
+          "before": "76cf8c063b0c1cb01bc55795cb3e7ca5ef9e117bf8e91307fbd383ca50420ee4",
+          "incoming": "3eacd333593cb0655eaea87451f769763f3d3b97e5147d680fff2464458f7c05",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "espn_matchup_roster_PIT",
+          "before": "ff18c26ea90285e16e05e921d4d12d9633c55702f52e8256faa3cf2b6388a481",
+          "incoming": "705c1cc9844b1780c71a0294d61ea87b93f17245207e5315f9748634d8ac3d58",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "espn_matchup_roster_TB",
+          "before": "1810c357699a927ef3c2a66f9fdfaa7278c6d96eccdf0f06031b0b8627633c12",
+          "incoming": "4422b868672b2b209bc8cadb81b2f6bd1f2cc16641374235519a102cec48fbbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/roster"
+        },
+        {
+          "id": "espn_matchup_summary_401772960",
+          "before": "f0d548f4df93a0a4c14d68767f19b7c5d24993e62b830ca60dd9bdee59ab8ec1",
+          "incoming": "b8ba18352dafa3ea5e76a540c9e845bc68fc609967d5908ba8b0a0ffab3f3d29",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772960"
+        },
+        {
+          "id": "espn_matchup_summary_401872658",
+          "before": "c948513b8a44b7c51134a1bcb988ec718bca6cda93f6aaabba78f072e358dd8e",
+          "incoming": "8f6f48141add307d496577bb7de555f89a8460ac2b93779fa4e4ded2cdec9925",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658"
+        },
+        {
+          "id": "espn_matchup_summary_401872925",
+          "before": "32561d128d2b2fb9b4ab81fe7fb3b1fd09619cd5d1a254b35e63d774de9be784",
+          "incoming": "164623d957becd45cb2ded4e8176f84def14ae97014a03009f8526ec09fd60c9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872925"
+        },
+        {
+          "id": "espn_matchup_summary_401872930",
+          "before": "730a44c8c37a3b95277ab129270db760dce96dd47dad7dc5f98ab874adf9579d",
+          "incoming": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "espn_matchup_summary_401872935",
+          "before": "9a051bebb0d641d09f735dd0e524c73b2aaf3184a612fcbf80731c5921c02bd2",
+          "incoming": "427cac825d5d60e3c0723f683345708bdfd508e3a3db72258ee3e7e73115cd21",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872935"
+        },
+        {
+          "id": "espn_matchup_summary_401872944",
+          "before": "1234dd2b14508e15e2bf8a907b2492068495e31b0a7934a4f42419eefbf11a94",
+          "incoming": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "espn_matchup_summary_401872946",
+          "before": "6d5a321360e6ec8b239344023d80f1418dd9a7f7f77e4755b971bca03ed87bfd",
+          "incoming": "5cbc08a7fc6ab595d3065fbc582c2ff9820d22a454d0618bd450f76a8bf94605",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872946"
+        },
+        {
+          "id": "espn_matchup_summary_401872950",
+          "before": "1761f874415d0f439b76516e1b45baf861a4f4ea6d7adb86725285f89983be97",
+          "incoming": "814a37d62705546f5bb6965399cbb8c028b3a904f0110739c3a6b7077c1ea8aa",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872950"
+        },
+        {
+          "id": "espn_matchup_summary_401872959",
+          "before": "561275eca81037d74af150c0f2e09560880b095c4fbb06814dbdcecbbfef4fc1",
+          "incoming": "d1accee6b9c348d8b792504f553c4ad5503f028574219201f1b0cdab0cdc025b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959"
+        },
+        {
+          "id": "espn_matchup_summary_401872960",
+          "before": "4d84e509b090ed350a7f4a38e0cb8cfdca388caf80efc63f0a5675ffde3b6270",
+          "incoming": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "espn_matchup_summary_401872964",
+          "before": "c91a3b8c2e97f8750660485fb3162012f69f889c6ea272825d44e6d984c58502",
+          "incoming": "d0c03eb5486d0ac5dd1f0c65bf82e24b0489f70b9ee53e8f06af9c816c84cf34",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872964"
+        },
+        {
+          "id": "espn_matchup_summary_401872967",
+          "before": "503b5db4f3e5792a4f77f5a9291aa58a1b248b3f1d88f7d437fa4bb484c9d29e",
+          "incoming": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "espn_matchup_summary_401872968",
+          "before": "91a4a4cae5661651678a7a3607d2d0facdfa5703cdd76b33c03c267307908df9",
+          "incoming": "f8fea953b2ccfaad40de71d4238944f7d8359cc14c455a1dbd8b761f52fcdcc2",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872968"
+        },
+        {
+          "id": "espn_matchup_summary_401872980",
+          "before": "14a55bdeaee5a8103911c171773e63e0d1bdde69fcdfce770ac4c7b83981fa86",
+          "incoming": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "espn_start_summary_401437849",
+          "before": "b237becd1f8dde0ec65a09aed57bc697ff4c29ae1dc4052e717fe5a440d5fc11",
+          "incoming": "899c043f2aa179a0aab993c664b55662dfd4516ef4ec513052b31524e23f146f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401437849"
+        },
+        {
+          "id": "espn_start_summary_401671601",
+          "before": "3e5f930de9e360c5172bb0923a94b49faacd5a244a3207532fe819af256f5cf3",
+          "incoming": "30eaab9e362510447dd29f867156538dc1e97e7dc1200a5115e09514d64cd679",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671601"
+        },
+        {
+          "id": "espn_start_summary_401671651",
+          "before": "82f81c2db7035353842d8fd506d0d313b488f6b4cb98154039c722d9b00eda76",
+          "incoming": "ef5e31cffa1228596f91141e7eb8a885c9783404be04f3d32ef9b33aacf9950c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671651"
+        },
+        {
+          "id": "espn_start_summary_401671654",
+          "before": "1782444113e061d48db0952adfdbe209447604b0f7e520dad0b777cb5f2236b1",
+          "incoming": "f014181d2cac78a6b74b6e4ba5fe079a8f4e6a3fb0d5665ecd5cac48ba3f8199",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671654"
+        },
+        {
+          "id": "espn_start_summary_401671671",
+          "before": "86eaa99bb581eabbe8a0800f1b11efc09c57b989bd992590eb339fc2c690d1fe",
+          "incoming": "4a7e14717f3e2f2cfdbb752a3118d2cf20c748128247a09bab7346b9efd2e31e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671671"
+        },
+        {
+          "id": "espn_start_summary_401671692",
+          "before": "b1edbb0f477c6ec85be8a2a5482a26e5045a461c608e0053dca01a15a1ecab90",
+          "incoming": "98308e5c925c86c9322f3c32e14b3f3b4938cb2c92e176cb6c34b49601f16951",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671692"
+        },
+        {
+          "id": "espn_start_summary_401671697",
+          "before": "14165ddacfa586429cb866a4710321ae0076b646daa73267b54abc07913b3bd0",
+          "incoming": "e69d1bf65c2082b20025edf8483410209c5f8849fe8f112a80c75adb798e0179",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671697"
+        },
+        {
+          "id": "espn_start_summary_401671713",
+          "before": "69cff0147d4f44e0bab552a863df7bf5ded77d923a621605e8299258b5ec19d1",
+          "incoming": "ab38c47a787086b2d2b7a7dbee431006e9263a42095c0d3720c7dadfcc958325",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671713"
+        },
+        {
+          "id": "espn_start_summary_401671729",
+          "before": "ff1f95724a2611da70fe8eabbdebad58eed22597ef312b90b1cc9cef48c2a515",
+          "incoming": "9218e57adb8928b9d98e8b08ce1ba2c92f59246e0c6b69de0ee4e9393b4dd815",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671729"
+        },
+        {
+          "id": "espn_start_summary_401671738",
+          "before": "5c534356aa983ac5086c76d9c27854664e53058ce85549db1ed0e06d8cb49dc0",
+          "incoming": "c1bb288dc6fbe12fb8eccb957c85857c5de8f804d331434c41555adc5e758cf7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671738"
+        },
+        {
+          "id": "espn_start_summary_401671752",
+          "before": "4965878acbf73eb46ed5e30a52757c334607ee85aa6a0622cf03a6aea0c0d97d",
+          "incoming": "5221b2a8b71d59be229af6a3450ae2f1780913505a74cedfb99711ef495d84d4",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671752"
+        },
+        {
+          "id": "espn_start_summary_401671803",
+          "before": "5fd2090be3ca03dfe07a1838893077a246c8f15e0e7226bb7fa990f78f77adca",
+          "incoming": "b68afa5af3b7e5cba4a758e681fcbd953ec974f4152160a61bf2243c5ecd211d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671803"
+        },
+        {
+          "id": "espn_start_summary_401671806",
+          "before": "20bee1efd00e49a6b03c987011c74b3cfc3e2d251370968f1ee1a1c6cfa0c30d",
+          "incoming": "2b5d683521235e42dc8537e4d3926ddf421b9452c59c17dec0b9a57959d0a188",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671806"
+        },
+        {
+          "id": "espn_start_summary_401671821",
+          "before": "b0794622d9688b47661d856eb6dfec49547137ae5eab2b248377e6025e36fadd",
+          "incoming": "5ed053563e37fa608d659b9eeddf9ad9fc243da0c74e38033db1672affd4ab97",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671821"
+        },
+        {
+          "id": "espn_start_summary_401671846",
+          "before": "19b630afc455b9477164d4732946b4aca5a1ab7891dfc519a5425a9b9c212976",
+          "incoming": "1819ae40af0bf9050760127aa6cc4713620364d924fc9ad703cbbd3af40f6c4b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671846"
+        },
+        {
+          "id": "espn_start_summary_401671877",
+          "before": "d994d0702feb2bedb5441b6076893a89d9424257f51cb0087e6855b9e7bee6bb",
+          "incoming": "f3fa87d1d37b956ca2c78584976a63b3b2e83e41e40e584ff71d27bc87f3c789",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671877"
+        },
+        {
+          "id": "espn_start_summary_401772801",
+          "before": "eb8a6fa0008acf8f5f8d56f19406d9d672b6da39b13d68e90caa75432bef8f7c",
+          "incoming": "e37f1cb9325208974470170d5e46e78c74fd17ee3bfb92d41d7d4e880380e3ed",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772801"
+        },
+        {
+          "id": "espn_start_summary_401772808",
+          "before": "22af30bfd4e9a0dd70ec2c00c18096b363e5121dc55373eb924efca9450e8604",
+          "incoming": "569ab2e0bd4911334e2151fe7b28f5fa92ae06593395617b36ab4f255eee0dc6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772808"
+        },
+        {
+          "id": "espn_start_summary_401772817",
+          "before": "08b60ffec6abcd7f4238d55c1f128272dece98aecd9dca6eee7285d031720709",
+          "incoming": "0c1e6f7cdef04076b466128787d79e8272087019d549334b93151c6ed0770e27",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772817"
+        },
+        {
+          "id": "espn_start_summary_401872933",
+          "before": "10c129f3d7a44c05081511d8d6aae01d544467959571c714dc571107bdac7d6d",
+          "incoming": "f8a58284cfc93860ddb54ec27cb967fe15d54584c0b916d3b4f7307012d54256",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872933"
+        },
+        {
+          "id": "espn_start_summary_401872955",
+          "before": "9b5ac6e5bd8c4b6fd0336d534edcb8772d73064fb70de5b2c7e1b3125f369571",
+          "incoming": "e66c399f5e66d0e6cdff71c20f2e8e5b815d8f8df073237e82982e8067c5143a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872955"
+        },
+        {
+          "id": "espn_start_summary_401872972",
+          "before": "3dcbe1f1410b5e29304045fc9956c5bfec304eb1aa2c617b2c8f536b140453b1",
+          "incoming": "a85e051dc17f0a6e9719ac49c546a0b8daf37cf3932f313ae96df250df688e73",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872972"
+        },
+        {
+          "id": "espn_start_summary_401872977",
+          "before": "fef341cbb72f3b73c6a991d4b4866af33ffc41ff2a6da8924922f12764f68e06",
+          "incoming": "aed2e6029d133184c66b8a2bd1952d66831ccff65d8ae8fc6b463d834b6d51a8",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872977"
+        },
+        {
+          "id": "nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        },
+        {
+          "id": "nflverse_pbp_2026",
+          "before": "42ef5132fd2117754d31d49e182dd9d6ba58757f63902a3f3db56796c56be809",
+          "incoming": "7f7769cd3c50204aefb38aac83a05495fbab16e566178b07a26979011eb8e17f",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz"
+        },
+        {
+          "id": "nflverse_snaps_2026",
+          "before": "125e7bfba67b6b13172f29e580345bb7e383d93a4596bc389e3cb8a8d2e8245b",
+          "incoming": "fd2656dbe119dfe49f67e3df980b35b1f999ee49b76aeb5fb89797dea95379c6",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv"
+        },
+        {
+          "id": "team_espn_roster_DAL",
+          "before": "41f86adcf2ae0c3ec674b8e0a3a9258c96ecd299a2f58813c4f87bef66e1a15d",
+          "incoming": "3af79831c87b8011b55a0d90e8749e77016861071cf9b978ca406ba7de0f8ea9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "team_espn_schedule_DAL_2025",
+          "before": "be9d748aa11c7f4e3afe478f29813a8320fe22669a930cceb9084863dfe86893",
+          "incoming": "33c57ec1657691f99a208e67dc970e3a83fa1b0ea9188288406941f28d2649b1",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+        },
+        {
+          "id": "team_espn_schedule_DAL_2026",
+          "before": "6dc4f32649643c80478c3b71443911e5b569e4417c13cec72837afe3a55c556a",
+          "incoming": "08243cda3a14292f5342e9e7f675c4fafba01721a66043b597de5914677c6ebf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2"
+        },
+        {
+          "id": "team_espn_summary_401772510",
+          "before": "f68e34fe983f79ae6f1baae33994a87db4ad51d7d007923a392e71fe4e9d14a5",
+          "incoming": "340f708937b764c11cd38d6d3f93a016655d327dfbe4e5d4f32c8556266ade07",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510"
+        },
+        {
+          "id": "team_espn_summary_401772694",
+          "before": "5b28edbd71f1d682c2febef4618b912f06899b23b0248c459f30f7b8eb480c09",
+          "incoming": "9191ab3a1a4d35082eea1691bc8811d45788aea9ec3b82eb6a45be36a6f7d7e7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694"
+        },
+        {
+          "id": "team_espn_summary_401772710",
+          "before": "512286658275614b893c7f9aa21631268418c76dc912174741bd2c1a7a007dee",
+          "incoming": "3aa8a6e14e2d3927ee3a6c9f763b0809d844aeb07ac3c2bc8ff5ae97ccc2df7a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710"
+        },
+        {
+          "id": "team_espn_summary_401772762",
+          "before": "b99e6a0cbfeb89fbd64ca63ac90ac80e6ca405e0c68c2229f6c7f5e8c347b1a6",
+          "incoming": "8319b092943dc98a4676487370e8b4bca5468031ce484c052f327f57bc67115d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762"
+        },
+        {
+          "id": "team_espn_summary_401772818",
+          "before": "36d05df263ce53d8a363be1ce6a25c1b9ed40c283228e85d844c95b6c6882a24",
+          "incoming": "6e0c18957d12a9207888c0d49ec9818f668e21638e9b80a6ca0f2fc8bcbe4aef",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818"
+        },
+        {
+          "id": "team_espn_summary_401772819",
+          "before": "5ea9e1f5d7044c62d1c2e098a3580164ac0a47566e955c41fd290c0bbb0eb2bc",
+          "incoming": "5fc7b4449a1a33b86da35564c4f5c94c2a21714d8c0ddd5f5f81eecc439b4d5b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819"
+        },
+        {
+          "id": "team_espn_summary_401772834",
+          "before": "9fda8bb2d566a56229dd12a35c1da783606cb0008f6fd8ce924f88b1253bb223",
+          "incoming": "1a922edc04349aefd3be20ac5464f9144d18de40f9e07b1258f32f5d78c6ea6f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834"
+        },
+        {
+          "id": "team_espn_summary_401772844",
+          "before": "af22666dd569d95510abb9dadcfe157e24c9373d96674037f1ec1eab68cd4738",
+          "incoming": "69d7158787f2ca37111fb98db19e5bd19860438419477cc0827304e34c59cd79",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844"
+        },
+        {
+          "id": "team_espn_summary_401772850",
+          "before": "9c56b8bcd6928e7711e46788bce6e261ecc66a8706c42fcbd2d1f686ec6eecf1",
+          "incoming": "9b551bc556d22bd48b51b1b755cf5cefe32fc27690350878d6409ad000313554",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850"
+        },
+        {
+          "id": "team_espn_summary_401772858",
+          "before": "c3a3c4adc2b53deb164a73741e78019fb4d044180033a1d36f1b2ea4ce02b552",
+          "incoming": "6fbed6d1631bd813b719e4abb5946988db799c28c841a75b4b91146824e4b01d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858"
+        },
+        {
+          "id": "team_espn_summary_401772864",
+          "before": "17e82b452a13ba6ffdb1086d793087aeefd0effd6b2160ea55f7a53d830947f1",
+          "incoming": "babfa4d762ed1ec14ac261ef7419aec46adfc71758e4b0e2b9db2d524c8f6285",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864"
+        },
+        {
+          "id": "team_espn_summary_401772890",
+          "before": "645bf263adf33817de601934b95a2753d17bfba9bbc43abcaac6204cc9a0105a",
+          "incoming": "997bf712573fca8bbcd6485b5ba95319af646124317676d1084ffb6ec8a5fbbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890"
+        },
+        {
+          "id": "team_espn_summary_401772910",
+          "before": "85d81dcb7cdb3d2856dc66c584f52c1a57bfcaa56e6e8fbe7d40223abe17002a",
+          "incoming": "7b14ae54ba68d19624cd93383baf59531bbb64c487281771f921fc49d159f25f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910"
+        },
+        {
+          "id": "team_espn_summary_401772921",
+          "before": "056b4c9e42172d5afcca72e197d0fb4cc3db68494e74d0b06a533ee9afd5dc8f",
+          "incoming": "bd518a7750e0988c5c8d617df13dfb0c6b1509088b11e1276c1d4a71ff4ab14d",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921"
+        },
+        {
+          "id": "team_espn_summary_401772933",
+          "before": "c3d9f04addb17d57a3eb2fccd615d5c01954d32f6e4777374f07ca453ab81d13",
+          "incoming": "e9e5d5d2708d96863cb40fc995447f60458703b58aa63831ae15141aacbbcea5",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933"
+        },
+        {
+          "id": "team_espn_summary_401772947",
+          "before": "60dd571bc987cb9d073bc338c97070b118912b3596e50197c0073fd32e48c0fd",
+          "incoming": "a30c70c5c60b9a9782a40027646997843e27bc0153670fb89b0d47551fe0b722",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947"
+        },
+        {
+          "id": "team_espn_summary_401772963",
+          "before": "e5961a4dc795762bea5841ddfd86cce179aa6b3237690aa3a9d9ba3ef62555fd",
+          "incoming": "1a7afdee5397005b8d152bf38ff9c00c60b06739ffbc7dacfd88f5c7c83ab202",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963"
+        },
+        {
+          "id": "team_espn_summary_401872930",
+          "before": "730a44c8c37a3b95277ab129270db760dce96dd47dad7dc5f98ab874adf9579d",
+          "incoming": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "team_espn_summary_401872944",
+          "before": "2f1956c18aa77c1c1b91a95aaff408e1a1a6d1571ba74e66d54beac2f1d6aa99",
+          "incoming": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "team_espn_summary_401872960",
+          "before": "4d84e509b090ed350a7f4a38e0cb8cfdca388caf80efc63f0a5675ffde3b6270",
+          "incoming": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "team_espn_summary_401872967",
+          "before": "503b5db4f3e5792a4f77f5a9291aa58a1b248b3f1d88f7d437fa4bb484c9d29e",
+          "incoming": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "team_espn_summary_401872980",
+          "before": "14a55bdeaee5a8103911c171773e63e0d1bdde69fcdfce770ac4c7b83981fa86",
+          "incoming": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "team_nflverse_games",
+          "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+          "incoming": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com"
+      ]
+    }
+  },
+  "conflicts": {
+    "changedIncomingPathsIntersectLocalTrackedChanges": [],
+    "localTrackedChangesAtAudit": [
+      "assets/home-aperture-motion.css",
+      "assets/home-aperture-motion.js",
+      "assets/home-aperture.css",
+      "assets/home-gem-controls.css",
+      "assets/home-gem-layout.css",
+      "index.html"
+    ],
+    "sourceWorkflowChanged": false,
+    "all247FrozenRuntimeBytesStillExact": true,
+    "forcePushNeeded": false,
+    "reason": "codex-rebuild is an ancestor of local HEAD, and local HEAD is an ancestor of the audited main source chain. Home changes and incoming five-dataset paths are disjoint. Ordinary fetch/rebase/push must retain any later remote changes."
+  },
+  "semanticComparison": {
+    "metadataKeysRemoved": [
+      "bytes",
+      "checkedAt",
+      "currentRetrievedAt",
+      "currentSha256",
+      "etag",
+      "generatedAt",
+      "lastModified",
+      "playerHistorySha256",
+      "refreshAfter",
+      "retrievedAt",
+      "scheduleRetrievedAt",
+      "sha256",
+      "snapshotSha256CanonicalJson",
+      "sourceHashes",
+      "sourceTimestamp",
+      "teamDetailsRetrievedAt",
+      "teamDetailsSha256",
+      "tlsVerified"
+    ],
+    "unorderedArrayFields": [
+      "disagreements",
+      "identitySourceIds",
+      "sourceIds",
+      "sources",
+      "startingQBMissingStatistics",
+      "startingRoleDisagreements",
+      "startingRoleUncorroborated"
+    ],
+    "warning": "Hash metadata excluded only from semantic projection; every source hash delta is separately recorded."
+  },
+  "semanticChangeSummary": {
+    "identityAlignedMetadataRemovedLeaves": 281,
+    "equivalentESPNEventAliasLeaves": 62,
+    "aliasAwareMaterialAndVersionLeaves": 219,
+    "byCategory": {
+      "Schedule source-hash identity": 2,
+      "Sourced surface fact in repeated fixture copies": 18,
+      "Provider injury designation": 1,
+      "New offensive snap numeric cell": 66,
+      "New snap field-source attribution": 66,
+      "Same-event same-body ESPN alias attribution": 62,
+      "Positive-snap appearance status/note": 44,
+      "Positive-snap appearance source attribution": 22
+    },
+    "onlyChangedFixtureSurface": "2026_05_TB_DAL: missing surface becomes raw sourced matrixturf",
+    "newlySourcedSnapGame": "2026_05_TB_DAL",
+    "newlySourcedPlayerRows": 22,
+    "changedProviderDesignation": "Anthony Johnson Jr., CHI, event401872990/2026_05_CHI_GB: Out to Injured Reserve, dated2026-10-09T11:00Z. Provider-reported; officialConfirmed=false; reportedInactive=null.",
+    "noChangedBasicStatisticsOrScores": "All exported basic-stat numeric values, scores, original season/week/game IDs, roster IDs and starting-role values remain unchanged in the endpoint semantic diff."
+  },
+  "semanticDifferencesFull": [
+    {
+      "path": "current.json/playerHistory/currentSourceHashes/nflverse_games",
+      "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+      "after": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/steelers/matchupsByOpponent/TB/opponentLast5/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/10/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/11/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/12/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/13/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/14/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/15/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/16/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/17/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/18/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/6/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/7/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/8/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "current.json/weeks/9/recap/0/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "player-history.json/currentSourceHashes/nflverse_games",
+      "before": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+      "after": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+      "kind": "scalar"
+    },
+    {
+      "path": "team-details.json/teams/DAL/games/12/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "team-details.json/teams/TB/games/12/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/CHI/fixtureReports/2026_05_CHI_GB/availability/players/0/reportStatus",
+      "before": "Out",
+      "after": "Injured Reserve",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/games/12/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 100,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 60,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 60,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/sackRate/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 56.99999999999999,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 34,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 34,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 85.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 51,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 51,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 88.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 53,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 53,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 40.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 24,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 24,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 83.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 50,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 50,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 8.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 5,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 5,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 12.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 7,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 7,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 20.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 12,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 12,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 68.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 41,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 41,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 33.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 20,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 20,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/games/12/surface",
+      "before": null,
+      "after": "matrixturf",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 88.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 63,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 63,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 36.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 26,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 26,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 92.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 66,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 66,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 10.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 7,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 7,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 38.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 27,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 27,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 54.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 39,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 39,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 3.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 2,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 2,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039589/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 89.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 64,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 64,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 39.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 28,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 28,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 6.0,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 4,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 4,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041094/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advanced/offensiveSnapPct",
+      "before": null,
+      "after": 100,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advanced/offensiveSnaps",
+      "before": null,
+      "after": 72,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advanced/snaps",
+      "before": null,
+      "after": 72,
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/offensiveSnapPct",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/offensiveSnaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/sackRate/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/snaps",
+      "before": null,
+      "after": [
+        "nflverse_snaps_2026"
+      ],
+      "kind": "presence"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/appearance/note",
+      "before": "A published statistical row; not a fabricated appearance or absent-game zero",
+      "after": "Positive published offensive snap count",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/appearance/sourceIds/0",
+      "before": "nflverse_player_stats",
+      "after": "nflverse_snaps_2026",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/appearance/status",
+      "before": "recorded",
+      "after": "verified",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/sourceIds/0",
+      "before": "espn_matchup_summary_401872980",
+      "after": "espn_fixture_summary_401872980",
+      "kind": "scalar"
+    }
+  ],
+  "equivalentEventAliases": [
+    {
+      "side": "before",
+      "ids": [
+        "espn_fixture_summary_401872980",
+        "espn_matchup_summary_401872980",
+        "team_espn_summary_401872980"
+      ],
+      "sameExactURL": true,
+      "sameExactContentHash": true,
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "sha256": "14a55bdeaee5a8103911c171773e63e0d1bdde69fcdfce770ac4c7b83981fa86"
+    },
+    {
+      "side": "incoming",
+      "ids": [
+        "espn_fixture_summary_401872980",
+        "espn_matchup_summary_401872980",
+        "team_espn_summary_401872980"
+      ],
+      "sameExactURL": true,
+      "sameExactContentHash": true,
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "sha256": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e"
+    }
+  ],
+  "freshRawSourceReceipts": [
+    {
+      "sourceId": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "snapshotSha256": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+      "startedAt": "2026-10-09T12:00:47.347003+00:00",
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "bytes": 2183385,
+      "sha256": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+      "bodyPath": "/tmp/home-source-audit-995-bqbgmxzl/source-bodies/nflverse_games.raw",
+      "etag": "\"8b5bc968bff74692664e5c9daf7daaf5c92a3150434177fc114a49564a1846c5\"",
+      "lastModified": null,
+      "matchesIncomingSourceHash": true,
+      "completedAt": "2026-10-09T12:00:47.710387+00:00",
+      "finalHost": "raw.githubusercontent.com"
+    },
+    {
+      "sourceId": "nflverse_snaps_2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv",
+      "snapshotSha256": "fd2656dbe119dfe49f67e3df980b35b1f999ee49b76aeb5fb89797dea95379c6",
+      "startedAt": "2026-10-09T12:00:47.348155+00:00",
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "bytes": 544049,
+      "sha256": "fd2656dbe119dfe49f67e3df980b35b1f999ee49b76aeb5fb89797dea95379c6",
+      "bodyPath": "/tmp/home-source-audit-995-bqbgmxzl/source-bodies/nflverse_snaps_2026.raw",
+      "etag": "\"0x8DF25F4B066F4FD\"",
+      "lastModified": "Fri, 09 Oct 2026 11:01:37 GMT",
+      "matchesIncomingSourceHash": true,
+      "completedAt": "2026-10-09T12:00:47.806074+00:00",
+      "finalHost": "release-assets.githubusercontent.com"
+    },
+    {
+      "sourceId": "nflverse_pbp_2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz",
+      "snapshotSha256": "7f7769cd3c50204aefb38aac83a05495fbab16e566178b07a26979011eb8e17f",
+      "startedAt": "2026-10-09T12:00:47.348483+00:00",
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "bytes": 4448216,
+      "sha256": "7f7769cd3c50204aefb38aac83a05495fbab16e566178b07a26979011eb8e17f",
+      "bodyPath": "/tmp/home-source-audit-995-bqbgmxzl/source-bodies/nflverse_pbp_2026.raw",
+      "etag": "\"0x8DF25E436DC2808\"",
+      "lastModified": "Fri, 09 Oct 2026 09:03:41 GMT",
+      "matchesIncomingSourceHash": true,
+      "completedAt": "2026-10-09T12:00:47.698745+00:00",
+      "finalHost": "release-assets.githubusercontent.com"
+    },
+    {
+      "sourceId": "espn_fixture_summary_401872990",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+      "snapshotSha256": "ad9df0c90f2ee84546b3f1abc4a2c654315b5287e45edb21781bd07c7e2c24ba",
+      "startedAt": "2026-10-09T12:00:47.348711+00:00",
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "bytes": 135577,
+      "sha256": "f2867ad13a546481375306edbe7f3e2f27c4af2a6e9426aefd48a8666c76034f",
+      "bodyPath": "/tmp/home-source-audit-995-bqbgmxzl/source-bodies/espn_fixture_summary_401872990.raw",
+      "etag": null,
+      "lastModified": null,
+      "matchesIncomingSourceHash": false,
+      "completedAt": "2026-10-09T12:00:47.514925+00:00",
+      "finalHost": "site.api.espn.com"
+    },
+    {
+      "sourceId": "nflverse_player_ids",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv",
+      "snapshotSha256": "97d15de28f366d0548bd0cb10a55f1f41e73752d10054c710075277fba6ef29e",
+      "startedAt": "2026-10-09T12:00:47.348885+00:00",
+      "httpStatus": 200,
+      "tlsVerified": true,
+      "bytes": 7298117,
+      "sha256": "97d15de28f366d0548bd0cb10a55f1f41e73752d10054c710075277fba6ef29e",
+      "bodyPath": "/tmp/home-source-audit-995-bqbgmxzl/source-bodies/nflverse_player_ids.raw",
+      "etag": "\"0x8DF2551A1DD3A0C\"",
+      "lastModified": "Thu, 08 Oct 2026 15:34:24 GMT",
+      "matchesIncomingSourceHash": true,
+      "completedAt": "2026-10-09T12:00:47.818083+00:00",
+      "finalHost": "release-assets.githubusercontent.com"
+    }
+  ],
+  "independentRawProjectionChecks": {
+    "assertions": 111463,
+    "checks": {
+      "FreshRawSourceExactIncomingHash": 4,
+      "ExportedOriginalGameIdentityScoreSurfaceMatchesRaw": 38300,
+      "ExportedFinalStatusRequiresBothActualScores": 2588,
+      "OriginalPlayerTeamOpponentMatchSchedule": 9866,
+      "NoDuplicateMappedRegularSeasonSnapRows": 6053,
+      "ExactIndependentPBP2026CompletedCoverage": 1,
+      "ExactIndependentPBP2026RejectedCoverage": 1,
+      "UnpublishedAdvancedTrackingRemainsNull": 24513,
+      "EveryMapped2026SnapFieldMatchesRaw": 4401,
+      "PositiveActualOffensiveSnapCorroboratesAppearance": 1398,
+      "Every2026PBPCountMatchesIndependentRawCount": 22125,
+      "Every2026PBPTeamTargetDenominatorMatchesRaw": 1475,
+      "FreshNonidenticalESPNBodyCorroboratesPublishedDesignation": 1,
+      "ProviderDesignationDoesNotBecomeConfirmedInactive": 1,
+      "AvailabilityListExplicitlyPartial": 1,
+      "UniqueSourceIDsWithinDataset": 5,
+      "VerifiedSourceRetainsHTTPSRetrievalHashBytes": 241,
+      "SourceRetrievalNeverAfterIncomingPublication": 241,
+      "OnlyDeclaredPublicSourceDomains": 241,
+      "SnapshotFreshnessIsOldestApplicableActualSource": 5,
+      "Frozen247RuntimeFilesUntouchedByAudit": 1,
+      "SourceWorkflowUnchangedActiveScheduleAndNormalPushContract": 1
+    },
+    "failures": [],
+    "uniqueRawScheduleGamesChecked": 1423,
+    "newlyPublishedSnapRows": [
+      {
+        "team": "DAL",
+        "playerId": "00-0033077",
+        "name": "Dak Prescott",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 60,
+        "offensiveSnapPct": 100,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0036358",
+        "name": "CeeDee Lamb",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 34,
+        "offensiveSnapPct": 56.99999999999999,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0036997",
+        "name": "Javonte Williams",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 51,
+        "offensiveSnapPct": 85.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0037247",
+        "name": "George Pickens",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 53,
+        "offensiveSnapPct": 88.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0037801",
+        "name": "KaVontae Turpin",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 24,
+        "offensiveSnapPct": 40.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038041",
+        "name": "Jake Ferguson",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 50,
+        "offensiveSnapPct": 83.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038547",
+        "name": "Luke Schoonmaker",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 5,
+        "offensiveSnapPct": 8.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038738",
+        "name": "Hunter Luepke",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 7,
+        "offensiveSnapPct": 12.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039062",
+        "name": "Jonathan Mingo",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 12,
+        "offensiveSnapPct": 20.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039410",
+        "name": "Ryan Flournoy",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 41,
+        "offensiveSnapPct": 68.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039530",
+        "name": "Brevyn Spann-Ford",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 20,
+        "offensiveSnapPct": 33.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0033921",
+        "name": "Chris Godwin Jr.",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 63,
+        "offensiveSnapPct": 88.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0036919",
+        "name": "Kenny Gainwell",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 26,
+        "offensiveSnapPct": 36.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0038129",
+        "name": "Cade Otton",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 66,
+        "offensiveSnapPct": 92.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0038951",
+        "name": "Sean Tucker",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 7,
+        "offensiveSnapPct": 10.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0039050",
+        "name": "Payne Durham",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 27,
+        "offensiveSnapPct": 38.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0039361",
+        "name": "Bucky Irving",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 39,
+        "offensiveSnapPct": 54.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0039589",
+        "name": "Kameron Johnson",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 2,
+        "offensiveSnapPct": 3.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0040129",
+        "name": "Emeka Egbuka",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 64,
+        "offensiveSnapPct": 89.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0040237",
+        "name": "Tez Johnson",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 28,
+        "offensiveSnapPct": 39.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0041094",
+        "name": "Bauer Sharp",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 4,
+        "offensiveSnapPct": 6.0,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0041251",
+        "name": "Jalon Daniels",
+        "gameId": "2026_05_TB_DAL",
+        "offensiveSnaps": 72,
+        "offensiveSnapPct": 100,
+        "appearance": {
+          "status": "verified",
+          "sourceIds": [
+            "nflverse_snaps_2026"
+          ],
+          "note": "Positive published offensive snap count"
+        }
+      }
+    ],
+    "pbp2026CompletedGames": 65,
+    "note": "Fresh exact incoming raw sources verify exported schedule identity/scores/surface, all mapped2026 offensive snaps and percentages, complete PBP coverage, independently counted2026 PBP metrics and target denominators. Historical franchise aliases map STL/LAR to LA, OAK to LV, SD to LAC, JAC to JAX and WSH to WAS without changing original game IDs/seasons/weeks."
+  },
+  "ESPNCurrentCorroboration": {
+    "exactSourceBodyMatched": false,
+    "snapshotRecordedPlayer": {
+      "gameId": "2026_05_CHI_GB",
+      "eventId": "401872990",
+      "team": "CHI",
+      "season": 2026,
+      "week": 5,
+      "playerId": "00-0038411",
+      "espnId": "4361748",
+      "name": "Anthony Johnson Jr.",
+      "position": "S",
+      "reportStatus": "Injured Reserve",
+      "reportedInactive": null,
+      "officialConfirmed": false,
+      "practiceStatus": null,
+      "injury": "Undisclosed",
+      "sourceTimestamp": "2026-10-09T11:00Z",
+      "sourceIds": [
+        "espn_fixture_summary_401872990"
+      ],
+      "identitySourceIds": [
+        "nflverse_player_ids"
+      ],
+      "retrievedAt": "2026-10-09T11:26:04Z",
+      "confirmation": "provider-reported",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus"
+    },
+    "freshActualStatus": "Injured Reserve",
+    "freshActualDate": "2026-10-09T11:00Z",
+    "freshActualFantasyStatus": {
+      "description": "IR",
+      "abbreviation": "IR",
+      "displayDescription": "IR"
+    }
+  },
+  "freshnessFacts": {
+    "datasets": [
+      {
+        "file": "current.json",
+        "retrievedAt": "2026-10-09T11:25:55Z",
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "oldestSource": "2026-10-09T11:25:55Z",
+        "sourceCount": 30
+      },
+      {
+        "file": "provenance.json",
+        "retrievedAt": "2026-10-09T11:25:55Z",
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "oldestSource": "2026-10-09T11:25:55Z",
+        "sourceCount": 30
+      },
+      {
+        "file": "player-history.json",
+        "retrievedAt": "2026-10-08T06:28:03Z",
+        "generatedAt": "2026-10-09T11:25:56Z",
+        "oldestSource": "2026-10-08T06:28:03Z",
+        "sourceCount": 24
+      },
+      {
+        "file": "team-details.json",
+        "retrievedAt": "2026-10-09T11:25:55Z",
+        "generatedAt": "2026-10-09T11:26:01Z",
+        "oldestSource": "2026-10-09T11:25:55Z",
+        "sourceCount": 32
+      },
+      {
+        "file": "matchup-breakdown.json",
+        "retrievedAt": "2026-10-09T11:25:55Z",
+        "generatedAt": "2026-10-09T11:26:14Z",
+        "oldestSource": "2026-10-09T11:25:55Z",
+        "sourceCount": 125
+      }
+    ],
+    "currentRequiredSourceRetrievedAt": "2026-10-09T11:25:55Z",
+    "currentGeneratedAt": "2026-10-09T11:25:56Z",
+    "optionalRosterCrossCheckRetrievedAt": "2026-10-09T11:25:57Z",
+    "rosterCheckedAtValues": [
+      "2026-10-09T11:25:57Z"
+    ],
+    "historyRetainsOldestArchiveRetrievedAt": "2026-10-08T06:28:03Z",
+    "caveat": "Current generatedAt records base snapshot generation; optional roster cross-check evidence is retrieved one second later and carries its own checkedAt/retrievedAt. It is not an all-evidence-completed timestamp. Required-source freshness and retained history age are not reset by regeneration."
+  },
+  "executedExistingChecks": [
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-data.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"teamCount\": 32,\n  \"rosterCount\": 80,\n  \"activeRosterCount\": 53,\n  \"season\": 2026,\n  \"currentWeek\": 5,\n  \"throughWeek\": 5,\n  \"featured\": [\n    \"Aaron Rodgers\",\n    \"Jaylen Warren\",\n    \"DK Metcalf\",\n    \"Michael Pittman\",\n    \"Pat Freiermuth\"\n  ],\n  \"disagreements\": [\n    {\n      \"playerId\": \"00-0035239\",\n      \"name\": \"Sean Murphy-Bunting\",\n      \"field\": \"jersey\",\n      \"primary\": \"26\",\n      \"official\": 27,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038395\",\n      \"name\": \"Terell Smith\",\n      \"field\": \"jersey\",\n      \"primary\": \"36\",\n      \"official\": 39,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039883\",\n      \"name\": \"Daequan Hardy\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039626\",\n      \"name\": \"Cole Burgess\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0040176\",\n      \"name\": \"Bradyn Swinson\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"No matched roster entry\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\",\n        \"espn_athlete_4431424\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038388\",\n      \"name\": \"Darius Rush\",\n      \"field\": \"jersey\",\n      \"primary\": \"36\",\n      \"official\": 38,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038581\",\n      \"name\": \"K.J. Henry\",\n      \"field\": \"position\",\n      \"primary\": \"DL\",\n      \"official\": \"LB\",\n      \"espn\": \"LB\",\n      \"note\": \"Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039054\",\n      \"name\": \"Marte Mapu\",\n      \"field\": \"jersey\",\n      \"primary\": \"14\",\n      \"official\": 48,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0037382\",\n      \"name\": \"Brandon Johnson\",\n      \"field\": \"jersey\",\n      \"primary\": \"82\",\n      \"official\": 89,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0036165\",\n      \"name\": \"Isaiah Hodgins\",\n      \"field\": \"jersey\",\n      \"primary\": \"89\",\n      \"official\": 82,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0040618\",\n      \"name\": \"Max Hurleman\",\n      \"field\": \"position\",\n      \"primary\": \"WR\",\n      \"official\": \"WR\",\n      \"espn\": \"RB\",\n      \"note\": \"Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T11:25:57Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    }\n  ],\n  \"provenanceHash\": \"passed\",\n  \"playerHistory\": {\n    \"status\": \"passed\",\n    \"playerCount\": 80,\n    \"gameRowCount\": 1273,\n    \"coverage\": {\n      \"firstSeason\": 2005,\n      \"lastSeason\": 2026,\n      \"availableSeasons\": [\n        2005,\n        2006,\n        2007,\n        2008,\n        2009,\n        2010,\n        2011,\n        2012,\n        2013,\n        2014,\n        2015,\n        2016,\n        2017,\n        2018,\n        2019,\n        2020,\n        2021,\n        2022,\n        2023,\n        2024,\n        2025,\n        2026\n      ],\n      \"unavailableSeasons\": [],\n      \"status\": \"verified\",\n      \"cachedRowsNeedingBackfill\": 0\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-team-details.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "{\n  \"teams\": 32,\n  \"uniqueRegularSeasonGames\": 544,\n  \"sourceCount\": 32,\n  \"disagreements\": 4\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-matchup-breakdown.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "{\n  \"teams\": 32,\n  \"players\": 812,\n  \"playerGameRows\": 8171,\n  \"explicitQuarterbackStartRows\": 843,\n  \"disputedStartingRoleRows\": 22,\n  \"unavailableStartingRoleRows\": 12,\n  \"sources\": 125,\n  \"disagreements\": 21\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "qa/data.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.132s\n\nOK\n",
+      "testsReported": 22,
+      "skipped": 0,
+      "testsExecuted": 22
+    },
+    {
+      "command": [
+        "python3",
+        "qa/team-details/data.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_absent_current_season_cannot_silently_reset_team_records (__main__.AdverseSourceFixtures.test_absent_current_season_cannot_silently_reset_team_records) ... ok\ntest_impossible_future_scores_cannot_be_final (__main__.AdverseSourceFixtures.test_impossible_future_scores_cannot_be_final) ... ok\ntest_sack_losses_are_subtracted_once_and_missing_cells_do_not_become_zero (__main__.AdverseSourceFixtures.test_sack_losses_are_subtracted_once_and_missing_cells_do_not_become_zero) ... ok\ntest_tampered_cache_cannot_acquire_verified_source_provenance (__main__.AdverseSourceFixtures.test_tampered_cache_cannot_acquire_verified_source_provenance) ... ok\ntest_disagreements_are_explicit_and_critical_fields_unavailable (__main__.SnapshotIntegrity.test_disagreements_are_explicit_and_critical_fields_unavailable) ... ok\ntest_every_team_and_every_copied_game_is_consistent (__main__.SnapshotIntegrity.test_every_team_and_every_copied_game_is_consistent) ... ok\ntest_metric_provenance_efficiency_ranges_and_net_yards (__main__.SnapshotIntegrity.test_metric_provenance_efficiency_ranges_and_net_yards) ... ok\ntest_no_future_completed_games_or_missing_value_zero_fills (__main__.SnapshotIntegrity.test_no_future_completed_games_or_missing_value_zero_fills) ... ok\ntest_raw_source_player_arithmetic_independently_matches_team_yards (__main__.SnapshotIntegrity.test_raw_source_player_arithmetic_independently_matches_team_yards) ... skipped 'Provide --cache-dir for independent raw-source arithmetic'\ntest_records_recompute_from_all_current_final_scores (__main__.SnapshotIntegrity.test_records_recompute_from_all_current_final_scores) ... ok\ntest_sources_and_factual_retrieval_time (__main__.SnapshotIntegrity.test_sources_and_factual_retrieval_time) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.030s\n\nOK (skipped=1)\n",
+      "testsReported": 11,
+      "skipped": 1,
+      "testsExecuted": 10
+    },
+    {
+      "command": [
+        "python3",
+        "qa/source-updates.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n",
+      "testsReported": 7,
+      "skipped": 0,
+      "testsExecuted": 7
+    },
+    {
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/source-monitor.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-995-bqbgmxzl",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.004s\n\nOK\n",
+      "testsReported": 6,
+      "skipped": 0,
+      "testsExecuted": 6
+    },
+    {
+      "command": "Existing MatchupDataChecks bounded saved-data/adverse-source subset",
+      "methods": [
+        "test_actual_weekly_practice_survives_differently_scoped_depth_news",
+        "test_advancing_week_does_not_reassign_archived_inactive_bulletin",
+        "test_changed_quote_or_mismatched_event_cannot_establish_role",
+        "test_depth_injury_news_never_acquires_inferred_upcoming_week",
+        "test_direct_role_contradictions_null_both_candidates",
+        "test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list",
+        "test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap",
+        "test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate",
+        "test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash",
+        "test_final_passing_boxscore_never_confirms_schedule_role_candidate",
+        "test_incorrect_evolving_final_score_refused",
+        "test_linked_snapshot_checksums_and_all_clubs",
+        "test_live_event_never_enters_completed_statistics_or_confirmed_starts",
+        "test_missing_passing_cell_does_not_become_zero_or_rating",
+        "test_missing_used_pbp_field_refused",
+        "test_one_snap_first_play_role_keeps_null_statistics",
+        "test_optional_unverified_cache_explicit_unavailable",
+        "test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive",
+        "test_real_target_disagreement_nulls_only_affected_cell_and_rate",
+        "test_relief_attempts_do_not_establish_a_start",
+        "test_required_unverified_cache_refused",
+        "test_scramble_rusher_id_is_in_dropback_denominator",
+        "test_source_correction_resolves_exact_html_recapped_role",
+        "test_tracking_is_not_fabricated_or_hits_mislabelled_pressure",
+        "test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes",
+        "test_uncorroborated_role_is_not_confirmed_or_padded",
+        "test_unfinished_or_mismatched_final_boxscore_cannot_enter_history"
+      ],
+      "executed": 27,
+      "exitCode": 0,
+      "stderr": "test_actual_weekly_practice_survives_differently_scoped_depth_news (matchup_existing_995.MatchupDataChecks.test_actual_weekly_practice_survives_differently_scoped_depth_news) ... ok\ntest_advancing_week_does_not_reassign_archived_inactive_bulletin (matchup_existing_995.MatchupDataChecks.test_advancing_week_does_not_reassign_archived_inactive_bulletin) ... ok\ntest_changed_quote_or_mismatched_event_cannot_establish_role (matchup_existing_995.MatchupDataChecks.test_changed_quote_or_mismatched_event_cannot_establish_role) ... ok\ntest_depth_injury_news_never_acquires_inferred_upcoming_week (matchup_existing_995.MatchupDataChecks.test_depth_injury_news_never_acquires_inferred_upcoming_week) ... ok\ntest_direct_role_contradictions_null_both_candidates (matchup_existing_995.MatchupDataChecks.test_direct_role_contradictions_null_both_candidates) ... ok\ntest_event_report_is_scoped_partial_and_never_confirms_official_inactive_list (matchup_existing_995.MatchupDataChecks.test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list) ... ok\ntest_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap (matchup_existing_995.MatchupDataChecks.test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap) ... ok\ntest_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate (matchup_existing_995.MatchupDataChecks.test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate) ... ok\ntest_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash (matchup_existing_995.MatchupDataChecks.test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash) ... ok\ntest_final_passing_boxscore_never_confirms_schedule_role_candidate (matchup_existing_995.MatchupDataChecks.test_final_passing_boxscore_never_confirms_schedule_role_candidate) ... ok\ntest_incorrect_evolving_final_score_refused (matchup_existing_995.MatchupDataChecks.test_incorrect_evolving_final_score_refused) ... ok\ntest_linked_snapshot_checksums_and_all_clubs (matchup_existing_995.MatchupDataChecks.test_linked_snapshot_checksums_and_all_clubs) ... ok\ntest_live_event_never_enters_completed_statistics_or_confirmed_starts (matchup_existing_995.MatchupDataChecks.test_live_event_never_enters_completed_statistics_or_confirmed_starts) ... ok\ntest_missing_passing_cell_does_not_become_zero_or_rating (matchup_existing_995.MatchupDataChecks.test_missing_passing_cell_does_not_become_zero_or_rating) ... ok\ntest_missing_used_pbp_field_refused (matchup_existing_995.MatchupDataChecks.test_missing_used_pbp_field_refused) ... ok\ntest_one_snap_first_play_role_keeps_null_statistics (matchup_existing_995.MatchupDataChecks.test_one_snap_first_play_role_keeps_null_statistics) ... ok\ntest_optional_unverified_cache_explicit_unavailable (matchup_existing_995.MatchupDataChecks.test_optional_unverified_cache_explicit_unavailable) ... ok\ntest_projection_is_inferred_and_reported_out_is_not_confirmed_inactive (matchup_existing_995.MatchupDataChecks.test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive) ... ok\ntest_real_target_disagreement_nulls_only_affected_cell_and_rate (matchup_existing_995.MatchupDataChecks.test_real_target_disagreement_nulls_only_affected_cell_and_rate) ... ok\ntest_relief_attempts_do_not_establish_a_start (matchup_existing_995.MatchupDataChecks.test_relief_attempts_do_not_establish_a_start) ... ok\ntest_required_unverified_cache_refused (matchup_existing_995.MatchupDataChecks.test_required_unverified_cache_refused) ... ok\ntest_scramble_rusher_id_is_in_dropback_denominator (matchup_existing_995.MatchupDataChecks.test_scramble_rusher_id_is_in_dropback_denominator) ... ok\ntest_source_correction_resolves_exact_html_recapped_role (matchup_existing_995.MatchupDataChecks.test_source_correction_resolves_exact_html_recapped_role) ... ok\ntest_tracking_is_not_fabricated_or_hits_mislabelled_pressure (matchup_existing_995.MatchupDataChecks.test_tracking_is_not_fabricated_or_hits_mislabelled_pressure) ... ok\ntest_truncated_pbp_with_static_final_scores_cannot_certify_zeroes (matchup_existing_995.MatchupDataChecks.test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes) ... ok\ntest_uncorroborated_role_is_not_confirmed_or_padded (matchup_existing_995.MatchupDataChecks.test_uncorroborated_role_is_not_confirmed_or_padded) ... ok\ntest_unfinished_or_mismatched_final_boxscore_cannot_enter_history (matchup_existing_995.MatchupDataChecks.test_unfinished_or_mismatched_final_boxscore_cannot_enter_history) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.177s\n\nOK\n",
+      "excludedRawManifestMethods": [
+        "test_audit_archives_reproduce_source_response_hashes",
+        "test_injury_identity_merging_retains_published_practice",
+        "test_missing_statistics_do_not_substitute_older_qb_start",
+        "test_opponent_starts_include_actual_prior_seasons_and_no_padding",
+        "test_position_changed_receiver_keeps_known_zero_offensive_snaps",
+        "test_stale_manifest_refused_before_source_assertions"
+      ],
+      "excludedReason": "Automated incoming commits do not retain a fresh complete raw source-manifest; previous releases cannot be relabelled as 995 evidence."
+    }
+  ],
+  "diagnosticCorrection": {
+    "initialProbe": "/tmp/home-source-audit-995-bqbgmxzl/projection-checks-v1-diagnostic.json",
+    "initialFailures": 52,
+    "correctedFalsePositiveReasons": [
+      "The first generic traversal confused qbEvidence.status with game final/scheduled status. Status checks now require actual game home/away fields.",
+      "Historical franchise aliases intentionally canonicalize retained research clubs; original IDs/seasons/weeks remain preserved.",
+      "Optional roster evidence is fetched after the base generatedAt and is independently dated/checked. The authoritative publication bounds every retrieval."
+    ],
+    "finalFailures": 0,
+    "runtimeChangedToResolveProbe": false
+  },
+  "sourceUpdateWorkflow": {
+    "path": ".github/workflows/refresh-nfl-data.yml",
+    "sha256": "f3ddf178341786d45696380d06e7a6f4cb717264d49b3104706d5f7770239aea",
+    "preservedUnchanged": true,
+    "schedules": [
+      "7 * * * *",
+      "22,37,52 * * * *"
+    ],
+    "cancelInProgress": false,
+    "publicationContract": "Validate all five datasets, git pull --rebase origin main, ordinary git push origin HEAD:main, explicit Pages build.",
+    "heldOrDisabledByReviewer": false,
+    "limitation": "No GitHub workflow mutation or Actions enabled-state query was performed; coordinator instructed that source refresh must remain active."
+  },
+  "runtimeChangedByReview": false,
+  "repoMutationsByReview": [
+    "qa/home-gem-point/reviews/incoming-source-audit-995.json only"
+  ],
+  "releaseQualification": "This passes the audited source delta for preservation/integration. It does not accept later main refreshes, visually approve Home, integrate source data, push, or certify hosted deployment. Current native Home evidence remains bound to the unchanged247-file be79f233 runtime; actual post-integration bodies must be verified separately.",
+  "limitations": [
+    "The automated jobs do not retain a complete new raw source-manifest in the incoming commits. Six existing matchup methods requiring that manifest were excluded explicitly; no previous source archive or browser receipt was relabelled as995 evidence.",
+    "The team-details suite reported11 tests with1 raw-cache arithmetic skip;10 executed. All other named existing suites and the27 selected existing matchup methods executed and passed.",
+    "Four fresh raw bodies match their incoming declared hashes exactly. The CHI ESPN response has a different new body hash and is used only to corroborate actual status/date, not to claim exact11:26:04 response reproduction.",
+    "All other changed ESPN/official roster body hashes are recorded from immutable dataset provenance. They were not newly downloaded or independently cross-checked here; exported basic statistics and roster identities do not change in the semantic delta.",
+    "Existing partial cross-provider verification, unavailable routes/pressures/blitz, missing-value nulls, provider-only injury designations, and unverified exact bookmaker/time/weather/travel facts remain explicit.",
+    "Intermediate commit classification uses actual changed paths, author metadata and unchanged workflow contract; no separate GitHub Actions run attestation was queried.",
+    "This audit launches no browser and does not replace the sole browser owner\u2019s visual/native acceptance."
+  ],
+  "auditHelpers": [
+    {
+      "path": "/tmp/home-incoming-source-audit-995.py",
+      "sha256": "5073735e0a8510203191210cd026254f0139214e9766ae6da228462e8e32226c"
+    },
+    {
+      "path": "/tmp/home-incoming-source-raw-995.py",
+      "sha256": "4dee2de22f9b8667eeb0b69a4bbec16939a08689c77553e50394f97288d07830"
+    },
+    {
+      "path": "/tmp/home-source-projections-995.py",
+      "sha256": "1636f3bcbeba8a0dde53ce469bdf899bcc297ec3bc976640634eb30d2fc783c6"
+    }
+  ],
+  "failures": []
+}

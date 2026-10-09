@@ -1,10 +1,35 @@
 /* Home-only motion. Fixed sport hues are never rotated: short highlights move
    along the new SVG metal channel and each complete selector perimeter. */
-.page[data-page="home"] .aperture-neon-runner {
+.page[data-page="home"] {
+  --home-motion-highlight-left: #90adff;
+  --home-motion-highlight-right: #90adff;
+}
+.page[data-page="home"][data-home-sport="nba"] {
+  --home-motion-highlight-right: #ff8b9b;
+}
+.page[data-page="home"][data-home-sport="nrl"] {
+  --home-motion-highlight-left: #93ffc1;
+  --home-motion-highlight-right: #93ffc1;
+}
+.page[data-page="home"][data-home-sport="ufc"] {
+  --home-motion-highlight-left: #ff8396;
+  --home-motion-highlight-right: #ff8396;
+}
+.page[data-page="home"] .aperture-channel-art .aperture-neon-runner {
+  /* The short source is tinted like the light it belongs to. A wide white
+     stroke made the previous channel look painted over instead of recessed. */
+  stroke: url(#home-aperture-moving-specular);
+  stroke-width: 5.5;
+  stroke-dasharray: 11 225 7 341 14 402;
+  opacity: .8;
   animation: pd-home-aperture-channel 8.8s linear infinite;
   animation-play-state: var(--home-motion-play-state, paused);
 }
-.page[data-page="home"] .aperture-metal-runner {
+.page[data-page="home"] .aperture-channel-art .aperture-metal-runner {
+  stroke: #dad7cc;
+  stroke-width: 3.5;
+  stroke-dasharray: 12 988;
+  opacity: .46;
   animation: pd-home-aperture-channel 21.3s linear infinite reverse;
   animation-delay: -7.4s;
   animation-play-state: var(--home-motion-play-state, paused);
@@ -61,32 +86,51 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #f8ffff;
-  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
-  filter: drop-shadow(0 0 2px #eaffff);
+  background: #fffdf5;
+  clip-path: polygon(50% 0, 54% 43%, 100% 50%, 54% 55%, 50% 100%, 46% 55%, 0 50%, 46% 43%);
+  filter: drop-shadow(0 0 1px #fff7e5);
 }
 .page[data-page="home"] .home-gem-glint::after {
   content: "";
   position: absolute;
   inset: 20%;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffffffd9, #f0ffff48 24%, transparent 72%);
+  background: radial-gradient(circle, #fffdf1ee, #fffbe943 24%, transparent 72%);
 }
 .page[data-page="home"] .home-gem-glint-cap {
-  width: 13px;
-  height: 13px;
-  margin: -6.5px 0 0 -6.5px;
+  width: 11px;
+  height: 11px;
+  margin: -5.5px 0 0 -5.5px;
 }
 .page[data-page="home"] .home-gem-glint-edge {
-  width: 12px;
-  height: 12px;
-  margin: -6px 0 0 -6px;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
 }
 .page[data-page="home"] .home-gem-glint-ring {
-  width: 21px;
-  height: 21px;
-  margin: -10.5px 0 0 -10.5px;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
   z-index: 7;
+}
+.page[data-page="home"] .home-gem-facet-reflection {
+  display: block;
+  position: absolute;
+  inset: 5% 0;
+  overflow: hidden;
+  border-radius: 9px;
+  pointer-events: none;
+}
+.page[data-page="home"] .home-gem-facet-reflection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(112deg, transparent 35%, #edf2ff08 43%,
+    #edf2ff34 48%, #fffef666 50%, #edf2ff17 54%, transparent 61%);
+  animation: pd-home-gem-facet-reflection var(--home-gem-facet-duration, 10.7s) ease-in-out infinite;
+  animation-delay: var(--home-gem-facet-delay, -3s);
+  animation-play-state: var(--home-motion-play-state, paused);
 }
 
 @keyframes pd-home-aperture-channel {
@@ -104,6 +148,12 @@
   32% { opacity: .78; transform: scale(.96) rotate(var(--home-gem-glint-angle, 0deg)); }
   36% { opacity: .08; transform: scale(.62) rotate(var(--home-gem-glint-angle, 0deg)); }
 }
+@keyframes pd-home-gem-facet-reflection {
+  0%, 44% { opacity: 0; transform: translate3d(-48%, 0, 0); }
+  49% { opacity: .65; }
+  58% { opacity: .42; }
+  64%, 100% { opacity: 0; transform: translate3d(48%, 0, 0); }
+}
 
 /* A luminous still presentation remains; no flashing, travelling geometry or
    animation objects are required when the user chooses reduced motion. */
@@ -112,7 +162,8 @@
   .page[data-page="home"] .aperture-metal-runner,
   .page[data-page="home"] .home-gem-selector-circuit,
   .page[data-page="home"] .home-gem-selector-circuit path,
-  .page[data-page="home"] .home-gem-glint {
+  .page[data-page="home"] .home-gem-glint,
+  .page[data-page="home"] .home-gem-facet-reflection::before {
     animation: none !important;
     will-change: auto;
   }
@@ -121,4 +172,5 @@
   .page[data-page="home"] .home-gem-selector-hot { opacity: .35; }
   .page[data-page="home"] .home-gem-selector-pin { opacity: .58; }
   .page[data-page="home"] .home-gem-glint { opacity: .18; transform: none; }
+  .page[data-page="home"] .home-gem-facet-reflection::before { opacity: 0; transform: none; }
 }

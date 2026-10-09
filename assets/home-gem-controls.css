@@ -1,16 +1,33 @@
-/* Home's cut sapphire / emerald / ruby controls. The native controls and their
-   navigation attributes remain independent of this decorative material. */
+/* One locally bundled, high-resolution gemstone atlas supplies the optical
+   crown, pavilion and end cuts. CSS presents each original row without editing
+   or resampling the source artwork. Native labels/navigation stay separate. */
 .page[data-page="home"] {
-  --home-gem-face: url("home/gem-sapphire.svg");
+  --home-gem-face: url("home/gem-atlas.webp");
+  --home-gem-face-size: 106.297578% 497.087379%;
+  --home-gem-face-position: 50.549451% 6.356968%;
+  --home-gem-face-aspect: 1445 / 206;
+  --home-gem-light-left-rgb: 40 84 255;
+  --home-gem-light-right-rgb: 40 84 255;
 }
 .page[data-page="home"][data-home-sport="nba"] {
-  --home-gem-face: url("home/gem-dual.svg");
+  --home-gem-face-size: 106.297578% 492.307692%;
+  --home-gem-face-position: 50.549451% 35.784314%;
+  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-light-right-rgb: 255 22 56;
 }
 .page[data-page="home"][data-home-sport="nrl"] {
-  --home-gem-face: url("home/gem-emerald.svg");
+  --home-gem-face-size: 106.297578% 492.307692%;
+  --home-gem-face-position: 50.549451% 65.563725%;
+  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-light-left-rgb: 0 255 94;
+  --home-gem-light-right-rgb: 0 255 94;
 }
 .page[data-page="home"][data-home-sport="ufc"] {
-  --home-gem-face: url("home/gem-ruby.svg");
+  --home-gem-face-size: 106.297578% 492.307692%;
+  --home-gem-face-position: 50.549451% 95.465686%;
+  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-light-left-rgb: 255 22 56;
+  --home-gem-light-right-rgb: 255 22 56;
 }
 .page[data-page="home"][data-home-sport] .home-entry {
   border-image: none;
@@ -18,29 +35,39 @@
 .page[data-page="home"] .home-entry {
   border: 0;
   border-image: none;
-  border-radius: 12px;
-  background: var(--home-gem-face) center / 100% 100% no-repeat;
+  border-radius: 0;
+  background: transparent;
   padding-inline: 46px;
   font: 500 19px/1.1 PDInter, Arial, sans-serif;
   letter-spacing: 1.8px;
   color: #effcff;
-  text-shadow: 0 1px 3px #000, 0 0 9px rgb(var(--home-left-rgb) / .55);
-  box-shadow: -2px 0 4px rgb(var(--home-left-rgb) / .95),
-    2px 0 4px rgb(var(--home-right-rgb) / .95),
-    -5px 0 13px rgb(var(--home-left-rgb) / .58),
-    5px 0 13px rgb(var(--home-right-rgb) / .58),
-    0 5px 8px #000b;
+  text-shadow: 0 1px 3px #000, 0 0 7px rgb(var(--home-gem-light-left-rgb) / .4);
+  box-shadow: none;
+  --home-gem-cast-shadow: drop-shadow(-2px 0 2px rgb(var(--home-gem-light-left-rgb) / .75))
+    drop-shadow(2px 0 2px rgb(var(--home-gem-light-right-rgb) / .75))
+    drop-shadow(-3px 1px 8px rgb(var(--home-gem-light-left-rgb) / .32))
+    drop-shadow(3px 1px 8px rgb(var(--home-gem-light-right-rgb) / .32));
+  filter: var(--home-gem-cast-shadow);
   overflow: visible;
 }
 .page[data-page="home"] .home-entry::before {
-  inset: -2px;
-  border-radius: 12px;
+  content: "";
+  position: absolute;
+  inset: auto;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--home-gem-face-aspect);
+  transform: translateY(-50%);
+  border-radius: 0;
   border: 0;
-  background: none;
-  box-shadow: -3px -2px 11px rgb(var(--home-left-rgb) / .68),
-    3px 2px 11px rgb(var(--home-right-rgb) / .68),
-    -8px 0 26px rgb(var(--home-left-rgb) / .3),
-    8px 0 26px rgb(var(--home-right-rgb) / .3);
+  background: var(--home-gem-face) var(--home-gem-face-position) /
+    var(--home-gem-face-size) no-repeat;
+  box-shadow: none;
+  animation: none;
+  pointer-events: none;
+  z-index: 0;
 }
 .page[data-page="home"] .home-entry::after {
   content: "";
@@ -48,8 +75,8 @@
   height: 8px;
   border: 0;
   border-radius: 50%;
-  background: linear-gradient(90deg, transparent, rgb(var(--home-left-rgb) / .36) 10% 45%,
-    rgb(var(--home-right-rgb) / .36) 55% 90%, transparent);
+  background: linear-gradient(90deg, transparent, rgb(var(--home-gem-light-left-rgb) / .28) 10% 45%,
+    rgb(var(--home-gem-light-right-rgb) / .28) 55% 90%, transparent);
   filter: blur(3px);
   opacity: .8;
   box-shadow: none;
@@ -58,7 +85,7 @@
   position: relative;
   z-index: 4;
   font: inherit;
-  text-shadow: 0 1px 3px #000b, 0 0 9px rgb(var(--home-left-rgb) / .4);
+  text-shadow: 0 1px 3px #000b, 0 0 7px rgb(var(--home-gem-light-left-rgb) / .32);
 }
 .page[data-page="home"] .home-entry [data-home-entry-arrow] {
   right: 44px;
@@ -66,7 +93,8 @@
   width: 19px;
   height: 19px;
   transform: translateY(-50%);
-  filter: drop-shadow(0 0 3px rgb(var(--home-right-rgb) / .8));
+  color: #eff6ff;
+  filter: drop-shadow(0 0 3px rgb(var(--home-gem-light-right-rgb) / .7));
   z-index: 4;
 }
 .page[data-page="home"] .home-entry:disabled {
@@ -99,10 +127,10 @@
   background: linear-gradient(180deg, #03081208, #01040966);
 }
 .page[data-page="home"] .home-sport-option {
-  --gem-selector-left: #00baff;
-  --gem-selector-right: #00baff;
-  --gem-selector-left-rgb: 0 186 255;
-  --gem-selector-right-rgb: 0 186 255;
+  --gem-selector-left: #2862ff;
+  --gem-selector-right: #2862ff;
+  --gem-selector-left-rgb: 40 98 255;
+  --gem-selector-right-rgb: 40 98 255;
   border: 2px solid transparent;
   border-radius: 12px;
   min-height: 68px;
@@ -120,9 +148,9 @@
   overflow: visible;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="nba"] {
-  --gem-selector-left: #00baff;
+  --gem-selector-left: #2862ff;
   --gem-selector-right: #ff2548;
-  --gem-selector-left-rgb: 0 186 255;
+  --gem-selector-left-rgb: 40 98 255;
   --gem-selector-right-rgb: 255 37 72;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="nrl"] {
@@ -143,10 +171,10 @@
   position: absolute;
   inset: 1px;
   border-radius: 9px;
-  border: 1px solid #dffaff7d;
+  border: 1px solid #dffaff28;
   background: none;
   box-shadow: inset 0 0 2px #efffff40;
-  opacity: .66;
+  opacity: .5;
   pointer-events: none;
   animation: none;
   z-index: 1;
@@ -170,8 +198,8 @@
     inset 0 1px 0 #f5ffff88, inset 0 -1px 0 #0009;
 }
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
-  opacity: .94;
-  border-color: #efffffba;
+  opacity: .5;
+  border-color: #efffff3a;
 }
 .page[data-page="home"] .home-sport-option > img,
 .page[data-page="home"] .home-sport-option > span:not(.home-gem-glint) {
@@ -199,7 +227,7 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .page[data-page="home"] .home-entry:not(:disabled):hover {
-    filter: brightness(1.12);
+    filter: brightness(1.08) var(--home-gem-cast-shadow);
     transform: translateY(-1px);
   }
   .page[data-page="home"] .home-sport-option:hover {
