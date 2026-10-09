@@ -85,3 +85,26 @@ diagnostic are retained honestly; the fresh gallery audit passes all 16 selectio
 with exact screenshot bytes and zero errors. No unrelated Page 4 change was made.
 Publication is complete only after a real successful Pages run and native tests
 against the actual hosted HTTPS URL.
+
+## Newest source preserved before publication
+
+A completed scheduled refresh then advanced production to `fcdf889`. It was
+preserved through another ordinary rebase. The final frozen runtime is
+`e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327`.
+All242 accepted nondata files remain byte-identical. See
+[the exact latest bridge](source-integration-fcdf.json) and
+[the fresh independent audit](reviews/incoming-source-audit-fcdf.json).
+
+The newer snapshot is not metadata-only: Anthony Johnson Jr.'s CHI provider
+report changes IR to Out, dated12:00UTC and corroborated through normal HTTPS.
+This is a provider designation, not an official inactive decision. Equivalent
+source aliases also switch. A changed PBP raw body was independently compared:
+11,327 row identities/schema and every exported numeric input remain unchanged;
+261 changed cells concern unused probability/EPA fields or surface metadata.
+Three validators,72 existing test methods and285 delta checks passed. The older
+995 and be79 reports retain their original source identities.
+
+The completed source workflow was drained and briefly held for consistent
+publication/hosted verification. Its original active state is recorded in
+[the workflow window](deployment-workflow-window.json) and must be restored before
+completion. No source job was cancelled and no incoming data was discarded.

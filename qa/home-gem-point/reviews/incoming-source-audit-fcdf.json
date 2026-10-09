@@ -1,0 +1,3633 @@
+{
+  "status": "passed-read-only-source-delta-audit-for-fcdf-integration",
+  "completedAt": "2026-10-09T12:41:08.236772+00:00",
+  "reviewer": "home_incoming_source_audit",
+  "scope": "Read-only immutable995 tofcdf source-only delta audit before Home release publication. Coordinator integratedfcdf during the audit after closing995 browser evidence; all accepted nondata runtime bodies and existing evidence retain their identities.",
+  "hashes": {
+    "before": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+    "incoming": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+    "observedWorkingRuntimeManifestSha256": "e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327",
+    "historicalPreRebase995RuntimeManifestSha256": "9220354ea64677249c739ac54e320f76f5d5ca9335a3a70390c2b4d387d9ca06",
+    "runtimeFiles": 247
+  },
+  "actualObservedRefs": {
+    "HEAD": "438ebc7cacf0804efd16bc834612860cfc33c12d",
+    "origin/main": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+    "origin/codex-rebuild": "b62b9be1c45233d78fce12b81111ac9762132ec5"
+  },
+  "ancestry": [
+    {
+      "ancestor": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+      "descendant": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+      "isAncestor": true,
+      "exitCode": 0
+    },
+    {
+      "ancestor": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+      "descendant": "438ebc7cacf0804efd16bc834612860cfc33c12d",
+      "isAncestor": true,
+      "exitCode": 0
+    },
+    {
+      "ancestor": "b62b9be1c45233d78fce12b81111ac9762132ec5",
+      "descendant": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+      "isAncestor": true,
+      "exitCode": 0
+    },
+    {
+      "ancestor": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+      "descendant": "438ebc7cacf0804efd16bc834612860cfc33c12d",
+      "isAncestor": true,
+      "exitCode": 0
+    }
+  ],
+  "incomingCommit": {
+    "commit": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+    "parent": "995a43b6994e7b3a4586713ba41dfadec2917f66",
+    "subject": "Refresh verified NFL snapshot",
+    "author": "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>",
+    "committedAt": "2026-10-09T12:32:25Z",
+    "classification": "Existing automated five-dataset NFL refresh;1provider designation change,62equivalent source-alias changes, retrieval metadata and unused PBP raw-field changes"
+  },
+  "exactFiveIncomingDatasets": [
+    "assets/data/current.json",
+    "assets/data/provenance.json",
+    "assets/data/player-history.json",
+    "assets/data/team-details.json",
+    "assets/data/matchup-breakdown.json"
+  ],
+  "snapshotFiles": {
+    "current.json": {
+      "beforeSha256": "f9dc4188121872a2eb2ff51d7413bc89e32146d67f46aced94ebb78252127f0e",
+      "incomingSha256": "291d65e680e19c041c20550102344528ae8af764f865c750d1894100a788472a",
+      "beforeBytes": 1085443,
+      "incomingBytes": 1085443,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T12:31:38Z",
+        "retrievedAt": "2026-10-09T12:31:36Z"
+      }
+    },
+    "provenance.json": {
+      "beforeSha256": "e28f1dff21beb3926d562c1fb5d13549028a5f2d73236a5c6029b7ab1c11516f",
+      "incomingSha256": "3375d6d809bd952eb2da88184c486ef3b8bad8559e4ac5de4992c1b9f195acd7",
+      "beforeBytes": 33508,
+      "incomingBytes": 33508,
+      "identity": {
+        "generatedAt": "2026-10-09T12:31:38Z",
+        "retrievedAt": "2026-10-09T12:31:36Z"
+      }
+    },
+    "player-history.json": {
+      "beforeSha256": "31b54437bd94299289bd38d9d4067c44c12f6e2a9d4fb13729de0561b13dd7d1",
+      "incomingSha256": "2171dddc5e92de876f8cbb8443e2478615de391088be3a8c086b03e12814df08",
+      "beforeBytes": 7108758,
+      "incomingBytes": 7108758,
+      "identity": {
+        "season": 2026,
+        "generatedAt": "2026-10-09T12:31:38Z",
+        "retrievedAt": "2026-10-08T06:28:03Z"
+      }
+    },
+    "team-details.json": {
+      "beforeSha256": "7f730444474ec34c30ed84f2f43f345f66f042834d9af46209c40d7cffe29e47",
+      "incomingSha256": "896438d106061ac27397e9aad65f7083637c64b25155bbb506a8f8130574f4c1",
+      "beforeBytes": 2292695,
+      "incomingBytes": 2292695,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T12:31:43Z",
+        "retrievedAt": "2026-10-09T12:31:36Z"
+      }
+    },
+    "matchup-breakdown.json": {
+      "beforeSha256": "e4ade85b47650666aa1d8f78d4365e4cdc50454e12ede70d2d56dfebc0d29e78",
+      "incomingSha256": "537c17176c2c2d74818975b70e2b3157c43f51942ee04a2d0430a33b4255db86",
+      "beforeBytes": 28048444,
+      "incomingBytes": 28048432,
+      "identity": {
+        "season": 2026,
+        "currentWeek": 5,
+        "throughWeek": 5,
+        "generatedAt": "2026-10-09T12:32:02Z",
+        "retrievedAt": "2026-10-09T12:31:36Z"
+      }
+    }
+  },
+  "sourceHashChangesAndDomainFacts": {
+    "current.json": {
+      "count": 30,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_athlete_4431424",
+          "before": "c29bd428951d0f7d5cca16c123eb01b96b2908d060e2fa18b9ca8f2c2ce948bc",
+          "incoming": "6c213b4f04f7886e8425629ff76e420ea8c3b68964fe8a3df32a809479097213",
+          "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424"
+        },
+        {
+          "id": "espn_steelers_roster",
+          "before": "882f08dce0cd5647a55757c78545c3ab0cc3f095e90bcf1a6b9a613629239a5e",
+          "incoming": "98a5f05c4d974cd09bdb4f0b77ca8d63757d69103c003668e719b0be40c04000",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "official_steelers_roster",
+          "before": "6476f779e93a0fb82fc5b1d9ac844074c40aca2a292fffbd9fbbfee2e984f6cb",
+          "incoming": "f3558acdae3f64add7c823900321f4a7bb6773c916e01da1a3ecbbf0993bca23",
+          "url": "https://www.steelers.com/team/players-roster/"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com",
+        "www.steelers.com"
+      ]
+    },
+    "provenance.json": {
+      "count": 30,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_athlete_4431424",
+          "before": "c29bd428951d0f7d5cca16c123eb01b96b2908d060e2fa18b9ca8f2c2ce948bc",
+          "incoming": "6c213b4f04f7886e8425629ff76e420ea8c3b68964fe8a3df32a809479097213",
+          "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424"
+        },
+        {
+          "id": "espn_steelers_roster",
+          "before": "882f08dce0cd5647a55757c78545c3ab0cc3f095e90bcf1a6b9a613629239a5e",
+          "incoming": "98a5f05c4d974cd09bdb4f0b77ca8d63757d69103c003668e719b0be40c04000",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "official_steelers_roster",
+          "before": "6476f779e93a0fb82fc5b1d9ac844074c40aca2a292fffbd9fbbfee2e984f6cb",
+          "incoming": "f3558acdae3f64add7c823900321f4a7bb6773c916e01da1a3ecbbf0993bca23",
+          "url": "https://www.steelers.com/team/players-roster/"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com",
+        "www.steelers.com"
+      ]
+    },
+    "player-history.json": {
+      "count": 24,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com"
+      ]
+    },
+    "team-details.json": {
+      "count": 32,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_roster_DAL",
+          "before": "3af79831c87b8011b55a0d90e8749e77016861071cf9b978ca406ba7de0f8ea9",
+          "incoming": "26ce80fcb78e3f3601b75997e585edfd190fc99af56e3b2d9f2f4ac70a690899",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "espn_schedule_DAL_2025",
+          "before": "33c57ec1657691f99a208e67dc970e3a83fa1b0ea9188288406941f28d2649b1",
+          "incoming": "a42837ccde54af004d804375c9ebdf01163189ec1036ec1fe8d6927465e5dda6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+        },
+        {
+          "id": "espn_schedule_DAL_2026",
+          "before": "08243cda3a14292f5342e9e7f675c4fafba01721a66043b597de5914677c6ebf",
+          "incoming": "8e07f6accd6ccd63276cfe304c52943aa6f0dbba801bd4db08ea434c5c138668",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2"
+        },
+        {
+          "id": "espn_summary_401772510",
+          "before": "340f708937b764c11cd38d6d3f93a016655d327dfbe4e5d4f32c8556266ade07",
+          "incoming": "fc01d50fed192b9c329e12722e9bebeffdbe9b25bcc9feca0275eff58f673374",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510"
+        },
+        {
+          "id": "espn_summary_401772694",
+          "before": "9191ab3a1a4d35082eea1691bc8811d45788aea9ec3b82eb6a45be36a6f7d7e7",
+          "incoming": "8984bc79d22adf5e38ab4d7997f85582c2a03ffe66cf0534fe3c7d5b0b28ff24",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694"
+        },
+        {
+          "id": "espn_summary_401772710",
+          "before": "3aa8a6e14e2d3927ee3a6c9f763b0809d844aeb07ac3c2bc8ff5ae97ccc2df7a",
+          "incoming": "6e3f665f76ac3058e8a8a8855b98ab204738fb06dc86972f71abeb2f935a989b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710"
+        },
+        {
+          "id": "espn_summary_401772762",
+          "before": "8319b092943dc98a4676487370e8b4bca5468031ce484c052f327f57bc67115d",
+          "incoming": "41e62767c201e460b0f528a536195178acaecd98bacf9dbc18f36365933d5679",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762"
+        },
+        {
+          "id": "espn_summary_401772818",
+          "before": "6e0c18957d12a9207888c0d49ec9818f668e21638e9b80a6ca0f2fc8bcbe4aef",
+          "incoming": "1d449b018b72e99ffa7a84b1d8eb8bdc0863dea7cebf5a51c1df58490176b929",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818"
+        },
+        {
+          "id": "espn_summary_401772819",
+          "before": "5fc7b4449a1a33b86da35564c4f5c94c2a21714d8c0ddd5f5f81eecc439b4d5b",
+          "incoming": "92ebc9f2e766c486e55e328a620c52e1196387c7e1d64f2117704e2b9f1cf841",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819"
+        },
+        {
+          "id": "espn_summary_401772834",
+          "before": "1a922edc04349aefd3be20ac5464f9144d18de40f9e07b1258f32f5d78c6ea6f",
+          "incoming": "dee3f97b76452c3516a86810368f10a90974ace06e423936c60e6deaa0056aee",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834"
+        },
+        {
+          "id": "espn_summary_401772844",
+          "before": "69d7158787f2ca37111fb98db19e5bd19860438419477cc0827304e34c59cd79",
+          "incoming": "8d6ca2801bf033be918f6289100932522dc4d7f802f76fda7b651474041f0864",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844"
+        },
+        {
+          "id": "espn_summary_401772850",
+          "before": "9b551bc556d22bd48b51b1b755cf5cefe32fc27690350878d6409ad000313554",
+          "incoming": "febc9dfcdecfda146b059da754b74cae2de2d60b0ec9dbe1e629e8e21635a5d7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850"
+        },
+        {
+          "id": "espn_summary_401772858",
+          "before": "6fbed6d1631bd813b719e4abb5946988db799c28c841a75b4b91146824e4b01d",
+          "incoming": "f4f92aa45dec67d50ece512addac71d0970e2aa42c7e8958416b76402d7ee37b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858"
+        },
+        {
+          "id": "espn_summary_401772864",
+          "before": "babfa4d762ed1ec14ac261ef7419aec46adfc71758e4b0e2b9db2d524c8f6285",
+          "incoming": "d32fc753c467757d1d12ba3b607646ad83f35de966581554ecae39f9567a40b9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864"
+        },
+        {
+          "id": "espn_summary_401772890",
+          "before": "997bf712573fca8bbcd6485b5ba95319af646124317676d1084ffb6ec8a5fbbd",
+          "incoming": "9dbd83e5ccca97f8c53c36167ac58d74b0764968f5ad5a873c8f32eb25a5af24",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890"
+        },
+        {
+          "id": "espn_summary_401772910",
+          "before": "7b14ae54ba68d19624cd93383baf59531bbb64c487281771f921fc49d159f25f",
+          "incoming": "50f9e09a3637259b254853f3b8fab5914f373beadbc1e6e0c7e6d327905ffe86",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910"
+        },
+        {
+          "id": "espn_summary_401772921",
+          "before": "bd518a7750e0988c5c8d617df13dfb0c6b1509088b11e1276c1d4a71ff4ab14d",
+          "incoming": "375674cc70d4d571bf2cfe4ab964e23afafac5e4fc5366b26dbeaaac4261af4f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921"
+        },
+        {
+          "id": "espn_summary_401772933",
+          "before": "e9e5d5d2708d96863cb40fc995447f60458703b58aa63831ae15141aacbbcea5",
+          "incoming": "564f9e545147ac39f03a41baf526817c36c651f819aee120c409d58ba2d111be",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933"
+        },
+        {
+          "id": "espn_summary_401772947",
+          "before": "a30c70c5c60b9a9782a40027646997843e27bc0153670fb89b0d47551fe0b722",
+          "incoming": "211a35c66dabb1a2d9e16dc89c0289f1e24ebbd5c873c681db02c23fcd7e8a69",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947"
+        },
+        {
+          "id": "espn_summary_401772963",
+          "before": "1a7afdee5397005b8d152bf38ff9c00c60b06739ffbc7dacfd88f5c7c83ab202",
+          "incoming": "19e7260d1502bbe96b8a54f71519447e5ee97bc893f1e44fd52c0339589bb2d6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963"
+        },
+        {
+          "id": "espn_summary_401872930",
+          "before": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "incoming": "585a985a163f827d0d57f0fa3f326147589f7f9c7c26a88496f07a88667460da",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "espn_summary_401872944",
+          "before": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "incoming": "926b8e65b65bc27b0529c80d0169943cbc8e7bb380bb4af7fc81a9dea19fc323",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "espn_summary_401872960",
+          "before": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "incoming": "cd55064946ed8733f9273ca00acc3e0701ee3ce74542684fe1b0f70feb05da01",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "espn_summary_401872967",
+          "before": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "incoming": "e199615726816f52241e11279d01805a7bfa0fb515a029d9f679cd761c712cd2",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "espn_summary_401872980",
+          "before": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "incoming": "80e78c205d29907e7198d11a2932f3cd10ab89b11313c16ee1d2ec7cd6e4a11c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com"
+      ]
+    },
+    "matchup-breakdown.json": {
+      "count": 125,
+      "addedIds": [],
+      "removedIds": [],
+      "changedContentHashes": [
+        {
+          "id": "espn_fixture_summary_401872980",
+          "before": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "incoming": "80e78c205d29907e7198d11a2932f3cd10ab89b11313c16ee1d2ec7cd6e4a11c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "espn_fixture_summary_401872981",
+          "before": "780ef61326e51a1a2368315acbc35b3ad888e7ea65188af9598b83339d299560",
+          "incoming": "91f4b523c3b0fa198b14a0ae06e84b090b9d084daea790ccf9c575796ee32cbf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872981"
+        },
+        {
+          "id": "espn_fixture_summary_401872982",
+          "before": "459f6a3046bd0d7c68cf682364e935dfda172bc6c227e043f84b23e70b69fa99",
+          "incoming": "ebd4d9751b9e87307d951fdba40b439a6a16e2c9034b128193aefeb1d46d0021",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872982"
+        },
+        {
+          "id": "espn_fixture_summary_401872983",
+          "before": "bce24747ba5b47ffb75a971af5ad5a76ddd0415fc039750df2e224a955ef4a72",
+          "incoming": "9cf1bc04bcefedd7d814a662fbd231bd4479dda4f44b004708501d7881f0d25a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983"
+        },
+        {
+          "id": "espn_fixture_summary_401872984",
+          "before": "1ecb4910368abb82b836d11ab7e18a851efabfa280954d9c0f4302d862fa163d",
+          "incoming": "5fb412d12e14250fe91879989ed547af26f3e67a85b97d2b241100671b02001e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984"
+        },
+        {
+          "id": "espn_fixture_summary_401872985",
+          "before": "b23dd1e510084ae1b26a1c46a440fcc393859d71f2698f9aef8ab1c5009a5cbd",
+          "incoming": "bf700c7b21378d08ea92b4c8ca770aabcffe8c0c8a15d9874652a53273819c75",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872985"
+        },
+        {
+          "id": "espn_fixture_summary_401872986",
+          "before": "f69437db4b9016bf556ac52d057237b0193e307e6e163d72d0530ab3c1ebf482",
+          "incoming": "597cd7df31f2eda3275f543098f6d7529b859d166108a7b1517f4e3c7550b50c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872986"
+        },
+        {
+          "id": "espn_fixture_summary_401872987",
+          "before": "608d3117615468332372e7f066d88d71c1cdc850380f6da3216ef019d40daf13",
+          "incoming": "ab85514940f4f312a0b465f529283134b1588b125fbcd01e5ad059b7fd1c8605",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872987"
+        },
+        {
+          "id": "espn_fixture_summary_401872988",
+          "before": "4a0d468148564d0d5860a4fcd1542b19b9687e465d0a2ccf9f384b6140a391bb",
+          "incoming": "d263b2a8d47d079a0641e8a9c0f1182b55a7efe8df83c10b2dc137715d40d49a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+        },
+        {
+          "id": "espn_fixture_summary_401872989",
+          "before": "a24383c49ef960e5105b92cb18ba0c2b368647d944eb271c871a7ab42d69bf67",
+          "incoming": "dba8906e4abf2fafca97e2cfd57f1e423b7c38fa0a4c23c4b1828c0cf1ee30f6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872989"
+        },
+        {
+          "id": "espn_fixture_summary_401872990",
+          "before": "ad9df0c90f2ee84546b3f1abc4a2c654315b5287e45edb21781bd07c7e2c24ba",
+          "incoming": "66f28e2f002b54cea05107b73da1c34b1b6b121766b2dbe69bf741d68cfe8634",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990"
+        },
+        {
+          "id": "espn_fixture_summary_401872991",
+          "before": "eb631ac38bb5eb1439e40731df8cc7e4880010017cc6bac3e23b5395504fb691",
+          "incoming": "058dd2974df863ac14737db8ade58853212e3a7579b19d416516ebe4429bbdbf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872991"
+        },
+        {
+          "id": "espn_fixture_summary_401872992",
+          "before": "60bd14c78a33cf1b28b84099bae3bb63d4e9118eddbdf24d47d0166846b97c22",
+          "incoming": "2bcf5bbde06299d1402d294b68436d840083aab126777b7c4f80c4a619e70c71",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872992"
+        },
+        {
+          "id": "espn_fixture_summary_401872993",
+          "before": "d76075d2edf805266bfba8cf771a2b69409c903834155ded0a70e4a8abde4559",
+          "incoming": "c8df4b19df1ef01a04bcaa4f2710f2f0dc202b1cb9d3185a8b8475443625d737",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872993"
+        },
+        {
+          "id": "espn_fixture_summary_401872994",
+          "before": "958a9149f4c29f071347be50d7e1935b2895fc7eab5b8234a19cdd79acafdcf9",
+          "incoming": "eceff474e5cf90d0ed3022dc05537fe210a35952c51aa57bf750b0255ad81803",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872994"
+        },
+        {
+          "id": "espn_fixture_summary_401872998",
+          "before": "48bc3c4b837b4c03c043b598b597124879a6b8ab068fb831529cad5b605228de",
+          "incoming": "42f5fba46ef0b8bb966a60a8dd0605c7f9703219367a74c09db2a0631237b312",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872998"
+        },
+        {
+          "id": "espn_fixture_summary_401873002",
+          "before": "28e671a9506e1cfdbc237e8efd701b4f0ad78891e37d07c0435f5cf3835aaa99",
+          "incoming": "48d96759cc8907db9fb18c16f955347de432b5ca7a90a50ded860c67b88222a4",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873002"
+        },
+        {
+          "id": "espn_fixture_summary_401873006",
+          "before": "18ef3a51eeef765db5a2693163f40642c69dc5be7b71bc8d0cb6f8d1af411ba5",
+          "incoming": "c08c61f9b05399b118beede70086214917e160edc59480baaa428de6013c29cf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873006"
+        },
+        {
+          "id": "espn_fixture_summary_401873007",
+          "before": "702a40f4fa219a10aafed0f44a9d3ff4a76ba2f64b6ebe8b3214dd3e3c1023d4",
+          "incoming": "2a1b019b065f99be2ce0d48340f4f615a7963fb62ee330d51e073e29c8773b33",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873007"
+        },
+        {
+          "id": "espn_matchup_depth_DAL",
+          "before": "e191030aacfcb4bd1d0a722378f675fc22dbae3c844900d4422ef2e47092d124",
+          "incoming": "d8c70cb318a20eea0b2ee1d94f53d87d9356b01dd8bf8b983b2b40176ee227c7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/depthcharts"
+        },
+        {
+          "id": "espn_matchup_depth_PIT",
+          "before": "7d6c21d46faad56eac4f259948d4f286f5ef8183b5f8ca270897f5d8b39e902f",
+          "incoming": "36d5cded829abcce33339d959eb02696637f6a5426d8db57b8ae5495e9212d00",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/depthcharts"
+        },
+        {
+          "id": "espn_matchup_depth_TB",
+          "before": "6a6b23c26749f92694ce010ea6db7e8c39b6c3970f67d4c3ac2a8e7625db6f8c",
+          "incoming": "990add3d42360a03768fe957fc954ab3aa0ffabd4aefc3bea9b500f4d3105e82",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/depthcharts"
+        },
+        {
+          "id": "espn_matchup_roster_DAL",
+          "before": "3eacd333593cb0655eaea87451f769763f3d3b97e5147d680fff2464458f7c05",
+          "incoming": "26ce80fcb78e3f3601b75997e585edfd190fc99af56e3b2d9f2f4ac70a690899",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "espn_matchup_roster_PIT",
+          "before": "705c1cc9844b1780c71a0294d61ea87b93f17245207e5315f9748634d8ac3d58",
+          "incoming": "115cd47b992351ae112f9535e24a2a3b798a57d252f6d933d5e710254052d5ed",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster"
+        },
+        {
+          "id": "espn_matchup_roster_TB",
+          "before": "4422b868672b2b209bc8cadb81b2f6bd1f2cc16641374235519a102cec48fbbd",
+          "incoming": "15ec748ae85f9d1e9df6169c6150f63033dada6bb594a859ea426b7cb4fb51c7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/roster"
+        },
+        {
+          "id": "espn_matchup_summary_401772960",
+          "before": "b8ba18352dafa3ea5e76a540c9e845bc68fc609967d5908ba8b0a0ffab3f3d29",
+          "incoming": "34931785ec15b28c0448804590ed6ff77ea54a55b46a98a8bb6a0fb944eefc8e",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772960"
+        },
+        {
+          "id": "espn_matchup_summary_401872658",
+          "before": "8f6f48141add307d496577bb7de555f89a8460ac2b93779fa4e4ded2cdec9925",
+          "incoming": "ce1065202455b6c291d1cbdad659ef231853fde4b15c4dfd0da640654582d669",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658"
+        },
+        {
+          "id": "espn_matchup_summary_401872925",
+          "before": "164623d957becd45cb2ded4e8176f84def14ae97014a03009f8526ec09fd60c9",
+          "incoming": "93b66094fa374d9337f29d70e3abf9cc95e8504622249adfe5f36a82b597c058",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872925"
+        },
+        {
+          "id": "espn_matchup_summary_401872930",
+          "before": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "incoming": "585a985a163f827d0d57f0fa3f326147589f7f9c7c26a88496f07a88667460da",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "espn_matchup_summary_401872935",
+          "before": "427cac825d5d60e3c0723f683345708bdfd508e3a3db72258ee3e7e73115cd21",
+          "incoming": "36709a70687a45ddb966c220b1d4d70f0eedc8525fdf1c6cf5e35b3ed6303819",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872935"
+        },
+        {
+          "id": "espn_matchup_summary_401872944",
+          "before": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "incoming": "3ae91c5cb5bc9c4cbbbe62b6018c10baebc2be0b358643dc62f485d62d67467a",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "espn_matchup_summary_401872946",
+          "before": "5cbc08a7fc6ab595d3065fbc582c2ff9820d22a454d0618bd450f76a8bf94605",
+          "incoming": "e3c9be4801fbe880056fae42049da1e02947554a5fa2d466209a7cd7878a8599",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872946"
+        },
+        {
+          "id": "espn_matchup_summary_401872950",
+          "before": "814a37d62705546f5bb6965399cbb8c028b3a904f0110739c3a6b7077c1ea8aa",
+          "incoming": "9ee03f408d3a40a16dc0c79c21f49a221396b844434d5500ddc9600d1e705733",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872950"
+        },
+        {
+          "id": "espn_matchup_summary_401872959",
+          "before": "d1accee6b9c348d8b792504f553c4ad5503f028574219201f1b0cdab0cdc025b",
+          "incoming": "8a58bbf3e9e4d93a4bd9600dfcad43522c2eee3c67ff5ba6a8ece2827db84cfd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959"
+        },
+        {
+          "id": "espn_matchup_summary_401872960",
+          "before": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "incoming": "85fd39993d54ddd8d8865d5b6cd67c11750291e363f0ce49f2558a0cd45ebbf8",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "espn_matchup_summary_401872964",
+          "before": "d0c03eb5486d0ac5dd1f0c65bf82e24b0489f70b9ee53e8f06af9c816c84cf34",
+          "incoming": "645804da3f13b3a1e4c73d4fff231ba02a81eaba4fec2d7f425759b686717446",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872964"
+        },
+        {
+          "id": "espn_matchup_summary_401872967",
+          "before": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "incoming": "e199615726816f52241e11279d01805a7bfa0fb515a029d9f679cd761c712cd2",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "espn_matchup_summary_401872968",
+          "before": "f8fea953b2ccfaad40de71d4238944f7d8359cc14c455a1dbd8b761f52fcdcc2",
+          "incoming": "2b91521ec1be2cb79c03b3ed2f6672e6c4cb15e2aed0b70c0fcd181f1b165007",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872968"
+        },
+        {
+          "id": "espn_matchup_summary_401872980",
+          "before": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "incoming": "80e78c205d29907e7198d11a2932f3cd10ab89b11313c16ee1d2ec7cd6e4a11c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        },
+        {
+          "id": "espn_start_summary_401437849",
+          "before": "899c043f2aa179a0aab993c664b55662dfd4516ef4ec513052b31524e23f146f",
+          "incoming": "dbb839c90383987c74aabdc9bca95a0b44e18459f722c0cbfa4d2eb2634815e4",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401437849"
+        },
+        {
+          "id": "espn_start_summary_401671601",
+          "before": "30eaab9e362510447dd29f867156538dc1e97e7dc1200a5115e09514d64cd679",
+          "incoming": "115e6d2d331d43c027c9edaf4326f5af3e7bf35f56c404331190be7865a449c0",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671601"
+        },
+        {
+          "id": "espn_start_summary_401671651",
+          "before": "ef5e31cffa1228596f91141e7eb8a885c9783404be04f3d32ef9b33aacf9950c",
+          "incoming": "ab3880ab3963e579bc930b3339fa5c77e177d44deebd167443180b64ed4ed5cb",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671651"
+        },
+        {
+          "id": "espn_start_summary_401671654",
+          "before": "f014181d2cac78a6b74b6e4ba5fe079a8f4e6a3fb0d5665ecd5cac48ba3f8199",
+          "incoming": "f756cd902969b970acdcf62dd018f76c164d9dc3a697758d6faa02bcae4a580c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671654"
+        },
+        {
+          "id": "espn_start_summary_401671671",
+          "before": "4a7e14717f3e2f2cfdbb752a3118d2cf20c748128247a09bab7346b9efd2e31e",
+          "incoming": "e16efc6c8cdc1ae61a4040e14d7b3c1834e631716f9a76d05b53c772476f6225",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671671"
+        },
+        {
+          "id": "espn_start_summary_401671692",
+          "before": "98308e5c925c86c9322f3c32e14b3f3b4938cb2c92e176cb6c34b49601f16951",
+          "incoming": "a40da83ab6735adc3d9e46afd8807919fd4d83d7005c05d3a9b0069fcdd1090f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671692"
+        },
+        {
+          "id": "espn_start_summary_401671697",
+          "before": "e69d1bf65c2082b20025edf8483410209c5f8849fe8f112a80c75adb798e0179",
+          "incoming": "7aa9581432c2680400b46fb1ac8579bcf0fde1c6c7a93291a53cc7771ab858c8",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671697"
+        },
+        {
+          "id": "espn_start_summary_401671713",
+          "before": "ab38c47a787086b2d2b7a7dbee431006e9263a42095c0d3720c7dadfcc958325",
+          "incoming": "5af40cfbc1f3f3f983ed5c0b43153df6216e87f18b056810f0165022d20ee795",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671713"
+        },
+        {
+          "id": "espn_start_summary_401671729",
+          "before": "9218e57adb8928b9d98e8b08ce1ba2c92f59246e0c6b69de0ee4e9393b4dd815",
+          "incoming": "2b0fc4535cbc70a3996c3d297987245cd2fc58195b1d91abd7ee4744325cb305",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671729"
+        },
+        {
+          "id": "espn_start_summary_401671738",
+          "before": "c1bb288dc6fbe12fb8eccb957c85857c5de8f804d331434c41555adc5e758cf7",
+          "incoming": "ee7c46d652be6fbab5d0aaeb25179c823d9e058e300b71e22682633a0f016d81",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671738"
+        },
+        {
+          "id": "espn_start_summary_401671752",
+          "before": "5221b2a8b71d59be229af6a3450ae2f1780913505a74cedfb99711ef495d84d4",
+          "incoming": "32b4be4f0a9e809c4104937635e8ef9862ade23289b27b6a94beaf9322319dae",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671752"
+        },
+        {
+          "id": "espn_start_summary_401671803",
+          "before": "b68afa5af3b7e5cba4a758e681fcbd953ec974f4152160a61bf2243c5ecd211d",
+          "incoming": "a6912fe776f90accb12c39462d7fc3f08266a6f9d855f86dbd0fb0fce8df56af",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671803"
+        },
+        {
+          "id": "espn_start_summary_401671806",
+          "before": "2b5d683521235e42dc8537e4d3926ddf421b9452c59c17dec0b9a57959d0a188",
+          "incoming": "21b7b2e2bcbd8d7a7a9c70a420d4611cdafcaaef9b12070e8b37fa784eb1af63",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671806"
+        },
+        {
+          "id": "espn_start_summary_401671821",
+          "before": "5ed053563e37fa608d659b9eeddf9ad9fc243da0c74e38033db1672affd4ab97",
+          "incoming": "b68136c52bf9078fa5ebe27db7083507c849a0fe9997640cafb21228663ec3a1",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671821"
+        },
+        {
+          "id": "espn_start_summary_401671846",
+          "before": "1819ae40af0bf9050760127aa6cc4713620364d924fc9ad703cbbd3af40f6c4b",
+          "incoming": "2aa344225ce4483ed192fd9a625a2027319166bf247e76e6c628ead794672aaf",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671846"
+        },
+        {
+          "id": "espn_start_summary_401671877",
+          "before": "f3fa87d1d37b956ca2c78584976a63b3b2e83e41e40e584ff71d27bc87f3c789",
+          "incoming": "563faeb6b59f7804b77e4c7c1ab9f6aa08515e792e9fc3f172c80e4e658027eb",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671877"
+        },
+        {
+          "id": "espn_start_summary_401772801",
+          "before": "e37f1cb9325208974470170d5e46e78c74fd17ee3bfb92d41d7d4e880380e3ed",
+          "incoming": "39c67ef51b2e354a0ab262eeb8c89293ba7489546e62d2d796a8716b119c1388",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772801"
+        },
+        {
+          "id": "espn_start_summary_401772808",
+          "before": "569ab2e0bd4911334e2151fe7b28f5fa92ae06593395617b36ab4f255eee0dc6",
+          "incoming": "37f3bcf1a30a237082971e92b0ddfd8bf2e11d744f421358297d35819c130ccd",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772808"
+        },
+        {
+          "id": "espn_start_summary_401772817",
+          "before": "0c1e6f7cdef04076b466128787d79e8272087019d549334b93151c6ed0770e27",
+          "incoming": "557e8308cd270b0d044b245665a858a731100f8c9a45f1d052dc599585c1366c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772817"
+        },
+        {
+          "id": "espn_start_summary_401872933",
+          "before": "f8a58284cfc93860ddb54ec27cb967fe15d54584c0b916d3b4f7307012d54256",
+          "incoming": "79a1252522fc13fd09d35c2590aea0dcafb49f3152e0ba2df6560b78f58320a2",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872933"
+        },
+        {
+          "id": "espn_start_summary_401872955",
+          "before": "e66c399f5e66d0e6cdff71c20f2e8e5b815d8f8df073237e82982e8067c5143a",
+          "incoming": "ce7f2d478f6d7f81b3d7d70dabd266d0856ff0a32002bb5e6fdaf4166d9904ce",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872955"
+        },
+        {
+          "id": "espn_start_summary_401872972",
+          "before": "a85e051dc17f0a6e9719ac49c546a0b8daf37cf3932f313ae96df250df688e73",
+          "incoming": "508e8b973056288f91f203bfb60ea77b4c26501f249a9095ab31ec59e259ca69",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872972"
+        },
+        {
+          "id": "espn_start_summary_401872977",
+          "before": "aed2e6029d133184c66b8a2bd1952d66831ccff65d8ae8fc6b463d834b6d51a8",
+          "incoming": "a5c8d603fc3a3e85cdcfefa8132287a8366d3b26daa27b6245f2f263c2b78ba4",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872977"
+        },
+        {
+          "id": "nflverse_pbp_2026",
+          "before": "7f7769cd3c50204aefb38aac83a05495fbab16e566178b07a26979011eb8e17f",
+          "incoming": "e7c162e793cb0f828b97c9c92bf6efd7d60ff35eb6ef9b407b8d16001fd2a39a",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz"
+        },
+        {
+          "id": "team_espn_roster_DAL",
+          "before": "3af79831c87b8011b55a0d90e8749e77016861071cf9b978ca406ba7de0f8ea9",
+          "incoming": "26ce80fcb78e3f3601b75997e585edfd190fc99af56e3b2d9f2f4ac70a690899",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster"
+        },
+        {
+          "id": "team_espn_schedule_DAL_2025",
+          "before": "33c57ec1657691f99a208e67dc970e3a83fa1b0ea9188288406941f28d2649b1",
+          "incoming": "a42837ccde54af004d804375c9ebdf01163189ec1036ec1fe8d6927465e5dda6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2"
+        },
+        {
+          "id": "team_espn_schedule_DAL_2026",
+          "before": "08243cda3a14292f5342e9e7f675c4fafba01721a66043b597de5914677c6ebf",
+          "incoming": "8e07f6accd6ccd63276cfe304c52943aa6f0dbba801bd4db08ea434c5c138668",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2"
+        },
+        {
+          "id": "team_espn_summary_401772510",
+          "before": "340f708937b764c11cd38d6d3f93a016655d327dfbe4e5d4f32c8556266ade07",
+          "incoming": "fc01d50fed192b9c329e12722e9bebeffdbe9b25bcc9feca0275eff58f673374",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510"
+        },
+        {
+          "id": "team_espn_summary_401772694",
+          "before": "9191ab3a1a4d35082eea1691bc8811d45788aea9ec3b82eb6a45be36a6f7d7e7",
+          "incoming": "8984bc79d22adf5e38ab4d7997f85582c2a03ffe66cf0534fe3c7d5b0b28ff24",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694"
+        },
+        {
+          "id": "team_espn_summary_401772710",
+          "before": "3aa8a6e14e2d3927ee3a6c9f763b0809d844aeb07ac3c2bc8ff5ae97ccc2df7a",
+          "incoming": "6e3f665f76ac3058e8a8a8855b98ab204738fb06dc86972f71abeb2f935a989b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710"
+        },
+        {
+          "id": "team_espn_summary_401772762",
+          "before": "8319b092943dc98a4676487370e8b4bca5468031ce484c052f327f57bc67115d",
+          "incoming": "41e62767c201e460b0f528a536195178acaecd98bacf9dbc18f36365933d5679",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762"
+        },
+        {
+          "id": "team_espn_summary_401772818",
+          "before": "6e0c18957d12a9207888c0d49ec9818f668e21638e9b80a6ca0f2fc8bcbe4aef",
+          "incoming": "1d449b018b72e99ffa7a84b1d8eb8bdc0863dea7cebf5a51c1df58490176b929",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818"
+        },
+        {
+          "id": "team_espn_summary_401772819",
+          "before": "5fc7b4449a1a33b86da35564c4f5c94c2a21714d8c0ddd5f5f81eecc439b4d5b",
+          "incoming": "92ebc9f2e766c486e55e328a620c52e1196387c7e1d64f2117704e2b9f1cf841",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819"
+        },
+        {
+          "id": "team_espn_summary_401772834",
+          "before": "1a922edc04349aefd3be20ac5464f9144d18de40f9e07b1258f32f5d78c6ea6f",
+          "incoming": "dee3f97b76452c3516a86810368f10a90974ace06e423936c60e6deaa0056aee",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834"
+        },
+        {
+          "id": "team_espn_summary_401772844",
+          "before": "69d7158787f2ca37111fb98db19e5bd19860438419477cc0827304e34c59cd79",
+          "incoming": "8d6ca2801bf033be918f6289100932522dc4d7f802f76fda7b651474041f0864",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844"
+        },
+        {
+          "id": "team_espn_summary_401772850",
+          "before": "9b551bc556d22bd48b51b1b755cf5cefe32fc27690350878d6409ad000313554",
+          "incoming": "febc9dfcdecfda146b059da754b74cae2de2d60b0ec9dbe1e629e8e21635a5d7",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850"
+        },
+        {
+          "id": "team_espn_summary_401772858",
+          "before": "6fbed6d1631bd813b719e4abb5946988db799c28c841a75b4b91146824e4b01d",
+          "incoming": "f4f92aa45dec67d50ece512addac71d0970e2aa42c7e8958416b76402d7ee37b",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858"
+        },
+        {
+          "id": "team_espn_summary_401772864",
+          "before": "babfa4d762ed1ec14ac261ef7419aec46adfc71758e4b0e2b9db2d524c8f6285",
+          "incoming": "d32fc753c467757d1d12ba3b607646ad83f35de966581554ecae39f9567a40b9",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864"
+        },
+        {
+          "id": "team_espn_summary_401772890",
+          "before": "997bf712573fca8bbcd6485b5ba95319af646124317676d1084ffb6ec8a5fbbd",
+          "incoming": "9dbd83e5ccca97f8c53c36167ac58d74b0764968f5ad5a873c8f32eb25a5af24",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890"
+        },
+        {
+          "id": "team_espn_summary_401772910",
+          "before": "7b14ae54ba68d19624cd93383baf59531bbb64c487281771f921fc49d159f25f",
+          "incoming": "50f9e09a3637259b254853f3b8fab5914f373beadbc1e6e0c7e6d327905ffe86",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910"
+        },
+        {
+          "id": "team_espn_summary_401772921",
+          "before": "bd518a7750e0988c5c8d617df13dfb0c6b1509088b11e1276c1d4a71ff4ab14d",
+          "incoming": "375674cc70d4d571bf2cfe4ab964e23afafac5e4fc5366b26dbeaaac4261af4f",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921"
+        },
+        {
+          "id": "team_espn_summary_401772933",
+          "before": "e9e5d5d2708d96863cb40fc995447f60458703b58aa63831ae15141aacbbcea5",
+          "incoming": "564f9e545147ac39f03a41baf526817c36c651f819aee120c409d58ba2d111be",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933"
+        },
+        {
+          "id": "team_espn_summary_401772947",
+          "before": "a30c70c5c60b9a9782a40027646997843e27bc0153670fb89b0d47551fe0b722",
+          "incoming": "211a35c66dabb1a2d9e16dc89c0289f1e24ebbd5c873c681db02c23fcd7e8a69",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947"
+        },
+        {
+          "id": "team_espn_summary_401772963",
+          "before": "1a7afdee5397005b8d152bf38ff9c00c60b06739ffbc7dacfd88f5c7c83ab202",
+          "incoming": "19e7260d1502bbe96b8a54f71519447e5ee97bc893f1e44fd52c0339589bb2d6",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963"
+        },
+        {
+          "id": "team_espn_summary_401872930",
+          "before": "25e57ccf10bb4bcce0a4fcc47e20bf7993a8d28c7fef8772a5f2c7d2a03fc136",
+          "incoming": "585a985a163f827d0d57f0fa3f326147589f7f9c7c26a88496f07a88667460da",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930"
+        },
+        {
+          "id": "team_espn_summary_401872944",
+          "before": "ae3fb7b6e84ff200d2e9ba9b9358a9bd0b53ba3461abafb24b6a09ca7af53268",
+          "incoming": "926b8e65b65bc27b0529c80d0169943cbc8e7bb380bb4af7fc81a9dea19fc323",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944"
+        },
+        {
+          "id": "team_espn_summary_401872960",
+          "before": "9d0bd4433463a6d20af5762390304a223d81238e6cd49dd6fa61c6e72fbc5dbd",
+          "incoming": "cd55064946ed8733f9273ca00acc3e0701ee3ce74542684fe1b0f70feb05da01",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960"
+        },
+        {
+          "id": "team_espn_summary_401872967",
+          "before": "3d3d89c70e80f4ca3443d603284f0f5015b3ca8c2fff45884978d225ba25114f",
+          "incoming": "e199615726816f52241e11279d01805a7bfa0fb515a029d9f679cd761c712cd2",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967"
+        },
+        {
+          "id": "team_espn_summary_401872980",
+          "before": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e",
+          "incoming": "80e78c205d29907e7198d11a2932f3cd10ab89b11313c16ee1d2ec7cd6e4a11c",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980"
+        }
+      ],
+      "domains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "site.api.espn.com"
+      ]
+    }
+  },
+  "semanticComparison": {
+    "metadataKeysRemoved": [
+      "bytes",
+      "checkedAt",
+      "currentRetrievedAt",
+      "currentSha256",
+      "etag",
+      "generatedAt",
+      "lastModified",
+      "playerHistorySha256",
+      "refreshAfter",
+      "retrievedAt",
+      "scheduleRetrievedAt",
+      "sha256",
+      "snapshotSha256CanonicalJson",
+      "sourceHashes",
+      "sourceTimestamp",
+      "teamDetailsRetrievedAt",
+      "teamDetailsSha256",
+      "tlsVerified"
+    ],
+    "unorderedArrayFields": [
+      "disagreements",
+      "identitySourceIds",
+      "sourceIds",
+      "sources",
+      "startingQBMissingStatistics",
+      "startingRoleDisagreements",
+      "startingRoleUncorroborated"
+    ],
+    "warning": "Hash metadata excluded only from semantic projection; every source hash delta is separately recorded."
+  },
+  "semanticChangeSummary": {
+    "trulyMetadataOnly": false,
+    "identityAlignedMetadataRemovedLeaves": 63,
+    "sameURLAndBodyAliasLeaves": 62,
+    "aliasAwareFactualLeaves": 1,
+    "actualFact": "CHI Anthony Johnson Jr. reportStatus Injured Reserve to Out; original dated11:00Z report becomes new dated12:00Z report. Event401872990,2026Week5 remain explicit.",
+    "unchangedFacts": [
+      "All exported basic-stat values and advanced-stat numeric values",
+      "All game IDs, seasons/weeks, scores, sourced surface values",
+      "All offensive snap values and appearance evidence",
+      "All roster identities and starting-role values"
+    ],
+    "pbpRawHasChanged": true
+  },
+  "semanticDifferencesFull": [
+    {
+      "path": "matchup-breakdown.json/teams/CHI/fixtureReports/2026_05_CHI_GB/availability/players/0/reportStatus",
+      "before": "Injured Reserve",
+      "after": "Out",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/sackRate/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0033077/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036358/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0036997/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037247/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0037801/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038041/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038547/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0038738/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039062/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039410/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/players/00-0039530/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0033921/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0036919/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038129/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0038951/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039050/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0039361/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040129/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0040237/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/sackRate/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/advancedProvenance/fieldSources/targetShare/1",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/finalBoxscoreEvidence/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/players/00-0041251/gameLog/0/sourceIds/0",
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "kind": "scalar"
+    }
+  ],
+  "actualChangedProviderRecord": {
+    "before": {
+      "gameId": "2026_05_CHI_GB",
+      "eventId": "401872990",
+      "team": "CHI",
+      "season": 2026,
+      "week": 5,
+      "playerId": "00-0038411",
+      "espnId": "4361748",
+      "name": "Anthony Johnson Jr.",
+      "position": "S",
+      "reportStatus": "Injured Reserve",
+      "reportedInactive": null,
+      "officialConfirmed": false,
+      "practiceStatus": null,
+      "injury": "Undisclosed",
+      "sourceTimestamp": "2026-10-09T11:00Z",
+      "sourceIds": [
+        "espn_fixture_summary_401872990"
+      ],
+      "identitySourceIds": [
+        "nflverse_player_ids"
+      ],
+      "retrievedAt": "2026-10-09T11:26:04Z",
+      "confirmation": "provider-reported",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus"
+    },
+    "incoming": {
+      "gameId": "2026_05_CHI_GB",
+      "eventId": "401872990",
+      "team": "CHI",
+      "season": 2026,
+      "week": 5,
+      "playerId": "00-0038411",
+      "espnId": "4361748",
+      "name": "Anthony Johnson Jr.",
+      "position": "S",
+      "reportStatus": "Out",
+      "reportedInactive": null,
+      "officialConfirmed": false,
+      "practiceStatus": null,
+      "injury": "Undisclosed",
+      "sourceTimestamp": "2026-10-09T12:00Z",
+      "sourceIds": [
+        "espn_fixture_summary_401872990"
+      ],
+      "identitySourceIds": [
+        "nflverse_player_ids"
+      ],
+      "retrievedAt": "2026-10-09T12:31:45Z",
+      "confirmation": "provider-reported",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus"
+    }
+  },
+  "equivalentESPNEventAliases": [
+    {
+      "side": "before",
+      "sourceIds": [
+        "espn_fixture_summary_401872980",
+        "espn_matchup_summary_401872980",
+        "team_espn_summary_401872980"
+      ],
+      "sameURL": true,
+      "sameHash": true,
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "sha256": "ab0b572da1d16d274d6a75a3bca0152c1ef4d66d04c41e9f50616fa59915da0e"
+    },
+    {
+      "side": "incoming",
+      "sourceIds": [
+        "espn_fixture_summary_401872980",
+        "espn_matchup_summary_401872980",
+        "team_espn_summary_401872980"
+      ],
+      "sameURL": true,
+      "sameHash": true,
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "sha256": "80e78c205d29907e7198d11a2932f3cd10ab89b11313c16ee1d2ec7cd6e4a11c"
+    }
+  ],
+  "freshESPNCorroborationReceipt": {
+    "sourceId": "espn_fixture_summary_401872990",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+    "incomingDeclaredSha256": "66f28e2f002b54cea05107b73da1c34b1b6b121766b2dbe69bf741d68cfe8634",
+    "incomingRetrievedAt": "2026-10-09T12:31:45Z",
+    "startedAt": "2026-10-09T12:36:42.619606+00:00",
+    "httpStatus": 200,
+    "tlsVerified": true,
+    "bytes": 126091,
+    "sha256": "7dde2c5ae388f8ce72a34e883f181ed4eecec3c55fd3037aa0001b619025219e",
+    "matchesIncomingSourceHash": false,
+    "bodyPath": "/tmp/home-source-audit-fcdf-jpnfp376/espn_fixture_summary_401872990.raw",
+    "finalHost": "site.api.espn.com",
+    "actualChangedPlayerFacts": {
+      "espnId": "4361748",
+      "name": "Anthony Johnson Jr.",
+      "status": "Out",
+      "date": "2026-10-09T12:00Z",
+      "fantasyStatus": {
+        "description": "OUT",
+        "abbreviation": "OUT",
+        "displayDescription": "Out"
+      }
+    },
+    "actualEventContext": {
+      "eventId": "401872990",
+      "season": {
+        "year": 2026,
+        "current": true,
+        "type": 2
+      },
+      "week": 5
+    },
+    "completedAt": "2026-10-09T12:36:42.900804+00:00"
+  },
+  "freshPBPRawReceipt": {
+    "sourceId": "nflverse_pbp_2026",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz",
+    "incomingDeclaredSha256": "e7c162e793cb0f828b97c9c92bf6efd7d60ff35eb6ef9b407b8d16001fd2a39a",
+    "incomingRetrievedAt": "2026-10-09T12:31:45Z",
+    "startedAt": "2026-10-09T12:37:03.665410+00:00",
+    "httpStatus": 200,
+    "tlsVerified": true,
+    "bytes": 4448255,
+    "sha256": "e7c162e793cb0f828b97c9c92bf6efd7d60ff35eb6ef9b407b8d16001fd2a39a",
+    "matchesIncomingSourceHash": true,
+    "bodyPath": "/tmp/home-source-audit-fcdf-jpnfp376/nflverse_pbp_2026.raw",
+    "finalHost": "release-assets.githubusercontent.com",
+    "decompressedComparison": {
+      "priorCompressedSha256": "7f7769cd3c50204aefb38aac83a05495fbab16e566178b07a26979011eb8e17f",
+      "priorDecompressedSha256": "ee7771b0a5ac246f66b2fa40b2cc99143f5369ad79a70cec613ca2fc62d5d657",
+      "freshDecompressedSha256": "b3eddafc75e2a69e95bf3e1e7f679d83d6cf02b1f544429f4534838c87b89430",
+      "priorDecodedBytes": 22745564,
+      "freshDecodedBytes": 22746956,
+      "exactDecompressedBytesEqual": false
+    },
+    "completedAt": "2026-10-09T12:37:04.187913+00:00"
+  },
+  "fullPBPCellDelta": {
+    "sameSchema": true,
+    "rowsCompared": 11327,
+    "rowIdentityMismatches": [],
+    "changedFields": {
+      "yac_epa": 3,
+      "safety_prob": 4,
+      "fg_prob": 2,
+      "ep": 9,
+      "td_prob": 3,
+      "opp_fg_prob": 3,
+      "opp_safety_prob": 3,
+      "total_home_rush_epa": 7,
+      "total_away_rush_epa": 7,
+      "total_home_pass_epa": 18,
+      "total_away_pass_epa": 18,
+      "opp_td_prob": 3,
+      "epa": 3,
+      "qb_epa": 3,
+      "no_score_prob": 2,
+      "comp_yac_epa": 1,
+      "surface": 172
+    },
+    "changedCellCount": 261,
+    "differences": [
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3258",
+        "field": "yac_epa",
+        "before": "0.324685924876883",
+        "incoming": "0.324685924876885"
+      },
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3281",
+        "field": "safety_prob",
+        "before": "0.000460810717876302",
+        "incoming": "0.000460810717876301"
+      },
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3281",
+        "field": "fg_prob",
+        "before": "0.655190230313065",
+        "incoming": "0.655190230313066"
+      },
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3281",
+        "field": "ep",
+        "before": "0.957921849055618",
+        "incoming": "0.95792184905562"
+      },
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3281",
+        "field": "td_prob",
+        "before": "0.0565718039069326",
+        "incoming": "0.0565718039069325"
+      },
+      {
+        "gameId": "2026_01_SF_LA",
+        "playId": "3281",
+        "field": "opp_fg_prob",
+        "before": "0.0954208429097235",
+        "incoming": "0.0954208429097234"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2846",
+        "field": "opp_safety_prob",
+        "before": "0.00163133347825289",
+        "incoming": "0.00163133347825288"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2846",
+        "field": "fg_prob",
+        "before": "0.612759612000505",
+        "incoming": "0.612759612000506"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2846",
+        "field": "ep",
+        "before": "0.484556378623035",
+        "incoming": "0.484556378623036"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2923",
+        "field": "total_home_rush_epa",
+        "before": "-8.0215491909757",
+        "incoming": "-8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2923",
+        "field": "total_away_rush_epa",
+        "before": "8.0215491909757",
+        "incoming": "8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2945",
+        "field": "total_home_rush_epa",
+        "before": "-8.0215491909757",
+        "incoming": "-8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2945",
+        "field": "total_away_rush_epa",
+        "before": "8.0215491909757",
+        "incoming": "8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2970",
+        "field": "total_home_rush_epa",
+        "before": "-8.0215491909757",
+        "incoming": "-8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "2970",
+        "field": "total_away_rush_epa",
+        "before": "8.0215491909757",
+        "incoming": "8.02154919097569"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3369",
+        "field": "total_home_rush_epa",
+        "before": "-7.71130280097618",
+        "incoming": "-7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3369",
+        "field": "total_away_rush_epa",
+        "before": "7.71130280097618",
+        "incoming": "7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3391",
+        "field": "total_home_rush_epa",
+        "before": "-7.71130280097618",
+        "incoming": "-7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3391",
+        "field": "total_away_rush_epa",
+        "before": "7.71130280097618",
+        "incoming": "7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3411",
+        "field": "total_home_rush_epa",
+        "before": "-7.71130280097618",
+        "incoming": "-7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3411",
+        "field": "total_away_rush_epa",
+        "before": "7.71130280097618",
+        "incoming": "7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3431",
+        "field": "total_home_rush_epa",
+        "before": "-7.71130280097618",
+        "incoming": "-7.71130280097617"
+      },
+      {
+        "gameId": "2026_02_CIN_HOU",
+        "playId": "3431",
+        "field": "total_away_rush_epa",
+        "before": "7.71130280097618",
+        "incoming": "7.71130280097617"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1952",
+        "field": "total_home_pass_epa",
+        "before": "4.53317927955403",
+        "incoming": "4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1952",
+        "field": "total_away_pass_epa",
+        "before": "-4.53317927955403",
+        "incoming": "-4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1984",
+        "field": "total_home_pass_epa",
+        "before": "4.53317927955403",
+        "incoming": "4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1984",
+        "field": "total_away_pass_epa",
+        "before": "-4.53317927955403",
+        "incoming": "-4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1984",
+        "field": "ep",
+        "before": "0.824615037105566",
+        "incoming": "0.824615037105567"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1972",
+        "field": "total_home_pass_epa",
+        "before": "4.53317927955403",
+        "incoming": "4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1972",
+        "field": "total_away_pass_epa",
+        "before": "-4.53317927955403",
+        "incoming": "-4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1972",
+        "field": "safety_prob",
+        "before": "0.000182578740741876",
+        "incoming": "0.000182578740741875"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1972",
+        "field": "opp_td_prob",
+        "before": "0.0893266912736585",
+        "incoming": "0.0893266912736584"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1972",
+        "field": "ep",
+        "before": "0.824615037105566",
+        "incoming": "0.824615037105567"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1999",
+        "field": "total_home_pass_epa",
+        "before": "4.53317927955403",
+        "incoming": "4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "1999",
+        "field": "total_away_pass_epa",
+        "before": "-4.53317927955403",
+        "incoming": "-4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "2029",
+        "field": "total_home_pass_epa",
+        "before": "4.53317927955403",
+        "incoming": "4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "2029",
+        "field": "total_away_pass_epa",
+        "before": "-4.53317927955403",
+        "incoming": "-4.53317927955404"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3097",
+        "field": "total_home_pass_epa",
+        "before": "4.71050011974047",
+        "incoming": "4.71050011974048"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3097",
+        "field": "total_away_pass_epa",
+        "before": "-4.71050011974047",
+        "incoming": "-4.71050011974048"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3317",
+        "field": "total_home_pass_epa",
+        "before": "0.148794134929503",
+        "incoming": "0.148794134929505"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3317",
+        "field": "total_away_pass_epa",
+        "before": "-0.148794134929503",
+        "incoming": "-0.148794134929505"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3345",
+        "field": "total_home_pass_epa",
+        "before": "0.148794134929503",
+        "incoming": "0.148794134929505"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3345",
+        "field": "total_away_pass_epa",
+        "before": "-0.148794134929503",
+        "incoming": "-0.148794134929505"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3369",
+        "field": "total_home_pass_epa",
+        "before": "0.89893868498244",
+        "incoming": "0.898938684982442"
+      },
+      {
+        "gameId": "2026_03_HOU_IND",
+        "playId": "3369",
+        "field": "total_away_pass_epa",
+        "before": "-0.89893868498244",
+        "incoming": "-0.898938684982442"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1915",
+        "field": "yac_epa",
+        "before": "0.0591218125514303",
+        "incoming": "0.0591218125514308"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "epa",
+        "before": "0.0942701092249165",
+        "incoming": "0.0942701092249161"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "qb_epa",
+        "before": "0.0942701092249165",
+        "incoming": "0.0942701092249161"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "opp_safety_prob",
+        "before": "5.47779456704687e-05",
+        "incoming": "5.47779456704684e-05"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "safety_prob",
+        "before": "4.49332928266448e-05",
+        "incoming": "4.49332928266446e-05"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "opp_td_prob",
+        "before": "0.00610922967483627",
+        "incoming": "0.00610922967483624"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "no_score_prob",
+        "before": "0.00905503022227838",
+        "incoming": "0.00905503022227833"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "td_prob",
+        "before": "0.00353423388203993",
+        "incoming": "0.00353423388203991"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1938",
+        "field": "opp_fg_prob",
+        "before": "0.00330513949528691",
+        "incoming": "0.0033051394952869"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1988",
+        "field": "total_home_pass_epa",
+        "before": "-3.03113788066344",
+        "incoming": "-3.03113788066345"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "1988",
+        "field": "total_away_pass_epa",
+        "before": "3.03113788066344",
+        "incoming": "3.03113788066345"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2098",
+        "field": "total_home_pass_epa",
+        "before": "-0.924316160524321",
+        "incoming": "-0.924316160524322"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2098",
+        "field": "total_away_pass_epa",
+        "before": "0.924316160524321",
+        "incoming": "0.924316160524322"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2557",
+        "field": "total_home_pass_epa",
+        "before": "0.46459896196233",
+        "incoming": "0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2557",
+        "field": "total_away_pass_epa",
+        "before": "-0.46459896196233",
+        "incoming": "-0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2587",
+        "field": "total_home_pass_epa",
+        "before": "0.46459896196233",
+        "incoming": "0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2587",
+        "field": "total_away_pass_epa",
+        "before": "-0.46459896196233",
+        "incoming": "-0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2621",
+        "field": "total_home_pass_epa",
+        "before": "0.46459896196233",
+        "incoming": "0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2621",
+        "field": "total_away_pass_epa",
+        "before": "-0.46459896196233",
+        "incoming": "-0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2643",
+        "field": "total_home_pass_epa",
+        "before": "0.46459896196233",
+        "incoming": "0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_ATL_NO",
+        "playId": "2643",
+        "field": "total_away_pass_epa",
+        "before": "-0.46459896196233",
+        "incoming": "-0.464598961962329"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "2007",
+        "field": "epa",
+        "before": "-0.678219291408691",
+        "incoming": "-0.678219291408692"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "2007",
+        "field": "qb_epa",
+        "before": "-0.678219291408691",
+        "incoming": "-0.678219291408692"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "2046",
+        "field": "ep",
+        "before": "0.448639958138433",
+        "incoming": "0.448639958138432"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "2034",
+        "field": "ep",
+        "before": "0.448639958138433",
+        "incoming": "0.448639958138432"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "4276",
+        "field": "total_home_pass_epa",
+        "before": "8.4418583209107",
+        "incoming": "8.44185832091071"
+      },
+      {
+        "gameId": "2026_04_DAL_HOU",
+        "playId": "4276",
+        "field": "total_away_pass_epa",
+        "before": "-8.4418583209107",
+        "incoming": "-8.44185832091071"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3527",
+        "field": "comp_yac_epa",
+        "before": "0.130782701822433",
+        "incoming": "0.130782701822434"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3527",
+        "field": "yac_epa",
+        "before": "0.130782701822433",
+        "incoming": "0.130782701822434"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "epa",
+        "before": "0.0942913465644533",
+        "incoming": "0.0942913465644528"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "qb_epa",
+        "before": "0.0942913465644533",
+        "incoming": "0.0942913465644528"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "opp_safety_prob",
+        "before": "5.34618415634277e-05",
+        "incoming": "5.34618415634275e-05"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "safety_prob",
+        "before": "6.83905718101295e-05",
+        "incoming": "6.83905718101292e-05"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "opp_td_prob",
+        "before": "0.00737918402056305",
+        "incoming": "0.00737918402056302"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "no_score_prob",
+        "before": "0.00521203399465205",
+        "incoming": "0.00521203399465203"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "td_prob",
+        "before": "0.00489564628782046",
+        "incoming": "0.00489564628782043"
+      },
+      {
+        "gameId": "2026_04_MIA_MIN",
+        "playId": "3556",
+        "field": "opp_fg_prob",
+        "before": "0.00401838101706228",
+        "incoming": "0.00401838101706226"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "2262",
+        "field": "ep",
+        "before": "0.907347835428214",
+        "incoming": "0.907347835428213"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "2269",
+        "field": "ep",
+        "before": "0.907347835428214",
+        "incoming": "0.907347835428213"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "2250",
+        "field": "ep",
+        "before": "0.907347835428214",
+        "incoming": "0.907347835428213"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "3612",
+        "field": "total_home_pass_epa",
+        "before": "17.7236156500319",
+        "incoming": "17.7236156500318"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "3612",
+        "field": "total_away_pass_epa",
+        "before": "-17.7236156500319",
+        "incoming": "-17.7236156500318"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "3635",
+        "field": "total_home_pass_epa",
+        "before": "17.7236156500319",
+        "incoming": "17.7236156500318"
+      },
+      {
+        "gameId": "2026_04_TEN_BAL",
+        "playId": "3635",
+        "field": "total_away_pass_epa",
+        "before": "-17.7236156500319",
+        "incoming": "-17.7236156500318"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "40",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "68",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "91",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "116",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "141",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "163",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "185",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "210",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "243",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "265",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "299",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "322",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "345",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "360",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "390",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "420",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "442",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "474",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "499",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "521",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "543",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "568",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "590",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "615",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "646",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "684",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "718",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "743",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "765",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "802",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "790",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "823",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "845",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "865",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "889",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "915",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "930",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "960",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "982",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1012",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1037",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1059",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1082",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1101",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1131",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1153",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1178",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1209",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1241",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1275",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1263",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1293",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1316",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1339",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1359",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1399",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1429",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1451",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1473",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1495",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1517",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1544",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1568",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1590",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1620",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1640",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1680",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1703",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1726",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1749",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1775",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1809",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1831",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1854",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1888",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1915",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1940",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1965",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "1989",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2012",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2037",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2060",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2080",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2103",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2126",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2168",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2156",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2188",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2208",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2242",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2269",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2292",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2307",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2342",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2364",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2389",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2419",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2441",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2466",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2493",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2533",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2555",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2585",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2607",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2629",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2652",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2667",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2713",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2733",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2756",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2784",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2809",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2843",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2872",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2894",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2919",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2939",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2969",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "2994",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3016",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3039",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3062",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3085",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3114",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3147",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3169",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3189",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3223",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3250",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3272",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3297",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3324",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3346",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3373",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3404",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3426",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3453",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3490",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3478",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3514",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3544",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3574",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3599",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3621",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3646",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3669",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3697",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3719",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3742",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3768",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3781",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3805",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3829",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3857",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3879",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3902",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3928",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3960",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "3985",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4019",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4044",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4069",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4098",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4123",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4150",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4184",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4172",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4216",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4204",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4233",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      },
+      {
+        "gameId": "2026_05_TB_DAL",
+        "playId": "4255",
+        "field": "surface",
+        "before": "",
+        "incoming": "matrixturf"
+      }
+    ]
+  },
+  "pbpInputFieldsUsedForExportedMetricsAndCoverage": [
+    "air_yards",
+    "away_score",
+    "complete_pass",
+    "desc",
+    "game_id",
+    "game_seconds_remaining",
+    "home_score",
+    "pass_attempt",
+    "pass_touchdown",
+    "passer_player_id",
+    "passing_yards",
+    "play_deleted",
+    "play_type",
+    "posteam",
+    "qb_dropback",
+    "qb_hit",
+    "qb_kneel",
+    "qb_scramble",
+    "qtr",
+    "receiver_player_id",
+    "rush_attempt",
+    "rusher_player_id",
+    "rushing_yards",
+    "sack",
+    "season_type",
+    "total_away_score",
+    "total_home_score",
+    "two_point_attempt",
+    "yardline_100"
+  ],
+  "qualifiedPriorSourceEvidence": {
+    "path": "qa/home-gem-point/reviews/incoming-source-audit-995.json",
+    "sha256": "2d58910a4834b279674bf3e22954eaaded8ec4310afd2c51c39a489efe91bbdb",
+    "originalStatus": "passed-read-only-source-delta-audit-for-995-integration",
+    "originalAssertions": 111463,
+    "carriedFacts": "Allfive source books preserve exported numeric values/identities; unchanged primary games/snaps/IDs and unchanged PBP consumed inputs retain the995 raw projection support. The new current provider designation receives separate fresh corroboration.",
+    "primaryHashesCurrent": {
+      "nflverse_games": "368c6c5011f078aeb76d868d091ad81bd56cf963d9c1d97f8d83462f71c8a392",
+      "nflverse_teams": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "nflverse_roster": "78b497fa06d74b190b8f8cdb845e6e3395eb55c5b6a5399802635de51f6a29d5",
+      "nflverse_player_stats": "8304933b6ee2bc2ed132a8932cd579e479ebb5477deb677487544cc51bf67606",
+      "nflverse_depth": "fa165ba061c4bbe8bdfe5858ab4b7ef5d99d5b09a24204c88349fbf46c133644",
+      "nflverse_injuries": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+      "nflverse_player_stats_2005": "cfaaa943c6b869c5eedfc9611400f0ca47a972bdf30823528b5929f4f9298273",
+      "nflverse_player_stats_2006": "32f5825b8e174ec00641c935de811d4deeb10b4a96807c5c1926f2a16d889714",
+      "nflverse_player_stats_2007": "24829b3f384aad21da867c06180f572a45619c793e94cdbf9e828bd892fa7837",
+      "nflverse_player_stats_2008": "1b0c72f0540f21c8d63f0f86717b821dd05bc97081480764db56ad74cd889856",
+      "nflverse_player_stats_2009": "4f2dbdef657aa2c961595b2a2c832e0fb2a7c13e41c301380900faff266c3477",
+      "nflverse_player_stats_2010": "76f33d484781a3bc1852aa8aab5003874ab219dcb6c67a7e2e881be9822c9d13",
+      "nflverse_player_stats_2011": "c1720e9e5ed59b7def9486ae650ea73ee80dda1fd2ab97d50c5fb4f6565dbeaa",
+      "nflverse_player_stats_2012": "5c8885d93ec529efa9d729cec1ef255f438ee27a59eba6e156a360fa0045b56b",
+      "nflverse_player_stats_2013": "f7329a8f15084c9c23d841f14eb117fcc630d6c82913501f3c60f2d8f4e651a4",
+      "nflverse_player_stats_2014": "a389b10d94eb8e6b9a153223d381aab821b0eff4cd73967835a21032192abc61",
+      "nflverse_player_stats_2015": "21052baa3b3291a92faf3e6827891295010dca8cc5cefd5a909984b9d7b64664",
+      "nflverse_player_stats_2016": "eb0264c65d1ef593196afcd4ba24e9f2e9b7942923bf6f4bb4639684e2c4d470",
+      "nflverse_player_stats_2017": "592b0916065987b0b3afb0480162f03350d16b12250dc42b0f194e2ab1378563",
+      "nflverse_player_stats_2018": "c53021bcfc9f89d30edd6f1fe145a1d7d6ce469efeec75974fe9f0adac568642",
+      "nflverse_player_stats_2019": "a05558126b1209b80fe11a8f18938cb35816370bf9990975a87de49e9eed7376",
+      "nflverse_player_stats_2020": "05b992676faccc8940efbf6242cb76358069372d31d7c2e02c1a4acdcd3cbe18",
+      "nflverse_player_stats_2021": "41915fb49238902ad1f129ebf0405b11a1e710454ae0fe8f7b3e4f9145875f48",
+      "nflverse_player_stats_2022": "ad426c3fe5bf1cc30c3f137fdfe96d054e19d400879ee4413129da49fa7b54be",
+      "nflverse_player_stats_2023": "f19cb71a5de0dce7fd09376026237c9ee9d5a93fe13815a2ea3ec2d37204cb17",
+      "nflverse_player_stats_2024": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+      "nflverse_player_stats_2025": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "nflverse_player_ids": "97d15de28f366d0548bd0cb10a55f1f41e73752d10054c710075277fba6ef29e",
+      "nflverse_snaps_2025": "3fc2deb0e9ad86d34d4578cb80bb21c95253e088ee22ca028adf46f7485eff1f",
+      "nflverse_pbp_2025": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+      "nflverse_snaps_2026": "fd2656dbe119dfe49f67e3df980b35b1f999ee49b76aeb5fb89797dea95379c6",
+      "nflverse_pbp_2026": "e7c162e793cb0f828b97c9c92bf6efd7d60ff35eb6ef9b407b8d16001fd2a39a"
+    },
+    "qualification": "Original995 raw download receipts and111463assertions retain their exact995 identity. They are not rerun or relabelled asfcdf. Freshfcdf PBP raw identity and every-row input comparison separately support the unchanged projection."
+  },
+  "freshnessFacts": [
+    {
+      "file": "current.json",
+      "season": 2026,
+      "currentWeek": 5,
+      "throughWeek": 5,
+      "retrievedAt": "2026-10-09T12:31:36Z",
+      "generatedAt": "2026-10-09T12:31:38Z",
+      "sourceCount": 30
+    },
+    {
+      "file": "provenance.json",
+      "retrievedAt": "2026-10-09T12:31:36Z",
+      "generatedAt": "2026-10-09T12:31:38Z",
+      "sourceCount": 30
+    },
+    {
+      "file": "player-history.json",
+      "season": 2026,
+      "retrievedAt": "2026-10-08T06:28:03Z",
+      "generatedAt": "2026-10-09T12:31:38Z",
+      "sourceCount": 24
+    },
+    {
+      "file": "team-details.json",
+      "season": 2026,
+      "currentWeek": 5,
+      "throughWeek": 5,
+      "retrievedAt": "2026-10-09T12:31:36Z",
+      "generatedAt": "2026-10-09T12:31:43Z",
+      "sourceCount": 32
+    },
+    {
+      "file": "matchup-breakdown.json",
+      "season": 2026,
+      "currentWeek": 5,
+      "throughWeek": 5,
+      "retrievedAt": "2026-10-09T12:31:36Z",
+      "generatedAt": "2026-10-09T12:32:02Z",
+      "sourceCount": 125
+    }
+  ],
+  "executedExistingChecks": [
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-data.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"teamCount\": 32,\n  \"rosterCount\": 80,\n  \"activeRosterCount\": 53,\n  \"season\": 2026,\n  \"currentWeek\": 5,\n  \"throughWeek\": 5,\n  \"featured\": [\n    \"Aaron Rodgers\",\n    \"Jaylen Warren\",\n    \"DK Metcalf\",\n    \"Michael Pittman\",\n    \"Pat Freiermuth\"\n  ],\n  \"disagreements\": [\n    {\n      \"playerId\": \"00-0035239\",\n      \"name\": \"Sean Murphy-Bunting\",\n      \"field\": \"jersey\",\n      \"primary\": \"26\",\n      \"official\": 27,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038395\",\n      \"name\": \"Terell Smith\",\n      \"field\": \"jersey\",\n      \"primary\": \"36\",\n      \"official\": 39,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039883\",\n      \"name\": \"Daequan Hardy\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039626\",\n      \"name\": \"Cole Burgess\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0040176\",\n      \"name\": \"Bradyn Swinson\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"No matched roster entry\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\",\n        \"espn_athlete_4431424\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038388\",\n      \"name\": \"Darius Rush\",\n      \"field\": \"jersey\",\n      \"primary\": \"36\",\n      \"official\": 38,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038581\",\n      \"name\": \"K.J. Henry\",\n      \"field\": \"position\",\n      \"primary\": \"DL\",\n      \"official\": \"LB\",\n      \"espn\": \"LB\",\n      \"note\": \"Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039054\",\n      \"name\": \"Marte Mapu\",\n      \"field\": \"jersey\",\n      \"primary\": \"14\",\n      \"official\": 48,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0037382\",\n      \"name\": \"Brandon Johnson\",\n      \"field\": \"jersey\",\n      \"primary\": \"82\",\n      \"official\": 89,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0036165\",\n      \"name\": \"Isaiah Hodgins\",\n      \"field\": \"jersey\",\n      \"primary\": \"89\",\n      \"official\": 82,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0040618\",\n      \"name\": \"Max Hurleman\",\n      \"field\": \"position\",\n      \"primary\": \"WR\",\n      \"official\": \"WR\",\n      \"espn\": \"RB\",\n      \"note\": \"Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-09T12:31:39Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    }\n  ],\n  \"provenanceHash\": \"passed\",\n  \"playerHistory\": {\n    \"status\": \"passed\",\n    \"playerCount\": 80,\n    \"gameRowCount\": 1273,\n    \"coverage\": {\n      \"firstSeason\": 2005,\n      \"lastSeason\": 2026,\n      \"availableSeasons\": [\n        2005,\n        2006,\n        2007,\n        2008,\n        2009,\n        2010,\n        2011,\n        2012,\n        2013,\n        2014,\n        2015,\n        2016,\n        2017,\n        2018,\n        2019,\n        2020,\n        2021,\n        2022,\n        2023,\n        2024,\n        2025,\n        2026\n      ],\n      \"unavailableSeasons\": [],\n      \"status\": \"verified\",\n      \"cachedRowsNeedingBackfill\": 0\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-team-details.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "{\n  \"teams\": 32,\n  \"uniqueRegularSeasonGames\": 544,\n  \"sourceCount\": 32,\n  \"disagreements\": 4\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-matchup-breakdown.py",
+        "--check"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "{\n  \"teams\": 32,\n  \"players\": 812,\n  \"playerGameRows\": 8171,\n  \"explicitQuarterbackStartRows\": 843,\n  \"disputedStartingRoleRows\": 22,\n  \"unavailableStartingRoleRows\": 12,\n  \"sources\": 125,\n  \"disagreements\": 21\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "qa/data.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.108s\n\nOK\n",
+      "testsReported": 22,
+      "skipped": 0,
+      "testsExecuted": 22
+    },
+    {
+      "command": [
+        "python3",
+        "qa/team-details/data.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_absent_current_season_cannot_silently_reset_team_records (__main__.AdverseSourceFixtures.test_absent_current_season_cannot_silently_reset_team_records) ... ok\ntest_impossible_future_scores_cannot_be_final (__main__.AdverseSourceFixtures.test_impossible_future_scores_cannot_be_final) ... ok\ntest_sack_losses_are_subtracted_once_and_missing_cells_do_not_become_zero (__main__.AdverseSourceFixtures.test_sack_losses_are_subtracted_once_and_missing_cells_do_not_become_zero) ... ok\ntest_tampered_cache_cannot_acquire_verified_source_provenance (__main__.AdverseSourceFixtures.test_tampered_cache_cannot_acquire_verified_source_provenance) ... ok\ntest_disagreements_are_explicit_and_critical_fields_unavailable (__main__.SnapshotIntegrity.test_disagreements_are_explicit_and_critical_fields_unavailable) ... ok\ntest_every_team_and_every_copied_game_is_consistent (__main__.SnapshotIntegrity.test_every_team_and_every_copied_game_is_consistent) ... ok\ntest_metric_provenance_efficiency_ranges_and_net_yards (__main__.SnapshotIntegrity.test_metric_provenance_efficiency_ranges_and_net_yards) ... ok\ntest_no_future_completed_games_or_missing_value_zero_fills (__main__.SnapshotIntegrity.test_no_future_completed_games_or_missing_value_zero_fills) ... ok\ntest_raw_source_player_arithmetic_independently_matches_team_yards (__main__.SnapshotIntegrity.test_raw_source_player_arithmetic_independently_matches_team_yards) ... skipped 'Provide --cache-dir for independent raw-source arithmetic'\ntest_records_recompute_from_all_current_final_scores (__main__.SnapshotIntegrity.test_records_recompute_from_all_current_final_scores) ... ok\ntest_sources_and_factual_retrieval_time (__main__.SnapshotIntegrity.test_sources_and_factual_retrieval_time) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.031s\n\nOK (skipped=1)\n",
+      "testsReported": 11,
+      "skipped": 1,
+      "testsExecuted": 10
+    },
+    {
+      "command": [
+        "python3",
+        "qa/source-updates.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n",
+      "testsReported": 7,
+      "skipped": 0,
+      "testsExecuted": 7
+    },
+    {
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/source-monitor.test.py"
+      ],
+      "cwd": "/tmp/home-source-audit-fcdf-jpnfp376",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.004s\n\nOK\n",
+      "testsReported": 6,
+      "skipped": 0,
+      "testsExecuted": 6
+    },
+    {
+      "command": "Existing MatchupDataChecks bounded saved-data/adverse-source subset",
+      "methods": [
+        "test_actual_weekly_practice_survives_differently_scoped_depth_news",
+        "test_advancing_week_does_not_reassign_archived_inactive_bulletin",
+        "test_changed_quote_or_mismatched_event_cannot_establish_role",
+        "test_depth_injury_news_never_acquires_inferred_upcoming_week",
+        "test_direct_role_contradictions_null_both_candidates",
+        "test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list",
+        "test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap",
+        "test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate",
+        "test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash",
+        "test_final_passing_boxscore_never_confirms_schedule_role_candidate",
+        "test_incorrect_evolving_final_score_refused",
+        "test_linked_snapshot_checksums_and_all_clubs",
+        "test_live_event_never_enters_completed_statistics_or_confirmed_starts",
+        "test_missing_passing_cell_does_not_become_zero_or_rating",
+        "test_missing_used_pbp_field_refused",
+        "test_one_snap_first_play_role_keeps_null_statistics",
+        "test_optional_unverified_cache_explicit_unavailable",
+        "test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive",
+        "test_real_target_disagreement_nulls_only_affected_cell_and_rate",
+        "test_relief_attempts_do_not_establish_a_start",
+        "test_required_unverified_cache_refused",
+        "test_scramble_rusher_id_is_in_dropback_denominator",
+        "test_source_correction_resolves_exact_html_recapped_role",
+        "test_tracking_is_not_fabricated_or_hits_mislabelled_pressure",
+        "test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes",
+        "test_uncorroborated_role_is_not_confirmed_or_padded",
+        "test_unfinished_or_mismatched_final_boxscore_cannot_enter_history"
+      ],
+      "executed": 27,
+      "exitCode": 0,
+      "stderr": "test_actual_weekly_practice_survives_differently_scoped_depth_news (matchup_existing_995.MatchupDataChecks.test_actual_weekly_practice_survives_differently_scoped_depth_news) ... ok\ntest_advancing_week_does_not_reassign_archived_inactive_bulletin (matchup_existing_995.MatchupDataChecks.test_advancing_week_does_not_reassign_archived_inactive_bulletin) ... ok\ntest_changed_quote_or_mismatched_event_cannot_establish_role (matchup_existing_995.MatchupDataChecks.test_changed_quote_or_mismatched_event_cannot_establish_role) ... ok\ntest_depth_injury_news_never_acquires_inferred_upcoming_week (matchup_existing_995.MatchupDataChecks.test_depth_injury_news_never_acquires_inferred_upcoming_week) ... ok\ntest_direct_role_contradictions_null_both_candidates (matchup_existing_995.MatchupDataChecks.test_direct_role_contradictions_null_both_candidates) ... ok\ntest_event_report_is_scoped_partial_and_never_confirms_official_inactive_list (matchup_existing_995.MatchupDataChecks.test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list) ... ok\ntest_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap (matchup_existing_995.MatchupDataChecks.test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap) ... ok\ntest_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate (matchup_existing_995.MatchupDataChecks.test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate) ... ok\ntest_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash (matchup_existing_995.MatchupDataChecks.test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash) ... ok\ntest_final_passing_boxscore_never_confirms_schedule_role_candidate (matchup_existing_995.MatchupDataChecks.test_final_passing_boxscore_never_confirms_schedule_role_candidate) ... ok\ntest_incorrect_evolving_final_score_refused (matchup_existing_995.MatchupDataChecks.test_incorrect_evolving_final_score_refused) ... ok\ntest_linked_snapshot_checksums_and_all_clubs (matchup_existing_995.MatchupDataChecks.test_linked_snapshot_checksums_and_all_clubs) ... ok\ntest_live_event_never_enters_completed_statistics_or_confirmed_starts (matchup_existing_995.MatchupDataChecks.test_live_event_never_enters_completed_statistics_or_confirmed_starts) ... ok\ntest_missing_passing_cell_does_not_become_zero_or_rating (matchup_existing_995.MatchupDataChecks.test_missing_passing_cell_does_not_become_zero_or_rating) ... ok\ntest_missing_used_pbp_field_refused (matchup_existing_995.MatchupDataChecks.test_missing_used_pbp_field_refused) ... ok\ntest_one_snap_first_play_role_keeps_null_statistics (matchup_existing_995.MatchupDataChecks.test_one_snap_first_play_role_keeps_null_statistics) ... ok\ntest_optional_unverified_cache_explicit_unavailable (matchup_existing_995.MatchupDataChecks.test_optional_unverified_cache_explicit_unavailable) ... ok\ntest_projection_is_inferred_and_reported_out_is_not_confirmed_inactive (matchup_existing_995.MatchupDataChecks.test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive) ... ok\ntest_real_target_disagreement_nulls_only_affected_cell_and_rate (matchup_existing_995.MatchupDataChecks.test_real_target_disagreement_nulls_only_affected_cell_and_rate) ... ok\ntest_relief_attempts_do_not_establish_a_start (matchup_existing_995.MatchupDataChecks.test_relief_attempts_do_not_establish_a_start) ... ok\ntest_required_unverified_cache_refused (matchup_existing_995.MatchupDataChecks.test_required_unverified_cache_refused) ... ok\ntest_scramble_rusher_id_is_in_dropback_denominator (matchup_existing_995.MatchupDataChecks.test_scramble_rusher_id_is_in_dropback_denominator) ... ok\ntest_source_correction_resolves_exact_html_recapped_role (matchup_existing_995.MatchupDataChecks.test_source_correction_resolves_exact_html_recapped_role) ... ok\ntest_tracking_is_not_fabricated_or_hits_mislabelled_pressure (matchup_existing_995.MatchupDataChecks.test_tracking_is_not_fabricated_or_hits_mislabelled_pressure) ... ok\ntest_truncated_pbp_with_static_final_scores_cannot_certify_zeroes (matchup_existing_995.MatchupDataChecks.test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes) ... ok\ntest_uncorroborated_role_is_not_confirmed_or_padded (matchup_existing_995.MatchupDataChecks.test_uncorroborated_role_is_not_confirmed_or_padded) ... ok\ntest_unfinished_or_mismatched_final_boxscore_cannot_enter_history (matchup_existing_995.MatchupDataChecks.test_unfinished_or_mismatched_final_boxscore_cannot_enter_history) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.136s\n\nOK\n",
+      "excludedRawManifestMethods": [
+        "test_audit_archives_reproduce_source_response_hashes",
+        "test_injury_identity_merging_retains_published_practice",
+        "test_missing_statistics_do_not_substitute_older_qb_start",
+        "test_opponent_starts_include_actual_prior_seasons_and_no_padding",
+        "test_position_changed_receiver_keeps_known_zero_offensive_snaps",
+        "test_stale_manifest_refused_before_source_assertions"
+      ],
+      "excludedReason": "Automated incoming commits do not retain a fresh complete raw source-manifest; previous releases cannot be relabelled as 995 evidence."
+    }
+  ],
+  "newDeltaChecks": {
+    "assertions": 285,
+    "checks": {
+      "ExactQualifiedPrior995SourceReview": 1,
+      "Prior995SourceReviewActuallyPassed": 1,
+      "AllFiveBeforeBodiesExactlyPrior995AuditedIncoming": 1,
+      "ExactOneActualDesignationChangeAnd62SameEventAliasLeaves": 1,
+      "ExactChangedProviderDesignation": 1,
+      "AllEvent401872980AliasesExactSameURLAndBytes": 2,
+      "UniqueSourceIDs": 5,
+      "RetrievalAgeIsOldestApplicableRealSource": 5,
+      "DeclaredVerifiedSourceHashRetrievalAndPublicationChronology": 241,
+      "FreshPBPBodyExactFCDFDeclaredHashOverVerifiedHTTPS": 1,
+      "EveryActualPBPRowRetainsSameSchemaGameAndPlayIdentity": 1,
+      "AllPBPInputCellsUsedForExportedCountsCoverageAndDenominatorsUnchanged": 1,
+      "FreshESPNCorroborationActuallyRetrievedOverVerifiedHTTPS": 1,
+      "FreshActualProviderStatusAndPublishedDateCorroborateFCDFChangedRecord": 1,
+      "FreshActualProviderEventSeasonWeekContextMatches": 1,
+      "OutDoesNotBecomeConfirmedInactiveOrKnownPractice": 1,
+      "PartialOfficialListLimitationRetained": 1,
+      "ActualCurrentFCDFRuntimeHasExactCoordinatorE873Identity": 1,
+      "All242NondataRuntimeBodiesExactHistorical9220AndAcceptedHome": 1,
+      "AllFiveCurrentDataBodiesExactFCDFIntegrationByCoordinator": 1,
+      "ExactlyFiveIncomingJSONPaths": 1,
+      "NoSourcePathConflictWithLocalHomeAndEvidenceCommits": 1,
+      "SourceWorkflowCodeUnchanged": 1,
+      "RecordedCoordinatorBoundedWindowPreservesCompletedFCDFRunAndRestorationRequirement": 1,
+      "ExistingExactFCDFValidatorOrTestSuitePassed": 8,
+      "OrdinaryPushAncestryPreserved": 4
+    },
+    "failures": []
+  },
+  "conflicts": {
+    "incomingVsLocalHomeAndEvidencePathIntersection": [],
+    "forcePushNeeded": false,
+    "all242AcceptedNondataBodiesUntouched": true,
+    "workingSourceNowExactFCDF": true,
+    "coordinatorIntegratedDuringAudit": true,
+    "qualification": "Historical9220 observation predates coordinator ordinary rebase ontofcdf after the995 WPE companion closed. Currente873 runtime contains all five exactfcdf datasets and all242 unchanged accepted nondata bodies. This reviewer performs no integration; a newfcdf companion must carry its own identities."
+  },
+  "sourceWorkflowPublicationWindow": {
+    "path": "qa/home-gem-point/deployment-workflow-window.json",
+    "sha256": "9591c82758b411d8297c7eb851bd80eea85c8f4aff1683764fa50e55b3abffb0",
+    "recordedStatus": "temporarily-held-for-consistent-publication-verification",
+    "originalState": "active",
+    "recordedHeldState": "disabled_manually",
+    "drainedCompletedSourceRun": 37930393187,
+    "runConclusion": "success",
+    "sourceCommitPreserved": "fcdf889b107b7a21ab08725ba85df7e4af7b7d54",
+    "workflowCodeSha256": "f3ddf178341786d45696380d06e7a6f4cb717264d49b3104706d5f7770239aea",
+    "heldOrChangedByThisReviewer": false,
+    "mandatoryRestoration": "Coordinator MUST restore original active workflow after actual hosted/evidence verification. Release completion requires recording restoration; this audit neither restores nor certifies it."
+  },
+  "runtimeChangedByReview": false,
+  "repoMutationsByReview": [
+    "qa/home-gem-point/reviews/incoming-source-audit-fcdf.json only"
+  ],
+  "releaseQualification": "Source delta accepted for preservation/integration only. Source995 native/browser receipts remain995, and a separatefcdf companion and actual hosted/evidence verification must precede release completion and workflow restoration.",
+  "limitations": [
+    "Fresh ESPN body hash differs from the declared12:31:45fcdf body; it proves current actual Out status/date/event context, not an exact reproduction of the incoming raw response.",
+    "Other changed ESPN/official roster raw hashes are recorded from immutablefcdf provenance. Their unchanged exported facts rely on qualified995 semantic/source proof; they were not all freshly downloaded.",
+    "Full old/new PBP CSV comparison covers11327identical game/play rows,261actual changedcells:172surfacecells and89unused EPA/probabilitycells. None affect exported PBP input fields, counts, coverage or target denominators.",
+    "Existing tests executed72methods plus3saved-data validators. Team suite reports11with1raw-cache arithmetic skip. Six matchup raw-manifest-dependent methods remain unrun; older archives are notfcdf evidence.",
+    "No browser, workflow API, Git mutation, push or deployment operation was performed by this reviewer. Temporary-workflow state is read from the coordinator\u2019s saved receipt and must be restored by the coordinator."
+  ],
+  "auditHelpers": [
+    {
+      "path": "/tmp/home-incoming-source-audit-fcdf.py",
+      "sha256": "c8de3e50a4a8140e955b7cd28d0a5197e4b0ede7bf47d4094f740ec60163555e"
+    }
+  ],
+  "failures": []
+}
