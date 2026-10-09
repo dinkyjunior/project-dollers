@@ -1,0 +1,25 @@
+{
+  "status": "accepted",
+  "agent": "/root/matchup_controls",
+  "auditedAt": "2026-10-09T05:36:11.421042+00:00",
+  "scope": "Independent additive hosted gate code and actual source-bound native contract review only; no browser or runtime/helper/report modifications.",
+  "immutableLocalGate": {
+    "path": "qa/matchup-breakdown/verify-final-source-extension.py",
+    "sha256": "9d42b75af6924eaeba765ba34c18b9faf841a852a10a4635a657d52383429fae"
+  },
+  "newHostedGate": {
+    "path": "qa/matchup-breakdown/verify-final-source-extension-hosted.py",
+    "sha256": "07ab233db813c2a4575b4a9595b7336cba2c8a90d72f45255d6f8f84d5f85d57"
+  },
+  "actualNativeFunctionEquivalentExceptCaptureDiscovery": true,
+  "oldWholeReportPNGPaths": 41,
+  "actualCaptureEmitterPNGPaths": 18,
+  "actualNativeInputs": 58,
+  "servedRuntime235AssertionsRetained": true,
+  "localChainAndMathSourceSixReviewerAssertionsDelegatedToImmutableLocalInspect": true,
+  "actualReport": {
+    "path": "qa/matchup-breakdown/final-basic-webkit-hosted-v5/results.json",
+    "sha256": "a9a9150d75aed92501306220904e6b1a558c91ec6f30a8d44b67775520f40f8d"
+  },
+  "qualification": "Whole-report discovery includes static served PNG bodies; capture membership properly binds only r.originals, while all235 decoded HTTPS asset identities remain independently mandatory."
+}

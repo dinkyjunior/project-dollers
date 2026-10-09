@@ -1,0 +1,15 @@
+{
+  "status": "validator-diagnostic",
+  "at": "2026-10-09T05:34:03.944013+00:00",
+  "originalValidator": {
+    "path": "qa/matchup-breakdown/verify-final-source-extension.py",
+    "sha256": "9d42b75af6924eaeba765ba34c18b9faf841a852a10a4635a657d52383429fae"
+  },
+  "completedActualReport": {
+    "path": "qa/matchup-breakdown/final-basic-webkit-hosted-v5/results.json",
+    "sha256": "a9a9150d75aed92501306220904e6b1a558c91ec6f30a8d44b67775520f40f8d"
+  },
+  "actualCapturedOriginals": 18,
+  "allPngHashRecordsIncludingServedStaticAssets": 41,
+  "diagnosis": "Recursive whole-report image discovery includes actual servedRuntime PNG assets in addition to original capture emitter records. Scope capture membership to original capture inventory; preserve all actual235 decoded-body validation separately. No app, source, native assertion, report or original change."
+}

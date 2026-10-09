@@ -1,4 +1,4 @@
-# Final player data and current matchup release candidate
+# Final player data and verified current matchup release
 
 The current bundle was assembled on 9 October 2026 at 04:47:49 UTC, retaining
 individual providers’ actual retrieval times. Matchup SHA is
@@ -46,6 +46,28 @@ uses actual browser output at 393 × 852 and 430 × 896. Registered pixel equali
 physical iPhone performance and instantaneous upstream push delivery are not
 asserted. Publication is complete only after successful real Pages deployment
 and strict actual-site checks; the release receipts record those results.
+
+## Actual final publication and acceptance
+
+The reviewed app commit `4dc8385c00ad3e07bc5dc7409376e4bc571a1749` passed the real
+[Pages deployment 37888105692](https://github.com/dinkyjunior/project-dollers/actions/runs/37888105692)
+with all three jobs successful. The completed strict HTTPS WebKit report
+`final-basic-webkit-hosted-v5/results.json`, SHA `a9a9150d75aed92501306220904e6b1a558c91ec6f30a8d44b67775520f40f8d`,
+records 58 actual native actions, eight contracts at each requested phone size,
+18 untouched originals and all 235 exact production runtime bodies. All six
+specialists personally inspected these originals and sealed independent receipts.
+The current hosted review SHA is `3afc2a1c3976d4f33514e235534b60fc01a867d702adc08fd7f3828ec44ddd0d`;
+its gate passed in QA and an independent coordinator invocation.
+
+Actual gzip delivery is 1,499,004 encoded bytes for the exact 28,057,393-byte
+source book. The V4 source ZIP is 84,555,987 bytes, SHA
+`5c296bb3fb2ca1f499c93169af59765511e965ce94ae363b0a097a18d1795efe`.
+Its 708 entries pass CRC and source/runtime-member identity checks. Final public
+verification checks the complete ZIP body, current evidence/gallery files, all
+runtime bodies, actual Pages jobs and both branch heads. It is saved outside Git
+so the final deployment receipt does not require a self-referential commit.
+The source updater has been restored and its actual API state is active.
+PR #1 was already merged; this release is an authorized follow-up on that PR.
 
 ## Historical completed-game checkpoint
 

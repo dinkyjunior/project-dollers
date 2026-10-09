@@ -1,12 +1,25 @@
 # Codex Start Here
 
-## Current Matchup Breakdown candidate — 9 October 2026 UTC
+## Current Matchup Breakdown — deployed and verified, 9 October 2026 UTC
 
-All six independent specialists accepted the current mobile originals before publication.
-Chromium and WebKit passed both requested phone sizes: 116 native actions and
-36 untouched captures. Current release runtime is `5e4586d1`; the source-extension
-gate passed in independent QA and coordinator runs. Publication and actual-site
-verification are the remaining release steps. Automatic source updates are restored.
+All six independent specialists accepted the local and actual deployed mobile originals.
+Chromium and WebKit passed both requested phone sizes locally: 116 native actions
+and 36 untouched captures. Strict HTTPS WebKit then passed 58 actual native actions,
+eight contracts at each phone size, and 18 new untouched production captures.
+All 235 real HTTPS runtime bodies match the accepted `5e4586d1` runtime; the actual
+feed is gzip-compressed to 1,499,004 bytes with the exact 28,057,393-byte source body.
+The separate hosted acceptance gate passed in independent QA and coordinator runs.
+
+Application commit `4dc8385c00ad3e07bc5dc7409376e4bc571a1749` was actually published
+by Pages run [37888105692](https://github.com/dinkyjunior/project-dollers/actions/runs/37888105692),
+with build, deploy and report-build-status all successful. Current hosted browser
+report is `final-basic-webkit-hosted-v5/results.json` (SHA `a9a9150d`), and current
+six-specialist acceptance is `release/review-final-basic-hosted.json` (SHA `3afc2a1c`).
+The screenshot gallery includes this current evidence first and retains earlier,
+explicitly dated source checkpoints. The V4 source ZIP preserves the exact current
+runtime and all 93 genuine source-response archives; its handover copies record
+the pre-publication checkpoint. Final hosted receipts are retained separately.
+Automatic source updates are verified active after the short owned release hold.
 
 
 The second approved matchup screen is implemented with linked Form & H2H,

@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-09T05:36:00.772944+00:00",
+  "completedAt": "2026-10-09T05:36:01.081992+00:00",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-final-source-extension-hosted.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-final-basic-hosted.json"
+  ],
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-final-basic-hosted.json",
+    "sha256": "3afc2a1c3976d4f33514e235534b60fc01a867d702adc08fd7f3828ec44ddd0d"
+  },
+  "gate": {
+    "path": "qa/matchup-breakdown/verify-final-source-extension-hosted.py",
+    "sha256": "07ab233db813c2a4575b4a9595b7336cba2c8a90d72f45255d6f8f84d5f85d57"
+  },
+  "exitCode": 0,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"runtimeManifestSha256\": \"5e4586d175b585dbadd73ef3a75a593b4693d21fa12650fcd981c5f77c471a56\",\n  \"runtimeFileCount\": 235,\n  \"preservedRuntimeFiles\": 229,\n  \"changedRuntimePaths\": [\n    \"assets/data/current.json\",\n    \"assets/data/matchup-breakdown.json\",\n    \"assets/data/player-history.json\",\n    \"assets/data/provenance.json\",\n    \"assets/data/team-details.json\",\n    \"assets/matchup-breakdown.js\"\n  ],\n  \"currentMathematicsAssertions\": 214130,\n  \"currentTeamWindowStates\": 1536,\n  \"currentArchivedSourceAssertions\": 715533,\n  \"sourceResponsesAudited\": 93,\n  \"independentPlayerAssertions\": 776,\n  \"localNativeInputs\": 116,\n  \"localCommonOriginals\": 36,\n  \"specialists\": 6,\n  \"qualification\": \"Immutable accepted local chain plus genuine strict-TLS hosted native coverage. Capture emitter inventory and served asset identities are validated separately; all earlier scope/assertions retained.\",\n  \"hosted\": true,\n  \"hostedNativeInputs\": 58,\n  \"hostedCommonOriginals\": 18,\n  \"actualHTTPSBodies\": 235,\n  \"actualFeedCompression\": {\n    \"file\": \"assets/data/matchup-breakdown.json\",\n    \"status\": 200,\n    \"bytes\": 28057393,\n    \"contentEncoding\": \"gzip\",\n    \"contentLength\": \"1499004\",\n    \"sha256\": \"8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3\"\n  }\n}\n",
+  "stderr": "",
+  "qualification": "Actual separate current-source strict-TLS production acceptance, with untouched source-bound historical/local receipts.",
+  "result": {
+    "status": "passed",
+    "runtimeManifestSha256": "5e4586d175b585dbadd73ef3a75a593b4693d21fa12650fcd981c5f77c471a56",
+    "runtimeFileCount": 235,
+    "preservedRuntimeFiles": 229,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json",
+      "assets/matchup-breakdown.js"
+    ],
+    "currentMathematicsAssertions": 214130,
+    "currentTeamWindowStates": 1536,
+    "currentArchivedSourceAssertions": 715533,
+    "sourceResponsesAudited": 93,
+    "independentPlayerAssertions": 776,
+    "localNativeInputs": 116,
+    "localCommonOriginals": 36,
+    "specialists": 6,
+    "qualification": "Immutable accepted local chain plus genuine strict-TLS hosted native coverage. Capture emitter inventory and served asset identities are validated separately; all earlier scope/assertions retained.",
+    "hosted": true,
+    "hostedNativeInputs": 58,
+    "hostedCommonOriginals": 18,
+    "actualHTTPSBodies": 235,
+    "actualFeedCompression": {
+      "file": "assets/data/matchup-breakdown.json",
+      "status": 200,
+      "bytes": 28057393,
+      "contentEncoding": "gzip",
+      "contentLength": "1499004",
+      "sha256": "8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3"
+    }
+  }
+}
