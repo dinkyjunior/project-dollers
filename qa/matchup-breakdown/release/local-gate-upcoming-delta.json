@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-09T02:41:24.832631+00:00",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-upcoming-delta.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-upcoming-delta.json"
+  ],
+  "actualToolExitCode": 0,
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-upcoming-delta.json",
+    "sha256": "b7e7623e0567abd08f486f1c01194c8e5b127f187925193dc12626401ddaa01b"
+  },
+  "gate": {
+    "path": "qa/matchup-breakdown/verify-upcoming-delta.py",
+    "sha256": "8f7eeb420cf6c0cb8d69f379a032ef3adbb8ace94f92b30dfe5abb205c1c5cd7"
+  },
+  "result": {
+    "status": "passed",
+    "kind": "historical-full-plus-current-reviewed-delta",
+    "baseRuntimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+    "runtimeManifestSha256": "4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4",
+    "runtimeFileCount": 235,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json",
+      "assets/team-details.js"
+    ],
+    "historicalNativeInputs": 4110,
+    "currentDeltaNativeInputs": 320,
+    "statisticalProjectionBranches": 1536,
+    "changedAvailabilityFactGroups": 12,
+    "specialistCount": 6,
+    "currentOriginalScreenshotCount": 14,
+    "hostedVerificationRequired": false,
+    "qualification": "Historical 4110 inputs retain their old source binding; current acceptance adds a verified equal statistical projection and new selector/fixture/price/availability native checks."
+  },
+  "qualification": "Receipt records the immediately preceding actual tool command exit0 and printed JSON result; no additional test execution or failure relabelling."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "static_delta_proven_not_release_acceptance",
+  "auditor": "/root/matchup_assets_motion",
+  "auditedAt": "2026-10-09T02:15:00.514722+00:00",
+  "previousRuntimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+  "actualCurrentCanonicalSha256": "fb9da4bb7d561e16d4990312df485ba10357a1ae39caf1b04145821c38ddb8a9",
+  "runtimeCount": 235,
+  "unchangedRuntimeCount": 229,
+  "changedRuntime": [
+    {
+      "path": "assets/data/current.json",
+      "oldSha256": "40ecad6d72a8857d4995d1f3ff5afd651f149d2cf4a8f61b66ffc58a5ad716c4",
+      "actualSha256": "26b637ecc0f48193302fe4f9edf545beb4d672d1d81089330288befe93e5926d"
+    },
+    {
+      "path": "assets/data/matchup-breakdown.json",
+      "oldSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+      "actualSha256": "ad5f00abf0ea111f35d3ef7e2c31584e299d233c94b69c6e96de34efef60dd2d"
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "oldSha256": "b5169e7af5985f399cf6c9c01bb4f698aec9ec21202428430f80a5ea12b95aa5",
+      "actualSha256": "390e60d1bddacd44f43c92854c39ba1e7be48d3c247c6c10a79e9d490c51b485"
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "oldSha256": "81dcc0845a3df2c0ccb5c518bff1ba583cd52f25773e7a39f7dc382143c19a49",
+      "actualSha256": "7b4a0312d1b8b579848d2604c020c7e25c8bb37967226e461b7758dadc971e6a"
+    },
+    {
+      "path": "assets/data/team-details.json",
+      "oldSha256": "74b55922be1b1e1d738b64f06af993e4951211d3f1871a50904271750e65720b",
+      "actualSha256": "127efd1bfa31c0017930efcf784dfdcd907ce3cc9c1919f48be09aeadaba6e4f"
+    },
+    {
+      "path": "assets/team-details.js",
+      "oldSha256": "2759051dcf11055230757a320895d63ec90885a333834cd25bb6edc901979fe2",
+      "actualSha256": "1b92e1d07482aa64cdd9da51410216961e5fd7bd1c2130808a6d6e2a36ad5055"
+    }
+  ],
+  "sourceDelta": "Five fresh data files plus bounded TeamDetails nextGame selector only. All asset/CSS/motion files remain byte-identical to accepted historical bundle.",
+  "teamDetailsDelta": "--- base\n+++ actual\n@@ -35,7 +35,10 @@\n     return `${wins}–${losses}${ties ? `–${ties}` : ''}`;\n   }\n   function nextGame() {\n-    return games().filter(game => Number(game.season) === Number(dataset.season) && !final(game) && !['cancelled','postponed'].includes(game.status)).sort((a,b) => String(a.kickoffUtc || a.gameday).localeCompare(String(b.kickoffUtc || b.gameday)))[0] || null;\n+    const eligible = game => Number(game.season) === Number(dataset.season) && (game.home_team === state.team || game.away_team === state.team) && game.status !== 'final' && !['cancelled','postponed'].includes(game.status);\n+    const upcomingId = team()?.upcomingGameId;\n+    const upcoming = upcomingId ? games().find(game => game.id === upcomingId && eligible(game)) : null;\n+    return upcoming || games().filter(eligible).sort((a,b) => String(a.kickoffUtc || a.gameday).localeCompare(String(b.kickoffUtc || b.gameday)))[0] || null;\n   }\n   function dateTime(game) {\n     if (!game?.kickoffUtc) return 'Kickoff unavailable';\n",
+  "fixtureAgreement": {
+    "id": "2026_06_DAL_GB",
+    "week": 6,
+    "kickoffUtc": "2026-10-19T00:20:00Z",
+    "home_team": "GB",
+    "away_team": "DAL",
+    "venue": "Lambeau Field",
+    "status": "scheduled",
+    "homeRest": 7,
+    "awayRest": 10
+  },
+  "preservedResearchDefault": "2026_05_TB_DAL",
+  "pending": "New final canonical freeze, exact W6/native linked TeamDetails and preserved W5 screenshots on both phones, completed delta report and actual hosted originals/compression required. No browser or runtime mutation by this reviewer."
+}

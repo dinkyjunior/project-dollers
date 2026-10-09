@@ -1,5 +1,13 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Matchup Breakdown — fixture correction and fresh-source acceptance, 9 October 2026
+
+The source-designated upcoming fixture now drives Team Details. Dallas's next scheduled game opens Green Bay Week 6; direct `#matchup/DAL` keeps the separately verified current Dallas–Tampa Bay Week 5 research fixture. Their QB/injury contexts stay separate. The correction changes only `nextGame()` in assets/team-details.js; all visual assets, CSS, motion and existing Home/NFL/Steelers code remain unchanged from the full accepted build.
+
+Current reviewed source is matchup SHA `5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a`, with source-specific retrieval times preserved. The current provider event was retrieved at 02:13:24 UTC, published at 02:11:47 UTC: Tampa Bay 21–Dallas 10, third quarter 7:31. It is a timestamped incomplete snapshot, excluded from completed-game windows. Future official QB/inactive facts remain unavailable; dated team bulletins do not become future game-day reports. Automatic incoming commit f7bd185 was preserved before this genuine fresh refresh.
+
+The previous 4,110-input full acceptance remains bound to its historical runtime. Current acceptance uses an explicit six-file delta, all 32 teams' native upcoming/return journeys on both mobile engines/sizes, independent current raw-source/math and 1,536-window projection checks, and all 46 changed availability facts. Read qa/matchup-breakdown/RELEASE.md and the separate current delta review. Actual current hosted verification is still pending at this checkpoint; do not report the release complete until it passes and automatic source refresh is verified active.
+
 ## Matchup Breakdown — locally accepted, publication in progress, 9 October 2026 (Sydney)
 
 The latest approved chat attachment now authorizes the in-depth matchup destination. Dallas → Open Matchup Breakdown and NFL → View matchup / Compare teams enter the correct club and fixture; Back returns to the originating club. The isolated screen implements Form & H2H, Players & QB and Lineup & Travel, source-ranked rushing/receiving tables, detailed player last-five team-game and weekly-opponent histories, quarterback starting-role coverage, injuries, schedules and research controls. Home's existing diamond entry and NFL/Steelers research remain protected; unrelated abandoned Page 4 remains excluded.

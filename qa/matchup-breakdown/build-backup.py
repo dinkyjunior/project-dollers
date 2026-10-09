@@ -25,8 +25,20 @@ def main():
     # required to restore and independently validate this matchup dataset.
     files.update(p for p in (ROOT / "qa").rglob("*") if p.is_file() and
                  p.suffix in {".py", ".cjs", ".mjs", ".js", ".sh", ".md"})
-    files.update(p for p in (ROOT / "qa/matchup-breakdown/data").rglob("*") if p.is_file())
-    files.add(ROOT / "qa/matchup-breakdown/release/runtime-manifest.json")
+    current_evidence = ROOT / "qa/matchup-breakdown/final-source-evidence"
+    for p in (ROOT / "qa/matchup-breakdown/data").rglob("*"):
+        if not p.is_file():
+            continue
+        if current_evidence.exists() and (p.name == "source-manifest.json" or
+                "sources" in p.relative_to(ROOT / "qa/matchup-breakdown/data").parts):
+            # Preserve the immutable week-advance regression fixture; current
+            # raw-source acceptance is in the separately bound fresh directory.
+            if p.name != "espn_fixture_summary_401873007.source.gz":
+                continue
+        files.add(p)
+    if current_evidence.exists():
+        files.update(p for p in current_evidence.rglob("*") if p.is_file())
+    files.update((ROOT / "qa/matchup-breakdown/release").glob("runtime-manifest*.json"))
     files = sorted(p for p in files if "__pycache__" not in p.parts and p != output)
     inventory = [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size,
                   "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in files]
@@ -40,6 +52,11 @@ def main():
                         "server to open index.html; retain the /assets folder. The source includes "
                         "all runtime data, bundled visual assets, update builders, GitHub workflows, "
                         "QA programs and the reviewed raw matchup source archives.\n\n"
+                        "When a newer source archive is present, it is under "
+                        "qa/matchup-breakdown/final-source-evidence. The fixed older "
+                        "week-advance regression fixture remains under data/sources. "
+                        "The previous complete source version is retained separately "
+                        "as project-dollar-matchup-source.zip.\n\n"
                         "This is an application/source backup. Git history, workspace credentials "
                         "and the large browser screenshot/report collection are excluded. "
                         "The public QA gallery and repository retain those reports. "

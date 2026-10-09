@@ -1,0 +1,171 @@
+{
+  "status": "pending-six-current-receipts",
+  "baseAcceptance": {
+    "path": "qa/matchup-breakdown/release/review.json",
+    "sha256": "102b511eed2572a749049b56a298c333cc74e33cfa61bc867a9682f2cab51682"
+  },
+  "baseRuntimeManifest": {
+    "path": "qa/matchup-breakdown/release/runtime-manifest.json",
+    "sha256": "8f93a52a38472cc9c158d80e36a5dcf321f21a86de165fdb990c084c523d96f1"
+  },
+  "baseSourceArchive": {
+    "path": "backups/project-dollar-matchup-source.zip",
+    "sha256": "c12100c0d33f18c505cd034f2a871303aa276399797f805a7f1ea0d2f0775f98"
+  },
+  "baseSelectorBody": {
+    "path": "qa/matchup-breakdown/release/base-team-details-before-upcoming.js",
+    "sha256": "2759051dcf11055230757a320895d63ec90885a333834cd25bb6edc901979fe2"
+  },
+  "runtimeManifest": {
+    "path": "qa/matchup-breakdown/release/runtime-manifest-upcoming-delta.json",
+    "sha256": "ac7cd5c04ea9336d53d3ccd28ac1b90da9c299a80d1ccb30fbe150609623c8cd"
+  },
+  "runtimeManifestSha256": "4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4",
+  "changedRuntimePaths": [
+    "assets/team-details.js",
+    "assets/data/current.json",
+    "assets/data/team-details.json",
+    "assets/data/matchup-breakdown.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json"
+  ],
+  "resolverValidation": {
+    "path": "qa/matchup-breakdown/data/team-upcoming-resolver-validation-v2.json",
+    "sha256": "93e3f4703c38e3a79bf2a75661a3395ede490aaabe0a26301bdf754f0c5604fc"
+  },
+  "independentResolverAudit": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/upcoming-resolver-independent-review.json",
+    "sha256": "47eda8c39a3da6789c0fb251619634568e94e84f45b965be67ed07c66e30a177"
+  },
+  "sourceAdoption": {
+    "path": "qa/matchup-breakdown/release/final-source-adoption.json",
+    "sha256": "c6762a5053a2328a4071be7fa632012a6a10fac64b3fb23f9b1730cabf0fa90a"
+  },
+  "independentSourceAudit": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/audit-final-source-refresh-numeric-1.json",
+    "sha256": "048f97f76a848f6ca3ce833c0e4686bf1839bb72826a935c02c7d0431852a33e"
+  },
+  "fixtureSourceAudit": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/audit-final-source-refresh-context-1.json",
+    "sha256": "1c04bf932586c802d16bcf871c9d8e28cf29eeacd9990dad803377b008fac888"
+  },
+  "projectionEquivalence": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/projected-equivalence-final-source-refresh.json",
+    "sha256": "33288f0d4040bac8dd686427c3801e17e8ba19b74041718a36e42836b404a973"
+  },
+  "nativeReports": [
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-chromium-v2/results.json",
+      "sha256": "7ec7e4bb0ea1ad94f666d429873a37851120a14d7d1ca40e11c16b70c971cefa"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/results.json",
+      "sha256": "16c7a2ac72751ea8fd9731fe25eedcffb04e4d875c080fbda1a21036b0234918"
+    }
+  ],
+  "availabilityReports": [
+    {
+      "path": "qa/matchup-breakdown/current-availability-chromium-v1/results.json",
+      "sha256": "a1b50bed0dd4e604294ad2e18e03b92cd3effee59d2c755b7a293b17cbcd59df"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-availability-webkit-v1/results.json",
+      "sha256": "8b4db8b45d640da80729a36b6fe3934b295076731f304f39caedf73fa2d04ece"
+    }
+  ],
+  "originalScreenshots": [
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-dallas-upcoming-week6.png",
+      "sha256": "8e3ef7f2b1379808485fbb43cd513a965b854f6733161578df4d41280f20687e"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-selected-week6-matchup.png",
+      "sha256": "1025ee0f6ebb4dbcf0dce26b9f401ee755f654c60e35bbc4043457e174c84f6c"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-week6-lineup-context.png",
+      "sha256": "86da8c8292b408f0b2604dfc21ee7a387ce4721a7f3d5304a6fd4bfe10d546fb"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-direct-week5-live.png",
+      "sha256": "3c4735921b020b72d4e7585e036cf1811bb0d058d25bc37a73dd7e82fcd761ea"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-week5-lineup-provider-context.png",
+      "sha256": "19f98d849cfd0853f89356603f5becbd68edd2b3605e1de5374348d77aa5d635"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-393-pittsburgh-week6-prices-unavailable.png",
+      "sha256": "581174a85f29709d5b3be9885a20ea4cb5a0d105799f9bbe013ce40f233a9762"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-dallas-upcoming-week6.png",
+      "sha256": "fd07b9c8f6f4bddb4a24e542c82c455b8e15c6a51b2274a4e3674db66b364c71"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-selected-week6-matchup.png",
+      "sha256": "8054b05e5abeec0e5cecef1f59c146bea691402f208bbb5101b5b2d564f53882"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-week6-lineup-context.png",
+      "sha256": "980299f462dcd509483aaa1f694dab3cfd6ff3d1f7ac1f9396e86ec6d64c5d8c"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-direct-week5-live.png",
+      "sha256": "28785eff00e03718402b551b46113cab685747ce85fc9e0b5b2653ef7e1e502a"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-week5-lineup-provider-context.png",
+      "sha256": "edf5f6810e735d31510eea10e1860480f6d64880110250c7cf3de569e292f956"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-source-delta-webkit-v1/webkit-430-pittsburgh-week6-prices-unavailable.png",
+      "sha256": "92f375423b790905f508ebf8560c9cb5153e407634f07d58417291a051785e81"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-availability-webkit-v1/webkit-393-returned-dallas-week6.png",
+      "sha256": "ecc3f29f68780f993409bb6812adaffc782639cf0bec105022d791f389906056"
+    },
+    {
+      "path": "qa/matchup-breakdown/current-availability-webkit-v1/webkit-430-returned-dallas-week6.png",
+      "sha256": "596d1207d2af591882c74d3035d93e517e6c755c4461697558f597ea990d45c6"
+    }
+  ],
+  "reviewers": [
+    {
+      "name": "visual",
+      "path": "qa/matchup-breakdown/reviews/visual-upcoming-delta.json",
+      "sha256": "97c436c176addfe0d6e13ff2c51b8e80a7081e5c5b47f3ed509fbfe17863a2b2"
+    },
+    {
+      "name": "controls",
+      "path": "qa/matchup-breakdown/reviews/controls-upcoming-delta.json",
+      "sha256": "aa4297b0f718efdcbe1c0d1cadc84ad6fa7cd18e40cce4b4e3dfc95280d5c632"
+    },
+    {
+      "name": "data",
+      "path": "qa/matchup-breakdown/reviews/data-upcoming-delta.json",
+      "sha256": "ececa29f2a50a996c10b927cfd3f8c6a2fddf96ca9f78f2b4134fd5146ca88c6"
+    },
+    {
+      "name": "assets-motion",
+      "path": "qa/matchup-breakdown/reviews/assets-motion-upcoming-delta.json",
+      "sha256": "4566fcb891b1b7070910426c32f93db250dddbadd9f4307841b9376e08bac145"
+    },
+    {
+      "name": "qa",
+      "path": "qa/matchup-breakdown/reviews/qa-upcoming-delta.json",
+      "sha256": "82db8d9297753673b9142c04e41829596529cb36ccc7b230639c22a57d6de36b"
+    }
+  ],
+  "commonInventory": {
+    "path": "qa/matchup-breakdown/release/originals-upcoming-delta-common.json",
+    "sha256": "23c26f6ff29cf323614c5632ef548e27c09a8a04fd397760a5454438e6ff01a3"
+  },
+  "qualification": {
+    "historicalBase": "4,110 original full native inputs remain bound to historical82ae; those full reports/reviews and original15helpers are immutable.",
+    "currentDelta": "Only authoritative TeamDetails nextGame selector and five coherent source JSON bodies changed; statistical/control-eligibility projection independently proved equal in206812 assertions across1536 team-window branches. Current native selector/fixture/price and all46 changed availability facts were audited bothphones/bothengines.",
+    "reference": "Current untouched normal-motion mobile originals personally inspected by allsix specialists against approved attachment; original reference binary is unavailable for mathematical pixel comparison.",
+    "hosted": "Actual current hosted HTTPS verification remains pending and separate."
+  }
+}

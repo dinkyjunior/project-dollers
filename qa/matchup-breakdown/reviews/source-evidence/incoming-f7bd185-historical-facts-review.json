@@ -1,0 +1,49 @@
+{
+  "status": "passed-narrow-historical-delta",
+  "auditedAt": "2026-10-09T02:13:44.162142+00:00",
+  "baseCommit": "79122bedabf8ea16582dbf21ff63a3e793936600",
+  "remoteCommit": "f7bd18512a9fa78f86928ce884d6efd7268a6794",
+  "snapshotSha256": "ad5f00abf0ea111f35d3ef7e2c31584e299d233c94b69c6e96de34efef60dd2d",
+  "method": "Direct exact all-team player maps comparison excluding only enumerated source metadata; coverage lists matched as exact real-identity sets after same metadata exclusion, not arbitrary index differences. No source body equality or full new book numeric/source acceptance claimed.",
+  "excludedMetadataFields": [
+    "bytes",
+    "checkedAt",
+    "currentRetrievedAt",
+    "currentSha256",
+    "etag",
+    "generatedAt",
+    "lastModified",
+    "retrievedAt",
+    "scheduleRetrievedAt",
+    "sha256",
+    "teamDetailsRetrievedAt",
+    "teamDetailsSha256",
+    "tlsVerified"
+  ],
+  "teams": 32,
+  "historicalPlayerGameRows": 8173,
+  "playerFactsUnchanged": true,
+  "coverageSets": {
+    "startingQBMissingStatistics": {
+      "count": 25,
+      "allRealIdentitiesAndRolesEqual": true,
+      "orderNotInterpretedAsFacts": true
+    },
+    "startingRoleUncorroborated": {
+      "count": 12,
+      "allRealIdentitiesAndRolesEqual": true,
+      "orderNotInterpretedAsFacts": true
+    },
+    "startingRoleDisagreements": {
+      "count": 12,
+      "allRealIdentitiesAndRolesEqual": true,
+      "orderNotInterpretedAsFacts": true
+    }
+  },
+  "materialChanges": {
+    "liveSnapshot": "DAL10/TB14 3rd14:00 published01:57Z, still incomplete",
+    "odds": "PIT/TB Week6 old prices become unavailable",
+    "providerReports": "24 added and24 omitted incomplete-list identities including future current-team bulletins; CHI Anthony Johnson Jr IR to Out is one genuine retained-identity status change; timestamps advance; omitted means unknown, not healthy"
+  },
+  "requiredForFinalAcceptance": "Coherent original-response book from legitimate fresh retrieval; do not bind old manifest to new source SHA."
+}

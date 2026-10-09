@@ -1,5 +1,13 @@
 # Codex Start Here
 
+## Matchup Breakdown — fixture correction and fresh-source acceptance, 9 October 2026
+
+The source-designated upcoming fixture now drives Team Details. Dallas's next scheduled game opens Green Bay Week 6; direct `#matchup/DAL` keeps the separately verified current Dallas–Tampa Bay Week 5 research fixture. Their QB/injury contexts stay separate. The correction changes only `nextGame()` in assets/team-details.js; all visual assets, CSS, motion and existing Home/NFL/Steelers code remain unchanged from the full accepted build.
+
+Current reviewed source is matchup SHA `5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a`, with source-specific retrieval times preserved. The current provider event was retrieved at 02:13:24 UTC, published at 02:11:47 UTC: Tampa Bay 21–Dallas 10, third quarter 7:31. It is a timestamped incomplete snapshot, excluded from completed-game windows. Future official QB/inactive facts remain unavailable; dated team bulletins do not become future game-day reports. Automatic incoming commit f7bd185 was preserved before this genuine fresh refresh.
+
+The previous 4,110-input full acceptance remains bound to its historical runtime. Current acceptance uses an explicit six-file delta, all 32 teams' native upcoming/return journeys on both mobile engines/sizes, independent current raw-source/math and 1,536-window projection checks, and all 46 changed availability facts. Read qa/matchup-breakdown/RELEASE.md and the separate current delta review. Actual current hosted verification is still pending at this checkpoint; do not report the release complete until it passes and automatic source refresh is verified active.
+
 ## Matchup Breakdown — locally accepted, publication in progress, 9 October 2026 (Sydney)
 
 Continue the latest user-authorized second matchup render, not the earlier NFL-only destination hold. Read the current first section of CODEX_HANDOFF_STATUS.md and qa/matchup-breakdown/RELEASE.md. The new isolated route is `#matchup/DAL`; all 32 club routes use verified source data. Complete full Chromium/WebKit, six independent screenshot/function/data reviews and the source-bound `verify-release.py` gate before publication. Then verify the exact successful Pages build and the actual hosted website. Preserve Home/NFL/Steelers and exclude unrelated abandoned Page 4.

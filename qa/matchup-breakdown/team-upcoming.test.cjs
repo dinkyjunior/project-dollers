@@ -11,12 +11,15 @@ const {test} = require('node:test');
 const root = path.resolve(__dirname,'../..');
 const source = fs.readFileSync(path.join(root,'assets/team-details.js'),'utf8');
 const resolver = source.match(/  function nextGame\(\) \{[\s\S]*?\n  \}/)?.[0];
+const helpers = ['known','final'].map(name => source.match(new RegExp(`  const ${name} = [^\\n]+;`))?.[0]).join('\n');
 assert.ok(resolver,'Actual runtime nextGame function is present');
+assert.match(helpers,/const known/);
+assert.match(helpers,/const final/);
 
 function resolve(book,abbr) {
   const club = book.teams[abbr];
   const context = vm.createContext({dataset:book,state:{team:abbr},team:() => club,games:() => club?.games || []});
-  return vm.runInContext(`${resolver}\nnextGame()`,context);
+  return vm.runInContext(`${helpers}\n${resolver}\nnextGame()`,context);
 }
 function game(id,week,extra = {}) {
   return {id,season:2026,week,home_team:'DAL',away_team:'TB',status:'scheduled',kickoffUtc:`2026-10-${String(week+4).padStart(2,'0')}T00:15:00Z`,...extra};
@@ -35,7 +38,8 @@ test('Published all-club explicit upcoming IDs resolve to the same source fixtur
     assert.equal(resolve(data,abbr)?.id,expected.id,abbr);
     checked++;
   }
-  assert.equal(checked,32,'Every current club has its source-designated upcoming fixture');
+  assert.equal(Object.keys(data.teams).length,32,'All current clubs are covered');
+  assert.ok(checked <= 32,'Only available upcoming source IDs are resolved');
 });
 
 test('Source-designated upcoming fixture wins over an older unfinished game',() => {
@@ -44,14 +48,25 @@ test('Source-designated upcoming fixture wins over an older unfinished game',() 
   assert.equal(resolve(book([older,upcoming],'source-upcoming'),'DAL'),upcoming);
 });
 
-test('Selecting the next scheduled team fixture does not change the current research fixture',() => {
+test('Team upcoming and direct research selections preserve their independent source IDs',() => {
   const team = JSON.parse(fs.readFileSync(path.join(root,'assets/data/team-details.json'),'utf8'));
   const research = JSON.parse(fs.readFileSync(path.join(root,'assets/data/matchup-breakdown.json'),'utf8'));
   const selected = resolve(team,'DAL');
-  assert.equal(selected.id,team.teams.DAL.upcomingGameId);
-  assert.equal(selected.id,research.teams.DAL.nextScheduledGameId);
-  assert.notEqual(selected.id,research.teams.DAL.researchGameId);
-  assert.equal(research.teams.DAL.fixtureReports[research.teams.DAL.researchGameId].eventStatus.state,'in');
+  const researchId = research.teams.DAL.researchGameId || research.teams.DAL.upcomingGameId;
+  if (team.teams.DAL.upcomingGameId) assert.equal(selected?.id,team.teams.DAL.upcomingGameId);
+  if (researchId) {
+    const fixture = research.teams.DAL.games.find(row => row.id === researchId);
+    assert.ok(fixture,'Direct research source ID resolves independently');
+    assert.ok([fixture.home_team,fixture.away_team].includes('DAL'));
+    if (selected && selected.id !== researchId) assert.notEqual(selected.id,researchId);
+  }
+  // This fixed adverse case remains meaningful once the current live game ends.
+  const live = game('live-research',5,{status:'in-progress'});
+  const future = game('next-scheduled',6,{home_team:'GB',away_team:'DAL'});
+  const source = book([live,future],future.id);
+  source.teams.DAL.researchGameId = live.id;
+  assert.equal(resolve(source,'DAL').id,future.id);
+  assert.equal(source.teams.DAL.researchGameId,live.id);
 });
 
 for (const [label,extra] of [

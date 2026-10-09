@@ -1,0 +1,14 @@
+{
+  "status": "failed-diagnostic",
+  "startedAt": "2026-10-09T02:02:53.240Z",
+  "qualification": "Genuine cold public HTTPS native trace; no intercepted request, source/DOM/style/time substitutions or application/helper changes.",
+  "responses": [],
+  "snapshots": [],
+  "events": [],
+  "errors": [],
+  "failure": {
+    "message": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://dinkyjunior.github.io/project-dollers/#team/DAL\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#team/DAL\", waiting until \"networkidle\"\u001b[22m\n",
+    "stack": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://dinkyjunior.github.io/project-dollers/#team/DAL\nCall log:\n\u001b[2m  - navigating to \"https://dinkyjunior.github.io/project-dollers/#team/DAL\", waiting until \"networkidle\"\u001b[22m\n\n    at /workspace/recovery-qa/matchup-controls/hosted-cold-entry-diagnostic.cjs:6:12"
+  },
+  "completedAt": "2026-10-09T02:02:54.014Z"
+}

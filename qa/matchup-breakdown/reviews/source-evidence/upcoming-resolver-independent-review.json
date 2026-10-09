@@ -1,0 +1,403 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T02:11:55.994Z",
+  "agent": "/root/matchup_sources",
+  "method": "Execute extracted actual old/new nextGame functions in independent V8 VM with their actual dependencies; source fixture and independent adversarial expectations, no copied production resolver implementation.",
+  "checks": 78,
+  "checksPerformed": [
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "ARI",
+      "id": "2026_05_DET_ARI"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "ARI",
+      "id": "2026_05_DET_ARI"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "ATL",
+      "id": "2026_05_BAL_ATL"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "ATL",
+      "id": "2026_05_BAL_ATL"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "BAL",
+      "id": "2026_05_BAL_ATL"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "BAL",
+      "id": "2026_05_BAL_ATL"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "BUF",
+      "id": "2026_05_BUF_LA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "BUF",
+      "id": "2026_05_BUF_LA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "CAR",
+      "id": "2026_06_CAR_PHI"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "CAR",
+      "id": "2026_06_CAR_PHI"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "CHI",
+      "id": "2026_05_CHI_GB"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "CHI",
+      "id": "2026_05_CHI_GB"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "CIN",
+      "id": "2026_05_CIN_MIA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "CIN",
+      "id": "2026_05_CIN_MIA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "CLE",
+      "id": "2026_05_CLE_NYJ"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "CLE",
+      "id": "2026_05_CLE_NYJ"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "DAL",
+      "id": "2026_06_DAL_GB"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "DAL",
+      "id": "2026_06_DAL_GB"
+    },
+    {
+      "label": "Genuine old resolver reproduces source ID mismatch with its real final helper",
+      "team": "DAL"
+    },
+    {
+      "label": "Direct current research fixture stays source-qualified Week5",
+      "team": "DAL"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "DEN",
+      "id": "2026_05_DEN_LAC"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "DEN",
+      "id": "2026_05_DEN_LAC"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "DET",
+      "id": "2026_05_DET_ARI"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "DET",
+      "id": "2026_05_DET_ARI"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "GB",
+      "id": "2026_05_CHI_GB"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "GB",
+      "id": "2026_05_CHI_GB"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "HOU",
+      "id": "2026_05_HOU_TEN"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "HOU",
+      "id": "2026_05_HOU_TEN"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "IND",
+      "id": "2026_05_IND_PIT"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "IND",
+      "id": "2026_05_IND_PIT"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "JAX",
+      "id": "2026_05_PHI_JAX"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "JAX",
+      "id": "2026_05_PHI_JAX"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "KC",
+      "id": "2026_06_LAC_KC"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "KC",
+      "id": "2026_06_LAC_KC"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "LA",
+      "id": "2026_05_BUF_LA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "LA",
+      "id": "2026_05_BUF_LA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "LAC",
+      "id": "2026_05_DEN_LAC"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "LAC",
+      "id": "2026_05_DEN_LAC"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "LV",
+      "id": "2026_05_LV_NE"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "LV",
+      "id": "2026_05_LV_NE"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "MIA",
+      "id": "2026_05_CIN_MIA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "MIA",
+      "id": "2026_05_CIN_MIA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "MIN",
+      "id": "2026_05_MIN_NO"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "MIN",
+      "id": "2026_05_MIN_NO"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "NE",
+      "id": "2026_05_LV_NE"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "NE",
+      "id": "2026_05_LV_NE"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "NO",
+      "id": "2026_05_MIN_NO"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "NO",
+      "id": "2026_05_MIN_NO"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "NYG",
+      "id": "2026_05_NYG_WAS"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "NYG",
+      "id": "2026_05_NYG_WAS"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "NYJ",
+      "id": "2026_05_CLE_NYJ"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "NYJ",
+      "id": "2026_05_CLE_NYJ"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "PHI",
+      "id": "2026_05_PHI_JAX"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "PHI",
+      "id": "2026_05_PHI_JAX"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "PIT",
+      "id": "2026_05_IND_PIT"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "PIT",
+      "id": "2026_05_IND_PIT"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "SEA",
+      "id": "2026_05_SF_SEA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "SEA",
+      "id": "2026_05_SF_SEA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "SF",
+      "id": "2026_05_SF_SEA"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "SF",
+      "id": "2026_05_SF_SEA"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "TB",
+      "id": "2026_06_PIT_TB"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "TB",
+      "id": "2026_06_PIT_TB"
+    },
+    {
+      "label": "Genuine old resolver reproduces source ID mismatch with its real final helper",
+      "team": "TB"
+    },
+    {
+      "label": "Direct current research fixture stays source-qualified Week5",
+      "team": "TB"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "TEN",
+      "id": "2026_05_HOU_TEN"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "TEN",
+      "id": "2026_05_HOU_TEN"
+    },
+    {
+      "label": "All32 explicit upcoming fixtures preserve original exact source identity",
+      "team": "WAS",
+      "id": "2026_05_NYG_WAS"
+    },
+    {
+      "label": "Resolved fixture is same club/current season/non-final",
+      "team": "WAS",
+      "id": "2026_05_NYG_WAS"
+    },
+    {
+      "label": "Invalid explicit reference cannot escape valid current-club fixture fallback",
+      "case": "wrong-season"
+    },
+    {
+      "label": "Invalid explicit reference cannot escape valid current-club fixture fallback",
+      "case": "wrong-club"
+    },
+    {
+      "label": "Invalid explicit reference cannot escape valid current-club fixture fallback",
+      "case": "final-without-scores"
+    },
+    {
+      "label": "Invalid explicit reference cannot escape valid current-club fixture fallback",
+      "case": "cancelled"
+    },
+    {
+      "label": "Invalid explicit reference cannot escape valid current-club fixture fallback",
+      "case": "postponed"
+    },
+    {
+      "label": "Missing/unresolved source ID preserves earliest eligible fallback",
+      "id": null
+    },
+    {
+      "label": "Missing/unresolved source ID preserves earliest eligible fallback",
+      "id": "unknown-ID"
+    },
+    {
+      "label": "No eligible fixture remains unavailable"
+    },
+    {
+      "label": "TBD kickoff and neutral fixture preserve source-designated identity"
+    },
+    {
+      "label": "Only actual nextGame function changes within TeamDetails source"
+    }
+  ],
+  "oldResolverRegression": [
+    {
+      "team": "DAL",
+      "oldSelected": "2026_05_TB_DAL",
+      "newSelected": "2026_06_DAL_GB",
+      "publishedUpcoming": "2026_06_DAL_GB"
+    },
+    {
+      "team": "TB",
+      "oldSelected": "2026_05_TB_DAL",
+      "newSelected": "2026_06_PIT_TB",
+      "publishedUpcoming": "2026_06_PIT_TB"
+    }
+  ],
+  "bindings": {
+    "teamDetailsJsSha256": "1b92e1d07482aa64cdd9da51410216961e5fd7bd1c2130808a6d6e2a36ad5055",
+    "teamDetailsSnapshotSha256": "127efd1bfa31c0017930efcf784dfdcd907ce3cc9c1919f48be09aeadaba6e4f",
+    "matchupSnapshotSha256": "ad5f00abf0ea111f35d3ef7e2c31584e299d233c94b69c6e96de34efef60dd2d"
+  },
+  "scope": "Selector only; new f7bd185 source data requires a separate coherent original-response audit. Missing source ID retains labelled unresolved earliest fixture; no clock-derived result or research override.",
+  "blockingFindings": []
+}

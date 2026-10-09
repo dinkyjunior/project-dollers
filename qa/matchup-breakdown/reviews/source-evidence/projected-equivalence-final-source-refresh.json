@@ -1,0 +1,2229 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T02:17:44.752Z",
+  "agent": "/root/matchup_sources",
+  "beforeSnapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+  "afterSnapshotSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "snapshotSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "independentModel": {
+    "path": "qa/matchup-breakdown/model.cjs",
+    "sha256": "f696c32d0b3a367fc83e0a954917a924c79df5bd354f92abdac1cc6b909293d9"
+  },
+  "auditHelperSha256": "985836875f40c369c604bb8e8bcf85149ff3c02709e92fcea65ba54e6a863b16",
+  "backup": {
+    "path": "backups/project-dollar-matchup-source.zip",
+    "sha256": "c12100c0d33f18c505cd034f2a871303aa276399797f805a7f1ea0d2f0775f98"
+  },
+  "statisticalProjectionEquivalent": true,
+  "assertions": 206812,
+  "checks": {
+    "ExactReviewedOriginalSnapshot": 1,
+    "Exact32Teams": 1,
+    "PlayerIdentityPool": 32,
+    "AllPlayerIdentityAndAvailabilityFacts": 813,
+    "AllPlayerStatLogAndRoleFacts": 813,
+    "SelectedCompletedTeamGameFacts": 1536,
+    "LeadersIDsRankGPNullsCountsAndRates": 3072,
+    "AllPlayerSelectedStatAppearanceEligibility": 39024,
+    "DirectResearchFixtureIdentity": 1536,
+    "ActualQBCandidatesConfirmedStartsNullRolesAndAdvancedFacts": 10656,
+    "QBSelectedBasicCountsAndRateDenominators": 138528,
+    "IndependentQBRating": 10656,
+    "EveryResearchUpcomingAndNextScheduledIdentity": 34,
+    "FixtureQBProjectionAvailabilityAndRoleFacts": 34,
+    "AvailabilityIdentityIsUnique": 76
+  },
+  "teams": 32,
+  "playerIdentityCount": 813,
+  "qbIdentityCount": 111,
+  "windowsPerTeam": 48,
+  "totalTeamWindowBranches": 1536,
+  "options": [
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    }
+  ],
+  "availabilityEquivalent": false,
+  "availabilityDifferences": [
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0039112",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4686906",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder",
+        "name": "Lukas Van Ness",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0039112",
+        "position": "DE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-07T23:36Z",
+        "team": "GB",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0040009",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4431487",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Savion Williams",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040009",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-07T22:10Z",
+        "team": "GB",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0037075",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4361791",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Devonte Wyatt",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0037075",
+        "position": "DT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-07T21:49Z",
+        "team": "GB",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0040884",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4569661",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Back",
+        "name": "Jager Burton",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040884",
+        "position": "C",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-09T01:01Z",
+        "team": "GB",
+        "week": null
+      }
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0039817",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4428037",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Quadriceps",
+        "name": "Jacob Monk",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0039817",
+        "position": "C",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-09T00:55Z",
+        "team": "GB",
+        "week": null
+      }
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0036551",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872990",
+        "contextGameId": "2026_05_CHI_GB",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "espnId": "4242390",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Toe",
+        "name": "Aaron Banks",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0036551",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-09T00:54Z",
+        "team": "GB",
+        "week": null
+      }
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0039112",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4686906",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder",
+        "name": "Lukas Van Ness",
+        "officialConfirmed": false,
+        "playerId": "00-0039112",
+        "position": "DE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-07T23:36Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Shoulder",
+          "name": "Lukas Van Ness",
+          "playerId": "00-0039112",
+          "position": "LB",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0040009",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4431487",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Savion Williams",
+        "officialConfirmed": false,
+        "playerId": "00-0040009",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-07T22:10Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Ankle",
+          "name": "Savion Williams",
+          "playerId": "00-0040009",
+          "position": "WR",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0037075",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4361791",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Devonte Wyatt",
+        "officialConfirmed": false,
+        "playerId": "00-0037075",
+        "position": "DT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-07T21:49Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Ankle",
+          "name": "Devonte Wyatt",
+          "playerId": "00-0037075",
+          "position": "DT",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0040884",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4569661",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Back",
+        "name": "Jager Burton",
+        "officialConfirmed": false,
+        "playerId": "00-0040884",
+        "position": "C",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-09T01:01Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Back",
+          "name": "Jager Burton",
+          "playerId": "00-0040884",
+          "position": "C",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0039817",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4428037",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Quadriceps",
+        "name": "Jacob Monk",
+        "officialConfirmed": false,
+        "playerId": "00-0039817",
+        "position": "C",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-09T00:55Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Quadricep",
+          "name": "Jacob Monk",
+          "playerId": "00-0039817",
+          "position": "C",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_05_CHI_GB",
+      "field": "players",
+      "playerId": "00-0036551",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4242390",
+        "eventId": "401872990",
+        "gameId": "2026_05_CHI_GB",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Toe",
+        "name": "Aaron Banks",
+        "officialConfirmed": false,
+        "playerId": "00-0036551",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872990"
+        ],
+        "sourceTimestamp": "2026-10-09T00:54Z",
+        "team": "GB",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Knee",
+          "name": "Aaron Banks",
+          "playerId": "00-0036551",
+          "position": "G",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "HOU",
+      "gameId": "2026_05_HOU_TEN",
+      "field": "players",
+      "playerId": "00-0039857",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4432699",
+        "eventId": "401872984",
+        "gameId": "2026_05_HOU_TEN",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Illness",
+        "name": "Blake Fisher",
+        "officialConfirmed": false,
+        "playerId": "00-0039857",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872984"
+        ],
+        "sourceTimestamp": "2026-10-08T21:52Z",
+        "team": "HOU",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "HOU",
+      "gameId": "2026_05_HOU_TEN",
+      "field": "players",
+      "playerId": "00-0039108",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4685724",
+        "eventId": "401872984",
+        "gameId": "2026_05_HOU_TEN",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Will Anderson Jr.",
+        "officialConfirmed": false,
+        "playerId": "00-0039108",
+        "position": "DE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872984"
+        ],
+        "sourceTimestamp": "2026-10-08T01:29Z",
+        "team": "HOU",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Ankle",
+          "name": "Will Anderson Jr.",
+          "playerId": "00-0039108",
+          "position": "DE",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "HOU",
+      "gameId": "2026_05_HOU_TEN",
+      "field": "players",
+      "playerId": "00-0034836",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "3121595",
+        "eventId": "401872984",
+        "gameId": "2026_05_HOU_TEN",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Foot",
+        "name": "Braden Smith",
+        "officialConfirmed": false,
+        "playerId": "00-0034836",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872984"
+        ],
+        "sourceTimestamp": "2026-10-09T00:59Z",
+        "team": "HOU",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Foot",
+          "name": "Braden Smith",
+          "playerId": "00-0034836",
+          "position": "T",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "HOU",
+      "gameId": "2026_05_HOU_TEN",
+      "field": "players",
+      "playerId": "00-0041440",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4870893",
+        "eventId": "401872984",
+        "gameId": "2026_05_HOU_TEN",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Kayden McDonald",
+        "officialConfirmed": false,
+        "playerId": "00-0041440",
+        "position": "DT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872984"
+        ],
+        "sourceTimestamp": "2026-10-09T00:48Z",
+        "team": "HOU",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Ankle",
+          "name": "Kayden McDonald",
+          "playerId": "00-0041440",
+          "position": "DT",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0036244",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4242557",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder - AC Joint",
+        "name": "Colby Parkinson",
+        "officialConfirmed": false,
+        "playerId": "00-0036244",
+        "position": "TE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-09T00:13Z",
+        "team": "LA",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0031388",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "16716",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Back",
+        "name": "Aaron Donald",
+        "officialConfirmed": false,
+        "playerId": "00-0031388",
+        "position": "DT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-08T21:09Z",
+        "team": "LA",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0040737",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4570037",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Terrance Ferguson",
+        "officialConfirmed": false,
+        "playerId": "00-0040737",
+        "position": "TE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-07T17:52Z",
+        "team": "LA",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0037195",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4697639",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder",
+        "name": "Jaylen Watson",
+        "officialConfirmed": false,
+        "playerId": "00-0037195",
+        "position": "CB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-09T00:39Z",
+        "team": "LA",
+        "week": 5
+      }
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0037587",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4243181",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder",
+        "name": "Nate Landman",
+        "officialConfirmed": false,
+        "playerId": "00-0037587",
+        "position": "LB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-09T00:33Z",
+        "team": "LA",
+        "week": 5
+      }
+    },
+    {
+      "team": "LA",
+      "gameId": "2026_05_BUF_LA",
+      "field": "players",
+      "playerId": "00-0036672",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4240255",
+        "eventId": "401872994",
+        "gameId": "2026_05_BUF_LA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Grant Stuard",
+        "officialConfirmed": false,
+        "playerId": "00-0036672",
+        "position": "LB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872994"
+        ],
+        "sourceTimestamp": "2026-10-09T00:15Z",
+        "team": "LA",
+        "week": 5
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0037320",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4690171",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ribs",
+        "name": "Deane Leonard",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0037320",
+        "position": "CB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-08T23:06Z",
+        "team": "LAC",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0038544",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4429025",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Chest",
+        "name": "Quentin Johnston",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0038544",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-08T22:31Z",
+        "team": "LAC",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0039915",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4612826",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Foot",
+        "name": "Ladd McConkey",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0039915",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-08T22:26Z",
+        "team": "LAC",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0036736",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4040842",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Lower Leg",
+        "name": "Kayode Awosika",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0036736",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-09T01:11Z",
+        "team": "LAC",
+        "week": null
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0037241",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4248627",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Concussion",
+        "name": "Trevor Penning",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0037241",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-09T01:05Z",
+        "team": "LAC",
+        "week": null
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0039897",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872989",
+        "contextGameId": "2026_05_DEN_LAC",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "espnId": "4683487",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Neck",
+        "name": "Joe Alt",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0039897",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873006",
+        "requestedGameId": "2026_06_LAC_KC",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873006"
+        ],
+        "sourceTimestamp": "2026-10-09T00:59Z",
+        "team": "LAC",
+        "week": null
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0037320",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4690171",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ribs",
+        "name": "Deane Leonard",
+        "officialConfirmed": false,
+        "playerId": "00-0037320",
+        "position": "CB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-08T23:06Z",
+        "team": "LAC",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0038544",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4429025",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Chest",
+        "name": "Quentin Johnston",
+        "officialConfirmed": false,
+        "playerId": "00-0038544",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-08T22:31Z",
+        "team": "LAC",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0039915",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4612826",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Foot",
+        "name": "Ladd McConkey",
+        "officialConfirmed": false,
+        "playerId": "00-0039915",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-08T22:26Z",
+        "team": "LAC",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0036736",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4040842",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Lower Leg",
+        "name": "Kayode Awosika",
+        "officialConfirmed": false,
+        "playerId": "00-0036736",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-09T01:11Z",
+        "team": "LAC",
+        "week": 5
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0037241",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4248627",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Concussion",
+        "name": "Trevor Penning",
+        "officialConfirmed": false,
+        "playerId": "00-0037241",
+        "position": "G",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-09T01:05Z",
+        "team": "LAC",
+        "week": 5
+      }
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_05_DEN_LAC",
+      "field": "players",
+      "playerId": "00-0039897",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4683487",
+        "eventId": "401872989",
+        "gameId": "2026_05_DEN_LAC",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Neck",
+        "name": "Joe Alt",
+        "officialConfirmed": false,
+        "playerId": "00-0039897",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872989"
+        ],
+        "sourceTimestamp": "2026-10-09T00:59Z",
+        "team": "LAC",
+        "week": 5
+      }
+    },
+    {
+      "team": "MIN",
+      "gameId": "2026_05_MIN_NO",
+      "field": "players",
+      "playerId": "00-0040509",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4433959",
+        "eventId": "401872987",
+        "gameId": "2026_05_MIN_NO",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Ben Yurosek",
+        "officialConfirmed": false,
+        "playerId": "00-0040509",
+        "position": "TE",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872987"
+        ],
+        "sourceTimestamp": "2026-10-07T21:47Z",
+        "team": "MIN",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Ankle",
+          "name": "Ben Yurosek",
+          "playerId": "00-0040509",
+          "position": "TE",
+          "practiceStatus": "Full Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "MIN",
+      "gameId": "2026_05_MIN_NO",
+      "field": "players",
+      "playerId": "00-0036616",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4361985",
+        "eventId": "401872987",
+        "gameId": "2026_05_MIN_NO",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Concussion",
+        "name": "Christian Darrisaw",
+        "officialConfirmed": false,
+        "playerId": "00-0036616",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872987"
+        ],
+        "sourceTimestamp": "2026-10-09T00:55Z",
+        "team": "MIN",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Concussion",
+          "name": "Christian Darrisaw",
+          "playerId": "00-0036616",
+          "position": "T",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "NO",
+      "gameId": "2026_05_MIN_NO",
+      "field": "players",
+      "playerId": "00-0037239",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4361370",
+        "eventId": "401872987",
+        "gameId": "2026_05_MIN_NO",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Foot",
+        "name": "Chris Olave",
+        "officialConfirmed": false,
+        "playerId": "00-0037239",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872987"
+        ],
+        "sourceTimestamp": "2026-10-08T20:28Z",
+        "team": "NO",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Not injury related - resting player",
+          "name": "Chris Olave",
+          "playerId": "00-0037239",
+          "position": "WR",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      },
+      "after": null
+    },
+    {
+      "team": "NO",
+      "gameId": "2026_05_MIN_NO",
+      "field": "players",
+      "playerId": "00-0036253",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4035661",
+        "eventId": "401872987",
+        "gameId": "2026_05_MIN_NO",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Shoulder",
+        "name": "Julian Blackmon",
+        "officialConfirmed": false,
+        "playerId": "00-0036253",
+        "position": "S",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872987"
+        ],
+        "sourceTimestamp": "2026-10-09T00:14Z",
+        "team": "NO",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Shoulder",
+          "name": "Julian Blackmon",
+          "playerId": "00-0036253",
+          "position": "S",
+          "practiceStatus": "Limited Participation in Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "NYG",
+      "gameId": "2026_05_NYG_WAS",
+      "field": "players",
+      "playerId": "00-0034419",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "3123075",
+        "eventId": "401872988",
+        "gameId": "2026_05_NYG_WAS",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Foot",
+        "name": "Braxton Berrios",
+        "officialConfirmed": false,
+        "playerId": "00-0034419",
+        "position": "WR",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Injured Reserve",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872988"
+        ],
+        "sourceTimestamp": "2026-10-07T23:25Z",
+        "team": "NYG",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "gameId": "2026_05_NYG_WAS",
+      "field": "players",
+      "playerId": "00-0036386",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4259566",
+        "eventId": "401872988",
+        "gameId": "2026_05_NYG_WAS",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Groin",
+        "name": "Andrew Thomas",
+        "officialConfirmed": false,
+        "playerId": "00-0036386",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872988"
+        ],
+        "sourceTimestamp": "2026-10-09T00:49Z",
+        "team": "NYG",
+        "week": 5,
+        "weeklyReport": {
+          "injury": "Groin",
+          "name": "Andrew Thomas",
+          "playerId": "00-0036386",
+          "position": "T",
+          "practiceStatus": "Did Not Participate In Practice",
+          "reportStatus": null,
+          "sourceIds": [
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0034844",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872981",
+        "contextGameId": "2026_05_PHI_JAX",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872981"
+        ],
+        "espnId": "3929630",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Saquon Barkley",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0034844",
+        "position": "RB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401872998",
+        "requestedGameId": "2026_06_CAR_PHI",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872998"
+        ],
+        "sourceTimestamp": "2026-10-08T20:59Z",
+        "team": "PHI",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0040708",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872981",
+        "contextGameId": "2026_05_PHI_JAX",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872981"
+        ],
+        "espnId": "4685287",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Knee",
+        "name": "Jihaad Campbell",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040708",
+        "position": "LB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401872998",
+        "requestedGameId": "2026_06_CAR_PHI",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872998"
+        ],
+        "sourceTimestamp": "2026-10-09T00:23Z",
+        "team": "PHI",
+        "week": null
+      }
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_05_PHI_JAX",
+      "field": "players",
+      "playerId": "00-0034844",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "3929630",
+        "eventId": "401872981",
+        "gameId": "2026_05_PHI_JAX",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Saquon Barkley",
+        "officialConfirmed": false,
+        "playerId": "00-0034844",
+        "position": "RB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872981"
+        ],
+        "sourceTimestamp": "2026-10-08T20:59Z",
+        "team": "PHI",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_05_PHI_JAX",
+      "field": "players",
+      "playerId": "00-0040708",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4685287",
+        "eventId": "401872981",
+        "gameId": "2026_05_PHI_JAX",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Knee",
+        "name": "Jihaad Campbell",
+        "officialConfirmed": false,
+        "playerId": "00-0040708",
+        "position": "LB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872981"
+        ],
+        "sourceTimestamp": "2026-10-09T00:23Z",
+        "team": "PHI",
+        "week": 5
+      }
+    },
+    {
+      "team": "SEA",
+      "gameId": "2026_05_SF_SEA",
+      "field": "players",
+      "playerId": "00-0037003",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4037521",
+        "eventId": "401872992",
+        "gameId": "2026_05_SF_SEA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Calf",
+        "name": "Chazz Surratt",
+        "officialConfirmed": false,
+        "playerId": "00-0037003",
+        "position": "LB",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872992"
+        ],
+        "sourceTimestamp": "2026-10-06T18:21Z",
+        "team": "SEA",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "SEA",
+      "gameId": "2026_05_SF_SEA",
+      "field": "players",
+      "playerId": "00-0031933",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "2971622",
+        "eventId": "401872992",
+        "gameId": "2026_05_SF_SEA",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Ankle",
+        "name": "Leonard Williams",
+        "officialConfirmed": false,
+        "playerId": "00-0031933",
+        "position": "DT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872992"
+        ],
+        "sourceTimestamp": "2026-10-09T00:23Z",
+        "team": "SEA",
+        "week": 5
+      }
+    }
+  ],
+  "fixtureStateDifferences": [
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "before": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "10:51 - 1st Quarter",
+          "shortDetail": "10:51 - 1st",
+          "displayClock": "10:51",
+          "period": 1,
+          "displayPeriod": "1st"
+        },
+        "score": {
+          "home": 7,
+          "away": 0,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T00:23:44Z"
+      },
+      "after": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "7:31 - 3rd Quarter",
+          "shortDetail": "7:31 - 3rd",
+          "displayClock": "7:31",
+          "period": 3,
+          "displayPeriod": "3rd"
+        },
+        "score": {
+          "home": 10,
+          "away": 21,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T02:11:47Z"
+      }
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_05_TB_DAL",
+      "before": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "10:51 - 1st Quarter",
+          "shortDetail": "10:51 - 1st",
+          "displayClock": "10:51",
+          "period": 1,
+          "displayPeriod": "1st"
+        },
+        "score": {
+          "home": 7,
+          "away": 0,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T00:23:44Z"
+      },
+      "after": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "7:31 - 3rd Quarter",
+          "shortDetail": "7:31 - 3rd",
+          "displayClock": "7:31",
+          "period": 3,
+          "displayPeriod": "3rd"
+        },
+        "score": {
+          "home": 10,
+          "away": 21,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T02:11:47Z"
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Independent frozen QA model expectations for every32 club and48 game/season/venue/unit state, both leader boards, all player statistical appearance eligibility, all QB candidate/confirmed scopes and basic/advanced facts. Distinct current live event, injury/bulletin availability and publication changes are retained separately and independently raw-source audited; they are not silently removed or treated as equivalence. No browser coverage or physical-device claim.",
+  "excludedOnlySourceMetadataKeys": [
+    "bytes",
+    "checkedAt",
+    "currentRetrievedAt",
+    "currentSha256",
+    "etag",
+    "generatedAt",
+    "lastModified",
+    "retrievedAt",
+    "scheduleRetrievedAt",
+    "sha256",
+    "teamDetailsRetrievedAt",
+    "teamDetailsSha256",
+    "tlsVerified"
+  ]
+}

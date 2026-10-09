@@ -1,0 +1,32 @@
+{
+  "status": "diagnostic-only-not-release-acceptance",
+  "auditedAt": "2026-10-09T02:21:35.015836+00:00",
+  "evidence": [
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-entry-diagnostic.cjs",
+      "sha256": "a77db30f313b83b8e211ccf95be71c031f220fc528523833d0430400dbcefa5b"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-entry-diagnostic.json",
+      "sha256": "05aa159c242686ca4ab03015c6376b28322aaf78db2b2d484c40b6551a0024ab"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-dallas-ready.png",
+      "sha256": "663cdcda6351055a1ea75b8f733063546e317648265ddedb6b0750c1389f133a"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-selected-matchup.png",
+      "sha256": "f1af14da75e44c102db7c9e1f465d7ff38759743216ae42186c63017766d49b9"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-entry-chromium-trust-failure.json",
+      "sha256": "d88e402ef92930fa04b6b75b9665fb1323443012215f4eece45b45d8208ed676"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-entry-webkit-inspector-failure.json",
+      "sha256": "8231bdb037c072e2ccbcea82e0c98b6160b7d00b0ea89a4393b3ab0765fa680b"
+    }
+  ],
+  "finding": "Fully ready actual public TeamDetails dataset metadata selected W6, while old earliest unfinished resolver rendered W5 and native button/destination preserved that W5 exactly. This is authoritative upcoming selector semantics, not cold core fallback or click mismatch.",
+  "qualification": "Actual attempt failed its strict reviewed/local source-body equality guard because public data had advanced (public TeamDetails127efd versus prior local74b). Failed status and original screenshots preserved, never promoted to acceptance. Prior TLS and inspector errors remain real separate failures."
+}

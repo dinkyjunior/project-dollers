@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T02:22:31.466507+00:00",
+  "agent": "/root/matchup_sources",
+  "snapshotSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "sourceManifestSha256": "3a0647eb39cda82973c4c375bc5bdb0d1a51184123e399bfc47574916d9ac53a",
+  "source": {
+    "id": "nflverse_games",
+    "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+    "retrievedAt": "2026-10-09T02:13:15Z",
+    "httpStatus": 200,
+    "sha256": "88077a76db885d3078b2718f5cb104dac24f4dfb9c201f974b3d31a368e1f951",
+    "bodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_games.source.gz",
+    "archiveSha256": "d43187d8d5e73f76a5d744b9ff1a4e0f2845f45537551b29f8f061b46936e010"
+  },
+  "PITWeek6RawOdds": {
+    "home_moneyline": "",
+    "away_moneyline": "",
+    "spread_line": "",
+    "total_line": ""
+  },
+  "PITWeek6UINullPrices": {
+    "status": "unavailable",
+    "awayMoneyline": null,
+    "homeMoneyline": null,
+    "awayDecimal": null,
+    "homeDecimal": null,
+    "spread": null,
+    "total": null,
+    "kind": "Dataset line; sportsbook and line timestamp not supplied",
+    "sourceId": "nflverse_games"
+  },
+  "nextScheduled": [
+    "2026_06_DAL_GB",
+    "2026_06_PIT_TB"
+  ],
+  "currentResearch": "2026_05_TB_DAL",
+  "qualification": "Absence of a legitimate published odds value remains unavailable; no retained old odds or purported real-time price. Fixture identity follows same current regular-season source row, while current live research stays separate.",
+  "coreFixtureIdentity": {
+    "id": "2026_06_PIT_TB",
+    "season": 2026,
+    "week": 6,
+    "home_team": "TB",
+    "away_team": "PIT",
+    "kickoffUtc": "2026-10-18T17:00:00Z",
+    "sourceId": "nflverse_games"
+  },
+  "coreSnapshotSha256": "20a9da1a2ed0add6ad09bc97ce442b6c84e8c764ae6bdeea1a322bfc3452f944"
+}

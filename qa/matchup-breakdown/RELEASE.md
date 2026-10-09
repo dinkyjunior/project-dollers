@@ -1,5 +1,13 @@
 # Matchup Breakdown release
 
+## Current upcoming-fixture correction and source integration
+
+The actual first hosted run found Team Details choosing an unresolved older fixture instead of its source-designated upcoming game. The native button preserved the visible ID correctly; its fixture resolver required correction. Only `nextGame()` changed, with 12 regression tests and an independent 78-check original/corrected comparison. The failed hosted evidence is retained without changing its status.
+
+The current runtime manifest is `release/runtime-manifest-upcoming-delta.json`, canonical `4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4`. Five genuinely refreshed source files follow preserved incoming commit f7bd185. Their exact 94 original response archives are in `final-source-evidence`; the immutable older week-advance regression fixture stays untouched. Independent current audits passed 712,248 numeric and 1,549 fixture-context assertions. All 32 × 48 statistical projections match the historical accepted source; 46 changed availability facts and live event updates receive separate current native checks.
+
+Historical complete local suites/reviews below remain unchanged and source-bound. Current acceptance uses the separately audited selector/source delta and six supplemental reviews; exact hosted verification is still pending at this checkpoint. Screenshots remain untouched browser output. The approved visual reference is the chat attachment, with no registered pixel-equality, physical-iPhone or hardware-FPS claim.
+
 This release implements the user's second approved chat render as the new
 matchup destination. Complete Chromium (393/430/768/1440) and WebKit (393/430)
 audits have passed, with 4,110 recorded native inputs and no unexercised enabled
