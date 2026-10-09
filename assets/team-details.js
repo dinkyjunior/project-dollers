@@ -35,7 +35,10 @@
     return `${wins}–${losses}${ties ? `–${ties}` : ''}`;
   }
   function nextGame() {
-    return games().filter(game => Number(game.season) === Number(dataset.season) && !final(game) && !['cancelled','postponed'].includes(game.status)).sort((a,b) => String(a.kickoffUtc || a.gameday).localeCompare(String(b.kickoffUtc || b.gameday)))[0] || null;
+    const eligible = game => Number(game.season) === Number(dataset.season) && (game.home_team === state.team || game.away_team === state.team) && game.status !== 'final' && !['cancelled','postponed'].includes(game.status);
+    const upcomingId = team()?.upcomingGameId;
+    const upcoming = upcomingId ? games().find(game => game.id === upcomingId && eligible(game)) : null;
+    return upcoming || games().filter(eligible).sort((a,b) => String(a.kickoffUtc || a.gameday).localeCompare(String(b.kickoffUtc || b.gameday)))[0] || null;
   }
   function dateTime(game) {
     if (!game?.kickoffUtc) return 'Kickoff unavailable';
