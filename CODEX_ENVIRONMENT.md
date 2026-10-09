@@ -1,31 +1,53 @@
 # Codex Cloud Environment — Project Dollar$
 
-## Current Home gemstone entrance — local acceptance complete, publication pending
+## Current Home gemstone entrance — deployed and independently verified
 
-The latest four-sport Home refinement passed six independent specialist reviews
-and the source-bound release gate. Chromium and WebKit passed 393×852 and
-430×896; Chromium also passed 768px/tablet and 1440px/desktop framing. The final
+The latest four-sport Home refinement passed all six local specialist reviews
+and all six actual hosted reviews. Chromium and genuine WebKit passed 393×852
+and 430×896 locally; Chromium also passed tablet/desktop framing. The local
 reports contain 188 recorded native actions and 24 untouched browser originals.
-The accepted runtime is `c9407130820cbd39d9aed62818e26b8881d166de7c2e6f30b358b4da793fea67`.
-The broad polished lower casting, tapered upper metal, thick recessed neon,
-full-width faceted gemstone entry and four individually coloured perimeter lights
-materially reduce the new chat render gap. Reduced-motion and navigation pause
-checks pass. Coming soon and UFC Fighters remain; existing research screens remain.
+Strict HTTPS hosted WebKit then passed 90 additional native actions, all eight
+natural phone/sport captures, and exact HTTP-200 decoded body hashes for all 245
+runtime files. Motion, reduced motion, route pause/resume, real NFL/Team/Matchup
+navigation, direct URLs and refresh passed. Genuine errors are empty; eleven
+ordinary reload cancellations are separately recorded with exact successful
+asset-body proof.
 
-Read [the release record](qa/home-gem/RELEASE.md),
-[before/after browser originals](qa/home-gem/gallery.html) and
-[six-specialist acceptance](qa/home-gem/acceptance-local.json).
-Automatic source commits f1e5c56, 5144cd6 and 1b7679f were preserved by ordinary
-rebase. Their current source audits verify actual roster, weekly report, depth,
-projection and schedule changes. All 240 nondata runtime files remain the reviewed
-implementation. Automatic refresh is restored and verified active after the bounded
-owned release hold; no upstream instant play-by-play push feed is implied.
+The substantial polished lower casting, tapered upper sections, thick recessed
+neon, full-width faceted gemstone entry and four individually coloured perimeter
+lights materially reduce the approved chat render gap. Coming soon controls and
+UFC Fighters remain. Existing research screens and all 240 nondata runtime files
+remain protected. Decorative entrance artwork is a generated design asset;
+actual league marks, brand and venues remain unchanged.
 
-Actual publication and hosted verification remain the final required step at this
-checkpoint. Never relabel local evidence as hosted completion. Preserve these
-source-bound historical receipts and fetch/rebase both remote branches before
-every ordinary push. The current approved source is the chat attachment;
-no registered pixel identity or physical-iPhone/FPS certification is asserted.
+Application/source runtime `c9407130820cbd39d9aed62818e26b8881d166de7c2e6f30b358b4da793fea67`
+was published by real Pages run [37899024592](https://github.com/dinkyjunior/project-dollers/actions/runs/37899024592)
+at commit `3e047c86df61208a6675bf60fbd8e98051566cbf`; all three actual Pages jobs
+succeeded. [The independent public receipt](qa/home-gem/release/public-3e047.json)
+verified 360 complete hosted bodies including the source ZIP and gallery originals.
+Read [the release](qa/home-gem/RELEASE.md), [actual before/after originals](qa/home-gem/gallery.html),
+[local acceptance](qa/home-gem/acceptance-local.json) and [six hosted reviews](qa/home-gem/acceptance-hosted.json).
+
+Automatic source commits f1e5c56, 5144cd6, 1b7679f and now 607d2c7 are preserved
+by ordinary rebase. The separate incoming 607d audit passed 3,937 assertions;
+all 1,536 model states, player/game/statistical facts and 240 nondata files remain
+equivalent. Only retrieval/provenance metadata and 62 verified same-event source
+aliases change. Its runtime is `386ad3d4251160a2603fd3907423041b613142a0eeae9657d3943f51366092b9`;
+the earlier browser evidence remains bound to its actual original dataset.
+The fresh [strict-HTTPS source companion](qa/home-gem/source-current-hosted-webkit-v3/results.json)
+and [coordinator bridge](qa/home-gem/acceptance-source-current.json) now pass on that
+current source: 22 native actions, two actual direct-route reloads, all 245 complete
+runtime bodies per phone, exact loaded dataset identities and 16 natural rendered
+motion frames. No old screenshot/report is relabelled. The newest runnable source
+backup is [Home gemstone source v2](backups/project-dollar-home-gem-source-v2.zip).
+
+Preserve these immutable historical receipts. Fetch explicit latest main and
+codex-rebuild refs and rebase both before every ordinary push. Automatic source
+refresh must be active at final release verification; owned holds have automatic
+restore deadlines. These updates check published sources and are not an upstream
+instant push feed. The approved source remains the chat attachment, whose original
+binary was unavailable; no registered pixel identity, physical iPhone or FPS
+certification is asserted.
 
 ## Current Matchup Breakdown — deployed and verified, 9 October 2026 UTC
 

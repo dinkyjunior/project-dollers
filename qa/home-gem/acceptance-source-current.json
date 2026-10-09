@@ -1,0 +1,38 @@
+{
+  "status": "accepted",
+  "completedAt": "2026-10-09T08:09:15.589909+00:00",
+  "runtimeManifestSha256": "386ad3d4251160a2603fd3907423041b613142a0eeae9657d3943f51366092b9",
+  "runtimeFiles": 245,
+  "originalHostedAcceptance": {
+    "path": "qa/home-gem/acceptance-hosted.json",
+    "sha256": "44c7dca2d4959c3e5191b8944b2d93c3312d529377222ebc125f3e090f15a965"
+  },
+  "sourceReview": {
+    "path": "qa/home-gem/reviews/source-integration-607d-review.json",
+    "sha256": "3b011f4558c44c094a8eaab3f6830390e923a0bfa4c30e07ea4d602417c56203"
+  },
+  "freshHostedSourceCompanion": {
+    "path": "qa/home-gem/source-current-hosted-webkit-v3/results.json",
+    "sha256": "9e7566671fcd3adc22edf38a6e5358fe7b6de39c115af2885ffaa1ea5dab4a13"
+  },
+  "changedRuntimeFiles": [
+    "assets/data/current.json",
+    "assets/data/matchup-breakdown.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json",
+    "assets/data/team-details.json"
+  ],
+  "unchangedReviewedNondataFiles": 240,
+  "actualServedBodyChecks": 490,
+  "newSupplementalOriginals": [
+    {
+      "path": "qa/home-gem/source-current-hosted-webkit-v3/webkit-393-nfl-current-source.png",
+      "sha256": "33afd84c5868f1ccd6eecd9dbc8beb724b8a36caa24c36cd532b0d57a1ffcbad"
+    },
+    {
+      "path": "qa/home-gem/source-current-hosted-webkit-v3/webkit-430-nfl-current-source.png",
+      "sha256": "06e98c4bc1229283e38a7bc3d3b13f695270fc3ba1cc7ac83cd793123f9a8b22"
+    }
+  ],
+  "qualification": "The six-agent visual/control acceptance remains bound to its actual original c940 dataset. This separate fresh HTTPS companion accepts only the audited factual-equivalent five-source-file integration."
+}
