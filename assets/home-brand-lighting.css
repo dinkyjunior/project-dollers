@@ -1,0 +1,93 @@
+/* Original approved raster wordmark, with small vector light hits mounted in
+   its own native coordinate space. All masks exclude the green moneybag. */
+.page[data-page="home"] .home-header .brand-glint {
+  display: none;
+  animation: none;
+}
+.page[data-page="home"] .home-brand-lighting {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.page[data-page="home"] .home-brand-point {
+  opacity: .04;
+  animation: pd-home-brand-crystal-point var(--brand-point-duration, 8s) ease-in-out infinite;
+  animation-delay: var(--brand-point-delay, 0s);
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .home-brand-point-rays {
+  fill: #f5faff;
+}
+.page[data-page="home"] .home-brand-point-fine {
+  fill: #bad6ff;
+  opacity: .46;
+}
+.page[data-page="home"] .home-brand-point-core {
+  fill: #fff;
+}
+.page[data-page="home"] .home-brand-point-gold {
+  opacity: .03;
+  animation-name: pd-home-brand-gold-point;
+}
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-rays {
+  fill: #fff1b5;
+}
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-fine {
+  fill: #ffd578;
+  opacity: .33;
+}
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-core {
+  fill: #fff8dc;
+}
+.page[data-page="home"] .home-brand-gold-warmth {
+  opacity: .12;
+}
+.page[data-page="home"] .home-brand-gold-reflection {
+  opacity: .09;
+  animation: pd-home-brand-gold-surface 17.3s ease-in-out infinite;
+  animation-delay: var(--brand-gold-delay, -3.2s);
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+
+/* Only opacity changes on tiny facet-mounted points. There is no star field,
+   wide glare, moving letter artwork or glow layer covering readable letters. */
+@keyframes pd-home-brand-crystal-point {
+  0%, 19%, 37%, 100% { opacity: .035; }
+  24% { opacity: .28; }
+  26% { opacity: .97; }
+  28.5% { opacity: .13; }
+  31% { opacity: .67; }
+  34% { opacity: .045; }
+}
+@keyframes pd-home-brand-gold-point {
+  0%, 33%, 53%, 100% { opacity: .025; }
+  39% { opacity: .13; }
+  42% { opacity: .81; }
+  46% { opacity: .19; }
+  49% { opacity: .4; }
+}
+@keyframes pd-home-brand-gold-surface {
+  0%, 100% { opacity: .045; transform: translateX(-250px); }
+  35% { opacity: .105; }
+  60% { opacity: .13; }
+  80% { opacity: .085; }
+  100% { transform: translateX(310px); }
+}
+
+/* Reduced motion keeps the photographic diamond/gold material and a tiny
+   steady surface highlight, with every added motion object removed. */
+@media (prefers-reduced-motion: reduce) {
+  .page[data-page="home"] .home-brand-point,
+  .page[data-page="home"] .home-brand-gold-reflection {
+    animation: none !important;
+    will-change: auto;
+  }
+  .page[data-page="home"] .home-brand-point { opacity: .12; }
+  .page[data-page="home"] .home-brand-point-gold { opacity: .08; }
+  .page[data-page="home"] .home-brand-gold-reflection { opacity: .065; transform: none; }
+}

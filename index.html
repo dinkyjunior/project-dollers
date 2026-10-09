@@ -32,10 +32,11 @@
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
-    <link rel="stylesheet" href="assets/home-aperture.css?v=point-20261009-v1" />
-    <link rel="stylesheet" href="assets/home-gem-controls.css?v=point-20261009-v1" />
-    <link rel="stylesheet" href="assets/home-gem-layout.css?v=point-20261009-v1" />
-    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=point-20261009-v1" />
+    <link rel="stylesheet" href="assets/home-aperture.css?v=continuous-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-gem-controls.css?v=continuous-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-gem-layout.css?v=continuous-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=continuous-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-brand-lighting.css?v=continuous-20261010-v1" />
     <script src="assets/team-details.js?v=matchup-20261009-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
@@ -49,7 +50,7 @@
     <script src="assets/home-interactions.js?v=gem-20261009-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/nfl-dashboard-motion.js?v=replica-20261008-v2" defer></script>
-    <script src="assets/home-aperture-motion.js?v=point-20261009-v1" defer></script>
+    <script src="assets/home-aperture-motion.js?v=continuous-20261010-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -112,8 +113,8 @@
                   <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
                 </div></div>
                 <div class="aperture-rail"></div>
-                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/aperture-tapered.webp" alt="" width="1315" height="1197" decoding="async" fetchpriority="high" />
-                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/aperture-tapered.webp" alt="" width="1315" height="1197" decoding="async" />
+                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/continuous-gate.svg" alt="" width="1315" height="1197" decoding="async" fetchpriority="high" />
+                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/continuous-gate.svg" alt="" width="1315" height="1197" decoding="async" />
                 <div class="aperture-inset"></div>
                 <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
                 <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
@@ -128,41 +129,34 @@
                     <filter id="home-aperture-bloom" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9" /></filter>
                     <filter id="home-aperture-hotspot" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow" /><feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
                   </defs>
-                  <path class="aperture-neon-bloom" d="M657 94 C427.63 94 226.65 250 214 419 C180.11 480 175.09 620 216 700 C284.42 861 454.38 955 657 955 C859.62 955 1029.58 861 1098 700 C1138.91 620 1133.89 480 1100 419 C1087.35 250 886.37 94 657 94Z" />
-                  <path class="aperture-neon-track" d="M657 94 C427.63 94 226.65 250 214 419 C180.11 480 175.09 620 216 700 C284.42 861 454.38 955 657 955 C859.62 955 1029.58 861 1098 700 C1138.91 620 1133.89 480 1100 419 C1087.35 250 886.37 94 657 94Z" />
-                  <path class="aperture-neon-core" d="M657 94 C427.63 94 226.65 250 214 419 C180.11 480 175.09 620 216 700 C284.42 861 454.38 955 657 955 C859.62 955 1029.58 861 1098 700 C1138.91 620 1133.89 480 1100 419 C1087.35 250 886.37 94 657 94Z" />
-                  <path class="aperture-neon-inner-track" d="M657 162 C447.96 162 328.99 300 275 419 C243.26 480 227.82 620 285 700 C365.27 820 498.73 891 657 891 C815.27 891 948.73 820 1029 700 C1086.18 620 1070.74 480 1039 419 C985.01 300 866.04 162 657 162Z" />
+                  <path class="aperture-neon-bloom" d="M657.5 50 A539 478 0 1 1 657.5 1006 A539 478 0 1 1 657.5 50Z" />
+                  <path class="aperture-neon-track" d="M657.5 50 A539 478 0 1 1 657.5 1006 A539 478 0 1 1 657.5 50Z" />
+                  <path class="aperture-neon-core" d="M657.5 50 A539 478 0 1 1 657.5 1006 A539 478 0 1 1 657.5 50Z" />
+                  <path class="aperture-neon-inner-track" d="M657.5 72 A516 456 0 1 1 657.5 984 A516 456 0 1 1 657.5 72Z" />
                   <path class="aperture-neon-outer-track" d="M657 31 C394.49 31 183.26 210 80 419 C42.49 490 19.14 620 27 700 C-35.21 1040 112.18 1183 657 1183 C1201.82 1183 1349.21 1040 1287 700 C1294.86 620 1271.51 490 1234 419 C1130.74 210 919.51 31 657 31Z" />
-                  <path class="aperture-neon-runner" pathLength="1000" d="M657 94 C427.63 94 226.65 250 214 419 C180.11 480 175.09 620 216 700 C284.42 861 454.38 955 657 955 C859.62 955 1029.58 861 1098 700 C1138.91 620 1133.89 480 1100 419 C1087.35 250 886.37 94 657 94Z" />
-                  <path class="aperture-metal-runner" pathLength="1000" d="M657 162 C447.96 162 328.99 300 275 419 C243.26 480 227.82 620 285 700 C365.27 820 498.73 891 657 891 C815.27 891 948.73 820 1029 700 C1086.18 620 1070.74 480 1039 419 C985.01 300 866.04 162 657 162Z" />
+                  <path class="aperture-neon-runner" pathLength="1000" d="M657.5 50 A539 478 0 1 1 657.5 1006 A539 478 0 1 1 657.5 50Z" />
+                  <path class="aperture-metal-runner" pathLength="1000" d="M657.5 72 A516 456 0 1 1 657.5 984 A516 456 0 1 1 657.5 72Z" />
                 </svg>
                 <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
               </div>
               <div class="home-floor"><span class="home-floor-shimmer"></span></div>
               <div class="aperture-floor-reflection">
-                <img class="home-metal-reflection-image" src="assets/home/aperture-tapered.webp" alt="" width="1315" height="1197" decoding="async" />
-                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/aperture-tapered.webp" alt="" width="1315" height="1197" decoding="async" />
+                <img class="home-metal-reflection-image" src="assets/home/continuous-gate.svg" alt="" width="1315" height="1197" decoding="async" />
+                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/continuous-gate.svg" alt="" width="1315" height="1197" decoding="async" />
               </div>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
               <span data-home-entry-label>Enter</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>
             </button>
             <div class="home-sport-dock" role="group" aria-label="Choose a sport">
-              <button class="home-sport-option" data-home-select="nfl" aria-pressed="true" aria-label="Select NFL"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /><span>NFL</span></button>
-              <button class="home-sport-option" data-home-select="nba" aria-pressed="false" aria-label="Select NBA, coming soon"><img src="assets/home/nba.svg" alt="" width="500" height="500" decoding="async" /><span>NBA</span></button>
-              <button class="home-sport-option" data-home-select="nrl" aria-pressed="false" aria-label="Select NRL, coming soon"><img src="assets/logos/nrl.webp" alt="" width="500" height="500" decoding="async" /><span>NRL</span></button>
-              <button class="home-sport-option" data-home-select="ufc" aria-pressed="false" aria-label="Select UFC, coming soon"><img src="assets/logos/ufc.svg" alt="" width="1250" height="433" decoding="async" /><span>UFC</span></button>
+              <button class="home-sport-option" data-home-select="nfl" aria-pressed="true" aria-label="Select NFL"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /></button>
+              <button class="home-sport-option" data-home-select="nba" aria-pressed="false" aria-label="Select NBA, coming soon"><img src="assets/home/nba.svg" alt="" width="500" height="500" decoding="async" /></button>
+              <button class="home-sport-option" data-home-select="nrl" aria-pressed="false" aria-label="Select NRL, coming soon"><img src="assets/logos/nrl.webp" alt="" width="500" height="500" decoding="async" /></button>
+              <button class="home-sport-option" data-home-select="ufc" aria-pressed="false" aria-label="Select UFC, coming soon"><img src="assets/logos/ufc.svg" alt="" width="1250" height="433" decoding="async" /></button>
             </div>
             <p class="home-availability sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
           </div>
         </div>
-        <nav class="bottom-nav" aria-label="Main navigation">
-          <button data-open="home" data-nav="home"><svg class="icon" aria-hidden="true"><defs><linearGradient id="aperture-home-nav-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="var(--home-left)"></stop><stop offset="49.9%" stop-color="var(--home-left)"></stop><stop offset="50%" stop-color="var(--home-right)"></stop><stop offset="100%" stop-color="var(--home-right)"></stop></linearGradient></defs><use href="assets/icons.svg#home"></use></svg><span>Home</span></button>
-          <button data-open="nfl" data-nav="nfl"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#teams"></use></svg><span data-home-teams-label>Teams</span></button>
-          <button data-shortcut="matchups"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#matchups"></use></svg><span>Matchups</span></button>
-          <button data-shortcut="insights"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#insights"></use></svg><span>Insights</span></button>
-          <button data-more><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#more"></use></svg><span>More</span></button>
-        </nav>
       </section>
       <section class="page nfl-premium-dashboard nfl-dashboard-root" data-page="nfl" aria-label="NFL dashboard" hidden>
         <div class="nfl-ambient-light" aria-hidden="true"></div>

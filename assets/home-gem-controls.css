@@ -1,69 +1,61 @@
-/* One locally bundled, high-resolution gemstone atlas supplies the optical
-   crown, pavilion and end cuts. CSS presents each original row without editing
-   or resampling the source artwork. Native labels/navigation stay separate. */
+/* Native, scalable cut crystal controls. Each sport uses the same connected
+   crown/table/pavilion geometry; its SVG has no raster or noise layers. */
 .page[data-page="home"] {
-  --home-gem-face: url("home/gem-atlas.webp");
-  --home-gem-face-size: 106.297578% 497.087379%;
-  --home-gem-face-position: 50.549451% 6.356968%;
-  --home-gem-face-aspect: 1445 / 206;
-  --home-gem-light-left-rgb: 40 84 255;
-  --home-gem-light-right-rgb: 40 84 255;
+  --home-gem-face: url("home/entry-crystal-nfl.svg");
+  --home-gem-face-aspect: 720 / 122;
+  --home-gem-light-left-rgb: 31 76 255;
+  --home-gem-light-right-rgb: 31 76 255;
 }
 .page[data-page="home"][data-home-sport="nba"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 35.784314%;
-  --home-gem-face-aspect: 1445 / 208;
-  --home-gem-light-right-rgb: 255 22 56;
+  --home-gem-face: url("home/entry-crystal-nba.svg");
+  --home-gem-light-right-rgb: 247 27 62;
 }
 .page[data-page="home"][data-home-sport="nrl"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 65.563725%;
-  --home-gem-face-aspect: 1445 / 208;
-  --home-gem-light-left-rgb: 0 255 94;
-  --home-gem-light-right-rgb: 0 255 94;
+  --home-gem-face: url("home/entry-crystal-nrl.svg");
+  --home-gem-light-left-rgb: 0 218 118;
+  --home-gem-light-right-rgb: 0 218 118;
 }
 .page[data-page="home"][data-home-sport="ufc"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 95.465686%;
-  --home-gem-face-aspect: 1445 / 208;
-  --home-gem-light-left-rgb: 255 22 56;
-  --home-gem-light-right-rgb: 255 22 56;
+  --home-gem-face: url("home/entry-crystal-ufc.svg");
+  --home-gem-light-left-rgb: 247 27 62;
+  --home-gem-light-right-rgb: 247 27 62;
 }
-.page[data-page="home"][data-home-sport] .home-entry {
-  border-image: none;
+.page[data-page="home"],
+.page[data-page="home"] :is(.home-entry, .home-sport-option) {
+  -webkit-tap-highlight-color: transparent;
 }
+.page[data-page="home"][data-home-sport] .home-entry,
 .page[data-page="home"] .home-entry {
+  position: relative;
+  isolation: isolate;
   border: 0;
   border-image: none;
   border-radius: 0;
+  min-height: 44px;
   background: transparent;
-  padding-inline: 46px;
-  font: 500 19px/1.1 PDInter, Arial, sans-serif;
+  padding-inline: 22%;
+  font: 500 21px/1.1 PDInter, Arial, sans-serif;
   letter-spacing: 1.8px;
-  color: #effcff;
-  text-shadow: 0 1px 3px #000, 0 0 7px rgb(var(--home-gem-light-left-rgb) / .4);
+  color: #c6d9f5bf;
+  text-shadow: none;
   box-shadow: none;
-  --home-gem-cast-shadow: drop-shadow(-2px 0 2px rgb(var(--home-gem-light-left-rgb) / .75))
-    drop-shadow(2px 0 2px rgb(var(--home-gem-light-right-rgb) / .75))
-    drop-shadow(-3px 1px 8px rgb(var(--home-gem-light-left-rgb) / .32))
-    drop-shadow(3px 1px 8px rgb(var(--home-gem-light-right-rgb) / .32));
+  --home-gem-cast-shadow: drop-shadow(-1px 0 1px rgb(var(--home-gem-light-left-rgb) / .42))
+    drop-shadow(1px 0 1px rgb(var(--home-gem-light-right-rgb) / .42))
+    drop-shadow(-3px 2px 6px rgb(var(--home-gem-light-left-rgb) / .18))
+    drop-shadow(3px 2px 6px rgb(var(--home-gem-light-right-rgb) / .18));
   filter: var(--home-gem-cast-shadow);
   overflow: visible;
 }
 .page[data-page="home"] .home-entry::before {
   content: "";
   position: absolute;
-  inset: auto;
-  top: 50%;
-  left: 0;
+  inset: 0;
   width: 100%;
-  height: auto;
-  aspect-ratio: var(--home-gem-face-aspect);
-  transform: translateY(-50%);
+  height: 100%;
+  transform: none;
   border-radius: 0;
   border: 0;
-  background: var(--home-gem-face) var(--home-gem-face-position) /
-    var(--home-gem-face-size) no-repeat;
+  background: var(--home-gem-face) center / 100% 100% no-repeat;
   box-shadow: none;
   animation: none;
   pointer-events: none;
@@ -71,177 +63,210 @@
 }
 .page[data-page="home"] .home-entry::after {
   content: "";
-  inset: auto 7% -9px;
-  height: 8px;
+  position: absolute;
+  inset: auto 8% -4px;
+  height: 5px;
   border: 0;
   border-radius: 50%;
-  background: linear-gradient(90deg, transparent, rgb(var(--home-gem-light-left-rgb) / .28) 10% 45%,
-    rgb(var(--home-gem-light-right-rgb) / .28) 55% 90%, transparent);
+  background: linear-gradient(90deg, transparent, rgb(var(--home-gem-light-left-rgb) / .16) 15% 45%,
+    rgb(var(--home-gem-light-right-rgb) / .16) 55% 85%, transparent);
   filter: blur(3px);
-  opacity: .8;
+  opacity: .64;
   box-shadow: none;
+  pointer-events: none;
 }
 .page[data-page="home"] .home-entry [data-home-entry-label] {
   position: relative;
   z-index: 4;
   font: inherit;
-  text-shadow: 0 1px 3px #000b, 0 0 7px rgb(var(--home-gem-light-left-rgb) / .32);
+  /* The shallow light/dark incision reads through the optical surface. */
+  color: #c6d9f5bf;
+  background: linear-gradient(180deg, #e2f0ffdf 4%, #c6dff8d6 41%, #b4ccebd0 53%, #def0ffdf 81%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: .15px #d3e6ff3d;
+  text-shadow: 0 .5px .7px #0005, 0 -.5px .5px #e5f2ff1c;
 }
 .page[data-page="home"] .home-entry [data-home-entry-arrow] {
-  right: 44px;
+  right: 22%;
   top: 50%;
-  width: 19px;
-  height: 19px;
+  width: 17px;
+  height: 17px;
   transform: translateY(-50%);
-  color: #eff6ff;
-  filter: drop-shadow(0 0 3px rgb(var(--home-gem-light-right-rgb) / .7));
+  color: #d3e6ff99;
+  filter: drop-shadow(0 1px 1px #0008);
   z-index: 4;
 }
 .page[data-page="home"] .home-entry:disabled {
-  color: #effcff;
+  color: #c6d9f5bf;
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: .65px;
   opacity: 1;
+  padding-inline: 20%;
 }
 .page[data-page="home"] .home-entry-diamond,
 .page[data-page="home"][data-home-sport] .home-entry-diamond {
-  width: 42px;
-  height: 44px;
-  left: 4px;
+  position: absolute;
+  width: 20.6%;
+  height: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   filter: none;
   z-index: 3;
   pointer-events: none;
 }
 .page[data-page="home"] .home-entry-diamond.is-right {
   left: auto;
-  right: 4px;
+  right: 0;
 }
 .page[data-page="home"] .home-entry-diamond::after {
   content: none;
   animation: none;
 }
 .page[data-page="home"] .home-sport-dock {
-  gap: 9px;
+  gap: 12px;
   padding: 6px 1px 0;
-  background: linear-gradient(180deg, #03081208, #01040966);
+  background: transparent;
 }
 .page[data-page="home"] .home-sport-option {
-  --gem-selector-left: #2862ff;
-  --gem-selector-right: #2862ff;
-  --gem-selector-left-rgb: 40 98 255;
-  --gem-selector-right-rgb: 40 98 255;
-  border: 2px solid transparent;
+  --gem-selector-left: #2859ff;
+  --gem-selector-right: #2859ff;
+  --gem-selector-left-rgb: 40 89 255;
+  --gem-selector-right-rgb: 40 89 255;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0;
+  border: 1px solid transparent;
   border-radius: 12px;
-  min-height: 68px;
-  color: #eaf5fd;
-  background: radial-gradient(ellipse at 10% 0%, rgb(var(--gem-selector-left-rgb) / .19), transparent 66%) padding-box,
-    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .16), transparent 66%) padding-box,
-    linear-gradient(180deg, #091420, #02070d 54%, #08131d) padding-box,
-    linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%) border-box;
-  box-shadow: -1px 0 4px rgb(var(--gem-selector-left-rgb) / .85),
-    1px 0 4px rgb(var(--gem-selector-right-rgb) / .85),
-    -3px 0 10px rgb(var(--gem-selector-left-rgb) / .45),
-    3px 0 10px rgb(var(--gem-selector-right-rgb) / .45),
-    inset 0 1px 0 #efffff44, inset 0 -1px 0 #0009;
-  transition: transform .18s ease, box-shadow .2s ease, background-color .2s ease;
+  min-width: 44px;
+  min-height: 64px;
+  padding: 8px 4px;
+  color: #d5e8f1;
+  /* The face remains translucent: perimeter colour is masked onto its edge
+     rather than painted behind the whole glass surface. */
+  background: radial-gradient(ellipse at 10% 0%, rgb(var(--gem-selector-left-rgb) / .11), transparent 72%),
+    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .08), transparent 72%),
+    linear-gradient(155deg, #d4e6ff12 0%, #07142328 44%, #02060d40 100%);
+  -webkit-backdrop-filter: blur(6px) saturate(1.12);
+  backdrop-filter: blur(6px) saturate(1.12);
+  box-shadow: -1px 0 3px rgb(var(--gem-selector-left-rgb) / .47),
+    1px 0 3px rgb(var(--gem-selector-right-rgb) / .47),
+    -3px 0 9px rgb(var(--gem-selector-left-rgb) / .16),
+    3px 0 9px rgb(var(--gem-selector-right-rgb) / .16),
+    inset 0 1px 0 #e5f4ff17, inset 0 -1px 0 #0004;
+  transition: transform .18s ease, box-shadow .2s ease;
   overflow: visible;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="nba"] {
-  --gem-selector-left: #2862ff;
   --gem-selector-right: #ff2548;
-  --gem-selector-left-rgb: 40 98 255;
   --gem-selector-right-rgb: 255 37 72;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="nrl"] {
-  --gem-selector-left: #00ff7f;
-  --gem-selector-right: #00ff7f;
-  --gem-selector-left-rgb: 0 255 127;
-  --gem-selector-right-rgb: 0 255 127;
+  --gem-selector-left: #00ec88;
+  --gem-selector-right: #00ec88;
+  --gem-selector-left-rgb: 0 236 136;
+  --gem-selector-right-rgb: 0 236 136;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="ufc"] {
-  --gem-selector-left: #ff153e;
-  --gem-selector-right: #ff153e;
-  --gem-selector-left-rgb: 255 21 62;
-  --gem-selector-right-rgb: 255 21 62;
+  --gem-selector-left: #ff2548;
+  --gem-selector-right: #ff2548;
+  --gem-selector-left-rgb: 255 37 72;
+  --gem-selector-right-rgb: 255 37 72;
 }
 .page[data-page="home"] .home-sport-option::before,
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
   content: "";
   position: absolute;
-  inset: 1px;
-  border-radius: 9px;
-  border: 1px solid #dffaff28;
-  background: none;
-  box-shadow: inset 0 0 2px #efffff40;
-  opacity: .5;
+  inset: -1px;
+  border-radius: inherit;
+  border: 0;
+  padding: 1.5px;
+  background: linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-shadow: none;
+  opacity: .84;
   pointer-events: none;
   animation: none;
   z-index: 1;
 }
 .page[data-page="home"] .home-sport-option::after,
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::after {
-  content: none;
-  border: 0;
+  content: "";
+  position: absolute;
+  inset: 2px;
+  width: auto;
+  height: auto;
+  border: 1px solid #dceeff14;
+  border-radius: 9px;
+  background: linear-gradient(132deg, #d4ecff0c, transparent 35% 67%, #d4ecff05);
   box-shadow: none;
+  opacity: 1;
+  pointer-events: none;
+  animation: none;
+  z-index: 1;
 }
 .page[data-page="home"] .home-sport-option[aria-pressed="true"] {
-  color: #fff;
-  background: radial-gradient(ellipse at 15% 0%, rgb(var(--gem-selector-left-rgb) / .28), transparent 70%) padding-box,
-    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .2), transparent 70%) padding-box,
-    linear-gradient(180deg, #11202d, #02070c 54%, #0c1a26) padding-box,
-    linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%) border-box;
-  box-shadow: -1px 0 5px rgb(var(--gem-selector-left-rgb) / 1),
-    1px 0 5px rgb(var(--gem-selector-right-rgb) / 1),
-    -4px 0 14px rgb(var(--gem-selector-left-rgb) / .64),
-    4px 0 14px rgb(var(--gem-selector-right-rgb) / .64),
-    inset 0 1px 0 #f5ffff88, inset 0 -1px 0 #0009;
+  color: #d5e8f1;
+  background: radial-gradient(ellipse at 15% 0%, rgb(var(--gem-selector-left-rgb) / .16), transparent 72%),
+    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .1), transparent 72%),
+    linear-gradient(155deg, #d4e6ff18 0%, #07142330 44%, #02060d40 100%);
+  box-shadow: -1px 0 4px rgb(var(--gem-selector-left-rgb) / .67),
+    1px 0 4px rgb(var(--gem-selector-right-rgb) / .67),
+    -3px 0 11px rgb(var(--gem-selector-left-rgb) / .25),
+    3px 0 11px rgb(var(--gem-selector-right-rgb) / .25),
+    inset 0 1px 0 #e5f4ff25, inset 0 -1px 0 #0004;
 }
-.page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
-  opacity: .5;
-  border-color: #efffff3a;
-}
-.page[data-page="home"] .home-sport-option > img,
-.page[data-page="home"] .home-sport-option > span:not(.home-gem-glint) {
+.page[data-page="home"] .home-sport-option[aria-pressed="true"]::before { opacity: 1; }
+.page[data-page="home"] .home-sport-option > img {
   position: relative;
   z-index: 3;
   pointer-events: none;
 }
 .page[data-page="home"] .home-sport-option img {
-  width: 38px;
-  height: 39px;
+  width: 43px;
+  height: 44px;
+  margin: 0;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px #000);
+  filter: drop-shadow(0 1px 2px #0009);
 }
 .page[data-page="home"] .home-sport-option[data-home-select="ufc"] img {
-  width: 58px;
-  height: 26px;
-  margin-block: 6px 7px;
+  width: 60px;
+  height: 27px;
+  margin: 0;
   filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4668%)
-    hue-rotate(343deg) brightness(101%) contrast(110%) drop-shadow(0 2px 2px #000);
+    hue-rotate(343deg) brightness(101%) contrast(110%) drop-shadow(0 1px 2px #0009);
 }
 .page[data-page="home"] .home-entry:focus-visible,
 .page[data-page="home"] .home-sport-option:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid #d9eaff;
   outline-offset: 5px;
 }
 @media (hover: hover) and (pointer: fine) {
   .page[data-page="home"] .home-entry:not(:disabled):hover {
-    filter: brightness(1.08) var(--home-gem-cast-shadow);
+    filter: brightness(1.1) var(--home-gem-cast-shadow);
     transform: translateY(-1px);
   }
-  .page[data-page="home"] .home-sport-option:hover {
-    background-color: #182734;
-    transform: translateY(-1px);
-  }
+  .page[data-page="home"] .home-sport-option:hover { transform: translateY(-1px); }
 }
 @media (max-width: 360px) {
-  .page[data-page="home"] .home-entry { padding-inline: 40px; font-size: 17px; }
-  .page[data-page="home"] .home-entry:disabled { font-size: 13px; letter-spacing: .6px; }
-  .page[data-page="home"] .home-entry [data-home-entry-arrow] { right: 35px; width: 17px; }
-  .page[data-page="home"] .home-sport-dock { gap: 7px; }
-  .page[data-page="home"] .home-sport-option img { width: 33px; height: 36px; }
-  .page[data-page="home"] .home-sport-option[data-home-select="ufc"] img { width: 49px; }
+  .page[data-page="home"] .home-entry { font-size: 19px; }
+  .page[data-page="home"] .home-entry:disabled { font-size: 13px; letter-spacing: .25px; }
+  .page[data-page="home"] .home-entry [data-home-entry-arrow] { width: 15px; }
+  .page[data-page="home"] .home-sport-dock { gap: 9px; }
+  .page[data-page="home"] .home-sport-option img { width: 38px; height: 41px; }
+  .page[data-page="home"] .home-sport-option[data-home-select="ufc"] img { width: 53px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .page[data-page="home"] :is(.home-entry, .home-sport-option) { transition: none; }
