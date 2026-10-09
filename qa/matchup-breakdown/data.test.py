@@ -63,7 +63,139 @@ def pbp_body(end=True, final_score=True, scramble=True, missing_field=None):
     return gzip.compress(output.getvalue().encode(), mtime=0)
 
 
+def final_boxscore_fixture():
+    game = {"id": "test-final", "espnEventId": "123", "season": 2026, "week": 5,
+        "home_team": "DAL", "away_team": "TB", "home_score": 16, "away_score": 24,
+        "status": "final", "kickoffUtc": "2026-10-09T00:15:00Z"}
+    value = {"header": {"id": "123", "season": {"year": 2026, "type": 2}, "week": 5,
+        "competitions": [{"id": "123", "status": {"type": {"completed": True, "state": "post"}},
+            "competitors": [{"homeAway": "home", "team": {"abbreviation": "DAL"}, "score": "16"},
+                {"homeAway": "away", "team": {"abbreviation": "TB"}, "score": "24"}]}]},
+        "boxscore": {"players": [{"team": {"abbreviation": "TB"}, "statistics": [{"name": "passing",
+            "keys": ["completions/passingAttempts", "passingYards", "yardsPerPassAttempt", "passingTouchdowns",
+                "interceptions", "sacks-sackYardsLost", "adjQBR", "QBRating"],
+            "labels": ["C/ATT", "YDS", "AVG", "TD", "INT", "SACKS", "RTG"],
+            "athletes": [{"athlete": {"id": "4596472", "displayName": "Jalon Daniels"},
+                "stats": ["19/25", "189", "7.6", "1", "0", "1-11", "110.2"]}]}]}]}}
+    return game, value
+
+
+def final_boxscore_inputs(value):
+    body = json.dumps(value).encode()
+    sid = "espn_fixture_summary_123"
+    return {sid: body}, {sid: {"id": sid, "status": "verified", "retrievedAt": "2026-10-09T03:42:47Z",
+        "sha256": hashlib.sha256(body).hexdigest()}}
+
+
 class MatchupDataChecks(unittest.TestCase):
+    def test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap(self):
+        game, value = final_boxscore_fixture(); bodies, sources = final_boxscore_inputs(value)
+        histories = builder.collections.defaultdict(dict)
+        issues, coverage = builder.final_boxscore_statistics(histories, {game["id"]: game}, bodies, sources,
+            {"4596472": "qb"}, {"qb": "TB"})
+        row = histories["qb"][game["id"]]; stats = row["stats"]
+        self.assertEqual(issues, [])
+        self.assertEqual(coverage["recordedPlayerGameRows"], 1)
+        self.assertEqual((stats["completions"], stats["attempts"], stats["passingYards"], stats["sacks"], stats["sackYardsLost"]), (19, 25, 189, 1, 11))
+        self.assertEqual(stats["passerRating"], 110.2)
+        for key in ("carries", "rushingYards", "receptions", "targets", "fumbles", "passingAirYards"):
+            self.assertIsNone(stats[key])
+        self.assertEqual(row["statisticalOrigin"], "espn-final-boxscore")
+        self.assertEqual(row["appearance"]["status"], "recorded")
+        self.assertEqual(row["finalBoxscoreEvidence"]["sha256"], sources["espn_fixture_summary_123"]["sha256"])
+        self.assertEqual(row["provenance"]["fieldSources"]["passingYards"], ["espn_fixture_summary_123"])
+        self.assertNotIn("started", row)
+
+    def test_unfinished_or_mismatched_final_boxscore_cannot_enter_history(self):
+        game, original = final_boxscore_fixture()
+        unfinished = copy.deepcopy(original); unfinished["header"]["competitions"][0]["status"]["type"] = {"completed": False, "state": "in"}
+        bodies, sources = final_boxscore_inputs(unfinished); history = builder.collections.defaultdict(dict)
+        builder.final_boxscore_statistics(history, {game["id"]: game}, bodies, sources, {"4596472": "qb"}, {"qb": "TB"})
+        self.assertEqual(dict(history), {})
+        for kind in ("event", "season", "week", "playoffs", "score", "team"):
+            value = copy.deepcopy(original)
+            if kind == "event": value["header"]["id"] = "456"
+            if kind == "season": value["header"]["season"]["year"] = 2025
+            if kind == "week": value["header"]["week"] = 6
+            if kind == "playoffs": value["header"]["season"]["type"] = 3
+            if kind == "score": value["header"]["competitions"][0]["competitors"][0]["score"] = "17"
+            if kind == "team": value["header"]["competitions"][0]["competitors"][0]["team"]["abbreviation"] = "GB"
+            bodies, sources = final_boxscore_inputs(value)
+            with self.subTest(kind=kind), self.assertRaisesRegex(ValueError, "mismatch"):
+                builder.final_boxscore_statistics(builder.collections.defaultdict(dict), {game["id"]: game}, bodies, sources,
+                    {"4596472": "qb"}, {"qb": "TB"})
+
+    def test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate(self):
+        game, value = final_boxscore_fixture(); bodies, sources = final_boxscore_inputs(value)
+        history = builder.collections.defaultdict(dict)
+        history["qb"][game["id"]] = {"gameId": game["id"], "team": "TB", "stats": dict.fromkeys(builder.DISPLAY_STATS),
+            "sourceIds": ["nflverse_player_stats"], "provenance": {"retrievedAt": "2026-10-09T03:00:00Z"}}
+        history["qb"][game["id"]]["stats"].update(completions=20, passingYards=189)
+        issues, _ = builder.final_boxscore_statistics(history, {game["id"]: game}, bodies, sources,
+            {"4596472": "qb"}, {"qb": "TB"})
+        self.assertEqual(len(issues), 1); self.assertEqual(issues[0]["values"], [20, 19])
+        stats = history["qb"][game["id"]]["stats"]
+        self.assertIsNone(stats["completions"]); self.assertIsNone(stats["completionPct"]); self.assertIsNone(stats["passerRating"])
+        self.assertEqual(stats["passingYards"], 189)
+
+    def test_final_passing_boxscore_never_confirms_schedule_role_candidate(self):
+        game, value = final_boxscore_fixture(); bodies, sources = final_boxscore_inputs(value)
+        history = builder.collections.defaultdict(dict)
+        builder.final_boxscore_statistics(history, {game["id"]: game}, bodies, sources, {"4596472": "qb"}, {"qb": "TB"})
+        role = builder.starting_role("qb", history["qb"][game["id"]], {game["id"]: {"away_qb_id": "qb"}},
+            {game["id"]: game}, bodies, sources, {"contradictions": [], "affirmativeFirstPlay": []})
+        self.assertTrue(role["candidate"]); self.assertIsNone(role["value"]); self.assertEqual(role["status"], "unavailable")
+
+    def test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash(self):
+        game, value = final_boxscore_fixture(); bodies, sources = final_boxscore_inputs(value)
+        history = builder.collections.defaultdict(dict)
+        builder.final_boxscore_statistics(history, {game["id"]: game}, bodies, sources, {}, {"qb": "TB"})
+        self.assertEqual(dict(history), {})
+        sources["espn_fixture_summary_123"]["sha256"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "hash mismatch"):
+            builder.final_boxscore_statistics(history, {game["id"]: game}, bodies, sources, {"4596472": "qb"}, {"qb": "TB"})
+
+    def test_depth_injury_news_never_acquires_inferred_upcoming_week(self):
+        body = json.dumps({"team": {"abbreviation": "DAL"}, "depthchart": [{"name": "Offense",
+            "positions": {"lt": {"position": {"abbreviation": "LT"}, "athletes": [{"id": "4609048",
+                "displayName": "Tyler Guyton", "injuries": [{"status": "Questionable", "date": "2026-10-09T03:22Z",
+                "shortComment": "Exited Thursday's game against Tampa Bay due to a back injury."}]}]}}}]}).encode()
+        _, news = builder.espn_depth(body, "DAL", {"4609048": "00-0039341"})
+        original = copy.deepcopy(news)
+        for upcoming_week in (5, 6, 7):
+            weekly, bulletins = builder.qualify_injury_reports([], news)
+            self.assertEqual(weekly, [], f"No source published NFL report for week {upcoming_week}")
+            self.assertEqual(len(bulletins), 1)
+            row = bulletins[0]
+            for field in ("season", "week", "gameId"):
+                self.assertIsNone(row[field])
+            self.assertEqual(row["context"], "current-team-bulletin")
+            self.assertEqual(row["gameApplicability"], "unavailable")
+            self.assertEqual(row["reportStatus"], "Questionable")
+            self.assertEqual(row["sourceTimestamp"], "2026-10-09T03:22Z")
+            self.assertEqual(row["sourceIds"], ["espn_matchup_depth_DAL"])
+            self.assertIn("Thursday", row["injury"])
+        self.assertEqual(news, original)
+
+    def test_actual_weekly_practice_survives_differently_scoped_depth_news(self):
+        weekly = [{"playerId": "qb", "name": "Actual QB", "week": 6,
+            "reportStatus": "Questionable", "practiceStatus": "Full Participation",
+            "injury": "Thumb", "sourceIds": ["nflverse_injuries"]}]
+        original = copy.deepcopy(weekly)
+        news = [{"playerId": "qb", "name": "Actual QB", "reportStatus": "Out", "practiceStatus": None,
+            "injury": "Different earlier bulletin", "sourceTimestamp": "2026-10-01T12:00Z",
+            "sourceIds": ["espn_matchup_depth_DAL"]}]
+        reports, bulletins = builder.qualify_injury_reports(weekly, news)
+        self.assertEqual(reports, original)
+        self.assertEqual(weekly, original)
+        self.assertEqual(reports[0]["practiceStatus"], "Full Participation")
+        self.assertEqual(reports[0]["sourceIds"], ["nflverse_injuries"])
+        self.assertEqual(bulletins[0]["reportStatus"], "Out")
+        self.assertIsNone(bulletins[0]["week"])
+        report = {"week": 6, "availability": {"context": "current-team-bulletin"}}
+        self.assertFalse(builder.bulletin_projection_unknown(report, 6, reports, {"qb"}))
+        self.assertTrue(builder.bulletin_projection_unknown(report, 6, bulletins, {"qb"}))
+
     def test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list(self):
         game = {"id": "test", "espnEventId": "123", "season": 2026, "week": 5, "home_team": "DAL", "away_team": "TB", "status": "scheduled"}
         value = {"header": {"id": "123", "season": {"year": 2026, "type": 2}, "week": 5,

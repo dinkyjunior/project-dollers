@@ -1,0 +1,1394 @@
+{
+  "status": "passed",
+  "agent": "/root/matchup_data",
+  "auditedAt": "2026-10-09T03:50:16.713412+00:00",
+  "beforeCommit": "3735200e032cb30a8038b72931799d0ae4dc75ae",
+  "incomingCommit": "3c1adb027f45073a6615b19adb8a06664e509b14",
+  "beforeSnapshotSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+  "snapshotSha256": "ea16f6abd01f3b840afe43df2992432ddfc34a08a344f3c29056ca2e8142ce1f",
+  "assertions": 24864,
+  "immutableFiveFileBodies": [
+    {
+      "name": "current.json",
+      "beforePath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3735200/current.json",
+      "beforeSha256": "9da45721ef867eee8129fb3a5cc2777b4638fa8104e86b053234fdc136a3a705",
+      "incomingPath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3c1adb0/current.json",
+      "incomingSha256": "c8c0edebadce215b66de6b9a09a460808ef6dfc28c79f14aebf6a5e994b08781"
+    },
+    {
+      "name": "provenance.json",
+      "beforePath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3735200/provenance.json",
+      "beforeSha256": "50e7f528a4b9d7b517c7dd559a1df89c471b4e81d82a5ae78f5fbe5dda26dba5",
+      "incomingPath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3c1adb0/provenance.json",
+      "incomingSha256": "872674d2ab680ba6de4f1d5ea1d97f47d6d622766296a1f8033b338dd41b7518"
+    },
+    {
+      "name": "player-history.json",
+      "beforePath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3735200/player-history.json",
+      "beforeSha256": "114177e3bae9bf52f04e3f3413e0ab236807eea573ae5b5defda37bfe9919dd6",
+      "incomingPath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3c1adb0/player-history.json",
+      "incomingSha256": "0ac6cc888b3e1a81036324ff14bceffba3567b6cbd5c7b5c28ed17776f72ba67"
+    },
+    {
+      "name": "team-details.json",
+      "beforePath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3735200/team-details.json",
+      "beforeSha256": "af054320f2129ff6fd125b3b94e21658da2b020967a692925dce4d2a2eef6114",
+      "incomingPath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3c1adb0/team-details.json",
+      "incomingSha256": "4d3e62ef0e70982d43228ac6058a17f953310605b5f1d21aa4d28b626232788f"
+    },
+    {
+      "name": "matchup-breakdown.json",
+      "beforePath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3735200/matchup-breakdown.json",
+      "beforeSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+      "incomingPath": "/workspace/recovery-qa/matchup-breakdown/incoming-3c1adb0/3c1adb0/matchup-breakdown.json",
+      "incomingSha256": "ea16f6abd01f3b840afe43df2992432ddfc34a08a344f3c29056ca2e8142ce1f"
+    }
+  ],
+  "sharedPlayerRowStatsAdvancedAndStartingSemanticsPreserved": true,
+  "explicitRoleMetadataExclusions": [
+    "retrievedAt",
+    "sourceIds",
+    "sha256"
+  ],
+  "opponentArchiveChanges": [
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "added": [
+        "2016_06_DAL_GB",
+        "2017_05_GB_DAL",
+        "2019_05_GB_DAL",
+        "2022_10_DAL_GB",
+        "2026_05_TB_DAL"
+      ],
+      "removed": [
+        "2016_15_TB_DAL",
+        "2018_16_TB_DAL",
+        "2021_01_DAL_TB",
+        "2022_01_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "name": "CeeDee Lamb",
+      "added": [
+        "2022_10_DAL_GB"
+      ],
+      "removed": [
+        "2021_01_DAL_TB",
+        "2022_01_TB_DAL",
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036997",
+      "name": "Javonte Williams",
+      "added": [
+        "2023_07_GB_DEN"
+      ],
+      "removed": [
+        "2024_03_DEN_TB"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037120",
+      "name": "Tyler Goodson",
+      "added": [
+        "2024_02_IND_GB"
+      ],
+      "removed": []
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037247",
+      "name": "George Pickens",
+      "added": [
+        "2023_10_GB_PIT"
+      ],
+      "removed": [
+        "2022_06_TB_PIT"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037282",
+      "name": "James Mitchell",
+      "added": [
+        "2022_09_GB_DET"
+      ],
+      "removed": []
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037563",
+      "name": "Malik Davis",
+      "added": [
+        "2022_10_DAL_GB"
+      ],
+      "removed": []
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037801",
+      "name": "KaVontae Turpin",
+      "added": [
+        "2022_10_DAL_GB"
+      ],
+      "removed": [
+        "2022_01_TB_DAL",
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038041",
+      "name": "Jake Ferguson",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038547",
+      "name": "Luke Schoonmaker",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038705",
+      "name": "Emari Demercado",
+      "added": [
+        "2024_06_ARI_GB"
+      ],
+      "removed": []
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038738",
+      "name": "Hunter Luepke",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039062",
+      "name": "Jonathan Mingo",
+      "added": [
+        "2023_16_GB_CAR"
+      ],
+      "removed": [
+        "2023_13_CAR_TB"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039410",
+      "name": "Ryan Flournoy",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039530",
+      "name": "Brevyn Spann-Ford",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0033921",
+      "name": "Chris Godwin Jr.",
+      "added": [
+        "2018_03_PIT_TB",
+        "2022_06_TB_PIT"
+      ],
+      "removed": [
+        "2018_16_TB_DAL",
+        "2021_01_DAL_TB",
+        "2022_01_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0034855",
+      "name": "Baker Mayfield",
+      "added": [
+        "2019_13_CLE_PIT",
+        "2020_06_CLE_PIT",
+        "2020_17_PIT_CLE",
+        "2021_08_PIT_CLE",
+        "2021_17_CLE_PIT"
+      ],
+      "removed": [
+        "2020_04_CLE_DAL",
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0035359",
+      "name": "David Sills",
+      "added": [],
+      "removed": [
+        "2022_03_DAL_NYG"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "added": [
+        "2022_08_PIT_PHI",
+        "2024_15_PIT_PHI"
+      ],
+      "removed": [
+        "2022_16_PHI_DAL",
+        "2023_09_DAL_PHI",
+        "2023_14_PHI_DAL",
+        "2024_10_PHI_DAL",
+        "2024_17_DAL_PHI"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0037311",
+      "name": "Ko Kieft",
+      "added": [
+        "2022_06_TB_PIT"
+      ],
+      "removed": []
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0038129",
+      "name": "Cade Otton",
+      "added": [
+        "2022_06_TB_PIT"
+      ],
+      "removed": [
+        "2022_01_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0038951",
+      "name": "Sean Tucker",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039050",
+      "name": "Payne Durham",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039361",
+      "name": "Bucky Irving",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039855",
+      "name": "Jalen McMillan",
+      "added": [],
+      "removed": [
+        "2024_16_TB_DAL"
+      ]
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0041251",
+      "name": "Jalon Daniels",
+      "added": [
+        "2026_05_TB_DAL"
+      ],
+      "removed": []
+    }
+  ],
+  "removedPriorOpponentRows": [
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "gameId": "2016_15_TB_DAL",
+      "opponent": "TB",
+      "season": 2016
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "gameId": "2018_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2018
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "gameId": "2021_01_DAL_TB",
+      "opponent": "TB",
+      "season": 2021
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "gameId": "2022_01_TB_DAL",
+      "opponent": "TB",
+      "season": 2022
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "name": "CeeDee Lamb",
+      "gameId": "2021_01_DAL_TB",
+      "opponent": "TB",
+      "season": 2021
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "name": "CeeDee Lamb",
+      "gameId": "2022_01_TB_DAL",
+      "opponent": "TB",
+      "season": 2022
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036358",
+      "name": "CeeDee Lamb",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0036997",
+      "name": "Javonte Williams",
+      "gameId": "2024_03_DEN_TB",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037247",
+      "name": "George Pickens",
+      "gameId": "2022_06_TB_PIT",
+      "opponent": "TB",
+      "season": 2022
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037801",
+      "name": "KaVontae Turpin",
+      "gameId": "2022_01_TB_DAL",
+      "opponent": "TB",
+      "season": 2022
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0037801",
+      "name": "KaVontae Turpin",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038041",
+      "name": "Jake Ferguson",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038547",
+      "name": "Luke Schoonmaker",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0038738",
+      "name": "Hunter Luepke",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039062",
+      "name": "Jonathan Mingo",
+      "gameId": "2023_13_CAR_TB",
+      "opponent": "TB",
+      "season": 2023
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039410",
+      "name": "Ryan Flournoy",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039530",
+      "name": "Brevyn Spann-Ford",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "TB",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0033921",
+      "name": "Chris Godwin Jr.",
+      "gameId": "2018_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2018
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0033921",
+      "name": "Chris Godwin Jr.",
+      "gameId": "2021_01_DAL_TB",
+      "opponent": "DAL",
+      "season": 2021
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0033921",
+      "name": "Chris Godwin Jr.",
+      "gameId": "2022_01_TB_DAL",
+      "opponent": "DAL",
+      "season": 2022
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0034855",
+      "name": "Baker Mayfield",
+      "gameId": "2020_04_CLE_DAL",
+      "opponent": "DAL",
+      "season": 2020
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0034855",
+      "name": "Baker Mayfield",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0035359",
+      "name": "David Sills",
+      "gameId": "2022_03_DAL_NYG",
+      "opponent": "DAL",
+      "season": 2022
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "gameId": "2022_16_PHI_DAL",
+      "opponent": "DAL",
+      "season": 2022
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "gameId": "2023_09_DAL_PHI",
+      "opponent": "DAL",
+      "season": 2023
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "gameId": "2023_14_PHI_DAL",
+      "opponent": "DAL",
+      "season": 2023
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "gameId": "2024_10_PHI_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0036919",
+      "name": "Kenny Gainwell",
+      "gameId": "2024_17_DAL_PHI",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0038129",
+      "name": "Cade Otton",
+      "gameId": "2022_01_TB_DAL",
+      "opponent": "DAL",
+      "season": 2022
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0038951",
+      "name": "Sean Tucker",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039050",
+      "name": "Payne Durham",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039361",
+      "name": "Bucky Irving",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0039855",
+      "name": "Jalen McMillan",
+      "gameId": "2024_16_TB_DAL",
+      "opponent": "DAL",
+      "season": 2024
+    }
+  ],
+  "newCurrentSeasonPlaceholders": [
+    {
+      "team": "DAL",
+      "playerId": "00-0033077",
+      "name": "Dak Prescott",
+      "row": {
+        "gameId": "2026_05_TB_DAL",
+        "season": 2026,
+        "week": 5,
+        "team": "DAL",
+        "opponent": "TB",
+        "kickoffUtc": "2026-10-09T00:15:00Z",
+        "homeAway": "home",
+        "espnEventId": "401872980",
+        "stats": {
+          "attempts": null,
+          "carries": null,
+          "completionPct": null,
+          "completions": null,
+          "fumbles": null,
+          "fumblesLost": null,
+          "games": null,
+          "interceptions": null,
+          "offensiveTD": null,
+          "passerRating": null,
+          "passingAirYards": null,
+          "passingFirstDowns": null,
+          "passingTD": null,
+          "passingTwoPointConversions": null,
+          "passingYards": null,
+          "passingYardsAfterCatch": null,
+          "receivingAirYards": null,
+          "receivingFirstDowns": null,
+          "receivingFumbles": null,
+          "receivingFumblesLost": null,
+          "receivingTD": null,
+          "receivingTwoPointConversions": null,
+          "receivingYards": null,
+          "receivingYardsAfterCatch": null,
+          "receptions": null,
+          "rushingFirstDowns": null,
+          "rushingFumbles": null,
+          "rushingFumblesLost": null,
+          "rushingTD": null,
+          "rushingTwoPointConversions": null,
+          "rushingYards": null,
+          "sackFumbles": null,
+          "sackFumblesLost": null,
+          "sackYardsLost": null,
+          "sacks": null,
+          "specialTeamsTD": null,
+          "targets": null,
+          "touchdownsAccountedFor": null,
+          "yardsPerAttempt": null,
+          "yardsPerCarry": null,
+          "yardsPerReception": null
+        },
+        "sourceIds": [
+          "nflverse_games"
+        ],
+        "appearance": {
+          "status": "unavailable",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Provider-designated starting QB; no weekly statistical row. No zero statistics or statistical GP invented."
+        },
+        "provenance": {
+          "status": "verified",
+          "origin": "reported",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "retrievedAt": "2026-10-09T03:25:43Z",
+          "season": 2026,
+          "week": 5,
+          "note": "Published schedule-designated QB identity and game context; starting-role corroboration and player statistics evaluated separately"
+        },
+        "started": {
+          "value": null,
+          "candidate": true,
+          "status": "unavailable",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated QB with no statistical row or independent role corroboration. Candidate retained; confirmed start/statistical GP unavailable.",
+          "reportedValue": true
+        },
+        "advanced": {
+          "snaps": null,
+          "offensiveSnapPct": null,
+          "routes": null,
+          "redZoneTargets": null,
+          "redZoneReceptions": null,
+          "redZoneReceivingTD": null,
+          "redZonePassAttempts": null,
+          "redZonePassTD": null,
+          "dropbacks": null,
+          "qbHits": null,
+          "pressures": null,
+          "blitz": null,
+          "scrambles": null,
+          "scrambleYards": null,
+          "designedRuns": null,
+          "designedRunYards": null,
+          "deepAttempts": null,
+          "deepCompletions": null,
+          "deepYards": null,
+          "teamTargets": null,
+          "targetShare": null,
+          "sackRate": null,
+          "offensiveSnaps": null,
+          "blitzes": null,
+          "averageDepthOfTarget": null,
+          "redZoneRushAttempts": null
+        },
+        "advancedProvenance": {
+          "status": "unavailable",
+          "origin": "computed",
+          "fieldSources": {},
+          "retrievedAt": null,
+          "season": 2026,
+          "week": 5,
+          "contract": "provenance.advanced"
+        }
+      }
+    },
+    {
+      "team": "TB",
+      "playerId": "00-0041251",
+      "name": "Jalon Daniels",
+      "row": {
+        "gameId": "2026_05_TB_DAL",
+        "season": 2026,
+        "week": 5,
+        "team": "TB",
+        "opponent": "DAL",
+        "kickoffUtc": "2026-10-09T00:15:00Z",
+        "homeAway": "away",
+        "espnEventId": "401872980",
+        "stats": {
+          "attempts": null,
+          "carries": null,
+          "completionPct": null,
+          "completions": null,
+          "fumbles": null,
+          "fumblesLost": null,
+          "games": null,
+          "interceptions": null,
+          "offensiveTD": null,
+          "passerRating": null,
+          "passingAirYards": null,
+          "passingFirstDowns": null,
+          "passingTD": null,
+          "passingTwoPointConversions": null,
+          "passingYards": null,
+          "passingYardsAfterCatch": null,
+          "receivingAirYards": null,
+          "receivingFirstDowns": null,
+          "receivingFumbles": null,
+          "receivingFumblesLost": null,
+          "receivingTD": null,
+          "receivingTwoPointConversions": null,
+          "receivingYards": null,
+          "receivingYardsAfterCatch": null,
+          "receptions": null,
+          "rushingFirstDowns": null,
+          "rushingFumbles": null,
+          "rushingFumblesLost": null,
+          "rushingTD": null,
+          "rushingTwoPointConversions": null,
+          "rushingYards": null,
+          "sackFumbles": null,
+          "sackFumblesLost": null,
+          "sackYardsLost": null,
+          "sacks": null,
+          "specialTeamsTD": null,
+          "targets": null,
+          "touchdownsAccountedFor": null,
+          "yardsPerAttempt": null,
+          "yardsPerCarry": null,
+          "yardsPerReception": null
+        },
+        "sourceIds": [
+          "nflverse_games"
+        ],
+        "appearance": {
+          "status": "unavailable",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Provider-designated starting QB; no weekly statistical row. No zero statistics or statistical GP invented."
+        },
+        "provenance": {
+          "status": "verified",
+          "origin": "reported",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "retrievedAt": "2026-10-09T03:25:43Z",
+          "season": 2026,
+          "week": 5,
+          "note": "Published schedule-designated QB identity and game context; starting-role corroboration and player statistics evaluated separately"
+        },
+        "started": {
+          "value": null,
+          "candidate": true,
+          "status": "unavailable",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated QB with no statistical row or independent role corroboration. Candidate retained; confirmed start/statistical GP unavailable.",
+          "reportedValue": true
+        },
+        "advanced": {
+          "snaps": null,
+          "offensiveSnapPct": null,
+          "routes": null,
+          "redZoneTargets": null,
+          "redZoneReceptions": null,
+          "redZoneReceivingTD": null,
+          "redZonePassAttempts": null,
+          "redZonePassTD": null,
+          "dropbacks": null,
+          "qbHits": null,
+          "pressures": null,
+          "blitz": null,
+          "scrambles": null,
+          "scrambleYards": null,
+          "designedRuns": null,
+          "designedRunYards": null,
+          "deepAttempts": null,
+          "deepCompletions": null,
+          "deepYards": null,
+          "teamTargets": null,
+          "targetShare": null,
+          "sackRate": null,
+          "offensiveSnaps": null,
+          "blitzes": null,
+          "averageDepthOfTarget": null,
+          "redZoneRushAttempts": null
+        },
+        "advancedProvenance": {
+          "status": "unavailable",
+          "origin": "computed",
+          "fieldSources": {},
+          "retrievedAt": null,
+          "season": 2026,
+          "week": 5,
+          "contract": "provenance.advanced"
+        }
+      }
+    }
+  ],
+  "newWeeklyOpponentArchiveRows": 24,
+  "archiveSourceVerification": [
+    {
+      "sourceId": "nflverse_player_stats_2016",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2016.source.gz",
+      "storedGzipSha256": "dcd9a9dd2e43e0c60e6cad4c8a6e88a01ee15538cb47126229f5b53df1da1a40",
+      "decodedBodySha256": "eb0264c65d1ef593196afcd4ba24e9f2e9b7942923bf6f4bb4639684e2c4d470",
+      "incomingSourceDeclaredSha256": "eb0264c65d1ef593196afcd4ba24e9f2e9b7942923bf6f4bb4639684e2c4d470",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2017",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2017.source.gz",
+      "storedGzipSha256": "b10559bdfeb4f42536b5a6dde9f775e910464d0bed4de6a737d0bd7bc63a6310",
+      "decodedBodySha256": "592b0916065987b0b3afb0480162f03350d16b12250dc42b0f194e2ab1378563",
+      "incomingSourceDeclaredSha256": "592b0916065987b0b3afb0480162f03350d16b12250dc42b0f194e2ab1378563",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2018",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2018.source.gz",
+      "storedGzipSha256": "e8b0e031d1301429d71d0687f1a5cc53fac108870ae02fbb760bb7a2797144da",
+      "decodedBodySha256": "c53021bcfc9f89d30edd6f1fe145a1d7d6ce469efeec75974fe9f0adac568642",
+      "incomingSourceDeclaredSha256": "c53021bcfc9f89d30edd6f1fe145a1d7d6ce469efeec75974fe9f0adac568642",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2019",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2019.source.gz",
+      "storedGzipSha256": "f487a32faff4caa484442092c84663de52ff2c836bdcfdf58508902f3686dc93",
+      "decodedBodySha256": "a05558126b1209b80fe11a8f18938cb35816370bf9990975a87de49e9eed7376",
+      "incomingSourceDeclaredSha256": "a05558126b1209b80fe11a8f18938cb35816370bf9990975a87de49e9eed7376",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2020",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2020.source.gz",
+      "storedGzipSha256": "e51268ecc950feff3af22ceb5651d04d3285bc7e9b45584ceba8c47978d11670",
+      "decodedBodySha256": "05b992676faccc8940efbf6242cb76358069372d31d7c2e02c1a4acdcd3cbe18",
+      "incomingSourceDeclaredSha256": "05b992676faccc8940efbf6242cb76358069372d31d7c2e02c1a4acdcd3cbe18",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2021",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2021.source.gz",
+      "storedGzipSha256": "f5df542c39bba9d9d52a630c5b685f29b090d37c491d268c4b2919fbeaa64b32",
+      "decodedBodySha256": "41915fb49238902ad1f129ebf0405b11a1e710454ae0fe8f7b3e4f9145875f48",
+      "incomingSourceDeclaredSha256": "41915fb49238902ad1f129ebf0405b11a1e710454ae0fe8f7b3e4f9145875f48",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2022",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2022.source.gz",
+      "storedGzipSha256": "8677ae2e0caf176d3f1c688306e4be620ea70ce98d1a12eb37fdffdf0514f3be",
+      "decodedBodySha256": "ad426c3fe5bf1cc30c3f137fdfe96d054e19d400879ee4413129da49fa7b54be",
+      "incomingSourceDeclaredSha256": "ad426c3fe5bf1cc30c3f137fdfe96d054e19d400879ee4413129da49fa7b54be",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2023",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2023.source.gz",
+      "storedGzipSha256": "88bafb2cdde0e55415a1af73d7f64cf614107339118766564be1a2a3c805e90b",
+      "decodedBodySha256": "f19cb71a5de0dce7fd09376026237c9ee9d5a93fe13815a2ea3ec2d37204cb17",
+      "incomingSourceDeclaredSha256": "f19cb71a5de0dce7fd09376026237c9ee9d5a93fe13815a2ea3ec2d37204cb17",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    },
+    {
+      "sourceId": "nflverse_player_stats_2024",
+      "retainedBodyPath": "qa/matchup-breakdown/final-source-evidence/sources/nflverse_player_stats_2024.source.gz",
+      "storedGzipSha256": "80882dfa9ed173dd4e9452edaddd1cc6ccd17cc404cc76bb4937ea7f07820f78",
+      "decodedBodySha256": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+      "incomingSourceDeclaredSha256": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+      "qualification": "Original retained provider body matches current declared body hash; original HTTP retrieval age is not rewritten."
+    }
+  ],
+  "independentlyRecomputedDefaultWindows": {
+    "DAL": {
+      "window": [
+        "2026_05_TB_DAL",
+        "2026_04_DAL_HOU",
+        "2026_03_BAL_DAL",
+        "2026_02_WAS_DAL",
+        "2026_01_DAL_NYG"
+      ],
+      "record": {
+        "w": 2,
+        "l": 3,
+        "ties": 0,
+        "record": "2\u20133",
+        "pct": 0.4,
+        "pointsFor": 138,
+        "pointsAgainst": 136,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "L"
+        ],
+        "games": 5,
+        "status": "verified",
+        "origin": "computed",
+        "sourceIds": [
+          "team_nflverse_games"
+        ]
+      },
+      "researchGameId": "2026_06_DAL_GB",
+      "sourceFinalStats": {
+        "netPassing": 316,
+        "rushing": 50,
+        "totalOffense": 366,
+        "thirdDownMade": 4,
+        "thirdDownAttempts": 10,
+        "redZoneTD": 2,
+        "redZoneAttempts": 2,
+        "turnovers": 3,
+        "penaltyYards": 57
+      },
+      "teamPerGame": {
+        "netPassing": "269.6",
+        "rushing": "81.6",
+        "totalOffense": "351.2"
+      },
+      "freshCSVLeaders": {
+        "rushing": [
+          {
+            "id": "00-0036997",
+            "name": "Javonte Williams",
+            "gp": 4,
+            "yards": 231,
+            "volume": 62,
+            "td": 5,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "57.75",
+            "yardsPerCarry": "3.725806451612903225806451613"
+          },
+          {
+            "id": "00-0033077",
+            "name": "Dak Prescott",
+            "gp": 4,
+            "yards": 66,
+            "volume": 12,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "16.5",
+            "yardsPerCarry": "5.5"
+          },
+          {
+            "id": "00-0037120",
+            "name": "Tyler Goodson",
+            "gp": 2,
+            "yards": 34,
+            "volume": 9,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "17",
+            "yardsPerCarry": "3.777777777777777777777777778"
+          },
+          {
+            "id": "00-0038705",
+            "name": "Emari Demercado",
+            "gp": 2,
+            "yards": 15,
+            "volume": 5,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL"
+            ],
+            "perGameYards": "7.5",
+            "yardsPerCarry": "3"
+          },
+          {
+            "id": "00-0037801",
+            "name": "KaVontae Turpin",
+            "gp": 4,
+            "yards": 10,
+            "volume": 2,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "2.5",
+            "yardsPerCarry": "5"
+          }
+        ],
+        "receiving": [
+          {
+            "id": "00-0036358",
+            "name": "CeeDee Lamb",
+            "gp": 4,
+            "yards": 498,
+            "volume": 37,
+            "td": 4,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "124.5",
+            "targets": 46
+          },
+          {
+            "id": "00-0037247",
+            "name": "George Pickens",
+            "gp": 4,
+            "yards": 225,
+            "volume": 18,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "56.25",
+            "targets": 28
+          },
+          {
+            "id": "00-0039410",
+            "name": "Ryan Flournoy",
+            "gp": 4,
+            "yards": 104,
+            "volume": 13,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "26",
+            "targets": 23
+          },
+          {
+            "id": "00-0038041",
+            "name": "Jake Ferguson",
+            "gp": 4,
+            "yards": 83,
+            "volume": 12,
+            "td": 3,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "20.75",
+            "targets": 15
+          },
+          {
+            "id": "00-0036997",
+            "name": "Javonte Williams",
+            "gp": 4,
+            "yards": 77,
+            "volume": 15,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "19.25",
+            "targets": 17
+          }
+        ]
+      }
+    },
+    "TB": {
+      "window": [
+        "2026_05_TB_DAL",
+        "2026_04_GB_TB",
+        "2026_03_MIN_TB",
+        "2026_02_CLE_TB",
+        "2026_01_TB_CIN"
+      ],
+      "record": {
+        "w": 1,
+        "l": 4,
+        "ties": 0,
+        "record": "1\u20134",
+        "pct": 0.2,
+        "pointsFor": 100,
+        "pointsAgainst": 112,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "games": 5,
+        "status": "verified",
+        "origin": "computed",
+        "sourceIds": [
+          "team_nflverse_games"
+        ]
+      },
+      "researchGameId": "2026_06_PIT_TB",
+      "sourceFinalStats": {
+        "netPassing": 178,
+        "rushing": 241,
+        "totalOffense": 419,
+        "thirdDownMade": 7,
+        "thirdDownAttempts": 13,
+        "redZoneTD": 3,
+        "redZoneAttempts": 5,
+        "turnovers": 0,
+        "penaltyYards": 92
+      },
+      "teamPerGame": {
+        "netPassing": "173.4",
+        "rushing": "133",
+        "totalOffense": "306.4"
+      },
+      "freshCSVLeaders": {
+        "rushing": [
+          {
+            "id": "00-0039361",
+            "name": "Bucky Irving",
+            "gp": 4,
+            "yards": 241,
+            "volume": 56,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "60.25",
+            "yardsPerCarry": "4.303571428571428571428571429"
+          },
+          {
+            "id": "00-0034855",
+            "name": "Baker Mayfield",
+            "gp": 3,
+            "yards": 65,
+            "volume": 11,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB"
+            ],
+            "perGameYards": "21.66666666666666666666666667",
+            "yardsPerCarry": "5.909090909090909090909090909"
+          },
+          {
+            "id": "00-0041251",
+            "name": "Jalon Daniels",
+            "gp": 2,
+            "yards": 64,
+            "volume": 9,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "32",
+            "yardsPerCarry": "7.111111111111111111111111111"
+          },
+          {
+            "id": "00-0036919",
+            "name": "Kenny Gainwell",
+            "gp": 4,
+            "yards": 26,
+            "volume": 13,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "6.5",
+            "yardsPerCarry": "2"
+          },
+          {
+            "id": "00-0033921",
+            "name": "Chris Godwin Jr.",
+            "gp": 4,
+            "yards": 15,
+            "volume": 2,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "3.75",
+            "yardsPerCarry": "7.5"
+          }
+        ],
+        "receiving": [
+          {
+            "id": "00-0038129",
+            "name": "Cade Otton",
+            "gp": 4,
+            "yards": 157,
+            "volume": 15,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "39.25",
+            "targets": 23
+          },
+          {
+            "id": "00-0040129",
+            "name": "Emeka Egbuka",
+            "gp": 4,
+            "yards": 154,
+            "volume": 15,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "38.5",
+            "targets": 24
+          },
+          {
+            "id": "00-0033921",
+            "name": "Chris Godwin Jr.",
+            "gp": 4,
+            "yards": 142,
+            "volume": 16,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "35.5",
+            "targets": 18
+          },
+          {
+            "id": "00-0041048",
+            "name": "Ted Hurst III",
+            "gp": 4,
+            "yards": 128,
+            "volume": 8,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "32",
+            "targets": null
+          },
+          {
+            "id": "00-0040237",
+            "name": "Tez Johnson",
+            "gp": 4,
+            "yards": 74,
+            "volume": 4,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "18.5",
+            "targets": 9
+          }
+        ]
+      }
+    }
+  },
+  "QBRoleCoverage": {
+    "Dak Prescott": {
+      "candidateGameIds": [
+        "2026_05_TB_DAL",
+        "2026_04_DAL_HOU",
+        "2026_03_BAL_DAL",
+        "2026_02_WAS_DAL",
+        "2026_01_DAL_NYG"
+      ],
+      "confirmedStarts": 4,
+      "unresolvedRoles": 1,
+      "combinedAggregateAvailable": false
+    },
+    "Jalon Daniels": {
+      "candidateGameIds": [
+        "2026_05_TB_DAL",
+        "2026_04_GB_TB"
+      ],
+      "confirmedStarts": 1,
+      "unresolvedRoles": 1,
+      "combinedAggregateAvailable": false
+    }
+  },
+  "freshProviderEvidence": [
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/espn-final-401872980.json.receipt.json",
+      "sha256": "cf16d298bd09a32c2841b88ac3cbfd50f85d410fa9a7b5ea24bcae9e4eaaeb80"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/nflverse-games.csv.receipt.json",
+      "sha256": "66a033f300ba3f8e43513f47676c2d3e733e31d68a9546f6e7e1a01c353e2cd1"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/nflverse-player-stats-2026.csv.receipt.json",
+      "sha256": "ccac37228dea4b2966ef997dc4e63b9bab918b0d368bb30cea9fa14ca2520e6e"
+    }
+  ],
+  "qualification": [
+    "Historical overlap preserves raw stats/advanced/role facts; 26 DAL/TB logs deliberately replace bounded weekly-opponent archives, so this is not a whole-book statistical equivalence assertion.",
+    "Fresh final provider facts are corroboration, not exact original CI HTTP-body identity. Fresh schedule hash differs and is later; no later roof data is inserted.",
+    "Fresh NFLverse weekly stats body exactly matches incoming source SHA and has noWeek5. Two new QBcandidates remain all-stat-null/noGP/no confirmedstarts.",
+    "Original retained historical CSV bodies exactly match incoming declared hashes; they retain original archived retrieval context rather than being relabelled fresh fetches.",
+    "Current weekly-opponent GB/PIT archive additions are verified against these raw CSVs; older selected W5 opponent archives are unavailable under the bounded coverage contract, not zero/no padding."
+  ]
+}

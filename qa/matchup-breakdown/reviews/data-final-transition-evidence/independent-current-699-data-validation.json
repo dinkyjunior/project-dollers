@@ -1,0 +1,542 @@
+{
+  "status": "passed",
+  "agent": "/root/matchup_data",
+  "auditedAt": "2026-10-09T03:54:17.276560+00:00",
+  "incomingCommit": "699e4f8c62a4e988819172af2936647f5c5bf1cb",
+  "snapshotSha256": "05e170530516f1df16978be1a0d31f38994332eec088bb23a17e860e7ce7439e",
+  "assertions": 25597,
+  "fiveImmutableFiles": [
+    {
+      "name": "current.json",
+      "path": "/workspace/recovery-qa/matchup-breakdown/incoming-699e4f8/current.json",
+      "sha256": "4fdeb8ba2df6cd6d2911d83088a6d58c9d8bb04cd85d330abbe6808119865bbe",
+      "runtimeHashMatches": true
+    },
+    {
+      "name": "provenance.json",
+      "path": "/workspace/recovery-qa/matchup-breakdown/incoming-699e4f8/provenance.json",
+      "sha256": "cc5594b4b92b95097c70ec92a39cdad58779cfba5da7f792bcbb4980c4f01416",
+      "runtimeHashMatches": true
+    },
+    {
+      "name": "player-history.json",
+      "path": "/workspace/recovery-qa/matchup-breakdown/incoming-699e4f8/player-history.json",
+      "sha256": "c60316f673c3eaf223d9a8e74f78661fa8a89d6b823602370bf0a3c883d81ffe",
+      "runtimeHashMatches": true
+    },
+    {
+      "name": "team-details.json",
+      "path": "/workspace/recovery-qa/matchup-breakdown/incoming-699e4f8/team-details.json",
+      "sha256": "d51b51e045efe7e26fef330f035c4bf5db924137c40574e66595536ff3c8ae93",
+      "runtimeHashMatches": true
+    },
+    {
+      "name": "matchup-breakdown.json",
+      "path": "/workspace/recovery-qa/matchup-breakdown/incoming-699e4f8/matchup-breakdown.json",
+      "sha256": "05e170530516f1df16978be1a0d31f38994332eec088bb23a17e860e7ce7439e",
+      "runtimeHashMatches": true
+    }
+  ],
+  "precedingFinalTransitionProof": {
+    "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/independent-final-transition-data-validation.json",
+    "sha256": "5716e022ca0e060f85bf9e54ce76b2c6f070afcc2349ddceef0bbdc5848afc66",
+    "scope": "The earlier373-to3c proof remains unchanged. Its fresh raw source checks, new team-window math, archive verification and candidate-null contract are reused only after independent explicit699 identity/numeric/source-hash validation."
+  },
+  "sharedHistoricalStatisticalProjection3cTo699Preserved": true,
+  "literalWholeBookEqualityClaimed": false,
+  "actualFootballChanges3cTo699": [
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "field": "roof",
+      "before": null,
+      "after": "closed"
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_05_TB_DAL",
+      "field": "roof",
+      "before": null,
+      "after": "closed"
+    },
+    {
+      "team": "DAL",
+      "playerId": "00-0039341",
+      "field": "datedDepthInjuryNarrative",
+      "before": "questionable",
+      "after": "Guyton exited Thursday's game against Tampa Bay due to a back injury and didn't return, Jane Slater of NFL Network reports.",
+      "previousPublishedAt": "2026-10-09T03:14Z",
+      "publishedAt": "2026-10-09T03:22Z"
+    }
+  ],
+  "currentDefaultWindows": {
+    "DAL": {
+      "window": [
+        "2026_05_TB_DAL",
+        "2026_04_DAL_HOU",
+        "2026_03_BAL_DAL",
+        "2026_02_WAS_DAL",
+        "2026_01_DAL_NYG"
+      ],
+      "record": {
+        "w": 2,
+        "l": 3,
+        "ties": 0,
+        "record": "2\u20133",
+        "pct": 0.4,
+        "pointsFor": 138,
+        "pointsAgainst": 136,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "L"
+        ],
+        "games": 5,
+        "status": "verified",
+        "origin": "computed",
+        "sourceIds": [
+          "team_nflverse_games"
+        ]
+      },
+      "researchGameId": "2026_06_DAL_GB",
+      "sourceFinalStats": {
+        "netPassing": 316,
+        "rushing": 50,
+        "totalOffense": 366,
+        "thirdDownMade": 4,
+        "thirdDownAttempts": 10,
+        "redZoneTD": 2,
+        "redZoneAttempts": 2,
+        "turnovers": 3,
+        "penaltyYards": 57
+      },
+      "teamPerGame": {
+        "netPassing": "269.6",
+        "rushing": "81.6",
+        "totalOffense": "351.2"
+      },
+      "freshCSVLeaders": {
+        "rushing": [
+          {
+            "id": "00-0036997",
+            "name": "Javonte Williams",
+            "gp": 4,
+            "yards": 231,
+            "volume": 62,
+            "td": 5,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "57.75",
+            "yardsPerCarry": "3.725806451612903225806451613"
+          },
+          {
+            "id": "00-0033077",
+            "name": "Dak Prescott",
+            "gp": 4,
+            "yards": 66,
+            "volume": 12,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "16.5",
+            "yardsPerCarry": "5.5"
+          },
+          {
+            "id": "00-0037120",
+            "name": "Tyler Goodson",
+            "gp": 2,
+            "yards": 34,
+            "volume": 9,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "17",
+            "yardsPerCarry": "3.777777777777777777777777778"
+          },
+          {
+            "id": "00-0038705",
+            "name": "Emari Demercado",
+            "gp": 2,
+            "yards": 15,
+            "volume": 5,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL"
+            ],
+            "perGameYards": "7.5",
+            "yardsPerCarry": "3"
+          },
+          {
+            "id": "00-0037801",
+            "name": "KaVontae Turpin",
+            "gp": 4,
+            "yards": 10,
+            "volume": 2,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "2.5",
+            "yardsPerCarry": "5"
+          }
+        ],
+        "receiving": [
+          {
+            "id": "00-0036358",
+            "name": "CeeDee Lamb",
+            "gp": 4,
+            "yards": 498,
+            "volume": 37,
+            "td": 4,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "124.5",
+            "targets": 46
+          },
+          {
+            "id": "00-0037247",
+            "name": "George Pickens",
+            "gp": 4,
+            "yards": 225,
+            "volume": 18,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "56.25",
+            "targets": 28
+          },
+          {
+            "id": "00-0039410",
+            "name": "Ryan Flournoy",
+            "gp": 4,
+            "yards": 104,
+            "volume": 13,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "26",
+            "targets": 23
+          },
+          {
+            "id": "00-0038041",
+            "name": "Jake Ferguson",
+            "gp": 4,
+            "yards": 83,
+            "volume": 12,
+            "td": 3,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "20.75",
+            "targets": 15
+          },
+          {
+            "id": "00-0036997",
+            "name": "Javonte Williams",
+            "gp": 4,
+            "yards": 77,
+            "volume": 15,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_DAL_NYG",
+              "2026_02_WAS_DAL",
+              "2026_03_BAL_DAL",
+              "2026_04_DAL_HOU"
+            ],
+            "perGameYards": "19.25",
+            "targets": 17
+          }
+        ]
+      }
+    },
+    "TB": {
+      "window": [
+        "2026_05_TB_DAL",
+        "2026_04_GB_TB",
+        "2026_03_MIN_TB",
+        "2026_02_CLE_TB",
+        "2026_01_TB_CIN"
+      ],
+      "record": {
+        "w": 1,
+        "l": 4,
+        "ties": 0,
+        "record": "1\u20134",
+        "pct": 0.2,
+        "pointsFor": 100,
+        "pointsAgainst": 112,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "games": 5,
+        "status": "verified",
+        "origin": "computed",
+        "sourceIds": [
+          "team_nflverse_games"
+        ]
+      },
+      "researchGameId": "2026_06_PIT_TB",
+      "sourceFinalStats": {
+        "netPassing": 178,
+        "rushing": 241,
+        "totalOffense": 419,
+        "thirdDownMade": 7,
+        "thirdDownAttempts": 13,
+        "redZoneTD": 3,
+        "redZoneAttempts": 5,
+        "turnovers": 0,
+        "penaltyYards": 92
+      },
+      "teamPerGame": {
+        "netPassing": "173.4",
+        "rushing": "133",
+        "totalOffense": "306.4"
+      },
+      "freshCSVLeaders": {
+        "rushing": [
+          {
+            "id": "00-0039361",
+            "name": "Bucky Irving",
+            "gp": 4,
+            "yards": 241,
+            "volume": 56,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "60.25",
+            "yardsPerCarry": "4.303571428571428571428571429"
+          },
+          {
+            "id": "00-0034855",
+            "name": "Baker Mayfield",
+            "gp": 3,
+            "yards": 65,
+            "volume": 11,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB"
+            ],
+            "perGameYards": "21.66666666666666666666666667",
+            "yardsPerCarry": "5.909090909090909090909090909"
+          },
+          {
+            "id": "00-0041251",
+            "name": "Jalon Daniels",
+            "gp": 2,
+            "yards": 64,
+            "volume": 9,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "32",
+            "yardsPerCarry": "7.111111111111111111111111111"
+          },
+          {
+            "id": "00-0036919",
+            "name": "Kenny Gainwell",
+            "gp": 4,
+            "yards": 26,
+            "volume": 13,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "6.5",
+            "yardsPerCarry": "2"
+          },
+          {
+            "id": "00-0033921",
+            "name": "Chris Godwin Jr.",
+            "gp": 4,
+            "yards": 15,
+            "volume": 2,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "3.75",
+            "yardsPerCarry": "7.5"
+          }
+        ],
+        "receiving": [
+          {
+            "id": "00-0038129",
+            "name": "Cade Otton",
+            "gp": 4,
+            "yards": 157,
+            "volume": 15,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "39.25",
+            "targets": 23
+          },
+          {
+            "id": "00-0040129",
+            "name": "Emeka Egbuka",
+            "gp": 4,
+            "yards": 154,
+            "volume": 15,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "38.5",
+            "targets": 24
+          },
+          {
+            "id": "00-0033921",
+            "name": "Chris Godwin Jr.",
+            "gp": 4,
+            "yards": 142,
+            "volume": 16,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "35.5",
+            "targets": 18
+          },
+          {
+            "id": "00-0041048",
+            "name": "Ted Hurst III",
+            "gp": 4,
+            "yards": 128,
+            "volume": 8,
+            "td": 1,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "32",
+            "targets": null
+          },
+          {
+            "id": "00-0040237",
+            "name": "Tez Johnson",
+            "gp": 4,
+            "yards": 74,
+            "volume": 4,
+            "td": 0,
+            "rawSourceGames": [
+              "2026_01_TB_CIN",
+              "2026_02_CLE_TB",
+              "2026_03_MIN_TB",
+              "2026_04_GB_TB"
+            ],
+            "perGameYards": "18.5",
+            "targets": 9
+          }
+        ]
+      }
+    }
+  },
+  "currentQBRoleCoverage": {
+    "Dak Prescott": {
+      "candidateGameIds": [
+        "2026_05_TB_DAL",
+        "2026_04_DAL_HOU",
+        "2026_03_BAL_DAL",
+        "2026_02_WAS_DAL",
+        "2026_01_DAL_NYG"
+      ],
+      "confirmedStarts": 4,
+      "unresolvedRoles": 1,
+      "combinedAggregateAvailable": false
+    },
+    "Jalon Daniels": {
+      "candidateGameIds": [
+        "2026_05_TB_DAL",
+        "2026_04_GB_TB"
+      ],
+      "confirmedStarts": 1,
+      "unresolvedRoles": 1,
+      "combinedAggregateAvailable": false
+    }
+  },
+  "freshProviderReceipts": [
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/espn-final-401872980.json.receipt.json",
+      "sha256": "cf16d298bd09a32c2841b88ac3cbfd50f85d410fa9a7b5ea24bcae9e4eaaeb80"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/nflverse-games.csv.receipt.json",
+      "sha256": "66a033f300ba3f8e43513f47676c2d3e733e31d68a9546f6e7e1a01c353e2cd1"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/nflverse-player-stats-2026.csv.receipt.json",
+      "sha256": "ccac37228dea4b2966ef997dc4e63b9bab918b0d368bb30cea9fa14ca2520e6e"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/espn-DAL-depth-final.json.receipt.json",
+      "sha256": "a46a1f6ed9f61087889848aef81c47b20159c0b370d54b262ac7edfa654f3884"
+    }
+  ],
+  "qualification": [
+    "Current source snapshots are timestamped independently of fresh audit HTTP retrievals. NFLverse games/weekly CSV actual bodies match current declared hashes exactly; later ESPN body facts corroborate without claiming exact older CI body identity.",
+    "All3c-to699 shared basic/advanced/player-role values and game log identities are explicitly equal; all373-to699 windows are materially changed by newly finalW5, new candidate-only rows and weekly-opponent bounded archive replacement.",
+    "Week6 injury eligibility remains unavailable in event-scoped reports. Guyton remains attributed Questionable with a dated postgame depth bulletin, not cleared/confirmed for Week6.",
+    "Current default last5team windows contain finalW5 plusW1-W4, but GP is only statistical rows4/2/3 as independently recalculated. No padding/zeroing/mislabelled prior-body evidence."
+  ]
+}

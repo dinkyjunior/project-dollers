@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "agent": "/root/matchup_controls",
+  "startedAt": "2026-10-09T05:01:08.609809+00:00",
+  "completedAt": "2026-10-09T05:01:08.991845+00:00",
+  "scope": "Deduplicate identical dated source notes within one player/context only. Original source rows and all distinct dates/narratives/sources/statuses/practice evidence remain; selected-fixture injury and provider qualification unchanged. Seven meaningful regression tests, original six-test file immutable; no browser or deployment acceptance implied.",
+  "before": {
+    "assets/matchup-breakdown.js": "1c1c2e5e8b27c754f38fd667fcb01b649723e5f9d694d5346dab63bfddcb79ba",
+    "qa/matchup-breakdown/injury-context.test.cjs": "11e0c8d2414510bead51aec25785305693578cf086ffe2af4196b6a472f2f523",
+    "qa/matchup-breakdown/injury-context-v2.test.cjs": "5c83ac742b4e39161e26af8f497ccae7389f1920161a3bd5412ed210e7525930",
+    "qa/matchup-breakdown/final-transition-native-v5.cjs": "c2414478060ac155cf835f28a14bf18a90b0f2ee2c8f32abfc61294ff3092024",
+    "assets/data/matchup-breakdown.json": "8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3"
+  },
+  "after": {
+    "assets/matchup-breakdown.js": "1c1c2e5e8b27c754f38fd667fcb01b649723e5f9d694d5346dab63bfddcb79ba",
+    "qa/matchup-breakdown/injury-context.test.cjs": "11e0c8d2414510bead51aec25785305693578cf086ffe2af4196b6a472f2f523",
+    "qa/matchup-breakdown/injury-context-v2.test.cjs": "5c83ac742b4e39161e26af8f497ccae7389f1920161a3bd5412ed210e7525930",
+    "qa/matchup-breakdown/final-transition-native-v5.cjs": "c2414478060ac155cf835f28a14bf18a90b0f2ee2c8f32abfc61294ff3092024",
+    "assets/data/matchup-breakdown.json": "8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3"
+  },
+  "unchangedDuringTests": true,
+  "runs": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "assets/matchup-breakdown.js"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "qa/matchup-breakdown/injury-context-v2.test.cjs"
+      ],
+      "exitCode": 0,
+      "stdout": "\u2714 A roster-derived next-week tag never turns a dated depth narrative into game availability (2.782524ms)\n\u2714 Explicit unknown-week current-team bulletins remain dated disclosures after a source refresh (0.899339ms)\n\u2714 An independently published same-week NFL report stays in the selected fixture section (1.638508ms)\n\u2714 Only exact selected-event provider rows carry the qualified provider inactive report (1.149404ms)\n\u2714 A genuine independent NFL corroboration is retained; another week is excluded (0.669794ms)\n\u2714 Current Dallas retains all dated reports and their details without labeling them Week 6 (203.63976ms)\n\u2714 Dual depth positions share one identical dated note while distinct evidence and original rows survive (1.025939ms)\n\u2139 tests 7\n\u2139 suites 0\n\u2139 pass 7\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 288.84383\n",
+      "stderr": ""
+    }
+  ]
+}

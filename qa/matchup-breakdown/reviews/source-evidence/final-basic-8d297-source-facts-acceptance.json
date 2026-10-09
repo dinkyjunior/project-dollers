@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "agent": "/root/matchup_sources",
+  "auditedAt": "2026-10-09T05:01:57.067287+00:00",
+  "scope": "Independent source facts, numerical selections, rates, explicit role and event/bulletin contexts only; no browser/visual/release approval.",
+  "snapshotSha256": "8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3",
+  "sourceManifestSha256": "26c0e223de53b0dcf5810ee6dda7cd8dbadc767665cc88d6567f168a43ac098c",
+  "proofs": [
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/final-basic-8d297-independent-source-audit-v2.json",
+      "sha256": "86c993c816ef04926337187890d03d48870777ed6150fb5d7b9d2c14b65cc8dc",
+      "assertions": 715533
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/final-basic-8d297-current-math.json",
+      "sha256": "fea5102e2276b99d477f8d63bc5074ad6576c7df1c65163db885387dd93a0981",
+      "assertions": 214130
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/final-basic-8d297-fixture-context.json",
+      "sha256": "1b5c647e118a5b4ba756de8aa092f56c615a6dc61558a6bbd888f2048cb68815",
+      "assertions": 1541
+    }
+  ],
+  "productionParserSha256": "34819058a72be9edf6279ff3ca6e686a5a9b0627cc4a56a289cd94a3b6a616a2",
+  "productionTestsSha256": "738963c5d92a21f158b8fb982e3e641c782a4d395a5ccdaa8316859fe4f56a39",
+  "findings": [
+    "Primary published NFL W5 rows now cover22 current offensive players. ESPN final cells independently corroborate represented basic categories; provider-published zero cells remain valid, absent ESPN category alone never establishes zero.",
+    "Dak and Jalon W5 starts use explicit schedule IDs alongside genuine published NFL statistical rows. AP final recap separately says Jalon played his second start; relief attempts or ESPN fallback rows never promote a start.",
+    "W5 complete PBP supports explicit deep/red-zone/scramble/dropback metrics; absent W5 snap records remain null. Routes/pressures/blitz remain unavailable.",
+    "All93 archived responses have exact checksum, provider retrieval and HTTP200 metadata;32 team-prefixed sources are checksum-bound dependency metadata and are not falsely counted as93 independent archived bodies.",
+    "Selected future W6 availability/QB evidence remains unavailable where dated INACTIVE lists are reused; current-team depth bulletins have unknown game/season/week applicability. Actual explicit NFL weekly reports preserve their reported week."
+  ],
+  "diagnostics": [
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/final-basic-8d297-independent-source-audit.json",
+      "status": "failed",
+      "qualification": "Retained initial QA diagnostic: ESPN WSH versus NFL WAS alias, same actual Dallas37-20 score. V2 canonical provider abbreviation correction adds formerly skipped Washington corroboration checks; no provider/runtime data change."
+    }
+  ],
+  "limits": [
+    "This facts receipt cannot accept native UI, visual fidelity, served runtime identity or publication. A new completed current-source native report and personally reviewed originals are required separately.",
+    "The earlier05e/7029 local acceptance and all older deployed evidence remain immutable historical proofs. Current genuine W5 rows alter GP, QB starts and mathematical outputs; no statistical equivalence to that older snapshot is claimed."
+  ]
+}

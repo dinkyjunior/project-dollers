@@ -1,0 +1,10 @@
+{
+  "status": "qualified-diagnostic",
+  "failedGuard": "HistoricalPlayerStatsAdvancedPreserved:ARI:00-0035289",
+  "cause": "The first local comparison excluded retrieval time but failed to exclude source-body SHA inside existing role evidence. Old/new disputed role/value/quote/context agree; only the source body hash/retrieval metadata changed. This is not evidence of a player-stat change.",
+  "laterComparisonExplicitlyRemovesOnly": [
+    "retrievedAt",
+    "sourceIds",
+    "sha256"
+  ]
+}

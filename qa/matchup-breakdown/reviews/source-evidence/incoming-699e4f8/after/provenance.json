@@ -1,0 +1,887 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-09T03:37:31Z",
+  "retrievedAt": "2026-10-09T03:37:29Z",
+  "snapshotSha256CanonicalJson": "f7c3f341d1b856b8c9d7233d30315dddb3c3d648a163046c664f513e364e5e15",
+  "sources": [
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0a273a20b133e91570af6f786055c7229ae503777c4a2816d4888c101453400f\"",
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T03:37:29Z",
+      "status": "verified",
+      "sha256": "abab59cb44d99e3c5f2b443189d5459813032f766012fa94db457c19d0eae5ce",
+      "bytes": 2183313
+    },
+    {
+      "id": "nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DE8C1878E14FA9\"",
+      "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
+      "retrievedAt": "2026-10-09T03:37:29Z",
+      "status": "verified",
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "bytes": 18919
+    },
+    {
+      "id": "nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254949EC72FE\"",
+      "lastModified": "Thu, 08 Oct 2026 14:34:41 GMT",
+      "retrievedAt": "2026-10-09T03:37:29Z",
+      "status": "verified",
+      "sha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "bytes": 963300
+    },
+    {
+      "id": "nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF255991D13F3B\"",
+      "lastModified": "Thu, 08 Oct 2026 16:31:13 GMT",
+      "retrievedAt": "2026-10-09T03:37:29Z",
+      "status": "verified",
+      "sha256": "7c95b7db99eac0091c6646264ca4a6f4da080a0569935d2e61cbe15a1f4dfa40",
+      "bytes": 1981105
+    },
+    {
+      "id": "nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254917595876\"",
+      "lastModified": "Thu, 08 Oct 2026 14:33:16 GMT",
+      "retrievedAt": "2026-10-09T03:37:30Z",
+      "status": "verified",
+      "sha256": "6c693e1040a9608c592e86e82a6792d388a6faf8e28b8478fc28a1cc3f14ec86",
+      "bytes": 59252788
+    },
+    {
+      "id": "nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254902AFA8D5\"",
+      "lastModified": "Thu, 08 Oct 2026 14:32:41 GMT",
+      "retrievedAt": "2026-10-09T03:37:29Z",
+      "status": "verified",
+      "sha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "bytes": 143977
+    },
+    {
+      "id": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "provider": "Pittsburgh Steelers",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T03:37:32Z",
+      "status": "verified",
+      "sha256": "e22fc083547742563d659c488838120d0f8dce83246fe92f94172676cb7749cc",
+      "bytes": 452723
+    },
+    {
+      "id": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T03:37:32Z",
+      "status": "verified",
+      "sha256": "2d7e10826907bfe2152e1db3d67966971de6ec404356864261ed8227f023b451",
+      "bytes": 372361
+    },
+    {
+      "id": "espn_athlete_4431424",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T03:37:33Z",
+      "status": "verified",
+      "sha256": "583b1fb4d63951bf2c4c57eba2b913550a851ccf22ef14d8ed6d84dbe3de7dc7",
+      "bytes": 80490
+    },
+    {
+      "id": "nflverse_player_stats_2005",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2005.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9389FFA23E2\"",
+      "lastModified": "Thu, 13 Aug 2026 12:44:33 GMT",
+      "retrievedAt": "2026-10-08T06:28:04Z",
+      "status": "verified",
+      "sha256": "cfaaa943c6b869c5eedfc9611400f0ca47a972bdf30823528b5929f4f9298273",
+      "bytes": 7434902
+    },
+    {
+      "id": "nflverse_player_stats_2006",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2006.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF938B9906011\"",
+      "lastModified": "Thu, 13 Aug 2026 12:45:15 GMT",
+      "retrievedAt": "2026-10-08T06:28:04Z",
+      "status": "verified",
+      "sha256": "32f5825b8e174ec00641c935de811d4deeb10b4a96807c5c1926f2a16d889714",
+      "bytes": 7418077
+    },
+    {
+      "id": "nflverse_player_stats_2007",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2007.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF938B4F2827F\"",
+      "lastModified": "Thu, 13 Aug 2026 12:45:08 GMT",
+      "retrievedAt": "2026-10-08T06:28:03Z",
+      "status": "verified",
+      "sha256": "24829b3f384aad21da867c06180f572a45619c793e94cdbf9e828bd892fa7837",
+      "bytes": 7442890
+    },
+    {
+      "id": "nflverse_player_stats_2008",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2008.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF938B62DBE17\"",
+      "lastModified": "Thu, 13 Aug 2026 12:45:10 GMT",
+      "retrievedAt": "2026-10-08T06:28:03Z",
+      "status": "verified",
+      "sha256": "1b0c72f0540f21c8d63f0f86717b821dd05bc97081480764db56ad74cd889856",
+      "bytes": 7420439
+    },
+    {
+      "id": "nflverse_player_stats_2009",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2009.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9390C3C0E97\"",
+      "lastModified": "Thu, 13 Aug 2026 12:47:34 GMT",
+      "retrievedAt": "2026-10-08T06:28:04Z",
+      "status": "verified",
+      "sha256": "4f2dbdef657aa2c961595b2a2c832e0fb2a7c13e41c301380900faff266c3477",
+      "bytes": 7902720
+    },
+    {
+      "id": "nflverse_player_stats_2010",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2010.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9392C62F20B\"",
+      "lastModified": "Thu, 13 Aug 2026 12:48:28 GMT",
+      "retrievedAt": "2026-10-08T06:28:05Z",
+      "status": "verified",
+      "sha256": "76f33d484781a3bc1852aa8aab5003874ab219dcb6c67a7e2e881be9822c9d13",
+      "bytes": 7859210
+    },
+    {
+      "id": "nflverse_player_stats_2011",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2011.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9393DC90A57\"",
+      "lastModified": "Thu, 13 Aug 2026 12:48:57 GMT",
+      "retrievedAt": "2026-10-08T06:28:05Z",
+      "status": "verified",
+      "sha256": "c1720e9e5ed59b7def9486ae650ea73ee80dda1fd2ab97d50c5fb4f6565dbeaa",
+      "bytes": 7800649
+    },
+    {
+      "id": "nflverse_player_stats_2012",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2012.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9392ACF63C6\"",
+      "lastModified": "Thu, 13 Aug 2026 12:48:25 GMT",
+      "retrievedAt": "2026-10-08T06:28:04Z",
+      "status": "verified",
+      "sha256": "5c8885d93ec529efa9d729cec1ef255f438ee27a59eba6e156a360fa0045b56b",
+      "bytes": 7796458
+    },
+    {
+      "id": "nflverse_player_stats_2013",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2013.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF939891D2B76\"",
+      "lastModified": "Thu, 13 Aug 2026 12:51:04 GMT",
+      "retrievedAt": "2026-10-08T06:28:05Z",
+      "status": "verified",
+      "sha256": "f7329a8f15084c9c23d841f14eb117fcc630d6c82913501f3c60f2d8f4e651a4",
+      "bytes": 7713866
+    },
+    {
+      "id": "nflverse_player_stats_2014",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2014.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF939BE02F570\"",
+      "lastModified": "Thu, 13 Aug 2026 12:52:32 GMT",
+      "retrievedAt": "2026-10-08T06:28:05Z",
+      "status": "verified",
+      "sha256": "a389b10d94eb8e6b9a153223d381aab821b0eff4cd73967835a21032192abc61",
+      "bytes": 7883194
+    },
+    {
+      "id": "nflverse_player_stats_2015",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2015.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF9399EE7A37E\"",
+      "lastModified": "Thu, 13 Aug 2026 12:51:40 GMT",
+      "retrievedAt": "2026-10-08T06:28:05Z",
+      "status": "verified",
+      "sha256": "21052baa3b3291a92faf3e6827891295010dca8cc5cefd5a909984b9d7b64664",
+      "bytes": 7881066
+    },
+    {
+      "id": "nflverse_player_stats_2016",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2016.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF939C4DF51A2\"",
+      "lastModified": "Thu, 13 Aug 2026 12:52:44 GMT",
+      "retrievedAt": "2026-10-08T06:28:06Z",
+      "status": "verified",
+      "sha256": "eb0264c65d1ef593196afcd4ba24e9f2e9b7942923bf6f4bb4639684e2c4d470",
+      "bytes": 7852359
+    },
+    {
+      "id": "nflverse_player_stats_2017",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2017.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95A338BD6BF\"",
+      "lastModified": "Thu, 13 Aug 2026 16:44:54 GMT",
+      "retrievedAt": "2026-10-08T06:28:06Z",
+      "status": "verified",
+      "sha256": "592b0916065987b0b3afb0480162f03350d16b12250dc42b0f194e2ab1378563",
+      "bytes": 7821392
+    },
+    {
+      "id": "nflverse_player_stats_2018",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2018.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95A35DAC83D\"",
+      "lastModified": "Thu, 13 Aug 2026 16:44:57 GMT",
+      "retrievedAt": "2026-10-08T06:28:06Z",
+      "status": "verified",
+      "sha256": "c53021bcfc9f89d30edd6f1fe145a1d7d6ce469efeec75974fe9f0adac568642",
+      "bytes": 7792665
+    },
+    {
+      "id": "nflverse_player_stats_2019",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2019.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95A4E224B88\"",
+      "lastModified": "Thu, 13 Aug 2026 16:45:38 GMT",
+      "retrievedAt": "2026-10-08T06:28:07Z",
+      "status": "verified",
+      "sha256": "a05558126b1209b80fe11a8f18938cb35816370bf9990975a87de49e9eed7376",
+      "bytes": 7767165
+    },
+    {
+      "id": "nflverse_player_stats_2020",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2020.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DF034497786ABA\"",
+      "lastModified": "Wed, 26 Aug 2026 07:35:24 GMT",
+      "retrievedAt": "2026-10-08T06:28:07Z",
+      "status": "verified",
+      "sha256": "05b992676faccc8940efbf6242cb76358069372d31d7c2e02c1a4acdcd3cbe18",
+      "bytes": 7883270
+    },
+    {
+      "id": "nflverse_player_stats_2021",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2021.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95AA28D1034\"",
+      "lastModified": "Thu, 13 Aug 2026 16:48:00 GMT",
+      "retrievedAt": "2026-10-08T06:28:07Z",
+      "status": "verified",
+      "sha256": "41915fb49238902ad1f129ebf0405b11a1e710454ae0fe8f7b3e4f9145875f48",
+      "bytes": 8477784
+    },
+    {
+      "id": "nflverse_player_stats_2022",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2022.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95AAA9FC20B\"",
+      "lastModified": "Thu, 13 Aug 2026 16:48:13 GMT",
+      "retrievedAt": "2026-10-08T06:28:07Z",
+      "status": "verified",
+      "sha256": "ad426c3fe5bf1cc30c3f137fdfe96d054e19d400879ee4413129da49fa7b54be",
+      "bytes": 8408729
+    },
+    {
+      "id": "nflverse_player_stats_2023",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2023.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95AB85FE52E\"",
+      "lastModified": "Thu, 13 Aug 2026 16:48:36 GMT",
+      "retrievedAt": "2026-10-08T06:28:08Z",
+      "status": "verified",
+      "sha256": "f19cb71a5de0dce7fd09376026237c9ee9d5a93fe13815a2ea3ec2d37204cb17",
+      "bytes": 8332874
+    },
+    {
+      "id": "nflverse_player_stats_2024",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2024.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95ACCB97E00\"",
+      "lastModified": "Thu, 13 Aug 2026 16:49:11 GMT",
+      "retrievedAt": "2026-10-08T06:28:08Z",
+      "status": "verified",
+      "sha256": "3ddc45a84f759aa348ce465ae001752c530575455717657cdfe1f8abfcdb4759",
+      "bytes": 8470040
+    },
+    {
+      "id": "nflverse_player_stats_2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95B1AFD7169\"",
+      "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+      "retrievedAt": "2026-10-08T06:28:08Z",
+      "status": "verified",
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "bytes": 8656387
+    }
+  ],
+  "datasets": {
+    "standings": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_teams"
+      ],
+      "season": 2026,
+      "throughWeek": 5,
+      "note": "Calculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null."
+    },
+    "weeklyLeaders": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 4,
+      "limit": 16,
+      "positions": {
+        "QB": {
+          "yardsField": "passing_yards",
+          "touchdownsField": "passing_tds"
+        },
+        "RB": {
+          "yardsField": "rushing_yards",
+          "touchdownsField": "rushing_tds"
+        },
+        "WR": {
+          "yardsField": "receiving_yards",
+          "touchdownsField": "receiving_tds"
+        }
+      },
+      "note": "Up to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week."
+    },
+    "roster": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_roster"
+      ],
+      "season": 2026,
+      "week": 5,
+      "note": "Current retained roster: active, reserve and practice squad; cut players excluded."
+    },
+    "playerStats": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 4,
+      "note": "Summed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT."
+    },
+    "teamStats": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "throughWeek": 4,
+      "coverageGameIds": [
+        "2026_01_ATL_PIT",
+        "2026_02_PIT_NE",
+        "2026_03_CIN_PIT",
+        "2026_04_PIT_CLE"
+      ],
+      "note": "Gross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals."
+    },
+    "schedule": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "season": 2026,
+      "note": "Kickoff converted from America/New_York with daylight saving. Fixture records are entering each week; future records reflect latest completed week, not predictions."
+    },
+    "injuries": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_injuries"
+      ],
+      "season": 2026,
+      "week": 5,
+      "note": "Practice participation and report status are separate. Blank report status is unavailable; absent player does not mean healthy. Confirmed game-day inactive list unavailable."
+    },
+    "depthChart": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_depth"
+      ],
+      "season": 2026,
+      "sourceTimestamp": "2026-10-08T14:33:03Z",
+      "note": "Latest published ESPN-derived depth order, not a confirmed starter designation."
+    },
+    "opponentAllowances": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_player_stats",
+        "nflverse_games"
+      ],
+      "season": 2026,
+      "throughWeek": 4,
+      "coverageGameIds": [
+        "2026_01_BAL_IND",
+        "2026_02_IND_KC",
+        "2026_03_HOU_IND",
+        "2026_04_IND_WAS"
+      ],
+      "opponent": "IND",
+      "note": "Opponent player-stat totals grouped by QB/RB/WR/TE; every position uses the same completed opponent games with verified offensive-stat coverage. New final scores do not dilute unreleased stat totals; absent position rows are unavailable."
+    },
+    "historicalMatchups": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "note": "Most recent five completed meetings; each game carries its original season/week."
+    },
+    "weeklyOpponentResearch": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_player_stats"
+      ],
+      "season": 2026,
+      "note": "Every scheduled opponent has a separate current-season allowance, result history and game context. Current verified season statistics are not retroactive pre-game estimates."
+    },
+    "historicalPrices": {
+      "status": "verified",
+      "sourceIds": [
+        "nflverse_games"
+      ],
+      "note": "Archival moneylines preserved exactly. Bookmaker and capture time are not supplied by source; cannot identify exact previous pre-game price."
+    },
+    "exactPreGamePrices": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "Archived dataset moneylines are available, but no bookmaker identity or capture time verifies an exact previous pre-game head-to-head price."
+    },
+    "weatherForecast": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "No accessible verified forecast feed in this environment. NOAA API blocked403 during audit. Historical recorded conditions remain sourced game data."
+    },
+    "travel": {
+      "status": "unavailable",
+      "sourceIds": [],
+      "note": "Team travel itinerary not publicly verified. Home/away, venue and rest days are available from the schedule."
+    },
+    "crossChecks": {
+      "status": "partial",
+      "sourceIds": [
+        "espn_athlete_4431424",
+        "espn_steelers_roster",
+        "nflverse_depth",
+        "nflverse_games",
+        "nflverse_injuries",
+        "nflverse_player_stats",
+        "nflverse_roster",
+        "official_steelers_roster"
+      ],
+      "note": "Current roster cross-checks use optional official Steelers and ESPN public sources with explicit disagreements/availability. nflverse depth is ESPN-derived, so this is not independent depth-provider confirmation. Historical advanced statistics remain nflverse-sourced; no second-provider verification is claimed for those fields."
+    },
+    "rosterVerification": {
+      "status": "partial",
+      "sourceIds": [
+        "espn_athlete_4431424",
+        "espn_steelers_roster",
+        "official_steelers_roster"
+      ],
+      "season": 2026,
+      "note": "Optional complete official Steelers and ESPN rosters cross-checked by identity. Corroborated departure requires both rosters to omit the player and a matching ESPN athlete to report another team. Missing optional sources retain prior flags only for the identical primary roster hash. No primary or historical fields are overwritten."
+    },
+    "playerHistory": {
+      "status": "derived",
+      "sourceIds": [
+        "nflverse_games",
+        "nflverse_roster",
+        "nflverse_player_stats",
+        "nflverse_player_stats_2005",
+        "nflverse_player_stats_2006",
+        "nflverse_player_stats_2007",
+        "nflverse_player_stats_2008",
+        "nflverse_player_stats_2009",
+        "nflverse_player_stats_2010",
+        "nflverse_player_stats_2011",
+        "nflverse_player_stats_2012",
+        "nflverse_player_stats_2013",
+        "nflverse_player_stats_2014",
+        "nflverse_player_stats_2015",
+        "nflverse_player_stats_2016",
+        "nflverse_player_stats_2017",
+        "nflverse_player_stats_2018",
+        "nflverse_player_stats_2019",
+        "nflverse_player_stats_2020",
+        "nflverse_player_stats_2021",
+        "nflverse_player_stats_2022",
+        "nflverse_player_stats_2023",
+        "nflverse_player_stats_2024",
+        "nflverse_player_stats_2025"
+      ],
+      "season": 2026,
+      "retrievedAt": "2026-10-08T06:28:03Z",
+      "coverage": {
+        "firstSeason": 2005,
+        "lastSeason": 2026,
+        "availableSeasons": [
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "unavailableSeasons": [],
+        "status": "verified",
+        "cachedRowsNeedingBackfill": 0
+      },
+      "note": "Completed regular-season provider statistical rows only. Lists are not padded; postseason and confirmed snap/appearance counts are outside this dataset."
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "teamCount": 32,
+    "rosterCount": 80,
+    "activeRosterCount": 53,
+    "season": 2026,
+    "currentWeek": 5,
+    "throughWeek": 5,
+    "featured": [
+      "Aaron Rodgers",
+      "Jaylen Warren",
+      "DK Metcalf",
+      "Michael Pittman",
+      "Pat Freiermuth"
+    ],
+    "disagreements": [
+      {
+        "playerId": "00-0035239",
+        "name": "Sean Murphy-Bunting",
+        "field": "jersey",
+        "primary": "26",
+        "official": 27,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038395",
+        "name": "Terell Smith",
+        "field": "jersey",
+        "primary": "36",
+        "official": 39,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039883",
+        "name": "Daequan Hardy",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "PIT",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039626",
+        "name": "Cole Burgess",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "PIT",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0040176",
+        "name": "Bradyn Swinson",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "No matched roster entry",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster",
+          "espn_athlete_4431424"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038388",
+        "name": "Darius Rush",
+        "field": "jersey",
+        "primary": "36",
+        "official": 38,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038581",
+        "name": "K.J. Henry",
+        "field": "position",
+        "primary": "DL",
+        "official": "LB",
+        "espn": "LB",
+        "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0039054",
+        "name": "Marte Mapu",
+        "field": "jersey",
+        "primary": "14",
+        "official": 48,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0037382",
+        "name": "Brandon Johnson",
+        "field": "jersey",
+        "primary": "82",
+        "official": 89,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0036165",
+        "name": "Isaiah Hodgins",
+        "field": "jersey",
+        "primary": "89",
+        "official": 82,
+        "espn": null,
+        "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0040618",
+        "name": "Max Hurleman",
+        "field": "position",
+        "primary": "WR",
+        "official": "WR",
+        "espn": "RB",
+        "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-09T03:37:33Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      }
+    ]
+  },
+  "playerHistorySha256": "c60316f673c3eaf223d9a8e74f78661fa8a89d6b823602370bf0a3c883d81ffe",
+  "playerHistoryValidation": {
+    "status": "passed",
+    "playerCount": 80,
+    "gameRowCount": 1273,
+    "coverage": {
+      "firstSeason": 2005,
+      "lastSeason": 2026,
+      "availableSeasons": [
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "unavailableSeasons": [],
+      "status": "verified",
+      "cachedRowsNeedingBackfill": 0
+    }
+  },
+  "rosterVerification": {
+    "status": "partial",
+    "sourceIds": [
+      "espn_athlete_4431424",
+      "espn_steelers_roster",
+      "official_steelers_roster"
+    ],
+    "confirmed": 69,
+    "disputed": 11,
+    "unavailable": 0,
+    "retained": 0,
+    "officialRosterCount": 77,
+    "espnRosterCount": 79
+  },
+  "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
+  "refreshCommand": "python3 scripts/refresh-data.py",
+  "validateCommand": "python3 scripts/refresh-data.py --check",
+  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
+  "historyRefreshCommand": "python3 scripts/refresh-data.py --refresh-history"
+}

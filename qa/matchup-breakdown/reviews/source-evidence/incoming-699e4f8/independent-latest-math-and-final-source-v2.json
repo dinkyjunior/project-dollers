@@ -1,0 +1,1595 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T03:53:31.327156+00:00",
+  "agent": "/root/matchup_sources",
+  "beforeSnapshotSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+  "snapshotSha256": "05e170530516f1df16978be1a0d31f38994332eec088bb23a17e860e7ce7439e",
+  "independentModel": {
+    "path": "qa/matchup-breakdown/model.cjs",
+    "sha256": "f696c32d0b3a367fc83e0a954917a924c79df5bd354f92abdac1cc6b909293d9"
+  },
+  "auditHelperSha256": "698d8496de33ca6e6225cef3f5a4572c710cd31e77151f00aca6ef5b05cb6589",
+  "assertions": 223458,
+  "checks": {
+    "ExactImmutableBeforeBook": 1,
+    "ExactImmutableAfterBook": 1,
+    "All32By48States": 1,
+    "IndependentCompletedGameSelection": 1536,
+    "IndependentLeaderCountsGPNullsRankAndWeightedRates": 3072,
+    "IndependentAllPlayerStatEligibility": 39024,
+    "IndependentRecentRoleCandidatesAndConfirmedStarts": 10656,
+    "UnresolvedNewestRoleRetainsItsSlot": 10656,
+    "DecimalQBBasicAggregate": 138528,
+    "DecimalNFLPasserRating": 10656,
+    "IndependentFinalSeasonWeekAndRegularType": 1,
+    "IndependentProviderFinalCompletion": 1,
+    "IndependentFinalScoreAndClubIdentity": 1,
+    "IndependentFinalTeamStatistic": 18,
+    "ExplicitESPNFinalFieldSource": 18,
+    "NetPassingPlusRushTeamTotal": 2,
+    "Unchanged813PlayerIdentityPools": 32,
+    "PreservedHistoricalStatRoleAndAdvancedRow": 8140,
+    "OnlyNewFinalScheduleRolePlaceholder": 2,
+    "UnknownWeek5StatsAndAdvancedAreNeverZero": 2,
+    "UncorroboratedStartNotClaimedConfirmedOrStatisticalGP": 2,
+    "ExactRetainedSourceCSVResponseHash": 9,
+    "GenuineRetainedOlderOpponentRecord": 24,
+    "ArchiveOriginalClubOpponentSeasonWeek": 24,
+    "ArchiveRawCountingCell": 792,
+    "ArchiveActualStatisticalGameUnit": 24,
+    "OlderAdvancedCoverageNotInvented": 24,
+    "ArchivePublishedExplicitStarterIdentity": 24,
+    "ArchiveIndependentDerivedRate": 120,
+    "ExactlyTwoNewUnknownQBRows": 1,
+    "TwentyFourNewActualWeeklyOpponentArchiveRows": 1,
+    "SecondaryCorroborationPruningExplicitlyRetained": 1,
+    "All32RecordsFromIndependentPublishedFinalSchedule": 32,
+    "All32PctFromTrueWinTieDenominator": 32
+  },
+  "teams": 32,
+  "windowsPerTeam": 48,
+  "latestTeamWindowStates": 1536,
+  "mathematicsIndependentlyVerified": true,
+  "statisticalProjectionEquivalent": false,
+  "newUnknownRoleRows": [
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2026_05_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0041251",
+      "game": "2026_05_TB_DAL"
+    }
+  ],
+  "newGenuineOpponentArchiveRows": [
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2022_10_DAL_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2019_05_GB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2017_05_GB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2016_06_DAL_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036358",
+      "game": "2022_10_DAL_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036997",
+      "game": "2023_07_GB_DEN"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037120",
+      "game": "2024_02_IND_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037247",
+      "game": "2023_10_GB_PIT"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037282",
+      "game": "2022_09_GB_DET"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037563",
+      "game": "2022_10_DAL_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037801",
+      "game": "2022_10_DAL_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038705",
+      "game": "2024_06_ARI_GB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039062",
+      "game": "2023_16_GB_CAR"
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2022_06_TB_PIT"
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2018_03_PIT_TB"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2021_17_CLE_PIT"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2021_08_PIT_CLE"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2020_17_PIT_CLE"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2020_06_CLE_PIT"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2019_13_CLE_PIT"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2024_15_PIT_PHI"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2022_08_PIT_PHI"
+    },
+    {
+      "team": "TB",
+      "player": "00-0037311",
+      "game": "2022_06_TB_PIT"
+    },
+    {
+      "team": "TB",
+      "player": "00-0038129",
+      "game": "2022_06_TB_PIT"
+    }
+  ],
+  "removedPriorOpponentArchiveRows": [
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2022_01_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2021_01_DAL_TB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2018_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2016_15_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036358",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036358",
+      "game": "2022_01_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036358",
+      "game": "2021_01_DAL_TB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036997",
+      "game": "2024_03_DEN_TB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037247",
+      "game": "2022_06_TB_PIT"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037801",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037801",
+      "game": "2022_01_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038041",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038547",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038738",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039062",
+      "game": "2023_13_CAR_TB"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039410",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039530",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2022_01_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2021_01_DAL_TB"
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2018_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2020_04_CLE_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0035359",
+      "game": "2022_03_DAL_NYG"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2024_17_DAL_PHI"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2024_10_PHI_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2023_14_PHI_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2023_09_DAL_PHI"
+    },
+    {
+      "team": "TB",
+      "player": "00-0036919",
+      "game": "2022_16_PHI_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0038129",
+      "game": "2022_01_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0038951",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0039050",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0039361",
+      "game": "2024_16_TB_DAL"
+    },
+    {
+      "team": "TB",
+      "player": "00-0039855",
+      "game": "2024_16_TB_DAL"
+    }
+  ],
+  "secondaryCrosscheckChanges": [
+    {
+      "team": "CAR",
+      "player": "00-0036555",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0037005",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0038840",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0039150",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0039342",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0039491",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0040124",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CAR",
+      "player": "00-0040187",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "CLE",
+      "player": "00-0040218",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0033077",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0036358",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037247",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0037801",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038041",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038547",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0038738",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039062",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039398",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039410",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "player": "00-0039530",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "IND",
+      "player": "00-0035535",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "MIA",
+      "player": "00-0037666",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0031484",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0035250",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0035645",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0039384",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0040021",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "NYG",
+      "player": "00-0040691",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "PHI",
+      "player": "00-0040586",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "PIT",
+      "player": "00-0036139",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "PIT",
+      "player": "00-0036165",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "SF",
+      "player": "00-0031408",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0033921",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0034855",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "passingYards",
+          "passingTD",
+          "interceptions",
+          "completions",
+          "attempts",
+          "sacks",
+          "sackYardsLost",
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0038129",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0038951",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0039050",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0039361",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0039855",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0040129",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TB",
+      "player": "00-0040237",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "TEN",
+      "player": "00-0038115",
+      "game": "2025_18_DAL_NYG",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772963"
+        ],
+        "fields": [
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    },
+    {
+      "team": "WAS",
+      "player": "00-0037256",
+      "game": "2025_18_CAR_TB",
+      "before": {
+        "status": "verified",
+        "sourceIds": [
+          "espn_matchup_summary_401772969"
+        ],
+        "fields": [
+          "carries",
+          "rushingYards",
+          "rushingTD",
+          "receptions",
+          "receivingYards",
+          "receivingTD",
+          "targets"
+        ]
+      },
+      "after": null
+    }
+  ],
+  "initialFailedTaxonomyDiagnostic": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-3c1adb0/independent-latest-math-and-final-source.json",
+    "sha256": "a5ce937d31a1ac7b21bfb5cb4157f81599fe827fa7c8e70969268f368665a9a7",
+    "qualification": "Initial mathematical state comparisons all passed, but the additional archive-integrity scope assumed only two new records. Actual Week6 opponent histories load24 real archive rows and prune43 secondary recent-summary checks. That failed-closed diagnostic remains unmodified; this current audit independently validates those additional raw source cells and records pruning."
+  },
+  "defaultLatestStates": {
+    "DAL": {
+      "games": [
+        "2026_05_TB_DAL",
+        "2026_04_DAL_HOU",
+        "2026_03_BAL_DAL",
+        "2026_02_WAS_DAL",
+        "2026_01_DAL_NYG"
+      ],
+      "fixture": "2026_06_DAL_GB",
+      "opponent": "GB",
+      "rushing": [
+        {
+          "id": "00-0036997",
+          "name": "Javonte Williams",
+          "rankYards": 231,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 62,
+            "rushingYards": 231,
+            "rushingYardsPerCarry": 3.725806451612903,
+            "rushingTD": 5
+          }
+        },
+        {
+          "id": "00-0033077",
+          "name": "Dak Prescott",
+          "rankYards": 66,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 12,
+            "rushingYards": 66,
+            "rushingYardsPerCarry": 5.5,
+            "rushingTD": 0
+          }
+        },
+        {
+          "id": "00-0037120",
+          "name": "Tyler Goodson",
+          "rankYards": 34,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL"
+          ],
+          "values": {
+            "GP": 2,
+            "carries": 9,
+            "rushingYards": 34,
+            "rushingYardsPerCarry": 3.7777777777777777,
+            "rushingTD": 0
+          }
+        },
+        {
+          "id": "00-0038705",
+          "name": "Emari Demercado",
+          "rankYards": 15,
+          "rows": [
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 2,
+            "carries": 5,
+            "rushingYards": 15,
+            "rushingYardsPerCarry": 3,
+            "rushingTD": 0
+          }
+        },
+        {
+          "id": "00-0037801",
+          "name": "KaVontae Turpin",
+          "rankYards": 10,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 2,
+            "rushingYards": 10,
+            "rushingYardsPerCarry": 5,
+            "rushingTD": 1
+          }
+        }
+      ],
+      "receiving": [
+        {
+          "id": "00-0036358",
+          "name": "CeeDee Lamb",
+          "rankYards": 498,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 46,
+            "receptions": 37,
+            "receivingYards": 498,
+            "receivingTD": 4
+          }
+        },
+        {
+          "id": "00-0037247",
+          "name": "George Pickens",
+          "rankYards": 225,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 28,
+            "receptions": 18,
+            "receivingYards": 225,
+            "receivingTD": 0
+          }
+        },
+        {
+          "id": "00-0039410",
+          "name": "Ryan Flournoy",
+          "rankYards": 104,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 23,
+            "receptions": 13,
+            "receivingYards": 104,
+            "receivingTD": 0
+          }
+        },
+        {
+          "id": "00-0038041",
+          "name": "Jake Ferguson",
+          "rankYards": 83,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 15,
+            "receptions": 12,
+            "receivingYards": 83,
+            "receivingTD": 3
+          }
+        },
+        {
+          "id": "00-0036997",
+          "name": "Javonte Williams",
+          "rankYards": 77,
+          "rows": [
+            "2026_04_DAL_HOU",
+            "2026_03_BAL_DAL",
+            "2026_02_WAS_DAL",
+            "2026_01_DAL_NYG"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 17,
+            "receptions": 15,
+            "receivingYards": 77,
+            "receivingTD": 1
+          }
+        }
+      ]
+    },
+    "TB": {
+      "games": [
+        "2026_05_TB_DAL",
+        "2026_04_GB_TB",
+        "2026_03_MIN_TB",
+        "2026_02_CLE_TB",
+        "2026_01_TB_CIN"
+      ],
+      "fixture": "2026_06_PIT_TB",
+      "opponent": "PIT",
+      "rushing": [
+        {
+          "id": "00-0039361",
+          "name": "Bucky Irving",
+          "rankYards": 241,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 56,
+            "rushingYards": 241,
+            "rushingYardsPerCarry": 4.303571428571429,
+            "rushingTD": 1
+          }
+        },
+        {
+          "id": "00-0034855",
+          "name": "Baker Mayfield",
+          "rankYards": 65,
+          "rows": [
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 3,
+            "carries": 11,
+            "rushingYards": 65,
+            "rushingYardsPerCarry": 5.909090909090909,
+            "rushingTD": 1
+          }
+        },
+        {
+          "id": "00-0041251",
+          "name": "Jalon Daniels",
+          "rankYards": 64,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB"
+          ],
+          "values": {
+            "GP": 2,
+            "carries": 9,
+            "rushingYards": 64,
+            "rushingYardsPerCarry": 7.111111111111111,
+            "rushingTD": 0
+          }
+        },
+        {
+          "id": "00-0036919",
+          "name": "Kenny Gainwell",
+          "rankYards": 26,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 13,
+            "rushingYards": 26,
+            "rushingYardsPerCarry": 2,
+            "rushingTD": 0
+          }
+        },
+        {
+          "id": "00-0033921",
+          "name": "Chris Godwin Jr.",
+          "rankYards": 15,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "carries": 2,
+            "rushingYards": 15,
+            "rushingYardsPerCarry": 7.5,
+            "rushingTD": 0
+          }
+        }
+      ],
+      "receiving": [
+        {
+          "id": "00-0038129",
+          "name": "Cade Otton",
+          "rankYards": 157,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 23,
+            "receptions": 15,
+            "receivingYards": 157,
+            "receivingTD": 0
+          }
+        },
+        {
+          "id": "00-0040129",
+          "name": "Emeka Egbuka",
+          "rankYards": 154,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 24,
+            "receptions": 15,
+            "receivingYards": 154,
+            "receivingTD": 1
+          }
+        },
+        {
+          "id": "00-0033921",
+          "name": "Chris Godwin Jr.",
+          "rankYards": 142,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 18,
+            "receptions": 16,
+            "receivingYards": 142,
+            "receivingTD": 0
+          }
+        },
+        {
+          "id": "00-0041048",
+          "name": "Ted Hurst III",
+          "rankYards": 128,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": null,
+            "receptions": 8,
+            "receivingYards": 128,
+            "receivingTD": 1
+          }
+        },
+        {
+          "id": "00-0040237",
+          "name": "Tez Johnson",
+          "rankYards": 74,
+          "rows": [
+            "2026_04_GB_TB",
+            "2026_03_MIN_TB",
+            "2026_02_CLE_TB",
+            "2026_01_TB_CIN"
+          ],
+          "values": {
+            "GP": 4,
+            "targets": 9,
+            "receptions": 4,
+            "receivingYards": 74,
+            "receivingTD": 0
+          }
+        }
+      ]
+    }
+  },
+  "modelOutputSha256": "9df799078dda89d1c87e3c29a5377e66953d609d539b52d32ca01b51aa3b02f2",
+  "finalSourceReceipts": [
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-3c1adb0/public-source-check/espn-final-summary-401872980-receipt.json",
+      "sha256": "798f4ad54c12493473ac2ecedba094b152e0ab75e7444ee3543c81becf36c36d"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-3c1adb0/public-source-check/nflverse-final-games-receipt.json",
+      "sha256": "b794127ad9522d8a44c110714ac59b0983e1f58011634104a372cdb59908c88a"
+    }
+  ],
+  "failures": [],
+  "qualification": "Current completed Week5 genuinely changes team-game windows, unknown QB role slots and current weekly-opponent archive coverage. All1536 latest independent-model outputs are separately recomputed using Python Decimal/count/eligibility logic; no equivalence with the previous live fixture is asserted. Fresh normal-TLS public final responses are separate dated corroboration, not falsely relabelled03:25 archived bodies. No production implementation, builder or browser test helper is imported or edited."
+}

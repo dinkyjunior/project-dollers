@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "agent": "/root/matchup_sources",
+  "auditedAt": "2026-10-09T05:03:29.078989+00:00",
+  "scope": "Read-only review of the provenance-preserving duplicate dated note fix, not whole native/UI release acceptance.",
+  "sourcePath": "assets/matchup-breakdown.js",
+  "sourceSha256": "1c1c2e5e8b27c754f38fd667fcb01b649723e5f9d694d5346dab63bfddcb79ba",
+  "testPath": "qa/matchup-breakdown/injury-context-v2.test.cjs",
+  "testSha256": "5c83ac742b4e39161e26af8f497ccae7389f1920161a3bd5412ed210e7525930",
+  "actualCommand": "node --test qa/matchup-breakdown/injury-context-v2.test.cjs",
+  "exitCode": 0,
+  "tests": 7,
+  "passed": 7,
+  "failed": 0,
+  "findings": [
+    "Only identical note signature is collapsed inside a stable player/context group; sorted source IDs, original published date, narrative, report/practice statuses and provider note are in the signature.",
+    "The original rows remain in the grouped source evidence; differing dates, reports, sources, narratives and practice statuses remain separate.",
+    "Current-team date/status narratives never become selected Week6 availability; exact event rows and independent NFL same-week reports retain source-qualified context."
+  ],
+  "qualification": "Actual test execution completed in the shared checkout; no browser, production source or runtime data mutation was performed."
+}

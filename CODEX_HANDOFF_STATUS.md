@@ -1,5 +1,33 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Current Matchup Breakdown candidate — 9 October 2026 UTC
+
+All six independent specialists accepted the current mobile originals before publication.
+Chromium and WebKit passed both requested phone sizes: 116 native actions and
+36 untouched captures. Current release runtime is `5e4586d1`; the source-extension
+gate passed in independent QA and coordinator runs. Publication and actual-site
+verification are the remaining release steps. Automatic source updates are restored.
+
+
+The second approved matchup screen is implemented with linked Form & H2H,
+Players & QB, and Lineup & Travel controls, source-backed player/QB histories,
+reports, filters, direct routes and return navigation. The Home diamond entry is
+included. Current primary NFL Week 5 statistics are independently cross-checked
+against the final ESPN boxscore; the exact source book is `8d297c3a`.
+Dallas–Tampa Bay finished 24–16, and Dallas’s upcoming-game entry now selects
+Green Bay Week 6. Unknown future eligibility and disputed values stay explicit.
+The approved source is the chat attachment; original bundled artwork and all
+unrelated Home/NFL/Steelers features remain. The earlier scope hold is superseded
+only by the user’s explicit new team/matchup requests; unrelated Page 4 remains
+excluded. No new approval is required for the authorized production release.
+
+Read [the current transition record](qa/matchup-breakdown/FINAL_TRANSITION.md)
+and [browser evidence](qa/matchup-breakdown/gallery.html). Final acceptance and
+actual deployment are recorded in separate source-bound receipts. Older entries
+below are historical checkpoints, not claims about the latest source. Preserve
+saved work and fetch/rebase both remote branches before every ordinary push.
+
+
 ## Latest automatic source update preserved — 9 October 2026 UTC
 
 The successful scheduled refresh run [37877351264](https://github.com/dinkyjunior/project-dollers/actions/runs/37877351264) produced source commit `3735200e032cb30a8038b72931799d0ae4dc75ae`, preserved by ordinary rebase. Its five linked JSON bodies are separately bound by runtime manifest `753411933517ebf23a5822a6eab054f18bee59212552c740d80f8999df3f6f49` and matchup SHA `e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401`. All 230 other runtime files, including code, styles, motion, logos, fonts and Home diamond controls, are unchanged from the fully accepted hosted implementation.

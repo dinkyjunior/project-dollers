@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-final-transition.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-final-transition-local-699-v2.json"
+  ],
+  "startedAt": "2026-10-09T04:50:37.199160+00:00",
+  "completedAt": "2026-10-09T04:50:37.367819+00:00",
+  "exitCode": 0,
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-final-transition-local-699-v2.json",
+    "sha256": "cbf0f904a02592b211804cab89e0bab4233cdfee0bf0a85de797b3f27d0de6bf"
+  },
+  "releaseGate": {
+    "path": "qa/matchup-breakdown/verify-final-transition.py",
+    "sha256": "157f1a42a735e2779fcc389068e509bbea9b408932ba00d8c9659b98a1ddd1fa"
+  },
+  "stdout": "{\n  \"status\": \"passed\",\n  \"runtimeManifestSha256\": \"7029b78a4f0b76600eba6028763198d7538ff7e18376265100ce50e634755464\",\n  \"runtimeFileCount\": 235,\n  \"preservedRuntimeFiles\": 229,\n  \"changedRuntimePaths\": [\n    \"assets/data/current.json\",\n    \"assets/data/matchup-breakdown.json\",\n    \"assets/data/player-history.json\",\n    \"assets/data/provenance.json\",\n    \"assets/data/team-details.json\",\n    \"assets/matchup-breakdown.js\"\n  ],\n  \"independentCurrentMathAssertions\": 223458,\n  \"currentTeamWindowStates\": 1536,\n  \"independentDataAssertions\": 25597,\n  \"localNativeInputs\": 116,\n  \"localCommonOriginals\": 36,\n  \"specialists\": 6,\n  \"qualification\": \"Prior full suites remain historical; new completed windows and the bounded injury-context correction receive separate native verification.\"\n}\n",
+  "stderr": "",
+  "result": {
+    "status": "passed",
+    "runtimeManifestSha256": "7029b78a4f0b76600eba6028763198d7538ff7e18376265100ce50e634755464",
+    "runtimeFileCount": 235,
+    "preservedRuntimeFiles": 229,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json",
+      "assets/matchup-breakdown.js"
+    ],
+    "independentCurrentMathAssertions": 223458,
+    "currentTeamWindowStates": 1536,
+    "independentDataAssertions": 25597,
+    "localNativeInputs": 116,
+    "localCommonOriginals": 36,
+    "specialists": 6,
+    "qualification": "Prior full suites remain historical; new completed windows and the bounded injury-context correction receive separate native verification."
+  }
+}

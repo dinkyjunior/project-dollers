@@ -323,7 +323,9 @@ def starting_role(player_id, entry, raw_games, final_games, bodies, sources, evi
                 "sourceIds": ["nflverse_games", item["sourceId"]], "evidence": retained,
                 "retainedEvidence": quote is None, "primaryPlayerId": item["primaryQBId"], "secondaryPlayerId": item["secondaryQBId"],
                 "note": "Schedule and event-matched AP recap disagree on starting QB. Both candidate roles remain null; no provider chosen."}
-    if role["value"] is True and entry["sourceIds"] == ["nflverse_games"]:
+    has_nfl_statistical_row = any(key == "nflverse_player_stats" or key.startswith("nflverse_player_stats_")
+                                  for key in entry["sourceIds"])
+    if role["value"] is True and not has_nfl_statistical_row:
         for item in evidence["affirmativeFirstPlay"]:
             if item["gameId"] == game_id and item["playerId"] == player_id:
                 quote = verified_role_quote(item, bodies, sources, raw_games)
@@ -331,8 +333,125 @@ def starting_role(player_id, entry, raw_games, final_games, bodies, sources, evi
                     return {**role, "sourceIds": quote["sourceIds"], "corroborated": True, "evidence": quote,
                             "note": "Schedule starting-QB role corroborated by explicit first-play recap; one snap is a start, statistics remain unavailable"}
         return {**role, "value": None, "reportedValue": True, "status": "unavailable",
-                "note": "Schedule-designated QB with no statistical row or independent role corroboration. Candidate retained; confirmed start/statistical GP unavailable."}
+                "note": "Schedule-designated QB without independent starting-role corroboration. An ESPN statistical row or pass attempts cannot confirm a start; candidate retained, role unavailable."}
     return role
+
+
+def final_boxscore_statistics(histories, final_games, bodies, sources, espn_ids, player_clubs):
+    """Fill missing basic cells from exact, final ESPN event boxscores only.
+
+    Recognized display labels avoid ESPN's eight-key/seven-cell passing schema.
+    A final statistical row establishes recorded statistics, never a QB start.
+    Missing categories, tracking and player omissions do not establish zero.
+    """
+    disagreements, filled, recorded = [], 0, set()
+    labels = {"passing": ["C/ATT", "YDS", "AVG", "TD", "INT", "SACKS"],
+              "rushing": ["CAR", "YDS", "AVG", "TD", "LONG"],
+              "receiving": ["REC", "YDS", "AVG", "TD", "LONG", "TGTS"],
+              "fumbles": ["FUM", "LOST", "REC"]}
+    simple = {"passing": {"YDS": "passingYards", "TD": "passingTD", "INT": "interceptions"},
+              "rushing": {"CAR": "carries", "YDS": "rushingYards", "TD": "rushingTD"},
+              "receiving": {"REC": "receptions", "YDS": "receivingYards", "TD": "receivingTD", "TGTS": "targets"},
+              "fumbles": {"FUM": "fumbles", "LOST": "fumblesLost"}}
+    seen_events = set()
+    candidates = sorted(bodies.items(), key=lambda item: sources.get(item[0], {}).get("retrievedAt", ""), reverse=True)
+    for sid, body in candidates:
+        if not sid.startswith(("espn_fixture_summary_", "espn_matchup_summary_")) or body is None or sources.get(sid, {}).get("status") != "verified":
+            continue
+        source = sources[sid]
+        if source.get("sha256") != digest(body):
+            raise ValueError(f"Final boxscore source hash mismatch: {sid}")
+        event = sid.rsplit("_", 1)[-1]
+        if event in seen_events:
+            continue
+        seen_events.add(event)  # Latest verified retrieval from the same public provider/event.
+        game = next((game for game in final_games.values() if str(game.get("espnEventId")) == event), None)
+        if game is None:
+            continue
+        data = json.loads(body); header = data.get("header", {}); competitions = header.get("competitions", [])
+        if not competitions:
+            raise ValueError(f"Final boxscore competition absent: {sid}")
+        competition = competitions[0]; status = competition.get("status", {}).get("type", {})
+        if status.get("completed") is not True or status.get("state") != "post":
+            continue  # Partial statistics cannot enter completed history.
+        season = header.get("season", {})
+        competitors = {row.get("homeAway"): row for row in competition.get("competitors", [])}
+        if (str(header.get("id")) != event or str(competition.get("id")) != event
+                or season.get("year") != game["season"] or season.get("type") != 2 or header.get("week") != game["week"]
+                or any(refresh.canonical_team(competitors.get(side, {}).get("team", {}).get("abbreviation", "")) != game[side + "_team"]
+                       or num(competitors.get(side, {}).get("score")) != game[side + "_score"] for side in ("home", "away"))):
+            raise ValueError(f"Final boxscore event/REG/season/week/teams/score mismatch: {sid}")
+        for team in data.get("boxscore", {}).get("players", []):
+            abbr = refresh.canonical_team(team.get("team", {}).get("abbreviation", ""))
+            if abbr not in {game["home_team"], game["away_team"]}:
+                raise ValueError(f"Final player boxscore team mismatch: {sid}/{abbr}")
+            for category in team.get("statistics", []):
+                kind = category.get("name")
+                if kind not in labels:
+                    continue
+                expected = labels[kind]
+                if category.get("labels", [])[:len(expected)] != expected:
+                    raise ValueError(f"Unsupported final player boxscore labels: {sid}/{kind}")
+                for athlete in category.get("athletes", []):
+                    pid = espn_ids.get(str(athlete.get("athlete", {}).get("id")))
+                    if pid not in player_clubs or player_clubs[pid] != abbr:
+                        continue  # Exact current offensive identity only; no fuzzy-name/defender join.
+                    cells = athlete.get("stats", [])
+                    if len(cells) < len(expected):
+                        raise ValueError(f"Truncated final player boxscore: {sid}/{pid}/{kind}")
+                    values = dict(zip(expected, cells[:len(expected)]))
+                    reported = {field: num(values[label]) for label, field in simple[kind].items()}
+                    if kind == "passing":
+                        for label, fields, delimiter in [("C/ATT", ("completions", "attempts"), "/"),
+                                                        ("SACKS", ("sacks", "sackYardsLost"), "-")]:
+                            pair = str(values[label]).split(delimiter, 1)
+                            if len(pair) != 2:
+                                raise ValueError(f"Invalid final passing pair: {sid}/{pid}/{label}")
+                            reported.update({field: num(value) for field, value in zip(fields, pair)})
+                        if reported["sackYardsLost"] is not None:
+                            reported["sackYardsLost"] = abs(reported["sackYardsLost"])
+                    if not any(value is not None for value in reported.values()):
+                        continue
+                    entry = histories[pid].get(game["id"])
+                    if entry is None:
+                        entry = {"gameId": game["id"], "season": game["season"], "week": game["week"], "team": abbr,
+                            "opponent": game["away_team"] if abbr == game["home_team"] else game["home_team"],
+                            "kickoffUtc": game["kickoffUtc"], "homeAway": "neutral" if game.get("neutral") else "home" if abbr == game["home_team"] else "away",
+                            "espnEventId": event, "stats": dict.fromkeys(sorted(DISPLAY_STATS)), "sourceIds": [],
+                            "appearance": {"status": "recorded", "sourceIds": [sid],
+                                "note": "Final ESPN statistical row; no start, physical participation, omitted-category zero or DNP inferred."},
+                            "provenance": source_provenance([sid], sources, game["season"], game["week"], "reported", "Final event-matched ESPN basic statistical cells")}
+                        histories[pid][game["id"]] = entry
+                    if entry["team"] != abbr:
+                        raise ValueError(f"Final player-game identity/team mismatch: {sid}/{pid}")
+                    original_source_ids = list(entry["sourceIds"])
+                    field_sources = entry["provenance"].setdefault("fieldSources", {})
+                    for field, value in reported.items():
+                        if value is None or any(issue.get("field") == field for issue in entry.get("disagreements", [])):
+                            continue
+                        old = entry["stats"].get(field)
+                        if old is not None and old != value:
+                            issue = {"team": abbr, "playerId": pid, "gameId": game["id"], "field": field,
+                                "values": [old, value], "sourceIds": sorted(set(original_source_ids + [sid])),
+                                "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"}
+                            entry.setdefault("disagreements", []).append(issue); disagreements.append(issue)
+                            entry["stats"][field] = None
+                        elif old is None:
+                            entry["stats"][field] = value; field_sources[field] = [sid]; filled += 1
+                    entry["sourceIds"] = sorted(set(original_source_ids + [sid]))
+                    entry["finalBoxscoreEvidence"] = {"sourceIds": [sid], "eventId": event, "retrievedAt": source["retrievedAt"],
+                        "sha256": source["sha256"], "completed": True, "origin": "reported-final-basic", "categories": sorted(set(entry.get("finalBoxscoreEvidence", {}).get("categories", []) + [kind]))}
+                    if not any(key == "nflverse_player_stats" or key.startswith("nflverse_player_stats_") for key in original_source_ids):
+                        entry["statisticalOrigin"] = "espn-final-boxscore"
+                        entry["appearance"] = {"status": "recorded", "sourceIds": [sid],
+                            "note": "Final event statistical row; pass attempts do not confirm a start or physical participation."}
+                    synthetic = {field: entry["stats"].get(key) for key, field in COUNT_FIELDS.items()}
+                    synthetic["game_id"] = game["id"]; computed = normalize_stats(synthetic)
+                    for field in ("games", "completionPct", "yardsPerAttempt", "yardsPerCarry", "yardsPerReception", "offensiveTD", "touchdownsAccountedFor", "passerRating"):
+                        entry["stats"][field] = computed.get(field)
+                    recorded.add((pid, game["id"]))
+    return disagreements, {"filledBasicCells": filled, "recordedPlayerGameRows": len(recorded),
+        "note": "Only exact final REG event-matched offensive basic cells filled; unknown categories/tracking and QB roles are never fabricated."}
 
 
 def crosscheck_statistics(histories, bodies, sources):
@@ -530,10 +649,33 @@ def espn_depth(body, abbr, espn_ids):
                     item = {"playerId": player_id, "name": athlete.get("displayName"), "position": abbreviation,
                             "reportStatus": injury.get("status"), "practiceStatus": None,
                             "injury": injury.get("details", {}).get("type") or injury.get("shortComment") or None,
+                            "season": None, "week": None, "gameId": None,
+                            "context": "current-team-bulletin", "gameApplicability": "unavailable",
+                            "note": "Dated ESPN depth-chart news; no published season, game or report week. Does not establish selected-fixture eligibility.",
                             "sourceTimestamp": injury.get("date"), "sourceIds": [f"espn_matchup_depth_{abbr}"]}
                     if item not in injuries:
                         injuries.append(item)
     return depth, injuries
+
+
+def qualify_injury_reports(weekly_injuries, direct_injuries):
+    """Keep explicitly published weekly reports separate from undated scope.
+
+    A depth-chart injury's timestamp dates news, not a game-week report. Even
+    matching player names or agreeing status cannot supply its missing scope.
+    Preserve NFL participation and status exactly; dated provider news remains
+    visible separately and cannot override or dispute a different weekly report.
+    """
+    weekly = copy.deepcopy(weekly_injuries)
+    bulletins = []
+    for item in direct_injuries:
+        bulletin = {**copy.deepcopy(item), "season": None, "week": None, "gameId": None,
+                    "context": "current-team-bulletin", "gameApplicability": "unavailable"}
+        if bulletin.get("playerId"):
+            bulletin["identitySourceIds"] = ["nflverse_player_ids"]
+        if bulletin not in bulletins:
+            bulletins.append(bulletin)
+    return weekly, bulletins
 
 
 def build(base, team_details, bodies, source_list, dependencies, previous=None):
@@ -681,6 +823,10 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
             histories[player_id][game["id"]] = entry
             missing_start_rows.append({"playerId": player_id, "gameId": game["id"], "sourceIds": ["nflverse_games"],
                                        "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"})
+    final_basic_disagreements, final_basic_coverage = final_boxscore_statistics(histories, final_games, bodies, sources, espn_ids,
+        {pid: player_clubs[pid] for pid in current_ids})
+    missing_start_rows = [item for item in missing_start_rows if not any(value is not None
+        for key, value in histories[item["playerId"]][item["gameId"]]["stats"].items() if key != "games")]
     # Historical opponent rows are genuine but bounded to the requested five,
     # plus five explicit QB starts where a relief appearance would differ.
     for player_id, history in histories.items():
@@ -707,6 +853,7 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
             if entry["gameId"] not in retained:
                 del history[entry["gameId"]]
     stat_disagreements, crosschecked_cells = crosscheck_statistics(histories, bodies, sources)
+    stat_disagreements.extend(final_basic_disagreements)
     # A failed secondary source cannot silently erase a known numeric dispute.
     for old_issue in (previous or {}).get("disagreements", []):
         if not old_issue.get("gameId") or not old_issue.get("playerId"):
@@ -899,29 +1046,12 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
                                       "sourceIds": ["nflverse_depth", f"espn_matchup_depth_{abbr}"], "action": "Projected QB unavailable until sources agree"})
             team["depth"] = {"players": direct_depth, "sourceStatus": "verified", "sourceIds": [f"espn_matchup_depth_{abbr}"],
                              "note": "Fresh published depth order; still not a confirmed game-day starter"}
-        for item in direct_injuries:
-            if item.get("playerId"):
-                item["identitySourceIds"] = ["nflverse_player_ids"]
-            other = next((row for row in weekly_injuries if row["playerId"] and row["playerId"] == item["playerId"]), None)
-            if other and other.get("reportStatus") and item.get("reportStatus") and other["reportStatus"].lower() != item["reportStatus"].lower():
-                disagreements.append({"team": abbr, "playerId": item["playerId"], "field": "reportStatus", "values": [other["reportStatus"], item["reportStatus"]],
-                                      "sourceIds": other["sourceIds"] + item["sourceIds"], "action": "Disputed report status; projection unavailable"})
-                other["reportStatusEvidence"] = {"status": "disputed", "values": [other["reportStatus"], item["reportStatus"]],
-                                                  "sourceIds": sorted(set(other["sourceIds"] + item["sourceIds"]))}
-                other["reportStatus"] = None
-                other["sourceIds"] = sorted(set(other["sourceIds"] + item["sourceIds"]))
-                other["identitySourceIds"] = item.get("identitySourceIds", [])
-            elif other:
-                other["sourceIds"] = sorted(set(other["sourceIds"] + item["sourceIds"]))
-                other["identitySourceIds"] = item.get("identitySourceIds", [])
-                if not other.get("reportStatus"):
-                    other["reportStatus"] = item.get("reportStatus")
-                other["sourceTimestamp"] = item.get("sourceTimestamp")
-            else:
-                weekly_injuries.append({**item, "week": week})
+        weekly_injuries, injury_bulletins = qualify_injury_reports(weekly_injuries, direct_injuries)
         team["injuries"] = {"players": weekly_injuries, "week": week, "sourceStatus": "verified" if weekly_injuries else "unavailable",
+                            "currentTeamBulletin": injury_bulletins,
+                            "bulletinSourceStatus": "verified" if injury_bulletins else "unavailable",
                             "sourceIds": sorted({key for row in weekly_injuries for key in row["sourceIds"]}),
-                            "note": "Reported injury/participation; no entry does not prove health. Out report is not a confirmed inactive list."}
+                            "note": "Explicitly published weekly injury/participation only. Dated depth-chart news is preserved separately as current-team bulletins with unknown game applicability; absence does not prove health. Out report is not a confirmed inactive list."}
         candidates = sorted([row for row in team["depth"]["players"] if row["position"] == "QB" and row.get("rank") is not None], key=lambda row: row["rank"])
         selected = None
         for candidate in candidates:
@@ -999,6 +1129,7 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
             "dependencies": dependencies,
             "coverage": {"teams": 32, "seasons": [season - 1, season], "seasonTypes": ["REG"], "pbp": pbp_coverage,
                          "personalOpponentSeasons": list(range(refresh.HISTORY_FIRST_SEASON, season+1)), "crosscheckedNumericCells": crosschecked_cells,
+                         "finalBasicBoxscores": final_basic_coverage,
                          "startingQBMissingStatistics": missing_start_rows,
                          "startingRoleDisagreements": role_disagreements,
                          "startingRoleUncorroborated": [{"playerId": player_id, "gameId": entry["gameId"], "sourceIds": entry["started"]["sourceIds"], "status": "unavailable"}

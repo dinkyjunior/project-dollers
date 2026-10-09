@@ -1,0 +1,22 @@
+{
+  "status": "failed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-final-transition.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-final-transition-local-699.json"
+  ],
+  "startedAt": "2026-10-09T04:49:43.870559+00:00",
+  "completedAt": "2026-10-09T04:49:43.987402+00:00",
+  "exitCode": 1,
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-final-transition-local-699.json",
+    "sha256": "dc71f1474f5bbfaf341da34fa53d8702de9132a7a4eaca33abc73b53755638ea"
+  },
+  "releaseGate": {
+    "path": "qa/matchup-breakdown/verify-final-transition.py",
+    "sha256": "157f1a42a735e2779fcc389068e509bbea9b408932ba00d8c9659b98a1ddd1fa"
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-final-transition.py\", line 206, in <module>\n    print(json.dumps(inspect(json.loads(g.file(args.review).read_bytes()), args.hosted), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-final-transition.py\", line 137, in inspect\n    g.require(g.SHA(g.file(doc[\"currentMathematicsHelper\"][\"path\"]).read_bytes()) == math[\"auditHelperSha256\"] and\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-upcoming-delta.py\", line 28, in require\n    raise ValueError(message)\nValueError: Current independent math helper mismatch\n"
+}

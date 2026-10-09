@@ -1,0 +1,649 @@
+{
+  "status": "verified-dependency-metadata",
+  "snapshotSha256": "8d297c3af5d88ed8cdf95d368357bfef541cc0306d082a99a8190be6101dbde3",
+  "sourceMetadata": [
+    {
+      "id": "team_nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"23fb9dba24320c563badfc3e0766986f0caf31b29ef4016af9756ca044e8be12\"",
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:47:49Z",
+      "status": "verified",
+      "sha256": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+      "bytes": 2183367
+    },
+    {
+      "id": "team_nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254949EC72FE\"",
+      "lastModified": "Thu, 08 Oct 2026 14:34:41 GMT",
+      "retrievedAt": "2026-10-09T04:47:49Z",
+      "status": "verified",
+      "sha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "bytes": 963300
+    },
+    {
+      "id": "team_nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF25BE90396ACA\"",
+      "lastModified": "Fri, 09 Oct 2026 04:34:10 GMT",
+      "retrievedAt": "2026-10-09T04:47:49Z",
+      "status": "verified",
+      "sha256": "8304933b6ee2bc2ed132a8932cd579e479ebb5477deb677487544cc51bf67606",
+      "bytes": 2011144
+    },
+    {
+      "id": "team_nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254902AFA8D5\"",
+      "lastModified": "Thu, 08 Oct 2026 14:32:41 GMT",
+      "retrievedAt": "2026-10-09T04:47:49Z",
+      "status": "verified",
+      "sha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "bytes": 143977
+    },
+    {
+      "id": "team_nflverse_player_stats_2025",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DEF95B1AFD7169\"",
+      "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+      "retrievedAt": "2026-10-08T22:01:21Z",
+      "status": "verified",
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "bytes": 8656387
+    },
+    {
+      "id": "team_nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "provider": "nflverse",
+      "required": false,
+      "httpStatus": 200,
+      "etag": "\"0x8DF254917595876\"",
+      "lastModified": "Thu, 08 Oct 2026 14:33:16 GMT",
+      "retrievedAt": "2026-10-09T04:47:50Z",
+      "status": "verified",
+      "sha256": "6c693e1040a9608c592e86e82a6792d388a6faf8e28b8478fc28a1cc3f14ec86",
+      "bytes": 59252788
+    },
+    {
+      "id": "team_nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "provider": "nflverse",
+      "required": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DE8C1878E14FA9\"",
+      "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
+      "retrievedAt": "2026-10-09T04:47:49Z",
+      "status": "verified",
+      "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "bytes": 18919
+    },
+    {
+      "id": "team_espn_summary_401772510",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "498b16172a5564d54115bbbd48664f177ec3957ff6591d547703426c4bbf3c55",
+      "bytes": 437845
+    },
+    {
+      "id": "team_espn_summary_401772834",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "6e58331217fb1070ab951f1223b15f4efa5dee3450fb1de1b5b6441d126f8d72",
+      "bytes": 699116
+    },
+    {
+      "id": "team_espn_summary_401772844",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "a0331cc769ccefd10e19e86ea0fea874a52496808dfe1e4be54edfbd83f8e642",
+      "bytes": 576717
+    },
+    {
+      "id": "team_espn_summary_401772921",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "f37b6ca55a366b41721f28cdabcf4dc7669754fb73a11d57ac398963abb0de27",
+      "bytes": 659063
+    },
+    {
+      "id": "team_espn_summary_401772850",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "a0799b2eab2e792662610f6bbffcc7c5bb012666fc5b22b8ba8d27b3ea1751e3",
+      "bytes": 633713
+    },
+    {
+      "id": "team_espn_summary_401772858",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "5ccd8334bea38a7d6862176b59c701987f48f82866bc7616426c17fab0051337",
+      "bytes": 566752
+    },
+    {
+      "id": "team_espn_summary_401772864",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "f1669ef6c592cb7f89c2f0a26bbba270e31b2bf3cc5d6c59f0897b0c16972164",
+      "bytes": 616930
+    },
+    {
+      "id": "team_espn_summary_401772762",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "5021e106d766831caba98a7892fe0e4026bd261bf66716b0a4e24b1ddd55d24e",
+      "bytes": 615326
+    },
+    {
+      "id": "team_espn_summary_401772818",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "365ec8ced683fa9798505c9b873e640176807a32b8ceb52bf303834b7965cc6f",
+      "bytes": 581533
+    },
+    {
+      "id": "team_espn_summary_401772819",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "93bcb4df70c6f0a18634444d311993cbe82ea3ae316bc62fcf2e6309b6f1249e",
+      "bytes": 586269
+    },
+    {
+      "id": "team_espn_summary_401772890",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "f10babccd6ce7e1d6b95dbcbdeac521c7c45c07990e73b03c6f99d0a07043082",
+      "bytes": 613305
+    },
+    {
+      "id": "team_espn_summary_401772694",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "a07904fc1f3aae07099a8a643e88d361eeae87b9f7b3abf7c6c28ca7345aa227",
+      "bytes": 596052
+    },
+    {
+      "id": "team_espn_summary_401772947",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "e969234243ac78c030eccea2954fc0949c0abf95b5835aca2b63cb09e738e230",
+      "bytes": 649118
+    },
+    {
+      "id": "team_espn_summary_401772933",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "036f7610e5ca109ca2a22e06e00d1358a02b346f12c0ccc454cb1624402149c2",
+      "bytes": 592664
+    },
+    {
+      "id": "team_espn_summary_401772910",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "614b88f67244a1b88ed1fe022297c8bc48834fd0426877fcbbcad0af8b382743",
+      "bytes": 548610
+    },
+    {
+      "id": "team_espn_summary_401772710",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "4113e2b68dba7ef34701ede6e13a49e5fe5fd6b3cffc067496347080a260198d",
+      "bytes": 600877
+    },
+    {
+      "id": "team_espn_summary_401772963",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "bf00f9a7b64765d5ab233c1b59e0756375da8b2a559843d7a18b12183141dde5",
+      "bytes": 585122
+    },
+    {
+      "id": "team_espn_summary_401872930",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "4431277947f11af331a50cfcb87bb4dcc5306c85472fd67f6720361311be5e95",
+      "bytes": 545439
+    },
+    {
+      "id": "team_espn_summary_401872944",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:58Z",
+      "status": "verified",
+      "sha256": "8d52db6e11d938d4e222ebfc687aad939ab281c3730ef1ce40f672eac0934587",
+      "bytes": 567767
+    },
+    {
+      "id": "team_espn_summary_401872960",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "dd9f662669d3142fd0440c2e92e1e2ec748066833afe18c61ceff4d286fc881b",
+      "bytes": 628482
+    },
+    {
+      "id": "team_espn_summary_401872967",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "465c2467a4b73810718319f4c505350028065d45a4b175fa250a5f40ea20a5eb",
+      "bytes": 622415
+    },
+    {
+      "id": "team_espn_summary_401872980",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:57Z",
+      "status": "verified",
+      "sha256": "881fad98911257b01b3de595609e2239358cdc9d0fc0a6b358ff55634e5e8eab",
+      "bytes": 637641
+    },
+    {
+      "id": "team_espn_schedule_DAL_2025",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:58Z",
+      "status": "verified",
+      "sha256": "dc840c68340d18dcde121fb77f5bf1bf1e2598b179cdefef132f9ec0334a619d",
+      "bytes": 366872
+    },
+    {
+      "id": "team_espn_schedule_DAL_2026",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:58Z",
+      "status": "verified",
+      "sha256": "d74dc451411c6b1b30623f389acf6c37452b262e015af7493798857c4c735213",
+      "bytes": 277507
+    },
+    {
+      "id": "team_espn_roster_DAL",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster",
+      "provider": "ESPN",
+      "required": false,
+      "httpStatus": 200,
+      "etag": null,
+      "lastModified": null,
+      "retrievedAt": "2026-10-09T04:48:58Z",
+      "status": "verified",
+      "sha256": "af50b0f807d08c3f66b72f801d7190ae6281ba30bfab5f35ddc09e786bd5a7d7",
+      "bytes": 376108
+    }
+  ],
+  "actualProducerCacheBodyChecks": [
+    {
+      "id": "team_nflverse_games",
+      "declaredSourceSha256": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+      "actualCachedSourceSha256": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/games.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_roster",
+      "declaredSourceSha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "actualCachedSourceSha256": "5e1facd91005d3e8dd5e8fa52de7e4155ab0a2536ea978f06e132a040423cd7e",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/roster2026.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_player_stats",
+      "declaredSourceSha256": "8304933b6ee2bc2ed132a8932cd579e479ebb5477deb677487544cc51bf67606",
+      "actualCachedSourceSha256": "8304933b6ee2bc2ed132a8932cd579e479ebb5477deb677487544cc51bf67606",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/stats2026.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_injuries",
+      "declaredSourceSha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "actualCachedSourceSha256": "eef1227bbb7448e070f2c847e42d63c8f18ed8e057e7c24ad756e7f5f8fa2567",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/injuries2026.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_player_stats_2025",
+      "declaredSourceSha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "actualCachedSourceSha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/stats2025.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_depth",
+      "declaredSourceSha256": "6c693e1040a9608c592e86e82a6792d388a6faf8e28b8478fc28a1cc3f14ec86",
+      "actualCachedSourceSha256": "6c693e1040a9608c592e86e82a6792d388a6faf8e28b8478fc28a1cc3f14ec86",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/depth2026.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_nflverse_teams",
+      "declaredSourceSha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "actualCachedSourceSha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/team-colors.csv",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772510",
+      "declaredSourceSha256": "498b16172a5564d54115bbbd48664f177ec3957ff6591d547703426c4bbf3c55",
+      "actualCachedSourceSha256": "498b16172a5564d54115bbbd48664f177ec3957ff6591d547703426c4bbf3c55",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772510.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772834",
+      "declaredSourceSha256": "6e58331217fb1070ab951f1223b15f4efa5dee3450fb1de1b5b6441d126f8d72",
+      "actualCachedSourceSha256": "6e58331217fb1070ab951f1223b15f4efa5dee3450fb1de1b5b6441d126f8d72",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772834.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772844",
+      "declaredSourceSha256": "a0331cc769ccefd10e19e86ea0fea874a52496808dfe1e4be54edfbd83f8e642",
+      "actualCachedSourceSha256": "a0331cc769ccefd10e19e86ea0fea874a52496808dfe1e4be54edfbd83f8e642",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772844.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772921",
+      "declaredSourceSha256": "f37b6ca55a366b41721f28cdabcf4dc7669754fb73a11d57ac398963abb0de27",
+      "actualCachedSourceSha256": "f37b6ca55a366b41721f28cdabcf4dc7669754fb73a11d57ac398963abb0de27",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772921.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772850",
+      "declaredSourceSha256": "a0799b2eab2e792662610f6bbffcc7c5bb012666fc5b22b8ba8d27b3ea1751e3",
+      "actualCachedSourceSha256": "a0799b2eab2e792662610f6bbffcc7c5bb012666fc5b22b8ba8d27b3ea1751e3",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772850.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772858",
+      "declaredSourceSha256": "5ccd8334bea38a7d6862176b59c701987f48f82866bc7616426c17fab0051337",
+      "actualCachedSourceSha256": "5ccd8334bea38a7d6862176b59c701987f48f82866bc7616426c17fab0051337",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772858.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772864",
+      "declaredSourceSha256": "f1669ef6c592cb7f89c2f0a26bbba270e31b2bf3cc5d6c59f0897b0c16972164",
+      "actualCachedSourceSha256": "f1669ef6c592cb7f89c2f0a26bbba270e31b2bf3cc5d6c59f0897b0c16972164",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772864.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772762",
+      "declaredSourceSha256": "5021e106d766831caba98a7892fe0e4026bd261bf66716b0a4e24b1ddd55d24e",
+      "actualCachedSourceSha256": "5021e106d766831caba98a7892fe0e4026bd261bf66716b0a4e24b1ddd55d24e",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772762.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772818",
+      "declaredSourceSha256": "365ec8ced683fa9798505c9b873e640176807a32b8ceb52bf303834b7965cc6f",
+      "actualCachedSourceSha256": "365ec8ced683fa9798505c9b873e640176807a32b8ceb52bf303834b7965cc6f",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772818.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772819",
+      "declaredSourceSha256": "93bcb4df70c6f0a18634444d311993cbe82ea3ae316bc62fcf2e6309b6f1249e",
+      "actualCachedSourceSha256": "93bcb4df70c6f0a18634444d311993cbe82ea3ae316bc62fcf2e6309b6f1249e",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772819.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772890",
+      "declaredSourceSha256": "f10babccd6ce7e1d6b95dbcbdeac521c7c45c07990e73b03c6f99d0a07043082",
+      "actualCachedSourceSha256": "f10babccd6ce7e1d6b95dbcbdeac521c7c45c07990e73b03c6f99d0a07043082",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772890.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772694",
+      "declaredSourceSha256": "a07904fc1f3aae07099a8a643e88d361eeae87b9f7b3abf7c6c28ca7345aa227",
+      "actualCachedSourceSha256": "a07904fc1f3aae07099a8a643e88d361eeae87b9f7b3abf7c6c28ca7345aa227",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772694.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772947",
+      "declaredSourceSha256": "e969234243ac78c030eccea2954fc0949c0abf95b5835aca2b63cb09e738e230",
+      "actualCachedSourceSha256": "e969234243ac78c030eccea2954fc0949c0abf95b5835aca2b63cb09e738e230",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772947.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772933",
+      "declaredSourceSha256": "036f7610e5ca109ca2a22e06e00d1358a02b346f12c0ccc454cb1624402149c2",
+      "actualCachedSourceSha256": "036f7610e5ca109ca2a22e06e00d1358a02b346f12c0ccc454cb1624402149c2",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772933.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772910",
+      "declaredSourceSha256": "614b88f67244a1b88ed1fe022297c8bc48834fd0426877fcbbcad0af8b382743",
+      "actualCachedSourceSha256": "614b88f67244a1b88ed1fe022297c8bc48834fd0426877fcbbcad0af8b382743",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772910.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772710",
+      "declaredSourceSha256": "4113e2b68dba7ef34701ede6e13a49e5fe5fd6b3cffc067496347080a260198d",
+      "actualCachedSourceSha256": "4113e2b68dba7ef34701ede6e13a49e5fe5fd6b3cffc067496347080a260198d",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772710.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401772963",
+      "declaredSourceSha256": "bf00f9a7b64765d5ab233c1b59e0756375da8b2a559843d7a18b12183141dde5",
+      "actualCachedSourceSha256": "bf00f9a7b64765d5ab233c1b59e0756375da8b2a559843d7a18b12183141dde5",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401772963.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401872930",
+      "declaredSourceSha256": "4431277947f11af331a50cfcb87bb4dcc5306c85472fd67f6720361311be5e95",
+      "actualCachedSourceSha256": "4431277947f11af331a50cfcb87bb4dcc5306c85472fd67f6720361311be5e95",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401872930.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401872944",
+      "declaredSourceSha256": "8d52db6e11d938d4e222ebfc687aad939ab281c3730ef1ce40f672eac0934587",
+      "actualCachedSourceSha256": "8d52db6e11d938d4e222ebfc687aad939ab281c3730ef1ce40f672eac0934587",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401872944.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401872960",
+      "declaredSourceSha256": "dd9f662669d3142fd0440c2e92e1e2ec748066833afe18c61ceff4d286fc881b",
+      "actualCachedSourceSha256": "dd9f662669d3142fd0440c2e92e1e2ec748066833afe18c61ceff4d286fc881b",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401872960.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401872967",
+      "declaredSourceSha256": "465c2467a4b73810718319f4c505350028065d45a4b175fa250a5f40ea20a5eb",
+      "actualCachedSourceSha256": "465c2467a4b73810718319f4c505350028065d45a4b175fa250a5f40ea20a5eb",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401872967.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_summary_401872980",
+      "declaredSourceSha256": "881fad98911257b01b3de595609e2239358cdc9d0fc0a6b358ff55634e5e8eab",
+      "actualCachedSourceSha256": "881fad98911257b01b3de595609e2239358cdc9d0fc0a6b358ff55634e5e8eab",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-summary-401872980.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_schedule_DAL_2025",
+      "declaredSourceSha256": "dc840c68340d18dcde121fb77f5bf1bf1e2598b179cdefef132f9ec0334a619d",
+      "actualCachedSourceSha256": "dc840c68340d18dcde121fb77f5bf1bf1e2598b179cdefef132f9ec0334a619d",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-dal-schedule-2025.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_schedule_DAL_2026",
+      "declaredSourceSha256": "d74dc451411c6b1b30623f389acf6c37452b262e015af7493798857c4c735213",
+      "actualCachedSourceSha256": "d74dc451411c6b1b30623f389acf6c37452b262e015af7493798857c4c735213",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-dal-schedule-2026.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    },
+    {
+      "id": "team_espn_roster_DAL",
+      "declaredSourceSha256": "af50b0f807d08c3f66b72f801d7190ae6281ba30bfab5f35ddc09e786bd5a7d7",
+      "actualCachedSourceSha256": "af50b0f807d08c3f66b72f801d7190ae6281ba30bfab5f35ddc09e786bd5a7d7",
+      "cachePath": "/workspace/recovery-qa/matchup-breakdown/final-espn-basic-refresh/source-cache/espn-dal-roster.json",
+      "note": "Exact retained producer cache body; this metadata record is not counted as a separately archived HTTP-response file."
+    }
+  ],
+  "note": "125declared source metadata records comprise93 directly archived builder HTTPresponses and32 team-detail dependency metadata records. No duplicate or unretained response is represented as one of the93 archives."
+}
