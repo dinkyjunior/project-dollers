@@ -1,0 +1,1023 @@
+{
+  "status": "passed",
+  "reviewer": "home_immersive_layout",
+  "reviewedAt": "2026-10-09T16:29:35.530154+00:00",
+  "scope": "Separate actual-production hosted Home layout review; no browser launched by this reviewer, no application files modified, and accepted local/historical receipts preserved.",
+  "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+  "hostedBrowserReport": {
+    "file": "qa/home-continuous/hosted-webkit/results.json",
+    "sha256": "6897316dee144cb9f726d00bcf8fc03263e7d09ce28b9f1eda758c78f4b4106a",
+    "status": "passed",
+    "engine": "webkit",
+    "base": "https://dinkyjunior.github.io/project-dollers/",
+    "strictTLS": true,
+    "browserClosed": true,
+    "allContextsClosed": true,
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      }
+    ],
+    "nativeActions": 72,
+    "nativeOriginals": 26,
+    "sportGeometryStates": 8,
+    "runtimeFilesHTTP200WithExactBodies": 273,
+    "runtimeUnchanged": true,
+    "helperUnchanged": true,
+    "originalTestsUnchanged": true,
+    "allErrorAndCancellationArraysEmpty": true
+  },
+  "publicationReceipt": {
+    "file": "qa/home-continuous/application-publication.json",
+    "sha256": "2292470594742f9ea3f429aab8474cd604a4616de88430fe1523230ddfe4a565",
+    "status": "verified-application-pages-publication",
+    "applicationCommit": "4c7c85dca9837ad57134b6b1685a99c18aadfd6f",
+    "pagesRunId": 37957411179,
+    "pagesRunConclusion": "success",
+    "pagesJobs": [
+      {
+        "completedAt": "2026-10-09T16:16:34Z",
+        "conclusion": "success",
+        "databaseId": 113911358737,
+        "name": "build",
+        "startedAt": "2026-10-09T16:12:29Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Checkout",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Upload artifact",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Checkout",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 7,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37957411179/job/113911358737"
+      },
+      {
+        "completedAt": "2026-10-09T16:19:28Z",
+        "conclusion": "success",
+        "databaseId": 113913072296,
+        "name": "deploy",
+        "startedAt": "2026-10-09T16:16:38Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Deploy to GitHub Pages",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37957411179/job/113913072296"
+      },
+      {
+        "completedAt": "2026-10-09T16:16:42Z",
+        "conclusion": "success",
+        "databaseId": 113913072422,
+        "name": "report-build-status",
+        "startedAt": "2026-10-09T16:16:37Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Report Build Status",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37957411179/job/113913072422"
+      }
+    ],
+    "pagesBuildStatus": "built",
+    "actualLiveIndex": {
+      "url": "https://dinkyjunior.github.io/project-dollers/",
+      "strictTLS": true,
+      "status": 200,
+      "bytes": 33392,
+      "sha256": "872e7e310879afe7ae2ff701017ea91f2bb8ed91311f4ff7b2594c6f5ef26ff8"
+    }
+  },
+  "acceptedLocalLayout": {
+    "file": "qa/home-continuous/reviews/layout.json",
+    "sha256": "9deb62a1bc2640747e0b17299ceb8c926a2d330e4560bfc1821acbb92a595e4e",
+    "status": "passed",
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "qualification": "The local seal remains unchanged. Its broader Chromium tablet/desktop and320\u00d7700/852\u00d7393 checks retain their own actual local coverage and earlier804\u2026 runtime identities, connected through the exact248-body unchanged layout/source bridge. The hosted run did not repeat those extra viewports."
+  },
+  "personallyViewedHostedOriginals": [
+    {
+      "file": "qa/home-continuous/hosted-webkit/home-nfl-393x852.png",
+      "sha256": "5c1a43eb5e3fbfeb5256ceef8329e83f077771df2bc2cd5e98415cec24df2a5c",
+      "personallyViewedUntouchedOriginal": true,
+      "naturalAnimationPhase": true
+    },
+    {
+      "file": "qa/home-continuous/hosted-webkit/home-ufc-430x896.png",
+      "sha256": "fdbbc4ad4ab7190e4857829ab08409f5ba0fd3c65163f33f3bf4ba25bfa4b731",
+      "personallyViewedUntouchedOriginal": true,
+      "naturalAnimationPhase": true
+    }
+  ],
+  "hostedGeometry": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nfl",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nfl-393x852.png",
+        "sha256": "5c1a43eb5e3fbfeb5256ceef8329e83f077771df2bc2cd5e98415cec24df2a5c"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "Enter NFL research",
+          "visibleText": "Enter\n",
+          "nativeHit": true,
+          "width": 361,
+          "height": 62.03125,
+          "bottom": 619.90625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 146.765625
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nba",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nba-393x852.png",
+        "sha256": "9461ce4f21d96280bfd5a59820134b3c46d040a543ebac8c355906c2ab7d04e8"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "NBA research is coming soon",
+          "visibleText": "NBA \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 361,
+          "height": 62.03125,
+          "bottom": 619.90625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 146.765625
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nrl",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nrl-393x852.png",
+        "sha256": "d4bf6ab8fca4caaaebc2e062cd5015e461adc24ac5be96815aefb67080d27b0d"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "NRL research is coming soon",
+          "visibleText": "NRL \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 361,
+          "height": 62.03125,
+          "bottom": 619.90625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 146.765625
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "ufc",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-ufc-393x852.png",
+        "sha256": "e716256a75e0362b99e00de85f65027cfb186501d0c9ba14cb6f6a3382abbefa"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "UFC research is coming soon",
+          "visibleText": "UFC \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 361,
+          "height": 62.03125,
+          "bottom": 619.90625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 82.75,
+          "height": 64,
+          "bottom": 705.234375
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 146.765625
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nfl",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nfl-430x896.png",
+        "sha256": "ce2092e887260546a8e5c91fc24856ad94cb06483cb15783083a21c43b226047"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "Enter NFL research",
+          "visibleText": "Enter\n",
+          "nativeHit": true,
+          "width": 398,
+          "height": 66,
+          "bottom": 670.5625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 139.4375
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nba",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nba-430x896.png",
+        "sha256": "d71bc8d047919e07124480899172940df7ef2cd29c1b4aca3cd6aa1482c7eca8"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "NBA research is coming soon",
+          "visibleText": "NBA \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 398,
+          "height": 66,
+          "bottom": 670.5625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 139.4375
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nrl",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-nrl-430x896.png",
+        "sha256": "3d695c2ef0db991861d55eccf6b77b1d358f5fa322614d0698db58d58fcb543c"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "NRL research is coming soon",
+          "visibleText": "NRL \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 398,
+          "height": 66,
+          "bottom": 670.5625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 139.4375
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "ufc",
+      "original": {
+        "file": "qa/home-continuous/hosted-webkit/home-ufc-430x896.png",
+        "sha256": "fdbbc4ad4ab7190e4857829ab08409f5ba0fd3c65163f33f3bf4ba25bfa4b731"
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "controls": [
+        {
+          "sport": "entry",
+          "accessibleLabel": "UFC research is coming soon",
+          "visibleText": "UFC \u00b7 Coming soon\n",
+          "nativeHit": true,
+          "width": 398,
+          "height": 66,
+          "bottom": 670.5625
+        },
+        {
+          "sport": "nfl",
+          "accessibleLabel": "Select NFL",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nba",
+          "accessibleLabel": "Select NBA, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "nrl",
+          "accessibleLabel": "Select NRL, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        },
+        {
+          "sport": "ufc",
+          "accessibleLabel": "Select UFC, coming soon",
+          "visibleText": "",
+          "nativeHit": true,
+          "width": 92,
+          "height": 64,
+          "bottom": 756.5625
+        }
+      ],
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "phoneShellAndStackGeometryEqualsCurrentLocalWPE": true,
+      "clearanceBelowDockCssPx": 139.4375
+    }
+  ],
+  "findings": {
+    "phoneComposition": "passed: both actual phone shells fill the viewport, native-ratio stadium entrance remains dominant, gem and icon dock fit with ample bottom clearance, and no horizontal overflow or Home navigation occurs in all8 recorded states.",
+    "directPaintReview": "passed in personally viewed actual NFL393 andUFC430 originals: original brand is sharp, the NFL field/UFC octagon remains visible, uninterrupted broad curved lower metal has no detached footing, all controls are uncut, and surplus floor carries natural corridor texture and light rather than an unexplained blank gutter.",
+    "nativeControls": "passed in hosted native geometry: all5controls have actual native hits and dimensions above44px; four selector titles are visually empty while accessible labels remain. NFL entry and unavailable sports retain the completed native report behavior.",
+    "localToHostedGeometry": "passed: hosted page/brand/gate/dock and scroll geometry matches current accepted local WPE for all8 phone/sport states.",
+    "runtimeIdentity": "passed: every273 actual hosted body returnedHTTP200 and exactly matches the accepted current50be runtime; the same273 files independently still match disk.",
+    "coverageQualification": "Hosted acceptance covers393\u00d7852 and430\u00d7896 in4sports. Tablet768\u00d71024, desktop1440\u00d71000, short320\u00d7700 and landscape852\u00d7393 are accepted local evidence only, linked by unchanged native layout bodies.",
+    "safeArea": "Responsive CSS retains actual safe-area inset padding; the emulated hosted phones prove generous bottom clearance. Nonzero physical iPhone safe-area and hardware FPS were not certified."
+  },
+  "limitations": [
+    "Only the two listed hosted PNGs were personally viewed by this reviewer; other hosted sports were evaluated through current source-bound report geometry and earlier directly viewed local originals.",
+    "This hosted run did not test tablet/desktop/short/landscape; their acceptance is explicitly local and is not relabelled as hosted.",
+    "Original approved attachment bytes are unavailable; no registered pixel-identity claim is made.",
+    "No physical iPhone, FPS or hardware safe-area certification is claimed.",
+    "Independent current source delta remains accepted with documented evidence qualifications; this layout review does not convert historical-manifest-dependent source-suite failures into passes."
+  ],
+  "seal": {
+    "status": "passed",
+    "actualProductionPhonesAccepted": true,
+    "hostedReportClosedAndPassed": true,
+    "exactRuntimeHTTPBodies": 273,
+    "localSealPreserved": true,
+    "differentCoverageExplicit": true
+  }
+}

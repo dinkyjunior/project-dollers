@@ -1,0 +1,2234 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09T16:47:22.756506+00:00",
+  "reviewer": "home_crystal_controls independent source audit",
+  "status": "accepted-with-explicit-source-replay-qualification",
+  "fromCommit": "4c7c85dca9837ad57134b6b1685a99c18aadfd6f",
+  "toCommit": "80736fadd954ec303e18ab27476d439d86e60795",
+  "scope": "Five source books only; unchanged application/control/runtime evidence bridged by 268 exact nondata Git blobs. No application, source-builder, test, browser, image, old review or data changes.",
+  "runtime": {
+    "previousManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "currentManifestSha256": "710be7b780d6df4ea5473449a3813301f4a1476c3df44515ee2f0c66800ae916",
+    "totalFiles": 273,
+    "changedBooks": 5,
+    "nondataFilesByteIdenticalAcrossGitObjects": 268,
+    "books": {
+      "assets/data/current.json": {
+        "beforeSha256": "eca8569b1e22b9beb1e25c43aac94ef541620542ee0a3a7d7ef144897597c164",
+        "afterSha256": "8c30025f6bb9f105b2b3e119432f685a2b1da2b209f6f6d1a99a3f32f7fcb6bc",
+        "beforeBytes": 1085443,
+        "afterBytes": 1085443,
+        "rawNestedOperations": 371,
+        "operationTypes": {
+          "replace": 371
+        }
+      },
+      "assets/data/team-details.json": {
+        "beforeSha256": "9847c35000b0b247c786a8cc369faea0ffc6d583a89e17b3b639fcc0eef313c4",
+        "afterSha256": "d00a039ac413948458e4c9f14b5620ba583a3629a3b59b04add41ed48273bb3a",
+        "beforeBytes": 2292695,
+        "afterBytes": 2292695,
+        "rawNestedOperations": 86,
+        "operationTypes": {
+          "replace": 86
+        }
+      },
+      "assets/data/matchup-breakdown.json": {
+        "beforeSha256": "95085ad6cc049f35fb5c71c03e19945d717b68b136c03e6289b9e50e79ed9fb0",
+        "afterSha256": "cb4d4126c59a372d070032d19f2fb1993a6da3d6122d82ad599f90f68a17fe80",
+        "beforeBytes": 28052574,
+        "afterBytes": 28052580,
+        "rawNestedOperations": 20694,
+        "operationTypes": {
+          "replace": 20692,
+          "add": 1,
+          "remove": 1
+        }
+      },
+      "assets/data/player-history.json": {
+        "beforeSha256": "1d35a23829e9dfc178a48cd38452210890d9ca9c519856571c4f8c7a39de580a",
+        "afterSha256": "9068fa04fc95212fc5401a5a693a41d6d9465aecb0e6fce570ec9a62a1f67467",
+        "beforeBytes": 7108758,
+        "afterBytes": 7108758,
+        "rawNestedOperations": 1419,
+        "operationTypes": {
+          "replace": 1419
+        }
+      },
+      "assets/data/provenance.json": {
+        "beforeSha256": "f7cc8049f4f4fa5797e224a90f19c2b3186c0ff221e0842fd31366153a4cba6e",
+        "afterSha256": "0e47bf6aee1904f1e49c6acb48d6682e6e8096f29a38df7032ba6d8ba30381a2",
+        "beforeBytes": 33508,
+        "afterBytes": 33508,
+        "rawNestedOperations": 31,
+        "operationTypes": {
+          "replace": 31
+        }
+      }
+    }
+  },
+  "method": {
+    "exactOperationsRetained": true,
+    "identityAlignment": "Teams/source records by stable id; player games by playerId+gameId; fixture availability by playerId or espnId; QB missing-statistics by playerId+gameId. Exact identity strategies and collision/array receipts retained in detailed artifact.",
+    "metadataExclusionRule": "Only explicitly located provenance/header/digest/refresh timestamps are excluded. Injury, reportStatus, practiceStatus, reportedInactive, officialConfirmed, stat values, roster identities, depth ranks and coverage remain compared. Provider sourceTimestamp chronology is recorded separately, not silently discarded.",
+    "arrayQualification": "Index changes are retained, then identities are aligned. Reordering is reported separately from record membership/fact changes.",
+    "detailedArtifact": "qa/home-continuous/reviews/source-delta-80736fa-ops.json",
+    "detailedArtifactSha256": "3e3942c4c2057b65a9c01a91cc4dd80950eaed18a2cdbf90cb6e126b8f48939f"
+  },
+  "trueDomainChanges": {
+    "oneUniqueBettingLineUpdate": {
+      "gameId": "2026_05_IND_PIT",
+      "before": 44.5,
+      "after": 43.5,
+      "sourceId": "nflverse_games",
+      "field": "total_line",
+      "threeCopies": [
+        {
+          "path": "/steelers/schedule/[id=2026_05_IND_PIT]/odds/total",
+          "indexedPath": "/steelers/schedule/4/odds/total",
+          "before": 44.5,
+          "after": 43.5,
+          "kind": "betting_line_total"
+        },
+        {
+          "path": "/steelers/upcomingGame/odds/total",
+          "indexedPath": "/steelers/upcomingGame/odds/total",
+          "before": 44.5,
+          "after": 43.5,
+          "kind": "betting_line_total"
+        },
+        {
+          "path": "/weeks/5/fixture/odds/total",
+          "indexedPath": "/weeks/5/fixture/odds/total",
+          "before": 44.5,
+          "after": 43.5,
+          "kind": "betting_line_total"
+        }
+      ]
+    },
+    "partialFixtureAvailability": {
+      "added": 3,
+      "removed": 3,
+      "operations": [
+        {
+          "path": [
+            "teams",
+            "TEN",
+            "fixtureReports",
+            "2026_05_HOU_TEN",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0035643\"]"
+          ],
+          "op": "add-identity",
+          "identity": [
+            "playerId",
+            "00-0035643"
+          ],
+          "before": "<absent>",
+          "after": {
+            "gameId": "2026_05_HOU_TEN",
+            "eventId": "401872984",
+            "team": "TEN",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0035643",
+            "espnId": "4035369",
+            "name": "Jeffery Simmons",
+            "position": "DT",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Back",
+            "sourceTimestamp": "2026-10-07T20:59Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872984"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T16:26:49Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0035643",
+              "name": "Jeffery Simmons",
+              "position": "DT",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Back",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "TEN",
+            "fixtureReports",
+            "2026_05_HOU_TEN",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0041438\"]"
+          ],
+          "op": "remove-identity",
+          "identity": [
+            "playerId",
+            "00-0041438"
+          ],
+          "before": {
+            "gameId": "2026_05_HOU_TEN",
+            "eventId": "401872984",
+            "team": "TEN",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0041438",
+            "espnId": "4871023",
+            "name": "Carnell Tate",
+            "position": "WR",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Back",
+            "sourceTimestamp": "2026-10-08T21:01Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872984"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T15:26:19Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0041438",
+              "name": "Carnell Tate",
+              "position": "WR",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Back",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "after": "<absent>",
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "WAS",
+            "fixtureReports",
+            "2026_05_NYG_WAS",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0031588\"]"
+          ],
+          "op": "add-identity",
+          "identity": [
+            "playerId",
+            "00-0031588"
+          ],
+          "before": "<absent>",
+          "after": {
+            "gameId": "2026_05_NYG_WAS",
+            "eventId": "401872988",
+            "team": "WAS",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0031588",
+            "espnId": "2976212",
+            "name": "Stefon Diggs",
+            "position": "WR",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Hamstring",
+            "sourceTimestamp": "2026-10-09T15:40Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872988"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T16:26:49Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0031588",
+              "name": "Stefon Diggs",
+              "position": "WR",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Hamstring",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "WAS",
+            "fixtureReports",
+            "2026_05_NYG_WAS",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0035659\"]"
+          ],
+          "op": "add-identity",
+          "identity": [
+            "playerId",
+            "00-0035659"
+          ],
+          "before": "<absent>",
+          "after": {
+            "gameId": "2026_05_NYG_WAS",
+            "eventId": "401872988",
+            "team": "WAS",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0035659",
+            "espnId": "3121422",
+            "name": "Terry McLaurin",
+            "position": "WR",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Hamstring",
+            "sourceTimestamp": "2026-10-09T15:24Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872988"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T16:26:49Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0035659",
+              "name": "Terry McLaurin",
+              "position": "WR",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Hamstring",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "WAS",
+            "fixtureReports",
+            "2026_05_NYG_WAS",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0037256\"]"
+          ],
+          "op": "remove-identity",
+          "identity": [
+            "playerId",
+            "00-0037256"
+          ],
+          "before": {
+            "gameId": "2026_05_NYG_WAS",
+            "eventId": "401872988",
+            "team": "WAS",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0037256",
+            "espnId": "4697815",
+            "name": "Rachaad White",
+            "position": "RB",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Shoulder",
+            "sourceTimestamp": "2026-10-08T20:48Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872988"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T15:26:19Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0037256",
+              "name": "Rachaad White",
+              "position": "RB",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Shoulder",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "after": "<absent>",
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "WAS",
+            "fixtureReports",
+            "2026_05_NYG_WAS",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0037809\"]"
+          ],
+          "op": "remove-identity",
+          "identity": [
+            "playerId",
+            "00-0037809"
+          ],
+          "before": {
+            "gameId": "2026_05_NYG_WAS",
+            "eventId": "401872988",
+            "team": "WAS",
+            "season": 2026,
+            "week": 5,
+            "playerId": "00-0037809",
+            "espnId": "4360635",
+            "name": "Chig Okonkwo",
+            "position": "TE",
+            "reportStatus": "Questionable",
+            "reportedInactive": null,
+            "officialConfirmed": false,
+            "practiceStatus": null,
+            "injury": "Hamstring",
+            "sourceTimestamp": "2026-10-08T20:52Z",
+            "sourceIds": [
+              "espn_fixture_summary_401872988"
+            ],
+            "identitySourceIds": [
+              "nflverse_player_ids"
+            ],
+            "retrievedAt": "2026-10-09T15:26:19Z",
+            "confirmation": "provider-reported",
+            "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+            "weeklyReport": {
+              "playerId": "00-0037809",
+              "name": "Chig Okonkwo",
+              "position": "TE",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Hamstring",
+              "sourceIds": [
+                "nflverse_injuries"
+              ]
+            }
+          },
+          "after": "<absent>",
+          "publicSourceUrls": [
+            "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988"
+          ]
+        }
+      ],
+      "tenProviderChronologyReplacementsAcrossSevenRetainedPlayerIdentities": [
+        {
+          "path": [
+            "teams",
+            "CHI",
+            "fixtureReports",
+            "2026_05_CHI_GB",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0038411\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-09T15:00Z",
+          "after": "2026-10-09T16:12Z",
+          "team": "CHI",
+          "fixtureId": "2026_05_CHI_GB",
+          "playerId": "00-0038411",
+          "name": "Anthony Johnson Jr.",
+          "unchangedReportStatus": "Injured Reserve",
+          "unchangedInjury": "Undisclosed",
+          "sourceIds": [
+            "espn_fixture_summary_401872990"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "CIN",
+            "fixtureReports",
+            "2026_05_CIN_MIA",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0036410\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T20:52Z",
+          "after": "2026-10-09T15:30Z",
+          "team": "CIN",
+          "fixtureId": "2026_05_CIN_MIA",
+          "playerId": "00-0036410",
+          "name": "Tee Higgins",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Groin",
+          "sourceIds": [
+            "espn_fixture_summary_401872982"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "CIN",
+            "fixtureReports",
+            "2026_05_CIN_MIA",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0036900\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T20:33Z",
+          "after": "2026-10-09T15:21Z",
+          "team": "CIN",
+          "fixtureId": "2026_05_CIN_MIA",
+          "playerId": "00-0036900",
+          "name": "Ja'Marr Chase",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Concussion",
+          "sourceIds": [
+            "espn_fixture_summary_401872982"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "MIA",
+            "fixtureReports",
+            "2026_05_CIN_MIA",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0041523\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T18:17Z",
+          "after": "2026-10-09T15:12Z",
+          "team": "MIA",
+          "fixtureId": "2026_05_CIN_MIA",
+          "playerId": "00-0041523",
+          "name": "Caleb Douglas",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Ankle",
+          "sourceIds": [
+            "espn_fixture_summary_401872982"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "PHI",
+            "fixtureReports",
+            "2026_05_PHI_JAX",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0034844\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T18:11Z",
+          "after": "2026-10-09T15:32Z",
+          "team": "PHI",
+          "fixtureId": "2026_05_PHI_JAX",
+          "playerId": "00-0034844",
+          "name": "Saquon Barkley",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Hamstring",
+          "sourceIds": [
+            "espn_fixture_summary_401872981"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "PHI",
+            "fixtureReports",
+            "2026_05_PHI_JAX",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0036912\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T21:05Z",
+          "after": "2026-10-09T15:34Z",
+          "team": "PHI",
+          "fixtureId": "2026_05_PHI_JAX",
+          "playerId": "00-0036912",
+          "name": "DeVonta Smith",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Hamstring",
+          "sourceIds": [
+            "espn_fixture_summary_401872981"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "PHI",
+            "fixtureReports",
+            "2026_06_CAR_PHI",
+            "availability",
+            "currentTeamBulletin",
+            "@[\"playerId\",\"00-0034844\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T18:11Z",
+          "after": "2026-10-09T15:32Z",
+          "team": "PHI",
+          "fixtureId": "2026_06_CAR_PHI",
+          "playerId": "00-0034844",
+          "name": "Saquon Barkley",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Hamstring",
+          "sourceIds": [
+            "espn_fixture_summary_401872998"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "PHI",
+            "fixtureReports",
+            "2026_06_CAR_PHI",
+            "availability",
+            "currentTeamBulletin",
+            "@[\"playerId\",\"00-0036912\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T21:05Z",
+          "after": "2026-10-09T15:34Z",
+          "team": "PHI",
+          "fixtureId": "2026_06_CAR_PHI",
+          "playerId": "00-0036912",
+          "name": "DeVonta Smith",
+          "unchangedReportStatus": "Questionable",
+          "unchangedInjury": "Hamstring",
+          "sourceIds": [
+            "espn_fixture_summary_401872998"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "TB",
+            "fixtureReports",
+            "2026_05_TB_DAL",
+            "availability",
+            "players",
+            "@[\"playerId\",\"00-0034855\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T22:48Z",
+          "after": "2026-10-09T15:18Z",
+          "team": "TB",
+          "fixtureId": "2026_05_TB_DAL",
+          "playerId": "00-0034855",
+          "name": "Baker Mayfield",
+          "unchangedReportStatus": "Out",
+          "unchangedInjury": "Thumb",
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        {
+          "path": [
+            "teams",
+            "TB",
+            "fixtureReports",
+            "2026_06_PIT_TB",
+            "availability",
+            "currentTeamBulletin",
+            "@[\"playerId\",\"00-0034855\"]",
+            "sourceTimestamp"
+          ],
+          "op": "replace",
+          "before": "2026-10-08T22:48Z",
+          "after": "2026-10-09T15:18Z",
+          "team": "TB",
+          "fixtureId": "2026_06_PIT_TB",
+          "playerId": "00-0034855",
+          "name": "Baker Mayfield",
+          "unchangedReportStatus": "Out",
+          "unchangedInjury": "Thumb",
+          "sourceIds": [
+            "espn_fixture_summary_401873002"
+          ]
+        }
+      ],
+      "retainedStatusInjuryPracticeInactiveChanged": false,
+      "qualification": "ESPN provider-reported partial representations, completeOfficialList false. All added/removed records are Questionable, reportedInactive null, officialConfirmed false. Absence establishes neither recovery, active eligibility nor roster removal. Builder preserves all provider entries/order and applies no local five-record cap."
+    }
+  },
+  "unchangedDomainEvidence": {
+    "currentAndTeam": {
+      "totalChangedScalarLeaves": 457,
+      "metadataChangedLeaves": 454,
+      "factualChangedLeaves": 3,
+      "uniqueFactualChanges": 1,
+      "gameplayOrStatisticalChanges": 0,
+      "recordAdditions": 0,
+      "recordRemovals": 0,
+      "arrayOrderChanges": 0,
+      "suspiciousIdentityChanges": 0,
+      "conclusion": "current.json contains one consistent betting-line update (three copies); team-details.json has no domain/factual change. All remaining changed values are metadata.",
+      "identityStrategy": "Use id for teams, standings, roster, games and sources; playerId for leaders; gameId for last5 and historical prices; label for stat tiles; field for single-subject issues/unavailable; playerId+week for injury reports; playerId+unit+position for depth records; playerId/team/field or gameId/playerId/team/field for cross-record disagreements. Every chosen key is unique in its array at both commits."
+    },
+    "teamDomainChanges": 0,
+    "playerHistory": {
+      "allRemainingFieldsEqualAfterExplicitProvenanceProjection": true,
+      "projectionDefinition": "Remove only top-level generatedAt/retrievedAt/currentSourceHashes; per-game retrievedAt/scheduleRetrievedAt; per-source retrievedAt/sha256/etag/lastModified. Preserve every other field and all scalar array sequences. Align source records by id.",
+      "beforeProjectionSha256": "68706bfcd615367bb7fa0d16909ad3b3b3f55a1d4fad32ee5798116d1f3e9326",
+      "afterProjectionSha256": "68706bfcd615367bb7fa0d16909ad3b3b3f55a1d4fad32ee5798116d1f3e9326",
+      "statisticalSourceHashUnchanged": true,
+      "topLevelRetrievedAtUnchanged": true,
+      "factualChangedRows": [],
+      "addedGameIdentities": [],
+      "removedGameIdentities": [],
+      "arrayOrderChangePaths": [],
+      "objectKeyOrderChangePaths": []
+    },
+    "playerHistoryCounts": {
+      "playersBefore": 80,
+      "playersAfter": 80,
+      "playerGameRowsBefore": 1273,
+      "playerGameRowsAfter": 1273,
+      "factualChangedRecords": 0,
+      "factualAddedRecords": 0,
+      "factualRemovedRecords": 0,
+      "arrayReorderOperations": 0
+    },
+    "matchup": {
+      "counts": {
+        "rosterRecords": 2616,
+        "trackedPlayers": 812,
+        "teamGameRecords": 1088,
+        "headToHeadGameRecords": 160,
+        "fixtureReportRecords": 38,
+        "depthRankRecords": 210,
+        "changedTeamGameStats": 0,
+        "teamGameStatLeavesIncludingNull": 15012,
+        "playerGameRecords": 8173,
+        "qbStartCoverageRecords": 111,
+        "changedQBStartCoverageRecords": 0,
+        "changedPlayerGame_stats": 0,
+        "changedPlayerGame_advanced": 0,
+        "changedPlayerGame_appearance": 0,
+        "playerGame_statsLeavesIncludingNull": 335093,
+        "playerGame_advancedLeavesIncludingNull": 212498,
+        "teams": 32,
+        "sources": 125,
+        "distinctGameIds": 617
+      },
+      "semanticProjectionHashes": {
+        "rosters": {
+          "equal": true,
+          "beforeSemanticSha256": "f545a299ac690489c31e7c8589087dfe880d372c35f51dd7ef0d0f7598694bcc",
+          "afterSemanticSha256": "f545a299ac690489c31e7c8589087dfe880d372c35f51dd7ef0d0f7598694bcc"
+        },
+        "playersStatisticsAndQBCoverage": {
+          "equal": true,
+          "beforeSemanticSha256": "b4858fa3b86ae52baf502cdd134889fb7ed754f9845a00f003daec075e6ce37e",
+          "afterSemanticSha256": "b4858fa3b86ae52baf502cdd134889fb7ed754f9845a00f003daec075e6ce37e"
+        },
+        "gamesAndHeadToHead": {
+          "equal": true,
+          "beforeSemanticSha256": "11c0293473b9a24b23b2b3b9be720421f98ad9df76150230a15705193fc4553d",
+          "afterSemanticSha256": "11c0293473b9a24b23b2b3b9be720421f98ad9df76150230a15705193fc4553d"
+        },
+        "depthIdentitiesPositionsAndRanks": {
+          "equal": true,
+          "beforeSemanticSha256": "064c256fee4cc2ffdb6bd15f6e9da1947693fb1b7bb4f5acbe7c6f1928cc66bd",
+          "afterSemanticSha256": "064c256fee4cc2ffdb6bd15f6e9da1947693fb1b7bb4f5acbe7c6f1928cc66bd"
+        },
+        "injuriesOutsideFixtureLists": {
+          "equal": true,
+          "beforeSemanticSha256": "bd81dabcf012c28c5cfbade300d678e3f19931da225deee8a41f1922a3fc97df",
+          "afterSemanticSha256": "bd81dabcf012c28c5cfbade300d678e3f19931da225deee8a41f1922a3fc97df"
+        },
+        "teamFactsAndFixtureSelection": {
+          "equal": true,
+          "beforeSemanticSha256": "051df704dd2f37f87a24826c90b74eb91b7ae1de04b2c11a515dd86019d2430e",
+          "afterSemanticSha256": "051df704dd2f37f87a24826c90b74eb91b7ae1de04b2c11a515dd86019d2430e"
+        },
+        "coverage": {
+          "equal": true,
+          "beforeSemanticSha256": "69772fbaedaca47258fef753f7c549dae5732dc7cad154ce6fb2aae180008292",
+          "afterSemanticSha256": "69772fbaedaca47258fef753f7c549dae5732dc7cad154ce6fb2aae180008292"
+        },
+        "disagreements": {
+          "equal": true,
+          "beforeSemanticSha256": "6c5130b19bb4b2f34bda33c09fc1feb705883db598228b7b6690f0153417884c",
+          "afterSemanticSha256": "6c5130b19bb4b2f34bda33c09fc1feb705883db598228b7b6690f0153417884c"
+        },
+        "sources": {
+          "equal": true,
+          "beforeSemanticSha256": "2542b1f6b1ca38af237ba886068cbe4257aa95fe208a886dffc0234fe7973c49",
+          "afterSemanticSha256": "2542b1f6b1ca38af237ba886068cbe4257aa95fe208a886dffc0234fe7973c49"
+        }
+      },
+      "ranks": "All 210 stored depth ranks, ranking contract and ranking input pool/statistics unchanged; rendered application ranks were not recomputed.",
+      "snapshotContract": "schemaVersion=1, season=2026, currentWeek=5, throughWeek=5 and top-level provenance text unchanged.",
+      "sourceContracts": "125 source IDs, URLs, providers, required flags, HTTP statuses, verification/TLS statuses unchanged."
+    },
+    "qbMissingStatistics": {
+      "startingQBMissingStatisticsCountBefore": 25,
+      "startingQBMissingStatisticsCountAfter": 25,
+      "sameIdentitySet": true,
+      "sameCompleteRecordValues": true,
+      "movedRecords": 21,
+      "positionalLeafChanges": 41,
+      "orderEvidence": {
+        "path": [
+          "coverage",
+          "startingQBMissingStatistics"
+        ],
+        "key": "playerId+gameId",
+        "beforeOrder": [
+          [
+            "00-0032268",
+            "2024_09_WAS_NYG"
+          ],
+          [
+            "00-0035289",
+            "2024_14_LV_TB"
+          ],
+          [
+            "00-0035289",
+            "2024_13_LV_KC"
+          ],
+          [
+            "00-0038476",
+            "2024_17_IND_NYG"
+          ],
+          [
+            "00-0038476",
+            "2024_16_NYG_ATL"
+          ],
+          [
+            "00-0038476",
+            "2024_14_NO_NYG"
+          ],
+          [
+            "00-0036212",
+            "2026_02_CAR_ATL"
+          ],
+          [
+            "00-0034771",
+            "2024_14_JAX_TEN"
+          ],
+          [
+            "00-0038579",
+            "2024_15_ATL_LV"
+          ],
+          [
+            "00-0038579",
+            "2024_08_KC_LV"
+          ],
+          [
+            "00-0028986",
+            "2026_04_NYJ_CHI"
+          ],
+          [
+            "00-0028118",
+            "2025_17_NE_NYJ"
+          ],
+          [
+            "00-0028118",
+            "2025_16_NYJ_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_17_LV_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_16_NO_GB"
+          ],
+          [
+            "00-0036879",
+            "2022_11_PHI_IND"
+          ],
+          [
+            "00-0027973",
+            "2024_14_CAR_PHI"
+          ],
+          [
+            "00-0027973",
+            "2024_13_TB_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_12_KC_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_10_NYG_CAR"
+          ],
+          [
+            "00-0039910",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0039910",
+            "2025_08_WAS_KC"
+          ],
+          [
+            "00-0035704",
+            "2026_04_LAC_SEA"
+          ],
+          [
+            "00-0035704",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0031503",
+            "2024_17_MIA_CLE"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "00-0032268",
+            "2024_09_WAS_NYG"
+          ],
+          [
+            "00-0038579",
+            "2024_15_ATL_LV"
+          ],
+          [
+            "00-0038579",
+            "2024_08_KC_LV"
+          ],
+          [
+            "00-0038476",
+            "2024_17_IND_NYG"
+          ],
+          [
+            "00-0038476",
+            "2024_16_NYG_ATL"
+          ],
+          [
+            "00-0038476",
+            "2024_14_NO_NYG"
+          ],
+          [
+            "00-0034771",
+            "2024_14_JAX_TEN"
+          ],
+          [
+            "00-0028986",
+            "2026_04_NYJ_CHI"
+          ],
+          [
+            "00-0031503",
+            "2024_17_MIA_CLE"
+          ],
+          [
+            "00-0036879",
+            "2022_11_PHI_IND"
+          ],
+          [
+            "00-0035289",
+            "2024_14_LV_TB"
+          ],
+          [
+            "00-0035289",
+            "2024_13_LV_KC"
+          ],
+          [
+            "00-0027973",
+            "2024_14_CAR_PHI"
+          ],
+          [
+            "00-0027973",
+            "2024_13_TB_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_12_KC_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_10_NYG_CAR"
+          ],
+          [
+            "00-0028118",
+            "2025_17_NE_NYJ"
+          ],
+          [
+            "00-0028118",
+            "2025_16_NYJ_NO"
+          ],
+          [
+            "00-0035704",
+            "2026_04_LAC_SEA"
+          ],
+          [
+            "00-0035704",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0036212",
+            "2026_02_CAR_ATL"
+          ],
+          [
+            "00-0038998",
+            "2024_17_LV_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_16_NO_GB"
+          ],
+          [
+            "00-0039910",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0039910",
+            "2025_08_WAS_KC"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 21,
+        "commonRelativeOrderChanged": true
+      },
+      "startingRoleUncorroboratedRows": 12,
+      "startingRoleDisagreementRows": 12,
+      "qbStartCoverageRecords": 111,
+      "changedQBStartCoverageRecords": 0,
+      "coverageSemanticHashUnchanged": true,
+      "preservation": "All 25 missing-statistics records, notes and source IDs preserved. Twelve uncorroborated and twelve disputed-role records remain. Hash/retrieval refreshes do not create starts/statistics, remove unknown QB slots, choose a provider or substitute older games."
+    },
+    "provenanceBook": {
+      "operations": 31,
+      "explicitFieldCounts": {
+        "generatedAt": 1,
+        "playerHistorySha256": 1,
+        "retrievedAt": 10,
+        "snapshotSha256CanonicalJson": 1,
+        "etag": 2,
+        "sha256": 4,
+        "lastModified": 1,
+        "checkedAt": 11
+      },
+      "allOtherFieldsEqual": true
+    }
+  },
+  "arrayChanges": {
+    "matchupSequences": [
+      {
+        "path": [
+          "coverage",
+          "startingQBMissingStatistics"
+        ],
+        "key": "playerId+gameId",
+        "beforeOrder": [
+          [
+            "00-0032268",
+            "2024_09_WAS_NYG"
+          ],
+          [
+            "00-0035289",
+            "2024_14_LV_TB"
+          ],
+          [
+            "00-0035289",
+            "2024_13_LV_KC"
+          ],
+          [
+            "00-0038476",
+            "2024_17_IND_NYG"
+          ],
+          [
+            "00-0038476",
+            "2024_16_NYG_ATL"
+          ],
+          [
+            "00-0038476",
+            "2024_14_NO_NYG"
+          ],
+          [
+            "00-0036212",
+            "2026_02_CAR_ATL"
+          ],
+          [
+            "00-0034771",
+            "2024_14_JAX_TEN"
+          ],
+          [
+            "00-0038579",
+            "2024_15_ATL_LV"
+          ],
+          [
+            "00-0038579",
+            "2024_08_KC_LV"
+          ],
+          [
+            "00-0028986",
+            "2026_04_NYJ_CHI"
+          ],
+          [
+            "00-0028118",
+            "2025_17_NE_NYJ"
+          ],
+          [
+            "00-0028118",
+            "2025_16_NYJ_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_17_LV_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_16_NO_GB"
+          ],
+          [
+            "00-0036879",
+            "2022_11_PHI_IND"
+          ],
+          [
+            "00-0027973",
+            "2024_14_CAR_PHI"
+          ],
+          [
+            "00-0027973",
+            "2024_13_TB_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_12_KC_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_10_NYG_CAR"
+          ],
+          [
+            "00-0039910",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0039910",
+            "2025_08_WAS_KC"
+          ],
+          [
+            "00-0035704",
+            "2026_04_LAC_SEA"
+          ],
+          [
+            "00-0035704",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0031503",
+            "2024_17_MIA_CLE"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "00-0032268",
+            "2024_09_WAS_NYG"
+          ],
+          [
+            "00-0038579",
+            "2024_15_ATL_LV"
+          ],
+          [
+            "00-0038579",
+            "2024_08_KC_LV"
+          ],
+          [
+            "00-0038476",
+            "2024_17_IND_NYG"
+          ],
+          [
+            "00-0038476",
+            "2024_16_NYG_ATL"
+          ],
+          [
+            "00-0038476",
+            "2024_14_NO_NYG"
+          ],
+          [
+            "00-0034771",
+            "2024_14_JAX_TEN"
+          ],
+          [
+            "00-0028986",
+            "2026_04_NYJ_CHI"
+          ],
+          [
+            "00-0031503",
+            "2024_17_MIA_CLE"
+          ],
+          [
+            "00-0036879",
+            "2022_11_PHI_IND"
+          ],
+          [
+            "00-0035289",
+            "2024_14_LV_TB"
+          ],
+          [
+            "00-0035289",
+            "2024_13_LV_KC"
+          ],
+          [
+            "00-0027973",
+            "2024_14_CAR_PHI"
+          ],
+          [
+            "00-0027973",
+            "2024_13_TB_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_12_KC_CAR"
+          ],
+          [
+            "00-0027973",
+            "2024_10_NYG_CAR"
+          ],
+          [
+            "00-0028118",
+            "2025_17_NE_NYJ"
+          ],
+          [
+            "00-0028118",
+            "2025_16_NYJ_NO"
+          ],
+          [
+            "00-0035704",
+            "2026_04_LAC_SEA"
+          ],
+          [
+            "00-0035704",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0036212",
+            "2026_02_CAR_ATL"
+          ],
+          [
+            "00-0038998",
+            "2024_17_LV_NO"
+          ],
+          [
+            "00-0038998",
+            "2024_16_NO_GB"
+          ],
+          [
+            "00-0039910",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "00-0039910",
+            "2025_08_WAS_KC"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 21,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "CIN",
+          "fixtureReports",
+          "2026_05_CIN_MIA",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0037193"
+          ],
+          [
+            "playerId",
+            "00-0036410"
+          ],
+          [
+            "playerId",
+            "00-0036900"
+          ],
+          [
+            "playerId",
+            "00-0034800"
+          ],
+          [
+            "playerId",
+            "00-0035702"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0036410"
+          ],
+          [
+            "playerId",
+            "00-0036900"
+          ],
+          [
+            "playerId",
+            "00-0037193"
+          ],
+          [
+            "playerId",
+            "00-0034800"
+          ],
+          [
+            "playerId",
+            "00-0035702"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 3,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "MIA",
+          "fixtureReports",
+          "2026_05_CIN_MIA",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0040182"
+          ],
+          [
+            "playerId",
+            "00-0039481"
+          ],
+          [
+            "playerId",
+            "00-0041077"
+          ],
+          [
+            "playerId",
+            "00-0039874"
+          ],
+          [
+            "playerId",
+            "00-0041523"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0041523"
+          ],
+          [
+            "playerId",
+            "00-0040182"
+          ],
+          [
+            "playerId",
+            "00-0039481"
+          ],
+          [
+            "playerId",
+            "00-0041077"
+          ],
+          [
+            "playerId",
+            "00-0039874"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 5,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "PHI",
+          "fixtureReports",
+          "2026_05_PHI_JAX",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0038393"
+          ],
+          [
+            "playerId",
+            "00-0040708"
+          ],
+          [
+            "playerId",
+            "00-0034351"
+          ],
+          [
+            "playerId",
+            "00-0036912"
+          ],
+          [
+            "playerId",
+            "00-0034844"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0036912"
+          ],
+          [
+            "playerId",
+            "00-0034844"
+          ],
+          [
+            "playerId",
+            "00-0038393"
+          ],
+          [
+            "playerId",
+            "00-0040708"
+          ],
+          [
+            "playerId",
+            "00-0034351"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 5,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "PHI",
+          "fixtureReports",
+          "2026_06_CAR_PHI",
+          "availability",
+          "currentTeamBulletin"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0038393"
+          ],
+          [
+            "playerId",
+            "00-0040708"
+          ],
+          [
+            "playerId",
+            "00-0034351"
+          ],
+          [
+            "playerId",
+            "00-0036912"
+          ],
+          [
+            "playerId",
+            "00-0034844"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0036912"
+          ],
+          [
+            "playerId",
+            "00-0034844"
+          ],
+          [
+            "playerId",
+            "00-0038393"
+          ],
+          [
+            "playerId",
+            "00-0040708"
+          ],
+          [
+            "playerId",
+            "00-0034351"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 5,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "fixtureReports",
+          "2026_05_TB_DAL",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0036411"
+          ],
+          [
+            "playerId",
+            "00-0041082"
+          ],
+          [
+            "playerId",
+            "00-0034855"
+          ],
+          [
+            "playerId",
+            "00-0040747"
+          ],
+          [
+            "playerId",
+            "00-0039049"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0034855"
+          ],
+          [
+            "playerId",
+            "00-0036411"
+          ],
+          [
+            "playerId",
+            "00-0041082"
+          ],
+          [
+            "playerId",
+            "00-0040747"
+          ],
+          [
+            "playerId",
+            "00-0039049"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 3,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "fixtureReports",
+          "2026_06_PIT_TB",
+          "availability",
+          "currentTeamBulletin"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0036411"
+          ],
+          [
+            "playerId",
+            "00-0041082"
+          ],
+          [
+            "playerId",
+            "00-0034855"
+          ],
+          [
+            "playerId",
+            "00-0040747"
+          ],
+          [
+            "playerId",
+            "00-0039049"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0034855"
+          ],
+          [
+            "playerId",
+            "00-0036411"
+          ],
+          [
+            "playerId",
+            "00-0041082"
+          ],
+          [
+            "playerId",
+            "00-0040747"
+          ],
+          [
+            "playerId",
+            "00-0039049"
+          ]
+        ],
+        "sameMembership": true,
+        "movedCommonRecords": 3,
+        "commonRelativeOrderChanged": true
+      },
+      {
+        "path": [
+          "teams",
+          "TEN",
+          "fixtureReports",
+          "2026_05_HOU_TEN",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0039648"
+          ],
+          [
+            "playerId",
+            "00-0041438"
+          ],
+          [
+            "playerId",
+            "00-0040584"
+          ],
+          [
+            "playerId",
+            "00-0038043"
+          ],
+          [
+            "playerId",
+            "00-0035632"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0039648"
+          ],
+          [
+            "playerId",
+            "00-0040584"
+          ],
+          [
+            "playerId",
+            "00-0038043"
+          ],
+          [
+            "playerId",
+            "00-0035632"
+          ],
+          [
+            "playerId",
+            "00-0035643"
+          ]
+        ],
+        "sameMembership": false,
+        "movedCommonRecords": 3,
+        "commonRelativeOrderChanged": false
+      },
+      {
+        "path": [
+          "teams",
+          "WAS",
+          "fixtureReports",
+          "2026_05_NYG_WAS",
+          "availability",
+          "players"
+        ],
+        "key": "playerId or espnId",
+        "beforeOrder": [
+          [
+            "playerId",
+            "00-0037616"
+          ],
+          [
+            "playerId",
+            "00-0033955"
+          ],
+          [
+            "playerId",
+            "00-0035279"
+          ],
+          [
+            "playerId",
+            "00-0037809"
+          ],
+          [
+            "playerId",
+            "00-0037256"
+          ]
+        ],
+        "afterOrder": [
+          [
+            "playerId",
+            "00-0031588"
+          ],
+          [
+            "playerId",
+            "00-0035659"
+          ],
+          [
+            "playerId",
+            "00-0037616"
+          ],
+          [
+            "playerId",
+            "00-0033955"
+          ],
+          [
+            "playerId",
+            "00-0035279"
+          ]
+        ],
+        "sameMembership": false,
+        "movedCommonRecords": 3,
+        "commonRelativeOrderChanged": false
+      }
+    ],
+    "currentAndTeamOrderChanges": 0,
+    "playerHistoryOrderChanges": 0,
+    "qualification": "The 25 QB missing-statistics identities are retained exactly; 21 positions move. Other sequence changes belong to partial fixture availability reports and future bulletin copies; detailed sequences and membership operations are retained."
+  },
+  "refreshAccounting": {
+    "current": {
+      "changedScalarLeavesAfterIdentityAlignment": 371,
+      "metadataChangedLeaves": 368,
+      "factualChangedLeaves": 3,
+      "recordAdditions": 0,
+      "recordRemovals": 0,
+      "arrayOrderChanges": 0,
+      "suspiciousIdentityChanges": 0,
+      "objectRecordOccurrencesAudited": 1987,
+      "allArrays": 688,
+      "primitiveOrMixedArrays": 281,
+      "objectArrays": 295,
+      "emptyArrays": 112,
+      "metadataCategoryCounts": {
+        "timestampsAndRefresh": 199,
+        "sourceOrArtifactHashes": 167,
+        "sourceEtags": 2,
+        "sourceByteCounts": 0
+      }
+    },
+    "teamDetails": {
+      "changedScalarLeavesAfterIdentityAlignment": 86,
+      "metadataChangedLeaves": 86,
+      "factualChangedLeaves": 0,
+      "recordAdditions": 0,
+      "recordRemovals": 0,
+      "arrayOrderChanges": 0,
+      "suspiciousIdentityChanges": 0,
+      "objectRecordOccurrencesAudited": 1569,
+      "allArrays": 9202,
+      "primitiveOrMixedArrays": 8984,
+      "objectArrays": 105,
+      "emptyArrays": 113,
+      "metadataCategoryCounts": {
+        "timestampsAndRefresh": 36,
+        "sourceOrArtifactHashes": 26,
+        "sourceEtags": 2,
+        "sourceByteCounts": 22
+      }
+    },
+    "matchup": {
+      "definition": "Leaf replace or whole added/removed value counts once. Aligned membership changes are whole identity-record operations, not JSON Patch move counts.",
+      "positionalLeafOperations": 20694,
+      "positionalRetrievedAt": 19651,
+      "positionalGeneratedAt": 1,
+      "positionalOtherOperations": 1042,
+      "positionalOtherClassification": {
+        "QBMissingStatisticsPermutation": 41,
+        "sourceAndEvidenceTransportProvenance": 480,
+        "dependencyRefreshBindings": 4,
+        "fixtureAvailabilityPositionalChanges": 307,
+        "depthSnapshotChronology": 210
+      },
+      "positionalOtherLeafFields": {
+        "gameId": 20,
+        "playerId": 77,
+        "sha256": 405,
+        "currentRetrievedAt": 1,
+        "currentSha256": 1,
+        "teamDetailsRetrievedAt": 1,
+        "teamDetailsSha256": 1,
+        "etag": 5,
+        "lastModified": 3,
+        "bytes": 67,
+        "sourceTimestamp": 240,
+        "espnId": 33,
+        "injury": 53,
+        "name": 56,
+        "position": 51,
+        "practiceStatus": 18,
+        "reportStatus": 6,
+        "reportedInactive": 2,
+        "weeklyReport": 2
+      },
+      "alignedOperations": 20359,
+      "alignedClassification": {
+        "snapshotOrTransportProvenance": 20133,
+        "depthSnapshotChronology": 210,
+        "providerReportChronology": 10,
+        "fixtureAvailabilityMembership": 6,
+        "otherContent": 0
+      },
+      "alignedMetadataLeafFields": {
+        "retrievedAt": 19648,
+        "sha256": 405,
+        "currentRetrievedAt": 1,
+        "currentSha256": 1,
+        "teamDetailsRetrievedAt": 1,
+        "teamDetailsSha256": 1,
+        "generatedAt": 1,
+        "bytes": 67,
+        "etag": 5,
+        "lastModified": 3
+      },
+      "noUnclassifiedSemanticOperations": true
+    },
+    "playerHistory": {
+      "sourceHash": 2,
+      "timestamp": 1414,
+      "sourceProvenance": 3
+    },
+    "provenance": {
+      "generatedAt": 1,
+      "playerHistorySha256": 1,
+      "retrievedAt": 10,
+      "snapshotSha256CanonicalJson": 1,
+      "etag": 2,
+      "sha256": 4,
+      "lastModified": 1,
+      "checkedAt": 11
+    }
+  },
+  "publicSourceConfirmation": {
+    "requests": 3,
+    "archives": [
+      {
+        "receipt": "qa/home-continuous/reviews/source-delta-80736fa-public/espn_fixture_summary_401872984.receipt.json",
+        "receiptSha256": "54237d179897144ff26a40eee48ebe1b5ed6a431483b4d375b764c910dfa31b2",
+        "archive": "qa/home-continuous/reviews/source-delta-80736fa-public/espn_fixture_summary_401872984.json",
+        "archiveSha256": "12780451f913804a62317a0b77915d425066c85541b0ca8bf7c416b6618c1d2e",
+        "httpStatus": 200,
+        "strictTLS": true,
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984",
+        "retrievedAt": "2026-10-09T16:42:27.389499+00:00",
+        "source807RawSha256": "69854a85a5862b63722e7e89e0003e0d617fe2192a7ed0e8c7e746bbf7da05c2",
+        "exactReplayOf807Fetch": false
+      },
+      {
+        "receipt": "qa/home-continuous/reviews/source-delta-80736fa-public/espn_fixture_summary_401872988.receipt.json",
+        "receiptSha256": "5115dcc52290d99495326814190fcb9dbee9b7e71b9c1323185b572f3863f46f",
+        "archive": "qa/home-continuous/reviews/source-delta-80736fa-public/espn_fixture_summary_401872988.json",
+        "archiveSha256": "36887bdf78c9e100f57938d242bd0dcf0c7e334661918f95ea9284d9fe4e1d18",
+        "httpStatus": 200,
+        "strictTLS": true,
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988",
+        "retrievedAt": "2026-10-09T16:42:27.513843+00:00",
+        "source807RawSha256": "b2eec021dccbc69080280450c95d332f0d38b235a609dfdacd9922f5098cadfb",
+        "exactReplayOf807Fetch": false
+      },
+      {
+        "receipt": "qa/home-continuous/reviews/source-delta-80736fa-public/nflverse_games.receipt.json",
+        "receiptSha256": "63c7feb2d94a29fb4721a0afa68dba167d4e099ec6d63c7c7fec4878d3f7d4d1",
+        "archive": "qa/home-continuous/reviews/source-delta-80736fa-public/nflverse_games.csv",
+        "archiveSha256": "123c5f471aadde2cbd7aed6045af1bdcbed799c240a8007417ad0b12dd4e4f2f",
+        "httpStatus": 200,
+        "strictTLS": true,
+        "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+        "retrievedAt": "2026-10-09T16:42:27.151387+00:00",
+        "source807RawSha256": "3b04d3d08e3ee366db1dc7834f7cd3f701c9adb87e546409bcd42a57eb3be8a7",
+        "exactReplayOf807Fetch": false
+      }
+    ],
+    "bettingLineCurrentPublicCorroboration": {
+      "gameId": "2026_05_IND_PIT",
+      "total_line": "43.5"
+    },
+    "partialMembershipCurrentPublicCorroboration": [
+      {
+        "source": "espn_fixture_summary_401872984",
+        "providerTeam": "TEN",
+        "appTeam": "TEN",
+        "providerRecordCount": 5,
+        "addedIdentitiesCorroborated": [
+          {
+            "espnId": "4035369",
+            "record": {
+              "status": "Questionable",
+              "date": "2026-10-07T20:59Z",
+              "athlete": {
+                "id": "4035369",
+                "uid": "s:20~l:28~a:4035369",
+                "guid": "3d2c970c-ba26-bcf9-3e98-bd833dd57be6",
+                "lastName": "Simmons",
+                "fullName": "Jeffery Simmons",
+                "displayName": "Jeffery Simmons",
+                "shortName": "J. Simmons",
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nfl/player/_/id/4035369/jeffery-simmons",
+                    "text": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035369.png",
+                  "alt": "Jeffery Simmons"
+                },
+                "jersey": "98",
+                "position": {
+                  "name": "Defensive Tackle",
+                  "displayName": "Defensive Tackle",
+                  "abbreviation": "DT"
+                },
+                "collegeAthlete": {
+                  "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4035369?lang=en&region=us"
+                },
+                "status": {
+                  "id": "1",
+                  "name": "Active",
+                  "type": "active",
+                  "abbreviation": "Active"
+                }
+              },
+              "type": {
+                "id": "2",
+                "name": "INJURY_STATUS_QUESTIONABLE",
+                "description": "questionable",
+                "abbreviation": "Q"
+              },
+              "details": {
+                "fantasyStatus": {
+                  "description": "QUESTIONABLE",
+                  "abbreviation": "QUESTIONABLE",
+                  "displayDescription": "Questionable"
+                },
+                "type": "Back",
+                "location": "Torso",
+                "detail": "Not Specified",
+                "side": "Not Specified",
+                "returnDate": "2026-10-11"
+              }
+            }
+          }
+        ],
+        "removedEspnIdsAbsentFromThisPartialRepresentation": [
+          "4871023"
+        ],
+        "absenceDoesNotProveHealthyOrActive": true
+      },
+      {
+        "source": "espn_fixture_summary_401872988",
+        "providerTeam": "WSH",
+        "appTeam": "WAS",
+        "providerRecordCount": 5,
+        "addedIdentitiesCorroborated": [
+          {
+            "espnId": "2976212",
+            "record": {
+              "status": "Questionable",
+              "date": "2026-10-09T15:40Z",
+              "athlete": {
+                "id": "2976212",
+                "uid": "s:20~l:28~a:2976212",
+                "guid": "d6ba7023-458c-f59a-4af2-638770067518",
+                "lastName": "Diggs",
+                "fullName": "Stefon Diggs",
+                "displayName": "Stefon Diggs",
+                "shortName": "S. Diggs",
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nfl/player/_/id/2976212/stefon-diggs",
+                    "text": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nfl/players/full/2976212.png",
+                  "alt": "Stefon Diggs"
+                },
+                "jersey": "3",
+                "position": {
+                  "name": "Wide Receiver",
+                  "displayName": "Wide Receiver",
+                  "abbreviation": "WR"
+                },
+                "collegeAthlete": {
+                  "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/534249?lang=en&region=us"
+                },
+                "status": {
+                  "id": "1",
+                  "name": "Active",
+                  "type": "active",
+                  "abbreviation": "Active"
+                }
+              },
+              "type": {
+                "id": "2",
+                "name": "INJURY_STATUS_QUESTIONABLE",
+                "description": "questionable",
+                "abbreviation": "Q"
+              },
+              "details": {
+                "fantasyStatus": {
+                  "description": "QUESTIONABLE",
+                  "abbreviation": "QUESTIONABLE",
+                  "displayDescription": "Questionable"
+                },
+                "type": "Hamstring",
+                "location": "Leg",
+                "detail": "Not Specified",
+                "side": "Not Specified",
+                "returnDate": "2026-10-11"
+              }
+            }
+          },
+          {
+            "espnId": "3121422",
+            "record": {
+              "status": "Questionable",
+              "date": "2026-10-09T15:24Z",
+              "athlete": {
+                "id": "3121422",
+                "uid": "s:20~l:28~a:3121422",
+                "guid": "04454e17-9294-6271-f951-c0339528e97e",
+                "lastName": "McLaurin",
+                "fullName": "Terry McLaurin",
+                "displayName": "Terry McLaurin",
+                "shortName": "T. McLaurin",
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/nfl/player/_/id/3121422/terry-mclaurin",
+                    "text": "Player Card"
+                  }
+                ],
+                "headshot": {
+                  "href": "https://a.espncdn.com/i/headshots/nfl/players/full/3121422.png",
+                  "alt": "Terry McLaurin"
+                },
+                "jersey": "17",
+                "position": {
+                  "name": "Wide Receiver",
+                  "displayName": "Wide Receiver",
+                  "abbreviation": "WR"
+                },
+                "collegeAthlete": {
+                  "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/3121422?lang=en&region=us"
+                },
+                "status": {
+                  "id": "1",
+                  "name": "Active",
+                  "type": "active",
+                  "abbreviation": "Active"
+                }
+              },
+              "type": {
+                "id": "2",
+                "name": "INJURY_STATUS_QUESTIONABLE",
+                "description": "questionable",
+                "abbreviation": "Q"
+              },
+              "details": {
+                "fantasyStatus": {
+                  "description": "QUESTIONABLE",
+                  "abbreviation": "QUESTIONABLE",
+                  "displayDescription": "Questionable"
+                },
+                "type": "Hamstring",
+                "location": "Leg",
+                "detail": "Not Specified",
+                "side": "Not Specified",
+                "returnDate": "2026-10-11"
+              }
+            }
+          }
+        ],
+        "removedEspnIdsAbsentFromThisPartialRepresentation": [
+          "4697815",
+          "4360635"
+        ],
+        "absenceDoesNotProveHealthyOrActive": true
+      }
+    ],
+    "qualification": "All three strictly verified TLS HTTP 200 bodies were archived after the 807 fetch; their raw hashes differ from recorded 807 source hashes. They independently corroborate the changed total and added/absent ESPN subset identities with current status/injury. They do not replay or prove every raw upstream 807 byte. Removed entries remain merely absent from a partial list; no healthy/active inference. Weekly practice details were compared in saved records and were not independently refetched. Unchanged source/stat bodies were not refetched."
+  },
+  "savedDataValidation": {
+    "exactCommands": [
+      "PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh-data.py --check",
+      "PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh-team-details.py --check",
+      "PYTHONDONTWRITEBYTECODE=1 python3 scripts/refresh-matchup-breakdown.py --check"
+    ],
+    "results": {
+      "savedCoreValidator": {
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "roster": 80,
+        "activeRoster": 53,
+        "historyPlayers": 80,
+        "historyGameRows": 1273,
+        "provenanceHash": "passed"
+      },
+      "savedTeamValidator": {
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "uniqueRegularSeasonGames": 544,
+        "sources": 32,
+        "disagreements": 4
+      },
+      "savedMatchupValidator": {
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "players": 812,
+        "playerGameRows": 8173,
+        "explicitQuarterbackStartRows": 843,
+        "disputedStartingRoleRows": 22,
+        "unavailableStartingRoleRows": 12,
+        "sources": 125,
+        "disagreements": 21
+      }
+    },
+    "canonicalIntegrity": {
+      "canonicalCurrentSha256": "46fb076426b99fbf019c570d9176ce53773734caf2b3112b3488edaac2a2a5b2",
+      "provenanceCanonicalCurrentSha256": "46fb076426b99fbf019c570d9176ce53773734caf2b3112b3488edaac2a2a5b2",
+      "canonicalCurrentMatchesProvenance": true,
+      "playerHistorySha256": "9068fa04fc95212fc5401a5a693a41d6d9465aecb0e6fce570ec9a62a1f67467",
+      "currentPlayerHistorySha256": "9068fa04fc95212fc5401a5a693a41d6d9465aecb0e6fce570ec9a62a1f67467",
+      "provenancePlayerHistorySha256": "9068fa04fc95212fc5401a5a693a41d6d9465aecb0e6fce570ec9a62a1f67467",
+      "historyMatchesCurrentAndProvenance": true,
+      "matchupDependencies": {
+        "currentSha256": "8c30025f6bb9f105b2b3e119432f685a2b1da2b209f6f6d1a99a3f32f7fcb6bc",
+        "teamDetailsSha256": "d00a039ac413948458e4c9f14b5620ba583a3629a3b59b04add41ed48273bb3a",
+        "currentRetrievedAt": "2026-10-09T16:26:40Z",
+        "teamDetailsRetrievedAt": "2026-10-09T16:26:40Z",
+        "startingRoleEvidenceSha256": "c519979ea31519ef988d6ca88658f54e7d74b32081b105d43ad200f9c826d838",
+        "season": 2026,
+        "currentWeek": 5
+      },
+      "matchupCurrentDependencyMatches": true,
+      "matchupTeamDetailsDependencyMatches": true
+    },
+    "dataBeforeAfterUnchanged": true,
+    "allDataMatchesCommit807": true,
+    "sourceAndTestBeforeAfterUnchanged": true,
+    "allAuditedCodeTestsMatchImmutable94": true,
+    "countsMatchImmutable94": {
+      "savedCoreValidator": true,
+      "savedTeamValidator": true,
+      "savedMatchupValidator": true
+    },
+    "actualFullToolOutputsRetainedInDetailedArtifact": true
+  },
+  "currentHostedEvidence": {
+    "path": "qa/home-continuous/hosted-source-current/results.json",
+    "sha256": "eb9b5a943e9e6fb53c0cfb5a61ba737fd0804c7372df10168bc4e13665b929a0",
+    "status": "passed",
+    "engine": "webkit",
+    "browserClosed": true,
+    "phones": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      }
+    ],
+    "nativeActions": 36,
+    "originalImages": 6,
+    "all273CompleteBodiesHTTP200AndExactManifest": true,
+    "zeroReportedJavascriptConsoleHttpFailedExternalCancelledNavigationErrors": true,
+    "qualification": "Existing closed current-source WPE receipt was read and hash/body bindings independently verified; no new browser or image review by this source audit."
+  },
+  "immutableAcceptedReceipts": [
+    {
+      "path": "qa/home-continuous/reviews/controls.json",
+      "sha256": "546f8ae59d8965afef6980b6582a2713b3e877de9c9287b80cd8a004d366df7a",
+      "preserved": true
+    },
+    {
+      "path": "qa/home-continuous/reviews/controls-hosted.json",
+      "sha256": "67a10e753047218f4922bce8671585ded16e2481a0c63f8aa4c1667d894583ac",
+      "preserved": true
+    },
+    {
+      "path": "qa/home-continuous/reviews/source-delta-94e7.json",
+      "sha256": "59ab2241a2a44298c659b01c2cc8afcbd903c2d91eb1cb623b9ab8a4e9f2249e",
+      "preserved": true
+    }
+  ],
+  "conclusion": "Accepted current source refresh: one odds-total fact and a qualified partial-provider membership update; all other saved domain facts unchanged after explicit identity alignment. Three saved validators and canonical/dependency bindings pass. Application controls remain byte-identical across all 268 nondata runtime files; current hosted delivered 273-body receipt is exact. Full raw upstream 807 replay is not claimed."
+}

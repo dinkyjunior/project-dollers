@@ -1,0 +1,85 @@
+{
+  "status": "passed-actual-hosted-coordinator",
+  "at": "2026-10-09T16:36:06.083Z",
+  "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+  "runtimeFileCount": 273,
+  "localAcceptance": {
+    "file": "local-acceptance.json",
+    "sha256": "2c57c76afc06acee4c41eb5e1eeb3480ab15be9287622145a3aef84f5ee4ffff"
+  },
+  "closedHostedReport": {
+    "file": "hosted-webkit/results.json",
+    "sha256": "6897316dee144cb9f726d00bcf8fc03263e7d09ce28b9f1eda758c78f4b4106a",
+    "browser": "webkit",
+    "originals": 26,
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      }
+    ],
+    "actions": 72,
+    "completeRuntimeBodies": 273
+  },
+  "applicationPublication": {
+    "file": "application-publication.json",
+    "sha256": "2292470594742f9ea3f429aab8474cd604a4616de88430fe1523230ddfe4a565",
+    "commit": "4c7c85dca9837ad57134b6b1685a99c18aadfd6f"
+  },
+  "independentHostedReviews": [
+    {
+      "file": "reviews/gate-hosted.json",
+      "sha256": "d73427fa146b68593fa4468b706fae99303cf10a8cb5739a3628ab0415c6c69c",
+      "status": "passed-actual-hosted"
+    },
+    {
+      "file": "reviews/controls-hosted.json",
+      "sha256": "67a10e753047218f4922bce8671585ded16e2481a0c63f8aa4c1667d894583ac",
+      "status": "accepted-hosted-controls"
+    },
+    {
+      "file": "reviews/layout-hosted.json",
+      "sha256": "9b14976cfd4753cef3355f381ad37a2cebe557af7d7b676f0e3a2a6c9796872d",
+      "status": "passed"
+    },
+    {
+      "file": "reviews/design-hosted.json",
+      "sha256": "c8a5e64e4c443bc9958e5bbcd50c9a2eb78c46e413adf4171c1ad411bae2f579",
+      "status": "passed-hosted-integrity-with-explicit-visual-and-sampling-qualifications"
+    },
+    {
+      "file": "reviews/motion-hosted.json",
+      "sha256": "95432b8de37df1381409efe74152e88c545947440cb110f02faaca94d80b2340",
+      "status": "passed-frozen-hosted-snapshot-motion-integrity"
+    },
+    {
+      "file": "reviews/hosted-native-qa.json",
+      "sha256": "75ad2fdf2472ed71c336360b747d92f3aa8fc6abfa67c05a0e1e07148623c484",
+      "status": "passed-hosted-native"
+    }
+  ],
+  "rootDirectVisualReview": {
+    "files": [
+      "home-nfl-393x852.png",
+      "home-nba-430x896.png"
+    ],
+    "description": "Root directly inspected these untouched actual hosted originals against the chat attachment and latest user corrections. Other hosted sport states have specialist and native body/geometry/motion coverage. The previous website gallery is not mislabelled as the approved render."
+  },
+  "sourceAudit": {
+    "file": "reviews/source-delta-94e7.json",
+    "status": "accepted-current-source-delta-with-evidence-qualifications",
+    "sha256": "59ab2241a2a44298c659b01c2cc8afcbd903c2d91eb1cb623b9ab8a4e9f2249e"
+  },
+  "limits": [
+    "Approved source is chat attachment; original binary unavailable and no registered pixel-identity score.",
+    "27 historical matchup tests pass,6 fail due historical manifest fixture;1 team raw-cache test skipped. Current-data validators and focused source delta audit are accepted with documented qualifications.",
+    "Native browser tests are not physical iPhone or FPS certification.",
+    "Screenshot SDK may use its normal empty-body synchronization and caret hiding; helpers do not substitute application geometry, artwork, responses or clocks."
+  ],
+  "actualHostedVerified": true,
+  "evidenceOnlyFollowupPublicationRequired": true
+}

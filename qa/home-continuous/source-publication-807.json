@@ -1,0 +1,172 @@
+{
+  "status": "verified-latest-source-pages-publication",
+  "verifiedAt": "2026-10-09T16:36:53.496323+00:00",
+  "applicationCommit": "80736fadd954ec303e18ab27476d439d86e60795",
+  "runtimeManifestSha256": "710be7b780d6df4ea5473449a3813301f4a1476c3df44515ee2f0c66800ae916",
+  "pagesRunId": 37959226887,
+  "pagesRun": {
+    "conclusion": "success",
+    "headSha": "80736fadd954ec303e18ab27476d439d86e60795",
+    "jobs": [
+      {
+        "completedAt": "2026-10-09T16:31:17Z",
+        "conclusion": "success",
+        "databaseId": 113917516472,
+        "name": "build",
+        "startedAt": "2026-10-09T16:27:22Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Checkout",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Upload artifact",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Checkout",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 7,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37959226887/job/113917516472"
+      },
+      {
+        "completedAt": "2026-10-09T16:33:38Z",
+        "conclusion": "success",
+        "databaseId": 113919138039,
+        "name": "deploy",
+        "startedAt": "2026-10-09T16:31:21Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Deploy to GitHub Pages",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37959226887/job/113919138039"
+      },
+      {
+        "completedAt": "2026-10-09T16:31:24Z",
+        "conclusion": "success",
+        "databaseId": 113919138184,
+        "name": "report-build-status",
+        "startedAt": "2026-10-09T16:31:20Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Report Build Status",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 3,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/dinkyjunior/project-dollers/actions/runs/37959226887/job/113919138184"
+      }
+    ],
+    "status": "completed"
+  },
+  "pagesBuild": {
+    "url": "https://api.github.com/repos/dinkyjunior/project-dollers/pages/builds/1272168933",
+    "status": "built",
+    "error": {
+      "message": null
+    },
+    "pusher": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "commit": "80736fadd954ec303e18ab27476d439d86e60795",
+    "duration": 355104,
+    "created_at": "2026-10-09T16:27:16Z",
+    "updated_at": "2026-10-09T16:33:11Z"
+  },
+  "readinessBodies": [
+    {
+      "file": "index.html",
+      "url": "https://dinkyjunior.github.io/project-dollers/",
+      "status": 200,
+      "strictTLS": true,
+      "bytes": 33392,
+      "sha256": "872e7e310879afe7ae2ff701017ea91f2bb8ed91311f4ff7b2594c6f5ef26ff8"
+    },
+    {
+      "file": "assets/data/current.json",
+      "url": "https://dinkyjunior.github.io/project-dollers/assets/data/current.json",
+      "status": 200,
+      "strictTLS": true,
+      "bytes": 1085443,
+      "sha256": "8c30025f6bb9f105b2b3e119432f685a2b1da2b209f6f6d1a99a3f32f7fcb6bc"
+    },
+    {
+      "file": "assets/data/matchup-breakdown.json",
+      "url": "https://dinkyjunior.github.io/project-dollers/assets/data/matchup-breakdown.json",
+      "status": 200,
+      "strictTLS": true,
+      "bytes": 28052580,
+      "sha256": "cb4d4126c59a372d070032d19f2fb1993a6da3d6122d82ad599f90f68a17fe80"
+    }
+  ],
+  "qualification": "Automatic source update follows immutable prior hosted Home snapshot; no Home code or assets changed."
+}

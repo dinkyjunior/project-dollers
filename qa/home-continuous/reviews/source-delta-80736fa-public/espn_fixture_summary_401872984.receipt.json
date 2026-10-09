@@ -1,0 +1,767 @@
+{
+  "id": "espn_fixture_summary_401872984",
+  "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984",
+  "retrievedAt": "2026-10-09T16:42:27.389499+00:00",
+  "httpStatus": 200,
+  "strictTLS": true,
+  "bytes": 112364,
+  "sha256": "12780451f913804a62317a0b77915d425066c85541b0ca8bf7c416b6618c1d2e",
+  "expected807RawSha256": "69854a85a5862b63722e7e89e0003e0d617fe2192a7ed0e8c7e746bbf7da05c2",
+  "exactSource807Body": false,
+  "headers": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "ETag": null,
+    "Last-Modified": null,
+    "Date": "Fri, 09 Oct 2026 16:42:27 GMT",
+    "Content-Length": null
+  },
+  "archive": "espn_fixture_summary_401872984.json",
+  "providerInjuryArrays": [
+    {
+      "team": {
+        "id": "10",
+        "uid": "s:20~l:28~t:10",
+        "displayName": "Tennessee Titans",
+        "abbreviation": "TEN",
+        "links": [
+          {
+            "href": "https://www.espn.com/nfl/team/_/name/ten/tennessee-titans",
+            "text": "Clubhouse"
+          },
+          {
+            "href": "https://www.espn.com/nfl/team/schedule/_/name/ten",
+            "text": "Schedule"
+          }
+        ],
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+        "logos": [
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "default"
+            ],
+            "lastUpdated": "2026-03-20T19:56Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ten.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "dark"
+            ],
+            "lastUpdated": "2026-03-20T19:56Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "scoreboard"
+            ],
+            "lastUpdated": "2026-03-20T19:56Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/ten.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "scoreboard",
+              "dark"
+            ],
+            "lastUpdated": "2026-03-20T19:56Z"
+          }
+        ]
+      },
+      "injuries": [
+        {
+          "status": "Questionable",
+          "date": "2026-10-08T23:34Z",
+          "athlete": {
+            "id": "4360978",
+            "uid": "s:20~l:28~a:4360978",
+            "guid": "c08d4d8b-261f-e543-70a8-afb87a683b50",
+            "lastName": "Martin-Robinson",
+            "fullName": "David Martin-Robinson",
+            "displayName": "David Martin-Robinson",
+            "shortName": "D. Martin-Robinson",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4360978/david-martin-robinson",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4360978.png",
+              "alt": "David Martin-Robinson"
+            },
+            "jersey": "88",
+            "position": {
+              "name": "Tight End",
+              "displayName": "Tight End",
+              "abbreviation": "TE"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4360978?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Hamstring",
+            "location": "Leg",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Questionable",
+          "date": "2026-10-08T20:59Z",
+          "athlete": {
+            "id": "4686728",
+            "uid": "s:20~l:28~a:4686728",
+            "guid": "21d65606-f599-35d4-84d5-67c4c0a7bf3b",
+            "lastName": "Helm",
+            "fullName": "Gunnar Helm",
+            "displayName": "Gunnar Helm",
+            "shortName": "G. Helm",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4686728/gunnar-helm",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4686728.png",
+              "alt": "Gunnar Helm"
+            },
+            "jersey": "84",
+            "position": {
+              "name": "Tight End",
+              "displayName": "Tight End",
+              "abbreviation": "TE"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4686728?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Knee",
+            "location": "Leg",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Injured Reserve",
+          "date": "2026-10-08T00:11Z",
+          "athlete": {
+            "id": "4917635",
+            "uid": "s:20~l:28~a:4917635",
+            "guid": "fd8c72ae-990d-3da1-965b-e75a89dc4fae",
+            "lastName": "Williams",
+            "fullName": "Joshua Williams",
+            "displayName": "Joshua Williams",
+            "shortName": "J. Williams",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4917635/joshua-williams",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4917635.png",
+              "alt": "Joshua Williams"
+            },
+            "jersey": "25",
+            "position": {
+              "name": "Cornerback",
+              "displayName": "Cornerback",
+              "abbreviation": "CB"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4917635?lang=en&region=us"
+            },
+            "status": {
+              "id": "13",
+              "name": "Day-To-Day",
+              "type": "day-to-day",
+              "abbreviation": "Day-To-Day"
+            }
+          },
+          "type": {
+            "id": "5",
+            "name": "INJURY_STATUS_IR",
+            "description": "Injured Reserve",
+            "abbreviation": "IR"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "IR-R",
+              "abbreviation": "IR-R",
+              "displayDescription": "IR-R"
+            },
+            "type": "Pectoral",
+            "location": "Torso",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Questionable",
+          "date": "2026-10-07T22:14Z",
+          "athlete": {
+            "id": "4036134",
+            "uid": "s:20~l:28~a:4036134",
+            "guid": "9aa8328a-fed6-d975-0c16-97f8a6da99db",
+            "lastName": "Hooker",
+            "fullName": "Amani Hooker",
+            "displayName": "Amani Hooker",
+            "shortName": "A. Hooker",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4036134/amani-hooker",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4036134.png",
+              "alt": "Amani Hooker"
+            },
+            "jersey": "37",
+            "position": {
+              "name": "Safety",
+              "displayName": "Safety",
+              "abbreviation": "S"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4036134?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Concussion",
+            "location": "Head",
+            "detail": "Concussion",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Questionable",
+          "date": "2026-10-07T20:59Z",
+          "athlete": {
+            "id": "4035369",
+            "uid": "s:20~l:28~a:4035369",
+            "guid": "3d2c970c-ba26-bcf9-3e98-bd833dd57be6",
+            "lastName": "Simmons",
+            "fullName": "Jeffery Simmons",
+            "displayName": "Jeffery Simmons",
+            "shortName": "J. Simmons",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4035369/jeffery-simmons",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035369.png",
+              "alt": "Jeffery Simmons"
+            },
+            "jersey": "98",
+            "position": {
+              "name": "Defensive Tackle",
+              "displayName": "Defensive Tackle",
+              "abbreviation": "DT"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4035369?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Back",
+            "location": "Torso",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        }
+      ]
+    },
+    {
+      "team": {
+        "id": "34",
+        "uid": "s:20~l:28~t:34",
+        "displayName": "Houston Texans",
+        "abbreviation": "HOU",
+        "links": [
+          {
+            "href": "https://www.espn.com/nfl/team/_/name/hou/houston-texans",
+            "text": "Clubhouse"
+          },
+          {
+            "href": "https://www.espn.com/nfl/team/schedule/_/name/hou",
+            "text": "Schedule"
+          }
+        ],
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+        "logos": [
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "default"
+            ],
+            "lastUpdated": "2024-06-25T18:50Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/hou.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "dark"
+            ],
+            "lastUpdated": "2024-06-25T18:49Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "scoreboard"
+            ],
+            "lastUpdated": "2024-06-25T18:50Z"
+          },
+          {
+            "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/hou.png",
+            "width": 500,
+            "height": 500,
+            "alt": "",
+            "rel": [
+              "full",
+              "scoreboard",
+              "dark"
+            ],
+            "lastUpdated": "2024-06-25T18:49Z"
+          }
+        ]
+      },
+      "injuries": [
+        {
+          "status": "Injured Reserve",
+          "date": "2026-10-09T00:59Z",
+          "athlete": {
+            "id": "3121595",
+            "uid": "s:20~l:28~a:3121595",
+            "guid": "f4e18fdd-0655-aa84-42f7-14598d60e3e4",
+            "lastName": "Smith",
+            "fullName": "Braden Smith",
+            "displayName": "Braden Smith",
+            "shortName": "B. Smith",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/3121595/braden-smith",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/3121595.png",
+              "alt": "Braden Smith"
+            },
+            "jersey": "71",
+            "position": {
+              "name": "Offensive Tackle",
+              "displayName": "Offensive Tackle",
+              "abbreviation": "OT"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/3121595?lang=en&region=us"
+            },
+            "status": {
+              "id": "13",
+              "name": "Day-To-Day",
+              "type": "day-to-day",
+              "abbreviation": "Day-To-Day"
+            }
+          },
+          "type": {
+            "id": "5",
+            "name": "INJURY_STATUS_IR",
+            "description": "Injured Reserve",
+            "abbreviation": "IR"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "IR-R",
+              "abbreviation": "IR-R",
+              "displayDescription": "IR-R"
+            },
+            "type": "Foot",
+            "location": "Leg",
+            "detail": "Plantar Fasciitis",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Injured Reserve",
+          "date": "2026-10-09T00:48Z",
+          "athlete": {
+            "id": "4870893",
+            "uid": "s:20~l:28~a:4870893",
+            "guid": "0aad9a89-35a8-332f-abb3-1e78b6187ddd",
+            "lastName": "McDonald",
+            "fullName": "Kayden McDonald",
+            "displayName": "Kayden McDonald",
+            "shortName": "K. McDonald",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4870893/kayden-mcdonald",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4870893.png",
+              "alt": "Kayden McDonald"
+            },
+            "jersey": "93",
+            "position": {
+              "name": "Defensive Tackle",
+              "displayName": "Defensive Tackle",
+              "abbreviation": "DT"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4870893?lang=en&region=us"
+            },
+            "status": {
+              "id": "13",
+              "name": "Day-To-Day",
+              "type": "day-to-day",
+              "abbreviation": "Day-To-Day"
+            }
+          },
+          "type": {
+            "id": "5",
+            "name": "INJURY_STATUS_IR",
+            "description": "Injured Reserve",
+            "abbreviation": "IR"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "IR-R",
+              "abbreviation": "IR-R",
+              "displayDescription": "IR-R"
+            },
+            "type": "Ankle",
+            "location": "Leg",
+            "detail": "Sprain",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Injured Reserve",
+          "date": "2026-10-08T21:58Z",
+          "athlete": {
+            "id": "4366031",
+            "uid": "s:20~l:28~a:4366031",
+            "guid": "dd36357c-436b-f059-d957-ddbb12cf33ab",
+            "lastName": "Dell",
+            "fullName": "Tank Dell",
+            "displayName": "Tank Dell",
+            "shortName": "T. Dell",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4366031/tank-dell",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4366031.png",
+              "alt": "Tank Dell"
+            },
+            "jersey": "1",
+            "position": {
+              "name": "Wide Receiver",
+              "displayName": "Wide Receiver",
+              "abbreviation": "WR"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4366031?lang=en&region=us"
+            },
+            "status": {
+              "id": "13",
+              "name": "Day-To-Day",
+              "type": "day-to-day",
+              "abbreviation": "Day-To-Day"
+            }
+          },
+          "type": {
+            "id": "5",
+            "name": "INJURY_STATUS_IR",
+            "description": "Injured Reserve",
+            "abbreviation": "IR"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "IR-R",
+              "abbreviation": "IR-R",
+              "displayDescription": "IR-R"
+            },
+            "type": "Knee - ACL + MCL",
+            "location": "Leg",
+            "detail": "Surgery",
+            "side": "Left",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Questionable",
+          "date": "2026-10-08T21:53Z",
+          "athlete": {
+            "id": "4429693",
+            "uid": "s:20~l:28~a:4429693",
+            "guid": "f2b340f9-1160-3aee-8008-86622e61b37e",
+            "lastName": "Ersery",
+            "fullName": "Aireontae Ersery",
+            "displayName": "Aireontae Ersery",
+            "shortName": "A. Ersery",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4429693/aireontae-ersery",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4429693.png",
+              "alt": "Aireontae Ersery"
+            },
+            "jersey": "79",
+            "position": {
+              "name": "Offensive Tackle",
+              "displayName": "Offensive Tackle",
+              "abbreviation": "OT"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4429693?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Illness",
+            "location": "Other",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        },
+        {
+          "status": "Questionable",
+          "date": "2026-10-08T21:53Z",
+          "athlete": {
+            "id": "4242227",
+            "uid": "s:20~l:28~a:4242227",
+            "guid": "bb11bb29-1804-0692-f781-f071a4a09389",
+            "lastName": "Ingram",
+            "fullName": "Ed Ingram",
+            "displayName": "Ed Ingram",
+            "shortName": "E. Ingram",
+            "links": [
+              {
+                "rel": [
+                  "playercard",
+                  "desktop",
+                  "athlete"
+                ],
+                "href": "https://www.espn.com/nfl/player/_/id/4242227/ed-ingram",
+                "text": "Player Card"
+              }
+            ],
+            "headshot": {
+              "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4242227.png",
+              "alt": "Ed Ingram"
+            },
+            "jersey": "69",
+            "position": {
+              "name": "Guard",
+              "displayName": "Guard",
+              "abbreviation": "G"
+            },
+            "collegeAthlete": {
+              "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4242227?lang=en&region=us"
+            },
+            "status": {
+              "id": "1",
+              "name": "Active",
+              "type": "active",
+              "abbreviation": "Active"
+            }
+          },
+          "type": {
+            "id": "2",
+            "name": "INJURY_STATUS_QUESTIONABLE",
+            "description": "questionable",
+            "abbreviation": "Q"
+          },
+          "details": {
+            "fantasyStatus": {
+              "description": "QUESTIONABLE",
+              "abbreviation": "QUESTIONABLE",
+              "displayDescription": "Questionable"
+            },
+            "type": "Illness",
+            "location": "Other",
+            "detail": "Not Specified",
+            "side": "Not Specified",
+            "returnDate": "2026-10-11"
+          }
+        }
+      ]
+    }
+  ]
+}

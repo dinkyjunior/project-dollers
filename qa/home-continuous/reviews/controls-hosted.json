@@ -1,0 +1,266 @@
+{
+  "reviewer": "home_crystal_controls",
+  "status": "accepted-hosted-controls",
+  "reviewedAt": "2026-10-09T16:28:52.843630+00:00",
+  "scope": "Hosted Home entry crystal and the four sport selector controls only. Native functional/report integrity is checked for both phone sizes and all four states; this reviewer personally viewed exactly two fresh hosted whole-phone originals.",
+  "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+  "acceptedLocalReview": {
+    "path": "qa/home-continuous/reviews/controls.json",
+    "sha256": "546f8ae59d8965afef6980b6582a2713b3e877de9c9287b80cd8a004d366df7a",
+    "preservedUnchanged": true,
+    "qualification": "Accepted local geometric/glass/DPR2 review remains immutable. Earlier Chrome675f visual proof still identifies its original253-file runtime804775 and is not relabelled as hosted/current Chromium."
+  },
+  "hostedEvidence": {
+    "report": "qa/home-continuous/hosted-webkit/results.json",
+    "reportSha256": "6897316dee144cb9f726d00bcf8fc03263e7d09ce28b9f1eda758c78f4b4106a",
+    "engine": "webkit",
+    "base": "https://dinkyjunior.github.io/project-dollers/",
+    "strictTLS": true,
+    "status": "passed",
+    "browserClosed": true,
+    "completedAt": "2026-10-09T16:25:53.854Z",
+    "helperSha256": "127f252aae5332ec26a830f69abeec16acc0b1fa3ee2edb173aeca26234e37a8",
+    "nativeActions": 72,
+    "originalsHashVerified": 26,
+    "completeHTTP200BodiesHashVerified": 273,
+    "totalErrorsIncludingCancelledNavigation": 0,
+    "runtimeHelperAndOriginalTestsUnchanged": true
+  },
+  "applicationPublicationReceipt": {
+    "path": "qa/home-continuous/application-publication.json",
+    "sha256": "2292470594742f9ea3f429aab8474cd604a4616de88430fe1523230ddfe4a565",
+    "status": "verified-application-pages-publication",
+    "applicationCommit": "4c7c85dca9837ad57134b6b1685a99c18aadfd6f",
+    "pagesRunId": 37957411179,
+    "completedSuccessfulJobCount": 3,
+    "qualification": "Root-retained actual GitHub Pages publication receipt was checked; this reviewer did not launch another browser or GitHub API request."
+  },
+  "hostedControlBodyBindings": [
+    {
+      "path": "assets/home-gem-controls.css",
+      "hostedServedBodySha256": "b4bcb7df8280eb36756d8776031dc18c74ec2f008a72717ff09f5088cb3d6b6a",
+      "currentLocalSha256": "b4bcb7df8280eb36756d8776031dc18c74ec2f008a72717ff09f5088cb3d6b6a",
+      "matchesAcceptedLocalRuntime": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nfl.svg",
+      "hostedServedBodySha256": "d90120136cf6ce96aa7e8a6d1141a1cc9eda7fa44f7b1cc3c8b416cc541da741",
+      "currentLocalSha256": "d90120136cf6ce96aa7e8a6d1141a1cc9eda7fa44f7b1cc3c8b416cc541da741",
+      "matchesAcceptedLocalRuntime": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nba.svg",
+      "hostedServedBodySha256": "d1f06d2a069b62521c0e08b375e75b0bab98ef26779411bce8be29c5b71179e1",
+      "currentLocalSha256": "d1f06d2a069b62521c0e08b375e75b0bab98ef26779411bce8be29c5b71179e1",
+      "matchesAcceptedLocalRuntime": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nrl.svg",
+      "hostedServedBodySha256": "7801cd9aa8495ac790309e931d913a81e5997a0feb2b5976fd77e1e0f1457ef7",
+      "currentLocalSha256": "7801cd9aa8495ac790309e931d913a81e5997a0feb2b5976fd77e1e0f1457ef7",
+      "matchesAcceptedLocalRuntime": true
+    },
+    {
+      "path": "assets/home/entry-crystal-ufc.svg",
+      "hostedServedBodySha256": "4b060ee673833f3f978d8e1fca788b7a3c4384e3d77c3980e349a1780eea0090",
+      "currentLocalSha256": "4b060ee673833f3f978d8e1fca788b7a3c4384e3d77c3980e349a1780eea0090",
+      "matchesAcceptedLocalRuntime": true
+    }
+  ],
+  "personallyViewedHostedOriginals": [
+    {
+      "path": "qa/home-continuous/hosted-webkit/home-nfl-393x852.png",
+      "sha256": "5c1a43eb5e3fbfeb5256ceef8329e83f077771df2bc2cd5e98415cec24df2a5c",
+      "personallyViewedOriginal": true,
+      "deviceScaleFactor": 2
+    },
+    {
+      "path": "qa/home-continuous/hosted-webkit/home-nba-430x896.png",
+      "sha256": "d71bc8d047919e07124480899172940df7ef2cd29c1b4aca3cd6aa1482c7eca8",
+      "personallyViewedOriginal": true,
+      "deviceScaleFactor": 2
+    }
+  ],
+  "allNativeStateBindings": [
+    {
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nfl-393x852.png",
+      "sha256": "5c1a43eb5e3fbfeb5256ceef8329e83f077771df2bc2cd5e98415cec24df2a5c",
+      "entryText": "Enter",
+      "entryDisabled": false,
+      "entryNativeTarget": "nfl",
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 82.75,
+        "height": 62.03125
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "nba",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nba-393x852.png",
+      "sha256": "9461ce4f21d96280bfd5a59820134b3c46d040a543ebac8c355906c2ab7d04e8",
+      "entryText": "NBA \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 82.75,
+        "height": 62.03125
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "nrl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nrl-393x852.png",
+      "sha256": "d4bf6ab8fca4caaaebc2e062cd5015e461adc24ac5be96815aefb67080d27b0d",
+      "entryText": "NRL \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 82.75,
+        "height": 62.03125
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "ufc",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-ufc-393x852.png",
+      "sha256": "e716256a75e0362b99e00de85f65027cfb186501d0c9ba14cb6f6a3382abbefa",
+      "entryText": "UFC \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 82.75,
+        "height": 62.03125
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nfl-430x896.png",
+      "sha256": "ce2092e887260546a8e5c91fc24856ad94cb06483cb15783083a21c43b226047",
+      "entryText": "Enter",
+      "entryDisabled": false,
+      "entryNativeTarget": "nfl",
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 92,
+        "height": 64
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "nba",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nba-430x896.png",
+      "sha256": "d71bc8d047919e07124480899172940df7ef2cd29c1b4aca3cd6aa1482c7eca8",
+      "entryText": "NBA \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 92,
+        "height": 64
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "nrl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-nrl-430x896.png",
+      "sha256": "3d695c2ef0db991861d55eccf6b77b1d358f5fa322614d0698db58d58fcb543c",
+      "entryText": "NRL \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 92,
+        "height": 64
+      },
+      "enabledNativeTargetsUnobscured": true
+    },
+    {
+      "sport": "ufc",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "original": "qa/home-continuous/hosted-webkit/home-ufc-430x896.png",
+      "sha256": "fdbbc4ad4ab7190e4857829ab08409f5ba0fd3c65163f33f3bf4ba25bfa4b731",
+      "entryText": "UFC \u00b7 Coming soon",
+      "entryDisabled": true,
+      "entryNativeTarget": null,
+      "selectorTitles": 0,
+      "officialSelectorIcons": 4,
+      "nativeAccessibleLabels": true,
+      "minimumPaintedTargetPx": {
+        "width": 92,
+        "height": 64
+      },
+      "enabledNativeTargetsUnobscured": true
+    }
+  ],
+  "findings": {
+    "criticalControls": [],
+    "gem": "Fresh hosted NFL393/NBA430 paint matches the accepted local cut crystal: one connected elongated crown/table/pavilion, integral refractive caps, sharp vector edges and local caustics.",
+    "label": "Enter and Coming soon lettering remains readable and softly translucent, with the shallow etched glass treatment rather than a solid white word.",
+    "selectors": "Four official icons appear without visible sport titles. Actual hosted WPE paint transmits floor reflections through glass faces and preserves each selector neon perimeter; NBA stays blue-left/red-right.",
+    "function": "The closed hosted run records native NFL entry and return journeys, selector keyboard Home/ArrowRight/End behavior, disabled no-entry NBA/NRL/UFC Coming soon pointer attempts, direct routes and refreshes. It does not separately claim an Enter-key NFL activation test.",
+    "motion": "Both hosted phone runs passed native reduced preference with zero running Home clocks; inactive Home has zero running clocks, and normal motion resumes."
+  },
+  "limitations": [
+    "Home control acceptance only; no physical iPhone execution claim.",
+    "Exact approved-chat registered pixel identity is not claimed.",
+    "No app files were edited and no browser was launched by this hosted reviewer."
+  ],
+  "seal": {
+    "status": "accepted",
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "hostedReportSha256": "6897316dee144cb9f726d00bcf8fc03263e7d09ce28b9f1eda758c78f4b4106a",
+    "acceptedLocalReviewSha256": "546f8ae59d8965afef6980b6582a2713b3e877de9c9287b80cd8a004d366df7a",
+    "qualification": "This separate hosted record preserves the accepted local and historical failed receipts."
+  }
+}

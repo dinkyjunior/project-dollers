@@ -1,5 +1,19 @@
 # Codex Start Here
 
+## Current Home — continuous entrance release (9 October UTC / 10 October 2026 Sydney)
+
+This checkpoint supersedes the historical Home reports below. The newest user correction requires continuous metal, a larger field opening, true vector gemstone Enter controls with translucent text, icon-only glass sport selectors and no Home bottom navigation. Original PROJECT facets and gold DOLLAR receive clipped, asynchronous lighting; original moneybag, league marks and venue source pixels remain. NFL enters normally; NBA, NRL and UFC are selectable Coming soon. Research-screen navigation, controllers, original tests, protected non-Home markup and prior backups remain.
+
+Seven independent local gates accepted runtime `50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1` (273 files). Current WebKit and Chromium companion verified exact served bodies, direct team routes, refresh and current datasets. Broad Chromium tablet/desktop/compact and motion coverage retains its original source snapshot, joined through unchanged Home code. Source changes in `94e7a79` are independently audited provider reports, with exact evidence and limits retained. The historical matchup fixture suite has six manifest failures; these are documented rather than hidden.
+
+Actual Pages run37957411179 deployed the accepted full Home snapshot; strict-HTTPS WPE passed both phones, all sports,72 actions,26 originals and273 exact bodies with zero errors/cancellations. The subsequent automatic source update80736fa preserves268 nondata bodies and yields current273-file runtime `710be7b780d6df4ea5473449a3813301f4a1476c3df44515ee2f0c66800ae916`. Current-source focused verification: passed both phones with36 native actions,6 protected-page originals and273 exact bodies, zero errors/cancellations; [source integration acceptance](qa/home-continuous/current-source-acceptance.json) and [independent delta audit](qa/home-continuous/reviews/source-delta-80736fa.json) retain the changed total/partial previews and upstream replay limits.
+
+Read [release evidence](qa/home-continuous/RELEASE.md), [local acceptance](qa/home-continuous/local-acceptance.json), [hosted acceptance](qa/home-continuous/hosted-acceptance.json), and [full-original screenshot gallery](qa/home-continuous/index.html). The approved source is the latest chat attachment; original binary bytes were unavailable. Before/after gallery originals compare the prior actual website with the current actual website, not an invented copy of the render. No registered pixel identity, physical iPhone or FPS certification is claimed.
+
+Fresh verified source backup: [project-dollar-home-continuous-source.zip](backups/project-dollar-home-continuous-source.zip). Prior backups are retained. The automatic source workflow resumes after a final evidence publication hold bounded by an automatic12-minute restore; verify its active state in the final outside-Git publication receipt. No source job was cancelled. Fetch and rebase both main and codex-rebuild before the next ordinary push; never force-push.
+
+### Historical checkpoints (superseded for Home)
+
 ## Current Home — deployed and independently verified (9 October 2026)
 
 The latest Home refinement has a thin upper casting and broad continuous lower

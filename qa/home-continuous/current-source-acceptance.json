@@ -1,0 +1,43 @@
+{
+  "status": "accepted-current-source-and-unchanged-hosted-home",
+  "at": "2026-10-09T16:48:55.043Z",
+  "currentRuntimeManifestSha256": "710be7b780d6df4ea5473449a3813301f4a1476c3df44515ee2f0c66800ae916",
+  "runtimeFiles": 273,
+  "unchangedNondataBodies": 268,
+  "changedSourceBooks": [
+    "assets/data/current.json",
+    "assets/data/matchup-breakdown.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json",
+    "assets/data/team-details.json"
+  ],
+  "fullHostedHomeAcceptance": {
+    "file": "hosted-acceptance.json",
+    "sha256": "3e6e762b287dbe5e165c5e913c9d2abcda09c712770c126c0fef57665a90b91a",
+    "runtime": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1"
+  },
+  "focusedCurrentHostedReport": {
+    "file": "hosted-source-current/results.json",
+    "sha256": "eb9b5a943e9e6fb53c0cfb5a61ba737fd0804c7372df10168bc4e13665b929a0",
+    "nativeActions": 36,
+    "originals": 6,
+    "strictTLS": true,
+    "completeBodies": 273,
+    "zeroErrorsAndCancellations": true
+  },
+  "currentSourceAudit": {
+    "file": "reviews/source-delta-80736fa.json",
+    "sha256": "742c14ad9cfda581b2b3e84a431f0e6a86224be5220b60e7e29dcae47a1c7476",
+    "status": "accepted-with-explicit-source-replay-qualification"
+  },
+  "nativeSourceSeal": {
+    "file": "reviews/hosted-source-native-qa.json",
+    "sha256": "7aadf2f5eae9c54fcbdc64712fe4459c0874b593f08d115aa5b22235ca809a44"
+  },
+  "sourcePublication": {
+    "file": "source-publication-807.json",
+    "sha256": "6c83cbc746b5628a1e742ca7061c089e08b27c18ccb84c5d290496d98b0483e8",
+    "commit": "80736fadd954ec303e18ab27476d439d86e60795"
+  },
+  "qualification": "The newer automatic source update is preserved. Old Home screenshots and motion retain their actual preceding source snapshot, joined only through all268 unchanged nondata bodies. Semantic changes and raw-provider replay qualifications remain in the independent source audit. No registered reference pixel identity or physical iPhone/FPS claim."
+}
