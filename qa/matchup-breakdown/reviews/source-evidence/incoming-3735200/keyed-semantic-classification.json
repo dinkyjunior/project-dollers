@@ -1,0 +1,1095 @@
+{
+  "status": "classified",
+  "auditedAt": "2026-10-09T03:12:08.569702+00:00",
+  "beforeCommit": "d36c3b3bce4ad5b656d13b6909dce3a36932effd",
+  "incomingCommit": "3735200e032cb30a8038b72931799d0ae4dc75ae",
+  "beforeSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "afterSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+  "explicitMetadataExclusions": [
+    "bytes",
+    "checkedAt",
+    "currentRetrievedAt",
+    "currentSha256",
+    "etag",
+    "generatedAt",
+    "lastModified",
+    "playerHistorySha256",
+    "publishedAt",
+    "refreshAfter",
+    "retrievedAt",
+    "scheduleRetrievedAt",
+    "sha256",
+    "snapshotSha256CanonicalJson",
+    "sourceTimestamp",
+    "teamDetailsRetrievedAt",
+    "teamDetailsSha256",
+    "tlsVerified"
+  ],
+  "unorderedIdentityNormalizationOnly": [
+    "coverage.startingQBMissingStatistics keyed gameId/playerId",
+    "injuries.players keyed playerId/espnId/name",
+    "availability.players/currentTeamBulletin keyed playerId/espnId/name"
+  ],
+  "sourcePublicationAndRetrievalChangesPreservedInFullDiff": true,
+  "fullUnfilteredDifferences": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-3735200/full-differences.json",
+    "sha256": "c7a8d17ca218b43fabc1791b951b56fa764f8722a04a35f15334440aa4d9af90"
+  },
+  "qualification": "Immutable git-show inputs compare exactly d36 old and373 incoming, independent of current worktree integration. Metadata/retrieval/response hashes are explicitly classified separately and not claimed byte-identical. Statistical game logs remain ordered; only identified unordered role coverage and injury identities are normalized.",
+  "sourceHashFieldChanges": [
+    {
+      "path": "current.json/roster/0/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/0/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/1/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/1/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/2/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/2/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/3/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/3/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/4/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/4/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/5/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/5/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/6/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/6/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/7/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/7/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/8/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/8/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/9/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/9/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/10/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/10/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/11/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/11/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/12/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/12/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/13/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/13/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/14/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/14/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/15/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/15/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/16/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/16/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/17/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/17/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/18/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/18/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/19/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/19/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/20/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/20/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/21/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/21/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/22/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/22/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/23/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/23/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/24/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/24/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/25/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/25/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/26/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/26/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/27/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/27/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/28/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/28/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/29/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/29/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/30/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/30/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/31/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/31/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/32/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/32/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/33/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/33/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/34/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/34/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/35/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/35/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/36/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/36/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/37/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/37/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/38/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/38/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/39/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/39/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/40/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/40/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/41/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/41/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/42/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/42/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/43/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/43/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/44/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/44/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/45/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/45/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/46/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/46/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/47/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/47/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/48/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/48/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/49/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/49/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/50/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/50/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/51/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/51/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/52/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/52/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/53/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/53/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/54/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/54/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/55/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/55/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/56/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/56/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/57/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/57/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/58/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/58/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/59/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/59/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/60/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/60/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/61/rosterVerification/sourceHashes/espn_athlete_4431424",
+      "before": "cf1739a120842bc910276b27fac43a0642f80279744a6e730f2b9c184aefa307",
+      "after": "a2770c37b11e9a7809e479e36e5e59c9d0d46aeb66ae22a850d0c328e6a1f779"
+    },
+    {
+      "path": "current.json/roster/61/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/61/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/62/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/62/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/63/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/63/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/64/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/64/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/65/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/65/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/66/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/66/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/67/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/67/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/68/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/68/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/69/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/69/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/70/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/70/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/71/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/71/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/72/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/72/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/73/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/73/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/74/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/74/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/75/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/75/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/76/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/76/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/77/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/77/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/78/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/78/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    },
+    {
+      "path": "current.json/roster/79/rosterVerification/sourceHashes/espn_steelers_roster",
+      "before": "4f6f8bfe026db2056b4a3d0de59550673a753762f7c7d97f80587b2aa3eda5ea",
+      "after": "fd7d14093af10f54c0fbe2e1094042d9bafa5c25f2df57f841316b13526b793b"
+    },
+    {
+      "path": "current.json/roster/79/rosterVerification/sourceHashes/official_steelers_roster",
+      "before": "3e3f934aaa3f44d1432bb61db03c7eb3fc576eb1fbba2eea6b9642583e6fc98b",
+      "after": "337edbcd7769388e0baf6b398ae44ccd27100ea358f3953c50964877b5e8d68c"
+    }
+  ],
+  "explicitNewSourceIdentityAssociations": [
+    {
+      "path": "matchup-breakdown.json/teams/DAL/injuries/players/00-0040045/identitySourceIds",
+      "before": null,
+      "after": [
+        "nflverse_player_ids"
+      ]
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/injuries/players/00-0040045/sourceIds/length",
+      "before": 1,
+      "after": 2
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/injuries/players/00-0040045/sourceIds/0",
+      "before": "nflverse_injuries",
+      "after": "espn_matchup_depth_DAL"
+    }
+  ],
+  "materialChanges": [
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/availability/players/00-0040017",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4696203",
+        "eventId": "401872980",
+        "gameId": "2026_05_TB_DAL",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Coach's Decision",
+        "name": "Ajani Cornelius",
+        "officialConfirmed": false,
+        "playerId": "00-0040017",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportStatus": "Out",
+        "reportedInactive": true,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "team": "DAL",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/availability/players/00-0040045",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4595352",
+        "eventId": "401872980",
+        "gameId": "2026_05_TB_DAL",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Alijah Clark",
+        "officialConfirmed": false,
+        "playerId": "00-0040045",
+        "position": "S",
+        "practiceStatus": null,
+        "reportStatus": "Questionable",
+        "reportedInactive": null,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "team": "DAL",
+        "week": 5,
+        "weeklyReport": {
+          "identitySourceIds": [
+            "nflverse_player_ids"
+          ],
+          "injury": "Ankle",
+          "name": "Alijah Clark",
+          "playerId": "00-0040045",
+          "position": "S",
+          "practiceStatus": "Full Participation in Practice",
+          "reportStatus": "Questionable",
+          "sourceIds": [
+            "espn_matchup_depth_DAL",
+            "nflverse_injuries"
+          ],
+          "week": 5
+        }
+      }
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/eventStatus/detail",
+      "before": "7:31 - 3rd Quarter",
+      "after": "5:26 - 4th Quarter"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/eventStatus/displayClock",
+      "before": "7:31",
+      "after": "5:26"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/eventStatus/displayPeriod",
+      "before": "3rd",
+      "after": "4th"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/eventStatus/period",
+      "before": 3,
+      "after": 4
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/eventStatus/shortDetail",
+      "before": "7:31 - 3rd",
+      "after": "5:26 - 4th"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/liveScore/away",
+      "before": 21,
+      "after": 24
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_05_TB_DAL/liveScore/home",
+      "before": 10,
+      "after": 16
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_06_DAL_GB/availability/currentTeamBulletin/00-0040017",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872980",
+        "contextGameId": "2026_05_TB_DAL",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "espnId": "4696203",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Coach's Decision",
+        "name": "Ajani Cornelius",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040017",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportStatus": "Out",
+        "reportWeek": 5,
+        "reportedInactive": null,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "team": "DAL",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/fixtureReports/2026_06_DAL_GB/availability/currentTeamBulletin/00-0040045",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872980",
+        "contextGameId": "2026_05_TB_DAL",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "espnId": "4595352",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Alijah Clark",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040045",
+        "position": "S",
+        "practiceStatus": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "reportedInactive": null,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "team": "DAL",
+        "week": null
+      }
+    },
+    {
+      "path": "matchup-breakdown.json/teams/DAL/injuries/players/00-0040045/reportStatus",
+      "before": null,
+      "after": "Questionable"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/eventStatus/detail",
+      "before": "7:31 - 3rd Quarter",
+      "after": "5:26 - 4th Quarter"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/eventStatus/displayClock",
+      "before": "7:31",
+      "after": "5:26"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/eventStatus/displayPeriod",
+      "before": "3rd",
+      "after": "4th"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/eventStatus/period",
+      "before": 3,
+      "after": 4
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/eventStatus/shortDetail",
+      "before": "7:31 - 3rd",
+      "after": "5:26 - 4th"
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/liveScore/away",
+      "before": 21,
+      "after": 24
+    },
+    {
+      "path": "matchup-breakdown.json/teams/TB/fixtureReports/2026_05_TB_DAL/liveScore/home",
+      "before": 10,
+      "after": 16
+    }
+  ],
+  "sourceHashFieldChangeCount": 161,
+  "newSourceIdentityAssociationCount": 3,
+  "materialChangeCount": 19,
+  "conclusion": "Exactly19football leaves/entities:14DAL/TBW5live score/period/clock leaves; providerAlijahClarkadded+AjaniCorneliusremoved inW5players and separatelyW6datedcurrentTeamBulletin; currentmergedAlijahreportnull→Questionable. Allfive otherstatistical/fixture/QB/roster/depth/H2Hfactsunchanged; rawHTTPbodyhashes/timesareseparatelyretainedandnotclaimedequal.",
+  "auditRefinement": "Initial183candidateclassification included161sourceHashchanges and3actualadditionalsourceidentity/provenanceassociations. These are now separately explicit, not discarded. ImmutableGitinputsshapebefore/after remain exact; allunfiltered21,877diffs retained."
+}

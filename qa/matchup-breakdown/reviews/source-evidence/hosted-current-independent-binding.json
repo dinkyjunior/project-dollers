@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-09T03:00:53.470069+00:00",
+  "hostedReport": {
+    "path": "qa/matchup-breakdown/live-captures-v2/results.json",
+    "sha256": "a1787284dc5c1c3a1b539fcf9a5180d8106fc7fb42cc532148eaa54f8e3fcfa5"
+  },
+  "originalInventory": {
+    "path": "qa/matchup-breakdown/live-captures-v2/originals-common.json",
+    "sha256": "b0e76f8206d0ab1a49bf3685fe3069d46b4b415a886f0ec30d1ff600f514c2a5"
+  },
+  "runtimeManifestSha256": "4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4",
+  "snapshotSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "actualServedFiles": 235,
+  "actualReportedExistingPngPaths": 33,
+  "personallyViewedCommonOriginals": 33,
+  "commonOriginalMembershipAndSha256Verified": true,
+  "actualNativeInputs": 69,
+  "actualManualRefresh": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": 200,
+      "event": {
+        "type": "ready",
+        "changed": false,
+        "recovered": false,
+        "checkedAt": "2026-10-09T02:48:33.844Z",
+        "reason": "manual-or-source"
+      },
+      "sourceSubstitution": false
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": 200,
+      "event": {
+        "type": "ready",
+        "changed": false,
+        "recovered": false,
+        "checkedAt": "2026-10-09T02:51:38.311Z",
+        "reason": "manual-or-source"
+      },
+      "sourceSubstitution": false
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "event": {
+        "type": "ready",
+        "changed": false,
+        "recovered": false,
+        "checkedAt": "2026-10-09T02:55:12.414Z",
+        "reason": "manual-or-source"
+      },
+      "sourceSubstitution": false
+    }
+  ],
+  "actualFeedCompression": {
+    "file": "assets/data/matchup-breakdown.json",
+    "status": 200,
+    "bytes": 27891352,
+    "contentEncoding": "gzip",
+    "contentLength": "1464388",
+    "sha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a"
+  },
+  "workflowReadOnlyActualAPI": {
+    "id": 372338042,
+    "name": "Refresh verified NFL data",
+    "path": ".github/workflows/refresh-nfl-data.yml",
+    "state": "active",
+    "updated_at": "2026-10-09T02:49:47.000Z"
+  },
+  "remoteHeadsReadOnlyActualResponse": [
+    "d36c3b3bce4ad5b656d13b6909dce3a36932effd\trefs/heads/codex-rebuild",
+    "d36c3b3bce4ad5b656d13b6909dce3a36932effd\trefs/heads/main"
+  ],
+  "sourceSubstitution": false,
+  "genuineBrowser": true,
+  "strictTLS": true,
+  "failures": [],
+  "qualification": "Independent source reviewer personally viewed all exact 33 common original screenshots and independently verified actual emitted membership, report closure, byte hashes, each current served runtime body identity and current source acceptance. Additional native paint-frame PNG references are separately reported diagnostics and are not added to the common-original claim. No separate browser or new provider refresh was launched."
+}

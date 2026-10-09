@@ -36,9 +36,15 @@ def main():
             qualification = "Full content: internal scroll exposed for inspection" if full else "Actual native browser capture"
             cards.append(f'<figure><a href="{link}" target="_blank"><img src="{link}" loading="lazy" alt="{label}"></a><figcaption>{label}<small>{qualification}</small></figcaption></figure>')
         engine = html.escape(report["engine"])
-        heading = "Actual hosted WebKit" if report.get("hosted") else "Local " + engine
-        if report.get("scopedDelta") or report.get("qualification", {}).get("additiveDeltaAudit"):
+        qualification = report.get("qualification", {})
+        actual_hosted = report.get("hosted") or (report.get("base", "").startswith("https://dinkyjunior.github.io/project-dollers/") and qualification.get("strictTLS") is True)
+        heading = "Actual hosted WebKit" if actual_hosted else "Local " + engine
+        if report.get("scopedDelta") or qualification.get("additiveDeltaAudit") or qualification.get("additiveAvailabilityDelta"):
             heading += " — scoped source and upcoming-fixture regression"
+        elif "incoming-live-header" in report_path.as_posix():
+            heading += " — current live score and clock"
+        elif "incoming-injury-detail" in report_path.as_posix():
+            heading += " — current provider injury report"
         import os
         report_link = html.escape(os.path.relpath(report_path, output.parent))
         runtime = report.get("source", {}).get("runtimeFiles", {})

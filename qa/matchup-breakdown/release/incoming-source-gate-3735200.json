@@ -1,0 +1,21 @@
+{
+  "status": "failed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-incoming-source.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-incoming-3735200.json"
+  ],
+  "exitCode": 1,
+  "completedAt": "2026-10-09T03:29:43.404404+00:00",
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-incoming-3735200.json",
+    "sha256": "ec8aad583cb96ef3f8f13bcf50dae11ef135d9fdab8247f6b0d408f2f4f918bc"
+  },
+  "gate": {
+    "path": "qa/matchup-breakdown/verify-incoming-source.py",
+    "sha256": "3b2a1b153e52e4a3b248b964272ac51546c3cffb65623ce19d54a2a4eec4d22a"
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source.py\", line 169, in <module>\n    print(json.dumps(inspect(json.loads(g.file(args.review).read_bytes())), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source.py\", line 103, in inspect\n    g.require(r[\"testLogicUnchangedDuringQA\"] is True and\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-upcoming-delta.py\", line 28, in require\n    raise ValueError(message)\nValueError: Original native assertions changed\n"
+}

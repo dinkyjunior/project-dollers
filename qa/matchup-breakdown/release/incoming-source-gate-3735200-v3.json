@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-incoming-source-v3.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-incoming-3735200-v3.json"
+  ],
+  "startedAt": "2026-10-09T03:34:01.882792+00:00",
+  "completedAt": "2026-10-09T03:34:02.049257+00:00",
+  "exitCode": 0,
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-incoming-3735200-v3.json",
+    "sha256": "32b32e9f92e82662a0a978fa928ca2b67d0c95026ede00048e43f225832497c1"
+  },
+  "releaseGate": {
+    "path": "qa/matchup-breakdown/verify-incoming-source-v3.py",
+    "sha256": "a35332b9c546f972f30f7d3452e7280f4c901a9c6e4da62f3dea1e0dd4077819"
+  },
+  "stdout": "{\n  \"status\": \"passed\",\n  \"runtimeManifestSha256\": \"753411933517ebf23a5822a6eab054f18bee59212552c740d80f8999df3f6f49\",\n  \"runtimeFileCount\": 235,\n  \"preservedRuntimeFiles\": 230,\n  \"changedRuntimePaths\": [\n    \"assets/data/current.json\",\n    \"assets/data/matchup-breakdown.json\",\n    \"assets/data/player-history.json\",\n    \"assets/data/provenance.json\",\n    \"assets/data/team-details.json\"\n  ],\n  \"statisticalAssertions\": 206813,\n  \"statisticalProjectionBranches\": 1536,\n  \"materialSourceLeaves\": 19,\n  \"currentNativeInputs\": 18,\n  \"currentOriginals\": 16,\n  \"specialists\": 6,\n  \"actualHTTPSBodies\": 235,\n  \"qualification\": \"Historical acceptance remains immutable; new source status/availability receives separate native and actual HTTPS verification.\"\n}\n",
+  "stderr": "",
+  "result": {
+    "status": "passed",
+    "runtimeManifestSha256": "753411933517ebf23a5822a6eab054f18bee59212552c740d80f8999df3f6f49",
+    "runtimeFileCount": 235,
+    "preservedRuntimeFiles": 230,
+    "changedRuntimePaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "statisticalAssertions": 206813,
+    "statisticalProjectionBranches": 1536,
+    "materialSourceLeaves": 19,
+    "currentNativeInputs": 18,
+    "currentOriginals": 16,
+    "specialists": 6,
+    "actualHTTPSBodies": 235,
+    "qualification": "Historical acceptance remains immutable; new source status/availability receives separate native and actual HTTPS verification."
+  }
+}

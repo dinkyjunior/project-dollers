@@ -1,0 +1,22 @@
+{
+  "status": "failed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-incoming-source-v2.py",
+    "--review",
+    "qa/matchup-breakdown/release/review-incoming-3735200-v2.json"
+  ],
+  "startedAt": "2026-10-09T03:33:27.476722+00:00",
+  "completedAt": "2026-10-09T03:33:27.639713+00:00",
+  "exitCode": 1,
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-incoming-3735200-v2.json",
+    "sha256": "c66d7a7304bf8c4851dc68b1ec37a27fc1a69c034511d33df3ec99829c1be07f"
+  },
+  "releaseGate": {
+    "path": "qa/matchup-breakdown/verify-incoming-source-v2.py",
+    "sha256": "79cad05dd5997339c8c2b398f27466a5badcb976e3a65d098c0bbe7ebe9ad5e2"
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source-v2.py\", line 192, in <module>\n    print(json.dumps(inspect(json.loads(g.file(args.review).read_bytes())), indent=2))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source-v2.py\", line 146, in inspect\n    r = completed(ref, manifest)\n        ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source-v2.py\", line 60, in completed\n    clean_errors(c[\"errors\"])\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-incoming-source-v2.py\", line 36, in clean_errors\n    g.require(isinstance(value, dict), \"Missing browser error record\")\n  File \"/workspace/project-dollers/qa/matchup-breakdown/verify-upcoming-delta.py\", line 28, in require\n    raise ValueError(message)\nValueError: Missing browser error record\n"
+}

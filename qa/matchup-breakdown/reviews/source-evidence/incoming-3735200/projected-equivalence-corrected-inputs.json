@@ -1,0 +1,615 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T03:10:50.112Z",
+  "agent": "/root/matchup_sources",
+  "beforeSnapshotSha256": "5f74fb4648db53bea09dc64936dd1b5909a6ae91078216edcfc27f5a2cf2149a",
+  "afterSnapshotSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+  "snapshotSha256": "e2f6f7ce3296e0835db717b5f7d4eb415898009f09d060a3d853778b8c001401",
+  "independentModel": {
+    "path": "qa/matchup-breakdown/model.cjs",
+    "sha256": "f696c32d0b3a367fc83e0a954917a924c79df5bd354f92abdac1cc6b909293d9"
+  },
+  "auditHelperSha256": "85598758962a2024aaa384eed4786446bae9cf92112e889d3f0e28dab346a0bd",
+  "beforeHostedAcceptedReceipt": {
+    "path": "qa/matchup-breakdown/reviews/sources-hosted-upcoming-delta.json",
+    "sha256": "c7c7f1bf185cc628bba3380d9ebf39597f3f63a76e579caff3cc943bca89dbbb"
+  },
+  "statisticalProjectionEquivalent": true,
+  "assertions": 206813,
+  "checks": {
+    "ExactPreviouslyHostedCurrentSnapshot": 1,
+    "ExactIncoming373Snapshot": 1,
+    "Exact32Teams": 1,
+    "PlayerIdentityPool": 32,
+    "AllPlayerIdentityAndAvailabilityFacts": 813,
+    "AllPlayerStatLogAndRoleFacts": 813,
+    "SelectedCompletedTeamGameFacts": 1536,
+    "LeadersIDsRankGPNullsCountsAndRates": 3072,
+    "AllPlayerSelectedStatAppearanceEligibility": 39024,
+    "DirectResearchFixtureIdentity": 1536,
+    "ActualQBCandidatesConfirmedStartsNullRolesAndAdvancedFacts": 10656,
+    "QBSelectedBasicCountsAndRateDenominators": 138528,
+    "IndependentQBRating": 10656,
+    "EveryResearchUpcomingAndNextScheduledIdentity": 34,
+    "FixtureQBProjectionAvailabilityAndRoleFacts": 34,
+    "AvailabilityIdentityIsUnique": 76
+  },
+  "teams": 32,
+  "playerIdentityCount": 813,
+  "qbIdentityCount": 111,
+  "windowsPerTeam": 48,
+  "totalTeamWindowBranches": 1536,
+  "options": [
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 3,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 5,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "cross",
+      "venue": "neutral",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "all",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "all",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "home",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "home",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "away",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "away",
+      "mode": "total"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "average"
+    },
+    {
+      "window": 10,
+      "season": "current",
+      "venue": "neutral",
+      "mode": "total"
+    }
+  ],
+  "availabilityEquivalent": false,
+  "availabilityDifferences": [
+    {
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0040017",
+      "before": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872980",
+        "contextGameId": "2026_05_TB_DAL",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "espnId": "4696203",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Coach's Decision",
+        "name": "Ajani Cornelius",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040017",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Out",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-08T22:49Z",
+        "team": "DAL",
+        "week": null
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "field": "currentTeamBulletin",
+      "playerId": "00-0040045",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "contextEventId": "401872980",
+        "contextGameId": "2026_05_TB_DAL",
+        "contextSourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "espnId": "4595352",
+        "eventId": null,
+        "gameId": null,
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Alijah Clark",
+        "note": "Current-team bulletin reused by a future event endpoint. No future-game inactive or availability confirmation.",
+        "officialConfirmed": false,
+        "playerId": "00-0040045",
+        "position": "S",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "reportWeek": 5,
+        "requestedEventId": "401873007",
+        "requestedGameId": "2026_06_DAL_GB",
+        "requestedWeek": 6,
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401873007"
+        ],
+        "sourceTimestamp": "2026-10-09T02:27Z",
+        "team": "DAL",
+        "week": null
+      }
+    },
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "field": "players",
+      "playerId": "00-0040017",
+      "before": {
+        "confirmation": "provider-reported",
+        "espnId": "4696203",
+        "eventId": "401872980",
+        "gameId": "2026_05_TB_DAL",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Coach's Decision",
+        "name": "Ajani Cornelius",
+        "officialConfirmed": false,
+        "playerId": "00-0040017",
+        "position": "OT",
+        "practiceStatus": null,
+        "reportedInactive": true,
+        "reportStatus": "Out",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "sourceTimestamp": "2026-10-08T22:49Z",
+        "team": "DAL",
+        "week": 5
+      },
+      "after": null
+    },
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "field": "players",
+      "playerId": "00-0040045",
+      "before": null,
+      "after": {
+        "confirmation": "provider-reported",
+        "espnId": "4595352",
+        "eventId": "401872980",
+        "gameId": "2026_05_TB_DAL",
+        "identitySourceIds": [
+          "nflverse_player_ids"
+        ],
+        "injury": "Hamstring",
+        "name": "Alijah Clark",
+        "officialConfirmed": false,
+        "playerId": "00-0040045",
+        "position": "S",
+        "practiceStatus": null,
+        "reportedInactive": null,
+        "reportStatus": "Questionable",
+        "season": 2026,
+        "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+        "sourceIds": [
+          "espn_fixture_summary_401872980"
+        ],
+        "sourceTimestamp": "2026-10-09T02:27Z",
+        "team": "DAL",
+        "week": 5,
+        "weeklyReport": {
+          "identitySourceIds": [
+            "nflverse_player_ids"
+          ],
+          "injury": "Ankle",
+          "name": "Alijah Clark",
+          "playerId": "00-0040045",
+          "position": "S",
+          "practiceStatus": "Full Participation in Practice",
+          "reportStatus": "Questionable",
+          "sourceIds": [
+            "espn_matchup_depth_DAL",
+            "nflverse_injuries"
+          ],
+          "sourceTimestamp": "2026-10-09T02:27Z",
+          "week": 5
+        }
+      }
+    }
+  ],
+  "fixtureStateDifferences": [
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "before": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "7:31 - 3rd Quarter",
+          "shortDetail": "7:31 - 3rd",
+          "displayClock": "7:31",
+          "period": 3,
+          "displayPeriod": "3rd"
+        },
+        "score": {
+          "home": 10,
+          "away": 21,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T02:11:47Z"
+      },
+      "after": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "5:26 - 4th Quarter",
+          "shortDetail": "5:26 - 4th",
+          "displayClock": "5:26",
+          "period": 4,
+          "displayPeriod": "4th"
+        },
+        "score": {
+          "home": 16,
+          "away": 24,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T03:01:46Z"
+      }
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_05_TB_DAL",
+      "before": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "7:31 - 3rd Quarter",
+          "shortDetail": "7:31 - 3rd",
+          "displayClock": "7:31",
+          "period": 3,
+          "displayPeriod": "3rd"
+        },
+        "score": {
+          "home": 10,
+          "away": 21,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T02:11:47Z"
+      },
+      "after": {
+        "state": {
+          "name": "STATUS_IN_PROGRESS",
+          "state": "in",
+          "completed": false,
+          "description": "In Progress",
+          "detail": "5:26 - 4th Quarter",
+          "shortDetail": "5:26 - 4th",
+          "displayClock": "5:26",
+          "period": 4,
+          "displayPeriod": "4th"
+        },
+        "score": {
+          "home": 16,
+          "away": 24,
+          "isFinal": false,
+          "sourceIds": [
+            "espn_fixture_summary_401872980"
+          ]
+        },
+        "publishedAt": "2026-10-09T03:01:46Z"
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Independent frozen QA model expectations for every32 club and48 game/season/venue/unit state, both leader boards, all player statistical appearance eligibility, all QB candidate/confirmed scopes and basic/advanced facts. Distinct current live event, injury/bulletin availability and publication changes are retained separately and independently raw-source audited; they are not silently removed or treated as equivalence. No browser coverage or physical-device claim.",
+  "excludedOnlySourceMetadataKeys": [
+    "bytes",
+    "checkedAt",
+    "currentRetrievedAt",
+    "currentSha256",
+    "etag",
+    "generatedAt",
+    "lastModified",
+    "retrievedAt",
+    "scheduleRetrievedAt",
+    "sha256",
+    "teamDetailsRetrievedAt",
+    "teamDetailsSha256",
+    "tlsVerified"
+  ]
+}
