@@ -1,0 +1,288 @@
+{
+  "status": "failed",
+  "completedAt": "2026-10-09T00:43:58.868686+00:00",
+  "snapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+  "fiveSnapshotHashes": {
+    "current.json": "40ecad6d72a8857d4995d1f3ff5afd651f149d2cf4a8f61b66ffc58a5ad716c4",
+    "provenance.json": "81dcc0845a3df2c0ccb5c518bff1ba583cd52f25773e7a39f7dc382143c19a49",
+    "player-history.json": "b5169e7af5985f399cf6c9c01bb4f698aec9ec21202428430f80a5ea12b95aa5",
+    "team-details.json": "74b55922be1b1e1d738b64f06af993e4951211d3f1871a50904271750e65720b",
+    "matchup-breakdown.json": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35"
+  },
+  "sourceManifestSha256": "02a1d5402dbd1dffc13cec20c8cca43160db0246acf7f191b29c88aa7633e375",
+  "auditHelperSha256": "7739a2a1b13c94db7a6caa62fac54786920f1fa563b960b0da86e8c3389437fc",
+  "method": "Independently compare original public response hashes and fields, exact ESPN/GSIS identity tables, event/season/week and publication context. Current live event stays separate from next scheduled game and all completed statistical/start windows. Future endpoint reuse is a dated bulletin, with game-day availability and QB projection unavailable. No production imports.",
+  "observedLiveReports": [
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "eventId": "401872980",
+      "sourceId": "espn_fixture_summary_401872980"
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_05_TB_DAL",
+      "eventId": "401872980",
+      "sourceId": "espn_fixture_summary_401872980"
+    }
+  ],
+  "futureBulletins": [
+    {
+      "team": "CAR",
+      "gameId": "2026_06_CAR_PHI",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401872998"
+    },
+    {
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873007"
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873007"
+    },
+    {
+      "team": "KC",
+      "gameId": "2026_06_LAC_KC",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873006"
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873006"
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401872998"
+    },
+    {
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873002"
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873002"
+    }
+  ],
+  "assertions": 1369,
+  "checks": {
+    "actualArchiveHash": 40,
+    "actualResponseHash": 40,
+    "legitimateResponseTime": 40,
+    "exactSnapshotBinding": 1,
+    "eventResponseProvenance": 38,
+    "actualEventSeasonWeekTeams": 38,
+    "actualSourceGameState": 228,
+    "distinctRetrievalPublication": 38,
+    "noCompleteOfficialListClaim": 38,
+    "allPublishedPlayerReportsPreserved": 38,
+    "exactProviderIdentity": 190,
+    "actualReportValuesPublication": 190,
+    "reportNotPracticeOrOfficialConfirmation": 190,
+    "exactEventInactiveAttribution": 150,
+    "NoAttemptsToStarterConfirmation": 38,
+    "futureReportNotEventAvailability": 8,
+    "futureBulletinCannotProjectQB": 8,
+    "futureBulletinContextUnknown": 40,
+    "NoKnownOutOrInactiveProjectedQB": 3,
+    "ActualLiveGameRetainedAsResearchFixture": 2,
+    "NextScheduledGameSeparatelyRetained": 2,
+    "NoPartialLiveBoxscoreInCompletedHistory": 2,
+    "AttributedPartialScoreNeverFinal": 2,
+    "FiveSnapshotsUnchangedDuringAudit": 5
+  },
+  "failures": [
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4362088"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4384549"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4240608"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4808759"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4696203"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "3149687"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4686906"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4431487"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4361791"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "espnId": "4873706"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "espnId": "4685553"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "espnId": "4241263"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "espnId": "4690171"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "espnId": "4429025"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "espnId": "4612826"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "espnId": "3121023"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "espnId": "4428850"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "espnId": "4241478"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "espnId": "3929630"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "espnId": "4686273"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "3929846"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4038815"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4035687"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "3045373"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4682980"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4034790"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4685549"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "3052587"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4816107"
+    },
+    {
+      "kind": "futureBulletinContextUnknown",
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "espnId": "4429511"
+    }
+  ]
+}

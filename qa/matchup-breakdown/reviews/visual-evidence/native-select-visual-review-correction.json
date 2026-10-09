@@ -1,0 +1,9 @@
+{
+  "status": "correction; masked raster originals remain visually rejected",
+  "at": "2026-10-09T00:10:14.304614+00:00",
+  "priorReceipt": "qa/matchup-breakdown/reviews/visual-evidence/native-select-visual-review.json",
+  "priorReceiptSha256": "797b1470676eaa949db08c8c9f86e685c8d60d7309381893514b30ab2e4af834",
+  "correction": "The initial interpretation that only the keyboard-popup/rerender path had raster masks was too narrow. Root and assets-motion inspected the exact direct-route original and also identified masked painted pixels there. The direct-route clean-paint statement in the prior receipt is retracted; structural/source bounds remain correct and the cause is a broader WPE paint/compositing issue under diagnosis.",
+  "cssSha256": "12a03d629e4370d39df3ded61c3dbb90ec207e005c5d6923f817a89917ae165d",
+  "currentAction": "Hold stylesheet without edits and all browsers closed; assets-motion owns the exclusive isolated WPE cause diagnostic. No final visual/runtime acceptance is issued."
+}

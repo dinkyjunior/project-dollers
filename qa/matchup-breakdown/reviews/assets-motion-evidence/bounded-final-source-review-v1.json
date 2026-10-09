@@ -1,0 +1,27 @@
+{
+  "status": "static-bounded-review-passed-awaiting-common-native-output",
+  "inspectedAt": "2026-10-08T23:09:52.023262+00:00",
+  "runtime": {
+    "assets/matchup-breakdown.js": "c465faf4d0e68ee1e1a388886bc152ea9406562d2e98d36463342966790c73da",
+    "assets/matchup-breakdown.css": "4bf1e801be3e4c8d8a8a55d318080a292066838e9a0b56f0420ab0b5f4798aa8",
+    "assets/matchup-breakdown-motion.js": "e146343080831aa582e2bb6f7e32bd469164a44589a2ed0c914eb3f60c7771e8",
+    "assets/data/matchup-breakdown.json": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290"
+  },
+  "reviewedChanges": [
+    "GP now counts only source-recorded games with at least one numeric field; snap-confirmed appearance and start evidence remain separate.",
+    "Unknown selected quarterback roles retain chronology and cause dependent totals to remain unavailable instead of substituting older confirmed starts.",
+    "Lineup identities merge stable verified player IDs while preserving distinct season/week contexts, participation text, source IDs and explicit conflicts.",
+    "Generic-only fixture and long player-name wrapping preserve full accessible identity; requested DAL/TB default hierarchy unchanged.",
+    "Form header abbreviations have descriptive native titles and source-matched reports.",
+    "Modal refreshed-source rendering preserves actual focus, details and scroll; unchanged data retains existing DOM.",
+    "All decoration runtime remains inert to pointer/accessibility, gated by native route/reduced/lifecycle/clipping state."
+  ],
+  "numericSourceReport": {
+    "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/independent-basic-stat-source-v6.json",
+    "sha256": "994f8eaf670c823f087fa1e67fd69bb8e9793e11a12f8cdb1391499b82619ac1",
+    "datasetSha256": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290",
+    "cells": 1525,
+    "players": 30
+  },
+  "qualification": "Static source analysis and independently raw-source numeric verification. Acceptance of actual changed native controls, generic layout, Form/Lineup paint and all common screenshots remains pending coherent final native reports."
+}

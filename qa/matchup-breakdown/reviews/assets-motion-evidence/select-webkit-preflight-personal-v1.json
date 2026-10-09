@@ -1,0 +1,41 @@
+{
+  "status": "bounded-select-correction-personally-reviewed-further-native-paint-investigation-required",
+  "at": "2026-10-09T00:04:48.457202+00:00",
+  "cssSha256": "12a03d629e4370d39df3ded61c3dbb90ec207e005c5d6923f817a89917ae165d",
+  "controlsSha256": "95b95fb3217b7920be62799be8c2bb3025bda6bb9e777031ddd7afeab20c5aa8",
+  "actualReport": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/results.json",
+  "actualReportSha256": "a1a034b34e4ade478ecc3d3de8e7b0db2560a63407bfe68b1b180c492dbe2f02",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-default-top.png",
+      "sha256": "1995db56f0a0af2f693cc9ccae4a18b9424d344a91c451e8e96905901ab1377e"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-three-average-top.png",
+      "sha256": "8d0340acd29d9b20608230e22498abc89fd30d787fa472f33ebc0412cbccf3c5"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-three-average-bottom.png",
+      "sha256": "5b19c176726a88b6fb0dcc3d9ce0889ec4bcce602d3539403533652952010ae7"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-default-top.png",
+      "sha256": "e734cbda6d1a87601036567eebd120ebe3eb47ea7fe0e59fecbf20a2368d70cf"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-three-average-top.png",
+      "sha256": "ce05b9f6f345629d59d862a58b9e872e16ea7f831693a1df4b95b2c0300245a1"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-three-average-bottom.png",
+      "sha256": "df48c74ffa2563bbe76997b42f2effb8ca0e6132626dcc51a8b615d6c099cd46"
+    }
+  ],
+  "findings": [
+    "All six genuine native WPE scoped select originals personally inspected at original resolution and hashes matched completed scoped report.",
+    "Grey rounded native select chrome fixed; black/cyan controls and local cyan vector caret fit both phone widths while semantic native selects remain.",
+    "430-three-average-top paints selected receiver LAST 5 / G1-G5 while Window is Last 3 and leader averages already use three games; next natural bottom capture correctly paints LAST 3 / G1-G3. This requires temporal/native-layer investigation, not acceptance of a stale image.",
+    "Table names/headings/numerics and official local logo/diamond proportions appear readable; no independently established persistent geometry defect from these images."
+  ],
+  "qualification": "Scoped preflight only; no completed full-suite acceptance, no forced compositor redraw, no clock mutation, no physical Safari performance claim."
+}

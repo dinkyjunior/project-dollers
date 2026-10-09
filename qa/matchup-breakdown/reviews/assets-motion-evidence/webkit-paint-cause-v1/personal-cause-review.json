@@ -1,0 +1,56 @@
+{
+  "status": "cause-not-yet-isolated-no-runtime-fix",
+  "at": "2026-10-09T00:13:24.447719+00:00",
+  "actualReport": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/results.json",
+  "actualReportSha256": "4f22e8f030fb9d51d783bed55e6b5d1dd819a4f9094011d6fa933344b03f032e",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/baseline-1.png",
+      "sha256": "e3dc9d5d224b1c5d70d830986c6f13b80f72a195913221024462ec2252d8ba4d"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/baseline-2.png",
+      "sha256": "c5f0c50a5cdb3280de6c1a278c52e1971fb9494efcdc563384877ae9733472bd"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/diagnostic-path-filter-none-1.png",
+      "sha256": "f4cdbdb2f0c3e22d6f3a5944bcd7973b78f5013fdd6e2bee5544acf83f36a091"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/diagnostic-path-filter-none-2.png",
+      "sha256": "8e795089ac518555811b139aca27eef08a9032a391d591adde0528bf0968090c"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/restored-filter-baseline-1.png",
+      "sha256": "3f9388e0ab6adf3555497b89129edbc9faae0d256325abe634e2c872e12cbf61"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/restored-filter-baseline-2.png",
+      "sha256": "6f7589719cbd82623b3516e80647eec8768efdf92109ee5ca859554a85ce5f4b"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/diagnostic-reflections-hidden-1.png",
+      "sha256": "00a9dd4914f3cccdf4dc13d9ecc653c9056b4fe9e7a2e9557061a0e5f8534be1"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/diagnostic-reflections-hidden-2.png",
+      "sha256": "fb6b5e0db701ef3fa83b320583c73f78d3645c051de70122917879c056d28810"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/restored-all-baseline-1.png",
+      "sha256": "f33f90b9c219b0110270e5e10172bdbd87634ab226ca467896e05352d2004caf"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/restored-all-baseline-2.png",
+      "sha256": "a0c0d5f6664e7950bea97e40f85bbec27a4a8b6f3ad6b14901cadf29c0c55ac5"
+    }
+  ],
+  "findings": [
+    "All ten actual natural-clock WPE430 diagnostic originals personally inspected individually at original resolution.",
+    "Both untouched baseline images masked; removing only SVG path drop-shadow produced a clean first image and a masked second image.",
+    "Restored SVG-filter baseline produced masked first and clean second. Hiding only reflections produced masked first and clean second.",
+    "Both final untouched restored-baseline images masked. Runtime hashes unchanged; no diagnostic style remains.",
+    "Neither filter removal alone nor reflection visibility alone isolates the cause. No shared runtime correction is justified from this experiment."
+  ],
+  "qualification": "Explicit diagnostic style interventions are not release evidence. No global clock pause, seeking, data substitution or force repaint. Exclusive WPE process completed exit0 and browser closed."
+}

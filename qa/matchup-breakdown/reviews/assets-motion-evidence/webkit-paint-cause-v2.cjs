@@ -1,0 +1,22 @@
+'use strict';
+// Explicit diagnostic only: isolate the legacy page mask, then SVG visibility.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const q=require('/workspace/project-dollers/qa/matchup-breakdown/qa.cjs');
+const out=path.join(q.ROOT,'qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2');
+assert.ok(!fs.existsSync(out));fs.mkdirSync(out);
+const runtime=q.runtimeManifest();
+const report={status:'running-explicit-legacy-mask-cause-diagnostic',startedAt:new Date().toISOString(),runtimeFiles:runtime,captures:[],errors:[],qualification:'Diagnostic interventions only; no shared runtime writes, clock pause/seek, forced repaint or data substitution. Restored baseline recorded. Never release acceptance.'};
+const save=()=>fs.writeFileSync(out+'/results.json',JSON.stringify(report,null,2)+'\n');
+const state=page=>page.evaluate(()=>{const p=document.querySelector('.page.active'),css=getComputedStyle(p);return{actualState:window.MatchupBreakdown.getState(),gameLog:p.querySelector('.mb-player-detail').innerText,mask:css.webkitMaskImage,overflow:css.overflow,borderRadius:css.borderRadius,isolation:css.isolation,diagnosticStyle:document.querySelector('#assets-motion-paint-diagnostic')?.textContent||null,svgVisibility:[...p.querySelectorAll('.mb-perimeter-light')].map(e=>getComputedStyle(e).visibility),clocks:p.getAnimations({subtree:true}).filter(a=>a.animationName?.startsWith('mb-')).map(a=>({name:a.animationName,time:a.currentTime,state:a.playState}))};});
+(async()=>{let browser,context;try{save();browser=await q.launch('webkit');report.browserVersion=browser.version();context=await browser.newContext({viewport:{width:430,height:896},deviceScaleFactor:2,isMobile:true,hasTouch:true,timezoneId:'Australia/Sydney'});const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));await page.goto('http://127.0.0.1:8876/project-dollers/#matchup/DAL?window=3&season=current&mode=average',{waitUntil:'networkidle'});await q.ready(page);await q.active(page);
+const setStyle=async text=>page.evaluate(text=>{document.querySelector('#assets-motion-paint-diagnostic')?.remove();if(text){const e=document.createElement('style');e.id='assets-motion-paint-diagnostic';e.textContent=text;document.head.append(e);}},text);
+const capture=async(label,intervention)=>{const before=await state(page);assert.equal(before.actualState.window,3);assert.match(before.gameLog,/LAST 3 TEAM GAMES/);const screenshot=await q.capture(page,out,label);const after=await state(page);report.captures.push({label,intervention,before,screenshot,after});save();console.log('CAPTURED '+label);};
+await capture('untouched-baseline','none');
+await setStyle('.page[data-page="matchup-breakdown"]{-webkit-mask-image:none!important}');
+for(let i=1;i<=4;i++)await capture('diagnostic-page-mask-none-'+i,'only page -webkit-mask-image:none');
+await setStyle(null);for(let i=1;i<=2;i++)await capture('restored-page-mask-'+i,'none; legacy mask restored');
+await setStyle('.page[data-page="matchup-breakdown"] .mb-perimeter-light{visibility:hidden!important}');
+for(let i=1;i<=2;i++)await capture('diagnostic-perimeter-hidden-'+i,'only perimeter SVG visibility:hidden');
+await setStyle(null);for(let i=1;i<=2;i++)await capture('restored-all-baseline-'+i,'none; all interventions removed');
+report.finalNormalState=await state(page);assert.equal(report.finalNormalState.diagnosticStyle,null);assert.deepEqual(report.errors,[]);report.unchangedDuringDiagnostic=JSON.stringify(q.runtimeManifest())===JSON.stringify(runtime);assert.equal(report.unchangedDuringDiagnostic,true);report.status='completed-legacy-mask-cause-diagnostic-not-accepted';
+}catch(e){report.status='failed';report.failure={message:e.message,stack:e.stack};process.exitCode=1;}finally{if(context)await context.close();if(browser)await browser.close();report.completedAt=new Date().toISOString();save();console.log(report.status);}})();

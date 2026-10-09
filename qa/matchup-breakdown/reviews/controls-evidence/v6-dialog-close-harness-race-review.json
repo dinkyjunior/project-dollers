@@ -1,0 +1,14 @@
+{
+  "status": "qualified-native-harness-race-diagnosed",
+  "auditedAt": "2026-10-09T01:19:04.197899+00:00",
+  "runtimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+  "actualDiagnostic": {
+    "path": "qa/matchup-breakdown/reviews/controls-evidence/v6-dialog-close-harness-race.json",
+    "sha256": "b3600e471af7985017ac8293939667f8687f91cc808f1508153b2d5768ae9780"
+  },
+  "outsideOriginalRetained": "/workspace/recovery-qa/matchup-controls/dialog-close-native-diagnostic.json",
+  "nativeCycles": 40,
+  "closedWithStaleAPIBeforeNativeCloseEvent": 12,
+  "conclusion": "The actual dialog was hidden and native return focus restored before the asynchronous native close event cleared state.view. V6 manual-refresh baseline sampled this unsettled API state; genuine unchanged source refresh did not alter the rendered closed-modal state. Waiting for real native close completion before semantic-baseline capture preserves unchanged-state assertion.",
+  "qualification": "No application, source, helper assertion, clock, DOM, style or request was changed. This is diagnostic evidence, not release acceptance."
+}

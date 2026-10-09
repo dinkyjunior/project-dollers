@@ -25,3 +25,28 @@ qa/team-details/local-chromium-final/*.png
 qa/team-details/local-chromium-final-v2/*.png
 qa/team-details/local-webkit-final-v2/*.png
 qa/team-details/regression-chromium-final-v2/*.png
+
+# Matchup rejected/capture-only browser originals remain in the workspace and
+# a checksummed recovery archive. Publish the coherent final originals instead.
+qa/matchup-breakdown/iteration-*/*.png
+qa/matchup-breakdown/iteration-3-chromium/results.json
+qa/matchup-breakdown/iteration-3-chromium/control-inventory-*.json
+qa/matchup-breakdown/reviews/assets-motion-evidence/preflight-*/*.png
+qa/matchup-breakdown/reviews/assets-motion-evidence/final-chromium-v1/*.png
+qa/matchup-breakdown/local-chromium-final-v1/*.png
+
+qa/matchup-breakdown/local-chromium-final-v2/*.png
+qa/matchup-breakdown/local-chromium-final-v3/*.png
+qa/matchup-breakdown/local-chromium-final-v4/*.png
+
+# Superseded/incomplete native originals remain in the verified local recovery ZIP.
+qa/matchup-breakdown/local-chromium-final-v5/*.png
+qa/matchup-breakdown/local-webkit-final-v1/*.png
+
+# Preserved historical sources and diagnostic PNGs are in the checked recovery ZIP.
+qa/matchup-breakdown/historical-evidence/
+qa/matchup-breakdown/reviews/visual-evidence/**/*.png
+qa/matchup-breakdown/reviews/assets-motion-evidence/**/*.png
+
+# Failed v6 originals are preserved in the checked recovery archive.
+qa/matchup-breakdown/local-chromium-final-v6/*.png

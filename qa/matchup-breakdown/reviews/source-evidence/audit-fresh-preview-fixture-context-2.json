@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "completedAt": "2026-10-09T00:45:34.479753+00:00",
+  "snapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+  "fiveSnapshotHashes": {
+    "current.json": "40ecad6d72a8857d4995d1f3ff5afd651f149d2cf4a8f61b66ffc58a5ad716c4",
+    "provenance.json": "81dcc0845a3df2c0ccb5c518bff1ba583cd52f25773e7a39f7dc382143c19a49",
+    "player-history.json": "b5169e7af5985f399cf6c9c01bb4f698aec9ec21202428430f80a5ea12b95aa5",
+    "team-details.json": "74b55922be1b1e1d738b64f06af993e4951211d3f1871a50904271750e65720b",
+    "matchup-breakdown.json": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35"
+  },
+  "sourceManifestSha256": "02a1d5402dbd1dffc13cec20c8cca43160db0246acf7f191b29c88aa7633e375",
+  "auditHelperSha256": "3ad74eb99a71a1e187c2fe048a0cc4bd62f01b678765f5e24fd5b6ceea5ebea8",
+  "method": "Independently compare original public response hashes and fields, exact ESPN/GSIS identity tables, event/season/week and publication context. Current live event stays separate from next scheduled game and all completed statistical/start windows. Future endpoint reuse is a dated bulletin, with game-day availability and QB projection unavailable. No production imports.",
+  "observedLiveReports": [
+    {
+      "team": "DAL",
+      "gameId": "2026_05_TB_DAL",
+      "eventId": "401872980",
+      "sourceId": "espn_fixture_summary_401872980"
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_05_TB_DAL",
+      "eventId": "401872980",
+      "sourceId": "espn_fixture_summary_401872980"
+    }
+  ],
+  "futureBulletins": [
+    {
+      "team": "CAR",
+      "gameId": "2026_06_CAR_PHI",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401872998"
+    },
+    {
+      "team": "DAL",
+      "gameId": "2026_06_DAL_GB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873007"
+    },
+    {
+      "team": "GB",
+      "gameId": "2026_06_DAL_GB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873007"
+    },
+    {
+      "team": "KC",
+      "gameId": "2026_06_LAC_KC",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873006"
+    },
+    {
+      "team": "LAC",
+      "gameId": "2026_06_LAC_KC",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873006"
+    },
+    {
+      "team": "PHI",
+      "gameId": "2026_06_CAR_PHI",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401872998"
+    },
+    {
+      "team": "PIT",
+      "gameId": "2026_06_PIT_TB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873002"
+    },
+    {
+      "team": "TB",
+      "gameId": "2026_06_PIT_TB",
+      "count": 5,
+      "sourceId": "espn_fixture_summary_401873002"
+    }
+  ],
+  "assertions": 1549,
+  "checks": {
+    "actualArchiveHash": 70,
+    "actualResponseHash": 70,
+    "legitimateResponseTime": 70,
+    "exactSnapshotBinding": 1,
+    "eventResponseProvenance": 38,
+    "actualEventSeasonWeekTeams": 38,
+    "actualSourceGameState": 228,
+    "distinctRetrievalPublication": 38,
+    "noCompleteOfficialListClaim": 38,
+    "allPublishedPlayerReportsPreserved": 38,
+    "exactProviderIdentity": 190,
+    "actualReportValuesPublication": 190,
+    "reportNotPracticeOrOfficialConfirmation": 190,
+    "exactEventInactiveAttribution": 150,
+    "NoAttemptsToStarterConfirmation": 38,
+    "futureReportNotEventAvailability": 8,
+    "futureBulletinCannotProjectQB": 8,
+    "futureBulletinContextUnknown": 40,
+    "BulletinAssociationHasOriginalResponse": 30,
+    "BulletinAssociationIsSeparateCurrentContext": 30,
+    "BulletinAssociationExactDatedReportMatch": 30,
+    "NoKnownOutOrInactiveProjectedQB": 3,
+    "ActualLiveGameRetainedAsResearchFixture": 2,
+    "NextScheduledGameSeparatelyRetained": 2,
+    "NoPartialLiveBoxscoreInCompletedHistory": 2,
+    "AttributedPartialScoreNeverFinal": 2,
+    "FiveSnapshotsUnchangedDuringAudit": 5
+  },
+  "failures": []
+}

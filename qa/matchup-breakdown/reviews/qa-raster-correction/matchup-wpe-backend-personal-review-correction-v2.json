@@ -1,0 +1,29 @@
+{
+  "status": "correction-of-personal-visual-diagnostic-not-release-acceptance",
+  "agent": "qa",
+  "correctedAt": "2026-10-09T00:47:22.330997+00:00",
+  "supersedesFindingIn": [
+    "/workspace/recovery-qa/matchup-wpe-backend-personal-review-v1.json",
+    "/workspace/recovery-qa/matchup-qa-native-paint-code-review-v1.json"
+  ],
+  "finding": "Previous personal image-view missing-glyph classifications are not supported by the stored PNG raster. Exact crops OCR all five complete Dallas names and breadcrumb words in every backend frame; full OCR reads Home in every frame. Stable bright glyph pixels contradict the perceived alternating missing names. Those visual classifications must not be used as proof of a production compositor defect.",
+  "evidence": [
+    {
+      "path": "/workspace/recovery-qa/matchup-wpe-backend-raster-crop-ocr-v1.json",
+      "sha256": "5e551c9a9010e441883375a9600a66b22f01bc3eed82bf837792b618dd3e5a15"
+    },
+    {
+      "path": "/workspace/recovery-qa/matchup-wpe-backend-raster-full-ocr-v2.json",
+      "sha256": "a6af2d56cee09294d890f56441950aea30982488aaf1d7cac9c2c674fb319c4e"
+    },
+    {
+      "path": "/workspace/recovery-qa/matchup-wpe-backend-exact-glyph-pixels-v3.json",
+      "sha256": "3acbc89b0bd75d1de6a4f1e690134108c4b44a1b87715af1a78892816b1748b5"
+    }
+  ],
+  "limits": [
+    "Raw originals and rejected diagnostic receipts remain unchanged.",
+    "No final accepted full suite is asserted.",
+    "No application or helper mutation was made for these diagnostic conclusions."
+  ]
+}

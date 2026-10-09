@@ -1,0 +1,8 @@
+{
+  "status": "failed-audit-logic",
+  "failure": "Different stat: DAL/Dak Prescott/2026_04_DAL_HOU/sackYardsLost",
+  "publishedLossMagnitude": 11,
+  "rawProviderSignedLoss": -11,
+  "resolution": "The source CSV encodes sack loss as a negative yard delta; the UI/dataset key sackYardsLost is its positive loss magnitude. Correct the independent audit to compare abs(source delta) for this field only. No runtime/data changes and no assertion waived.",
+  "initialProcessExit": 1
+}

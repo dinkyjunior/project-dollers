@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-08T23:05:42.012741+00:00",
+  "snapshotSha256": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290",
+  "bytes": 27675425,
+  "gzipBytes": 1256322,
+  "dependencies": {
+    "currentSha256": "723b45d95d0938205943c8e30fdc95875d964b77502f90c534d99c677949ac6c",
+    "teamDetailsSha256": "9d05eef06503e756abfe12bec832a21669e9d146300a2d9bc35f0ad6dc852400",
+    "currentRetrievedAt": "2026-10-08T22:26:29Z",
+    "teamDetailsRetrievedAt": "2026-10-08T22:26:29Z",
+    "startingRoleEvidenceSha256": "c519979ea31519ef988d6ca88658f54e7d74b32081b105d43ad200f9c826d838",
+    "season": 2026,
+    "currentWeek": 5
+  },
+  "tests": 22,
+  "checks": {
+    "teams": 32,
+    "players": 813,
+    "playerGameRows": 8173,
+    "explicitQuarterbackStartRows": 838,
+    "disputedStartingRoleRows": 22,
+    "unavailableStartingRoleRows": 12,
+    "sources": 106,
+    "disagreements": 24
+  },
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-matchup-breakdown.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"teams\": 32,\n  \"players\": 813,\n  \"playerGameRows\": 8173,\n  \"explicitQuarterbackStartRows\": 838,\n  \"disputedStartingRoleRows\": 22,\n  \"unavailableStartingRoleRows\": 12,\n  \"sources\": 106,\n  \"disagreements\": 24\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/data.test.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "test_audit_archives_reproduce_source_response_hashes (__main__.MatchupDataChecks.test_audit_archives_reproduce_source_response_hashes) ... ok\ntest_changed_quote_or_mismatched_event_cannot_establish_role (__main__.MatchupDataChecks.test_changed_quote_or_mismatched_event_cannot_establish_role) ... ok\ntest_direct_role_contradictions_null_both_candidates (__main__.MatchupDataChecks.test_direct_role_contradictions_null_both_candidates) ... ok\ntest_incorrect_evolving_final_score_refused (__main__.MatchupDataChecks.test_incorrect_evolving_final_score_refused) ... ok\ntest_injury_identity_merging_retains_published_practice (__main__.MatchupDataChecks.test_injury_identity_merging_retains_published_practice) ... ok\ntest_jalon_relief_game_is_not_a_start (__main__.MatchupDataChecks.test_jalon_relief_game_is_not_a_start) ... ok\ntest_linked_snapshot_checksums_and_all_clubs (__main__.MatchupDataChecks.test_linked_snapshot_checksums_and_all_clubs) ... ok\ntest_missing_passing_cell_does_not_become_zero_or_rating (__main__.MatchupDataChecks.test_missing_passing_cell_does_not_become_zero_or_rating) ... ok\ntest_missing_statistics_do_not_substitute_older_qb_start (__main__.MatchupDataChecks.test_missing_statistics_do_not_substitute_older_qb_start) ... ok\ntest_missing_used_pbp_field_refused (__main__.MatchupDataChecks.test_missing_used_pbp_field_refused) ... ok\ntest_one_snap_first_play_role_keeps_null_statistics (__main__.MatchupDataChecks.test_one_snap_first_play_role_keeps_null_statistics) ... ok\ntest_opponent_starts_include_actual_prior_seasons_and_no_padding (__main__.MatchupDataChecks.test_opponent_starts_include_actual_prior_seasons_and_no_padding) ... ok\ntest_optional_unverified_cache_explicit_unavailable (__main__.MatchupDataChecks.test_optional_unverified_cache_explicit_unavailable) ... ok\ntest_position_changed_receiver_keeps_known_zero_offensive_snaps (__main__.MatchupDataChecks.test_position_changed_receiver_keeps_known_zero_offensive_snaps) ... ok\ntest_projection_is_inferred_and_reported_out_is_not_confirmed_inactive (__main__.MatchupDataChecks.test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive) ... ok\ntest_real_target_disagreement_nulls_only_affected_cell_and_rate (__main__.MatchupDataChecks.test_real_target_disagreement_nulls_only_affected_cell_and_rate) ... ok\ntest_required_unverified_cache_refused (__main__.MatchupDataChecks.test_required_unverified_cache_refused) ... ok\ntest_scramble_rusher_id_is_in_dropback_denominator (__main__.MatchupDataChecks.test_scramble_rusher_id_is_in_dropback_denominator) ... ok\ntest_source_correction_resolves_exact_html_recapped_role (__main__.MatchupDataChecks.test_source_correction_resolves_exact_html_recapped_role) ... ok\ntest_tracking_is_not_fabricated_or_hits_mislabelled_pressure (__main__.MatchupDataChecks.test_tracking_is_not_fabricated_or_hits_mislabelled_pressure) ... ok\ntest_truncated_pbp_with_static_final_scores_cannot_certify_zeroes (__main__.MatchupDataChecks.test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes) ... ok\ntest_uncorroborated_role_is_not_confirmed_or_padded (__main__.MatchupDataChecks.test_uncorroborated_role_is_not_confirmed_or_padded) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 1.216s\n\nOK\n"
+    }
+  ],
+  "fileSha256": {
+    "scripts/refresh-matchup-breakdown.py": "6c7e04383955a0fae1fa3c06673004ffb827e83027ba007a5c481b7ac2a7c488",
+    "qa/matchup-breakdown/data.test.py": "b9963cae847a42d44e25b644bec554881ad056faa908a73863920b054b031704",
+    "qa/matchup-breakdown/data/source-manifest.json": "dd5ae9f37293e56fa293b1178f00de35168ebf7a1729f512be479d78c2c9dc17",
+    "qa/matchup-breakdown/data/starting-role-evidence.json": "c519979ea31519ef988d6ca88658f54e7d74b32081b105d43ad200f9c826d838"
+  },
+  "limitations": [
+    "Unknown recent QB role candidates retain slots, statistics not silently substituted from older starts.",
+    "12 reviewed provider role conflicts remain disputed/null for both sides; missing-stat source-only roles unavailable.",
+    "Case Keenum explicit first-play one-snap start retained, no fabricated weekly stats.",
+    "Routes, pressure, blitz, exact aggregate snap share and confirmed inactives unavailable.",
+    "Updated snapshots use monitored public source refresh; no instantaneous provider push guarantee."
+  ],
+  "supersedes": {
+    "79796eebd8e3595e9835ab6303c2dc92d1986abce7938364ae10df452bf85f1b": "Latest a90 remote core/team bytes preserved; matchup dependencies rebuilt against those exact snapshots. Original matching cached TLS response retrieval timestamps retained."
+  }
+}

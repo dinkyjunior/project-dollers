@@ -1,0 +1,81 @@
+{
+  "status": "official-inactive-coverage-unavailable-provider-evidence-retained",
+  "auditedAt": "2026-10-09T00:23:40.336218+00:00",
+  "context": {
+    "season": 2026,
+    "seasonType": "REG",
+    "week": 5,
+    "gameId": "2026_05_TB_DAL",
+    "espnEventId": "401872980"
+  },
+  "requests": [
+    {
+      "receipt": {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/DAL-official-news-inactive-corroboration-20261009T002140Z.receipt.json",
+        "sha256": "6872686a5203c5e3e21de171e312ac47ff0b5d575702c0f7f6d14e1a84e4828c"
+      },
+      "url": "https://www.dallascowboys.com/news/",
+      "method": "GET",
+      "requestedAt": "2026-10-09T00:21:40.468800+00:00",
+      "normalTLS": true,
+      "certificateVerification": true,
+      "scope": "Bounded legitimate public official-source game-day inactive corroboration; blocked/unavailable sources are retained honestly, without bypass.",
+      "status": "unavailable",
+      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retrievedAt": "2026-10-09T00:21:40.476609+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "bodyPath": "qa/matchup-breakdown/reviews/source-evidence/DAL-official-news-inactive-corroboration-20261009T002140Z.html"
+    },
+    {
+      "receipt": {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/TB-official-news-inactive-corroboration-20261009T002140Z.receipt.json",
+        "sha256": "1138e1300987dccef7de090190ec0b326dd5144b90843821b03ebdfab4dc8f07"
+      },
+      "url": "https://www.buccaneers.com/news/",
+      "method": "GET",
+      "requestedAt": "2026-10-09T00:21:40.469805+00:00",
+      "normalTLS": true,
+      "certificateVerification": true,
+      "scope": "Bounded legitimate public official-source game-day inactive corroboration; blocked/unavailable sources are retained honestly, without bypass.",
+      "status": "unavailable",
+      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retrievedAt": "2026-10-09T00:21:40.477553+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "bodyPath": "qa/matchup-breakdown/reviews/source-evidence/TB-official-news-inactive-corroboration-20261009T002140Z.html"
+    },
+    {
+      "receipt": {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/NFL-official-game-inactive-corroboration-20261009T002140Z.receipt.json",
+        "sha256": "f4437b657820f090e76f80e36ea091a82c7f046a6cdec140d720fd082ece8108"
+      },
+      "url": "https://www.nfl.com/games/buccaneers-at-cowboys-2026-reg-5",
+      "method": "GET",
+      "requestedAt": "2026-10-09T00:21:40.470447+00:00",
+      "normalTLS": true,
+      "certificateVerification": true,
+      "scope": "Bounded legitimate public official-source game-day inactive corroboration; blocked/unavailable sources are retained honestly, without bypass.",
+      "status": "verified",
+      "httpStatus": 200,
+      "headers": {
+        "Date": "Fri, 09 Oct 2026 00:21:40 GMT",
+        "Content-Type": "text/html; charset=utf-8"
+      },
+      "retrievedAt": "2026-10-09T00:21:40.698575+00:00",
+      "sha256": "f26c375cceaeddb3131b40c0ce626154de5ba20654efc9c95c0144367f712fdd",
+      "bytes": 967576,
+      "bodyPath": "qa/matchup-breakdown/reviews/source-evidence/NFL-official-game-inactive-corroboration-20261009T002140Z.html"
+    }
+  ],
+  "conclusions": [
+    "Dallas and Tampa official public news indexes failed at the managed tunnel with explicit 403 Forbidden; no access bypass attempted.",
+    "NFL official public game page returned HTTP200 under normalTLS; original full body and response hash retained.",
+    "NFL page contains current early Dallas drive play descriptions but no inactive roster/Mayfield/Daniels names or explicit starting-quarterback fields.",
+    "The same NFL page includes unrelated 2024 final head-to-head material, which is not evidence of a current 2026 final result.",
+    "No complete official league game-day inactive list was established; current ESPN event-scoped fantasy INACTIVE may be shown as attributed provider reporting with its event/publication/retrieval context.",
+    "Absence from provider injury list is not active/cleared/DNP evidence."
+  ],
+  "earlierIndependentFreshEventReview": "qa/matchup-breakdown/reviews/source-evidence/kickoff-freshness-review-20261009T001756Z.json",
+  "runtimeMutated": false
+}

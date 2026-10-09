@@ -1,0 +1,74 @@
+{
+  "status": "native select appearance corrected; keyboard-popup raster path visually rejected pending diagnosis",
+  "at": "2026-10-09T00:07:48.005526+00:00",
+  "cssSha256": "12a03d629e4370d39df3ded61c3dbb90ec207e005c5d6923f817a89917ae165d",
+  "controlsSha256": "95b95fb3217b7920be62799be8c2bb3025bda6bb9e777031ddd7afeab20c5aa8",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-default-top.png",
+      "sha256": "1995db56f0a0af2f693cc9ccae4a18b9424d344a91c451e8e96905901ab1377e",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-three-average-bottom.png",
+      "sha256": "5b19c176726a88b6fb0dcc3d9ce0889ec4bcce602d3539403533652952010ae7",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-393-three-average-top.png",
+      "sha256": "8d0340acd29d9b20608230e22498abc89fd30d787fa472f33ebc0412cbccf3c5",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-default-top.png",
+      "sha256": "e734cbda6d1a87601036567eebd120ebe3eb47ea7fe0e59fecbf20a2368d70cf",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-three-average-bottom.png",
+      "sha256": "df48c74ffa2563bbe76997b42f2effb8ca0e6132626dcc51a8b615d6c099cd46",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/select-430-three-average-top.png",
+      "sha256": "ce05b9f6f345629d59d862a58b9e872e16ea7f831693a1df4b95b2c0300245a1",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/direct-three-average-top.png",
+      "sha256": "3c483d2da5ce53159f311125cc30d540cb80c7efdb2a7f69e498bcbb1f95fce3",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/native-three-average-top-first.png",
+      "sha256": "98fb77179c3cf86111751b0a27712d5fa1155eaa8ac48ba8f940a37a9f709c2c",
+      "personallyViewed": true
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/native-three-average-top-second.png",
+      "sha256": "27eb941c0c7f3c11c8847495459490eaaf18d3a07b6411f5c42c3f1bff3412c3",
+      "personallyViewed": true
+    }
+  ],
+  "reports": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight/results.json",
+      "sha256": "a1a034b34e4ade478ecc3d3de8e7b0db2560a63407bfe68b1b180c492dbe2f02"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/results.json",
+      "sha256": "c9eb63392e136f201cf698f3fb69525650d65b1d7afab6b29941ffc52217bf71"
+    }
+  ],
+  "findings": [
+    "Both default phone originals now show dark square native selects with crisp cyan vector caret; the select remains semantic HTML with native keyboard interaction.",
+    "Direct URL three-game/current-season/per-game430 paints full text/numerics correctly.",
+    "After actual native keyboard window3\u21925\u21923, two consecutive unpaused430 captures reproduce black/stale raster masks across areas of text/numerics and the Home navigation edge. DOM fields, source/context/game3, zero horizontal scroll and strict numeric geometry remain correct.",
+    "The following scroll/bottom original in the earlier preflight paints normally; no persistent default width/layout defect was established."
+  ],
+  "limits": [
+    "The passed scoped DOM/layout report does not accept the known raster defect.",
+    "Final common browser and hosted acceptance remain pending.",
+    "No styles, clocks, source data or image bytes were changed to hide the defect; all originals retained."
+  ]
+}

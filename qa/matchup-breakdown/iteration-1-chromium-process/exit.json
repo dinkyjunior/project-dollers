@@ -1,0 +1,25 @@
+{
+  "startedAt": "2026-10-08T22:01:48.633466+00:00",
+  "command": [
+    "node",
+    "qa/matchup-breakdown/run.cjs",
+    "--engine",
+    "chromium",
+    "--base",
+    "http://127.0.0.1:8876/project-dollers/",
+    "--mobile-only",
+    "--capture-only",
+    "--output",
+    "qa/matchup-breakdown/iteration-1-chromium"
+  ],
+  "output": "/workspace/project-dollers/qa/matchup-breakdown/iteration-1-chromium",
+  "timeoutSeconds": 600,
+  "status": "failed-qa",
+  "pid": 278923,
+  "exitCode": 1,
+  "qaReportStatus": "failed",
+  "qaReportCompletedAt": "2026-10-08T22:02:18.266Z",
+  "qaExitCode": 1,
+  "completedAt": "2026-10-08T22:02:18.367311+00:00",
+  "elapsedSeconds": 29.73
+}

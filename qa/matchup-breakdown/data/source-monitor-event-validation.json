@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "generatedAt": "2026-10-09T00:44:09.933246+00:00",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "qa/source-updates.test.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.009s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/source-monitor.test.py"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.021s\n\nOK\n"
+    }
+  ],
+  "files": {
+    "scripts/check-source-updates.py": "dc7bcec4de0fed75a71f3e46e8d5a8d1277ecedbf7beb4a1ea5d6252de717117",
+    "qa/source-updates.test.py": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822",
+    "qa/matchup-breakdown/source-monitor.test.py": "55e630c3112a1e8edd3598a0dde8ab0375ebad852c1086585a37be78e8cfb359"
+  }
+}

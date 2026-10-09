@@ -1,0 +1,72 @@
+{
+  "status": "native-layout-refinements-inspected-final-common-acceptance-pending",
+  "reviewer": "/root/matchup_visual",
+  "reviewedAt": "2026-10-08T23:16:48.640620+00:00",
+  "cssFrozenSha256": "3bb9b3160c766f1ba656e94d80e76399f8b7565dc0d34d922108e2a9894995ff",
+  "controlsFrozenSha256": "76aa16b747a3114b7ecae6aff1b1e21ffb86b219ffe9606a246ecd9eba23aaed",
+  "reports": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/results.json",
+      "sha256": "98f14c69ba5f46aa76d711922a042eddf5f049dec55f780b441c845b5a7e4106"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/generic-back-preflight-v2/results.json",
+      "sha256": "db33d32e7a167a850de606a971a09fa2cf3c634073934a20b3d872f529801008"
+    }
+  ],
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-393-bottom.png",
+      "sha256": "fab2dc8074f209556aec6688a4b62be8c80314d2801895b6273ed73848de9c13"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-393-middle.png",
+      "sha256": "949a8f7012c9266b604638b647d567d069a5f5abbdeac9f68ae70ff540963212"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-393-top.png",
+      "sha256": "d66fa1ee22df35393133a9ae13f653c0dd1d48a0c63f7bb2f8082e4c38502728"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-430-bottom.png",
+      "sha256": "c72405824ea2940a2b0965a9f392874a4ba1a5f8b59647ed1b5af90f02575e81"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-430-middle.png",
+      "sha256": "cde8278bcf4937949860639184acc278127d3cc8e5990d3b79b66bff2091e96d"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/form-generic-preflight-v2/form-430-top.png",
+      "sha256": "0a08df26064110cc807e1bde8646c188d992bc5f861073d14b6809d992d5d448"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/generic-back-preflight-v2/generic-JAX-393.png",
+      "sha256": "bed002864d5637596615b023ef8730861f1d8c4b5e4e9cc93631fda4a479d5ae"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/generic-back-preflight-v2/generic-JAX-430.png",
+      "sha256": "f950d3507227854632650c6f7c178785d8a0747db23dc2bee974225b8522687d"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/generic-back-preflight-v2/generic-PHI-393.png",
+      "sha256": "ab21640bbe21b3f947d6a604d1e4ab13ae9be82018515e332aa12984a2db08d8"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/generic-back-preflight-v2/generic-PHI-430.png",
+      "sha256": "e0d8dbe8efb5fe2d94d022acccfb20d3c3a4006822850b347111915ef22ab419"
+    }
+  ],
+  "findings": [
+    "Form game tables are full-width stacked: all native headers, numeric values and Report controls are clearly readable and horizontal at 393 and 430.",
+    "All 32 club routes have unclipped native leader/QB headings, player names and metric cells in the bounded 393-width sweep.",
+    "All 64 native Back-control text/icon bounds fit at 393 and 430 after generic-only wrapping; four new actual PHI/JAX originals personally inspected.",
+    "Default Dallas Players & QB paired-card styling and Back to Dallas composition are preserved.",
+    "Shorter Lineup cards align to their own native height rather than stretch into empty lower blocks."
+  ],
+  "qualification": [
+    "Preflight only; final coherent-source common Chromium/WebKit screenshots and every functional/data audit remain pending.",
+    "Form/native all32 report binds its historical CSS 4bf1e801 and controls c465; the only subsequent CSS/markup changes are the scoped generic Back fixes independently bound by the current 3bb9/76aa report.",
+    "Previously rejected Form/generic originals remain immutable prior evidence and are not relabelled as accepted.",
+    "No physical-iPhone FPS, literal pixel identity or independent every-factual-value claim."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "native-painted-evidence-not-accepted",
+  "at": "2026-10-09T00:08:38.284200+00:00",
+  "cssSha256": "12a03d629e4370d39df3ded61c3dbb90ec207e005c5d6923f817a89917ae165d",
+  "controlsSha256": "95b95fb3217b7920be62799be8c2bb3025bda6bb9e777031ddd7afeab20c5aa8",
+  "actualReport": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/results.json",
+  "actualReportSha256": "c9eb63392e136f201cf698f3fb69525650d65b1d7afab6b29941ffc52217bf71",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/direct-three-average-top.png",
+      "sha256": "3c483d2da5ce53159f311125cc30d540cb80c7efdb2a7f69e498bcbb1f95fce3"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/native-three-average-top-first.png",
+      "sha256": "98fb77179c3cf86111751b0a27712d5fa1155eaa8ac48ba8f940a37a9f709c2c"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal/native-three-average-top-second.png",
+      "sha256": "27eb941c0c7f3c11c8847495459490eaaf18d3a07b6411f5c42c3f1bff3412c3"
+    }
+  ],
+  "findings": [
+    "All three exact genuine originals inspected separately at original resolution.",
+    "Native-second visibly masks parts of Dallas/Tampa headings, player initials, numeric cells and Home-left in this personal view; correct DOM state/full strings are retained in the report.",
+    "Native-first appears clearer than native-second; direct image also appears to mask some glyph regions in this personal view, so the direct-clean interpretation requires independent root confirmation.",
+    "No assertion is made that this is persistent CSS clipping or a source/data defect; native raster/compositing diagnosis remains pending."
+  ],
+  "qualification": "A passed scoped control/bounds report does not accept masked actual pixels. No application/runtime changes, forced repaint or clock mutation were used by this reviewer."
+}

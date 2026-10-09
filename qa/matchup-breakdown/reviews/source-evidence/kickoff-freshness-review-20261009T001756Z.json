@@ -1,0 +1,331 @@
+{
+  "status": "verified-fresh-facts-require-publication-reconciliation",
+  "auditedAt": "2026-10-09T00:20:42.831486+00:00",
+  "snapshotSha256": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290",
+  "snapshotRetrievedAt": "2026-10-08T22:01:21Z",
+  "sourceReceipt": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/espn-event-401872980-freshness-20261009T001756Z.receipt.json",
+    "sha256": "fb6d91321198e1da68cd9cff2ab8333c5144c1cf621a91d2cd7c2d27269a83dc"
+  },
+  "sourceBody": {
+    "path": "qa/matchup-breakdown/reviews/source-evidence/espn-event-401872980-freshness-20261009T001756Z.json",
+    "sha256": "fb486304cb2e7f423ec0968d3df8e4e3d2cf466306a286d9d82eea5f0fb75056",
+    "httpStatus": 200,
+    "retrievedAt": "2026-10-09T00:17:56.235458+00:00",
+    "normalTLS": true
+  },
+  "context": {
+    "eventId": "401872980",
+    "season": 2026,
+    "seasonType": 2,
+    "week": 5,
+    "kickoffUTC": "2026-10-09T00:15Z",
+    "home": "DAL",
+    "away": "TB",
+    "venue": "AT&T Stadium"
+  },
+  "actualProviderGameStatus": {
+    "displayClock": "14:47",
+    "period": 1,
+    "type": {
+      "id": "2",
+      "name": "STATUS_IN_PROGRESS",
+      "state": "in",
+      "completed": false,
+      "description": "In Progress",
+      "detail": "14:47 - 1st Quarter",
+      "shortDetail": "14:47 - 1st",
+      "statusPrimary": "14:47",
+      "statusSecondary": "1st"
+    },
+    "isTBDFlex": false,
+    "displayPeriod": "1st"
+  },
+  "providerMeta": {
+    "lastUpdatedAt": "2026-10-09T00:16:31Z",
+    "firstPlayWallClock": "2026-10-09T00:15:54Z",
+    "lastPlayWallClock": "2026-10-09T00:16:31Z",
+    "gameState": "in"
+  },
+  "snapshotFixtureStatus": "scheduled",
+  "partialScore": [
+    {
+      "team": "DAL",
+      "homeAway": "home",
+      "score": "0"
+    },
+    {
+      "team": "TB",
+      "homeAway": "away",
+      "score": "0"
+    }
+  ],
+  "injuryStatusEvidence": [
+    {
+      "team": "DAL",
+      "espnAthleteId": "4362088",
+      "name": "DeMarvion Overshown",
+      "position": "LB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Hamstring",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4384549",
+      "name": "Cobie Durant",
+      "position": "CB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Hamstring",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4240608",
+      "name": "James Houston",
+      "position": "LB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": true,
+      "newReportedStatus": true
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4808759",
+      "name": "Camden Brown",
+      "position": "WR",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4696203",
+      "name": "Ajani Cornelius",
+      "position": "OT",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "4034790",
+      "name": "Antoine Winfield Jr.",
+      "position": "S",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Ribs",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "4685549",
+      "name": "Billy Schrauth",
+      "position": "G",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "3052587",
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Thumb",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "4816107",
+      "name": "Benjamin Morrison",
+      "position": "CB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Quadriceps",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "4429511",
+      "name": "SirVocea Dennis",
+      "position": "LB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Ankle",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": "Out",
+      "priorRecordPresent": true,
+      "newReportedStatus": false
+    }
+  ],
+  "newStatusFacts": [
+    {
+      "team": "DAL",
+      "espnAthleteId": "4240608",
+      "name": "James Houston",
+      "position": "LB",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": true,
+      "newReportedStatus": true
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4808759",
+      "name": "Camden Brown",
+      "position": "WR",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    },
+    {
+      "team": "DAL",
+      "espnAthleteId": "4696203",
+      "name": "Ajani Cornelius",
+      "position": "OT",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:49Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    },
+    {
+      "team": "TB",
+      "espnAthleteId": "4685549",
+      "name": "Billy Schrauth",
+      "position": "G",
+      "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+      "reportStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      },
+      "injuryType": "Coach's Decision",
+      "providerPublishedAt": "2026-10-08T22:48Z",
+      "priorReportStatus": null,
+      "priorRecordPresent": false,
+      "newReportedStatus": true
+    }
+  ],
+  "qualifications": [
+    "Actual provider explicitly reports in progress; this is not an inference from elapsed kickoff time.",
+    "Current event is not completed; in-progress counting stats are partial and cannot enter completed game windows or establish season final records.",
+    "Fantasy INACTIVE is an explicit event-scoped ESPN field; this alone does not establish exhaustive official league inactive-list coverage or a complete active roster.",
+    "Missing people in this event injury list are not cleared, active, or DNP by inference.",
+    "Current boxscore athlete rows do not provide explicit starter/didNotPlay/active flags; passing attempts do not confirm a QB start.",
+    "Weather numeric values again lack explicit units, so no Fahrenheit/gust conversion or roof/weather conclusion is justified.",
+    "Frozen b9 numerical audit remains valid for its actual recorded earlier source snapshot; no earlier receipt was relabelled as fresh.",
+    "Genuine new status/availability facts require a coherent fresh linked snapshot and renewed exact-runtime acceptance before claiming current publication."
+  ],
+  "runtimeMutated": false,
+  "priorAuditRelabelled": false
+}

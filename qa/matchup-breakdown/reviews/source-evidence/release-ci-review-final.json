@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-08T23:33:22.914453+00:00",
+  "scope": "Read-only independent release-gate and scheduled-refresh correction review; this is not final browser or deployment acceptance.",
+  "snapshotSha256": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290",
+  "reviewedFiles": {
+    "qa/matchup-breakdown/verify-release.py": "0d948c6ad41ca7d120d0d276fad9aba2d95c1c5996020e54ccf40a41bad8c3eb",
+    "qa/matchup-breakdown/verify-deployed.py": "af00fefba43f40d30eb020a5bf74e5d5c16627ca0e9d62d5794fb01ce40d2630",
+    ".github/workflows/refresh-nfl-data.yml": "f3ddf178341786d45696380d06e7a6f4cb717264d49b3104706d5f7770239aea",
+    "scripts/refresh-matchup-breakdown.py": "6c7e04383955a0fae1fa3c06673004ffb827e83027ba007a5c481b7ac2a7c488",
+    "qa/matchup-breakdown/data.test.py": "1bcc86ddad14db44594b2804107b80e59943917a0712dcebdf96316870cde2ac",
+    "qa/matchup-breakdown/data/scheduled-checkout-validation.json": "3304c1896610b747c94be8a66418b141eead48c864b33c36b104c70fd6ae6ac3"
+  },
+  "checks": [
+    "Common original PNG inventory must be an exact path/hash subset of capture records actually emitted inside the completed exact-runtime native report directories.",
+    "All native browser reports must be completed and passed, test/application files frozen, with Chromium/WebKit both primary phones and Chromium tablet/desktop.",
+    "All six specialist reviews require their audit timestamp, exact canonical runtime binding, all common originals, and a completed native report path/hash.",
+    "Scheduled builder writes exact fresh source-response archives and snapshot-bound manifest to RUNNER_TEMP; test consumes that manifest rather than stale committed release evidence.",
+    "Source manifest snapshotSHA is compared against actual JSON before archive/source checks; stale-manifest regression intentionally rejects another identity.",
+    "23 actual independent current data tests passed; b9 snapshot and dd5ae9 source manifest unchanged before/after.",
+    "Dynamic starter/roster/injury regressions retain genuine source-correction and missing-stat null contracts.",
+    "Hosted deployment verifier checks every runtime asset/body hash, exact successful Pages jobs, both branch heads after body fetch, and restored automation when final active flag requested."
+  ],
+  "qualification": "Runner-style absolute-path proof is a copy of the frozen source evidence, not an independently fetched new season. Browser originals and actual hosted verification remain required before acceptance.",
+  "unresolvedBlockers": []
+}

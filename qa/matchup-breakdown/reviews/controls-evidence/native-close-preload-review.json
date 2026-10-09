@@ -1,0 +1,19 @@
+{
+  "status": "accepted-read-only-qa-settlement-preload",
+  "auditedAt": "2026-10-09T01:21:33.518Z",
+  "reviewer": "matchup_controls",
+  "runtimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+  "preload": {
+    "path": "qa/matchup-breakdown/settle-native-dialog-close.cjs",
+    "sha256": "d415523de87fd632a0840b44abdcdd885883c85f81c33f82c172d3d40116777a"
+  },
+  "originalHelperCount": 15,
+  "newHelperCount": 16,
+  "originalHelperBytesUnchanged": true,
+  "runtimeFileCount": 235,
+  "runtimeBytesUnchanged": true,
+  "scope": "Adds a bounded genuine wait for closed native dialog state to settle before original semantic snapshot. Active open dialogs and other pages proceed immediately. Calls the unchanged original semantic reader. Includes its own exact byte hash in test manifest.",
+  "assertions": "No existing assertion, geometry/source/value/focus/unchanged-refresh check or native input is removed or relaxed. A close handler that never clears state still fails the real ten-second condition.",
+  "sideEffects": "No app/source/DOM/style/request/clock changes or intercepted feed. Only exported QA snapshot function and test manifest are wrapped.",
+  "qualification": "This is acceptance of the narrowly diagnosed QA settlement correction, not acceptance of any unfinished browser or release report."
+}

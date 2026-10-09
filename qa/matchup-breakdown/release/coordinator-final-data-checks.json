@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "completedAt": "2026-10-08T22:38:43.089521+00:00",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "scripts/refresh-matchup-breakdown.py",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "qa/matchup-breakdown/release/coordinator-final-data-0.log",
+      "logSha256": "baa810c67e7b61286ebbf08b4f6e4de799e56be06fbbd98f500067f164c2277b"
+    },
+    {
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/data.test.py"
+      ],
+      "exitCode": 0,
+      "log": "qa/matchup-breakdown/release/coordinator-final-data-1.log",
+      "logSha256": "9b4f258deebfb9552b98a75bdfa411b69e4111fac959f287d2d0787f28464efa"
+    }
+  ],
+  "files": {
+    "scripts/refresh-matchup-breakdown.py": "0b894aa7d2c97a30e6217a60e4e194614cbd8d41e90525faf8796dc6f4f26ef8",
+    "qa/matchup-breakdown/data.test.py": "38b0950cdbb0ae5472691e9d27f6e72d0894444405fa2d5f920a037865c0dbd9",
+    "scripts/check-source-updates.py": "89c121d6c2d4b3ea48e9ad5e87ddb56dc9c30f159bd8fccbd06c1805a19a112c",
+    "qa/matchup-breakdown/source-monitor.test.py": "ed7ef057180f8239136f872ba6af2abe9f84a1b96605a32f1d00c5134c3c6377",
+    "qa/source-updates.test.py": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822",
+    ".github/workflows/refresh-nfl-data.yml": "db7cb2be9ec15810e48c0cb0f7ef5b8ab00ad942a26ef6a82674527d0e9b5cd1"
+  },
+  "snapshotSha256": "7257dd9d55ec7b62c91c42b2505bb5c32a0f0edf1c31c3b693c64bac69c2e97c"
+}

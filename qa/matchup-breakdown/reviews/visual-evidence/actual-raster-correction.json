@@ -1,0 +1,53 @@
+{
+  "status": "Definitive correction: previous real-glyph-mask claims retracted; actual pixels intact",
+  "at": "2026-10-09T00:48:08.115107+00:00",
+  "supersedes": [
+    "qa/matchup-breakdown/reviews/visual-evidence/native-select-visual-review.json",
+    "qa/matchup-breakdown/reviews/visual-evidence/native-select-visual-review-correction.json"
+  ],
+  "independentPixelReport": "qa/matchup-breakdown/reviews/visual-evidence/actual-raster-ocr-review/results.json",
+  "independentPixelReportSha256": "4f16144754319f8597a608b844caf15997447b567ff8ae399be6dd4d8d73c781",
+  "equalityProof": [
+    {
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBox": null
+    },
+    {
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBox": null
+    },
+    {
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBox": null
+    },
+    {
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBox": null
+    }
+  ],
+  "originalScaleCellProof": {
+    "sourceOriginal": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v1/diagnostic-reflections-hidden-1.png",
+    "sourceSha256": "00a9dd4914f3cccdf4dc13d9ecc653c9056b4fe9e7a2e9557061a0e5f8534be1",
+    "crop": "qa/matchup-breakdown/reviews/visual-evidence/actual-raster-ocr-review/left-player-cell.png",
+    "cropBox": [
+      36,
+      790,
+      151,
+      826
+    ],
+    "dimensions": [
+      115,
+      36
+    ],
+    "TesseractPSM7": "D. Prescott",
+    "personallyViewed": true,
+    "visibleText": "D. Prescott in full"
+  },
+  "correction": "Full-image vision input incorrectly appeared to have black glyph masks. Actual original PNG pixels and original-scale source-cell crop retain full glyphs; independent Tesseract recognizes complete names and decimal values. Identical screenshot bytes receiving different perceived interpretations establish an image-perception artifact, not a temporal app paint defect. Earlier assertions of a WPE compositor/popup/renderer fault are retracted.",
+  "runtimeAction": "No CSS, motion, JavaScript or backend change is justified by these purported masks. The real native select appearance correction remains in CSS12a03. Fresh current-context common QA acceptance remains pending.",
+  "verificationLimits": [
+    "OCR has routine letter/name recognition errors and is not sole dataset certification.",
+    "These are read-only derived diagnostic crops at original scale, not substituted accepted browser screenshots.",
+    "Diagnostic style-intervention screenshots remain diagnostic-only; final acceptance must bind new ordinary unmodified runtime originals."
+  ]
+}

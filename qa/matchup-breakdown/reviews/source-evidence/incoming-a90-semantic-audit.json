@@ -1,0 +1,584 @@
+{
+  "status": "passed",
+  "completedAt": "2026-10-08T23:09:43.518019+00:00",
+  "incomingCommit": "a90d046e8275d4f36eaea438d15b4bc388b6e790",
+  "baseReadOnlyCommit": "4f4643e",
+  "rootDifferenceInventorySha256": "860ffac83fba6a2560e6b27c86467f4eed36ca5c32cb66bf453a002b465f2e62",
+  "independentlyRecomputedDifferenceCount": 1895,
+  "rootInventoryMatchesIndependentFullRecursiveDiff": true,
+  "differenceKinds": {
+    "value": 1895
+  },
+  "semanticClassificationCounts": {
+    "retrieval_verification_timestamps": 1667,
+    "raw_response_hash_size_validator": 61,
+    "dataset_linkage_checksum": 3,
+    "raw_response_identity_link": 163,
+    "refresh_deadline_behavior": 1
+  },
+  "derivedFootballOrUserEligibilityFixtureCountChanges": 0,
+  "refreshDeadlineChange": {
+    "kind": "value",
+    "path": "assets/data/current.json/context/refreshAfter",
+    "before": "2026-10-09T03:26:45Z",
+    "after": "2026-10-09T04:26:29Z"
+  },
+  "refreshDeadlineVerifiedSixHoursAfterNewRetrieval": true,
+  "rawSourceIdentitiesChanged": [
+    {
+      "file": "assets/data/current.json",
+      "sourceId": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "changes": {
+        "sha256": {
+          "before": "8671758523ec81f8f6476f32283c20f856a10a91864aad8a90242070cfea5a09",
+          "after": "5ad82b0179e49b0d2df6702fd587e3dfdab8527a9605ca1603bd297f332e37e1"
+        },
+        "etag": {
+          "before": "\"da516d7d49d90ee52bb469ac4e1033fd09c2b6a3fb48560f35dbca7dde927cec\"",
+          "after": "\"34f5bbbe37e1ed65241520524faa7d33c7bf56976e3fa11094921b9ea7a198d8\""
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/current.json",
+      "sourceId": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "changes": {
+        "sha256": {
+          "before": "488a40dfb7b32fd13a8dbc65bbdc955ad60cf7237eba2af2c23a0afd7c0764d4",
+          "after": "975d89499ed9f050e37a522bf9b83345a33e4f5220e808514d0b90b650bfd624"
+        },
+        "bytes": {
+          "before": 452860,
+          "after": 452721
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/current.json",
+      "sourceId": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "changes": {
+        "sha256": {
+          "before": "acb2e7dde9b514c42b7380c8c4f484968e36b53c1937c5a079358859d2287b1e",
+          "after": "d3f023ef3bd33efdaeeaa5f280806483c74eedfb2d690620377ab217c79fe13d"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/current.json",
+      "sourceId": "espn_athlete_4431424",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424",
+      "changes": {
+        "sha256": {
+          "before": "b95e3efc420497a671ed902ecb17f7ee4d77fb5e8a6959b55328e9ce67704d53",
+          "after": "ba839ce31bd824228b732d28ef8f0749192a08d4232114aecb26d9cc7874dcab"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "sourceId": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "changes": {
+        "sha256": {
+          "before": "8671758523ec81f8f6476f32283c20f856a10a91864aad8a90242070cfea5a09",
+          "after": "5ad82b0179e49b0d2df6702fd587e3dfdab8527a9605ca1603bd297f332e37e1"
+        },
+        "etag": {
+          "before": "\"da516d7d49d90ee52bb469ac4e1033fd09c2b6a3fb48560f35dbca7dde927cec\"",
+          "after": "\"34f5bbbe37e1ed65241520524faa7d33c7bf56976e3fa11094921b9ea7a198d8\""
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "sourceId": "official_steelers_roster",
+      "url": "https://www.steelers.com/team/players-roster/",
+      "changes": {
+        "sha256": {
+          "before": "488a40dfb7b32fd13a8dbc65bbdc955ad60cf7237eba2af2c23a0afd7c0764d4",
+          "after": "975d89499ed9f050e37a522bf9b83345a33e4f5220e808514d0b90b650bfd624"
+        },
+        "bytes": {
+          "before": 452860,
+          "after": 452721
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "sourceId": "espn_steelers_roster",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "changes": {
+        "sha256": {
+          "before": "acb2e7dde9b514c42b7380c8c4f484968e36b53c1937c5a079358859d2287b1e",
+          "after": "d3f023ef3bd33efdaeeaa5f280806483c74eedfb2d690620377ab217c79fe13d"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "sourceId": "espn_athlete_4431424",
+      "url": "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes/4431424",
+      "changes": {
+        "sha256": {
+          "before": "b95e3efc420497a671ed902ecb17f7ee4d77fb5e8a6959b55328e9ce67704d53",
+          "after": "ba839ce31bd824228b732d28ef8f0749192a08d4232114aecb26d9cc7874dcab"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "sourceId": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "changes": {
+        "sha256": {
+          "before": "8671758523ec81f8f6476f32283c20f856a10a91864aad8a90242070cfea5a09",
+          "after": "5ad82b0179e49b0d2df6702fd587e3dfdab8527a9605ca1603bd297f332e37e1"
+        },
+        "etag": {
+          "before": "\"da516d7d49d90ee52bb469ac4e1033fd09c2b6a3fb48560f35dbca7dde927cec\"",
+          "after": "\"34f5bbbe37e1ed65241520524faa7d33c7bf56976e3fa11094921b9ea7a198d8\""
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "changes": {
+        "sha256": {
+          "before": "8671758523ec81f8f6476f32283c20f856a10a91864aad8a90242070cfea5a09",
+          "after": "5ad82b0179e49b0d2df6702fd587e3dfdab8527a9605ca1603bd297f332e37e1"
+        },
+        "etag": {
+          "before": "\"da516d7d49d90ee52bb469ac4e1033fd09c2b6a3fb48560f35dbca7dde927cec\"",
+          "after": "\"34f5bbbe37e1ed65241520524faa7d33c7bf56976e3fa11094921b9ea7a198d8\""
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772510",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772510",
+      "changes": {
+        "sha256": {
+          "before": "f8d6b053bbdfbb30389069a5bd5d09cd5474c72a3c49bea0194ca3249b7a5494",
+          "after": "6726d12e5c27ff521dbadf36b84c5a00ac3f45bf383ea301e4e0876f3123205c"
+        },
+        "bytes": {
+          "before": 420805,
+          "after": 411387
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772834",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772834",
+      "changes": {
+        "sha256": {
+          "before": "a1c9fd685d9f74ffd85f9a8a46e278859381d5629ab15f22885e3f25881c6df0",
+          "after": "1ef45bf34eec8834901ec4ac1d112d5764e6add92f5fe22ad9fb7c512a9d7178"
+        },
+        "bytes": {
+          "before": 682069,
+          "after": 672638
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772844",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772844",
+      "changes": {
+        "sha256": {
+          "before": "b97c3334357f1834a3051a46727f05e5772ba9db8cbe97c23fdf2366511341b7",
+          "after": "ba64a3afb686ba392e22f1751c542f6d53542a868f455de5794f8180081c9053"
+        },
+        "bytes": {
+          "before": 559983,
+          "after": 550551
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772921",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772921",
+      "changes": {
+        "sha256": {
+          "before": "8efe94352ef817734387a781d178cdeb2a0562e020a08abfe31531f01a118607",
+          "after": "ddfe83c2bb4b995ed9be4d490c68855baac6c8d172b1e3c307fadb2e9eef000e"
+        },
+        "bytes": {
+          "before": 641808,
+          "after": 632377
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772850",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772850",
+      "changes": {
+        "sha256": {
+          "before": "c2a6137fdcccf04c55e6e6bc3575a089259528eac101b441669687370db153c8",
+          "after": "92f4687df7dc57b5ad69ec855c6e117af123b0a8b28b457be98e93c1c02721e7"
+        },
+        "bytes": {
+          "before": 616748,
+          "after": 607317
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772858",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772858",
+      "changes": {
+        "sha256": {
+          "before": "b7dfd501d687095d676b919ef5a14f37b6da1ca97c36b8adb74d3efd7440c153",
+          "after": "4a5a88849e1d351e4a4efd7b8ee34c3b34a2642a6587f7ece6b769441e585c31"
+        },
+        "bytes": {
+          "before": 549795,
+          "after": 540364
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772864",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772864",
+      "changes": {
+        "sha256": {
+          "before": "d50d041f085ca6f7fd981ed06398ce1bfc044d4bb8f674411bf7f2337950f6ff",
+          "after": "c7aeeb29a588af741dc04168ec7de5b3718d252d206b34e814ad80d04d508150"
+        },
+        "bytes": {
+          "before": 599976,
+          "after": 590524
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772762",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772762",
+      "changes": {
+        "sha256": {
+          "before": "05e85e7fe0bf882a2ee419b499dfef9c609b7d770b142dcb6f01130136b2912e",
+          "after": "74c9a4a9712b36794c7917e1951091e278ae9155f7d67e4318d0b4c2829e94e1"
+        },
+        "bytes": {
+          "before": 596984,
+          "after": 587553
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772818",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772818",
+      "changes": {
+        "sha256": {
+          "before": "7472ada16096603b64f9af66fc0344db1332311e8c288ab6e7de30971f782b87",
+          "after": "e47c4602e8d0f645d0deb7b655e051695d1a9f1f03d479845b89d713053f8e29"
+        },
+        "bytes": {
+          "before": 564027,
+          "after": 554596
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772819",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772819",
+      "changes": {
+        "sha256": {
+          "before": "b9d9dfc452c52eab707cea0116093a952e8ce26ca4c5c267a7e5c21b5da1bed3",
+          "after": "f91f3cd53f04ebc6d0b363a7c3effe49f2b2775fdf87921cddebe917e79f11bf"
+        },
+        "bytes": {
+          "before": 567876,
+          "after": 558192
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772890",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772890",
+      "changes": {
+        "sha256": {
+          "before": "0bee71fdef2c0e33dc8c0fcf031421c7ecabcd47f96283400ef39e0a0e8718b9",
+          "after": "bf5ee8f033ef732e5ea3bdd54017c8b114ca9ab7eaba8e8a2883de43e6c6ce90"
+        },
+        "bytes": {
+          "before": 593887,
+          "after": 584469
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772694",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772694",
+      "changes": {
+        "sha256": {
+          "before": "fdf8131d8c06ebd3d7e71c942c27d93579ca1e6fd8a70d046f1f7aeb45e69d30",
+          "after": "de1a87adaaad0fbca5c30bf14662c02f3f43888c372b3b49ae0fcd448c72f6d7"
+        },
+        "bytes": {
+          "before": 577899,
+          "after": 568468
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772947",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772947",
+      "changes": {
+        "sha256": {
+          "before": "aa3aba514cba7fbf434622fcccae1e981b331cbad5fdf8aac08beb93d6d0ae59",
+          "after": "1d6d0c5b9725f4a77de14b48b1815e5ef3846410b8280c73488cd0d3ff75e586"
+        },
+        "bytes": {
+          "before": 629735,
+          "after": 620304
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772933",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772933",
+      "changes": {
+        "sha256": {
+          "before": "24be39c2a2c70d1b60c1d9fe5a8d802cbbe9dc3255ea00537b3c44ac04e96b44",
+          "after": "5b925b53712f9210b0b843ebf4857b00bf5ab4b803611d6cf119f34dfbb54a3b"
+        },
+        "bytes": {
+          "before": 575569,
+          "after": 566138
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772910",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772910",
+      "changes": {
+        "sha256": {
+          "before": "e69ed3e3446ba5302a04edd0070aae1245de8ad1e2430e26953c52805a36faa8",
+          "after": "f8ee2ae9377f6c47d70b74b31db87bfb7bfecb951caf50504b57ecacab3953d6"
+        },
+        "bytes": {
+          "before": 531089,
+          "after": 521658
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772710",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772710",
+      "changes": {
+        "sha256": {
+          "before": "f7537a42a902bebc79ee2769214c2937303529a7efec22fe6dd8ddf557c5a169",
+          "after": "d1921e741a241a975dc3e10982b3ebc11fae6d9894ff22288bba8356eb6f609b"
+        },
+        "bytes": {
+          "before": 582712,
+          "after": 573260
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401772963",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772963",
+      "changes": {
+        "sha256": {
+          "before": "c28376bfff9fd202ab1041d13ba1772d8ba031159efb3ee6e91fd1364199f68d",
+          "after": "e488d93e084d3e67a9453e4a0b9d40abe525c9e63c2c4d66c48f3ee1bc22e067"
+        },
+        "bytes": {
+          "before": 567611,
+          "after": 557773
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401872930",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872930",
+      "changes": {
+        "sha256": {
+          "before": "41f38dfcfb17ebc2795a7d5a99413907c6f99c72f2bfd1b13bf56f0133c5c60b",
+          "after": "570693c17875d920e06cf13ac61f8b73fcefd128a8ee19ec706485f5f97625e1"
+        },
+        "bytes": {
+          "before": 528782,
+          "after": 518969
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401872944",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872944",
+      "changes": {
+        "sha256": {
+          "before": "f6d720e2fccc681c45d54698d63f1d87157cb0eac629309bab1a9f2a7f14e913",
+          "after": "9e67e61ececc1c0352060424556c960538d97a8dca329d00464e67cd0b894127"
+        },
+        "bytes": {
+          "before": 551239,
+          "after": 541405
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401872960",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872960",
+      "changes": {
+        "sha256": {
+          "before": "a7c6f72f4f1c69840b6e01897e726cea8b47e03f1d37e4ae75c97fc856648da5",
+          "after": "6a7f4cc59c5ce83d57233c5436ad6a1579ffee389c3123d4f4c05d525b5da8ba"
+        },
+        "bytes": {
+          "before": 611874,
+          "after": 602061
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_summary_401872967",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872967",
+      "changes": {
+        "sha256": {
+          "before": "b09ba667f5ed8921558a4310e10487bb2f2c82488b2ea4a7daea0e7d8a93f2ba",
+          "after": "fdfceabff5fbcf95cd382adceacc52bb725fd28475d4153a0b09332847a144b3"
+        },
+        "bytes": {
+          "before": 605869,
+          "after": 596017
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_schedule_DAL_2025",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2025&seasontype=2",
+      "changes": {
+        "sha256": {
+          "before": "4070e876ed97e22e3e923a86f6a2c23f201ea15f5890d97719dd3d0f8d126ec9",
+          "after": "ae225e069231e17cea48d82711330a63fc7a9116425d8f2df91a5d260dff0e2f"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_schedule_DAL_2026",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/schedule?season=2026&seasontype=2",
+      "changes": {
+        "sha256": {
+          "before": "3d0c2ab932a2296f93c84434f45e1cab67a1bf419a55f9bcc501a1b0afdd5301",
+          "after": "a6286ba46434f68d80ff4d254f7a9ce1405c1af85a3388c1d86e3785e8e4e7c1"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "sourceId": "espn_roster_DAL",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster",
+      "changes": {
+        "sha256": {
+          "before": "174c79fcbcd70dbb0fa280d51b4469005703e7e80522046db82c814364701cfd",
+          "after": "0ca100019218cee0824a1dd767decfe2f9b4572215566608ca9156e3e793a481"
+        }
+      },
+      "claim": "Raw source response identity/size/validator changed; underlying whole bodies are not claimed equivalent."
+    }
+  ],
+  "consumedProjections": [
+    {
+      "file": "assets/data/current.json",
+      "beforeSha256": "2abf53f72fed404f115bbb2bde28a82abada0558e33fc2fd7f147d813501223d",
+      "afterSha256": "723b45d95d0938205943c8e30fdc95875d964b77502f90c534d99c677949ac6c",
+      "consumedProjectionSha256": "89514159553a9966de6c8c049192d6148be4455585f73df0f6df6b8ac8fe1078",
+      "allDictionaryKeysListLengthsScalarTypesRetained": true,
+      "nonProvenanceFootballAndUserContextEqual": true
+    },
+    {
+      "file": "assets/data/provenance.json",
+      "beforeSha256": "4d33a1309f9d54f2753bf3b9fc63e85dba840d196951d88fa8257fd77f2c94fc",
+      "afterSha256": "c2babc127cf5fb458a8054aecfdb036c2460c4fe3a816bd1c24aeff46f8f7154",
+      "consumedProjectionSha256": "6b851cce0d60c5d797420d5a0543f40a74bb436090d921745744ee8c899eddbf",
+      "allDictionaryKeysListLengthsScalarTypesRetained": true,
+      "nonProvenanceFootballAndUserContextEqual": true
+    },
+    {
+      "file": "assets/data/player-history.json",
+      "beforeSha256": "4736f1c3196ea857f1425a0fec5be7821723af0bebc421d02274c287eb6a743b",
+      "afterSha256": "b2c813409694c6c867697a79610eb9ae40c94e817f52227812a1edc7304038b7",
+      "consumedProjectionSha256": "91ee35d57bd51e41c87109fecbfb03ffd019d3426f46c7ed56d825e8af3d5b9b",
+      "allDictionaryKeysListLengthsScalarTypesRetained": true,
+      "nonProvenanceFootballAndUserContextEqual": true
+    },
+    {
+      "file": "assets/data/team-details.json",
+      "beforeSha256": "fcce269906cf13b7330bf163740779ef430432634d99c060ca17a26c114ae88f",
+      "afterSha256": "9d05eef06503e756abfe12bec832a21669e9d146300a2d9bc35f0ad6dc852400",
+      "consumedProjectionSha256": "1ba9e6f9571480d5c0815a0d1e329a68c68e6ca44c26f54f78caa3dca06a2c1f",
+      "allDictionaryKeysListLengthsScalarTypesRetained": true,
+      "nonProvenanceFootballAndUserContextEqual": true
+    }
+  ],
+  "limitations": [
+    "Schema-specific consumed projections match; raw games/ESPN/official bodies did change and are not described as identical.",
+    "The newer matchup JSON was rebuilt against actual newer core/team hashes and independently audited separately; no original old-book receipt is relabelled new."
+  ],
+  "unresolvedBlockers": []
+}

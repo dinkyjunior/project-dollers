@@ -1,0 +1,44 @@
+{
+  "status": "explicit-correction-no-corroborated-native-missing-glyph-defect",
+  "at": "2026-10-09T00:49:08.816066+00:00",
+  "corrects": [
+    "webkit-native-select-changes-requested-v1 only its subsequent native-mask conjectures; genuine grey select finding remains",
+    "select-webkit-preflight-personal-v1.json and correction companion",
+    "select-webkit-temporal-personal-v1.json",
+    "webkit-paint-cause-v1/personal-cause-review.json",
+    "webkit-paint-cause-v2/personal-cause-review.json",
+    "webkit-paint-cause-v3/personal-cause-review.json",
+    "messages about v4 perceived painted masks"
+  ],
+  "actualRasterProof": [
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-1.png",
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v4/diagnostic-foreground-composited-4.png",
+      "sha256": "8bf1badb99508b739b37368428d2c6bd381ebbdec12a54ade78b6304980afe1b"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/deterministic-raster-verification.json",
+      "sha256": "691fe9c1a782e6c0c7f0cd437ff4baba54ba729c3b3fb900bdc8fc263ca882eb"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v4/diagnostic-foreground-composited-4.txt",
+      "sha256": "c673f209bef8b59f8ae9bd476bf81de37696cde2e4114480fc33cb531292029e"
+    }
+  ],
+  "verifiedNormalRasterGlyphStrings": [
+    "J. Williams",
+    "D. Prescott",
+    "B. Irving",
+    "C. Otton",
+    "CHRIS GODWIN JR.",
+    "NFL",
+    "UPCOMING GAME",
+    "Home"
+  ],
+  "correction": "Previous missing-glyph/black-mask classifications based on full-image vision input are retracted as unsupported and contradicted by the actual stored pixels and OCR. The four reduced PNGs are identical; actual OCR of a normal image earlier labelled masked also retains full leader initials, breadcrumb and Home. Independent visual and QA reviewers corroborated full names/decimals/glyph masks. No product motion, clipping, font or backend fix is justified by this conjecture. Diagnostic interventions remain qualified experiments and all baselines are restored.",
+  "genuineRemainingChange": "Native grey select platform appearance was a real styling difference; visual owner corrected it with native select appearance:none/local cyan caret in CSS12a03.",
+  "qualification": "This correction does not accept a release, physical-device performance or exact render pixel identity. Current complete common QA and actual hosted verification remain required."
+}

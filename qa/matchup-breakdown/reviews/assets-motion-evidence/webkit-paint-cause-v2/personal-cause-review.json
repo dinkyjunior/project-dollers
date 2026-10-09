@@ -1,0 +1,60 @@
+{
+  "status": "cause-not-isolated-no-runtime-fix",
+  "at": "2026-10-09T00:21:44.814191+00:00",
+  "actualReport": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/results.json",
+  "actualReportSha256": "d81d7e7199f2ab7d99089ae065181ef9466876e469ad8065a2d60ac835a9cdb1",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/untouched-baseline.png",
+      "sha256": "f612cb99dae26b03c92012f4bcf7fc0363c5136bb021f9e54db1b873c2865b94"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-page-mask-none-1.png",
+      "sha256": "49b1aa592a6c3ede1c42da06ab12f04389efdafa37cfec2a2484a7f95b922399"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-page-mask-none-2.png",
+      "sha256": "14a01a344de341c4c81bc3759ac561efd6a14b85eeaf3400520d04dbd63b35b2"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-page-mask-none-3.png",
+      "sha256": "6ed0d84cd3288603fadee7ba31e7258c32c97ca825a2c01c6659d0161e5a219b"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-page-mask-none-4.png",
+      "sha256": "c646bab4334ef0ac3c7b026e30dc0ef037062659f94069a8a6e8d09486705825"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/restored-page-mask-1.png",
+      "sha256": "c6fd79d3914020039b7423c34eb1a52f5786805f9655b4653ccc482deae77a0b"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/restored-page-mask-2.png",
+      "sha256": "4b64505b5902bd37dd8ce120f3f06cd9d7bafb57a4e100448421c841bbd700ef"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-perimeter-hidden-1.png",
+      "sha256": "fe0c2c4b1b58c7a2190ac20674ffe0a5ee67d241545456de318409e820930106"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/diagnostic-perimeter-hidden-2.png",
+      "sha256": "fad259db76619d4f94a2bae0799afb1519e95e2cb2b42fad113437d854d26c50"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/restored-all-baseline-1.png",
+      "sha256": "8c773440248932193cc32e5a28b19e240052fb8cb2cbab8c9b58f4321c74b912"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2/restored-all-baseline-2.png",
+      "sha256": "e107901682d57bb465503f609146b423c97b488c2c5250bdbf63d7f9eff4bfa1"
+    }
+  ],
+  "findings": [
+    "All 11 actual natural-clock WPE430 diagnostic originals personally inspected separately at original resolution.",
+    "Untouched initial baseline clean in this run; legacy page mask:none samples 1 and3 clean, 2 and4 masked, so mask removal alone is insufficient.",
+    "Both restored-mask samples masked; both perimeter-SVG-hidden samples masked.",
+    "Final normal restored-baseline first clean, second masked. Runtime hashes unchanged and diagnostic style removed.",
+    "No isolated cause or acceptable runtime fix proved by this diagnostic."
+  ],
+  "qualification": "Diagnostic style interventions never release acceptance. No global clock pause or seeking, source substitution or forced repaint; browser closed after actual exit0."
+}

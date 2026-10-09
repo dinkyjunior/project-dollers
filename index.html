@@ -31,13 +31,16 @@
     <link rel="stylesheet" href="assets/nfl-dashboard-motion.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
-    <script src="assets/team-details.js?v=20261008-v1" defer></script>
+    <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
+    <script src="assets/team-details.js?v=matchup-20261009-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/nfl-dashboard.js?v=team-form-20261008-v1" defer></script>
-    <script src="assets/app.js?v=team-form-20261008-v1" defer></script>
+    <script src="assets/nfl-dashboard.js?v=matchup-20261009-v1" defer></script>
+    <script src="assets/app.js?v=matchup-20261009-v1" defer></script>
+    <script src="assets/matchup-breakdown.js?v=20261009-v1" defer></script>
+    <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
     <script src="assets/home-interactions.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
@@ -353,6 +356,11 @@
           <button data-td-action="sources"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#more"></use></svg><span>More</span></button>
         </nav>
         <footer class="td-footer" id="team-details-footer">Source-backed research · missing fields remain unavailable</footer>
+      </section>
+      <section class="page matchup-breakdown-page" data-page="matchup-breakdown" aria-label="NFL matchup breakdown" hidden>
+        <div class="page-scroll"><div class="matchup-breakdown-content" id="matchup-breakdown-content"><p class="notice">Loading verified matchup research…</p></div></div>
+        <nav class="bottom-nav mb-bottom-nav mb-framed" id="matchup-bottom-nav" aria-label="Matchup navigation"></nav>
+        <footer class="mb-footer" id="matchup-footer">Source-backed matchup research · missing fields remain unavailable</footer>
       </section>
     </main>
     <dialog id="about-dialog" aria-labelledby="about-title">

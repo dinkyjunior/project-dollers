@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-10-08T22:30:18.123984+00:00",
+  "qualification": "Coordinator observed actual read-only builder --check and actual subprocess exits for 16 matchup-data and 12 source-monitor tests before the subsequently identified starting-role contradiction fix. This is not acceptance of later source-role/data modifications or final browser QA.",
+  "commands": [
+    {
+      "command": "python3 scripts/refresh-matchup-breakdown.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py",
+      "exitCode": 0,
+      "tests": 16
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/source-monitor.test.py",
+      "exitCode": 0,
+      "tests": 5
+    },
+    {
+      "command": "python3 qa/source-updates.test.py",
+      "exitCode": 0,
+      "tests": 7
+    }
+  ],
+  "files": {
+    "scripts/refresh-matchup-breakdown.py": "5e305b97d028bfbcf7cae76aa27d1f38ef331262adb2786f057637a2d4676793",
+    "qa/matchup-breakdown/data.test.py": "f5c4a384c173f815205cb7872ad9f32d1d5554b66ef541a56601923482f4bc02",
+    "scripts/check-source-updates.py": "89c121d6c2d4b3ea48e9ad5e87ddb56dc9c30f159bd8fccbd06c1805a19a112c",
+    "qa/matchup-breakdown/source-monitor.test.py": "ed7ef057180f8239136f872ba6af2abe9f84a1b96605a32f1d00c5134c3c6377",
+    "qa/source-updates.test.py": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822",
+    ".github/workflows/refresh-nfl-data.yml": "db7cb2be9ec15810e48c0cb0f7ef5b8ab00ad942a26ef6a82674527d0e9b5cd1"
+  },
+  "snapshotSha256": "d3f4d371f49629fabd5cb84b3435c12f6cdd8ebb171c1bcfbb4f218a60dba019"
+}

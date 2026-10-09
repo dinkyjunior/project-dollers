@@ -1,0 +1,23 @@
+{
+  "status": "implementation-inventory-only",
+  "module": "assets/matchup-breakdown-motion.js",
+  "sha256": "e146343080831aa582e2bb6f7e32bd469164a44589a2ed0c914eb3f60c7771e8",
+  "bytes": 11969,
+  "scope": "Only newly authorized matchup-breakdown route; no Home/Steelers/Team Details code edits.",
+  "decoration": "Native SVG full chamfered panel perimeter, CSS opacity glints/breathing, low-opacity transform/opacity stadium reflections, native endpoint diamond scintillation. Every injected node is aria-hidden and pointer-events:none.",
+  "lifecycle": [
+    "Native reduced-motion CSS stops infinite hardware animation.",
+    "Page active/hidden/pagehide/pageshow lifecycle gates.",
+    "Actual clipping rectangles and native intersection/resize observers pause offscreen zones.",
+    "Native observed route/render DOM events reconcile changing frame sizes; unchanged dataset retains clock identity.",
+    "Empty nav is deliberately left undecorated until real controls exist."
+  ],
+  "performance": [
+    "No JS requestAnimationFrame animation loop or interval in motion module.",
+    "No clock seeking, virtual time, image upscaling, per-frame JS layout writes or interpolated facts.",
+    "All motion is native CSS; opacity/transform reflections and small SVG stroke dashoffset travelling highlights.",
+    "Mutation observer watches only childList/class/hidden; no self-triggering observation of its own data-state/viewBox/path updates.",
+    "Disconnected zones and stale animation references are pruned after rerender."
+  ],
+  "qualification": "Inventory is not visual acceptance or physical mobile/FPS certification. Actual browser motion, input and screenshot review receipts are required separately."
+}

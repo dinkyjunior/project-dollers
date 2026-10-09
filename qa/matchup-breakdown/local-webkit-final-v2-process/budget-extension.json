@@ -1,0 +1,43 @@
+{
+  "status": "completed-supervision-extension",
+  "extendedAt": "2026-10-09T01:04:00.292939+00:00",
+  "originalTimeoutSeconds": 1800,
+  "effectiveMaximumSeconds": 2400,
+  "actualDeadline": "2026-10-09T01:34:06.866992+00:00",
+  "childPid": 322160,
+  "childProcStartIdentity": "25347374",
+  "originalSupervisorPid": 322157,
+  "originalStartedReceipt": "qa/matchup-breakdown/local-webkit-final-v2-process/started.json",
+  "qualification": "Suspend only the original Python watchdog; the exact native Node/WebKit tests, browser clocks, motion, source, helpers and every assertion continue unchanged. A separate bounded watchdog supervises the child. Original supervisor resumes after the actual child exit to record its genuine Popen exit status. No failed/incomplete run is relabelled.",
+  "originalWatchdogSuspendedAt": "2026-10-09T01:04:00.293003+00:00",
+  "heartbeatAt": "2026-10-09T01:33:15.509082+00:00",
+  "childObservedExitedAt": "2026-10-09T01:36:15.085868+00:00",
+  "kernelRawExitCode": 0,
+  "actualKernelExitCode": 0,
+  "originalWatchdogResumedAt": "2026-10-09T01:36:15.085894+00:00",
+  "actualOriginalSupervisorExitReceipt": {
+    "startedAt": "2026-10-09T00:54:06.866992+00:00",
+    "command": [
+      "node",
+      "qa/matchup-breakdown/run.cjs",
+      "--engine",
+      "webkit",
+      "--mobile-only",
+      "--base",
+      "http://127.0.0.1:8876/project-dollers/",
+      "--output",
+      "qa/matchup-breakdown/local-webkit-final-v2"
+    ],
+    "output": "/workspace/project-dollers/qa/matchup-breakdown/local-webkit-final-v2",
+    "timeoutSeconds": 1800,
+    "status": "passed-qa",
+    "pid": 322160,
+    "exitCode": 0,
+    "qaReportStatus": "passed",
+    "qaReportCompletedAt": "2026-10-09T01:36:14.780Z",
+    "qaExitCode": 0,
+    "completedAt": "2026-10-09T01:36:15.227502+00:00",
+    "elapsedSeconds": 2528.36
+  },
+  "completedAt": "2026-10-09T01:36:16.086622+00:00"
+}

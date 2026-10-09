@@ -46,8 +46,10 @@
   };
   function openPage(id, writeHash = true) {
     const teamRoute = /^team\//i.test(id);
+    const matchupRoute = /^matchup\//i.test(id);
     const requestedRoute = id;
     if (teamRoute) id = 'team-details';
+    if (matchupRoute) id = 'matchup-breakdown';
     if (!pages.some(page => page.dataset.page === id)) id = 'home';
     const changed = document.querySelector('.page.active')?.dataset.page !== id;
     pages.forEach(page => {
@@ -59,8 +61,9 @@
       if (button.dataset.nav === (id === 'steelers' ? 'nfl' : id)) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');
     });
-    if (writeHash && location.hash !== `#${teamRoute ? requestedRoute : id}`) history.pushState(null, '', `#${teamRoute ? requestedRoute : id}`);
+    if (writeHash && location.hash !== `#${teamRoute || matchupRoute ? requestedRoute : id}`) history.pushState(null, '', `#${teamRoute || matchupRoute ? requestedRoute : id}`);
     if (teamRoute) window.PDTeamDetails?.route(requestedRoute);
+    if (matchupRoute) window.MatchupBreakdown?.route(requestedRoute);
     document.dispatchEvent(new CustomEvent('pd:route-change', {detail:{page:id}}));
   }
   function selectTab(type, value) {

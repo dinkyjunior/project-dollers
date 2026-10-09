@@ -1,0 +1,25 @@
+{
+  "status": "passed-static-review",
+  "auditedAt": "2026-10-09T01:26:32.610011+00:00",
+  "runtimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+  "snapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+  "preload": {
+    "path": "qa/matchup-breakdown/settle-native-dialog-close.cjs",
+    "sha256": "d415523de87fd632a0840b44abdcdd885883c85f81c33f82c172d3d40116777a"
+  },
+  "originalFreeze": {
+    "path": "qa/matchup-breakdown/reviews/qa-helper-final-freeze-v3.json",
+    "sha256": "add06183efec4739c44639d96780bed4d9e1419cd4c5ab4b6bf775de646f2bd7"
+  },
+  "originalAssertionHelperFilesIndependentlyUnchanged": 15,
+  "actualChromeRunningSourceManifestMatchesOriginalPlusPreload": true,
+  "actualWpeRunningSourceManifestMatchesOriginalWithoutPreload": true,
+  "observations": [
+    "The semantic wrapper only waits for a genuinely hidden matchup dialog to have the real application close handler finish setting view=null.",
+    "If a dialog is still open, the wrapper immediately calls the original semantic function; it does not hide dialogs, set state, modify expectations or suppress asserts.",
+    "The ten-second wait times out on a stuck close handler; it does not turn a failure into success.",
+    "All15 original assertion/helper bytes are unchanged; the preload hashes itself in the actual Chrome source.testFiles so provenance is complete.",
+    "No source substitution, API/DOM mutation, simulated clock or request rewrite is present."
+  ],
+  "qualification": "Static independence/scope audit only, not a completed browser or release acceptance. Chrome v6 actual exit1 remains preserved; fresh v7 must complete all assertions normally."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "observedAt": "2026-10-08T23:14:41.913928+00:00",
+  "qualification": "Coordinator actual successful commands observed via exec; supplemental to independent raw-source audit and native browser acceptance. No source responses or app files substituted.",
+  "checks": [
+    {
+      "command": "python3 scripts/refresh-data.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 scripts/refresh-team-details.py --check",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 qa/data.test.py",
+      "tests": 22,
+      "exitCode": 0
+    },
+    {
+      "command": "python3 qa/source-updates.test.py",
+      "tests": 7,
+      "exitCode": 0
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/source-monitor.test.py",
+      "tests": 5,
+      "exitCode": 0
+    },
+    {
+      "command": "node qa/matchup-breakdown/model.test.cjs",
+      "exitCode": 0
+    }
+  ],
+  "fileSha256": {
+    "assets/data/current.json": "723b45d95d0938205943c8e30fdc95875d964b77502f90c534d99c677949ac6c",
+    "assets/data/team-details.json": "9d05eef06503e756abfe12bec832a21669e9d146300a2d9bc35f0ad6dc852400",
+    "assets/data/matchup-breakdown.json": "b9dfc8f9d2665fa0b2601c2341c39a5efc9a39478708a9cd49bbd92e97a83290",
+    "scripts/check-source-updates.py": "89c121d6c2d4b3ea48e9ad5e87ddb56dc9c30f159bd8fccbd06c1805a19a112c",
+    "qa/data.test.py": "af436ed1c278a1a1e7617cffb6b32ed8d8da3e68ff6a9dbd34f9f1156d20583c",
+    "qa/source-updates.test.py": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822",
+    "qa/matchup-breakdown/source-monitor.test.py": "ed7ef057180f8239136f872ba6af2abe9f84a1b96605a32f1d00c5134c3c6377",
+    "qa/matchup-breakdown/model.test.cjs": "63a2379e507a55c85bdbe941a569d84ab3d16d7c5a1694043e382395f31b1352"
+  }
+}

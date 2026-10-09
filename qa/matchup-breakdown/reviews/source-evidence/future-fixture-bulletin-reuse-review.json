@@ -1,0 +1,118 @@
+{
+  "status": "verified-contextual-risk-requires-qualification",
+  "auditedAt": "2026-10-09T00:40:37.563194+00:00",
+  "method": "Independent exact preserved HTTP-response comparison, not production imports. Raw body/archive hashes rechecked. Current provider bulletin remains attributed; no future game-day availability inferred.",
+  "sources": [
+    {
+      "id": "espn_fixture_summary_401872980",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "retrievedAt": "2026-10-09T00:26:07Z",
+      "sha256": "c67a8d75e264036bfdca9fa6b2e2fd4fcbefc57bf7ba79a3dc0bc66bc6a1b604",
+      "bodyPath": "/workspace/recovery-qa/matchup-fresh-preview/qa/matchup-breakdown/data/sources/espn_fixture_summary_401872980.source.gz",
+      "httpStatus": 200,
+      "eventId": "401872980",
+      "week": 5,
+      "season": {
+        "year": 2026,
+        "current": true,
+        "type": 2
+      },
+      "kickoffUTC": "2026-10-09T00:15Z",
+      "eventStatus": {
+        "id": "2",
+        "name": "STATUS_IN_PROGRESS",
+        "state": "in",
+        "completed": false,
+        "description": "In Progress",
+        "detail": "10:51 - 1st Quarter",
+        "shortDetail": "10:51 - 1st",
+        "statusPrimary": "10:51",
+        "statusSecondary": "1st"
+      }
+    },
+    {
+      "id": "espn_fixture_summary_401873007",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873007",
+      "retrievedAt": "2026-10-09T00:26:07Z",
+      "sha256": "7e1eec198475288951125174f360b10bc355d5ceeb2251206be00415da79c2e0",
+      "bodyPath": "/workspace/recovery-qa/matchup-fresh-preview/qa/matchup-breakdown/data/sources/espn_fixture_summary_401873007.source.gz",
+      "httpStatus": 200,
+      "eventId": "401873007",
+      "week": 6,
+      "season": {
+        "year": 2026,
+        "current": true,
+        "type": 2
+      },
+      "kickoffUTC": "2026-10-19T00:20Z",
+      "eventStatus": {
+        "id": "1",
+        "name": "STATUS_SCHEDULED",
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Sun, October 18th at 8:20 PM EDT",
+        "shortDetail": "10/18 - 8:20 PM EDT"
+      }
+    }
+  ],
+  "identicalDallasInjuryRows": true,
+  "records": [
+    {
+      "espnId": "4362088",
+      "name": "DeMarvion Overshown",
+      "publishedAt": "2026-10-08T22:49Z",
+      "reportedStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      }
+    },
+    {
+      "espnId": "4384549",
+      "name": "Cobie Durant",
+      "publishedAt": "2026-10-08T22:49Z",
+      "reportedStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      }
+    },
+    {
+      "espnId": "4240608",
+      "name": "James Houston",
+      "publishedAt": "2026-10-08T22:49Z",
+      "reportedStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      }
+    },
+    {
+      "espnId": "4808759",
+      "name": "Camden Brown",
+      "publishedAt": "2026-10-08T22:49Z",
+      "reportedStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      }
+    },
+    {
+      "espnId": "4696203",
+      "name": "Ajani Cornelius",
+      "publishedAt": "2026-10-08T22:49Z",
+      "reportedStatus": "Out",
+      "fantasyStatus": {
+        "description": "INACTIVE",
+        "abbreviation": "INACTIVE",
+        "displayDescription": "Inactive"
+      }
+    }
+  ],
+  "finding": "Future Week 6 summary repeats exactly all five Dallas Oct 8 22:49 INACTIVE rows from the explicitly live Week 5 event. Header context alone cannot establish Week 6 game-day availability. Qualify as dated current-team bulletin, keep future event applicability/confirmed inactive unavailable and exclude this reused status from future QB selection."
+}

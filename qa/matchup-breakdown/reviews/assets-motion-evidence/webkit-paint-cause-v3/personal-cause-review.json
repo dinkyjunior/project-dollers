@@ -1,0 +1,52 @@
+{
+  "status": "combined-decoration-discriminant-pending-paint-safe-fix",
+  "at": "2026-10-09T00:24:16.807198+00:00",
+  "actualReport": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/results.json",
+  "actualReportSha256": "9bf0eb0fedc0af4b7c27be152bd6c96e61e7795fb4f5be89d342bf00e6ed984e",
+  "personallyViewedOriginals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/untouched-baseline.png",
+      "sha256": "a9d8cca4b6798ee5e2267e02cdbc29afcaf025c07f430200e2d41a19e32f8f5a"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-glints-hidden-1.png",
+      "sha256": "3a5bb1d7f7fed73e0c03bae50f7179e7342d722c96f74d9e9d70e022ccb7a3b0"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-glints-hidden-2.png",
+      "sha256": "459ecd04792dd1e3bbe0a8e386046a57c95498b6480b9d3a6f8b034af4421697"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-all-new-motion-hidden-1.png",
+      "sha256": "773c1c51b2ca4749b727ba6fd1b78d6fcebb3f9b1a42ad0ad3fc50837a33a025"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-all-new-motion-hidden-2.png",
+      "sha256": "96ffc3b829b5705647a8c0c2a5c86bdc16cf9136deafc714c9a8f107fd347882"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-frame-center-no-fill-1.png",
+      "sha256": "1f57a4af9e1256904c708fbda089f14178be48283697a0208856e308b64e9711"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/diagnostic-frame-center-no-fill-2.png",
+      "sha256": "091b3469af7942765e709d25b28456270e7952848d8159831a6c9e0673da8be1"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/restored-all-baseline-1.png",
+      "sha256": "945ade86f08ab2a107b38e323d94c8ac71372b8b5cb91a791e8419f2ffccbdd9"
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3/restored-all-baseline-2.png",
+      "sha256": "04b878761755e0d56fa2bf795e1bf2768f08f3c6b832be8c9363ce8e2e9fbcb5"
+    }
+  ],
+  "findings": [
+    "All nine exact natural-clock WPE430 diagnostic originals personally inspected separately at original resolution.",
+    "Untouched initial baseline and glints-only first image clean; glints-only second image masked.",
+    "Both all-new-motion-hidden images are clean. Explicit correction: my earlier message calling the first image masked was an incorrect personal reading; isolated reopened exact SHA773c1c51 is clean and QA independently agrees.",
+    "Removing only border-image center fill while restoring normal motion still produces masks; both restored-full-baseline samples are masked.",
+    "Combined decorations implicate native painting/compositing, but removing premium motion is not an acceptable implementation fix. Further separation diagnosis required."
+  ],
+  "qualification": "Explicit diagnostic interventions only, not release acceptance. Source/runtime hashes unchanged and every diagnostic style removed; actual browser completed exit0 and closed."
+}

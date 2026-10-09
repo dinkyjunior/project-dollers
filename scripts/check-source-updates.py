@@ -10,8 +10,10 @@ already connected provider webhook.
 import argparse
 import concurrent.futures
 import datetime as dt
+import hashlib
 import json
 from pathlib import Path
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -60,7 +62,28 @@ def allowed_source(url):
     parsed = urllib.parse.urlsplit(url)
     return (parsed.scheme == "https" and not parsed.username and not parsed.password
             and ((parsed.hostname == "github.com" and parsed.path.startswith("/nflverse/nflverse-data/releases/download/"))
-                 or (parsed.hostname == "raw.githubusercontent.com" and parsed.path == "/nflverse/nfldata/master/data/games.csv")))
+                 or (parsed.hostname == "raw.githubusercontent.com" and parsed.path == "/nflverse/nfldata/master/data/games.csv")
+                 or (parsed.hostname == "site.api.espn.com" and not parsed.fragment
+                     and ((not parsed.query and re.fullmatch(r"/apis/site/v2/sports/football/nfl/teams/[a-z0-9]+/(roster|depthcharts)", parsed.path))
+                          or (parsed.path == "/apis/site/v2/sports/football/nfl/summary"
+                              and re.fullmatch(r"event=[0-9]+", parsed.query))))))
+
+
+def monitored_sources(snapshot, matchup=None):
+    """Watch current research releases as well as the six core contracts."""
+    core_ids = {"nflverse_games", "nflverse_teams", "nflverse_roster", "nflverse_player_stats", "nflverse_depth", "nflverse_injuries"}
+    sources = [item for item in snapshot["sources"] if item["id"] in core_ids]
+    if len(sources) != 6 or {item["id"] for item in sources} != core_ids:
+        raise ValueError("Expected the six replaceable current NFL source contracts")
+    seen = {item["id"] for item in sources}
+    for item in (matchup or {}).get("sources", []):
+        if item.get("watch") is not True or item.get("season") != snapshot.get("season") or item["id"] in seen:
+            continue
+        if not allowed_source(item["url"]):
+            raise ValueError("Unexpected current matchup source URL")
+        seen.add(item["id"])
+        sources.append(item)
+    return sources
 
 
 def check_source(source, opener=urllib.request.urlopen):
@@ -74,21 +97,38 @@ def check_source(source, opener=urllib.request.urlopen):
         headers["If-None-Match"] = source["etag"]
     elif source.get("lastModified"):
         headers["If-Modified-Since"] = source["lastModified"]
-    request = urllib.request.Request(source["url"], method="HEAD", headers=headers)
+    # These public roster/depth/event JSON bodies do not consistently expose
+    # validators. Compare genuine GET bytes with the prior verified hash; never
+    # use HEAD's absence of a validator as evidence that injury data is current.
+    content_check = urllib.parse.urlsplit(source["url"]).hostname == "site.api.espn.com"
+    request = urllib.request.Request(source["url"], method="GET" if content_check else "HEAD", headers=headers)
     try:
         with opener(request, timeout=35) as response:
             status = response.status
             etag = response.headers.get("ETag")
             modified = response.headers.get("Last-Modified")
+            length = response.headers.get("Content-Length")
+            encoding = response.headers.get("Content-Encoding")
+            body = response.read(8 * 1024 * 1024 + 1) if content_check else None
         # HEAD returns headers only; this avoids downloading the 56 MB depth
         # chart or re-fetching the historical CSV archive on every invocation.
         result.update({"httpStatus": status, "etag": etag, "lastModified": modified, "status": "available"})
-        if source.get("status") != "verified":
+        if content_check:
+            if status != 200 or not body or len(body) > 8 * 1024 * 1024:
+                raise ValueError("Invalid or oversized public NFL JSON response")
+            if not isinstance(json.loads(body), dict):
+                raise ValueError("Public NFL response must be a JSON object")
+            digest = hashlib.sha256(body).hexdigest()
+            result.update(contentSha256=digest, responseBytes=len(body), changed=source.get("status") != "verified" or source.get("sha256") != digest,
+                          reason="Compared current public JSON bytes with prior verified source hash")
+        elif source.get("status") != "verified":
             result.update({"changed": True, "reason": "Previously unavailable source is available"})
         elif source.get("etag") and etag:
             result.update({"changed": source["etag"] != etag, "reason": "Compared entity tags"})
         elif source.get("lastModified") and modified:
             result.update({"changed": source["lastModified"] != modified, "reason": "Compared source modification timestamps"})
+        elif not encoding and length and str(length).isdigit() and source.get("bytes") and int(length) != source["bytes"]:
+            result.update(contentLength=int(length), changed=True, reason="Published source byte length changed; full hash-verified fetch required")
         else:
             result.update({"status": "unknown", "reason": "No comparable validator; use the six-hour full-fetch safety interval"})
         return result
@@ -132,12 +172,11 @@ def main():
     if not eligible and not args.force:
         result = {"checkedAt": iso(now), "shouldRefresh": False, "checks": [], "cadenceReason": reason}
     else:
-        # Only current sources are watched. Historical statistics are loaded
-        # once into the independently validated player-history bundle.
-        sources = [item for item in snapshot["sources"] if item["id"] in {
-            "nflverse_games", "nflverse_teams", "nflverse_roster", "nflverse_player_stats", "nflverse_depth", "nflverse_injuries"}]
-        if len(sources) != 6:
-            raise ValueError("Expected the six replaceable current NFL source contracts")
+        # Archival releases stay cached. Current PBP/snaps and small ESPN
+        # roster/depth sources can trigger the same atomic validated rebuild.
+        matchup_path = ROOT / "assets/data/matchup-breakdown.json"
+        matchup = json.loads(matchup_path.read_text()) if matchup_path.exists() else None
+        sources = monitored_sources(snapshot, matchup)
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
             checks = list(pool.map(check_source, sources))
         result = {**decision(snapshot, checks, now, args.force), "cadenceReason": reason}

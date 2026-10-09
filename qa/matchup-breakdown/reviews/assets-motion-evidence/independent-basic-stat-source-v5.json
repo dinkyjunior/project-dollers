@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "datasetSha256": "7257dd9d55ec7b62c91c42b2505bb5c32a0f0edf1c31c3b693c64bac69c2e97c",
+  "sourceBodies": [
+    {
+      "file": "qa/matchup-breakdown/reviews/source-evidence/nflverse-stats-2025.csv",
+      "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+      "retrievedAt": "2026-10-08T21:58:41.110496+00:00",
+      "verifiedHTTP": 200
+    },
+    {
+      "file": "qa/matchup-breakdown/reviews/source-evidence/nflverse-stats-2026.csv",
+      "sha256": "7c95b7db99eac0091c6646264ca4a6f4da080a0569935d2e61cbe15a1f4dfa40",
+      "retrievedAt": "2026-10-08T21:58:41.109205+00:00",
+      "verifiedHTTP": 200
+    }
+  ],
+  "clubs": [
+    "DAL",
+    "TB"
+  ],
+  "window": "Last five final regular-season team games, cross-season",
+  "actualGameIds": {
+    "DAL": [
+      "2026_04_DAL_HOU",
+      "2026_03_BAL_DAL",
+      "2026_02_WAS_DAL",
+      "2026_01_DAL_NYG",
+      "2025_18_DAL_NYG"
+    ],
+    "TB": [
+      "2026_04_GB_TB",
+      "2026_03_MIN_TB",
+      "2026_02_CLE_TB",
+      "2026_01_TB_CIN",
+      "2025_18_CAR_TB"
+    ]
+  },
+  "checkedBasicNumericCells": 1525,
+  "playersWithKnownCheckedStatistics": 30,
+  "semanticNormalization": "Only sackYardsLost: absolute magnitude of provider negative sack_yards_lost delta. Every other count/yard field retains exact source sign.",
+  "qualification": "Known basic passing/rushing/receiving cells independently matched separately fetched unmodified CSV bodies and strict-TLS HTTP receipts. This spot check does not establish advanced tracking, starts, inactives, absent appearances, all filters or external source freshness beyond the recorded retrieval times."
+}

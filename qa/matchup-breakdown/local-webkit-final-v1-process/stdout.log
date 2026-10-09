@@ -1,0 +1,31 @@
+PROGRESS webkit 393 home-captured
+PROGRESS webkit 393 original-normal-and-full-content-captures-complete
+PROGRESS webkit 393 all-three-tab-original-captures-complete
+PROGRESS webkit 393 controls-initial-source-values
+PROGRESS webkit 393 controls-input-20
+PROGRESS webkit 393 controls-filters-window-3
+PROGRESS webkit 393 controls-input-40
+PROGRESS webkit 393 controls-filters-window-5
+PROGRESS webkit 393 controls-input-80
+PROGRESS webkit 393 controls-filters-window-10
+/workspace/project-dollers/node_modules/playwright-core/lib/server/webkit/wkConnection.js:100
+      this._callbacks.set(id, { resolve, reject, error: new import_protocolError.ProtocolError("error", method) });
+                                                        ^
+
+ProtocolError
+    at /workspace/project-dollers/node_modules/playwright-core/lib/server/webkit/wkConnection.js:100:57
+    at new Promise (<anonymous>)
+    at WKSession.send (/workspace/project-dollers/node_modules/playwright-core/lib/server/webkit/wkConnection.js:99:12)
+    at WKPage.bringToFront (/workspace/project-dollers/node_modules/playwright-core/lib/server/webkit/wkPage.js:650:28)
+    at Page.bringToFront (/workspace/project-dollers/node_modules/playwright-core/lib/server/page.js:451:25)
+    at PageDispatcher.bringToFront (/workspace/project-dollers/node_modules/playwright-core/lib/server/dispatchers/pageDispatcher.js:270:36)
+    at /workspace/project-dollers/node_modules/playwright-core/lib/server/dispatchers/dispatcher.js:91:61
+    at ProgressController.run (/workspace/project-dollers/node_modules/playwright-core/lib/server/progress.js:98:28)
+    at PageDispatcher._runCommand (/workspace/project-dollers/node_modules/playwright-core/lib/server/dispatchers/dispatcher.js:91:31)
+    at DispatcherConnection.dispatch (/workspace/project-dollers/node_modules/playwright-core/lib/server/dispatchers/dispatcher.js:325:39) {
+  type: 'closed',
+  method: 'Target.activate',
+  logs: undefined
+}
+
+Node.js v24.19.0

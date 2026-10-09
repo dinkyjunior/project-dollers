@@ -298,6 +298,17 @@
         window.PDTeamDetails?.enter(button.dataset.team);
         return;
       }
+      if (action === 'team-form' && window.PDTeamDetails) {
+        window.PDTeamDetails.enter('PIT');
+        return;
+      }
+      if (['matchup','compare'].includes(action) && window.MatchupBreakdown) {
+        const fixture = context.data.weeks?.[state.week]?.fixture;
+        if (fixture) {
+          window.MatchupBreakdown.enter('PIT',fixture.id || fixture.game_id,action === 'compare' ? 'form' : 'players');
+          return;
+        }
+      }
       if (button.dataset.conference) { state.conference = button.dataset.conference; state.nflDivision = 'all'; }
       else if (button.hasAttribute('data-standings-toggle')) state.standingsExpanded = !state.standingsExpanded;
       else if (action === 'team') state.nflExpandedTeam = state.nflExpandedTeam === button.dataset.team ? null : button.dataset.team;

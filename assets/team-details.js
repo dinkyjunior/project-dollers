@@ -228,6 +228,10 @@
     else if (action === 'continue') { state.tab = 'players'; writeRoute(); render(); $('team-tab-players')?.scrollIntoView({block:'start',behavior:'auto'}); $('team-tab-players')?.focus({preventScroll:true}); }
     else if (action === 'insights') { state.tab = 'form'; writeRoute(); render(); $('team-form-snapshot')?.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
     else if (action === 'refresh' || action === 'retry') refresh(true);
+    else if (action === 'matchup' && window.MatchupBreakdown) {
+      if ($('team-details-dialog')?.open) $('team-details-dialog').close();
+      window.MatchupBreakdown.enter(state.team,button.dataset.game);
+    }
     else if (action && ['matchup','schedule','venues','report','sources'].includes(action)) show(action,button.dataset.game,button);
   });
   document.addEventListener('toggle',event => {

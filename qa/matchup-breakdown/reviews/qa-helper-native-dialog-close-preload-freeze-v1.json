@@ -1,0 +1,37 @@
+{
+  "status": "frozen-read-only-native-close-completion-preload",
+  "at": "2026-10-09T01:20:52.017221+00:00",
+  "runtimeManifestSha256": "82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee",
+  "originalHelperFreeze": {
+    "path": "qa/matchup-breakdown/reviews/qa-helper-final-freeze-v3.json",
+    "sha256": "add06183efec4739c44639d96780bed4d9e1419cd4c5ab4b6bf775de646f2bd7"
+  },
+  "newPreload": {
+    "path": "qa/matchup-breakdown/settle-native-dialog-close.cjs",
+    "sha256": "d415523de87fd632a0840b44abdcdd885883c85f81c33f82c172d3d40116777a"
+  },
+  "qualification": "Actual forty-cycle Chromium diagnostic found twelve queued genuine native dialog close events: dialog.hidden before real API view reset. Preload adds only a read-only wait for the actual closed-dialog getState().view=null before semantic snapshots. Original15 helpers,235 runtimefiles, all685 nativeactions/data/window/null/source/geometry/unchanged-feed assertions and capturecode remain unchanged. No application state, DOM, clocks, request or expected-source substitution. Existing ongoing WebKit uses original15; newChromium explicitly hashes preload in source.testFiles.",
+  "literalLaunchEnvironment": {
+    "NODE_OPTIONS": "--require=/workspace/project-dollers/qa/matchup-breakdown/settle-native-dialog-close.cjs"
+  },
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/run-durable.py",
+    "--timeout",
+    "2400",
+    "--",
+    "node",
+    "qa/matchup-breakdown/run.cjs",
+    "--engine",
+    "chromium",
+    "--base",
+    "http://127.0.0.1:8876/project-dollers/",
+    "--output",
+    "qa/matchup-breakdown/local-chromium-final-v7"
+  ],
+  "previousRun": {
+    "path": "qa/matchup-breakdown/local-chromium-final-v6/results.json",
+    "sha256": "1a4e86c5f597a48cf5b825ccac7894b13d8c992ad05eb01fc692cdb7c31bcf90",
+    "status": "failed"
+  }
+}

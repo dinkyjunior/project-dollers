@@ -1,0 +1,46 @@
+{
+  "status": "deterministic-raster-contradiction-corrects-personal-mask-classification",
+  "at": "2026-10-09T00:46:30.109838+00:00",
+  "actualReport": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/results.json",
+  "actualReportSha256": "c0b79b1020ec96724a33e7b6876a411d69eafa2b1560afdabf8adfe4752f4c1f",
+  "originals": [
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-1.png",
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBoxFromFirst": null
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-2.png",
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBoxFromFirst": null
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-3.png",
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBoxFromFirst": null
+    },
+    {
+      "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-4.png",
+      "sha256": "ecb7008aaf55b0088faaa84e2f18cbcdd111c04dc84498b931feeb2301564bd7",
+      "pixelDifferenceBBoxFromFirst": null
+    }
+  ],
+  "viewImageDataUrlsEqualForFirstAndSecond": true,
+  "nativeReduced": true,
+  "ocr": {
+    "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5/actual-reduced-motion-1.txt",
+    "sha256": "8b87c5ffeb2cbadecd5387b13dd47f699a594f1bf1332e29e350dadd9e41f666",
+    "method": "tesseract5 psm11 OMP_THREAD_LIMIT1 actual untouched PNG, no synthetic substitution",
+    "fullGlyphStringsFound": {
+      "NFL": true,
+      "UPCOMING GAME": true,
+      "J. Williams": true,
+      "D. Prescott": true,
+      "B. Irving": true,
+      "CHRIS GODWIN JR.": true,
+      "Home": true
+    }
+  },
+  "correction": "All four captured PNGs are byte-identical and pixel-identical. It is impossible for native first pixels to be masked while the other three are clear. My earlier personal masked/clean distinction is invalid and explicitly retracted. OCR reads complete initials, breadcrumb and Home text in the same actual PNG, contradicting those asserted missing glyphs. Stop speculative product fixes absent corroborated raster evidence.",
+  "qualification": "OCR is supporting glyph-presence evidence, not proof of exact design fidelity, universal reading contrast, physical Safari performance or numerical data. All actual originals preserved; no browser/backend/runtime change."
+}
