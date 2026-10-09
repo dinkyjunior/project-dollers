@@ -1,0 +1,727 @@
+{
+  "status": "passed",
+  "auditedAt": "2026-10-09T07:05:35.084984+00:00",
+  "agent": "/root/home_gem_controls_audit",
+  "beforeCommit": "f1e5c56181c613805854cc088965b8754e717cc2",
+  "intermediateCommit": "5144cd67d0b4a002eed44122f56280942fb22eba",
+  "preservedIncomingCommit": "1b7679f8c259e811b53d966768ae2abaf2b818e4",
+  "scope": "Combined bounded immutable f1 -> 5144 -> 1b source review; actual worktree is latest 1b, every nondata runtime file matches reviewed a99b Home; no updater/browser/runtime mutations.",
+  "snapshotHashes": {
+    "before": {
+      "current.json": "4c138757a880b8ccb032ec41797e68a13aa0191c7121fa22c13f53f30cc30301",
+      "provenance.json": "158b2800f4b8c1b077daccc29455803d69eb1c84705fd4fc0015e708ff22e353",
+      "player-history.json": "1a32f231d8efe3bbb7ae4327b325b566b5d4ff53d8a952c3b248bb122977441c",
+      "team-details.json": "06d2313eab51a6af7bf117e17d4debe0f3fc8e7b39c4e4b9a08f6a7049db639f",
+      "matchup-breakdown.json": "8c336a2b4e1cd1cb9ac9dd91ccc73ff51a331a8ec50db42609045d3e06b3a5e6"
+    },
+    "intermediate": {
+      "current.json": "e03c534f864ee2da30ce7ea06197993f8bb94384592eea94a65d2e63b0d97681",
+      "provenance.json": "8460908c0f3b2e6ed63b0a4d433f55f650ec8060ea1bfbb4bbc900c306a33dce",
+      "player-history.json": "7238605c3ed3df098d442c2eacaca1a10277d10b8e87aa1401d7dd05eef9131d",
+      "team-details.json": "bbd603ec3732586d3666cd47427de5309d8f1b4246a58e70ef349bfb94201ec4",
+      "matchup-breakdown.json": "12c85e15e3cba151c79f88c412222208dbae6a257e38bc2d4413f13752acc3d3"
+    },
+    "incoming": {
+      "current.json": "df5354d3ceb9e1421da31ebd167620ceb906cb7e179da93ec112d13f3d1c90a2",
+      "provenance.json": "c440766aa01bd88b094d617e0038b1fba5adfae6f2a05157a8d01f10cb72da9a",
+      "player-history.json": "bb30c0902cfbee754f64f84562b206396fe3710e9f6296133e707f83cf5afa30",
+      "team-details.json": "cdf62a8545652d75e02f3f12f3c288b0e47a3aea3e7fd3560f91a9d94a8f7c78",
+      "matchup-breakdown.json": "658531a24c943d4222c7a1c52d3dc5baa4242e7f169f9edefc6d2edf3f6e268c"
+    }
+  },
+  "snapshotSha256": "658531a24c943d4222c7a1c52d3dc5baa4242e7f169f9edefc6d2edf3f6e268c",
+  "runtimeManifestSha256": "c9407130820cbd39d9aed62818e26b8881d166de7c2e6f30b358b4da793fea67",
+  "priorSourceReview": {
+    "path": "qa/home-gem/reviews/source-integration-5144-review-v2.json",
+    "sha256": "244ca5e930a1555d499222ff3ab3d14cbda46ab7627fbd4c424e94cd0ddfb8ed",
+    "assertions": 6054,
+    "preservedSummary": "One independently corroborated DAL cut; seven source jersey corrections and three roster statuses; newly available weekly practice evidence; seven independently corroborated DAL depth ranks. All retained numerical football facts and projections preserved."
+  },
+  "delta5144ToCurrent": {
+    "rawRecursiveChanges": 22327,
+    "rawChangesSha256": "f1faa4cd67a2a7a3c508cb2684579154ba94eaa8c55bd8d4094f13cd6fb20adb",
+    "remainingNormalizedChanges": [
+      {
+        "path": "current.json/playerHistory/currentSourceHashes/nflverse_games",
+        "before": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+        "after": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+        "kind": "scalar"
+      },
+      {
+        "path": "player-history.json/currentSourceHashes/nflverse_games",
+        "before": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+        "after": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+        "kind": "scalar"
+      }
+    ],
+    "sameEventSourceAliases": {
+      "espn_fixture_summary_401872980": "espn_matchup_summary_401872980"
+    },
+    "sourceBodyHashChanges": [
+      {
+        "sourceId": "espn_fixture_summary_401872980",
+        "beforeSha256": "435e52912ffd3f3704a1143bd4ee6f259bd57f0c3b5f976e275db16848f10f0b",
+        "afterSha256": "100f47252f16c9c8382b74e86959a616e3df774d94ae1ad8666568c2d95deb92",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872981",
+        "beforeSha256": "dec7d88dfcb8af7e77f86443d57fe39cfb8fe258fabd52fc6fb65d4216a364d9",
+        "afterSha256": "96f8cebf442ad9081d1cedd4811ba18e7a1fd08266a0fb7b9c9b0c66e25142bf",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872982",
+        "beforeSha256": "2c03d59cd7214a698fc447ecdfe0870c3a1260beee12fcbd13f45de2288ab8f4",
+        "afterSha256": "9e68dd9abe134e63c783efda0caa8b7e5541c8a42fa89ff9f88f4d486533fb37",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872983",
+        "beforeSha256": "0be7f4986a6594dd4d5f5cd24c94f4111b937c17841af2839c5a0f5febe865c7",
+        "afterSha256": "d9c37123823ddf0f953e0ae696eeb6470051860d41e326f9ddef7c4fc86c7145",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872984",
+        "beforeSha256": "f0dfc3e40e0d3f5db23f16f2793addc318b18ea7a5262494fe4f3a7ece3d71f0",
+        "afterSha256": "a8fa206901d349ecf8d62ecb6ba85219789151ba49307bedf1becdb4001c4f1e",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872985",
+        "beforeSha256": "2900d98027ae00031e295cce18123315c978172a471f686778a5c8589995cd16",
+        "afterSha256": "c9ba0cebc1cdc9775c150e93b5a03fe4a780d1179d039d62f20d57c97fac5775",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872986",
+        "beforeSha256": "17348f0283202aeb22ab3b273242c17b1d46bee33f3583b9ada524a04b7c15bd",
+        "afterSha256": "89a8727e027b74792ccb815f08459c605792e29ce89acfc535c31aca65e8aa6a",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872987",
+        "beforeSha256": "54a98dcbcde78482f35ac34f4eacc7acdb3a6dc5da2374b8ff42151659aaee25",
+        "afterSha256": "8493096f7f8c12b680fdd47e83d6f50f793502177f1f20ac91dad65fbf59a2cd",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872988",
+        "beforeSha256": "5b5ed30adb14be79467c71f49ee3c6a6429c35ebdec0b3c03509f75bae81694d",
+        "afterSha256": "0756cd71470f4cad299219d789c36a8f09cc4a617dc540798ef25274f20c61a2",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872989",
+        "beforeSha256": "e775d6bd4789a51b59677af662b06f4c69e34c9ab599596bf6b1aff3df7f2e21",
+        "afterSha256": "ebc6a7aae6c1068addb307752cfae587829f817f6351af9b7c610d5f2d53ff8b",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872990",
+        "beforeSha256": "5a9f63ee0eb009efbec796405352d48a0dada5fa4679e50b71a421073a1cb382",
+        "afterSha256": "d5efedea094f7a69ea74d42a42c2959b52690bdaf2c1eeb56ae738cbadbdaa03",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872991",
+        "beforeSha256": "38bca0b20d5365170c8875523e25ea6c4b50a6c2b1967cf29c179c1076192919",
+        "afterSha256": "b33592b60edcfe4f23a01aa765d79ebfead55336f43437b2086561ac8303ed38",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872992",
+        "beforeSha256": "4b12f96c2c9bfe7bd5244cb70a99ec50074a53f949cfe7b68a537648a549d6d8",
+        "afterSha256": "e5abe80e9b08e6e53fdf2705143ff229bd961cde919197f430dfaf3c38865501",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872993",
+        "beforeSha256": "7947cfdaa83a977771cf7baaf1337a8ea3d9d5ce57d5846442ad3843dc3a3666",
+        "afterSha256": "3d5b8058a14ce753e66bc6827d7ff252c44db33390b2257c450989933ea181d5",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872994",
+        "beforeSha256": "67d63467526a550c8bc50220c52a23fa9f5a3fdfdde78f9a2ee3e7071c8778bc",
+        "afterSha256": "4509b4956f9272f023fc2b955f59d399048e3393ea0f33476876b84517a58fb3",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401872998",
+        "beforeSha256": "bf7b8c95fdcc7918f6f3b8c1d1beb59e88ad89779685ca7b58a580c1590104dc",
+        "afterSha256": "14f09b4b3a585e98b4f9a22e967b337a4fb89d14d9cf9b65c175bceeea9178e7",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401873002",
+        "beforeSha256": "83da658b194a512e03db2244382ae3be7df0f8ae8026e10b36ffe568bc54655c",
+        "afterSha256": "da2ec6cf74bcd21a60d735abc32089b9c663a95b13b236b8d56d83cc9c7e4edb",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401873006",
+        "beforeSha256": "40a3a11ae047ab911112c6839787a63b38861d42b473fb5f3518b5626bff11e0",
+        "afterSha256": "03e90c2dc9db47b2d5e0e4a27cf0ac96fc948eb30f6a5206bdc2fd0d55ae5798",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_fixture_summary_401873007",
+        "beforeSha256": "c6d40546f2849a0d35ae9347216bf0e56f104998b962592453580103b9a3c14e",
+        "afterSha256": "f2a141b96802fe0e5735ddbe628446a6e099c1470b73afebfe752b13704c60d7",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_matchup_depth_DAL",
+        "beforeSha256": "0436c906378973706042c733e342d52ebe6611217817eedc79c1479e8b3bd026",
+        "afterSha256": "b0fce4610c6d03ef70663973530e949dc46726988f2d276ec6be07878d9a2f07",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_depth_PIT",
+        "beforeSha256": "904272ebe3ba05d07d1b7b359f77939de11a4228f748b2267fedb006c86c1a79",
+        "afterSha256": "1e27810f3ce987e5180c61d308d5ce3bd123d99af50dd0e4d62824c0ab34f9cd",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_depth_TB",
+        "beforeSha256": "a5e43de52db87c854a8c2ccfe89b7a37bc28fc0ca667c3c280fb61259797a054",
+        "afterSha256": "24c0f260a44718d225426ef1b04c9b4ea37f87e3390a34432bbd8446ae52630c",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_roster_DAL",
+        "beforeSha256": "431836ed3b354fc8467a90ee025a3073ae30d6d40ad472ec320c19913124191c",
+        "afterSha256": "006e6ff4972e8708c73ea608da0bbcd7f772872848fb8596b85bd59ad9631d42",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_roster_PIT",
+        "beforeSha256": "9c552a30a9d6c7932a4c9637ff562fcf4c8a5e66f1a59f4c31265537f60344f5",
+        "afterSha256": "364e69e9759d93403a1670a79c4616dc3168a599fac3e7a43e968229dbed07fe",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_roster_TB",
+        "beforeSha256": "2189def998df8263f4b181c83c21b7d6548a7c05b10fb38fb4c65bd60978b002",
+        "afterSha256": "39c65e4be79efd835ce17d92abb9277fe142363f370fac4cb65a946d53d6b21d",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401772960",
+        "beforeSha256": "31284fa85ea5fef866c3942286e92c938b00361aaf0ffd43b06e4c2b0cbb8808",
+        "afterSha256": "36183211e10c7fdfff09b33a4ca7fc5e5514cb9c1071b231f881954f3507057e",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872658",
+        "beforeSha256": "35bca79edad5a2b055fbe5d3d498e23312bcf19b8c9f0d24c89161226f4eb789",
+        "afterSha256": "c64838985717985e86db51b0df7687a7a7c16e6284bc34f7c83ec508a769467b",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872925",
+        "beforeSha256": "a1ce08c6fe9ee80fa70deb2d124557fe54af37b4cdfeaa1f3a2d585315ce09be",
+        "afterSha256": "01222d42c6ebf38ab489e89bbfa1b667e4ef309ec39aa881f8182612b045aff0",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872930",
+        "beforeSha256": "29c81d4e5fb13c1380dc54f9d022d17b01c5ab26db404358e2ff5ed92f245eb8",
+        "afterSha256": "9c90e3887358a481268491124c74a4517fc7e4a9ae2ab0b93e8a55fc78435576",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872935",
+        "beforeSha256": "c2ea6eacb9adc32248c2b299114ca492a7b4fdfb6ff3c11e5ff244a2ac1bd8da",
+        "afterSha256": "c6f53ea6329a54b2de71a705786a9c7d7000c14779e240ef0bba0c8937c02d7e",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872944",
+        "beforeSha256": "ca629d7695f2e7e15c050ea33b5b98a13e949c9b6ef01d9c3d220df92ef14411",
+        "afterSha256": "96ba27230a0d396f75b110715ca963527a211a14768d5965307c4ad63cc33905",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872946",
+        "beforeSha256": "492e5c860e1b1e7b482b189e88623059941a9034863e127352acd5d11b9c5c0d",
+        "afterSha256": "022af5d22e93d11b892cfbc36ec8b5ba56dc93d8ce6fbd96142ca1e5514ad2d0",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872950",
+        "beforeSha256": "9f6520f4cb1338addfa192e3e95c2902a4a5a7c9edffc6e30a51c118f975ab32",
+        "afterSha256": "a393348e262be0364fd196b2f543e0b76e20562142b2d2191fea08b75404db7a",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872959",
+        "beforeSha256": "beab85515ac6b71388bce060ec0e470a0f18fec503ac90266accb5ce40668796",
+        "afterSha256": "08e3928d874fdc13d2237bd637472bdfb76c62445f051c14cbb2a93a5f6cf8ed",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872960",
+        "beforeSha256": "6f1bdff0e4037da77b3f7831cc4b975beee80c26f7ef41c22813ddd6737a5bab",
+        "afterSha256": "8dfcef4314a1a59b365c10d5d3d21fb598a310bf00b562bc1733f049a8b66f50",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872964",
+        "beforeSha256": "c6f2894fdecde0cc7488180432babf9ba1b48b74586934056852add324b29e42",
+        "afterSha256": "4f7590f8ce1abb68cc9b3c2cc0fec5a0cc0449aba11a6a74aaa481d0ad4bc20d",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872967",
+        "beforeSha256": "90c7fc29c63ef545df22b1081978f807438d49fccdcbd7b05d97c617d1c3ce48",
+        "afterSha256": "1956ca4c5785e357ffb71637d8dc9121e2d629ec684d2c44e27aa2dbbc7ae89c",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872968",
+        "beforeSha256": "1d4c90d7966928de2580f7f0336a0dc13531418b3c3c896c0fdd52c3368ef841",
+        "afterSha256": "88b6f00c92eb63ea850d325dabfacad6f495a9af4caae133a6cf75e833ec9d0d",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_matchup_summary_401872980",
+        "beforeSha256": "435e52912ffd3f3704a1143bd4ee6f259bd57f0c3b5f976e275db16848f10f0b",
+        "afterSha256": "100f47252f16c9c8382b74e86959a616e3df774d94ae1ad8666568c2d95deb92",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:45Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401437849",
+        "beforeSha256": "3c7e6a86544d86b955a25481e37b8a859c2e33e6e7e6217bd572ff501c2b332e",
+        "afterSha256": "d0d3a3d04402cee92008152e6eda1f25f2bb5424f43d9e987562699ad3cfaba3",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671601",
+        "beforeSha256": "c462ac6ebe591266cfca8dfa8300e1a158dea5d0132976d00a7961dd84ee5e17",
+        "afterSha256": "6b0b6efd18ac6a2b138271cb50f1bb5a9c2a1c68324b0816106ff53d9824a06c",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671651",
+        "beforeSha256": "1226a123cd586c4a2ef8e7186ae14b61f07d7b89fd53f3fb8042471561702ab4",
+        "afterSha256": "56e0b7e22eaf615c8ee2b450085301b76b37aa6fcf924f3e0863ae8e624a7b15",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671654",
+        "beforeSha256": "8d1bb63f751659fec7c037d3a30960fcbff2fe4212ddd09fcb1ffbb35b59ef4d",
+        "afterSha256": "15f451a0e8c19461e52bfd8d6ab2bc5fedefee3b97c4a232163faf2ad0b31b22",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671671",
+        "beforeSha256": "2633c16c38608cb211e52f74eb7ab7f999d888b552e01ea09467432b0f475ce6",
+        "afterSha256": "638d2426d991933f0ea966e3adab65f769dd3089e04f3260bf7f5b2231fc9669",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671692",
+        "beforeSha256": "6b4c06d9920957a0b1d505966ffb9c8c0492b08902c9276efc9c110855e61867",
+        "afterSha256": "2a9ad0189c4a13658f9f0bcac64c211895849dbd23ad43aa2490f4760c9b06f3",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671697",
+        "beforeSha256": "a37a946ef6aabb7551e6693b8065632d0cb8ac1eb637a272e003f7087dc5a852",
+        "afterSha256": "a2a5ad9f05744af127f9ae7b6a8c5b807c9033d9965c00a901686e05315e7524",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671713",
+        "beforeSha256": "c01d4db2607d19f0aedf88c54d6b676216743e05791f71ea9eaecb5d07b8f16b",
+        "afterSha256": "b1443b7f4e546e00df45f065401580dc08520ce71cdf067bac88dcc6cd9e4ebe",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671729",
+        "beforeSha256": "dfc481c55eb9710007e75fc7d031eb4b240cb5840aa11868d0db0bd038cd6386",
+        "afterSha256": "c446be5b050c14af7fa1d5e241688fbe9c2b9c33335b403dc71082d385ecb674",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671738",
+        "beforeSha256": "5628bc2c1532617304b2b3d037497232fef61ce1a4617d3227ddcf48ce94c20f",
+        "afterSha256": "10f65b23a56f791b5037f046bf82bf0c96dd986bb0ad71363c7810e72aa805d6",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671752",
+        "beforeSha256": "0c9306aaf8b28a2aea715d4dcedc84a319e1e0800707f07843bb65b2d9478dbc",
+        "afterSha256": "20eabcadda8dd5545ad7da4fc7554853134a1149388093cc327dfa80919b1160",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671803",
+        "beforeSha256": "35e1791ab6bbe7c4d2d2820cdbf212d37db7591b27eedb7d770ee0c19a3b1c78",
+        "afterSha256": "e5fada66d1c3b02000791764a04464ea44622d0b8264d21d3871829abf9455c6",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671806",
+        "beforeSha256": "a6bbdf9730f35ffd71f23a6d192b92d22846a55eca7f4e09c92bb048d1476bfa",
+        "afterSha256": "69d46fcba0267448ea1198180ef14bdc8f49e973cc40d3bd0de3b1e4d82ab307",
+        "beforeRetrievedAt": "2026-10-09T06:24:00Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671821",
+        "beforeSha256": "481ec3f9612dd3b0661deabf24e586b889a3a554c7ec6f544e8608e178642aa3",
+        "afterSha256": "ec60acadaacef39c2045781f98409d38851a45ae7a0a38de87af17e38f859829",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671846",
+        "beforeSha256": "67f9aaa6b9e7d302262ee577c19566e2efad8107e1e9a17e631b0d4ca5985644",
+        "afterSha256": "2f500cb5ccb831f3f92a6f6d397467d429b335e5638474b272f909eadc516401",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401671877",
+        "beforeSha256": "e2e4007813648947ec26ea240e5e25a95da1449aa452c63ee3ff8b6bfa6ba692",
+        "afterSha256": "ed6291752c2fb2ab2edbda65d0b0a06e80f932f6d7d3b59d60eae0cefbd610a8",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401872933",
+        "beforeSha256": "8c26e1cbed9fc0afe60c7563fc6630da67ee62e2683bf2b74d69db6b5fd98efe",
+        "afterSha256": "4bac7afcf2ec21b9e348f37b901da2be28c2f7d21aec9a5285ba7dc606af9b9c",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401872955",
+        "beforeSha256": "0a4911e6e3a523061dff5d90518ca804f7df365e4bfc9e5c76f45d0860b200f2",
+        "afterSha256": "c041eaf22d228690f9b76ef0d3b3538418f11ae7120727cac7625ed45ffa6f69",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401872972",
+        "beforeSha256": "93b270bbdaac1e80966bf629f4bb34beaee77f792de5372c4ca834e777e51b66",
+        "afterSha256": "125ece1c0ee8de9f289c21ec70757bdf4c7b86b4929657c4722bc669aad8ccd7",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:46Z"
+      },
+      {
+        "sourceId": "espn_start_summary_401872977",
+        "beforeSha256": "abe84ec9cc625b5e5825c150f15dc2edcebf617b87b9a7e3aae11b1ff1f7f2ca",
+        "afterSha256": "8faf7be801706d7a768857b2540f56322ca6fe60a152986af95929aa29754280",
+        "beforeRetrievedAt": "2026-10-09T06:24:01Z",
+        "afterRetrievedAt": "2026-10-09T06:47:47Z"
+      },
+      {
+        "sourceId": "nflverse_games",
+        "beforeSha256": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+        "afterSha256": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+        "beforeRetrievedAt": "2026-10-09T06:23:50Z",
+        "afterRetrievedAt": "2026-10-09T06:47:35Z"
+      },
+      {
+        "sourceId": "team_espn_roster_DAL",
+        "beforeSha256": "2a62817e233aa04e8b95a977f1dc53ca8fd06ba832e48ef40ffc231b7b67502c",
+        "afterSha256": "f9071d1301e7df473111b0b1945ba1527342495748bb62878a98ad66992ba31b",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:43Z"
+      },
+      {
+        "sourceId": "team_espn_schedule_DAL_2025",
+        "beforeSha256": "63a3f458e4f048186ceaf27fc2bc0988b992991c25d8cd5c986814fc9ff681ea",
+        "afterSha256": "3aaef9243404d8a6abde50b94ede0edb1f733187f61e2c5f6c30f26722e4c3ad",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:43Z"
+      },
+      {
+        "sourceId": "team_espn_schedule_DAL_2026",
+        "beforeSha256": "0d508ad1c4715cde80914879e69b1fc071b358053650578bf9eb6fe28304e7b4",
+        "afterSha256": "2602a5f1367880038bebb79d3f31f6933fa1a89cf86f57443db727affb7a0fec",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:43Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772510",
+        "beforeSha256": "a81f6060c066a986e5511c50338a6e6572ba34e0fbea304d436512e05a9c86fa",
+        "afterSha256": "16781884e6996d1ef68a28ae7cac3e6983963925f8e33c9b639cf9ff3b3817bc",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772694",
+        "beforeSha256": "f432d47270d4c64049fb4146da29960ec1ce403d2d1129b2639da1a1d8a6e1cd",
+        "afterSha256": "96323e6027087e729c2df6cfb27fdad6e5a9028a60fe95afbb3bc8026cf1e97f",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772710",
+        "beforeSha256": "81fad3b3bc3cd89b85e62df1bdce5f464781253cc8afdc652f9745e284bddb05",
+        "afterSha256": "0f6d2edac29a844bfe0597323ac6c84a73a08ab9edbfb0da4653a9b882ed7799",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772818",
+        "beforeSha256": "5e8579494b1d41535303b55bc4573d86e04dd8a39093dba5e3aa3decc60c5889",
+        "afterSha256": "769fa9ecef89c2e090fa307690e8b31f627d070cefc0afba856cb3782fa27f37",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772819",
+        "beforeSha256": "12aaed2e61cc5093a1fd96efed5e1d31871826e330c5a602face90932bc752b8",
+        "afterSha256": "ad24fed4391f2ce9fbd3c7b0cd178672dc6b08f903385c371388e0d543cf5f38",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772834",
+        "beforeSha256": "7ecc9e6a8a057e97dcc6db03df844be06f14a53808a8e1dfe08543739367a3fa",
+        "afterSha256": "d7cbfa0e3847bd389879eda2df0303c35272b2a4c8185cf1609e056dacd90a0b",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772844",
+        "beforeSha256": "1034e147bef5910034b49c0589d8069ff1007f10378999e45bbc0c5c7511616d",
+        "afterSha256": "cde92cbfc83e44f9247d314ed3ba4d005d091559d11be20285562551f9898e99",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772850",
+        "beforeSha256": "77289c64d87d22edd6c3d4b8bf64ad6b1ccf24a1dca2ddf95585c98010bc0f7e",
+        "afterSha256": "eb8586a19ec8bb3b1e9aa142d05401a5dfa6210831a129db519404e58498a541",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772858",
+        "beforeSha256": "1972f00df8d377b6b82bad7703ba548e30b6300b961f34837b2412654a2dfb9c",
+        "afterSha256": "2347054c1839ebdcb4c76e3495e671cfe32b2f44438dbfab06bc36178ae9f9cf",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772890",
+        "beforeSha256": "7eb70e6fd2b4d65fc2eab12128ec86c3bd1b5c68f3bfe722efabdde92aa0ee82",
+        "afterSha256": "59ee3e36c1c0733acd7489cb8a7f33bded949c29f9ad15ef597eff79c47316bc",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772910",
+        "beforeSha256": "a73bee6bd56188c6352117d819d6abe09a383499b5f5046b295761cb8a3e03e8",
+        "afterSha256": "90c07ee88729f8a791827ba13e7895bd82fb9eb1562d94fa4b9ebe149e4c4927",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772921",
+        "beforeSha256": "869630a4d68326e46072a47c6b9b347643ec97225174410e6b9787b748b989cb",
+        "afterSha256": "ee54b2514db6b5c2ec018d9ff071af003e11c2d6d70f64de0e7dc36dcfa88cd3",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772933",
+        "beforeSha256": "f6a38a095dca9e8002437e372e24ed642ca39d44da6238bbefacece2b5ef88e9",
+        "afterSha256": "f501f1af2ff4855870999baf6c005c8b64a7b7ff6cd7b290ab13efb8cac09722",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772947",
+        "beforeSha256": "28f2260ce472e815dbe0ba06e583a1184ebddcd46a1e5177bfa7a14cd85e89cc",
+        "afterSha256": "17dd15249d98ff168a2a795cbb3712c718fb350e1e5b0b7805ab16faa8b2eac6",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401772963",
+        "beforeSha256": "57d16a5446a95315de8c2e170e50589a30654974827f4386c47e5ac5345dfae2",
+        "afterSha256": "58755e5defc3b8109dbb1eab2aa8ffb53c22b917b067e5bd05566c7cd4d20f42",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401872930",
+        "beforeSha256": "3ef888b2c6e3afc5b2d69d7f45d18ea7fc8fe4c8f8af576f0a341d2e5bdbbe4a",
+        "afterSha256": "3d100e8a77b33108954b92ec42ef507034ef8ec78c4038344cf14eb928ce2de4",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401872944",
+        "beforeSha256": "ca629d7695f2e7e15c050ea33b5b98a13e949c9b6ef01d9c3d220df92ef14411",
+        "afterSha256": "96ba27230a0d396f75b110715ca963527a211a14768d5965307c4ad63cc33905",
+        "beforeRetrievedAt": "2026-10-09T06:23:57Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401872960",
+        "beforeSha256": "6f1bdff0e4037da77b3f7831cc4b975beee80c26f7ef41c22813ddd6737a5bab",
+        "afterSha256": "8dfcef4314a1a59b365c10d5d3d21fb598a310bf00b562bc1733f049a8b66f50",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401872967",
+        "beforeSha256": "8014fd08e3f6783707c1c377fbf8803726531b05ea1050304cdb943895cafba9",
+        "afterSha256": "e8251e8c5f8a8de9f714f8ef5b1f5d7f73816876c3e31c4eefd7d5dc57e000ef",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_espn_summary_401872980",
+        "beforeSha256": "435e52912ffd3f3704a1143bd4ee6f259bd57f0c3b5f976e275db16848f10f0b",
+        "afterSha256": "100f47252f16c9c8382b74e86959a616e3df774d94ae1ad8666568c2d95deb92",
+        "beforeRetrievedAt": "2026-10-09T06:23:58Z",
+        "afterRetrievedAt": "2026-10-09T06:47:42Z"
+      },
+      {
+        "sourceId": "team_nflverse_games",
+        "beforeSha256": "2643b549b7ed58c263125d48d4b75b97461a65abf0b0e27a44d7989d642eb29f",
+        "afterSha256": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+        "beforeRetrievedAt": "2026-10-09T06:23:50Z",
+        "afterRetrievedAt": "2026-10-09T06:47:35Z"
+      }
+    ],
+    "depthAsOfTimestampLeaves": 210,
+    "providerPublicationTimestampLeaves": [],
+    "allExportedFootballFactsEquivalent": true
+  },
+  "independentModel": {
+    "path": "qa/matchup-breakdown/model.cjs",
+    "sha256": "f696c32d0b3a367fc83e0a954917a924c79df5bd354f92abdac1cc6b909293d9",
+    "outputs": {
+      "before": {
+        "sha256": "58862da26a572cd84eb9f4412806a99450301c0939722ba9f58cc388c7a19e20",
+        "states": 1536
+      },
+      "incoming": {
+        "sha256": "58862da26a572cd84eb9f4412806a99450301c0939722ba9f58cc388c7a19e20",
+        "states": 1536
+      }
+    },
+    "statesCompared": 1536,
+    "allStatesExactlyEquivalentToReviewed5144": true
+  },
+  "newPrimaryGamesCorroboration": {
+    "sourceId": "nflverse_games",
+    "sourceURL": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+    "httpStatus": 200,
+    "tlsVerified": true,
+    "retrievedAt": "2026-10-09T07:02:42.764869+00:00",
+    "sha256": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+    "snapshotSourceSha256": "cefab26a141abf0d8faec7190e07b98b420c9a01224ed5b2e26627a7ebf7078b",
+    "exactIncomingBody": true,
+    "bytes": 2183367,
+    "bodyPath": "qa/home-gem/reviews/source-evidence-current/nflverse_games.source.gz",
+    "snapshotCommit": "1b7679f8c259e811b53d966768ae2abaf2b818e4",
+    "receiptPath": "qa/home-gem/reviews/source-evidence-current/nflverse_games.receipt.json",
+    "receiptSha256": "6e3940c8c8979ee37e7f4a672392d5991a758c260666ed6ab2b95d570e4fff40",
+    "scheduleGameRowsChecked": 1088
+  },
+  "nondataRuntime": {
+    "files": 240,
+    "allFilesExact": true,
+    "knownHomeReportPath": "qa/home-gem/iteration-3-chromium/results.json",
+    "knownHomeReportSha256": "94a4860502c673fa492a6e488f0fe519e6c1c90c3b5c896e417037307a95e46a",
+    "knownHomeRuntimeManifestSha256": "a99b31011b523b5ff005c350f3bc1531a602825da98ce5ad3d0f8e0de7d3a9fa"
+  },
+  "assertions": 4773,
+  "checks": {
+    "Prior6054AssertionReviewAcceptedWithoutRewriting": 1,
+    "PriorAuditHelperExactIdentity": 1,
+    "ExactImmutableCommitBody": 10,
+    "CurrentWorktreeExactLatestIncoming": 5,
+    "PriorIncomingExactlyCurrentDeltaBase": 1,
+    "SameSourceIdentitySet": 1,
+    "FinalEventAliasAlwaysExactSameProviderURLAndIdentity": 1,
+    "OnlyTwoPrimaryBodyHashReferencesRemainAfterExplicitMetadataAndSameEventAlias": 1,
+    "NewGameBodyHashReferencesActuallyBindExactSourceRecords": 2,
+    "All32ExactPlayerIdentitySets": 32,
+    "EveryTeamIdentityRosterGameStatInjuryDepthRoleFixtureFactEquivalent": 32,
+    "EveryPlayerEntireFactsAndStatisticsEquivalent": 812,
+    "All32By48IndependentProjectionStates": 2,
+    "All1536EntireWindowLeaderGPNullRateQBRoleStartProjectionsExactlyEquivalent": 1536,
+    "IndependentMathChainExactPriorOutputIdentity": 1,
+    "NoInsecurePublicRetrieval": 125,
+    "AllPrimaryRosterInjuryDepthPlayerStatisticsHistoricalBodiesUnchanged": 30,
+    "ExistingIndependentPrimaryRawCorroborationStillExactlyMatchesLatestBody": 2,
+    "ActualIndependentTLSGamesCSVExactlyMatchesLatestSourceBody": 1,
+    "EveryDisplayedScheduleGameExistsInActualPrimaryCSV": 1088,
+    "EveryScheduleSeasonWeekTeamsAndScoreMatchesActualPrimaryCSV": 1088,
+    "All240HomeAndProtectedNondataRuntimeFilesExactA99b": 1
+  },
+  "failures": [],
+  "auditHelperSha256": "fd083f2a6abd75f6e941914dbe3b650e8b165a8c9cd9ea4246733e2c6d3a7897",
+  "runtimeChangedByReview": false,
+  "limitations": [
+    "This is independent source/math QA, not browser or hosted deployment verification.",
+    "Prior f1/5144/browser receipts retain their original runtime and body hashes. Current native evidence must be produced separately.",
+    "Provider-reported practice/roster status is distinct from complete official inactive confirmation; unknown context remains explicit.",
+    "New primary games raw body changed; this audit proves exported relevant game identities/scores and all statistical projections match, not every unused CSV field across all games."
+  ]
+}

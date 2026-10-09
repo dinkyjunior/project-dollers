@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "reviewer": "home_gem_controls_audit",
+  "checkedAt": "2026-10-09T06:25:54.423296+00:00",
+  "baselineCommit": "f1e5c56181c613805854cc088965b8754e717cc2",
+  "protectedExistingAssets": 233,
+  "changedExistingAssets": [
+    "assets/home-interactions.js"
+  ],
+  "homeInteractionDelta": "Only visible entry label case/content Enter / {Sport} \u00b7 Coming soon; all accessible names, route attributes, disabled states, handlers, session storage and announcements remain byte-identical.",
+  "currentHomeInteractionSha256": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+  "allNonHomePageAndDialogHTMLByteIdentical": true,
+  "independentNonHomeTailSha256": "6de9aa6b254285e4c908ed3509fb3b37a83c4112ad2140fcda93de8cf5774b1a",
+  "scopedNewCSS": [
+    {
+      "path": "assets/home-gem-controls.css",
+      "sha256": "08ce506f3a16f37be5810c82cb7c1ff59e052ac4429be0dd74d9c5b284f1beb4"
+    },
+    {
+      "path": "assets/home-aperture.css",
+      "sha256": "2b39605a066b55a68f934142bf93b4661d0ff452a6c2f6ab5c4bf624c07a3005"
+    },
+    {
+      "path": "assets/home-gem-layout.css",
+      "sha256": "5ab94d402c339a1e78488146d6c8592047cd001fa23c9892e0e49caa3aeca405"
+    },
+    {
+      "path": "assets/home-aperture-motion.css",
+      "sha256": "0029811df778770e6d391f3f078dbe677ea1b1ecb8857a599240c386ad5c6e82"
+    }
+  ],
+  "qualification": "Static identity and code-delta audit; browser rendering and native input acceptance are separate."
+}

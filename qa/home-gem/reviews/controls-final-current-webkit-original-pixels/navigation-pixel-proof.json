@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "report": "qa/home-gem/final-current-webkit/results.json",
+  "reportSha256": "f83278d49c13de5139b6cd83ba7230b80cb45332447822a69173a4fec573ee17",
+  "qualification": "Exact original PNG crops only; no reconstruction, patch, rerender or browser. Actual OCR reads all five controls in both phone sizes and NFL/NBA/NRL.",
+  "priorDiagnostic": "An attempted cross-sport exact pixel equality check was false for WebKit; such equality is not required because captures have different native paint positions/phases. Genuine original crops, alpha and OCR are retained instead of a false equivalence claim.",
+  "records": [
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-393-nfl.png",
+      "originalSha256": "2c3eff2207141d0fb048026d3b5c39df9f73ad1ea1b0107762aeb4e186bceef3",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nfl-393-exact-navigation-crop.png",
+      "outputSha256": "fa15e283dec571c6563d174d7a3ae037411470993ca985499c5ddc7dc865cdb3",
+      "devicePixelBox": [
+        24,
+        1462,
+        762,
+        1570
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": ">\n@ \u00a9 %8 ao\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    },
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-393-nba.png",
+      "originalSha256": "f52837a3cff18670a6da7c6a429685b2af5961b53971ed51608a2b36e458ac4b",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nba-393-exact-navigation-crop.png",
+      "outputSha256": "649b65fc11d481e9f6ca4ba64acee8882cb9d3c5b99414eeed33afd7ac6edef3",
+      "devicePixelBox": [
+        24,
+        1462,
+        762,
+        1570
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": ">\na iC) x al oo:\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    },
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-393-nrl.png",
+      "originalSha256": "f39a3993bce918b9ee5a789ab7dfe11fe41244adbaa9bec67531df859fc2e034",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nrl-393-exact-navigation-crop.png",
+      "outputSha256": "6053a9865120889c7406dae414afe60e344fe88508e3f0ec8c8990d9507673f9",
+      "devicePixelBox": [
+        24,
+        1462,
+        762,
+        1570
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": "a iC) x al oo:\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    },
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-430-nfl.png",
+      "originalSha256": "ac0cee1d1e058ebc04af67785a0c21d122b9baeed6192929fd3dc2b3b9a48353",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nfl-430-exact-navigation-crop.png",
+      "outputSha256": "6fa3c02c0979e0ab10229e875067c760078d5014f91a3527bf730dd582ee6309",
+      "devicePixelBox": [
+        24,
+        1553,
+        836,
+        1661
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": ">\na @ x ul vs\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    },
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-430-nba.png",
+      "originalSha256": "64225c0365b5b800485a93024e5ce5bd8ebb4ccbc7399f69362b691cc2b27674",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nba-430-exact-navigation-crop.png",
+      "outputSha256": "1e366617bf7f1d693ebc3a8108699a695f41303e9b2e41c01062d8fbba485845",
+      "devicePixelBox": [
+        24,
+        1553,
+        836,
+        1661
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": ">\na @ x ul vs\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    },
+    {
+      "original": "qa/home-gem/final-current-webkit/webkit-430-nrl.png",
+      "originalSha256": "1f8e3aef05053332d0934aa31a091c340f06dc0a9c0945e85fd789aabf8a3cc6",
+      "output": "qa/home-gem/reviews/controls-final-current-webkit-original-pixels/nrl-430-exact-navigation-crop.png",
+      "outputSha256": "673fb5621ae16cbf2b2ad49f5adc0b0a8020627e9cf083e8823e9277629bb443",
+      "devicePixelBox": [
+        24,
+        1553,
+        836,
+        1661
+      ],
+      "rgbaRoundTripExact": true,
+      "allPixelsOpaque": true,
+      "ocrExitCode": 0,
+      "ocr": "ia iC) x al oo\nHome Teams Matchups Insights More",
+      "allFiveLabelsReadFromActualOriginalPixels": true
+    }
+  ]
+}

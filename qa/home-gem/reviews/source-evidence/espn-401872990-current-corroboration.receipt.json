@@ -1,0 +1,74 @@
+{
+  "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+  "httpStatus": 200,
+  "tlsVerified": true,
+  "retrievedAt": "2026-10-09T06:27:48.994912+00:00",
+  "sha256": "85e01a42dbbc2bd403328676b9e86d7e794a960aadf8ae72a36fb97b2afc7ae9",
+  "bytes": 115555,
+  "exactIncomingBody": false,
+  "eventId": "401872990",
+  "anthonyJohnsonRows": [
+    {
+      "status": "Out",
+      "date": "2026-10-09T05:00Z",
+      "athlete": {
+        "id": "4361748",
+        "uid": "s:20~l:28~a:4361748",
+        "guid": "07a616af-395c-16c2-6f6d-1d8760df6a91",
+        "lastName": "Johnson Jr.",
+        "fullName": "Anthony Johnson Jr.",
+        "displayName": "Anthony Johnson Jr.",
+        "shortName": "A. Johnson Jr.",
+        "links": [
+          {
+            "rel": [
+              "playercard",
+              "desktop",
+              "athlete"
+            ],
+            "href": "https://www.espn.com/nfl/player/_/id/4361748/anthony-johnson-jr",
+            "text": "Player Card"
+          }
+        ],
+        "headshot": {
+          "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4361748.png",
+          "alt": "Anthony Johnson Jr."
+        },
+        "jersey": "26",
+        "position": {
+          "name": "Safety",
+          "displayName": "Safety",
+          "abbreviation": "S"
+        },
+        "collegeAthlete": {
+          "$ref": "http://sports.core.api.espn.pvt/v2/sports/football/leagues/college-football/athletes/4361748?lang=en&region=us"
+        },
+        "status": {
+          "id": "29",
+          "name": "Practice Squad",
+          "type": "practice-squad",
+          "abbreviation": "Practice Squad"
+        }
+      },
+      "type": {
+        "id": "4",
+        "name": "INJURY_STATUS_OUT",
+        "description": "out",
+        "abbreviation": "O"
+      },
+      "details": {
+        "fantasyStatus": {
+          "description": "OUT",
+          "abbreviation": "OUT",
+          "displayDescription": "Out"
+        },
+        "type": "Undisclosed",
+        "location": "Other",
+        "detail": "Not Specified",
+        "side": "Not Specified",
+        "returnDate": "2026-10-18"
+      }
+    }
+  ],
+  "qualification": "Separate actual public normal-TLS read corroborates only stated fields. No snapshot refresh or rewrite. Does not retarget the incoming retrieval time or promise whole-body identity unless exactIncomingBody is true."
+}

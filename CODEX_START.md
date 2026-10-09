@@ -1,5 +1,32 @@
 # Codex Start Here
 
+## Current Home gemstone entrance — local acceptance complete, publication pending
+
+The latest four-sport Home refinement passed six independent specialist reviews
+and the source-bound release gate. Chromium and WebKit passed 393×852 and
+430×896; Chromium also passed 768px/tablet and 1440px/desktop framing. The final
+reports contain 188 recorded native actions and 24 untouched browser originals.
+The accepted runtime is `c9407130820cbd39d9aed62818e26b8881d166de7c2e6f30b358b4da793fea67`.
+The broad polished lower casting, tapered upper metal, thick recessed neon,
+full-width faceted gemstone entry and four individually coloured perimeter lights
+materially reduce the new chat render gap. Reduced-motion and navigation pause
+checks pass. Coming soon and UFC Fighters remain; existing research screens remain.
+
+Read [the release record](qa/home-gem/RELEASE.md),
+[before/after browser originals](qa/home-gem/gallery.html) and
+[six-specialist acceptance](qa/home-gem/acceptance-local.json).
+Automatic source commits f1e5c56, 5144cd6 and 1b7679f were preserved by ordinary
+rebase. Their current source audits verify actual roster, weekly report, depth,
+projection and schedule changes. All 240 nondata runtime files remain the reviewed
+implementation. Automatic refresh is restored and verified active after the bounded
+owned release hold; no upstream instant play-by-play push feed is implied.
+
+Actual publication and hosted verification remain the final required step at this
+checkpoint. Never relabel local evidence as hosted completion. Preserve these
+source-bound historical receipts and fetch/rebase both remote branches before
+every ordinary push. The current approved source is the chat attachment;
+no registered pixel identity or physical-iPhone/FPS certification is asserted.
+
 ## Current Matchup Breakdown — deployed and verified, 9 October 2026 UTC
 
 All six independent specialists accepted the local and actual deployed mobile originals.

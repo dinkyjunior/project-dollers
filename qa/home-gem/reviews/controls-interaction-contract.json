@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-09T06:18:47.810Z",
+  "completedAt": "2026-10-09T06:18:47.826Z",
+  "source": "actual assets/home-interactions.js",
+  "sourceSha256": "55c1ece0e0b738b1c5f6e594670ed65798609f508b7523f8a6986d42ea2f5a8b",
+  "tests": [
+    {
+      "name": "Four native button selections preserve semantic state, image, scene, destination and availability",
+      "status": "passed"
+    },
+    {
+      "name": "Coming-soon entry and all unavailable destination shortcuts are captured without closing More",
+      "status": "passed"
+    },
+    {
+      "name": "Keyboard arrows wrap and Home/End select exact focused sport; irrelevant keys remain untouched",
+      "status": "passed"
+    },
+    {
+      "name": "All valid session selections restore and corrupt values safely default to NFL",
+      "status": "passed"
+    },
+    {
+      "name": "Blocked session storage preserves all four fully functional selections",
+      "status": "passed"
+    }
+  ],
+  "qualification": "Event-contract regression on the actual interaction source in a minimal DOM harness; native rendering, pointer interception and production routing require the separate browser audit."
+}
