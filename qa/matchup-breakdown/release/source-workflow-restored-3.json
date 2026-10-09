@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "verifiedAt": "2026-10-09T02:54:57.214491+00:00",
+  "actualWorkflowId": 372338042,
+  "actualWorkflowState": "active",
+  "actualRestoration": {
+    "beforeState": "active",
+    "currentState": "active",
+    "startedAt": "2026-10-09T02:09:37.517836+00:00",
+    "restoreDeadline": "2026-10-09T02:49:37.517836+00:00",
+    "qualification": "Short owned freeze for coherent fresh source archives, exact native/hosted release QA. No running job is cancelled. Guard restores automatically; parent restores earlier on completion.",
+    "ownedGuardPid": 356887,
+    "actualDisabledAt": "2026-10-09T02:09:38.460453+00:00",
+    "deadlineRestoreAt": "2026-10-09T02:49:48.141651+00:00"
+  },
+  "guardRecordSha256": "e2be0a19c7d22d840f035963d1e2ec462a9385e3cdd89bb9a1927ec272145634",
+  "qualification": "Actual API confirms active after the third bounded owned release hold; no running source job was cancelled. The 15-second guard observed and restored the workflow 11 seconds after its fixed deadline."
+}

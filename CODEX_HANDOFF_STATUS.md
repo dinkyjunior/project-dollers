@@ -1,5 +1,15 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Matchup Breakdown — deployed and verified, 9 October 2026 UTC
+
+The approved second matchup screen is live at https://dinkyjunior.github.io/project-dollers/#matchup/DAL. Implementation `d36c3b3bce4ad5b656d13b6909dce3a36932effd` passed actual [Pages build, report and deploy](https://github.com/dinkyjunior/project-dollers/actions/runs/37875841485). Genuine hosted WebKit passed 393×852, 430×896 and 1440×1000, with 69 recorded native inputs, direct loading/refresh, source revalidation, natural/reduced/inactive motion, and no console, HTTP, external-image or transport errors. All 235 actual HTTPS runtime bodies match reviewed manifest `4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4`.
+
+The screen connects NFL/team entry and return routes, Form & H2H, Players & QB, Lineup & Travel, source-ranked rushers/receivers, detailed last-five and opponent histories, game reports, QB splits and contextual research dialogs. Home's diamond entry is applied and tested. Dallas's next scheduled game opens Green Bay Week 6; its direct matchup route keeps current Tampa Bay Week 5 research separate. Completed statistics, uncertain roles and future injury/inactive reports keep their own verified, inferred, disputed or unavailable status.
+
+Read [the current release record](qa/matchup-breakdown/RELEASE.md), [actual screenshots](qa/matchup-breakdown/gallery.html), [component/destination map](qa/matchup-breakdown/COMPONENT_MAP.md) and [downloadable source backup](backups/project-dollar-matchup-source-v2.zip). The untouched hosted report is `live-captures-v2/results.json`, SHA `a1787284dc5c1c3a1b539fcf9a5180d8106fc7fb42cc532148eaa54f8e3fcfa5`. Local and hosted six-specialist receipts remain separately source-bound. The final evidence-only commit preserves the tested runtime; its strict publication receipt is saved outside Git to avoid recursively changing the verified commit.
+
+Automatic source refresh is restored and confirmed active by the actual workflow API, recorded in `qa/matchup-breakdown/release/source-workflow-restored-3.json`. Updates check available published source changes; GitHub schedules are best effort and no instant upstream push feed is connected. Preserve source-specific retrieval timestamps and automatic incoming commits. The approved reference remains the chat attachment; no registered pixel-equality, physical-iPhone, hardware-FPS or accessibility certification is asserted. Earlier pending/failed records below remain historical and do not replace the current completed hosted audit.
+
 ## Matchup Breakdown — fixture correction and fresh-source acceptance, 9 October 2026
 
 The source-designated upcoming fixture now drives Team Details. Dallas's next scheduled game opens Green Bay Week 6; direct `#matchup/DAL` keeps the separately verified current Dallas–Tampa Bay Week 5 research fixture. Their QB/injury contexts stay separate. The correction changes only `nextGame()` in assets/team-details.js; all visual assets, CSS, motion and existing Home/NFL/Steelers code remain unchanged from the full accepted build.

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "command": [
+    "python3",
+    "qa/matchup-breakdown/verify-upcoming-delta.py",
+    "--hosted",
+    "--review",
+    "qa/matchup-breakdown/release/review-upcoming-delta-hosted.json"
+  ],
+  "exitCode": 0,
+  "completedAt": "2026-10-09T03:03:37.484809+00:00",
+  "review": {
+    "path": "qa/matchup-breakdown/release/review-upcoming-delta-hosted.json",
+    "sha256": "e8d5e956bcddfcda969f8871a7071718a6cdb14010bc2051f2f4e63719505472"
+  },
+  "gate": {
+    "path": "qa/matchup-breakdown/verify-upcoming-delta.py",
+    "sha256": "8f7eeb420cf6c0cb8d69f379a032ef3adbb8ace94f92b30dfe5abb205c1c5cd7"
+  },
+  "stdout": "{\n  \"status\": \"passed\",\n  \"kind\": \"historical-full-plus-current-reviewed-delta\",\n  \"baseRuntimeManifestSha256\": \"82ae9f0ae262a83f644b3cf6895d801ffe33362b9d5d09c5d1c0aac8b8ba0cee\",\n  \"runtimeManifestSha256\": \"4cef01219db146255b3df0021735458f4a62b3a1692adae561e1c468420859b4\",\n  \"runtimeFileCount\": 235,\n  \"changedRuntimePaths\": [\n    \"assets/data/current.json\",\n    \"assets/data/matchup-breakdown.json\",\n    \"assets/data/player-history.json\",\n    \"assets/data/provenance.json\",\n    \"assets/data/team-details.json\",\n    \"assets/team-details.js\"\n  ],\n  \"historicalNativeInputs\": 4110,\n  \"currentDeltaNativeInputs\": 320,\n  \"statisticalProjectionBranches\": 1536,\n  \"changedAvailabilityFactGroups\": 12,\n  \"specialistCount\": 6,\n  \"currentOriginalScreenshotCount\": 14,\n  \"hostedVerificationRequired\": true,\n  \"qualification\": \"Historical 4110 inputs retain their old source binding; current acceptance adds a verified equal statistical projection and new selector/fixture/price/availability native checks.\"\n}\n",
+  "stderr": "",
+  "hostedReviewerAssemblyAssertions": "Six accepted production receipts, exact completed report/current canonical/all33 hash-verified emitted originals,235actualserved200exactbody hashes,threepassedcases/69nativeinputs/refresh/normalmotion/reducedinactive/sourcecompression validated before writing review."
+}
