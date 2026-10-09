@@ -60,7 +60,7 @@
     }
     scenes.forEach(scene => { scene.hidden = scene.dataset.homeScene !== sport; });
     const ready = sport === 'nfl';
-    const entryText = ready ? 'ENTER NFL' : `${details.title} · COMING SOON`;
+    const entryText = ready ? 'Enter' : `${details.title} · Coming soon`;
     if (label) label.textContent = entryText;
     else entry.textContent = entryText;
     entry.disabled = !ready;

@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
+    <link rel="stylesheet" href="assets/home-aperture.css?v=gem-20261009-v1" />
+    <link rel="stylesheet" href="assets/home-gem-controls.css?v=gem-20261009-v1" />
+    <link rel="stylesheet" href="assets/home-gem-layout.css?v=gem-20261009-v1" />
+    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=gem-20261009-v1" />
     <script src="assets/team-details.js?v=matchup-20261009-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
@@ -42,9 +46,10 @@
     <script src="assets/matchup-breakdown.js?v=20261009-v1" defer></script>
     <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
-    <script src="assets/home-interactions.js?v=luxury-20261007-v1" defer></script>
+    <script src="assets/home-interactions.js?v=gem-20261009-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/nfl-dashboard-motion.js?v=replica-20261008-v2" defer></script>
+    <script src="assets/home-aperture-motion.js?v=gem-20261009-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -88,21 +93,40 @@
                   <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
                 </div></div>
                 <div class="aperture-rail"></div>
-                <img class="aperture-metal-housing" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" fetchpriority="high" />
-                <img class="aperture-metal-housing aperture-metal-half" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/aperture-photographic.webp" alt="" width="1315" height="1196" decoding="async" fetchpriority="high" />
+                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/aperture-photographic.webp" alt="" width="1315" height="1196" decoding="async" />
                 <div class="aperture-inset"></div>
                 <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
                 <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
+                <svg class="aperture-channel-art" viewBox="0 0 1315 1196" aria-hidden="true" focusable="false">
+                  <defs>
+                    <linearGradient id="home-aperture-colour" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="var(--home-left)" />
+                      <stop offset="49.85%" stop-color="var(--home-left)" />
+                      <stop offset="50.15%" stop-color="var(--home-right)" />
+                      <stop offset="100%" stop-color="var(--home-right)" />
+                    </linearGradient>
+                    <filter id="home-aperture-bloom" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9" /></filter>
+                    <filter id="home-aperture-hotspot" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow" /><feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+                  </defs>
+                  <path class="aperture-neon-bloom" d="M658 148 A491 455 0 1 1 658 1058 A491 455 0 1 1 658 148Z" />
+                  <path class="aperture-neon-track" d="M658 148 A491 455 0 1 1 658 1058 A491 455 0 1 1 658 148Z" />
+                  <path class="aperture-neon-core" d="M658 150 A486 453 0 1 1 658 1056 A486 453 0 1 1 658 150Z" />
+                  <path class="aperture-neon-inner-track" d="M658 211 A432 392 0 1 1 658 995 A432 392 0 1 1 658 211Z" />
+                  <path class="aperture-neon-outer-track" d="M658 24 A611 579 0 1 1 658 1182 A611 579 0 1 1 658 24Z" />
+                  <path class="aperture-neon-runner" pathLength="1000" d="M658 148 A491 455 0 1 1 658 1058 A491 455 0 1 1 658 148Z" />
+                  <path class="aperture-metal-runner" pathLength="1000" d="M658 184 A449 419 0 1 1 658 1022 A449 419 0 1 1 658 184Z" />
+                </svg>
                 <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
               </div>
               <div class="home-floor"><span class="home-floor-shimmer"></span></div>
               <div class="aperture-floor-reflection">
-                <img class="home-metal-reflection-image" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
-                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/luxury-portal.webp" alt="" width="1254" height="1254" decoding="async" />
+                <img class="home-metal-reflection-image" src="assets/home/aperture-photographic.webp" alt="" width="1315" height="1196" decoding="async" />
+                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/aperture-photographic.webp" alt="" width="1315" height="1196" decoding="async" />
               </div>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
-              <span data-home-entry-label>ENTER NFL</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>
+              <span data-home-entry-label>Enter</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>
             </button>
             <div class="home-sport-dock" role="group" aria-label="Choose a sport">
               <button class="home-sport-option" data-home-select="nfl" aria-pressed="true" aria-label="Select NFL"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /><span>NFL</span></button>

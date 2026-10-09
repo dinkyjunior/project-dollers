@@ -1,0 +1,222 @@
+/* Home's cut sapphire / emerald / ruby controls. The native controls and their
+   navigation attributes remain independent of this decorative material. */
+.page[data-page="home"] {
+  --home-gem-face: url("home/gem-sapphire.svg");
+}
+.page[data-page="home"][data-home-sport="nba"] {
+  --home-gem-face: url("home/gem-dual.svg");
+}
+.page[data-page="home"][data-home-sport="nrl"] {
+  --home-gem-face: url("home/gem-emerald.svg");
+}
+.page[data-page="home"][data-home-sport="ufc"] {
+  --home-gem-face: url("home/gem-ruby.svg");
+}
+.page[data-page="home"][data-home-sport] .home-entry {
+  border-image: none;
+}
+.page[data-page="home"] .home-entry {
+  border: 0;
+  border-image: none;
+  border-radius: 12px;
+  background: var(--home-gem-face) center / 100% 100% no-repeat;
+  padding-inline: 46px;
+  font: 500 19px/1.1 PDInter, Arial, sans-serif;
+  letter-spacing: 1.8px;
+  color: #effcff;
+  text-shadow: 0 1px 3px #000, 0 0 9px rgb(var(--home-left-rgb) / .55);
+  box-shadow: -2px 0 4px rgb(var(--home-left-rgb) / .95),
+    2px 0 4px rgb(var(--home-right-rgb) / .95),
+    -5px 0 13px rgb(var(--home-left-rgb) / .58),
+    5px 0 13px rgb(var(--home-right-rgb) / .58),
+    0 5px 8px #000b;
+  overflow: visible;
+}
+.page[data-page="home"] .home-entry::before {
+  inset: -2px;
+  border-radius: 12px;
+  border: 0;
+  background: none;
+  box-shadow: -3px -2px 11px rgb(var(--home-left-rgb) / .68),
+    3px 2px 11px rgb(var(--home-right-rgb) / .68),
+    -8px 0 26px rgb(var(--home-left-rgb) / .3),
+    8px 0 26px rgb(var(--home-right-rgb) / .3);
+}
+.page[data-page="home"] .home-entry::after {
+  content: "";
+  inset: auto 7% -9px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(90deg, transparent, rgb(var(--home-left-rgb) / .36) 10% 45%,
+    rgb(var(--home-right-rgb) / .36) 55% 90%, transparent);
+  filter: blur(3px);
+  opacity: .8;
+  box-shadow: none;
+}
+.page[data-page="home"] .home-entry [data-home-entry-label] {
+  position: relative;
+  z-index: 4;
+  font: inherit;
+  text-shadow: 0 1px 3px #000b, 0 0 9px rgb(var(--home-left-rgb) / .4);
+}
+.page[data-page="home"] .home-entry [data-home-entry-arrow] {
+  right: 44px;
+  top: 50%;
+  width: 19px;
+  height: 19px;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 0 3px rgb(var(--home-right-rgb) / .8));
+  z-index: 4;
+}
+.page[data-page="home"] .home-entry:disabled {
+  color: #effcff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+.page[data-page="home"] .home-entry-diamond,
+.page[data-page="home"][data-home-sport] .home-entry-diamond {
+  width: 42px;
+  height: 44px;
+  left: 4px;
+  background: none;
+  filter: none;
+  z-index: 3;
+  pointer-events: none;
+}
+.page[data-page="home"] .home-entry-diamond.is-right {
+  left: auto;
+  right: 4px;
+}
+.page[data-page="home"] .home-entry-diamond::after {
+  content: none;
+  animation: none;
+}
+.page[data-page="home"] .home-sport-dock {
+  gap: 9px;
+  padding: 6px 1px 0;
+  background: linear-gradient(180deg, #03081208, #01040966);
+}
+.page[data-page="home"] .home-sport-option {
+  --gem-selector-left: #00baff;
+  --gem-selector-right: #00baff;
+  --gem-selector-left-rgb: 0 186 255;
+  --gem-selector-right-rgb: 0 186 255;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  min-height: 68px;
+  color: #eaf5fd;
+  background: radial-gradient(ellipse at 10% 0%, rgb(var(--gem-selector-left-rgb) / .19), transparent 66%) padding-box,
+    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .16), transparent 66%) padding-box,
+    linear-gradient(180deg, #091420, #02070d 54%, #08131d) padding-box,
+    linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%) border-box;
+  box-shadow: -1px 0 4px rgb(var(--gem-selector-left-rgb) / .85),
+    1px 0 4px rgb(var(--gem-selector-right-rgb) / .85),
+    -3px 0 10px rgb(var(--gem-selector-left-rgb) / .45),
+    3px 0 10px rgb(var(--gem-selector-right-rgb) / .45),
+    inset 0 1px 0 #efffff44, inset 0 -1px 0 #0009;
+  transition: transform .18s ease, box-shadow .2s ease, background-color .2s ease;
+  overflow: visible;
+}
+.page[data-page="home"] .home-sport-option[data-home-select="nba"] {
+  --gem-selector-left: #00baff;
+  --gem-selector-right: #ff2548;
+  --gem-selector-left-rgb: 0 186 255;
+  --gem-selector-right-rgb: 255 37 72;
+}
+.page[data-page="home"] .home-sport-option[data-home-select="nrl"] {
+  --gem-selector-left: #00ff7f;
+  --gem-selector-right: #00ff7f;
+  --gem-selector-left-rgb: 0 255 127;
+  --gem-selector-right-rgb: 0 255 127;
+}
+.page[data-page="home"] .home-sport-option[data-home-select="ufc"] {
+  --gem-selector-left: #ff153e;
+  --gem-selector-right: #ff153e;
+  --gem-selector-left-rgb: 255 21 62;
+  --gem-selector-right-rgb: 255 21 62;
+}
+.page[data-page="home"] .home-sport-option::before,
+.page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 9px;
+  border: 1px solid #dffaff7d;
+  background: none;
+  box-shadow: inset 0 0 2px #efffff40;
+  opacity: .66;
+  pointer-events: none;
+  animation: none;
+  z-index: 1;
+}
+.page[data-page="home"] .home-sport-option::after,
+.page[data-page="home"] .home-sport-option[aria-pressed="true"]::after {
+  content: none;
+  border: 0;
+  box-shadow: none;
+}
+.page[data-page="home"] .home-sport-option[aria-pressed="true"] {
+  color: #fff;
+  background: radial-gradient(ellipse at 15% 0%, rgb(var(--gem-selector-left-rgb) / .28), transparent 70%) padding-box,
+    radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .2), transparent 70%) padding-box,
+    linear-gradient(180deg, #11202d, #02070c 54%, #0c1a26) padding-box,
+    linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%) border-box;
+  box-shadow: -1px 0 5px rgb(var(--gem-selector-left-rgb) / 1),
+    1px 0 5px rgb(var(--gem-selector-right-rgb) / 1),
+    -4px 0 14px rgb(var(--gem-selector-left-rgb) / .64),
+    4px 0 14px rgb(var(--gem-selector-right-rgb) / .64),
+    inset 0 1px 0 #f5ffff88, inset 0 -1px 0 #0009;
+}
+.page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
+  opacity: .94;
+  border-color: #efffffba;
+}
+.page[data-page="home"] .home-sport-option > img,
+.page[data-page="home"] .home-sport-option > span:not(.home-gem-glint) {
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+}
+.page[data-page="home"] .home-sport-option img {
+  width: 38px;
+  height: 39px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px #000);
+}
+.page[data-page="home"] .home-sport-option[data-home-select="ufc"] img {
+  width: 58px;
+  height: 26px;
+  margin-block: 6px 7px;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(98%) saturate(4668%)
+    hue-rotate(343deg) brightness(101%) contrast(110%) drop-shadow(0 2px 2px #000);
+}
+.page[data-page="home"] .home-entry:focus-visible,
+.page[data-page="home"] .home-sport-option:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .page[data-page="home"] .home-entry:not(:disabled):hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+  }
+  .page[data-page="home"] .home-sport-option:hover {
+    background-color: #182734;
+    transform: translateY(-1px);
+  }
+}
+@media (max-width: 360px) {
+  .page[data-page="home"] .home-entry { padding-inline: 40px; font-size: 17px; }
+  .page[data-page="home"] .home-entry:disabled { font-size: 13px; letter-spacing: .6px; }
+  .page[data-page="home"] .home-entry [data-home-entry-arrow] { right: 35px; width: 17px; }
+  .page[data-page="home"] .home-sport-dock { gap: 7px; }
+  .page[data-page="home"] .home-sport-option img { width: 33px; height: 36px; }
+  .page[data-page="home"] .home-sport-option[data-home-select="ufc"] img { width: 49px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page[data-page="home"] :is(.home-entry, .home-sport-option) { transition: none; }
+  .page[data-page="home"] .home-entry:not(:disabled):hover,
+  .page[data-page="home"] .home-sport-option:hover { transform: none; }
+}

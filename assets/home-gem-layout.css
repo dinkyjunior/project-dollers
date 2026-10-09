@@ -1,0 +1,38 @@
+/* Compact framing of the approved gemstone entrance. All existing sport,
+   research and navigation controls remain separate, native app elements. */
+.page[data-page="home"] .home-header .brand {
+  width: 80%;
+  max-width: 328px;
+}
+.page[data-page="home"] .home-header .brand-subtitle {
+  margin-top: 4px;
+  font-size: 9.5px;
+  letter-spacing: 1.3px;
+}
+.page[data-page="home"] .home-entry {
+  width: calc(100% - 8px);
+  height: 54px;
+}
+.app-shell:has(.page[data-page="home"].active) {
+  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 240.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
+}
+/* At the full-height phone target, every control fits above navigation. The
+   reflected background extends below the frame, but must not create a scroll
+   gesture that moves those controls underneath the fixed navigation. Shorter
+   viewports retain native scrolling for access to all controls. */
+@media (min-width: 380px) and (min-height: 800px) {
+  .page[data-page="home"] .page-scroll { overflow-y: hidden; }
+}
+@media (min-width: 700px) {
+  .app-shell:has(.page[data-page="home"].active) {
+    height: min(calc(100dvh - 64px), 746px);
+  }
+}
+@media (max-width: 360px) {
+  .page[data-page="home"] .home-header .brand { width: 84%; }
+  .page[data-page="home"] .home-header .brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+  }
+  .page[data-page="home"] .home-entry { height: 50px; }
+}

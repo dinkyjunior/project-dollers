@@ -1,0 +1,124 @@
+/* Home-only motion. Fixed sport hues are never rotated: short highlights move
+   along the new SVG metal channel and each complete selector perimeter. */
+.page[data-page="home"] .aperture-neon-runner {
+  animation: pd-home-aperture-channel 8.8s linear infinite;
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .aperture-metal-runner {
+  animation: pd-home-aperture-channel 21.3s linear infinite reverse;
+  animation-delay: -7.4s;
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+
+.page[data-page="home"] .home-gem-selector-circuit {
+  display: block;
+  position: absolute;
+  inset: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  overflow: visible;
+  z-index: 4;
+  pointer-events: none;
+  animation: pd-home-gem-breathe 5.4s ease-in-out infinite;
+  animation-delay: var(--home-gem-circuit-delay, 0s);
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .home-gem-selector-circuit path {
+  animation: pd-home-aperture-channel var(--home-gem-circuit-duration, 7s) linear infinite;
+  animation-delay: var(--home-gem-circuit-delay, 0s);
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .home-gem-selector-tail {
+  stroke-width: 6;
+  stroke-dasharray: 49 951;
+  opacity: .34;
+}
+.page[data-page="home"] .home-gem-selector-hot {
+  stroke-width: 3.1;
+  stroke-dasharray: 24 976;
+  opacity: .96;
+}
+.page[data-page="home"] .home-gem-selector-pin {
+  stroke-width: 1.25;
+  stroke-dasharray: 7 993;
+  opacity: .96;
+}
+
+.page[data-page="home"] .home-gem-glint {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
+  z-index: 8;
+  pointer-events: none;
+  opacity: 0;
+  animation: pd-home-gem-glint var(--home-gem-glint-duration, 8.3s) ease-in-out infinite;
+  animation-delay: var(--home-gem-glint-delay, 0s);
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .home-gem-glint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f8ffff;
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  filter: drop-shadow(0 0 2px #eaffff);
+}
+.page[data-page="home"] .home-gem-glint::after {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffffd9, #f0ffff48 24%, transparent 72%);
+}
+.page[data-page="home"] .home-gem-glint-cap {
+  width: 13px;
+  height: 13px;
+  margin: -6.5px 0 0 -6.5px;
+}
+.page[data-page="home"] .home-gem-glint-edge {
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+}
+.page[data-page="home"] .home-gem-glint-ring {
+  width: 21px;
+  height: 21px;
+  margin: -10.5px 0 0 -10.5px;
+  z-index: 7;
+}
+
+@keyframes pd-home-aperture-channel {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -1000; }
+}
+@keyframes pd-home-gem-breathe {
+  0%, 100% { opacity: .86; }
+  50% { opacity: 1; }
+}
+@keyframes pd-home-gem-glint {
+  0%, 24%, 38%, 100% { opacity: 0; transform: scale(.48) rotate(var(--home-gem-glint-angle, 0deg)); }
+  28% { opacity: .92; transform: scale(1.03) rotate(var(--home-gem-glint-angle, 0deg)); }
+  30% { opacity: .45; transform: scale(.84) rotate(var(--home-gem-glint-angle, 0deg)); }
+  32% { opacity: .78; transform: scale(.96) rotate(var(--home-gem-glint-angle, 0deg)); }
+  36% { opacity: .08; transform: scale(.62) rotate(var(--home-gem-glint-angle, 0deg)); }
+}
+
+/* A luminous still presentation remains; no flashing, travelling geometry or
+   animation objects are required when the user chooses reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .page[data-page="home"] .aperture-neon-runner,
+  .page[data-page="home"] .aperture-metal-runner,
+  .page[data-page="home"] .home-gem-selector-circuit,
+  .page[data-page="home"] .home-gem-selector-circuit path,
+  .page[data-page="home"] .home-gem-glint {
+    animation: none !important;
+    will-change: auto;
+  }
+  .page[data-page="home"] .home-gem-selector-circuit { opacity: .9; }
+  .page[data-page="home"] .home-gem-selector-tail { opacity: .12; }
+  .page[data-page="home"] .home-gem-selector-hot { opacity: .35; }
+  .page[data-page="home"] .home-gem-selector-pin { opacity: .58; }
+  .page[data-page="home"] .home-gem-glint { opacity: .18; transform: none; }
+}
