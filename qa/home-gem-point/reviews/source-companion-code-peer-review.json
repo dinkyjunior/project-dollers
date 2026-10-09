@@ -1,0 +1,47 @@
+{
+  "status": "accepted-read-only-source-companion-code-peer-review",
+  "reviewer": "controls-audit",
+  "completedAtISO": "2026-10-09T12:31:19.357682+00:00",
+  "helper": {
+    "path": "qa/home-gem-point/source-companion-v2.cjs",
+    "sha256": "d055bfb745289a27f4f65daae97490ac0129fb5bc37fdf6fb60fd5a0438fccbb"
+  },
+  "preservedPreparedVersion": {
+    "path": "qa/home-gem-point/source-companion.cjs",
+    "sha256": "6e74396ff33333473604f2266177a4a7ec43ce94e2e7a9ecfa490e3c06807863"
+  },
+  "acceptedVisualRuntimeManifestSha256": "be79f233d716077ba4a0fe11b5cdc2de825d841608075c9995ba521cf1c58724",
+  "integratedRuntimeManifestSha256": "9220354ea64677249c739ac54e320f76f5d5ca9335a3a70390c2b4d387d9ca06",
+  "sourceIntegration": {
+    "path": "qa/home-gem-point/source-integration.json",
+    "sha256": "e97ee2884a5f3ab4239643f95e3ba276bcbcb844a4578bb9d8c7f5a7025ede51"
+  },
+  "independentIncomingSourceAudit": {
+    "path": "qa/home-gem-point/reviews/incoming-source-audit-995.json",
+    "sha256": "2d58910a4834b279674bf3e22954eaaded8ec4310afd2c51c39a489efe91bbdb"
+  },
+  "checks": {
+    "explicitCurrent247CanonicalRequired": true,
+    "exactPassedImmutableIncomingAuditRequired": true,
+    "exactFiveIncomingDatasetHashesRequired": true,
+    "all242NonDataBodiesActuallyRemainAcceptedVisualBytes": true,
+    "nativeAll247HTTP200ServedBodyDigestsRequired": true,
+    "actualLoadedFullSerializedDatasetIdentitiesRequired": true,
+    "DALUpcomingRoutePinnedToBothActualCurrentBooks": true,
+    "fourNaturalUnpausedFramesAndEvery14PathAdvancementRequiredInitialAndReturn": true,
+    "oldHelpersAndPointHelperHardPinned": true,
+    "all15OriginalTestsPinnedToHardPinnedAcceptedNativeReport": true,
+    "genuineErrorArraysCannotBeDisabled": true,
+    "onlySameOriginAppDocumentCancellationQualifiedAndPreserved": true,
+    "hostedOnlyStrictTLSActualProductionOrigin": true,
+    "priorFullVisualOriginalsNotRelabelledAsCurrentData": true,
+    "freshImmutableOutputRequired": true
+  },
+  "findingsResolved": [
+    "Start/end helper and test snapshots now also equal the immutable accepted baseline; v1 prepared helper remains unchanged.",
+    "The native DAL upcoming control and opened fixture now equal both actual independently audited current Node source books, avoiding a stale hardcoded destination.",
+    "Request failures now retain timestamps and resource type. Only actual same-origin app document cancellations are qualified and retained; resource failures cannot be exempted."
+  ],
+  "remainingFindings": [],
+  "qualification": "Source-code readiness peer review and independently checked static five-book integration bridge. This does not assert that both source companion browser runs or hosted verification have completed. Root owns the actual run/coordinator/publication gates. No browser, runtime, old helper, test or remote mutation performed by this reviewer."
+}

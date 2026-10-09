@@ -1,5 +1,29 @@
 # Codex Start Here
 
+## Current Home refinement — local gates accepted, publication in progress (9 October 2026)
+
+The latest user render replaces the previously accepted Home. The current local
+implementation has a thin upper/heavy continuous lower chrome casting, deeper
+navy/royal sapphire lighting, a real faceted gemstone CTA and sport-coloured
+full-perimeter selector lighting. All seven independent visual/native specialist
+seals and a separate incoming-source audit passed. Read
+[the current release evidence](qa/home-gem-point/RELEASE.md) and
+[before/after originals](qa/home-gem-point/index.html).
+
+Visual acceptance is immutable runtime `be79f233…58724`; ordinary rebase preserved
+production `995a43b`'s five audited NFL books. Integrated runtime is
+`9220354ea64677249c739ac54e320f76f5d5ca9335a3a70390c2b4d387d9ca06`.
+All242 other bodies, original15 tests, existing controllers and nonHome markup
+remain unchanged. Fresh integrated browser checks and actual hosted verification
+are required before reporting this version deployed. NBA remains selectable
+Coming soon; do not claim NBA stats implemented. No unrelated Page4 changes.
+
+This cloud checkout's remote fetch mapping tracks only main. Before every push,
+fetch explicit main and codex-rebuild refspecs into their remote-tracking refs,
+then ordinarily rebase both; never force-overwrite source updates. Preserve
+previous saved work, artifacts and backups. Latest source authority is the chat
+attachment, not the rejected website or generated implementation master.
+
 ## Current Home gemstone entrance — deployed and independently verified
 
 The latest four-sport Home refinement passed all six local specialist reviews
