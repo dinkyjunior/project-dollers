@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "status": "accepted-current-source-delta-with-evidence-qualifications",
+  "auditedAt": "2026-10-09T15:52:05.018991+00:00",
+  "auditor": "home_source_delta with independent read-only fact_delta peer",
+  "scope": "Audit only. Preserve ordinary automatic source refresh; no app/browser/Git/workflow/test or previous receipt modifications. Root owns final browser and deployment validation.",
+  "sourceCommit": "94e7a795932f2a79b332ed25a390dd3d33fe8020",
+  "previousSourceCommit": "f608a785b1d0b574e6062a8590a0553a8796ffa6",
+  "applicationCommitObserved": "ffc30983a1781c738a7fa30f9d1670f1f962897f",
+  "runtimeBinding": {
+    "fileCount": 273,
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "independentlyComputedUsing": "qa/matchup-breakdown/qa.cjs runtimeManifest; SHA256 of sorted compact JSON map; no browser launched"
+  },
+  "actualDataBindings": [
+    {
+      "path": "assets/data/current.json",
+      "baseSha256": "8095be6413d921c2335ca72229d0ad2cbe198bd754f5f26d3597cd128cb5410a",
+      "incomingAndCurrentSha256": "eca8569b1e22b9beb1e25c43aac94ef541620542ee0a3a7d7ef144897597c164",
+      "currentBytes": 1085443,
+      "exactIncomingBodyMatch": true
+    },
+    {
+      "path": "assets/data/matchup-breakdown.json",
+      "baseSha256": "5cecbdfd16494a430aadbe3331ca0fcdcfceebb881a70ab73aa518be6553e0ce",
+      "incomingAndCurrentSha256": "95085ad6cc049f35fb5c71c03e19945d717b68b136c03e6289b9e50e79ed9fb0",
+      "currentBytes": 28052574,
+      "exactIncomingBodyMatch": true
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "baseSha256": "02ff69cec5b1f23c2e24ea49583d1a1fe00c2c2d36514aa85cc80e667208c1d8",
+      "incomingAndCurrentSha256": "1d35a23829e9dfc178a48cd38452210890d9ca9c519856571c4f8c7a39de580a",
+      "currentBytes": 7108758,
+      "exactIncomingBodyMatch": true
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "baseSha256": "46abb20aeef1d8f15b2726163803368bafcaa944fa064501d2db4901e5cf39d3",
+      "incomingAndCurrentSha256": "f7cc8049f4f4fa5797e224a90f19c2b3186c0ff221e0842fd31366153a4cba6e",
+      "currentBytes": 33508,
+      "exactIncomingBodyMatch": true
+    },
+    {
+      "path": "assets/data/team-details.json",
+      "baseSha256": "e4728040fb40c82a3316fda45fd6f49fa026ad6b8ef2ab0667d170fd8cc9ce81",
+      "incomingAndCurrentSha256": "9847c35000b0b247c786a8cc369faea0ffc6d583a89e17b3b639fcc0eef313c4",
+      "currentBytes": 2292695,
+      "exactIncomingBodyMatch": true
+    }
+  ],
+  "dataBindingsSha256": "73edd16a73afa7382079006cd41c0f4534d31e210a8eddc7c8c7199ab9345026",
+  "semanticDelta": {
+    "status": "fully-explained",
+    "method": "Exhaustive parsed JSON leaf diff plus identity-aligned value multisets, separate from array ordering. Enumerated retrieval/output hash metadata excluded only after source contract invariance check. Normalize only proven same-event 401872980 source alias.",
+    "excludedMetadataKeys": [
+      "checkedAt",
+      "currentSourceHashes",
+      "generatedAt",
+      "refreshAfter",
+      "retrievedAt",
+      "scheduleRetrievedAt",
+      "sha256",
+      "sourceHashes",
+      "sourceTimestamp",
+      "sources"
+    ],
+    "excludedMetadataSuffixes": [
+      "Sha256",
+      "RetrievedAt"
+    ],
+    "excludedSpecialKey": "snapshotSha256CanonicalJson",
+    "arrayNormalization": "Unique player+game, ESPN ID, player ID, ID or game ID; remaining arrays compared as value multisets. Ordering and timestamps documented separately.",
+    "files": [
+      {
+        "path": "assets/data/current.json",
+        "indexAlignedChangedLeafCount": 367,
+        "identityAlignedSubstantiveOperationCount": 0,
+        "substantiveDelta": []
+      },
+      {
+        "path": "assets/data/matchup-breakdown.json",
+        "indexAlignedChangedLeafCount": 20550,
+        "identityAlignedSubstantiveOperationCount": 8,
+        "substantiveDelta": [
+          [
+            "/teams/CHI/fixtureReports/2026_05_CHI_GB/availability/players/@identity:00-0038411|2026_05_CHI_GB/reportStatus",
+            "Out",
+            "Injured Reserve"
+          ],
+          [
+            "/teams/NYJ/fixtureReports/2026_05_CLE_NYJ/availability/players/@identity:00-0037083|2026_05_CLE_NYJ",
+            {
+              "gameId": "2026_05_CLE_NYJ",
+              "eventId": "401872983",
+              "team": "NYJ",
+              "season": 2026,
+              "week": 5,
+              "playerId": "00-0037083",
+              "espnId": "4362840",
+              "name": "Kingsley Enagbare",
+              "position": "LB",
+              "reportStatus": "Questionable",
+              "reportedInactive": null,
+              "officialConfirmed": false,
+              "practiceStatus": null,
+              "injury": "Knee",
+              "sourceIds": [
+                "espn_fixture_summary_401872983"
+              ],
+              "identitySourceIds": [
+                "nflverse_player_ids"
+              ],
+              "confirmation": "provider-reported",
+              "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+              "weeklyReport": {
+                "playerId": "00-0037083",
+                "name": "Kingsley Enagbare",
+                "position": "DE",
+                "week": 5,
+                "reportStatus": null,
+                "practiceStatus": "Limited Participation in Practice",
+                "injury": "Knee",
+                "sourceIds": [
+                  "nflverse_injuries"
+                ]
+              }
+            },
+            "<absent>"
+          ],
+          [
+            "/teams/NYJ/fixtureReports/2026_05_CLE_NYJ/availability/players/@identity:00-0037255|2026_05_CLE_NYJ/reportStatus",
+            "Doubtful",
+            "Out"
+          ],
+          [
+            "/teams/NYJ/fixtureReports/2026_05_CLE_NYJ/availability/players/@identity:00-0038120|2026_05_CLE_NYJ/reportStatus",
+            "Doubtful",
+            "Out"
+          ],
+          [
+            "/teams/NYJ/fixtureReports/2026_05_CLE_NYJ/availability/players/@identity:00-0039890|2026_05_CLE_NYJ/reportStatus",
+            "Doubtful",
+            "Out"
+          ],
+          [
+            "/teams/NYJ/fixtureReports/2026_05_CLE_NYJ/availability/players/@identity:00-0040186|2026_05_CLE_NYJ",
+            "<absent>",
+            {
+              "gameId": "2026_05_CLE_NYJ",
+              "eventId": "401872983",
+              "team": "NYJ",
+              "season": 2026,
+              "week": 5,
+              "playerId": "00-0040186",
+              "espnId": "4700136",
+              "name": "Kiko Mauigoa",
+              "position": "LB",
+              "reportStatus": "Out",
+              "reportedInactive": null,
+              "officialConfirmed": false,
+              "practiceStatus": null,
+              "injury": "Quadriceps",
+              "sourceIds": [
+                "espn_fixture_summary_401872983"
+              ],
+              "identitySourceIds": [
+                "nflverse_player_ids"
+              ],
+              "confirmation": "provider-reported",
+              "sourceField": "injuries[].injuries[].status + details.fantasyStatus",
+              "weeklyReport": {
+                "playerId": "00-0040186",
+                "name": "Francisco Mauigoa",
+                "position": "LB",
+                "week": 5,
+                "reportStatus": null,
+                "practiceStatus": "Did Not Participate In Practice",
+                "injury": "Quadricep",
+                "sourceIds": [
+                  "nflverse_injuries"
+                ]
+              }
+            }
+          ],
+          [
+            "/teams/TB/fixtureReports/2026_05_TB_DAL/availability/players/@identity:00-0034855|2026_05_TB_DAL/reportedInactive",
+            true,
+            null
+          ],
+          [
+            "/teams/TB/injuries/currentTeamBulletin/@identity:00-0034855/injury",
+            "inactive",
+            "Head coach Todd Bowles said Friday that Mayfield (thumb) is now in a smaller splint, and the Bucs will see if he can progress to gripping the football next week, Rick Stroud of the Tampa Bay Times reports."
+          ]
+        ]
+      },
+      {
+        "path": "assets/data/player-history.json",
+        "indexAlignedChangedLeafCount": 1417,
+        "identityAlignedSubstantiveOperationCount": 0,
+        "substantiveDelta": []
+      },
+      {
+        "path": "assets/data/provenance.json",
+        "indexAlignedChangedLeafCount": 30,
+        "identityAlignedSubstantiveOperationCount": 0,
+        "substantiveDelta": []
+      },
+      {
+        "path": "assets/data/team-details.json",
+        "indexAlignedChangedLeafCount": 84,
+        "identityAlignedSubstantiveOperationCount": 0,
+        "substantiveDelta": []
+      }
+    ],
+    "noOtherFactChanges": [
+      "Schedule/game status/kickoff/score",
+      "Team identity/records/stats",
+      "Primary roster identities/statuses",
+      "Player statistical histories",
+      "QB evidence projections/confirmation"
+    ],
+    "bookkeeping": {
+      "QBMissingStatisticsSameRecordCount": 25,
+      "QBMissingStatisticsReordered": true,
+      "PHIReportsAndBulletins": "Same identities/status/injury values; Wicks date advances to15:02 and list order changes.",
+      "DALAndPITDepth": "Source timestamps advance; personnel/position/rank unchanged.",
+      "sourceContracts": [
+        {
+          "path": "assets/data/current.json",
+          "sourceCount": 30,
+          "idUrlProviderRequiredAndAvailabilityStatusUnchanged": true
+        },
+        {
+          "path": "assets/data/matchup-breakdown.json",
+          "sourceCount": 125,
+          "idUrlProviderRequiredAndAvailabilityStatusUnchanged": true
+        },
+        {
+          "path": "assets/data/player-history.json",
+          "sourceCount": 24,
+          "idUrlProviderRequiredAndAvailabilityStatusUnchanged": true
+        },
+        {
+          "path": "assets/data/provenance.json",
+          "sourceCount": 30,
+          "idUrlProviderRequiredAndAvailabilityStatusUnchanged": true
+        },
+        {
+          "path": "assets/data/team-details.json",
+          "sourceCount": 32,
+          "idUrlProviderRequiredAndAvailabilityStatusUnchanged": true
+        }
+      ],
+      "sourceAlias": {
+        "from": "espn_matchup_summary_401872980",
+        "to": "espn_fixture_summary_401872980",
+        "sameURL": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "currentIdenticalBodyHash": "b9d4747210230e6226c0970a9435bac4907756f08f688179d7da2873b8fe847e",
+        "priorSeparatelyFetchedHashes": {
+          "espn_matchup_summary_401872980": "3ec2e516b0a11309142e057fefca4b65fd869e5824d1d52e2a694520a0c15462",
+          "espn_fixture_summary_401872980": "d16f7c6f407c36a015ed8c9c123a86660e275c9ffa92774f23af53170e44aba6"
+        },
+        "priorRawBodiesNotAssertedIdentical": true,
+        "changedAliasLeaves": 62
+      }
+    }
+  },
+  "independentPublicFactChecks": {
+    "status": "corroborated-at-later-retrieval",
+    "independentOfBuilder": true,
+    "assertions": [
+      "CHI Johnson Jr IR/Undisclosed",
+      "NYJ Mitchell Out/Finger, Hall Out/Quadriceps, Parham Out/Knee, Kiko Mauigoa Out/Quadriceps",
+      "NYJ partial report omits Enagbare; no active/healthy/roster inference",
+      "TB Mayfield Out/Thumb and fantasy DOUBTFUL rather than INACTIVE corroborates reportedInactive=null",
+      "TB exact smaller-thumb-splint shortComment matches new bulletin; week/game applicability unavailable",
+      "Unchanged NFLverse weekly NYJ report still includes Enagbare and Francisco Mauigoa",
+      "Audited fixtures preserve provider-reported, incomplete official list and confirmed=false"
+    ],
+    "laterTimestampDifferences": [
+      {
+        "player": "Anthony Johnson Jr.",
+        "snapshot": "2026-10-09T15:00Z",
+        "publicAudit": "2026-10-09T15:19Z"
+      },
+      {
+        "player": "Baker Mayfield event report",
+        "snapshot": "2026-10-08T22:48Z",
+        "publicAudit": "2026-10-09T15:18Z"
+      }
+    ],
+    "rawResponses": [
+      {
+        "id": "espn_fixture_summary_401872980",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "snapshotSourceSha256": "b9d4747210230e6226c0970a9435bac4907756f08f688179d7da2873b8fe847e",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:44:29.405564+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint, default verified TLS; no access bypass, cache-buster or response editing.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "responseBytes": 607705,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "2690354757c5eed28e8b0d3ed8af2e9360e19b0fb112b0e628337d70362edfdb",
+        "etag": null,
+        "lastModified": null,
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872980.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872980.receipt.json",
+        "receiptSha256": "4ad4fae1bbf612824e94a30191df48102a46f20a3d2f1622f9175ca7852b8099"
+      },
+      {
+        "id": "espn_fixture_summary_401872981",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872981",
+        "snapshotSourceSha256": "7e906fad42aec02e67bc8c646d315d4a64cc94cff5496b815fcbc9779a73284c",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:44:29.417387+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint, default verified TLS; no access bypass, cache-buster or response editing.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872981",
+        "responseBytes": 112999,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "27aa5a50b8eb61701caa0962f39fc1b0d2bfd3fed273587ea4407198a344d037",
+        "etag": null,
+        "lastModified": null,
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872981.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872981.receipt.json",
+        "receiptSha256": "e3882a9b355e70d0acf39cb417be369dac4fe7517537546c32ba4a66b4243bff"
+      },
+      {
+        "id": "espn_fixture_summary_401872983",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+        "snapshotSourceSha256": "21d37c4aa66f9e56678fcff7bf9ff27b03f1ef7eb6657fb8d21696dc91f19255",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:44:29.401573+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint, default verified TLS; no access bypass, cache-buster or response editing.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+        "responseBytes": 113217,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "531161c05f43b4552ae46c1e7acae62f8ddc68d4a0099a6a1dbb094af264a126",
+        "etag": null,
+        "lastModified": null,
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872983.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872983.receipt.json",
+        "receiptSha256": "451e4d1c0cc51733de722e4d1117ec10a4782a667d6c6299fc548b85e379beec"
+      },
+      {
+        "id": "espn_fixture_summary_401872990",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+        "snapshotSourceSha256": "94100eb4fbc79b17b70e31f95d914f93c931ef85280f3ae324d1276287a48287",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:44:29.400675+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint, default verified TLS; no access bypass, cache-buster or response editing.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+        "responseBytes": 107672,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "e47bc3695f2d75dd0be869b3ab4f2f4a6c1ec916d1e1d8605e4328dc4b444cbe",
+        "etag": null,
+        "lastModified": null,
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872990.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872990.receipt.json",
+        "receiptSha256": "7eaf7cabfd5953fd3419846a99484a6d465952ecc35cb81290b2cfdd34de2513"
+      },
+      {
+        "id": "espn_fixture_summary_401872998",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872998",
+        "snapshotSourceSha256": "0a99e90c180bce843ca723a335e4480701556ada643dff2b50cc319733d7fb26",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:44:29.413695+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint, default verified TLS; no access bypass, cache-buster or response editing.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872998",
+        "responseBytes": 104340,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "58437563c4c1bf00fee4c2ca0fbf9f328ef368de0f65bba93958901325a525aa",
+        "etag": null,
+        "lastModified": null,
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872998.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401872998.receipt.json",
+        "receiptSha256": "e6c2adbbbf8a50bbcd69c0a6876880c489788a7cab85718454241bd7343d8978"
+      },
+      {
+        "id": "espn_fixture_summary_401873002",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873002",
+        "snapshotSourceSha256": "ae4763b3870f2daad6e2da46613546e711eee1f01550c94e607419e0001744fb",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:19Z",
+        "auditRetrievedAt": "2026-10-09T15:45:42.731816+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint; default verified TLS; no access bypass or cache buster.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873002",
+        "responseBytes": 93089,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "5518f7d29c34b33bc12c983870dbc42fdf97889b9e7a8585624ca0ea86ba21ba",
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401873002.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_fixture_summary_401873002.receipt.json",
+        "receiptSha256": "7e6f01d11fd84bdc97347a84ff0b4f277c35c5172924b213b465b9b9a75ba15c"
+      },
+      {
+        "id": "espn_matchup_depth_TB",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/depthcharts",
+        "snapshotSourceSha256": "80ae80a87b84383a7056507e7c133a8fd87d5202c73a11d77efd24283e6d4685",
+        "snapshotSourceRetrievedAt": "2026-10-09T15:26:18Z",
+        "auditRetrievedAt": "2026-10-09T15:45:42.730010+00:00",
+        "requestMethod": "GET",
+        "tlsVerification": true,
+        "requestPolicy": "Normal public HTTPS endpoint; default verified TLS; no access bypass or cache buster.",
+        "httpStatus": 200,
+        "responseUrl": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/depthcharts",
+        "responseBytes": 193259,
+        "contentType": "application/json;charset=UTF-8",
+        "sha256": "89daccbc52c4691de1ae2b1fdf81772cc5941a11ca741ec485693e563c86a6f3",
+        "savedRawBodyPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_matchup_depth_TB.json",
+        "snapshotSourceExactBodyMatch": false,
+        "receiptPath": "qa/home-continuous/reviews/source-delta-94e7-public/espn_matchup_depth_TB.receipt.json",
+        "receiptSha256": "be50abcc53c6e7210c39ef713de965a6d07a798d78ab2e3c51ae6c81c74e7005"
+      }
+    ]
+  },
+  "existingChecks": {
+    "coreData": {
+      "command": "python3 qa/data.test.py",
+      "exitCode": 0,
+      "run": 22,
+      "passed": 22
+    },
+    "sourceUpdates": {
+      "command": "python3 qa/source-updates.test.py",
+      "exitCode": 0,
+      "run": 7,
+      "passed": 7
+    },
+    "teamData": {
+      "command": "python3 qa/team-details/data.test.py",
+      "exitCode": 0,
+      "run": 11,
+      "passed": 10,
+      "skipped": 1,
+      "skipReason": "No fresh CSV cache supplied for independent raw-source player arithmetic"
+    },
+    "matchupMonitor": {
+      "command": "python3 qa/matchup-breakdown/source-monitor.test.py",
+      "exitCode": 0,
+      "run": 6,
+      "passed": 6
+    },
+    "savedCoreValidator": {
+      "command": "python3 scripts/refresh-data.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "teams": 32,
+      "roster": 80,
+      "activeRoster": 53,
+      "historyPlayers": 80,
+      "historyGameRows": 1273,
+      "provenanceHash": "passed"
+    },
+    "savedTeamValidator": {
+      "command": "python3 scripts/refresh-team-details.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "teams": 32,
+      "uniqueRegularSeasonGames": 544,
+      "sources": 32,
+      "disagreements": 4
+    },
+    "savedMatchupValidator": {
+      "command": "python3 scripts/refresh-matchup-breakdown.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "teams": 32,
+      "players": 812,
+      "playerGameRows": 8173,
+      "explicitQuarterbackStartRows": 843,
+      "disputedStartingRoleRows": 22,
+      "unavailableStartingRoleRows": 12,
+      "sources": 125,
+      "disagreements": 21
+    },
+    "fullMatchupDataSuite": {
+      "command": "python3 qa/matchup-breakdown/data.test.py",
+      "exitCode": 1,
+      "status": "failed",
+      "run": 33,
+      "passed": 27,
+      "failed": 6,
+      "failureReason": "All six source-archive-dependent tests reject the historical checked-in source manifest before raw-data assertions: Source manifest belongs to a different snapshot; generate fresh evidence for this build.",
+      "failedTests": [
+        "test_audit_archives_reproduce_source_response_hashes",
+        "test_injury_identity_merging_retains_published_practice",
+        "test_missing_statistics_do_not_substitute_older_qb_start",
+        "test_opponent_starts_include_actual_prior_seasons_and_no_padding",
+        "test_position_changed_receiver_keeps_known_zero_offensive_snaps",
+        "test_stale_manifest_refused_before_source_assertions"
+      ],
+      "historicalManifest": "qa/matchup-breakdown/data/source-manifest.json",
+      "historicalManifestSnapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+      "currentSnapshotSha256": "95085ad6cc049f35fb5c71c03e19945d717b68b136c03e6289b9e50e79ed9fb0",
+      "testsAndHistoricalManifestNotModified": true
+    }
+  },
+  "checkExecution": "All listed commands actually executed with PYTHONDONTWRITEBYTECODE=1; no tests or test expectations changed.",
+  "rawSavedValidatorToolOutputs": "qa/home-continuous/reviews/source-delta-94e7-check-output.json",
+  "sourceAndTestCodeBindings": [
+    {
+      "path": "scripts/refresh-data.py",
+      "sha256": "0c1505564641bc83d541188d011f19941ef2e7c906c3c4a19df8a3dced48c40f",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "scripts/refresh-team-details.py",
+      "sha256": "0e98507f06f0dac92ed31d027d791865d07edc0e67bd3490f1a75dacdf4bbb37",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "scripts/refresh-matchup-breakdown.py",
+      "sha256": "34819058a72be9edf6279ff3ca6e686a5a9b0627cc4a56a289cd94a3b6a616a2",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "scripts/check-source-updates.py",
+      "sha256": "dc7bcec4de0fed75a71f3e46e8d5a8d1277ecedbf7beb4a1ea5d6252de717117",
+      "unchangedFromBase": true
+    },
+    {
+      "path": ".github/workflows/refresh-nfl-data.yml",
+      "sha256": "f3ddf178341786d45696380d06e7a6f4cb717264d49b3104706d5f7770239aea",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "qa/data.test.py",
+      "sha256": "af436ed1c278a1a1e7617cffb6b32ed8d8da3e68ff6a9dbd34f9f1156d20583c",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "qa/source-updates.test.py",
+      "sha256": "be7f9e503a8234fbfed4884e89934559c79086175da297be11fab52dac93a822",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "qa/team-details/data.test.py",
+      "sha256": "840a91130a7751f5f6633816ac97da9760f4d15674d31fe9c88de340275fb4a8",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "qa/matchup-breakdown/data.test.py",
+      "sha256": "738963c5d92a21f158b8fb982e3e641c782a4d395a5ccdaa8316859fe4f56a39",
+      "unchangedFromBase": true
+    },
+    {
+      "path": "qa/matchup-breakdown/source-monitor.test.py",
+      "sha256": "55e630c3112a1e8edd3598a0dde8ab0375ebad852c1086585a37be78e8cfb359",
+      "unchangedFromBase": true
+    }
+  ],
+  "limits": [
+    "Full matchup suite did not pass:27 passed,6 failed due historical checked source-manifest; raw assertions from those6 are unverified for94e7.",
+    "Exact original15:26 raw responses for94e7 are not retained in checked historical source manifests. Seven later ordinary public HTTPS responses saved byte-for-byte and hash-bound; none equals recorded15:26 source hash. These corroborate specific report facts, not exact original-response replay/rebuild.",
+    "Workflow inspected: fresh source evidence is built in RUNNER_TEMP and its manifest used by matchup tests before commit. This audit does not assert unobserved CI outcomes.",
+    "No whole-provider fetch, rebuild, browser QA, hosted body verification or deployment performed by source auditor.",
+    "Provider reports are partial/time-dependent. Null/omission never establishes healthy/active status, future availability or official inactive-list confirmation."
+  ],
+  "recommendation": "Preserve all five actual94e7 bodies. Root bridge should state actual facts/tests/limits, freeze273-file runtime, then complete current root-owned browser/HTTP body verification."
+}

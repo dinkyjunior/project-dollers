@@ -1,0 +1,604 @@
+{
+  "review": "Home original brand lighting and motion specialist review",
+  "status": "iteration-passed-awaiting-closed-frozen-final-reports",
+  "writtenAtUtc": "2026-10-09T15:21:08.707468+00:00",
+  "finalFreeze": {
+    "commit": "ec9b26c",
+    "runtimeManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+    "runtimeFileCount": 253,
+    "closedFinalEvidenceBound": false
+  },
+  "reviewScope": "Read-only actual native phone screenshot review; no browser ownership or runtime changes during freeze.",
+  "sourceAuthority": "Original approved local gate-brand.webp retained byte-for-byte; latest user Home corrections govern styling. Original latest four-sport chat attachment bytes unavailable, so no exact pixel-match claim.",
+  "currentRuntimeSubset": {
+    "assets/home-aperture-motion.css": "c6caa4b32957e9c10fc3b813aa95bb0594552cce81441c28a48db7abca673c01",
+    "assets/home-aperture-motion.js": "c84b45b800edeb56a9ae1970946caf461fb8d830821227c3d28a8d65079e97ad",
+    "assets/home-brand-lighting.css": "adf79e188bc2d47aa0be2b594f9a8ba097c7c556505b57e6ff24dfa6c76be2e3",
+    "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+    "assets/home-gate-motion.css": "3a14c195b9f26e63f58c21e8313b8a4c47f8ea16c22a5b217029a3afc9d377b3",
+    "assets/home-gate-motion.js": "4a55cb0f869cc4a7b7c2eb54495ebff5a3c3460bd91eec2ea01faaa19372cb52",
+    "assets/home-gem-layout.css": "82d278b5fe4c20832eb3195f2f516fba0d33262a94222c6fba48ce5e3b1b87ef",
+    "index.html": "872e7e310879afe7ae2ff701017ea91f2bb8ed91311f4ff7b2594c6f5ef26ff8"
+  },
+  "currentRuntimeSubsetMatchesClosedFunctionalIteration": true,
+  "closedEvidenceReports": [
+    {
+      "path": "qa/home-continuous/prototype-chromium/results.json",
+      "sha256": "97c83e792f2ff00ef8ac7737155346da5333ce3091d636e544ae69d19339002d",
+      "status": "passed",
+      "browserClosed": true,
+      "completedAt": "2026-10-09T15:06:52.938Z",
+      "qualification": "Prototype optical evidence only. Runtime owners may still revise files; this is not frozen release acceptance."
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/results.json",
+      "sha256": "44365d42434d7a83b7e1f27c83b2e06ad50f2b4fda6d54228ec78f4ae0eef87a",
+      "status": "passed",
+      "browserClosed": true,
+      "completedAt": "2026-10-09T15:12:11.908Z",
+      "qualification": "Prototype optical evidence only. Runtime owners may still revise files; this is not frozen release acceptance."
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/results.json",
+      "sha256": "f5bbbf97dff718cfc9e3466c77c31ea5fdcaa8b8f29ddcca9f0788cefb246985",
+      "status": "passed",
+      "browserClosed": true,
+      "completedAt": "2026-10-09T15:17:26.196Z",
+      "qualification": "Prototype optical evidence only. Runtime owners may still revise files; this is not frozen release acceptance."
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/results.json",
+      "sha256": "a8b76444dec09875667b806932a860392c4b8c460f7d24b2f6a05ccd77c2cc4e",
+      "status": "passed",
+      "browserClosed": true,
+      "completedAt": "2026-10-09T15:15:16.728Z",
+      "qualification": "functional-iteration-not-frozen-acceptance",
+      "runtimeManifestSha256": "75962c5cd156b215a03448536c8a2a28ade72d27e3382a5106ce2efa8cf23495"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nfl-393x852.png",
+      "sha256": "82257cce318411c14dfd44a6082a71adb76b717cc6637ddd56b8586ee04aaa0c",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nfl-430x896.png",
+      "sha256": "3fbbd33225735fa966f47f1230aac8cfe0e2da0912fae0794e1fe70130baf56e",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nba-393x852.png",
+      "sha256": "d2859a3e253cfb791d15337bc7d93ed8c911abd1f0c07eab1d48d6b7d7b94a0a",
+      "sport": "nba",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nba-430x896.png",
+      "sha256": "fc1c2d66918e240c3ac4c52a1a00dd2d75690a70509f0cd220de5356f935bda5",
+      "sport": "nba",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nrl-393x852.png",
+      "sha256": "2b6fbeac8d9f9e18200adb47f0324d5575c57779632cbb37d5ef32fb4b1a9cee",
+      "sport": "nrl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-nrl-430x896.png",
+      "sha256": "a8cb584e0710a75a2ccfe2504a1ebf824dcb9e4cbc72694dd0d941a3934ecc64",
+      "sport": "nrl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-ufc-393x852.png",
+      "sha256": "fa158f0ccd78d85be05087b92c31e86a1d355885120b24789a7ce90ff959a535",
+      "sport": "ufc",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-chromium/home-ufc-430x896.png",
+      "sha256": "2df4dfe33cb7849e3fb26d74ae3d99498c458193e5cc28ec34808ea6f5446b1e",
+      "sport": "ufc",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nfl-393x852.png",
+      "sha256": "fd1cca1a8e9a61c91543f267f1fa842f42eb6cc2e2cae33d84d7e052c8b99d57",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nfl-430x896.png",
+      "sha256": "5b7e27bb6dc29ea3b524d2c646ac1144e232cd1c282ee0c8b7d4536d8448e523",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nba-393x852.png",
+      "sha256": "ee958c3aac63d9aaeb92094b42e551b3a1d54d3c371b4df587490c15ea8df134",
+      "sport": "nba",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nba-430x896.png",
+      "sha256": "1f8c056a66ee32ac544aba8ae98f66632f66dd06f04cf0848f6534f8d5a76239",
+      "sport": "nba",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nrl-393x852.png",
+      "sha256": "124045de460fabea1679664e6eea25eb1ec11b78de21659fa1db03be11d543a5",
+      "sport": "nrl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-nrl-430x896.png",
+      "sha256": "35151e8c3630516fc2bb1c0e4969b0592e1e5d264cf1670f8243bff6e977d8fc",
+      "sport": "nrl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-ufc-393x852.png",
+      "sha256": "a46c495f8567bae9474c9cf1dc53299a0b97245b9c51065b769fefba0fdf2455",
+      "sport": "ufc",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v2-chromium/home-ufc-430x896.png",
+      "sha256": "485607f923f49af26c4552287c1cad0c0eaefc1a440f4b59caa0ffb31b6cbebb",
+      "sport": "ufc",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nfl-393x852.png",
+      "sha256": "f88723593eec9b08f4fb77fba045135a09c818129635f401851ea39f9e36e556",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nfl-430x896.png",
+      "sha256": "a50623ceaee096b8f31074dd141703ad8bb93dc0e61e6230ca5d28605f64e557",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nba-393x852.png",
+      "sha256": "2a4868ea65867ec8391afd8188fcc4abbdd27fa5d3807d902e65cb05320d16e6",
+      "sport": "nba",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nba-430x896.png",
+      "sha256": "8b0b2139fab9806e7d3e300461bfbc3762b765729c1cf92fdec409684ec7ef01",
+      "sport": "nba",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nrl-393x852.png",
+      "sha256": "45058b498af601182483f8fed812d8570c3f0b1cec65763f641f1af81eb80bd7",
+      "sport": "nrl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-nrl-430x896.png",
+      "sha256": "8d36d1461161a0d6712f79fca79c9bb2a7703cc789c4122600102660e070671c",
+      "sport": "nrl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-ufc-393x852.png",
+      "sha256": "546ffdc888c9e2de46937d2d731ee4824a03a42158cd3e4075457f03aedcd140",
+      "sport": "ufc",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/prototype-v3-chromium/home-ufc-430x896.png",
+      "sha256": "34e8413eda7b1423405724feceafbb3bbd553784258fd906ada29e754d891374",
+      "sport": "ufc",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "prototype-optical"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-393x852-natural-0.png",
+      "sha256": "7e57ad2de8a31c52006d9fc18a837e57b172736b8a6d8c84866ce7b8a243a2ca",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-393x852-natural-1.png",
+      "sha256": "60b91b799d9185be7fa6420dadc99eaddce8226ebc7926b1164cc160233bd3af",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-393x852-natural-2.png",
+      "sha256": "f0e1171adea7cd847e22edc4d218a3fc32f152566591e03fa2be21e61ba7a46d",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-393x852-natural-3.png",
+      "sha256": "69cddca7a4848924e48b213408681d9f23c4f029be0cc0f11d6e20007267424d",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-393x852-reduced.png",
+      "sha256": "a03694c0942c8d5c08775f9f5fbacc31dd39ec751fea92fd8dd9557038f0b3ea",
+      "sport": "nfl",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "reduced-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-430x896-natural-0.png",
+      "sha256": "7d1ac9ce391b779323833c40964e545c0990939924123348d2d0a68b6aec1e86",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-430x896-natural-1.png",
+      "sha256": "fb1180cb40ee1598f83e6ed0be87a5aab5ddb270ec168df32878ba264c751151",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-430x896-natural-2.png",
+      "sha256": "25ef4036e246880568fd72153239bea4ce42926c1747298986969da009b84959",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-430x896-natural-3.png",
+      "sha256": "fa66282503518af8f374fa92715889b6310218f35812d1acaee5b36684c3806f",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "natural-motion"
+    },
+    {
+      "path": "qa/home-continuous/functional-iteration-v2-chromium/home-nfl-430x896-reduced.png",
+      "sha256": "715cc52aa0153a3317aacd7de156d41ec2fe4e925a98a0b05bbe1cc6f74b979d",
+      "sport": "nfl",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyReviewed": true,
+      "naturalAnimationPhase": true,
+      "kind": "reduced-motion"
+    }
+  ],
+  "visualFindings": [
+    {
+      "region": "PROJECT",
+      "status": "passed-in-reviewed-phone-captures",
+      "finding": "All seven letters remain crisp and readable with photographic faceted diamond material. Fine vector specular hits stay mounted on the faces; there is no broad opaque glare, background star field or decorative star crossing the green moneybag."
+    },
+    {
+      "region": "DOLLAR",
+      "status": "passed-in-reviewed-phone-captures",
+      "finding": "All six letters read as solid polished warm gold, with bright upper/corner sun hits and intact dark counters. Faint moving face reflections preserve original front-face shading and bevel depth."
+    },
+    {
+      "region": "original green moneybag",
+      "status": "passed-in-reviewed-phone-captures",
+      "finding": "Original green bag, gold rope and gold dollar sign stay intact and untinted by selected sport hue. New overlays exclude the bag."
+    },
+    {
+      "region": "v1 versus v2/v3",
+      "status": "reviewed",
+      "finding": "The dense central stack visibly improves hierarchy and keeps controls together. V3 retains curved continuous lower metal reflection and improves localized neon channel brilliance. Brand silhouette and material remain consistent across every state at 393 and 430."
+    },
+    {
+      "region": "natural motion and reduced presentation",
+      "status": "passed-at-closed-iteration",
+      "finding": "Eight unpaused natural NFL frames show changing ring/selector highlight positions and restrained brand hits; both reduced-motion screenshots retain clear material and readable content."
+    }
+  ],
+  "materialMaskEvidence": {
+    "crystalPointCenters": 98,
+    "crystalPointCentersOnOriginalBrightCoolFacets": 98,
+    "criterion": "original alpha>230, minRGB>155, B>.91R at every point center",
+    "crystalFaceClipCount": 7,
+    "goldFaceClipCount": 6,
+    "goldCornerPoints": 18,
+    "goldMaskIndependentSampleCount": 161706,
+    "goldMaskTransparentDeepDarkOrGreenSamples": 0,
+    "geometryRefinements": "P follows the left inset step x86/y120\u2013267 and lower stem right146; R counter exclusion beginsy120 to prevent rays crossing contiguous gold framing.",
+    "qualification": "Distributed per-letter diamond-facet scintillation; raster diamonds are not individually addressable objects."
+  },
+  "lifecycleEvidence": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed-at-closed-iteration",
+      "activeSampleCount": 4,
+      "brandPointsPerSample": [
+        116,
+        116,
+        116,
+        116
+      ],
+      "independentOpacityRanges": [
+        [
+          0.025,
+          0.96647
+        ],
+        [
+          0.025,
+          0.782332
+        ],
+        [
+          0.025,
+          0.969984
+        ],
+        [
+          0.025,
+          0.969936
+        ]
+      ],
+      "inactiveState": "paused",
+      "inactiveReason": "inactive",
+      "inactiveNativeClockCount": 0,
+      "all116BrandPointsPaused": true,
+      "reducedState": "reduced",
+      "reducedReason": "reduced-motion",
+      "reducedNativeClockCount": 0,
+      "resumedState": "running",
+      "returnHomeState": "running"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed-at-closed-iteration",
+      "activeSampleCount": 4,
+      "brandPointsPerSample": [
+        116,
+        116,
+        116,
+        116
+      ],
+      "independentOpacityRanges": [
+        [
+          0.025,
+          0.91253
+        ],
+        [
+          0.025,
+          0.781755
+        ],
+        [
+          0.025,
+          0.902373
+        ],
+        [
+          0.025,
+          0.831547
+        ]
+      ],
+      "inactiveState": "paused",
+      "inactiveReason": "inactive",
+      "inactiveNativeClockCount": 0,
+      "all116BrandPointsPaused": true,
+      "reducedState": "reduced",
+      "reducedReason": "reduced-motion",
+      "reducedNativeClockCount": 0,
+      "resumedState": "running",
+      "returnHomeState": "running"
+    }
+  ],
+  "staticSourceReview": {
+    "motion": "CSS opacity, transforms and closed-path dashoffset only",
+    "noAnimationFrameLoopOrTimerInHomeApertureMotionJs": true,
+    "actualSelectorPerimeters": "ResizeObserver updates measured pixel viewBox and radius12 closed tracks; CSS dashoffset completes each perimeter.",
+    "routeLifecycle": "Existing event-driven Home visibility controller governs play-state; no research/data listener added by brand integration."
+  },
+  "limitations": [
+    "Prototype and functional-iteration captures are not frozen release acceptance. Final seal awaits newly completed Chromium and WebKit reports with closed contexts/browser, exact frozen runtime manifest and unchanged-after-close proof.",
+    "Static screenshot review cannot establish physical iPhone performance or individually addressed raster diamonds.",
+    "This review does not replace the other specialists' gate/control/layout reviews or root publication decision."
+  ],
+  "finalSeal": null
+}

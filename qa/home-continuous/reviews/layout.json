@@ -1,0 +1,1778 @@
+{
+  "status": "passed",
+  "reviewer": "home_immersive_layout",
+  "reviewedAt": "2026-10-09T16:01:05.285655+00:00",
+  "scope": "Home layout only; read-only static original-image and completed-report review; no browser started and no runtime source modified.",
+  "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+  "runtimeFilesIndependentlyVerified": 273,
+  "layoutCss": {
+    "file": "assets/home-gem-layout.css",
+    "sha256": "82d278b5fe4c20832eb3195f2f516fba0d33262a94222c6fba48ce5e3b1b87ef"
+  },
+  "referenceAuthority": {
+    "record": "reference/HOME_CONTINUOUS_CORRECTIONS.md",
+    "sha256": "aba16da33953ef05a289ab5168898c8a4b3dcb397f33d0b269de623d47d7f32c",
+    "approvedChatBinaryAvailable": false,
+    "registeredPixelIdentityClaimed": false,
+    "interpretation": "Latest explicit correction removes Home navigation and visible sport titles; the approved chat reference and subsequent corrections supersede historical requirements."
+  },
+  "chromium": {
+    "file": "qa/home-continuous/local-chromium/results.json",
+    "sha256": "9cdc80cc936d917816f7c5c9d9a47be4c9437d7e59fa2ab61be94d1813bfb926",
+    "status": "passed",
+    "browserClosed": true,
+    "runtimeManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+    "acceptance": "passed-for-layout",
+    "viewports": 4,
+    "nativeActions": 144,
+    "originals": 38,
+    "allContextsClosed": true,
+    "runtimeUnchanged": true,
+    "allErrorArraysEmpty": true
+  },
+  "webkit": {
+    "file": "qa/home-continuous/local-webkit-current/results.json",
+    "sha256": "e5ff193431a99a826b6ef1c72dc8166d5e9cab9de726ab03e48ddf55edfccd97",
+    "status": "passed",
+    "browserClosed": true,
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "acceptance": "passed-for-current-layout",
+    "nativeActions": 72,
+    "originals": 26,
+    "currentRuntimeFilesHTTP200Exact": 273,
+    "allErrorAndCancellationArraysEmpty": true,
+    "allContextsClosed": true,
+    "failedClosedReceiptRetained": {
+      "file": "qa/home-continuous/local-webkit/results.json",
+      "sha256": "a8f1f1dda54493501ff2895a050f6ab06cc1134cacbc197600c5da6f18fd8a15",
+      "status": "failed",
+      "browserClosed": true,
+      "runtimeManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+      "failure": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'running'\n- 'reduced'\n"
+    },
+    "qualification": "Two current WPE phone originals personally viewed; all eight current WPE sport states reviewed through source-bound native geometry. Earlier failed WebKit receipt remains failed and separate."
+  },
+  "personallyViewedOriginals": [
+    {
+      "file": "qa/home-continuous/local-chromium/home-nfl-393x852.png",
+      "sha256": "887c6d467f8d62670c6719a77cf2e8cb27551cfdee270f1318c3b4944f31046c",
+      "personallyViewedOriginal": true
+    },
+    {
+      "file": "qa/home-continuous/local-chromium/home-nba-430x896.png",
+      "sha256": "da1335ace1ea3423ce16a68c61e2273ba5b1074d0f4e2d93ea25fcfad81107bc",
+      "personallyViewedOriginal": true
+    },
+    {
+      "file": "qa/home-continuous/local-chromium/compact-home-852x393-bottom.png",
+      "sha256": "984a38243105848814646da4b1943d5b4ef30474b78c9fd618bb872f05eb73a1",
+      "personallyViewedOriginal": true
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nfl-393x852.png",
+      "sha256": "fd1cca1a8e9a61c91543f267f1fa842f42eb6cc2e2cae33d84d7e052c8b99d57",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nba-393x852.png",
+      "sha256": "ee958c3aac63d9aaeb92094b42e551b3a1d54d3c371b4df587490c15ea8df134",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nrl-393x852.png",
+      "sha256": "124045de460fabea1679664e6eea25eb1ec11b78de21659fa1db03be11d543a5",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-ufc-393x852.png",
+      "sha256": "a46c495f8567bae9474c9cf1dc53299a0b97245b9c51065b769fefba0fdf2455",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nfl-430x896.png",
+      "sha256": "5b7e27bb6dc29ea3b524d2c646ac1144e232cd1c282ee0c8b7d4536d8448e523",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nba-430x896.png",
+      "sha256": "1f8c056a66ee32ac544aba8ae98f66632f66dd06f04cf0848f6534f8d5a76239",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-nrl-430x896.png",
+      "sha256": "35151e8c3630516fc2bb1c0e4969b0592e1e5d264cf1670f8243bff6e977d8fc",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-v2-chromium/home-ufc-430x896.png",
+      "sha256": "485607f923f49af26c4552287c1cad0c0eaefc1a440f4b59caa0ffb31b6cbebb",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier optical prototype; not relabelled as final-runtime proof."
+    },
+    {
+      "file": "qa/home-continuous/prototype-chromium/home-nfl-393x852.png",
+      "sha256": "82257cce318411c14dfd44a6082a71adb76b717cc6637ddd56b8586ee04aaa0c",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier flexible-stage prototype, used only for spacing comparison."
+    },
+    {
+      "file": "qa/home-continuous/prototype-chromium/home-nfl-430x896.png",
+      "sha256": "3fbbd33225735fa966f47f1230aac8cfe0e2da0912fae0794e1fe70130baf56e",
+      "personallyViewedOriginal": true,
+      "qualification": "Earlier flexible-stage prototype, used only for spacing comparison."
+    },
+    {
+      "file": "qa/home-continuous/local-webkit-current/home-nfl-393x852.png",
+      "sha256": "9a65234b594880009850e8782794dd027f195351a89a261442cb3e7857ed8209",
+      "personallyViewedOriginal": true,
+      "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1"
+    },
+    {
+      "file": "qa/home-continuous/local-webkit-current/home-nrl-430x896.png",
+      "sha256": "72b2ac1a461e66e944825de6db54026542e562ccd66c3591b5d52bb15e4fe9bd",
+      "personallyViewedOriginal": true,
+      "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1"
+    }
+  ],
+  "finalChromiumGeometry": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 175.203125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.9375
+      },
+      "entry": {
+        "x": 16,
+        "y": 558.265625,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 620.296875,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.625,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.625
+      },
+      "selectorWidths": [
+        81.8207,
+        82.75,
+        82.75,
+        82.75
+      ],
+      "selectorHeights": [
+        63.2812,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 175.203125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.9375
+      },
+      "entry": {
+        "x": 16,
+        "y": 558.265625,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 620.296875,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.625,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.625
+      },
+      "selectorWidths": [
+        82.75,
+        82.7127,
+        82.75,
+        82.75
+      ],
+      "selectorHeights": [
+        64,
+        63.9712,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 175.203125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.9375
+      },
+      "entry": {
+        "x": 16,
+        "y": 558.265625,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 620.296875,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.625,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.625
+      },
+      "selectorWidths": [
+        82.75,
+        82.75,
+        82.75,
+        82.75
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 175.203125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.9375
+      },
+      "entry": {
+        "x": 16,
+        "y": 558.265625,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 620.296875,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.625,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.625
+      },
+      "selectorWidths": [
+        82.75,
+        82.75,
+        82.75,
+        82.75
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.953125
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.953125,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.953125,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.953125
+      },
+      "selectorWidths": [
+        90.4408,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        62.9154,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.953125
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.953125,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.953125,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.953125
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.953125,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.953125,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.953125
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.953125,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.953125,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 169,
+        "y": 62,
+        "width": 430,
+        "height": 900,
+        "right": 599,
+        "bottom": 962
+      },
+      "brand": {
+        "x": 217.546875,
+        "y": 80,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 550.453125,
+        "bottom": 208.15625
+      },
+      "gate": {
+        "x": 169,
+        "y": 249.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 599,
+        "bottom": 640.953125
+      },
+      "entry": {
+        "x": 185,
+        "y": 666.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 732.953125,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 181,
+        "y": 748.953125,
+        "width": 406,
+        "height": 70,
+        "right": 587,
+        "bottom": 818.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 169,
+        "y": 62,
+        "width": 430,
+        "height": 900,
+        "right": 599,
+        "bottom": 962
+      },
+      "brand": {
+        "x": 217.546875,
+        "y": 80,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 550.453125,
+        "bottom": 208.15625
+      },
+      "gate": {
+        "x": 169,
+        "y": 249.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 599,
+        "bottom": 640.953125
+      },
+      "entry": {
+        "x": 185,
+        "y": 666.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 732.953125,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 181,
+        "y": 748.953125,
+        "width": 406,
+        "height": 70,
+        "right": 587,
+        "bottom": 818.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 169,
+        "y": 62,
+        "width": 430,
+        "height": 900,
+        "right": 599,
+        "bottom": 962
+      },
+      "brand": {
+        "x": 217.546875,
+        "y": 80,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 550.453125,
+        "bottom": 208.15625
+      },
+      "gate": {
+        "x": 169,
+        "y": 249.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 599,
+        "bottom": 640.953125
+      },
+      "entry": {
+        "x": 185,
+        "y": 666.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 732.953125,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 181,
+        "y": 748.953125,
+        "width": 406,
+        "height": 70,
+        "right": 587,
+        "bottom": 818.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 169,
+        "y": 62,
+        "width": 430,
+        "height": 900,
+        "right": 599,
+        "bottom": 962
+      },
+      "brand": {
+        "x": 217.546875,
+        "y": 80,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 550.453125,
+        "bottom": 208.15625
+      },
+      "gate": {
+        "x": 169,
+        "y": 249.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 599,
+        "bottom": 640.953125
+      },
+      "entry": {
+        "x": 185,
+        "y": 666.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 732.953125,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 181,
+        "y": 748.953125,
+        "width": 406,
+        "height": 70,
+        "right": 587,
+        "bottom": 818.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 505,
+        "y": 50,
+        "width": 430,
+        "height": 900,
+        "right": 935,
+        "bottom": 950
+      },
+      "brand": {
+        "x": 553.546875,
+        "y": 68,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 886.453125,
+        "bottom": 196.15625
+      },
+      "gate": {
+        "x": 505,
+        "y": 237.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 935,
+        "bottom": 628.953125
+      },
+      "entry": {
+        "x": 521,
+        "y": 654.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 720.953125,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 517,
+        "y": 736.953125,
+        "width": 406,
+        "height": 70,
+        "right": 923,
+        "bottom": 806.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 505,
+        "y": 50,
+        "width": 430,
+        "height": 900,
+        "right": 935,
+        "bottom": 950
+      },
+      "brand": {
+        "x": 553.546875,
+        "y": 68,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 886.453125,
+        "bottom": 196.15625
+      },
+      "gate": {
+        "x": 505,
+        "y": 237.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 935,
+        "bottom": 628.953125
+      },
+      "entry": {
+        "x": 521,
+        "y": 654.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 720.953125,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 517,
+        "y": 736.953125,
+        "width": 406,
+        "height": 70,
+        "right": 923,
+        "bottom": 806.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 505,
+        "y": 50,
+        "width": 430,
+        "height": 900,
+        "right": 935,
+        "bottom": 950
+      },
+      "brand": {
+        "x": 553.546875,
+        "y": 68,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 886.453125,
+        "bottom": 196.15625
+      },
+      "gate": {
+        "x": 505,
+        "y": 237.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 935,
+        "bottom": 628.953125
+      },
+      "entry": {
+        "x": 521,
+        "y": 654.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 720.953125,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 517,
+        "y": 736.953125,
+        "width": 406,
+        "height": 70,
+        "right": 923,
+        "bottom": 806.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 505,
+        "y": 50,
+        "width": 430,
+        "height": 900,
+        "right": 935,
+        "bottom": 950
+      },
+      "brand": {
+        "x": 553.546875,
+        "y": 68,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 886.453125,
+        "bottom": 196.15625
+      },
+      "gate": {
+        "x": 505,
+        "y": 237.546875,
+        "width": 430,
+        "height": 391.40625,
+        "right": 935,
+        "bottom": 628.953125
+      },
+      "entry": {
+        "x": 521,
+        "y": 654.953125,
+        "width": 398,
+        "height": 66,
+        "bottom": 720.953125,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 517,
+        "y": 736.953125,
+        "width": 406,
+        "height": 70,
+        "right": 923,
+        "bottom": 806.953125
+      },
+      "selectorWidths": [
+        92,
+        92,
+        92,
+        92
+      ],
+      "selectorHeights": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "compactViewportEvidence": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "nativeWheelAttempt": true,
+      "scrollTopBefore": 0,
+      "scrollTopAfter": 0,
+      "actualScrollDelta": 0,
+      "allControlsAccessibleAtBottom": true,
+      "entryBottom": 520.21875,
+      "dockBottom": 602.8125,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 700,
+        "right": 320,
+        "bottom": 700
+      },
+      "horizontalOverflow": false,
+      "qualification": "320\u00d7700 fits without scrolling; 852\u00d7393 requires and demonstrates native vertical scrolling."
+    },
+    {
+      "viewport": {
+        "width": 852,
+        "height": 393
+      },
+      "nativeWheelAttempt": true,
+      "scrollTopBefore": 0,
+      "scrollTopAfter": 365,
+      "actualScrollDelta": 365,
+      "allControlsAccessibleAtBottom": true,
+      "entryBottom": 286.578125,
+      "dockBottom": 366.578125,
+      "shell": {
+        "x": 211,
+        "y": 8,
+        "width": 430,
+        "height": 377,
+        "right": 641,
+        "bottom": 385
+      },
+      "horizontalOverflow": false,
+      "qualification": "320\u00d7700 fits without scrolling; 852\u00d7393 requires and demonstrates native vertical scrolling."
+    }
+  ],
+  "findings": {
+    "denseStack": "passed: brand, native-ratio gate, gem and icon dock stay together; actual original comparison improves the large gaps around the earlier flexible stage. Remaining phone height is continuous textured reflected corridor floor below the dock.",
+    "playingSurface": "passed in personally viewed all-four-sport prototype originals and final NFL/NBA originals: the field, court or octagon is visible below proportionally contained emblems. Other final states are geometry/metadata reviewed, not claimed personally viewed.",
+    "phoneFit": "passed: shells match the full 393\u00d7852 and 430\u00d7896 viewports, all five controls remain in bounds above the bottom edge, and native hit tests pass.",
+    "framing": "passed by recorded geometry: 768\u00d71024 and 1440\u00d71000 center a 430\u00d7900 Home preview with native gate proportions.",
+    "shortAndLandscape": "passed: 320\u00d7700 fits all controls without movement; native wheel on 852\u00d7393 moves the Home scroller 365 CSSpx and reveals the gem and all four selectors.",
+    "titlesAndNav": "passed: every recorded sport state has zero Home nav elements and empty visible selector titles with accessible labels retained.",
+    "logoAndBrandRatios": "passed by geometry/source: official emblems and brand use contain/natural image bounds; brand lighting shares the exact brand image rectangle.",
+    "safeArea": "CSS uses real safe-area inset padding. The recorded emulated viewports prove ample bottom clearance; physical iPhone safe-area/FPS certification is not claimed.",
+    "crossEnginePhoneFit": "passed: current WPE has fullphone shells, all five hit tests, no horizontal overflow and no Home nav at393\u00d7852/430\u00d7896; natural gate ratio and dense spacing agree with unchanged earlier Chromium layout. WPE dockbottom705.234/756.562 CSSpx leaves ample floor/bottom clearance."
+  },
+  "limitations": [
+    "Only the listed final PNGs were personally viewed; other final states were reviewed through current source-bound report geometry and previously viewed prototypes.",
+    "No original approved attachment binary or registered pixel comparison is available.",
+    "No physical iPhone, hardware FPS or nonzero hardware safe-area certification is claimed.",
+    "No hosted publication acceptance is claimed in this local review.",
+    "Independent source audit is accepted with evidence qualifications: the full matchup suite reports27 passed and6 historical-manifest-dependent failures; this is not represented as an all-green source suite."
+  ],
+  "previousFrozenApplicationCommitDeclaredByCoordinator": "ec9b26c",
+  "frozenApplicationCommitDeclaredByCoordinator": "ffc30983",
+  "previousRuntimeManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+  "previousRuntimeFilesIndependentlyVerified": 253,
+  "sourceIntegration": {
+    "file": "qa/home-continuous/source-integration-94e7.json",
+    "sha256": "532fa7e1d9abfaec5ebcc4fe037cba201a67ef4a042d7813d89e32ef42bc2395",
+    "unchangedExistingFilesIndependentlyCompared": 248,
+    "changedDatasetFilesIndependentlyCompared": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "addedFallbackAssetCountIndependentlyCompared": 20,
+    "layoutCssByteIdentical": true,
+    "qualification": "The bridge file truthfully retained its exact historical source-audit-pending status at creation. The later separately signed source audit59ab\u2026 accepted the current delta with evidence qualifications. Earlier browser receipts remain bound to their own runtime; no body or image is relabelled.",
+    "historicalStatus": "exact-integration-proved-source-audit-pending",
+    "historicalRecordAt": "2026-10-09T15:44:08.695648+00:00",
+    "auditAcceptedSeparatelyAt": "2026-10-09T15:52:05.018991+00:00"
+  },
+  "sourceAudit": {
+    "file": "qa/home-continuous/reviews/source-delta-94e7.json",
+    "sha256": "59ab2241a2a44298c659b01c2cc8afcbd903c2d91eb1cb623b9ab8a4e9f2249e",
+    "status": "accepted-current-source-delta-with-evidence-qualifications",
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "reviewScope": "Independent source audit receipt read; this layout reviewer does not repeat or claim authorship of source-fact validation.",
+    "qualification": "Actual report/availability changes are classified by the independent source auditor; this integration is not described as metadata only. Its accepted status retains evidence qualifications, including six historical-source-manifest-dependent full-suite failures and one raw-cache-dependent skip."
+  },
+  "currentChromiumCompanion": {
+    "file": "qa/home-continuous/current-chromium-v2/results.json",
+    "sha256": "3cf70fbb8b50d7847e7f11531221819b696a2aa509b041df7f26f2b9fbb6fa84",
+    "status": "passed",
+    "browserClosed": true,
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "acceptance": "passed-for-current-runtime-source-and-assets",
+    "nativeActions": 24,
+    "coldRoutes": 8,
+    "originals": 12,
+    "currentRuntimeFilesHTTP200Exact": 273,
+    "allContextsClosed": true,
+    "allErrorAndCancellationArraysEmpty": true,
+    "failedClosedReceiptRetained": {
+      "file": "qa/home-continuous/current-chromium/results.json",
+      "sha256": "4267a50ca5e795bccc8c14312e7bb904bb6908e805e13f2eadb27c2fb5b6cd24",
+      "status": "failed",
+      "browserClosed": true,
+      "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+      "acceptance": "pending-passing-rerun",
+      "qualification": "Current closed failed image readiness/fit run is retained; it is not accepted as current Chromium proof."
+    },
+    "qualification": "Current companion proves new source data flow, cold routes and exact current runtime assets. Earlier4-viewport Chromium layout/compact originals remain bound to their original804\u2026 runtime and connected only through the exact unchanged248-body bridge."
+  },
+  "currentWebKitGeometry": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852,
+        "right": 393,
+        "bottom": 852
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "bottom": 619.90625,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nfl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nba",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nrl",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "ufc",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 896,
+        "right": 430,
+        "bottom": 896
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "bottom": 670.5625,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "allFiveNativeHitTests": true,
+      "horizontalOverflow": false,
+      "homeNavCount": 0,
+      "selectorVisibleTitles": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "localAcceptance": "passed-for-current-Home-layout",
+  "seal": {
+    "status": "passed",
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "requiredLocalEvidenceClosed": true,
+    "current273RuntimeFilesIndependentlyVerified": true,
+    "currentWebKitPhonesAccepted": true,
+    "currentChromiumCompanionAccepted": true,
+    "earlierChromiumFourViewportAndCompactProofConnectedByExactLayoutByteIdentity": true,
+    "sourceDeltaAcceptedWithEvidenceQualifications": true,
+    "registeredPixelIdentity": false,
+    "physicalIPhoneCertification": false,
+    "hostedAcceptance": "not-yet-reviewed-by-this-local-layout-seal"
+  }
+}

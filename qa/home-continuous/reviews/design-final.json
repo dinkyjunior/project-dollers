@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": 1,
+  "review": "Independent final Home design and asset audit",
+  "auditor": "home_design_final",
+  "status": "local-independent-design-and-asset-review-passed-with-qualifications",
+  "reviewedAtUtc": "2026-10-09T16:01:25.869911+00:00",
+  "scope": "Only this new receipt written. No application, Git, browser, workflows, tests or previous reports changed. Six direct full original image views total. Read-only source, numeric native PNG analysis and hash checks are separate from direct visual review.",
+  "sourceAuthority": {
+    "latest": {
+      "path": "reference/HOME_CONTINUOUS_CORRECTIONS.md",
+      "sha256": "aba16da33953ef05a289ab5168898c8a4b3dcb397f33d0b269de623d47d7f32c",
+      "read": true
+    },
+    "prior": {
+      "path": "reference/HOME_POINT_CHAT_SOURCE.md",
+      "sha256": "d4b3670eb5dbca450d625e9fb06ae6b6b3fb6b2ba7bb90dde94ced93418132db",
+      "read": true,
+      "supersededHomeBottomNavigationAndVisibleSelectorTitleRequirements": true
+    },
+    "chatSourceBinaryAvailable": false,
+    "directNewestChatAttachmentInspectionByThisAuditor": false,
+    "qualification": "The latest user corrections recorded by root govern this audit. Old runtime/screenshots and generated masters are comparison evidence, not the approved chat source. Root direct visual comparison of the chat attachment remains separate; no pixel-registration claim."
+  },
+  "finalFreeze": {
+    "applicationCommit": "ffc30983a1781c738a7fa30f9d1670f1f962897f",
+    "runtimeFileCount": 273,
+    "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "independentRuntimeHelperRecomputation": "qa/matchup-breakdown/qa.cjs runtimeManifest()/tests() read-only; 273 files, same canonical digest; all15 original test-file bindings match both current browser receipts",
+    "allCurrentFileBodiesIndependentlyRehashed": true
+  },
+  "localSeal": {
+    "currentCompleteWpePassedClosed": true,
+    "currentTargetedChromePassedClosed": true,
+    "qualifiedSourceAuditAccepted": true,
+    "publicationOrHostedCompletionClaim": false,
+    "reports": [
+      {
+        "path": "qa/home-continuous/local-webkit-current/results.json",
+        "sha256": "e5ff193431a99a826b6ef1c72dc8166d5e9cab9de726ab03e48ddf55edfccd97",
+        "status": "passed",
+        "browserClosed": true,
+        "completedAt": "2026-10-09T15:48:47.111Z",
+        "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+        "runtimeFileCount": 273,
+        "originalsIndependentlyHashByteAndDecodeVerified": 26,
+        "nativeActionCount": 72,
+        "servedRuntimeBodiesVerified": 273,
+        "zeroRecordedErrorsIncludingCancelledNavigation": true,
+        "scopeQualification": "Current complete WPE phone run"
+      },
+      {
+        "path": "qa/home-continuous/current-chromium-v2/results.json",
+        "sha256": "3cf70fbb8b50d7847e7f11531221819b696a2aa509b041df7f26f2b9fbb6fa84",
+        "status": "passed",
+        "browserClosed": true,
+        "completedAt": "2026-10-09T15:54:34.933Z",
+        "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+        "runtimeFileCount": 273,
+        "originalsIndependentlyHashByteAndDecodeVerified": 12,
+        "nativeActionCount": 24,
+        "servedRuntimeBodiesVerified": 273,
+        "zeroRecordedErrorsIncludingCancelledNavigation": true,
+        "scopeQualification": "Current targeted Chromium source-change/cold-route companion; broad Home visual/compact/tablet coverage inherited only through exact unchanged-body bridge"
+      },
+      {
+        "path": "qa/home-continuous/local-chromium-final/results.json",
+        "sha256": "675f204e2d80aae97becaaa4c2f58b7bee147d37ce4ffc84c898ae3c94ed36b5",
+        "status": "passed",
+        "browserClosed": true,
+        "completedAt": "2026-10-09T15:29:22.617Z",
+        "runtimeManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+        "runtimeFileCount": 253,
+        "originalsIndependentlyHashByteAndDecodeVerified": 40,
+        "nativeActionCount": 144,
+        "servedRuntimeBodiesVerified": 253,
+        "zeroRecordedErrorsIncludingCancelledNavigation": true,
+        "scopeQualification": "Prior 253-file broad Chromium run; not relabeled as full current-data rerun"
+      }
+    ]
+  },
+  "sourceIntegration": {
+    "path": "qa/home-continuous/source-integration-94e7.json",
+    "sha256": "532fa7e1d9abfaec5ebcc4fe037cba201a67ef4a042d7813d89e32ef42bc2395",
+    "prior253FileManifestSha256": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+    "current273FileManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+    "independentlyVerifiedUnchangedPriorFiles": 248,
+    "changedFiles": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "all5DataFilesExactlyMatchIncoming94e7GitObjects": true,
+    "addedFallbackAssets": [
+      "assets/logos/ari.png",
+      "assets/logos/atl.png",
+      "assets/logos/car.png",
+      "assets/logos/chi.png",
+      "assets/logos/cin.png",
+      "assets/logos/den.png",
+      "assets/logos/ind.png",
+      "assets/logos/jax.png",
+      "assets/logos/la.png",
+      "assets/logos/lac.png",
+      "assets/logos/lar.png",
+      "assets/logos/lv.png",
+      "assets/logos/mia.png",
+      "assets/logos/no.png",
+      "assets/logos/nyg.png",
+      "assets/logos/nyj.png",
+      "assets/logos/tb.png",
+      "assets/logos/ten.png",
+      "assets/logos/was.png",
+      "assets/logos/wsh.png"
+    ],
+    "removedFiles": [],
+    "allPriorHomeImagesSvgCssControllerIndexAndOtherNonDataCodeBodiesUnchanged": true,
+    "qualification": "Current targeted Chromium supplements exact unchanged-Home broad Chromium evidence; it does not replay every old broad action on current data."
+  },
+  "directlyViewedOriginals": [
+    {
+      "path": "qa/home-gem-point/final-chromium/chromium-393-nfl.png",
+      "sha256": "b86c443fa2bd751405fb6f9009e27b7a5dc4bd5f84ed0cef0c31bf9a62788ad6",
+      "kind": "historical-before-local-original",
+      "engine": "chromium",
+      "sport": "nfl",
+      "viewportCssPixels": [
+        393,
+        852
+      ],
+      "originalPngPixels": [
+        786,
+        1704
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    },
+    {
+      "path": "qa/home-gem-point/final-chromium/chromium-430-nba.png",
+      "sha256": "20bb768bccd02bedc52425d1e5efb6e63c28db32cd2f9168f949f32ba64a11d5",
+      "kind": "historical-before-local-original",
+      "engine": "chromium",
+      "sport": "nba",
+      "viewportCssPixels": [
+        430,
+        896
+      ],
+      "originalPngPixels": [
+        860,
+        1792
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    },
+    {
+      "path": "qa/home-continuous/local-webkit-current/home-nfl-393x852.png",
+      "sha256": "9a65234b594880009850e8782794dd027f195351a89a261442cb3e7857ed8209",
+      "kind": "current-native-original",
+      "engine": "webkit",
+      "sport": "nfl",
+      "viewportCssPixels": [
+        393,
+        852
+      ],
+      "originalPngPixels": [
+        786,
+        1704
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    },
+    {
+      "path": "qa/home-continuous/local-webkit-current/home-nba-430x896.png",
+      "sha256": "52549fde964d55ed8eb5d05edf446325db006ac50cbc5d6e54508fe6ec0bfd78",
+      "kind": "current-native-original",
+      "engine": "webkit",
+      "sport": "nba",
+      "viewportCssPixels": [
+        430,
+        896
+      ],
+      "originalPngPixels": [
+        860,
+        1792
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    },
+    {
+      "path": "qa/home-continuous/local-webkit-current/home-nrl-393x852.png",
+      "sha256": "2ae0cae34562af8cd23f6db21aca54614127cb71073c684977917dfe3c2b93cd",
+      "kind": "current-native-original",
+      "engine": "webkit",
+      "sport": "nrl",
+      "viewportCssPixels": [
+        393,
+        852
+      ],
+      "originalPngPixels": [
+        786,
+        1704
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    },
+    {
+      "path": "qa/home-continuous/local-webkit-current/home-ufc-430x896.png",
+      "sha256": "45dd41af9b9f0ee75dceb3e877145eb0a0ec2d3f940f235d45bf11d4d4eefc02",
+      "kind": "current-native-original",
+      "engine": "webkit",
+      "sport": "ufc",
+      "viewportCssPixels": [
+        430,
+        896
+      ],
+      "originalPngPixels": [
+        860,
+        1792
+      ],
+      "personallyViewedDirectly": true,
+      "resizedCroppedOrCompositeEvidence": false
+    }
+  ],
+  "directImageViewCount": 6,
+  "historicalBaseline": {
+    "path": "qa/home-gem-point/final-chromium/results.json",
+    "sha256": "0896e7503e94de4dc0359274a2aec25d61ebccd85a07d7734a71fd2c0eedbd7b",
+    "status": "passed",
+    "browserClosed": true,
+    "qualification": "Two actual local previous-release originals personally viewed. They are not relabeled as hosted originals. The newer continuous baseline failed before any PNG and is not used as valid visual evidence."
+  },
+  "previousHostedEvidenceIntegrityOnly": {
+    "path": "qa/home-gem-point/live-captures-v2/results.json",
+    "sha256": "2983a2d321d1ffa2c5fa1468ffc010a2f85ddeb2011bdc2bb380abf607a6d829",
+    "status": "passed",
+    "browserClosed": true,
+    "all16OriginalPngHashesIndependentlyVerified": true,
+    "personallyViewedInThisAudit": false,
+    "currentHostedProof": false
+  },
+  "visualFindings": [
+    {
+      "region": "continuous casting",
+      "status": "passed",
+      "finding": "Uninterrupted one-piece round opening, narrow upper crown and substantially wider curved lower steel mass; larger source scene is visible. The old segmented bracketed ring and its rectangular seams are gone. Current lower reflection follows a continuous curved sweep rather than the prototype flat band and columns."
+    },
+    {
+      "region": "playing surface and logos",
+      "status": "passed",
+      "finding": "NFL yard markings, NBA court, NRL grass/goal posts and UFC cage are visible below smaller authentic marks. Shapes and aspect ratios remain clean. These decorative scenes are retained generated artwork, not verified real stadium photography."
+    },
+    {
+      "region": "sport color and lighting",
+      "status": "passed",
+      "finding": "NFL retains deep navy/sapphire body with bright localized white-blue perimeter cores; NBA has stationary blue-left/red-right halves; emerald NRL and ruby UFC carry consistent rail/gate/floor treatments. Neutral broad chrome remains readable."
+    },
+    {
+      "region": "Enter crystal",
+      "status": "passed-with-material-qualification",
+      "finding": "One connected elongated analytic vector gem shows full-width optical cuts plus integral large end facets. It remains visually more diagrammatic than the prior bitmap jewel, but the crown/table/pavilion edges and refraction are clear and sharp at native phone captures. Translucent gray label is readable, visibly subtler than the old opaque white text; unsupported sports retain clear Coming soon labels."
+    },
+    {
+      "region": "selector glass",
+      "status": "passed",
+      "finding": "Exactly four icon-only sharp sport marks remain on translucent glass. Native reflected floor detail is visible through each face. Colored edges and traveling perimeter points preserve fixed independent selector identities; active state is visible without adding labels."
+    },
+    {
+      "region": "composition",
+      "status": "passed",
+      "finding": "Full phone frame carries brand, larger entrance, gemstone and selectors in one dense natural-ratio stack. Intentional uninterrupted reflected floor continues beneath the dock; no Home navigation or detached black/white gap. No clipped controls in the four directly viewed current original states."
+    },
+    {
+      "region": "brand",
+      "status": "passed",
+      "finding": "Original diamond PROJECT, sunlit polished gold DOLLAR and emerald velvet money bag are sharp and recognizable. Native frame analysis confirms actual changing paint within every letter face and no pixel movement in a conservative bag interior. Small clipped vector facet glints do not make every individual raster diamond separately addressable."
+    }
+  ],
+  "geometryAndNativeControlsAll8CurrentWpePhoneStates": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nfl",
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nba",
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nrl",
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "ufc",
+      "brand": {
+        "x": 45.203125,
+        "y": 18,
+        "width": 302.578125,
+        "height": 116.484375,
+        "right": 347.78125,
+        "bottom": 134.484375
+      },
+      "gate": {
+        "x": 0,
+        "y": 174.8125,
+        "width": 393,
+        "height": 357.734375,
+        "right": 393,
+        "bottom": 532.546875
+      },
+      "entry": {
+        "x": 16,
+        "y": 557.875,
+        "width": 361,
+        "height": 62.03125,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 635.234375,
+        "width": 369,
+        "height": 70,
+        "right": 381,
+        "bottom": 705.234375
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nfl",
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "text": "Enter",
+        "disabled": false
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nba",
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "text": "NBA \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nrl",
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "text": "NRL \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "ufc",
+      "brand": {
+        "x": 48.546875,
+        "y": 18,
+        "width": 332.90625,
+        "height": 128.15625,
+        "right": 381.453125,
+        "bottom": 146.15625
+      },
+      "gate": {
+        "x": 0,
+        "y": 187.15625,
+        "width": 430,
+        "height": 391.40625,
+        "right": 430,
+        "bottom": 578.5625
+      },
+      "entry": {
+        "x": 16,
+        "y": 604.5625,
+        "width": 398,
+        "height": 66,
+        "text": "UFC \u00b7 Coming soon",
+        "disabled": true
+      },
+      "dock": {
+        "x": 12,
+        "y": 686.5625,
+        "width": 406,
+        "height": 70,
+        "right": 418,
+        "bottom": 756.5625
+      },
+      "homeNavigationCount": 0,
+      "visibleNativeControlCount": 5,
+      "allTouchTargetsAtLeast44By44": true,
+      "noHorizontalOverflow": true,
+      "allSelectorVisibleTextEmpty": true
+    }
+  ],
+  "newVectorSurfaceIntegrity": [
+    {
+      "path": "assets/home/continuous-gate.svg",
+      "sha256": "670ea86df3e496db4607f281628b8677bb7e861b1343ec4a979cb8d4cfa054d7",
+      "bytes": 8047,
+      "viewBox": "0 0 1315 1197",
+      "elementCounts": {
+        "svg": 1,
+        "title": 1,
+        "desc": 1,
+        "defs": 1,
+        "path": 2,
+        "mask": 1,
+        "use": 6,
+        "radialGradient": 4,
+        "stop": 54,
+        "linearGradient": 4,
+        "filter": 2,
+        "feGaussianBlur": 2,
+        "feMerge": 1,
+        "feMergeNode": 2,
+        "g": 1,
+        "ellipse": 15
+      },
+      "imageForeignObjectScriptElements": 0,
+      "nonLocalResourceReferences": [],
+      "scalableAnalyticVector": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nba.svg",
+      "sha256": "d1f06d2a069b62521c0e08b375e75b0bab98ef26779411bce8be29c5b71179e1",
+      "bytes": 17950,
+      "viewBox": "0 0 720 122",
+      "elementCounts": {
+        "svg": 1,
+        "title": 1,
+        "defs": 1,
+        "path": 102,
+        "clipPath": 1,
+        "use": 3,
+        "linearGradient": 14,
+        "stop": 83,
+        "radialGradient": 4,
+        "g": 3,
+        "ellipse": 8
+      },
+      "imageForeignObjectScriptElements": 0,
+      "nonLocalResourceReferences": [],
+      "scalableAnalyticVector": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nfl.svg",
+      "sha256": "d90120136cf6ce96aa7e8a6d1141a1cc9eda7fa44f7b1cc3c8b416cc541da741",
+      "bytes": 17950,
+      "viewBox": "0 0 720 122",
+      "elementCounts": {
+        "svg": 1,
+        "title": 1,
+        "defs": 1,
+        "path": 102,
+        "clipPath": 1,
+        "use": 3,
+        "linearGradient": 14,
+        "stop": 83,
+        "radialGradient": 4,
+        "g": 3,
+        "ellipse": 8
+      },
+      "imageForeignObjectScriptElements": 0,
+      "nonLocalResourceReferences": [],
+      "scalableAnalyticVector": true
+    },
+    {
+      "path": "assets/home/entry-crystal-nrl.svg",
+      "sha256": "7801cd9aa8495ac790309e931d913a81e5997a0feb2b5976fd77e1e0f1457ef7",
+      "bytes": 17950,
+      "viewBox": "0 0 720 122",
+      "elementCounts": {
+        "svg": 1,
+        "title": 1,
+        "defs": 1,
+        "path": 102,
+        "clipPath": 1,
+        "use": 3,
+        "linearGradient": 14,
+        "stop": 83,
+        "radialGradient": 4,
+        "g": 3,
+        "ellipse": 8
+      },
+      "imageForeignObjectScriptElements": 0,
+      "nonLocalResourceReferences": [],
+      "scalableAnalyticVector": true
+    },
+    {
+      "path": "assets/home/entry-crystal-ufc.svg",
+      "sha256": "4b060ee673833f3f978d8e1fca788b7a3c4384e3d77c3980e349a1780eea0090",
+      "bytes": 17950,
+      "viewBox": "0 0 720 122",
+      "elementCounts": {
+        "svg": 1,
+        "title": 1,
+        "defs": 1,
+        "path": 102,
+        "clipPath": 1,
+        "use": 3,
+        "linearGradient": 14,
+        "stop": 83,
+        "radialGradient": 4,
+        "g": 3,
+        "ellipse": 8
+      },
+      "imageForeignObjectScriptElements": 0,
+      "nonLocalResourceReferences": [],
+      "scalableAnalyticVector": true
+    }
+  ],
+  "protectedOriginalAssets": [
+    {
+      "path": "assets/home/nba.svg",
+      "sha256": "e547ae528e5e5f30ebb17dbde724537d6d7eb228e937b750b9a06ea3d4791691",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "https://upload.wikimedia.org/wikipedia/commons/3/3c/National_Basketball_Association_logo_2017-present.svg",
+      "nativeDimensions": null,
+      "qualification": "Authentic retained mark geometry/source; UFC CSS applies a ruby tone filter"
+    },
+    {
+      "path": "assets/home/nfl.svg",
+      "sha256": "e835a04c98f07a7a3ada5f930a4c78285ac23f6413038add6f84da0cfbc16636",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "https://static.www.nfl.com/image/upload/league/nvfr7ogywskqrfaiu38m.svg",
+      "nativeDimensions": null,
+      "qualification": "Authentic retained mark geometry/source; UFC CSS applies a ruby tone filter"
+    },
+    {
+      "path": "assets/logos/nrl.webp",
+      "sha256": "e89e98da04928f6d29a56aa68e23449078e9f7d2d5eb626a10bcf8e1be56f10c",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "https://a.espncdn.com/i/teamlogos/leagues/500/nrl.png",
+      "nativeDimensions": [
+        500,
+        500
+      ],
+      "qualification": "Authentic retained mark geometry/source; UFC CSS applies a ruby tone filter"
+    },
+    {
+      "path": "assets/logos/ufc.svg",
+      "sha256": "3b56effab3c6f94b2c32fd7e347395615e0ecc29a468a82f8a556a3991ed486d",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "https://commons.wikimedia.org/wiki/File:UFC_Logo.svg",
+      "nativeDimensions": null,
+      "qualification": "Authentic retained mark geometry/source; UFC CSS applies a ruby tone filter"
+    },
+    {
+      "path": "assets/home/gate-brand.webp",
+      "sha256": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "image_gen implementation artwork: exec-adf1aabc-d0d4-4b9c-8056-7d58520c3f2c.png",
+      "nativeDimensions": [
+        1800,
+        693
+      ],
+      "qualification": "Generated decorative original retained; not approved chat pixels or actual verified venue"
+    },
+    {
+      "path": "assets/home/gate-scenes-nfl.webp",
+      "sha256": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "image_gen implementation artwork: exec-455ff966-5e4d-490a-8821-81f60e46cacd.png",
+      "nativeDimensions": [
+        1200,
+        1200
+      ],
+      "qualification": "Generated decorative original retained; not approved chat pixels or actual verified venue"
+    },
+    {
+      "path": "assets/home/gate-scenes-nba.webp",
+      "sha256": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "image_gen implementation artwork: exec-f1bd0a30-2412-46b6-9f8a-7d620ddfa4d3.png",
+      "nativeDimensions": [
+        1200,
+        1200
+      ],
+      "qualification": "Generated decorative original retained; not approved chat pixels or actual verified venue"
+    },
+    {
+      "path": "assets/home/gate-scenes-nrl.webp",
+      "sha256": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "image_gen implementation artwork: exec-2d370c24-d998-4f0c-a463-fb8acdfa9a8d.png",
+      "nativeDimensions": [
+        1200,
+        1200
+      ],
+      "qualification": "Generated decorative original retained; not approved chat pixels or actual verified venue"
+    },
+    {
+      "path": "assets/home/gate-scenes-ufc.webp",
+      "sha256": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68",
+      "matchesSavedOriginalAndProvenance": true,
+      "provenanceSource": "image_gen implementation artwork: exec-3d76b621-db05-47a4-9ca5-97ec4260f31d.png",
+      "nativeDimensions": [
+        1200,
+        1200
+      ],
+      "qualification": "Generated decorative original retained; not approved chat pixels or actual verified venue"
+    }
+  ],
+  "nativeRasterDensity": {
+    "method": "Conservative native pixels per CSS pixel from current WPE visible-image rectangles and native dimensions using cover/contain scale; geometric transform envelopes may underestimate density. SVG surfaces have no raster ceiling. This measures native source supply, not a physical iPhone display.",
+    "observed": [
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/gate-brand.webp",
+        "minimumNativePixelsPerCssPixel": 5.9493
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/gate-scenes-nba.webp",
+        "minimumNativePixelsPerCssPixel": 3.6288
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/gate-scenes-nfl.webp",
+        "minimumNativePixelsPerCssPixel": 3.5906
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/gate-scenes-nrl.webp",
+        "minimumNativePixelsPerCssPixel": 3.6306
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/gate-scenes-ufc.webp",
+        "minimumNativePixelsPerCssPixel": 3.6259
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/home/luxury-corridor.webp",
+        "minimumNativePixelsPerCssPixel": 2.0563
+      },
+      {
+        "viewportWidth": 393,
+        "path": "assets/logos/nrl.webp",
+        "minimumNativePixelsPerCssPixel": 3.9761
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/gate-brand.webp",
+        "minimumNativePixelsPerCssPixel": 5.4075
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/gate-scenes-nba.webp",
+        "minimumNativePixelsPerCssPixel": 3.3163
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/gate-scenes-nfl.webp",
+        "minimumNativePixelsPerCssPixel": 3.2651
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/gate-scenes-nrl.webp",
+        "minimumNativePixelsPerCssPixel": 3.3147
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/gate-scenes-ufc.webp",
+        "minimumNativePixelsPerCssPixel": 3.3163
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/home/luxury-corridor.webp",
+        "minimumNativePixelsPerCssPixel": 1.9554
+      },
+      {
+        "viewportWidth": 430,
+        "path": "assets/logos/nrl.webp",
+        "minimumNativePixelsPerCssPixel": 3.6339
+      }
+    ],
+    "qualification": "No asset file was upscaled. Existing898x1752 corridor supplies about2.06 native pixels/CSSpx at393x852 and1.955 at430x896: near DPR2, with minor display resampling at the larger phone. Direct reviewed originals remain visibly sharp; do not claim every retained raster exceeds exactDPR2."
+  },
+  "currentWpeIndependentBrandPaint": {
+    "method": "Original unmodified natural frames1\u20133 versus frame0 maximum absolute RGB delta; even-odd integer polygon masks parsed independently from original SVG letter-face paths and mapped by native browser brand rectangle at DPR2. Pixels are read only; no image modification, replacement, seeking, CSS injection or browser launch. Analytical masks are conservative, not registered source-image comparison.",
+    "phones": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "sourceReportSha256": "e5ff193431a99a826b6ef1c72dc8166d5e9cab9de726ab03e48ddf55edfccd97",
+        "frames": [
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-393x852-natural-0.png",
+            "sha256": "9ffb3bf3040423a6a62028f7bdc9c6a705533968f8f2fd9e877886902605f9a7"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-393x852-natural-1.png",
+            "sha256": "b821697a33fe5807249cf8d812083a5dce7e0d928c78ebe3fb3ebf9bd049f0ee"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-393x852-natural-2.png",
+            "sha256": "d9dffce60a1297f4e19f4d18d29d09a543627b83901b021b8c3084b88a838400"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-393x852-natural-3.png",
+            "sha256": "9362f0344c2ffd6b8cb043c3482b2045159ffbc1dc3f0f9ad476c62b9d301594"
+          }
+        ],
+        "letters": [
+          {
+            "material": "crystal",
+            "letter": "P",
+            "facePixels": 3088,
+            "changedPixelsOver10Rgb": 68,
+            "maxRgbDifference": 62
+          },
+          {
+            "material": "crystal",
+            "letter": "R",
+            "facePixels": 3232,
+            "changedPixelsOver10Rgb": 75,
+            "maxRgbDifference": 122
+          },
+          {
+            "material": "crystal",
+            "letter": "O",
+            "facePixels": 2872,
+            "changedPixelsOver10Rgb": 40,
+            "maxRgbDifference": 52
+          },
+          {
+            "material": "crystal",
+            "letter": "J",
+            "facePixels": 1962,
+            "changedPixelsOver10Rgb": 38,
+            "maxRgbDifference": 61
+          },
+          {
+            "material": "crystal",
+            "letter": "E",
+            "facePixels": 2531,
+            "changedPixelsOver10Rgb": 35,
+            "maxRgbDifference": 57
+          },
+          {
+            "material": "crystal",
+            "letter": "C",
+            "facePixels": 2484,
+            "changedPixelsOver10Rgb": 21,
+            "maxRgbDifference": 37
+          },
+          {
+            "material": "crystal",
+            "letter": "T",
+            "facePixels": 1916,
+            "changedPixelsOver10Rgb": 15,
+            "maxRgbDifference": 26
+          },
+          {
+            "material": "gold",
+            "letter": "D",
+            "facePixels": 3729,
+            "changedPixelsOver10Rgb": 4,
+            "maxRgbDifference": 17
+          },
+          {
+            "material": "gold",
+            "letter": "O",
+            "facePixels": 4032,
+            "changedPixelsOver10Rgb": 329,
+            "maxRgbDifference": 30
+          },
+          {
+            "material": "gold",
+            "letter": "L1",
+            "facePixels": 2347,
+            "changedPixelsOver10Rgb": 606,
+            "maxRgbDifference": 56
+          },
+          {
+            "material": "gold",
+            "letter": "L2",
+            "facePixels": 2436,
+            "changedPixelsOver10Rgb": 427,
+            "maxRgbDifference": 20
+          },
+          {
+            "material": "gold",
+            "letter": "A",
+            "facePixels": 2187,
+            "changedPixelsOver10Rgb": 22,
+            "maxRgbDifference": 77
+          },
+          {
+            "material": "gold",
+            "letter": "R",
+            "facePixels": 3790,
+            "changedPixelsOver10Rgb": 14,
+            "maxRgbDifference": 49
+          }
+        ],
+        "all13LetterFacesActuallyChanged": true,
+        "greenBagConservativeNativeRectangle": [
+          1490,
+          130,
+          1690,
+          580
+        ],
+        "greenBagSampledPixels": 10268,
+        "greenBagChangedPixelsOver10Rgb": 0,
+        "greenBagMaxRgbDifference": 0
+      },
+      {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "sourceReportSha256": "e5ff193431a99a826b6ef1c72dc8166d5e9cab9de726ab03e48ddf55edfccd97",
+        "frames": [
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-430x896-natural-0.png",
+            "sha256": "93587be5769abb218db5e8deb1f36820cadbd8b0de72104bd81f119466d95707"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-430x896-natural-1.png",
+            "sha256": "f7abf4d119c9766badfe1651f59723d7067b7de2b5842ab6976c87c8ea7bc6c9"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-430x896-natural-2.png",
+            "sha256": "6fbcea60b389c7552fab03bee2a9828cec6825955d916f7f7f73140b81736338"
+          },
+          {
+            "path": "qa/home-continuous/local-webkit-current/home-nfl-430x896-natural-3.png",
+            "sha256": "eec4412258ab77bbc1d719c7b8fb31a4a20d3c8318fb1101d47a010e70354f96"
+          }
+        ],
+        "letters": [
+          {
+            "material": "crystal",
+            "letter": "P",
+            "facePixels": 3765,
+            "changedPixelsOver10Rgb": 116,
+            "maxRgbDifference": 94
+          },
+          {
+            "material": "crystal",
+            "letter": "R",
+            "facePixels": 3871,
+            "changedPixelsOver10Rgb": 97,
+            "maxRgbDifference": 119
+          },
+          {
+            "material": "crystal",
+            "letter": "O",
+            "facePixels": 3414,
+            "changedPixelsOver10Rgb": 69,
+            "maxRgbDifference": 127
+          },
+          {
+            "material": "crystal",
+            "letter": "J",
+            "facePixels": 2290,
+            "changedPixelsOver10Rgb": 48,
+            "maxRgbDifference": 59
+          },
+          {
+            "material": "crystal",
+            "letter": "E",
+            "facePixels": 3063,
+            "changedPixelsOver10Rgb": 54,
+            "maxRgbDifference": 69
+          },
+          {
+            "material": "crystal",
+            "letter": "C",
+            "facePixels": 3084,
+            "changedPixelsOver10Rgb": 47,
+            "maxRgbDifference": 50
+          },
+          {
+            "material": "crystal",
+            "letter": "T",
+            "facePixels": 2264,
+            "changedPixelsOver10Rgb": 13,
+            "maxRgbDifference": 21
+          },
+          {
+            "material": "gold",
+            "letter": "D",
+            "facePixels": 4576,
+            "changedPixelsOver10Rgb": 4,
+            "maxRgbDifference": 13
+          },
+          {
+            "material": "gold",
+            "letter": "O",
+            "facePixels": 4800,
+            "changedPixelsOver10Rgb": 450,
+            "maxRgbDifference": 84
+          },
+          {
+            "material": "gold",
+            "letter": "L1",
+            "facePixels": 2772,
+            "changedPixelsOver10Rgb": 733,
+            "maxRgbDifference": 57
+          },
+          {
+            "material": "gold",
+            "letter": "L2",
+            "facePixels": 2891,
+            "changedPixelsOver10Rgb": 582,
+            "maxRgbDifference": 15
+          },
+          {
+            "material": "gold",
+            "letter": "A",
+            "facePixels": 2651,
+            "changedPixelsOver10Rgb": 29,
+            "maxRgbDifference": 89
+          },
+          {
+            "material": "gold",
+            "letter": "R",
+            "facePixels": 4556,
+            "changedPixelsOver10Rgb": 16,
+            "maxRgbDifference": 43
+          }
+        ],
+        "all13LetterFacesActuallyChanged": true,
+        "greenBagConservativeNativeRectangle": [
+          1490,
+          130,
+          1690,
+          580
+        ],
+        "greenBagSampledPixels": 12358,
+        "greenBagChangedPixelsOver10Rgb": 0,
+        "greenBagMaxRgbDifference": 0
+      }
+    ]
+  },
+  "motionLifecycleQualification": "Current complete WPE closed receipt records natural progress, reduced-motion with zero infinite-running animations, inactive Home pause, return/resume and refresh journeys. Pixel evidence establishes changing sampled paint, not physical iPhone frame rate.",
+  "sourceProviderTruth": {
+    "path": "qa/home-continuous/reviews/source-delta-94e7.json",
+    "sha256": "59ab2241a2a44298c659b01c2cc8afcbd903c2d91eb1cb623b9ab8a4e9f2249e",
+    "status": "accepted-current-source-delta-with-evidence-qualifications",
+    "all7SavedLaterPublicRawResponseAndReceiptHashesIndependentlyVerified": true,
+    "verifiedTLSAndHTTP200": true,
+    "incomingDataBindingsExact": true,
+    "testsAndValidators": {
+      "coreData": {
+        "command": "python3 qa/data.test.py",
+        "exitCode": 0,
+        "run": 22,
+        "passed": 22
+      },
+      "sourceUpdates": {
+        "command": "python3 qa/source-updates.test.py",
+        "exitCode": 0,
+        "run": 7,
+        "passed": 7
+      },
+      "teamData": {
+        "command": "python3 qa/team-details/data.test.py",
+        "exitCode": 0,
+        "run": 11,
+        "passed": 10,
+        "skipped": 1,
+        "skipReason": "No fresh CSV cache supplied for independent raw-source player arithmetic"
+      },
+      "matchupMonitor": {
+        "command": "python3 qa/matchup-breakdown/source-monitor.test.py",
+        "exitCode": 0,
+        "run": 6,
+        "passed": 6
+      },
+      "savedCoreValidator": {
+        "command": "python3 scripts/refresh-data.py --check",
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "roster": 80,
+        "activeRoster": 53,
+        "historyPlayers": 80,
+        "historyGameRows": 1273,
+        "provenanceHash": "passed"
+      },
+      "savedTeamValidator": {
+        "command": "python3 scripts/refresh-team-details.py --check",
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "uniqueRegularSeasonGames": 544,
+        "sources": 32,
+        "disagreements": 4
+      },
+      "savedMatchupValidator": {
+        "command": "python3 scripts/refresh-matchup-breakdown.py --check",
+        "exitCode": 0,
+        "status": "passed",
+        "teams": 32,
+        "players": 812,
+        "playerGameRows": 8173,
+        "explicitQuarterbackStartRows": 843,
+        "disputedStartingRoleRows": 22,
+        "unavailableStartingRoleRows": 12,
+        "sources": 125,
+        "disagreements": 21
+      },
+      "fullMatchupDataSuite": {
+        "command": "python3 qa/matchup-breakdown/data.test.py",
+        "exitCode": 1,
+        "status": "failed",
+        "run": 33,
+        "passed": 27,
+        "failed": 6,
+        "failureReason": "All six source-archive-dependent tests reject the historical checked-in source manifest before raw-data assertions: Source manifest belongs to a different snapshot; generate fresh evidence for this build.",
+        "failedTests": [
+          "test_audit_archives_reproduce_source_response_hashes",
+          "test_injury_identity_merging_retains_published_practice",
+          "test_missing_statistics_do_not_substitute_older_qb_start",
+          "test_opponent_starts_include_actual_prior_seasons_and_no_padding",
+          "test_position_changed_receiver_keeps_known_zero_offensive_snaps",
+          "test_stale_manifest_refused_before_source_assertions"
+        ],
+        "historicalManifest": "qa/matchup-breakdown/data/source-manifest.json",
+        "historicalManifestSnapshotSha256": "b589719b0790d4003b67a7dfdc3850383d393ba19925de3d669441db15c34b35",
+        "currentSnapshotSha256": "95085ad6cc049f35fb5c71c03e19945d717b68b136c03e6289b9e50e79ed9fb0",
+        "testsAndHistoricalManifestNotModified": true
+      }
+    },
+    "limits": [
+      "Full matchup suite did not pass:27 passed,6 failed due historical checked source-manifest; raw assertions from those6 are unverified for94e7.",
+      "Exact original15:26 raw responses for94e7 are not retained in checked historical source manifests. Seven later ordinary public HTTPS responses saved byte-for-byte and hash-bound; none equals recorded15:26 source hash. These corroborate specific report facts, not exact original-response replay/rebuild.",
+      "Workflow inspected: fresh source evidence is built in RUNNER_TEMP and its manifest used by matchup tests before commit. This audit does not assert unobserved CI outcomes.",
+      "No whole-provider fetch, rebuild, browser QA, hosted body verification or deployment performed by source auditor.",
+      "Provider reports are partial/time-dependent. Null/omission never establishes healthy/active status, future availability or official inactive-list confirmation."
+    ],
+    "qualification": "Preserve provider-reported uncertainty. Omission/null is not healthy/active confirmation. Later public receipts corroborate specific facts; they do not reproduce the original15:26 response bytes. Source audit does not assert unobserved CI or a whole-provider rebuild."
+  },
+  "nonBlockingQualifications": [
+    "Direct current visual review covers four states spanning both requested phone widths; the closed WPE receipt and numerical geometry cover all8phone states. Other specialist direct views remain separate evidence.",
+    "Six-view budget is exhausted. This auditor cannot claim later hosted images were directly viewed. Current public deployment and hosted receipt validation remain root/browser-owner work.",
+    "UFC source SVG bytes and authentic geometry are unchanged, but CSS applies a brighter ruby tonal filter. Avoid an unqualified claim that every rendered official mark is unfiltered/original-color.",
+    "Newest chat source bytes are unavailable; no exact pixel identity, perfect rendering, actual venue certification, physical iPhone testing or FPS claim.",
+    "Full matchup data suite remains27passed/6failed against the historical source manifest; those raw-source assertions are unverified for94e7. This qualifies source evidence and does not invalidate the exact Home unchanged-body bridge."
+  ],
+  "blockingDesignFindings": [],
+  "recommendation": "Local design and asset evidence supports proceeding once all six current specialist seals are assembled. Completion still requires actual deployment followed by independent hosted-body and actual-browser checks."
+}

@@ -1,0 +1,314 @@
+{
+  "status": "diagnosis-complete",
+  "startedAt": "2026-10-09T15:25:13.577Z",
+  "samples": [
+    {
+      "name": "normal-after-paint",
+      "at": "2026-10-09T15:25:29.475Z",
+      "reducedPreference": false,
+      "state": "running",
+      "reason": "active",
+      "foreground": "visible",
+      "cssPlay": "running",
+      "infiniteRunning": 157
+    },
+    {
+      "name": "reduce-before-paint",
+      "at": "2026-10-09T15:25:29.684Z",
+      "reducedPreference": true,
+      "state": "running",
+      "reason": "active",
+      "foreground": "visible",
+      "cssPlay": "running",
+      "infiniteRunning": 0
+    },
+    {
+      "name": "reduce-after-paint",
+      "at": "2026-10-09T15:25:32.661Z",
+      "reducedPreference": true,
+      "state": "reduced",
+      "reason": "reduced-motion",
+      "foreground": "visible",
+      "cssPlay": "paused",
+      "infiniteRunning": 0
+    },
+    {
+      "name": "reduce-after-additional-time",
+      "at": "2026-10-09T15:25:32.908Z",
+      "reducedPreference": true,
+      "state": "reduced",
+      "reason": "reduced-motion",
+      "foreground": "visible",
+      "cssPlay": "paused",
+      "infiniteRunning": 0
+    },
+    {
+      "name": "normal-after-resumed-paint",
+      "at": "2026-10-09T15:25:36.625Z",
+      "reducedPreference": false,
+      "state": "running",
+      "reason": "active",
+      "foreground": "visible",
+      "cssPlay": "running",
+      "infiniteRunning": 157
+    }
+  ],
+  "captures": [
+    {
+      "file": "normal-native.png",
+      "sha256": "5f5e8c2c79d4a796aaf810ef734e1af8b4e08bc5d0930051dd9e7f9c4d14da4a",
+      "bytes": 2219168,
+      "at": "2026-10-09T15:25:29.352Z",
+      "naturalAnimationPhase": true,
+      "readiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 3368,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          6089,
+          8979
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 76590,
+          "brightSamples": 31181,
+          "brightFraction": 0.40711581146363757,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      }
+    },
+    {
+      "file": "reduced-native.png",
+      "sha256": "d1d931ef69bba3d23779b42dd8c2a36b7822a7a5038ef9f35fbef3acb3a0b69e",
+      "bytes": 2224547,
+      "at": "2026-10-09T15:25:32.523Z",
+      "naturalAnimationPhase": true,
+      "readiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": []
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": []
+        },
+        "frameTimestamps": [
+          15548,
+          16782
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 76590,
+          "brightSamples": 30764,
+          "brightFraction": 0.40167123645384517,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      }
+    },
+    {
+      "file": "resumed-native.png",
+      "sha256": "31403db8a71d58ddfa648812b2c7134f3fb04417e7ca094b7db07d2f8c1b7382",
+      "bytes": 2219165,
+      "at": "2026-10-09T15:25:36.470Z",
+      "naturalAnimationPhase": true,
+      "readiness": {
+        "status": "passed",
+        "initial": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 343,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "settled": {
+          "page": "home",
+          "hash": "#home",
+          "foreground": "visible",
+          "opacity": 1,
+          "display": "block",
+          "visibility": "visible",
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "right": 393,
+            "bottom": 852,
+            "width": 393,
+            "height": 852
+          },
+          "finiteEntryAnimations": [
+            {
+              "name": "page-in",
+              "state": "finished",
+              "time": 280,
+              "pending": false,
+              "progress": 1
+            }
+          ]
+        },
+        "frameTimestamps": [
+          19203,
+          20220
+        ],
+        "genuineAnimationFrames": 2,
+        "finiteEntryNaturallyFinished": true,
+        "noStylesClockOrAnimationMutation": true,
+        "pixels": {
+          "width": 786,
+          "height": 1704,
+          "insetCssPixels": 12,
+          "sampleStridePixels": 4,
+          "samples": 76590,
+          "brightSamples": 30742,
+          "brightFraction": 0.4013839926883405,
+          "minimumBrightFraction": 0.01,
+          "brightnessRgbSumThreshold": 210,
+          "status": "passed",
+          "qualification": "Read-only Pillow check of actual PNG interior excludes the outer12 CSSpx frame. It guards blank evidence, not visual fidelity or physical-device performance."
+        },
+        "qualification": "Foregrounded actual app waited for the finite page-in transition to finish naturally, then two genuine animation frames. Original unpaused screenshot bytes are retained, without retries, seeking, pausing or substitution."
+      }
+    }
+  ],
+  "errors": [],
+  "helperSha256": "d5539f5dc6bec0f87d49ffe5206e7ecdafea4e7433909c82b0a6be441fb42276",
+  "browserVersion": "26.0",
+  "browserClosed": true,
+  "completedAt": "2026-10-09T15:25:36.945Z"
+}

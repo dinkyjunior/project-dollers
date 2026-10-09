@@ -1,0 +1,259 @@
+{
+  "review": "Independent actual-paint brand motion proof",
+  "status": "passed",
+  "engine": "chromium",
+  "method": "Read-only original PNG comparison: max absolute RGB delta over natural frames1\u20133 versusframe0; exact original SVGletter-face polygon masks mapped using browser-reported wordmark rectangle. No image resizing, playback seeking, frame modification or browser substitution. Integer filled masks are conservative analytical regions, not a registered source comparison.",
+  "qualification": "Proves actual changed pixels inside every letter on sampled natural frames. Does not claim independently addressable every raster diamond or physicaliPhone FPS. Greenbag proof is a conservative interior region plus protected source hash, not every antialiased edge pixel.",
+  "phoneEvidence": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sourceReportSha256": "9cdc80cc936d917816f7c5c9d9a47be4c9437d7e59fa2ab61be94d1813bfb926",
+      "sourceManifest": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+      "frames": [
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-393x852-natural-0.png",
+          "sha256": "700cf181ace1248492480c5be5141ff88bbf8b80192ee7e4f4362bcae1e45181"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-393x852-natural-1.png",
+          "sha256": "a2ff58cee2aa9822665e7e1c6ebc6f41f0a7f89c45525921e657ad4cafcd6ea8"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-393x852-natural-2.png",
+          "sha256": "8583885b1dec0464a64dc97c04196e7fb4810ff2725343111328e39bc608dff9"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-393x852-natural-3.png",
+          "sha256": "74b8804cc5754cf6f4cc37b66ad4c084f4bd5b8606fedb1caddb22d5a8e7c1de"
+        }
+      ],
+      "letters": [
+        {
+          "material": "crystalLetters",
+          "letter": "P",
+          "facePixels": 3075,
+          "paintPixelsChangedOver10Rgb": 19,
+          "maxRgbDifference": 69
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "R",
+          "facePixels": 3268,
+          "paintPixelsChangedOver10Rgb": 18,
+          "maxRgbDifference": 37
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "O",
+          "facePixels": 2752,
+          "paintPixelsChangedOver10Rgb": 35,
+          "maxRgbDifference": 65
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "J",
+          "facePixels": 1923,
+          "paintPixelsChangedOver10Rgb": 17,
+          "maxRgbDifference": 31
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "E",
+          "facePixels": 2578,
+          "paintPixelsChangedOver10Rgb": 73,
+          "maxRgbDifference": 89
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "C",
+          "facePixels": 2560,
+          "paintPixelsChangedOver10Rgb": 46,
+          "maxRgbDifference": 52
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "T",
+          "facePixels": 1931,
+          "paintPixelsChangedOver10Rgb": 18,
+          "maxRgbDifference": 30
+        },
+        {
+          "material": "goldLetters",
+          "letter": "D",
+          "facePixels": 3862,
+          "paintPixelsChangedOver10Rgb": 35,
+          "maxRgbDifference": 83
+        },
+        {
+          "material": "goldLetters",
+          "letter": "O",
+          "facePixels": 3927,
+          "paintPixelsChangedOver10Rgb": 623,
+          "maxRgbDifference": 26
+        },
+        {
+          "material": "goldLetters",
+          "letter": "L1",
+          "facePixels": 2280,
+          "paintPixelsChangedOver10Rgb": 987,
+          "maxRgbDifference": 19
+        },
+        {
+          "material": "goldLetters",
+          "letter": "L2",
+          "facePixels": 2456,
+          "paintPixelsChangedOver10Rgb": 374,
+          "maxRgbDifference": 51
+        },
+        {
+          "material": "goldLetters",
+          "letter": "A",
+          "facePixels": 2254,
+          "paintPixelsChangedOver10Rgb": 22,
+          "maxRgbDifference": 66
+        },
+        {
+          "material": "goldLetters",
+          "letter": "R",
+          "facePixels": 3895,
+          "paintPixelsChangedOver10Rgb": 5,
+          "maxRgbDifference": 17
+        }
+      ],
+      "conservativeGreenBagInterior": {
+        "pixels": 6372,
+        "changedOver10Rgb": 0,
+        "maxRgbDifference": 0
+      },
+      "allLettersActuallyChanged": true
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sourceReportSha256": "9cdc80cc936d917816f7c5c9d9a47be4c9437d7e59fa2ab61be94d1813bfb926",
+      "sourceManifest": "804775a890e0e844c14c70a6e93a086ca7fc46bbfe67aa2cb635b194a7702b70",
+      "frames": [
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-430x896-natural-0.png",
+          "sha256": "cf9702be5425319c72237a222f6551b550fde4c7722130ec7f557a4541103eda"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-430x896-natural-1.png",
+          "sha256": "c2dcca0037c55ddf87fdeaa19eb09e994ad79268c7319e32ab21f55993c40c7d"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-430x896-natural-2.png",
+          "sha256": "9247ff2b2237be8dcd243e657433298f5efaf22f01229f735ff04be5cbbd9ac8"
+        },
+        {
+          "path": "qa/home-continuous/local-chromium/home-nfl-430x896-natural-3.png",
+          "sha256": "730d27d8c23f88803390b22125735564e8ef0cb92152f911957a216490acfae6"
+        }
+      ],
+      "letters": [
+        {
+          "material": "crystalLetters",
+          "letter": "P",
+          "facePixels": 3710,
+          "paintPixelsChangedOver10Rgb": 46,
+          "maxRgbDifference": 64
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "R",
+          "facePixels": 3956,
+          "paintPixelsChangedOver10Rgb": 28,
+          "maxRgbDifference": 52
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "O",
+          "facePixels": 3455,
+          "paintPixelsChangedOver10Rgb": 100,
+          "maxRgbDifference": 68
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "J",
+          "facePixels": 2349,
+          "paintPixelsChangedOver10Rgb": 53,
+          "maxRgbDifference": 67
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "E",
+          "facePixels": 3023,
+          "paintPixelsChangedOver10Rgb": 33,
+          "maxRgbDifference": 51
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "C",
+          "facePixels": 2995,
+          "paintPixelsChangedOver10Rgb": 27,
+          "maxRgbDifference": 40
+        },
+        {
+          "material": "crystalLetters",
+          "letter": "T",
+          "facePixels": 2312,
+          "paintPixelsChangedOver10Rgb": 19,
+          "maxRgbDifference": 39
+        },
+        {
+          "material": "goldLetters",
+          "letter": "D",
+          "facePixels": 4665,
+          "paintPixelsChangedOver10Rgb": 17,
+          "maxRgbDifference": 33
+        },
+        {
+          "material": "goldLetters",
+          "letter": "O",
+          "facePixels": 4811,
+          "paintPixelsChangedOver10Rgb": 758,
+          "maxRgbDifference": 22
+        },
+        {
+          "material": "goldLetters",
+          "letter": "L1",
+          "facePixels": 2801,
+          "paintPixelsChangedOver10Rgb": 1380,
+          "maxRgbDifference": 47
+        },
+        {
+          "material": "goldLetters",
+          "letter": "L2",
+          "facePixels": 2898,
+          "paintPixelsChangedOver10Rgb": 616,
+          "maxRgbDifference": 26
+        },
+        {
+          "material": "goldLetters",
+          "letter": "A",
+          "facePixels": 2723,
+          "paintPixelsChangedOver10Rgb": 12,
+          "maxRgbDifference": 27
+        },
+        {
+          "material": "goldLetters",
+          "letter": "R",
+          "facePixels": 4723,
+          "paintPixelsChangedOver10Rgb": 11,
+          "maxRgbDifference": 33
+        }
+      ],
+      "conservativeGreenBagInterior": {
+        "pixels": 7670,
+        "changedOver10Rgb": 0,
+        "maxRgbDifference": 0
+      },
+      "allLettersActuallyChanged": true
+    }
+  ]
+}

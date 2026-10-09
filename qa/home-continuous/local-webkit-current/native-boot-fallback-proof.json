@@ -1,0 +1,23 @@
+{
+  "status": "observed-native-boot-fallback-HTTP200",
+  "runtimeManifestSha256": "50be3e13e78530564490d55436d2edead921b258499ce6fb6a8f8ec2fb3d69b1",
+  "browserReportSha256": "e5ff193431a99a826b6ef1c72dc8166d5e9cab9de726ab03e48ddf55edfccd97",
+  "sourceLog": "/workspace/recovery-qa/matchup-breakdown/server-8876.log",
+  "sourceLogAppendOnlyDuringRun": true,
+  "observedLines": [
+    {
+      "line": 46954,
+      "text": "127.0.0.1 - - [09/Oct/2026 15:46:04] \"GET /project-dollers/assets/logos/ind.png HTTP/1.1\" 200 -"
+    },
+    {
+      "line": 47121,
+      "text": "127.0.0.1 - - [09/Oct/2026 15:48:38] \"GET /project-dollers/assets/logos/ind.png HTTP/1.1\" 200 -"
+    },
+    {
+      "line": 47237,
+      "text": "127.0.0.1 - - [09/Oct/2026 15:48:45] \"GET /project-dollers/assets/logos/ind.png HTTP/1.1\" 200 -"
+    }
+  ],
+  "bodyHash": "f1f5222a876f810956aa8d4e75d4e6b47bcb3a6d11f876642b674010233c8a97",
+  "qualification": "Read-only local server access log records native WPE image requests. First393 cold-route IND200 at15:46:04 precedes second430 route and the later full-body fetch. Current full273 body proof separately supplies exact successfully decoded body hash."
+}
