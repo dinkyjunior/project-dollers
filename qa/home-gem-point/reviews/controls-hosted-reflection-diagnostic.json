@@ -1,0 +1,60 @@
+{
+  "status": "failed-hosted-run-preserved-measurement-diagnostic",
+  "reviewer": "controls-audit",
+  "completedAtISO": "2026-10-09T13:15:12.429710+00:00",
+  "report": {
+    "path": "qa/home-gem-point/live-captures/results.json",
+    "sha256": "40d862752c332331650e0550a4cf2e75e3ad14adf544bb3412438436e4ecbf5d",
+    "actualStatus": "failed",
+    "browserActuallyClosed": true
+  },
+  "runtimeManifestSha256": "e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327",
+  "unchangedHelperSha256": "5a8d4c0d4182e16573027ec4973e65ca007286b786edc82627b4321939ee73c3",
+  "observed430": {
+    "status": "failed",
+    "observedCaps": [
+      true,
+      false
+    ],
+    "sampleElapsedMs": [
+      3523,
+      7093,
+      10742,
+      14250,
+      17999,
+      21585,
+      25094,
+      28545
+    ],
+    "actualBetweenSampleMs": [
+      3570,
+      3649,
+      3508,
+      3749,
+      3586,
+      3509,
+      3451
+    ],
+    "authoredRightDurationSeconds": 11.375,
+    "authoredCSSNonzeroOpacityApproximatePhaseFraction": [
+      0.44,
+      0.64
+    ],
+    "fullNonzeroWindowMillisecondsApproximate": 2275.0,
+    "rightPlayState": "running",
+    "rightTransformsActuallyVary": true
+  },
+  "diagnosis": "The hosted run actually failed its both-visible reflection assertion. Sampling full-phone PNGs takes about3.5seconds per sample, longer than the right reflection nonzero duty window. These eight sparse samples cannot rule out a correctly running brief highlight. Natural clocks/transforms advance, but this run never observed the second cap brighten, so it remains failed and does not certify the hosted result.",
+  "acceptedMeasurementImprovement": "A new additive helper may sample actual native CTA-clipped PNGs at the unchanged400ms loop while preserving the full8phone originals, both-cap opacity>.03 and visible-frame proof, fixed28.5second bound, clipping/text-safety checks,14nativepaths,90nativeactions,247served-body digests, reduced motion and immutable old helpers/tests. Declare exact native crop box, PNG SHA and timing. No clock seeking, CSS/DOM/response substitution, opacity threshold change or runtime edit.",
+  "fontCancellationQualification": "The actual393 report contains two NFLRobotoCondensed-Latin.woff2 Load request cancelled events. These are font-resource events, not document events or zero cancellations. Preserve them and independently verify live HTTP200 exact-font bytes and actual native font readiness.",
+  "remainingRequiredProof": [
+    "Fresh additive full hosted run must genuinely pass and close.",
+    "Both endcaps must actually brighten in the real browser with saved visible native frames.",
+    "Actual font readiness and served full-body identity must be established.",
+    "Fresh passing run eight untouched originals need independent personal review before the hosted acceptance seal."
+  ],
+  "publicationAccepted": false,
+  "runtimeChanged": false,
+  "oldHelperChanged": false,
+  "browserLaunchedByReviewer": false
+}

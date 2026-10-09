@@ -1,0 +1,45 @@
+{
+  "status": "failed",
+  "startedAt": "2026-10-09T13:34:24.784Z",
+  "engine": "webkit",
+  "base": "http://127.0.0.1:8876/project-dollers/",
+  "runtimeManifestSha256": "e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327",
+  "helperSha256": "7f619fb6273b3ef1330a70336e5fbb630a8537bdc765168c4a3028eae395d423",
+  "gallery": {
+    "path": "qa/home-gem-point/live-captures-v2/index.html",
+    "sha256": "aac76dcdda0fd987fb4b321cf60b51c46eb62b820750b45605cb9d7c16e57264"
+  },
+  "sourceReport": {
+    "path": "qa/home-gem-point/live-captures-v2/results.json",
+    "sha256": "2983a2d321d1ffa2c5fa1468ffc010a2f85ddeb2011bdc2bb380abf607a6d829"
+  },
+  "qualification": {
+    "actualBrowser": true,
+    "nativeSelectControls": true,
+    "unmodifiedOriginalPixels": true,
+    "DOMOrCSSSubstitution": false,
+    "responseSubstitution": false,
+    "animationClockSubstitution": false,
+    "strictTLS": false,
+    "hostedRecoveryStrictTLS": true
+  },
+  "results": [],
+  "errors": [
+    {
+      "kind": "http",
+      "url": "http://127.0.0.1:8876/project-dollers/qa/home-gem-point/live-captures-v2/index.html",
+      "status": 403
+    },
+    {
+      "kind": "console",
+      "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+    }
+  ],
+  "browserVersion": "26.0",
+  "failure": {
+    "message": "Expected values to be strictly equal:\n\n403 !== 200\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n403 !== 200\n\n    at /workspace/project-dollers/qa/home-gem-point/gallery-live-native.cjs:27:80"
+  },
+  "browserClosed": true,
+  "completedAt": "2026-10-09T13:34:26.299Z"
+}

@@ -1,5 +1,24 @@
 # Production publication and verification
 
+## Current Home — actual hosted verification, 9 October 2026
+
+The latest thin-crown/heavy-lower-bowl Home, navy sapphire and connected gemstone
+controls are deployed. [Pages run 37933273792](https://github.com/dinkyjunior/project-dollers/actions/runs/37933273792)
+succeeded in all three jobs for application commit `d42fc3d2114ea7b6db426805cc9ca25d323d3d58`.
+Actual strict-HTTPS WebKit passed both required phones, tablet and desktop, all
+247 runtime bodies, native navigation/refresh and natural/reduced motion.
+Read [the current release](qa/home-gem-point/RELEASE.md),
+[hosted acceptance](qa/home-gem-point/hosted-acceptance.json),
+[actual hosted originals](qa/home-gem-point/live-captures-v2/index.html) and
+[before/after](qa/home-gem-point/index.html).
+
+The evidence/backup follow-up preserves runtime `e8736c0b…e327`. It requires its
+own real successful Pages run and public exact-body verification; final receipts
+are saved outside Git to avoid recursive evidence commits. The bounded source
+workflow hold must be restored to its original active state before completion.
+All current source updates are preserved; missing/conflicting data stays explicit.
+Original attachment bytes are unavailable, so no pixel-identity score is claimed.
+
 ## Current Dallas team details — deployed and verified, 8 October 2026
 
 The approved Dallas Form screen and diamond Home entry are deployed at https://dinkyjunior.github.io/project-dollers/#team/DAL. Application `56fdbe955b274e7f3b4fd36ef9de762e3763bda6` was published by [Pages run 37777138988](https://github.com/dinkyjunior/project-dollers/actions/runs/37777138988), with all three jobs successful. All six specialists accepted the full local and latest source-integration audits, then independently inspected every one of the 36 actual hosted screenshots. Genuine hosted WebKit passed 393×852, 430×896 and 1440×1000, native navigation/refresh/venue controls and natural/reduced/inactive motion; all 231 served runtime bodies returned HTTP 200 and exact hashes, with zero browser/request errors.

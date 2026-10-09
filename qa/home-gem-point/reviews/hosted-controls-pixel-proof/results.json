@@ -1,0 +1,305 @@
+{
+  "status": "passed-native-hosted-original-pixel-proof",
+  "reviewer": "controls-audit",
+  "completedAtISO": "2026-10-09T13:26:56.087465+00:00",
+  "runtimeManifestSha256": "e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327",
+  "qualification": "All eight untouched full-phone original PNG bytes independently verified. Each analysis crop uses exactly its original native pixels and reported nav rectangle, with no resampling/filtering/paint or source substitution. OCR establishes all five rendered nav labels; inconsistent image-tool previews do not define the original PNG. This proof does not assert that the still-running browser report has passed or closed.",
+  "originals": [
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-393-nfl.png",
+        "sha256": "5d6828d147396670b033ff210e5be7a9296a8dcb13e322de72460ddd34129682",
+        "bytes": 1788694
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nfl",
+      "originalNativePNGDimensions": [
+        786,
+        1704
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-393-nfl-native-nav-analysis.png",
+        "sha256": "cacf26ee87e5f764e9ed77203961f9a038c2e7143c3f29f4fbc53169504d6393",
+        "rawNativePixelCropBox": [
+          20,
+          1447,
+          766,
+          1564
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia iC) x al oo:\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-393-nba.png",
+        "sha256": "1f35b149847c2f2b1cd0c9d5a7687999a2ea8a9a23254c5a9db5f420036919ca",
+        "bytes": 1816272
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nba",
+      "originalNativePNGDimensions": [
+        786,
+        1704
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-393-nba-native-nav-analysis.png",
+        "sha256": "8b5fd5aaaa7cfd5ca4a61103bbf33be197a51979f1d44fcf9b089bc1982fcec5",
+        "rawNativePixelCropBox": [
+          20,
+          1447,
+          766,
+          1564
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia iC) x al oo:\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-393-nrl.png",
+        "sha256": "6ca223403489c7d6ae1d3570a2679773c04e966bd899419622224da395975685",
+        "bytes": 1773060
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "nrl",
+      "originalNativePNGDimensions": [
+        786,
+        1704
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-393-nrl-native-nav-analysis.png",
+        "sha256": "7fafc2c72812ad639a355bc70c08da2a70ca964b7e033cffdbf13cd5cce519a1",
+        "rawNativePixelCropBox": [
+          20,
+          1447,
+          766,
+          1564
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "a iC) x al oo:\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-393-ufc.png",
+        "sha256": "e701c916fc3056435d03e9b29bd2ea9395c10d8e9aecfdb9541b9c4d843fdccd",
+        "bytes": 1745371
+      },
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "sport": "ufc",
+      "originalNativePNGDimensions": [
+        786,
+        1704
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-393-ufc-native-nav-analysis.png",
+        "sha256": "b6588e79049ced063fe0d10f6c80ec42aa02dbd39e5de8e49f9319a33ce190cd",
+        "rawNativePixelCropBox": [
+          20,
+          1447,
+          766,
+          1564
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Fighters",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia @ x al oo:\nHome Fighters Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-430-nfl.png",
+        "sha256": "b7d2e9de533965cae24df8a9b082053fd4bf645983ffe3963ba296a9b773a1ae",
+        "bytes": 2039536
+      },
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nfl",
+      "originalNativePNGDimensions": [
+        860,
+        1792
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-430-nfl-native-nav-analysis.png",
+        "sha256": "1d175714f51a7306e90f9229f70b436f5d0d550f30b2a8801020546ca7cafb02",
+        "rawNativePixelCropBox": [
+          20,
+          1537,
+          840,
+          1654
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia iC) x al oo\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-430-nba.png",
+        "sha256": "c2bd4eb1f11b6ff12714ce58f65aa2db5173cb5df5dd401d73edaf7cd7439b4f",
+        "bytes": 2071337
+      },
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nba",
+      "originalNativePNGDimensions": [
+        860,
+        1792
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-430-nba-native-nav-analysis.png",
+        "sha256": "571735903df5b1218e3b5f87afe03dd1b93bbf971bbc81af1cbdb7051ba6b813",
+        "rawNativePixelCropBox": [
+          20,
+          1537,
+          840,
+          1654
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "@ iC) x al oo\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-430-nrl.png",
+        "sha256": "be0c8513fbd88c090c6adc4a6a76db0fa7114bd0d70eb6a31fd0b7ea748603c6",
+        "bytes": 2018990
+      },
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "nrl",
+      "originalNativePNGDimensions": [
+        860,
+        1792
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-430-nrl-native-nav-analysis.png",
+        "sha256": "bfa07846633d30f2ee92cee53eeb0e8d577e940cf96a6ca42f37e039ea3bdeca",
+        "rawNativePixelCropBox": [
+          20,
+          1537,
+          840,
+          1654
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Teams",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia iC) x al oo\nHome Teams Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    },
+    {
+      "original": {
+        "path": "qa/home-gem-point/live-captures-v2/webkit-430-ufc.png",
+        "sha256": "54472473c5aa44063ba557c359014712a4d1a4e24023ea694401350ba7b2c17e",
+        "bytes": 1986624
+      },
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "sport": "ufc",
+      "originalNativePNGDimensions": [
+        860,
+        1792
+      ],
+      "derivedAnalysisCrop": {
+        "path": "qa/home-gem-point/reviews/hosted-controls-pixel-proof/webkit-430-ufc-native-nav-analysis.png",
+        "sha256": "16ca4d9492e3d12bc3e8ad0d74cdc79c86b396bb2af034990ba2f5ffca19a519",
+        "rawNativePixelCropBox": [
+          20,
+          1537,
+          840,
+          1654
+        ],
+        "resampled": false,
+        "filtered": false
+      },
+      "expectedNavigationLabels": [
+        "Home",
+        "Fighters",
+        "Matchups",
+        "Insights",
+        "More"
+      ],
+      "actualOCR": "ia iC) x al oo\nHome Fighters Matchups Insights More\n",
+      "allFiveLabelsPresentInOriginalNativePixels": true
+    }
+  ]
+}

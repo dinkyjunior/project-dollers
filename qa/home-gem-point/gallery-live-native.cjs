@@ -1,0 +1,52 @@
+'use strict';
+// Additive, read-only native gallery audit. Original browser PNGs remain untouched.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const q=require('../matchup-breakdown/qa.cjs');
+const args=process.argv.slice(2),arg=(k,d)=>args.includes(k)?args[args.indexOf(k)+1]:d;
+const base=arg('--base','http://127.0.0.1:8876/project-dollers/');
+const engine=arg('--engine','webkit'),hostedBase='https://dinkyjunior.github.io/project-dollers/';assert.ok(['chromium','webkit'].includes(engine));
+const output=path.resolve(arg('--output','qa/home-gem-point/gallery-live-audit'));
+assert.ok(!fs.existsSync(output),'Fresh immutable evidence directory');
+const runtime=q.runtimeManifest(),sha=q.SHA,canonical=sha(Buffer.from(JSON.stringify(Object.fromEntries(Object.keys(runtime).sort().map(k=>[k,runtime[k]])))));
+assert.equal(canonical,arg('--runtime-sha'),'Explicit frozen runtime');
+const folder='qa/home-gem-point/live-captures-v2',gallery=folder+'/index.html',sourceReport=folder+'/results.json';
+const source=JSON.parse(fs.readFileSync(sourceReport));
+assert.equal(source.status,'passed');assert.equal(source.browserClosed,true);assert.equal(source.runtimeManifestSha256,canonical);
+assert.equal(source.originals.length,16);assert.equal(source.servedRuntime.length,247);
+const originalTests=q.tests();assert.deepEqual(originalTests,source.originalTestFiles);
+const hashes={helper:sha(fs.readFileSync(__filename)),gallery:sha(fs.readFileSync(gallery)),sourceReport:sha(fs.readFileSync(sourceReport))};
+const expected=Object.fromEntries(source.originals.map(image=>[image.file,image]));
+for(const image of source.originals)assert.equal(sha(fs.readFileSync(path.join(folder,image.file))),image.sha256,'Actual immutable original '+image.file);
+fs.mkdirSync(output,{recursive:true});
+const report={status:'running',startedAt:new Date().toISOString(),engine,base,runtimeManifestSha256:canonical,helperSha256:hashes.helper,gallery:{path:gallery,sha256:hashes.gallery},sourceReport:{path:sourceReport,sha256:hashes.sourceReport},qualification:{actualBrowser:true,nativeSelectControls:true,unmodifiedOriginalPixels:true,DOMOrCSSSubstitution:false,responseSubstitution:false,animationClockSubstitution:false,strictTLS:base.startsWith('https:'),hostedRecoveryStrictTLS:true},results:[],errors:[]};
+let browser;const save=()=>fs.writeFileSync(path.join(output,'results.json'),JSON.stringify(report,null,2)+'\n');save();
+(async()=>{try{
+ browser=await q.launch(engine,true);report.browserVersion=browser.version();
+ const context=await browser.newContext({viewport:{width:1440,height:1000},deviceScaleFactor:2});const page=await context.newPage();page.setDefaultTimeout(20000);
+ page.on('pageerror',e=>report.errors.push({kind:'javascript',message:e.message}));page.on('console',e=>{if(e.type()==='error')report.errors.push({kind:'console',message:e.text()});});page.on('requestfailed',e=>report.errors.push({kind:'requestfailed',url:e.url(),error:e.failure()?.errorText}));page.on('response',e=>{if(e.status()>=400)report.errors.push({kind:'http',url:e.url(),status:e.status()});});
+ const response=await page.goto(base+gallery,{waitUntil:'networkidle'});assert.equal(response.status(),200);assert.equal(sha(await response.body()),hashes.gallery);
+ for(const width of ['393','430','768','1440'])for(const sport of ['nfl','nba','nrl','ufc']){
+  await page.locator('#viewport').selectOption(width);
+  await page.waitForFunction(()=>{const image=document.getElementById('capture'),width=document.getElementById('viewport').value,sport=document.getElementById('sport').value;return image.getAttribute('src')==='webkit-'+width+'-'+sport+'.png'&&image.complete&&image.naturalWidth>0;});
+  await page.locator('#sport').selectOption(sport);
+  const file='webkit-'+width+'-'+sport+'.png';
+  await page.waitForFunction(expectedFile=>{const image=document.getElementById('capture');return image.getAttribute('src')===expectedFile&&image.complete&&image.naturalWidth>0;},file);
+  const state=await page.evaluate(async()=>{const image=document.getElementById('capture'),response=await fetch(image.currentSrc,{cache:'no-store'}),bytes=await response.arrayBuffer();return{src:image.getAttribute('src'),href:document.getElementById('original').getAttribute('href'),alt:image.alt,width:image.naturalWidth,height:image.naturalHeight,status:response.status,sha256:[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join(''),sport:document.getElementById('sport').value,viewport:document.getElementById('viewport').value,caption:document.getElementById('caption').textContent};});
+  const image=expected[file];assert.ok(image);assert.equal(state.src,file);assert.equal(state.href,file);assert.equal(state.sport,sport);assert.equal(state.viewport,width);assert.equal(state.status,200);assert.equal(state.sha256,image.sha256);assert.equal(state.width,image.viewport.width*2);assert.equal(state.height,image.viewport.height*2);assert.ok(state.alt.includes(sport.toUpperCase()));assert.ok(state.caption.includes(sport.toUpperCase()));
+  report.results.push({status:'passed',sport,viewport:image.viewport,at:new Date().toISOString(),...state});save();
+ }
+ assert.equal(report.results.length,16);assert.deepEqual(report.errors,[]);await context.close();
+ const recovery={status:'running',base:hostedBase,viewport:{width:430,height:896},strictTLS:true,errors:[],qualification:'Fresh actual hosted Home after the specifically recorded prior native-navigation atlas resource cancellation. This is additive recovery evidence, not a replacement or relabelling of the full passed report or failed first report.'};report.hostedHomeRecovery=recovery;save();
+ const mobile=await browser.newContext({viewport:recovery.viewport,deviceScaleFactor:2,isMobile:true,hasTouch:true,timezoneId:'Australia/Sydney'}),home=await mobile.newPage();home.setDefaultTimeout(20000);
+ home.on('pageerror',e=>recovery.errors.push({kind:'javascript',message:e.message}));home.on('console',e=>{if(e.type()==='error')recovery.errors.push({kind:'console',message:e.text()});});home.on('requestfailed',e=>recovery.errors.push({kind:'requestfailed',url:e.url(),resourceType:e.resourceType(),error:e.failure()?.errorText}));home.on('response',e=>{if(e.status()>=400)recovery.errors.push({kind:'http',url:e.url(),status:e.status()});});
+ const navigation=await home.goto(hostedBase+'#home',{waitUntil:'networkidle'});recovery.index={status:navigation.status(),sha256:sha(await navigation.body())};assert.equal(recovery.index.status,200);assert.equal(recovery.index.sha256,runtime['index.html']);
+ await home.waitForFunction(()=>document.documentElement.dataset.dataReady==='true'&&window.PD_DATA?.roster?.length>0&&document.querySelector('.page.active')?.dataset.page==='home');await home.evaluate(async()=>document.fonts.ready);
+ await home.locator('.page[data-page="home"] [data-home-select="nfl"]').tap();await home.waitForFunction(()=>document.querySelector('.page.active')?.dataset.homeSport==='nfl'&&document.querySelector('.page.active')?.dataset.homeMotionState==='running'&&[...document.querySelectorAll('.page.active img')].filter(i=>i.checkVisibility()).every(i=>i.complete&&i.naturalWidth>0));
+ await home.waitForFunction(()=>performance.getEntriesByType('resource').some(r=>r.name.endsWith('/assets/home/gem-atlas.webp')&&r.responseEnd>0));await home.waitForTimeout(320);
+ const screenshot='post-navigation-home.png',pixels=await home.screenshot({path:path.join(output,screenshot),animations:'allow'});recovery.original={file:screenshot,sha256:sha(pixels),bytes:pixels.length,capturedAt:new Date().toISOString(),viewport:recovery.viewport,sport:'nfl',captureKind:'actual-full-phone-unpaused-browser-original'};
+ recovery.rendered=await home.locator('.page[data-page="home"] [data-home-entry]').evaluate(entry=>({backgroundImage:getComputedStyle(entry,'::before').backgroundImage,label:entry.innerText,box:{width:entry.getBoundingClientRect().width,height:entry.getBoundingClientRect().height},atlasTiming:performance.getEntriesByType('resource').filter(r=>r.name.endsWith('/assets/home/gem-atlas.webp')).map(r=>({name:r.name,initiatorType:r.initiatorType,startTime:r.startTime,responseEnd:r.responseEnd,transferSize:r.transferSize,encodedBodySize:r.encodedBodySize,decodedBodySize:r.decodedBodySize})),motion:entry.closest('[data-page]').dataset.homeMotionState}));assert.match(recovery.rendered.backgroundImage,/gem-atlas\.webp/);assert.match(recovery.rendered.label,/Enter/);assert.equal(recovery.rendered.motion,'running');
+ recovery.atlas=await home.evaluate(async file=>{const response=await fetch(file,{cache:'no-store'}),bytes=await response.arrayBuffer();return{file,status:response.status,bytes:bytes.byteLength,sha256:[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('')};},'assets/home/gem-atlas.webp');assert.equal(recovery.atlas.status,200);assert.equal(recovery.atlas.sha256,runtime[recovery.atlas.file]);assert.deepEqual(recovery.errors,[]);recovery.status='passed';save();await mobile.close();
+ assert.deepEqual(q.runtimeManifest(),runtime);assert.deepEqual(q.tests(),originalTests);
+ assert.equal(sha(fs.readFileSync(gallery)),hashes.gallery);assert.equal(sha(fs.readFileSync(sourceReport)),hashes.sourceReport);assert.equal(sha(fs.readFileSync(__filename)),hashes.helper);
+ report.status='passed';report.runtimeUnchanged=true;report.galleryUnchanged=true;report.sourceReportUnchanged=true;report.helperUnchanged=true;
+}catch(e){report.status='failed';report.failure={message:e.message,stack:e.stack};process.exitCode=1;}finally{if(browser)await browser.close();report.browserClosed=true;report.completedAt=new Date().toISOString();save();console.log(JSON.stringify({status:report.status,report:path.relative(q.ROOT,path.join(output,'results.json')),sha256:sha(fs.readFileSync(path.join(output,'results.json'))),failure:report.failure}));}})();

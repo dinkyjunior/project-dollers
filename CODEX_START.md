@@ -1,30 +1,52 @@
 # Codex Start Here
 
-## Current Home refinement — local gates accepted, publication in progress (9 October 2026)
+## Current Home — deployed and independently verified (9 October 2026)
 
-The latest user render replaces the previously accepted Home. The current local
-implementation has a thin upper/heavy continuous lower chrome casting, deeper
-navy/royal sapphire lighting, a real faceted gemstone CTA and sport-coloured
-full-perimeter selector lighting. All seven independent visual/native specialist
-seals and a separate incoming-source audit passed. Read
-[the current release evidence](qa/home-gem-point/RELEASE.md) and
-[before/after originals](qa/home-gem-point/index.html).
+The latest Home refinement has a thin upper casting and broad continuous lower
+chrome bowl, deeper navy/royal sapphire, a connected cut-gem entry button and
+sport-coloured travelling lights around all four selectors. Original branding,
+league marks and existing native navigation remain. NFL enters normally; NBA,
+NRL and UFC are selectable Coming soon states, with UFC Fighters. NBA statistics
+are the next separate scope, not an implemented feature of this release.
 
-Visual acceptance is immutable runtime `be79f233…58724`; ordinary rebase preserved
-production `995a43b`'s five audited NFL books. Integrated runtime is
-`9220354ea64677249c739ac54e320f76f5d5ca9335a3a70390c2b4d387d9ca06`.
-All242 other bodies, original15 tests, existing controllers and nonHome markup
-remain unchanged. Fresh integrated browser checks and actual hosted verification
-are required before reporting this version deployed. NBA remains selectable
-Coming soon; do not claim NBA stats implemented. No unrelated Page4 changes.
+Seven local specialist gates passed. Actual strict-HTTPS WebKit then passed
+393 × 852, 430 × 896, 768 × 1024 and 1440 × 1000, with 16 untouched originals,
+90 core phone actions, natural motion, reduced-motion browser preference,
+direct routes, refresh and exact HTTP-200 hashes for all 247 runtime files.
+One atlas image request was interrupted during the recorded native document
+navigation; its exact successful body and separate fresh painted Home proof
+are retained. Do not claim zero resource cancellations or physical iPhone/FPS
+certification. Read [the final acceptance](qa/home-gem-point/hosted-acceptance.json),
+[actual hosted screenshots](qa/home-gem-point/live-captures-v2/index.html),
+[before/after originals](qa/home-gem-point/index.html) and
+[release details](qa/home-gem-point/RELEASE.md).
 
-This cloud checkout's remote fetch mapping tracks only main. Before every push,
-fetch explicit main and codex-rebuild refspecs into their remote-tracking refs,
-then ordinarily rebase both; never force-overwrite source updates. Preserve
-previous saved work, artifacts and backups. Latest source authority is the chat
-attachment, not the rejected website or generated implementation master.
+Current runtime is
+`e8736c0b666f968176d0cc5dd071e0575114f1a37bb704f0229884ccc981e327`.
+Ordinary rebases preserved the latest independently audited `fcdf889` NFL books;
+all 242 accepted code/asset bodies, original 15 tests, existing controllers and
+non-Home markup remain unchanged. No unrelated Page 4 change was made. Approved
+visual authority is the latest chat attachment, whose original image bytes are
+unavailable locally; generated implementation masters are not that reference.
 
-## Current Home gemstone entrance — deployed and independently verified
+The fresh source backup is [project-dollar-home-tapered-source.zip](backups/project-dollar-home-tapered-source.zip),
+27,336,625 bytes, 743 verified members, SHA-256
+`bd8d415769a76c414c24ad793aff273ac00adecb578d0bd805a0781f60aa22a2`.
+All 247 runtime members are exact; it was created before hosted evidence and is
+accurately described as a source backup rather than a hosted QA certificate.
+Previous saved work and backups remain intact.
+
+This checkout fetches only main by default. Before every push, explicitly fetch
+both main and codex-rebuild into their remote-tracking refs and ordinarily rebase
+both; never force-overwrite source updates. Use build-approved-pages.yml on main
+for publication and verify the real Pages jobs and hosted bytes. The refresh
+workflow was held for this bounded verification window; restoring its original
+active state is mandatory before completion. Final publication/restoration
+receipts are saved outside Git and summarized in the PR follow-up; check the
+actual workflow state when resuming. PR #1 is already merged/closed, so use an
+authorized follow-up comment rather than describing it as an open draft.
+
+## Previous Home gemstone entrance — superseded by the current refinement
 
 The latest four-sport Home refinement passed all six local specialist reviews
 and all six actual hosted reviews. Chromium and genuine WebKit passed 393×852

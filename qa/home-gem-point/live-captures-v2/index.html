@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../../../assets/favicon.svg">
+<title>Project Dollar — actual hosted Home screenshots</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#050910;color:#edf3ff;font:16px/1.55 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:24px}h1{font-size:clamp(24px,4vw,36px);line-height:1.15;margin:0 0 14px}p{max-width:78ch;color:#aabbd1}a{color:#71c9ff}nav{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}fieldset{display:flex;flex-wrap:wrap;gap:18px;border:1px solid #234466;border-radius:12px;padding:16px;margin:24px 0}legend{padding:0 8px}label{display:grid;gap:6px}select{font:inherit;color:#eef7ff;background:#0b1727;border:1px solid #398aca;border-radius:8px;padding:10px;min-height:44px}figure{margin:0 auto;max-width:100%;text-align:center}img{display:block;width:393px;max-width:100%;height:auto;margin:0 auto;border:1px solid #1d344b}figcaption{padding:14px;color:#bdd3e8}footer{border-top:1px solid #203146;padding-top:18px;margin-top:24px;font-size:14px}
+</style>
+<main>
+<h1>Home — actual hosted screenshots</h1>
+<p>Untouched screenshots from the deployed website in genuine WebKit, with a 2× display scale. Choose a sport and viewport below. The phone screenshots were captured at 393 × 852 and 430 × 896.</p>
+<nav><a href="../../../#home">Open the app</a><a href="../index.html">Compare previous and refined Home</a><a href="../RELEASE.md">Release evidence</a><a href="results.json">Full hosted QA report</a><a href="../../../backups/project-dollar-home-tapered-source.zip">Download source backup</a></nav>
+<fieldset><legend>View the original browser output</legend>
+<label>Sport<select id="sport"><option value="nfl">NFL — Sapphire</option><option value="nba">NBA — Blue + Red</option><option value="nrl">NRL — Emerald</option><option value="ufc">UFC — Ruby</option></select></label>
+<label>Viewport<select id="viewport"><option value="393">393 × 852 — Phone</option><option value="430">430 × 896 — Phone</option><option value="768">768 × 1024 — Tablet</option><option value="1440">1440 × 1000 — Desktop</option></select></label>
+</fieldset>
+<figure><a id="original" href="webkit-393-nfl.png"><img id="capture" src="webkit-393-nfl.png" alt="Actual hosted NFL Home at 393 by 852"></a><figcaption id="caption">NFL · 393 × 852. Click the screenshot to open the full original PNG.</figcaption></figure>
+<footer>The approved source is the latest four-sport chat attachment. Its original image bytes are unavailable in this checkout, so this gallery does not present an invented reference file or claim a registered pixel-identity score. The before/after gallery uses the actual previous build and reviewed refinement. NBA, NRL and UFC remain selectable Coming soon states.</footer>
+</main>
+<script>
+const dimensions={393:[393,852],430:[430,896],768:[768,1024],1440:[1440,1000]};
+const sport=document.getElementById('sport'),viewport=document.getElementById('viewport'),capture=document.getElementById('capture'),original=document.getElementById('original'),caption=document.getElementById('caption');
+function update(){const [w,h]=dimensions[viewport.value],name=sport.value.toUpperCase(),file='webkit-'+w+'-'+sport.value+'.png';capture.src=file;capture.alt='Actual hosted '+name+' Home at '+w+' by '+h;capture.style.width=w+'px';original.href=file;caption.textContent=name+' · '+w+' × '+h+'. Click the screenshot to open the full original PNG.';}
+sport.addEventListener('change',update);viewport.addEventListener('change',update);
+</script>
+</html>

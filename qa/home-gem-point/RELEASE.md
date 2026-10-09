@@ -67,9 +67,9 @@ The six incoming commits contain factual changes as well as retrieval metadata:
 sourced surface evidence, 22 actual DAL/TB appearance/snap rows and a dated CHI
 provider injury designation. The audit cross-checked raw schedule, snap and
 play-by-play inputs with 111,463 assertions and saved the explicit limitations.
-These changes are not described as metadata only. Existing data refresh remains
-active. Source disagreements, missing values and uncertain player roles stay
-explicit; no live push-feed or complete injury/advanced-stat coverage is claimed.
+These changes are not described as metadata only. Source refresh was active at this historical checkpoint; its later bounded
+publication hold and required restoration are recorded below. Source
+disagreements, missing values and uncertain player roles stay explicit; no live push-feed or complete injury/advanced-stat coverage is claimed.
 
 Fresh source-companion captures and actual hosted acceptance must bind the
 integrated runtime separately. The immutable local reports are not relabelled
@@ -108,3 +108,57 @@ The completed source workflow was drained and briefly held for consistent
 publication/hosted verification. Its original active state is recorded in
 [the workflow window](deployment-workflow-window.json) and must be restored before
 completion. No source job was cancelled and no incoming data was discarded.
+
+## Actual hosted acceptance
+
+[Real Pages run 37933273792](https://github.com/dinkyjunior/project-dollers/actions/runs/37933273792)
+completed all three jobs successfully for application commit `d42fc3d`.
+Strict-HTTPS genuine WebKit then completed and closed the
+[fresh full hosted run](live-captures-v2/results.json), SHA-256
+`2983a2d321d1ffa2c5fa1468ffc010a2f85ddeb2011bdc2bb380abf607a6d829`.
+It binds exactly the final `e8736c0b…e327` runtime: all 247 actual served bodies
+returned HTTP 200 with exact hashes. All four sports passed 393 × 852,
+430 × 896, 768 × 1024 and 1440 × 1000. There are 16 untouched originals,
+90 core phone actions, native direct/reload journeys, 14 naturally advancing
+ring/selector paths, both genuinely bright endcap phases, stopped reduced-motion
+clocks and four actual loaded research-font/body proofs.
+
+The [first hosted run](live-captures/results.json) remains failed and immutable.
+Its dedicated 430 cap loop sampled full PNGs roughly 3.5 seconds apart and missed
+a short bright phase already observed in an earlier natural sample. Two peers
+independently diagnosed this measurement gap. The new additive helper preserves
+the same 28.5-second bound, actual opacity threshold and every original assertion;
+it records native CTA screenshot regions to sample real paint without full-phone
+PNG encoding delay. It does not change the app, clocks, CSS or responses.
+
+The completed run has no JavaScript/console/HTTP/ordinary failed-request/external
+errors. One 430 atlas image request was cancelled 9 ms after returning Home,
+during the immediately following native document-navigation interval. That image
+event is preserved as an image event, not relabelled as a font/document request
+or described as zero cancellations. The atlas later returned its exact 436,820-byte
+HTTP-200 body; the [separate gallery audit](gallery-live-audit-v2/results.json) adds a
+[fresh actual painted Home proof](gallery-live-audit-v2/post-navigation-home.png).
+Browser preference emulation is qualified; physical iPhone/FPS remains untested.
+
+[Hosted specialist acceptance](hosted-acceptance.json) binds the actual completed
+report and precise personal-view scopes. Open [the live screenshot gallery](live-captures-v2/index.html),
+[before/after originals](index.html), and the
+[fresh source ZIP](../../backups/project-dollar-home-tapered-source.zip).
+The ZIP has 743 CRC/hash-verified members and every exact current runtime body;
+SHA-256 `bd8d415769a76c414c24ad793aff273ac00adecb578d0bd805a0781f60aa22a2`.
+It was created before hosted QA and is not falsely described as containing later
+hosted certificates. Older ZIPs and historical QA remain intact.
+
+Final evidence/backup publication must have its own successful actual Pages jobs
+and strict-HTTPS exact public artifact proof. The source workflow's original
+active state must be restored before completion. The final public and restoration
+receipts are saved outside Git and summarized in the PR follow-up, avoiding an
+endless evidence-only publication cycle.
+
+The first gallery-only audit also remains preserved: its loopback URL received
+an environment proxy 403 before any case, while an ordinary local HTTP request
+returned 200. The corrected additive helper separates local gallery and strict
+HTTPS hosted sessions without changing the gallery or weakening TLS. Its actual
+completed/closed report passes all 16 selections with exact PNG bodies and no
+errors, followed by the visible native Home recovery proof. No failed artifact
+was relabelled as a pass.
