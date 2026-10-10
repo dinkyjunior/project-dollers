@@ -1,0 +1,29 @@
+{
+  "status": "passed-latest-preserved-production-data-checks",
+  "completedAt": "2026-10-10T07:13:25.380260+00:00",
+  "productionCommit": "bf89c373dd063c86b98b7217c31c681a5c63a50e",
+  "checks": [
+    {
+      "command": "npm run data:check",
+      "exitCode": 0,
+      "outcome": "Saved-data/provenance integrity passed",
+      "output": "reviews/latest-check.log",
+      "sha256": "6bffd8b9a88d3e46518c6b2f98aff589627235d767497018460505f2aa1081cf"
+    },
+    {
+      "command": "npm run test:data",
+      "exitCode": 0,
+      "outcome": "22 tests passed",
+      "output": "reviews/latest-core.log",
+      "sha256": "b8cf526bf9bd5801eb0370c125b96133a02702c2a071a8b0e9b4d0a53eca838f"
+    },
+    {
+      "command": "npm run test:sources",
+      "exitCode": 0,
+      "outcome": "7 tests passed",
+      "output": "reviews/latest-sources.log",
+      "sha256": "179b9272fefae7806bbd5e9f82cc66d3349c09e104ac4f30a76b936ce7faab23"
+    }
+  ],
+  "historicalFixtureLimit": "Earlier integrated-data-validation.json retains original 6 stale historical matchup manifest failures and one raw-cache skip; no broad all-data-test-pass claim."
+}

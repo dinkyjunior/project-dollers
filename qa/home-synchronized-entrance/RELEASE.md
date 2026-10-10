@@ -29,6 +29,14 @@ The WebKit suite's immediate post-resize geometry sample preceded native ResizeO
 
 Ordinary rebases preserve incoming production data through `958ee56`; all fifteen accepted Home inputs remain byte-identical. [Integrated data checks](integrated-data-validation.json) passed the saved-data validator, 22 core tests, eight update-behavior groups, seven source tests and ten team-data tests. One independent raw-cache arithmetic check is skipped without its cache. The legacy matchup suite retains six source-manifest failures against its historical fixture (27 other tests pass); this prior fixture limitation is not hidden, relabelled as passed or repaired by replacing evidence. This Home release introduces no research-controller or statistical-value changes.
 
+## Actual publication and verification
+
+Release `e78d38c` was pushed normally after fetching and rebasing both branches; an ancestry-preserving merge changed no reviewed files. The automatic NFL refresh then advanced production to `bf89c373dd063c86b98b7217c31c681a5c63a50e`. Its [independent delta audit](reviews/incoming-data-bf89c37.json) explains provider attribution aliases and reordered diagnostic records without sports-value changes; current saved-data, core and source checks passed again. All fifteen accepted Home inputs remain exact.
+
+Successful [Pages run 38033278136](https://github.com/dinkyjunior/project-dollers/actions/runs/38033278136) published that combined version. The initial Pages run was superseded by this newer automatic-data publication, not reported as successful. [Actual deployment](actual-deployment.json) and [strict-HTTPS hosted WebKit evidence](hosted-webkit/results.json) retain the real runs.
+
+The actual public site passed all four sports at 393×852 and 430×896, 30 native actions, 22 exact source/data bodies, first photographic venue paint, shared border phase, reduced-motion restoration, NFL entry/return and refresh. No JavaScript/SVG/HTTP/request failures were recorded. Home and data hashes stayed stable through the closed hosted run. The [public gallery and sixteen final PNG bodies](hosted-gallery-files.json) were also verified exact over strict HTTPS. Hosted originals and final receipts are saved in the codex-rebuild evidence follow-up; the published gallery displays the reviewed local originals with identical Home source.
+
 ## Practical limits
 
 This is a material visual refinement, not a claim of registered pixel identity with the chat render. The photographic background and casting are reconstructed artwork, and the taller target phones reveal more foreground floor than the short reference panels.
