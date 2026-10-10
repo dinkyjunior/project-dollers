@@ -79,3 +79,7 @@ logos, the emerald money bag and the original stadium artwork retain their
 original colours. NBA uses fixed blue-left/red-right treatment; filters must
 not rotate that split around the ring. Moving highlights are separate live
 CSS layers, preserving the stationary metal geometry and authentic controls.
+
+## Current chrome correction
+
+`aperture-refined.webp` is a controlled decorative edit of the prior photographic casting, removing bulky joins while preserving polished concentric rails and sapphire channels. Its1315×1197 native dimensions and alpha are unchanged by WebP compression; runtime size307,862 bytes. The generated original and honest geometry limits are recorded in `reference/HOME_REFINED_CHROME_PROVENANCE.json`. It is implementation artwork, not the approved chat image. The original tapered casting remains preserved. The current Enter face uses the original native gemstone atlas.

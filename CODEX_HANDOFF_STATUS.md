@@ -1,5 +1,13 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Latest Home correction — 10 October 2026 (Sydney)
+
+The user rejected the previous continuous SVG/flat-gem Home. The corrective build restores photographic cut-gem material and polished concentric chrome, removes bulky metal joins, keeps translucent icon-only selectors and no Home bottom navigation, and preserves current NFL/team/matchup data and controllers. The supplied four-sport chat image remains the authority. This is a reviewed visual correction, not a claim of literal pixel identity.
+
+Read [the correction and validation](qa/home-reference-correction/RELEASE.md) and [actual before/after screenshots](qa/home-reference-correction/index.html). Preserve prior artwork, generated masters, saved work, immutable evidence and backups. Before the next push, explicitly fetch and normally rebase latest codex-rebuild and main; never force-push. Verify the actual hosted app before reporting deployment. PR #1 is already merged; append an authorized follow-up rather than treating it as an open draft.
+
+The historical continuous release records below describe the rejected appearance; their technical passes are not current visual approval.
+
 ## Current Home — continuous entrance release (9 October UTC / 10 October 2026 Sydney)
 
 This checkpoint supersedes the historical Home reports below. The newest user correction requires continuous metal, a larger field opening, true vector gemstone Enter controls with translucent text, icon-only glass sport selectors and no Home bottom navigation. Original PROJECT facets and gold DOLLAR receive clipped, asynchronous lighting; original moneybag, league marks and venue source pixels remain. NFL enters normally; NBA, NRL and UFC are selectable Coming soon. Research-screen navigation, controllers, original tests, protected non-Home markup and prior backups remain.

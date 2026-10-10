@@ -1,0 +1,195 @@
+{
+  "status": "accepted",
+  "reviewer": "/root/home_controls_review",
+  "reviewedAt": "2026-10-10T00:57:17.065433+00:00",
+  "scope": "Home native entry, four sport selectors, accessible state and control materials only; review uses browser-owner receipts and direct original screenshot inspection, with no browser rerun or app edits.",
+  "approvedReference": "Latest four-sport render attached in this chat; original attachment binary unavailable.",
+  "source": {
+    "index.html": "aa0abef7e296b2206196f324ec38487c85a4b39a2b4dddac48867b0cd666f313",
+    "assets/home-aperture.css": "7ab94eb0219f24947fd1432dde46c12687742e56f40f43a248f5c31c6222d25c",
+    "assets/home-gem-controls.css": "22810aed986a477032aaf9107c594258346cddbc71551d4943111adf274e840f",
+    "assets/home-gem-layout.css": "474b744b8000e62107de14958449efada4a9bf9bfe7d8027aa799045a335a30b",
+    "assets/home-aperture-motion.css": "cade489bfd2842d291dbf4cbcd5cbe72eb4a20a990365e7874a0bd8b8670fc0e",
+    "assets/home-brand-lighting.css": "adf79e188bc2d47aa0be2b594f9a8ba097c7c556505b57e6ff24dfa6c76be2e3",
+    "assets/home-aperture-motion.js": "eaf7f8a1425b1d059fb06b8ffd8e61532dab1d7ce485a308bef8b9b2cd9c0425",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-refined.webp": "65643cc07a3083f74350478a3aae38b31fde489db8ca0306a8924d1b1de2b257",
+    "assets/home/gem-atlas.webp": "6424dc2be0c30232ea6cf2ff1bfffca169502d914719606a8aaa0ff6313f4685",
+    "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "browserReports": [
+    {
+      "file": "qa/home-reference-correction/final-chromium/results.json",
+      "sha256": "ee648e9735174583d5bed9e48ac536a30dd950813d52bca01503df7c2dcfac94",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "nativeActions": 30,
+      "phoneChecks": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "nativeActions": 15,
+          "sports": [
+            "nba",
+            "nfl",
+            "nrl",
+            "ufc"
+          ],
+          "entryNavigatesToNFL": true,
+          "unavailableEntriesRemainOnHome": true,
+          "keyboardSelection": true,
+          "refreshPreservesSelection": true,
+          "allFiveControlsAccessibleAndUnobscured": true,
+          "homeNavAbsent": true,
+          "selectorVisibleTextEmpty": true,
+          "documentHorizontalOverflow": false,
+          "consoleOrJSOrHTTPOrFailedRequestErrors": 0,
+          "minControlWidth": 85,
+          "minControlHeight": 60
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "nativeActions": 15,
+          "sports": [
+            "nba",
+            "nfl",
+            "nrl",
+            "ufc"
+          ],
+          "entryNavigatesToNFL": true,
+          "unavailableEntriesRemainOnHome": true,
+          "keyboardSelection": true,
+          "refreshPreservesSelection": true,
+          "allFiveControlsAccessibleAndUnobscured": true,
+          "homeNavAbsent": true,
+          "selectorVisibleTextEmpty": true,
+          "documentHorizontalOverflow": false,
+          "consoleOrJSOrHTTPOrFailedRequestErrors": 0,
+          "minControlWidth": 94.25,
+          "minControlHeight": 60
+        }
+      ],
+      "additionalResponsiveCases": 4
+    },
+    {
+      "file": "qa/home-reference-correction/final-webkit/results.json",
+      "sha256": "5ba23c59b715cb938ee8b89e525f2ed53cf77b3c2e689b958532d39accb065db",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "nativeActions": 30,
+      "phoneChecks": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "nativeActions": 15,
+          "sports": [
+            "nba",
+            "nfl",
+            "nrl",
+            "ufc"
+          ],
+          "entryNavigatesToNFL": true,
+          "unavailableEntriesRemainOnHome": true,
+          "keyboardSelection": true,
+          "refreshPreservesSelection": true,
+          "allFiveControlsAccessibleAndUnobscured": true,
+          "homeNavAbsent": true,
+          "selectorVisibleTextEmpty": true,
+          "documentHorizontalOverflow": false,
+          "consoleOrJSOrHTTPOrFailedRequestErrors": 0,
+          "minControlWidth": 85,
+          "minControlHeight": 60
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "nativeActions": 15,
+          "sports": [
+            "nba",
+            "nfl",
+            "nrl",
+            "ufc"
+          ],
+          "entryNavigatesToNFL": true,
+          "unavailableEntriesRemainOnHome": true,
+          "keyboardSelection": true,
+          "refreshPreservesSelection": true,
+          "allFiveControlsAccessibleAndUnobscured": true,
+          "homeNavAbsent": true,
+          "selectorVisibleTextEmpty": true,
+          "documentHorizontalOverflow": false,
+          "consoleOrJSOrHTTPOrFailedRequestErrors": 0,
+          "minControlWidth": 94.25,
+          "minControlHeight": 60
+        }
+      ],
+      "additionalResponsiveCases": 0
+    }
+  ],
+  "directPaintInspection": [
+    {
+      "file": "/workspace/recovery-qa/home-reference-correction/candidate-preview-4/home-nfl-393x852.png",
+      "sha256": "bc4cb814469112fd8ebedbf8a46f8450613583b59b2f7d8b8f4028a4cc842681",
+      "directlyViewed": true
+    },
+    {
+      "file": "/workspace/recovery-qa/home-reference-correction/candidate-preview-4/home-nba-430x896.png",
+      "sha256": "bb952f1c72ff818f43c67656ff553f3d192c67023b099268ac7aeabdc25c98a1",
+      "directlyViewed": true
+    },
+    {
+      "file": "qa/home-reference-correction/final-webkit/home-nfl-393x852.png",
+      "sha256": "3d8e88ff44b47096e347012c8efae2f6197e8abad4eb95ed1f96b701e42d3401",
+      "directlyViewed": true
+    },
+    {
+      "file": "qa/home-reference-correction/final-webkit/home-nba-430x896.png",
+      "sha256": "dd635748c5e96fc8d14db1fbbcd6b3e695fe34ac080ba410ba26f7f52b2390a7",
+      "directlyViewed": true
+    }
+  ],
+  "verification": {
+    "nativePhoneActions": 60,
+    "controlGeometrySamples": 80,
+    "mainOriginalsHashesVerified": 16,
+    "minPhoneControlWidth": 85,
+    "minPhoneControlHeight": 60,
+    "allFiveHomeControlsCovered": true,
+    "nativeTouchKeyboardAndRefresh": true,
+    "noHomeBottomNavigation": true,
+    "iconsOnlyWithAccessibleNames": true,
+    "NFLFunctionalOtherSportsSelectableComingSoon": true
+  },
+  "materialFindings": [
+    "Original gemstone atlas restores detailed refraction and specular end cuts without stretching its native aspect ratio.",
+    "Enter and Coming soon text are sharp, readable and translucent over the dark gem.",
+    "Selector glass faces expose the actual floor texture; opaque border-box underlayer was removed.",
+    "Full masked color perimeters surround all four selectors; inherited separator width was explicitly reset, eliminating the long vertical strips.",
+    "Icons retain contain sizing and centered native geometry."
+  ],
+  "fixedIssues": [
+    "Opaque gradient beneath alpha selector faces prevented real glass transparency.",
+    "Inherited width:1px from old separator pseudo-element collapsed unselected full border into a vertical strip."
+  ],
+  "qualifications": [
+    "Browser-owner native actions were inspected rather than rerun by this reviewer.",
+    "Direct visual inspection covers NFL393 and NBA430 candidate and final WebKit originals; all 16 phone/sport control geometry receipts and original hashes were checked.",
+    "These are local Chromium/WebKit results, not physical iPhone or hosted deployment verification.",
+    "No registered pixel comparison or exact replica claim."
+  ]
+}

@@ -1,22 +1,20 @@
-/* Home fills the phone viewport. The native gate keeps its artwork ratio;
-   spare height belongs to the continuous floor beyond the icon dock;
-   the brand, open field and gem stay together as one dense entrance. */
+/* Keep the entrance in the reference's compact proportions. Extra viewport
+   height frames the app; it does not stretch the casting or reflective floor. */
 .page[data-page="home"] {
   --home-page-gutter: 12px;
-  --home-portal-height: calc(min(100vw, 430px) * .9102661597);
-  --home-entry-height: clamp(54px, calc(10.8vw + 19.6px), 66px);
-  --home-dock-height: 70px;
+  --home-entry-height: 60px;
+  --home-dock-height: 74px;
   border-radius: 0;
 }
 body:has(.page[data-page="home"].active) {
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
+  align-items: start;
 }
 .app-shell:has(.page[data-page="home"].active) {
   width: 100%;
   max-width: 430px;
-  height: 100vh;
   height: 100dvh;
   margin: 0 auto;
   border-radius: 0;
@@ -24,34 +22,34 @@ body:has(.page[data-page="home"].active) {
 }
 .app-shell:has(.page[data-page="home"].active)::after {
   border-radius: 0;
-  border-inline: 0;
+  border: 0;
   box-shadow: none;
 }
 .page[data-page="home"] .page-scroll {
   inset: 0;
-  padding: max(18px, env(safe-area-inset-top, 0px)) var(--home-page-gutter)
-    max(18px, calc(env(safe-area-inset-bottom, 0px) + 10px));
+  padding: calc(10px + env(safe-area-inset-top, 0px)) var(--home-page-gutter)
+    calc(10px + env(safe-area-inset-bottom, 0px));
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding-block: 16px;
+  scroll-padding-block: 12px;
 }
 .page[data-page="home"] .home-frame {
   --home-portal-width: calc(100% + 24px);
   width: 100%;
   height: auto;
-  min-height: 100%;
+  min-height: 0;
   padding: 0;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto var(--home-entry-height) var(--home-dock-height);
   align-content: start;
   grid-template-areas: "brand" "gate" "entry" "dock";
-  gap: clamp(12px, 1.8dvh, 16px);
+  gap: 6px;
 }
 .page[data-page="home"] .home-frame > .status-row { display: none; }
 .page[data-page="home"] .home-architecture {
-  inset: calc(-1 * max(18px, env(safe-area-inset-top, 0px)))
-    calc(-1 * var(--home-page-gutter))
-    calc(-1 * max(18px, calc(env(safe-area-inset-bottom, 0px) + 10px)));
+  inset: calc(-10px - env(safe-area-inset-top, 0px))
+    calc(-1 * var(--home-page-gutter)) auto;
+  height: max(calc(100dvh + 10px), calc(min(100vw, 430px) * 1.75 + 22px));
 }
 .page[data-page="home"] .home-header {
   height: auto;
@@ -60,8 +58,8 @@ body:has(.page[data-page="home"].active) {
 }
 .page[data-page="home"] .home-header .brand {
   position: relative;
-  width: 82%;
-  max-width: 336px;
+  width: 86%;
+  max-width: 356px;
 }
 .page[data-page="home"] .home-header .brand-subtitle {
   margin-top: 4px;
@@ -69,10 +67,10 @@ body:has(.page[data-page="home"].active) {
   letter-spacing: 1.3px;
 }
 .page[data-page="home"] .aperture-stage {
-  min-height: calc(var(--home-portal-height) + 20px);
-  height: calc(var(--home-portal-height) + 20px);
-  padding: 0;
-  place-items: center;
+  min-height: 0;
+  height: auto;
+  padding: 0 0 6px;
+  place-items: start center;
 }
 .page[data-page="home"] .aperture-gate {
   width: var(--home-portal-width);
@@ -82,62 +80,59 @@ body:has(.page[data-page="home"].active) {
 .page[data-page="home"] .home-floor {
   left: calc(-1 * var(--home-page-gutter));
   right: calc(-1 * var(--home-page-gutter));
-  bottom: calc((100% - var(--home-portal-height)) / 2 - 12px);
-}
-.page[data-page="home"] .aperture-floor-reflection {
-  bottom: calc((100% - var(--home-portal-height)) / 2 - 18px);
+  bottom: -6px;
 }
 .page[data-page="home"] .home-entry {
   width: calc(100% - 8px);
   height: var(--home-entry-height);
   min-height: 44px;
   align-self: center;
+  font-weight: 400;
+  color: #ecf7ffe3;
 }
+.page[data-page="home"] .home-entry:disabled { color: #ecf7ffe3; }
 .page[data-page="home"] .home-sport-dock {
   min-width: 0;
   min-height: var(--home-dock-height);
   align-self: end;
 }
 .page[data-page="home"] .home-frame > .home-availability.is-visible {
-  bottom: calc(var(--home-dock-height) + var(--home-entry-height) + 24px);
+  bottom: calc(var(--home-dock-height) + var(--home-entry-height) + 14px);
 }
-
-/* Wide screens retain a phone-shaped preview, with the same accessible inner
-   scrolling when the available viewport is shorter than the composition. */
+.page[data-page="home"] .aperture-league-logo {
+  width: 55%; height: 69%; left: 22.5%;
+  top: calc(var(--aperture-art-center-y) - 34.5%);
+}
+.page[data-page="home"][data-home-sport="nba"] .aperture-league-logo {
+  width: 45%; height: 53%; left: 27.5%;
+  top: calc(var(--aperture-art-center-y) - 26.5%);
+}
+.page[data-page="home"][data-home-sport="nrl"] .aperture-league-logo {
+  width: 49%; height: 61%; left: 25.5%;
+  top: calc(var(--aperture-art-center-y) - 30.5%);
+}
+.page[data-page="home"][data-home-sport="ufc"] .aperture-league-logo {
+  width: 59%; height: 29%; left: 20.5%;
+  top: calc(var(--aperture-art-center-y) - 14.5%);
+}
 @media (min-width: 700px) {
-  body:has(.page[data-page="home"].active) { padding: 24px 0; }
+  body:has(.page[data-page="home"].active) { padding: 16px 0; align-items: center; }
   .app-shell:has(.page[data-page="home"].active) {
     width: 430px;
-    max-width: 430px;
-    height: min(calc(100dvh - 48px), 900px);
-    border-radius: 22px;
+    height: min(calc(100dvh - 32px), 753px);
+    border-radius: 18px;
     box-shadow: 0 0 0 1px #71889740, 0 18px 55px #000b;
   }
   .page[data-page="home"],
-  .app-shell:has(.page[data-page="home"].active)::after { border-radius: 22px; }
-  .app-shell:has(.page[data-page="home"].active)::after {
-    border: 1px solid #7b95a74a;
-    box-shadow: inset 1px 0 0 #e1effe20, inset -1px 0 0 #000c;
-  }
-}
-@media (max-height: 650px) {
-  .page[data-page="home"] .page-scroll {
-    padding-top: max(12px, env(safe-area-inset-top, 0px));
-    padding-bottom: max(16px, calc(env(safe-area-inset-bottom, 0px) + 8px));
-  }
-  .page[data-page="home"] .home-frame { gap: 10px; }
-  .page[data-page="home"] .home-header .brand { width: 76%; }
-}
-@media (min-width: 700px) and (max-height: 650px) {
-  body:has(.page[data-page="home"].active) { padding: 8px 0; }
-  .app-shell:has(.page[data-page="home"].active) { height: calc(100dvh - 16px); }
+  .app-shell:has(.page[data-page="home"].active)::after { border-radius: 18px; }
+  .page[data-page="home"] .home-architecture { height: calc(430px * 1.75 + 22px); }
 }
 @media (max-width: 360px) {
-  .page[data-page="home"] .home-header .brand { width: 86%; }
+  .page[data-page="home"] .home-header .brand { width: 84%; }
   .page[data-page="home"] .home-header .brand-subtitle {
-    font-size: 8px;
-    letter-spacing: 1.1px;
+    font-size: 8px; letter-spacing: 1.1px;
   }
+  .page[data-page="home"] { --home-entry-height: 54px; --home-dock-height: 70px; }
 }
 
 /* Local sapphire emission preserves navy glass and neutral white metal. */

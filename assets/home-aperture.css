@@ -1,16 +1,13 @@
-/* Original vector implementation geometry; not registered chat-reference pixels.
-   continuous-gate.svg: 1315 x 1197; opening cx657.5/cy528/rx510/ry450.
-   The uninterrupted chrome casting tapers upward and its lower bowl ends y1167. */
+/* Native 1315 × 1197 photographic chrome. Continuous polished rails replace
+   the previous bulky plate joins; venue and vector marks keep natural ratios. */
 .page[data-page="home"] {
-  --gate-ratio: 1315 / 1197;
-  --aperture-art-center-y: 44.1103%;
+  --gate-ratio: 1.0985797828;
+  --aperture-art-center-y: 46.1%;
 }
 .page[data-page="home"] .aperture-gate {
   aspect-ratio: var(--gate-ratio);
   filter: drop-shadow(0 7px 5px #000b);
 }
-/* Generous venue bounds overlap behind the steel lip to prevent alpha seams.
-   SVG, rather than the CSS ellipse, defines the visible open edge. */
 .page[data-page="home"] .aperture-venue {
   width: 100%;
   height: 100%;
@@ -18,22 +15,20 @@
   top: 50%;
   border-radius: 0;
   background: #010821;
-  clip-path: ellipse(39.5% 38.3% at 50% 44.1103%);
+  clip-path: polygon(49.2776% 12.6149%, 41.6730% 14.0351%, 37.7186% 15.3718%, 34.9810% 16.7084%, 32.6996% 18.0451%, 30.8745% 19.3818%, 29.2776% 20.7185%, 27.7567% 22.0551%, 26.4639% 23.3918%, 25.3232% 24.7285%, 24.2586% 26.0652%, 23.2700% 27.4018%, 22.3574% 28.7385%, 21.5209% 30.0752%, 20.8365% 31.4119%, 20.1521% 32.7485%, 19.5437% 34.0852%, 19.0114% 35.4219%, 18.4791% 36.7586%, 18.0989% 38.0952%, 17.7947% 39.4319%, 17.4144% 40.7686%, 17.1863% 42.1053%, 17.0342% 43.4419%, 16.8821% 44.7786%, 16.8061% 46.1153%, 16.8061% 47.4520%, 16.8821% 48.7886%, 16.9582% 50.1253%, 17.1863% 51.4620%, 17.4144% 52.7987%, 17.7186% 54.1353%, 18.0228% 55.4720%, 18.4791% 56.8087%, 19.0114% 58.1454%, 19.5437% 59.4820%, 20.2281% 60.8187%, 20.9125% 62.1554%, 21.7490% 63.4921%, 22.6616% 64.8287%, 23.7262% 66.1654%, 24.7909% 67.5021%, 26.0837% 68.8388%, 27.5285% 70.1754%, 29.1255% 71.5121%, 30.9506% 72.8488%, 33.0038% 74.1855%, 35.5894% 75.5221%, 38.8593% 76.8588%, 44.0304% 78.1955%, 48.3650% 79.0309%, 49.9620% 79.0309%, 55.9696% 78.1955%, 61.2167% 76.8588%, 64.4867% 75.5221%, 66.9962% 74.1855%, 69.0494% 72.8488%, 70.8745% 71.5121%, 72.4715% 70.1754%, 73.9163% 68.8388%, 75.1331% 67.5021%, 76.2738% 66.1654%, 77.2624% 64.8287%, 78.2510% 63.4921%, 79.0875% 62.1554%, 79.7719% 60.8187%, 80.4563% 59.4820%, 80.9886% 58.1454%, 81.5209% 56.8087%, 81.9772% 55.4720%, 82.2814% 54.1353%, 82.5856% 52.7987%, 82.8897% 51.4620%, 83.0418% 50.1253%, 83.1179% 48.7886%, 83.1939% 47.4520%, 83.1939% 46.1153%, 83.1179% 44.7786%, 82.9658% 43.4419%, 82.8137% 42.1053%, 82.5856% 40.7686%, 82.2814% 39.4319%, 81.9011% 38.0952%, 81.4449% 36.7586%, 80.9886% 35.4219%, 80.5323% 34.0852%, 79.8479% 32.7485%, 79.1635% 31.4119%, 78.4030% 30.0752%, 77.6426% 28.7385%, 76.7300% 27.4018%, 75.7414% 26.0652%, 74.6768% 24.7285%, 73.5361% 23.3918%, 72.2433% 22.0551%, 70.7985% 20.7185%, 69.1255% 19.3818%, 67.3004% 18.0451%, 65.0190% 16.7084%, 62.3574% 15.3718%, 58.3270% 14.0351%, 51.1787% 12.6149%);
   box-shadow: none;
 }
+/* Scene bounds follow the native alpha opening, with breathing room under the
+   inner chrome. Cover crops photography; neither venue nor emblem is stretched. */
 .page[data-page="home"] .aperture-venue .home-scene-drift {
   inset: auto;
-  left: 9%;
-  top: 3.5%;
-  width: 82%;
-  height: 81%;
-}
-.page[data-page="home"] .home-scene-drift img[data-home-scene] {
-  object-fit: cover;
-  object-position: center 59%;
+  left: 16%;
+  top: 11.5%;
+  width: 68%;
+  height: 69%;
 }
 .page[data-page="home"] .aperture-venue::after {
-  background: linear-gradient(180deg, #00082013, transparent 43%, #00051805);
+  background: linear-gradient(180deg, #00082019, transparent 46%, #0005180e);
   box-shadow: none;
 }
 .page[data-page="home"] .aperture-metal-housing:not(.aperture-crafted-housing),
@@ -49,7 +44,7 @@
   object-fit: contain;
   aspect-ratio: 1315 / 1197;
   transform: none;
-  clip-path: none;
+  clip-path: var(--aperture-physical-clip, none);
   z-index: 3;
   pointer-events: none;
 }
@@ -57,8 +52,8 @@
 .page[data-page="home"][data-home-sport="nba"] .aperture-crafted-half {
   display: block;
   filter: url(#home-metal-light-red);
-  -webkit-mask: linear-gradient(90deg, transparent 49.9%, #000 50.1%);
-  mask: linear-gradient(90deg, transparent 49.9%, #000 50.1%);
+  -webkit-mask: linear-gradient(90deg, transparent 49.6%, #000 50.4%);
+  mask: linear-gradient(90deg, transparent 49.6%, #000 50.4%);
 }
 .page[data-page="home"][data-home-sport="nrl"] .aperture-crafted-housing,
 .page[data-page="home"][data-home-sport="nrl"] .home-metal-reflection-image { filter: url(#home-metal-light-green); }
@@ -73,38 +68,36 @@
   overflow: visible;
   pointer-events: none;
   z-index: 5;
-  /* Emission adds light to the casting. Normal alpha composition dulled the
-     underlying fine ice core by repainting it with saturated blue bloom. */
-  mix-blend-mode: screen;
-  isolation: auto;
+  isolation: isolate;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-track {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 36;
-  opacity: .18;
+  stroke-width: 42;
+  /* Saturated glass/reflection detail stays photographic beneath emission. */
+  opacity: .1;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-bloom {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 53;
-  opacity: .64;
+  stroke-width: 52;
+  opacity: .18;
   filter: url(#home-aperture-bloom);
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-core {
   fill: none;
-  stroke: url(#home-aperture-colour);
-  /* The vector artwork supplies the ice core; this thin sport-tinted layer
-     preserves fixed NBA hues without painting over its luminous surface. */
-  stroke-width: 1.8;
-  opacity: .15;
+  stroke: #abbfff;
+  stroke-width: 1.7;
+  opacity: .3;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-inner-track {
   fill: none;
   stroke: url(#home-aperture-colour);
   stroke-width: 2.2;
-  opacity: .32;
+  opacity: .38;
 }
+/* The photographic toroid defines the outer casting. An extra synthetic edge
+   does not improve its material and must not draw a circular halo or foot. */
 .page[data-page="home"] .aperture-channel-art .aperture-neon-outer-track { display: none; }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-runner {
   fill: none;
@@ -123,34 +116,13 @@
   stroke-dasharray: 10 990;
   opacity: .42;
 }
-/* Reduced official marks expose seating and the playing surface beneath them.
-   Every mark retains object-fit:contain and its unmodified native artwork. */
-.page[data-page="home"] .aperture-league-logo {
-  width: 32%;
-  height: 41%;
-  left: 34%;
-  top: 23.6%;
-  object-fit: contain;
+.page[data-page="home"] .aperture-floor-reflection {
+  left: -2%;
+  right: -2%;
+  height: 30px;
+  bottom: -4px;
+  opacity: .5;
 }
-.page[data-page="home"][data-home-sport="nba"] .aperture-league-logo {
-  width: 28%;
-  height: 37%;
-  left: 36%;
-  top: 25.6%;
-}
-.page[data-page="home"][data-home-sport="nrl"] .aperture-league-logo {
-  width: 32%;
-  height: 40%;
-  left: 34%;
-  top: 24.1%;
-}
-.page[data-page="home"][data-home-sport="ufc"] .aperture-league-logo {
-  width: 43%;
-  height: 21%;
-  left: 28.5%;
-  top: 33.6%;
-}
-.page[data-page="home"] .aperture-floor-reflection { opacity: .5; }
 .page[data-page="home"] .aperture-floor-reflection .home-metal-reflection-image {
   object-fit: contain;
   aspect-ratio: 1315 / 1197;

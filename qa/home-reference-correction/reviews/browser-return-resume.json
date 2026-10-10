@@ -1,0 +1,38 @@
+{
+  "status": "accepted-after-explicit-native-return-supplement",
+  "supersedesImmediateReturnClaim": true,
+  "originalBrowserReview": {
+    "path": "qa/home-reference-correction/reviews/browser.json",
+    "sha256": "9df459f56695b6bffade90292189eb92bf32ea2b3fc8511989a545bfaf0ca61c"
+  },
+  "nativeReturnReport": {
+    "path": "qa/home-reference-correction/webkit-return-repro/results.json",
+    "sha256": "36286c38fde4f20b7d65debcd69a43734529abb6ef7929453a93b1f6754f37fb"
+  },
+  "strictIndependentResumeAcceptance": {
+    "path": "qa/home-reference-correction/webkit-return-repro/resume-acceptance.json",
+    "sha256": "4bd4be4a469573b4770ab5908637f1a4a4423ff7d140f6fd3562dc84c699f9f5"
+  },
+  "sourceUnchanged": true,
+  "sourceFiles": {
+    "index.html": "aa0abef7e296b2206196f324ec38487c85a4b39a2b4dddac48867b0cd666f313",
+    "assets/home-aperture.css": "7ab94eb0219f24947fd1432dde46c12687742e56f40f43a248f5c31c6222d25c",
+    "assets/home-gem-controls.css": "22810aed986a477032aaf9107c594258346cddbc71551d4943111adf274e840f",
+    "assets/home-gem-layout.css": "474b744b8000e62107de14958449efada4a9bf9bfe7d8027aa799045a335a30b",
+    "assets/home-aperture-motion.css": "cade489bfd2842d291dbf4cbcd5cbe72eb4a20a990365e7874a0bd8b8670fc0e",
+    "assets/home-brand-lighting.css": "adf79e188bc2d47aa0be2b594f9a8ba097c7c556505b57e6ff24dfa6c76be2e3",
+    "assets/home-aperture-motion.js": "eaf7f8a1425b1d059fb06b8ffd8e61532dab1d7ce485a308bef8b9b2cd9c0425",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-refined.webp": "65643cc07a3083f74350478a3aae38b31fde489db8ca0306a8924d1b1de2b257",
+    "assets/home/gem-atlas.webp": "6424dc2be0c30232ea6cf2ff1bfffca169502d914719606a8aaa0ff6313f4685",
+    "assets/home/gate-brand.webp": "4429d43db6365ffe1e070fcb175a6eb0a452a5c4a3cbfcf165a0ac0206d01937",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "finding": "WebKit immediate returned CSS clocks were paused at0ms, so the original conditional comparison did not establish resumed motion. Fresh actual native return evidence verifies all161 clocks naturally running and advancing, plus naturally changed original viewport frames after settling on both phones. First verified running samples were896ms and1126ms after the immediate sample; requested100ms labels are not wall-time guarantees. No code/browser/DOM/CSS/clock/response changes were needed.",
+  "retainedPhaseClaim": false,
+  "physicalIPhoneOrFPSClaim": false,
+  "existingVisualVerdictUnchanged": "All8 final WebKit phone/sport originals were directly viewed; continuous chrome/venue/atlas gem/glass selectors/brand and precise mobile controls remain accepted. This additive supplement resolves the previously insufficient return-motion gate."
+}

@@ -1,0 +1,289 @@
+{
+  "status": "passed",
+  "sourceReportSha256": "ee648e9735174583d5bed9e48ac536a30dd950813d52bca01503df7c2dcfac94",
+  "engine": "chromium",
+  "readOnlyAnalysis": true,
+  "qualification": "Pixel differences are measured on region crops in memory from original untouched natural viewport screenshots. No images are edited or saved, and no DOM, CSS, animation clocks or responses are substituted. A region contains its genuine background; this proves changed regional paint, not animation of every individual diamond or a physical-device frame rate.",
+  "results": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "pair": [
+        "home-nfl-393x852-motion-a.png",
+        "home-nfl-393x852-motion-b.png"
+      ],
+      "regions": {
+        "ringAndField": {
+          "nativeRect": {
+            "x": 0,
+            "y": 153.546875,
+            "width": 393,
+            "height": 357.734375,
+            "right": 393,
+            "bottom": 511.28125
+          },
+          "pixelBounds": [
+            0,
+            307,
+            786,
+            1023
+          ],
+          "pixels": 562776,
+          "changedPixelsOver1RGB": 106799,
+          "changedFractionOver1RGB": 0.1897717742050123,
+          "changedPixelsOver10RGB": 23484,
+          "maxRGBChange": 255,
+          "meanChannelChange": [
+            2.92419186319246,
+            3.2392070735070435,
+            2.8551537378992706
+          ],
+          "changedBoundsWithinRegion": [
+            3,
+            22,
+            786,
+            716
+          ]
+        },
+        "gemstoneEnter": {
+          "nativeRect": {
+            "x": 16,
+            "y": 523.28125,
+            "width": 361,
+            "height": 60,
+            "right": 377,
+            "bottom": 583.28125
+          },
+          "pixelBounds": [
+            32,
+            1046,
+            754,
+            1167
+          ],
+          "pixels": 87362,
+          "changedPixelsOver1RGB": 20,
+          "changedFractionOver1RGB": 0.00022893248780934502,
+          "changedPixelsOver10RGB": 0,
+          "maxRGBChange": 2,
+          "meanChannelChange": [
+            0.0014995077951512098,
+            0.004189464526911014,
+            0.0058263318147478305
+          ],
+          "changedBoundsWithinRegion": [
+            0,
+            0,
+            722,
+            121
+          ]
+        },
+        "selectorPerimeters": {
+          "nativeRect": {
+            "x": 12,
+            "y": 589.28125,
+            "width": 369,
+            "height": 74,
+            "right": 381,
+            "bottom": 663.28125
+          },
+          "pixelBounds": [
+            24,
+            1178,
+            762,
+            1327
+          ],
+          "pixels": 109962,
+          "changedPixelsOver1RGB": 2782,
+          "changedFractionOver1RGB": 0.02529964896964406,
+          "changedPixelsOver10RGB": 2312,
+          "maxRGBChange": 234,
+          "meanChannelChange": [
+            0.8385624124697623,
+            0.7954020479802113,
+            0.9367872537785781
+          ],
+          "changedBoundsWithinRegion": [
+            0,
+            0,
+            738,
+            149
+          ]
+        },
+        "brandLighting": {
+          "nativeRect": {
+            "x": 37.828125,
+            "y": 10,
+            "width": 317.328125,
+            "height": 122.15625,
+            "right": 355.15625,
+            "bottom": 132.15625
+          },
+          "pixelBounds": [
+            75,
+            20,
+            711,
+            265
+          ],
+          "pixels": 155820,
+          "changedPixelsOver1RGB": 5681,
+          "changedFractionOver1RGB": 0.0364587344371711,
+          "changedPixelsOver10RGB": 221,
+          "maxRGBChange": 101,
+          "meanChannelChange": [
+            0.06229623925041715,
+            0.11553715825953023,
+            0.20338852522140932
+          ],
+          "changedBoundsWithinRegion": [
+            29,
+            26,
+            467,
+            216
+          ]
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "pair": [
+        "home-nfl-430x896-motion-a.png",
+        "home-nfl-430x896-motion-b.png"
+      ],
+      "regions": {
+        "ringAndField": {
+          "nativeRect": {
+            "x": 0,
+            "y": 165.8125,
+            "width": 430,
+            "height": 391.40625,
+            "right": 430,
+            "bottom": 557.21875
+          },
+          "pixelBounds": [
+            0,
+            331,
+            860,
+            1115
+          ],
+          "pixels": 674240,
+          "changedPixelsOver1RGB": 110926,
+          "changedFractionOver1RGB": 0.16452005220692928,
+          "changedPixelsOver10RGB": 11977,
+          "maxRGBChange": 108,
+          "meanChannelChange": [
+            0.7478998576174656,
+            0.7171659943046986,
+            0.6873665163739915
+          ],
+          "changedBoundsWithinRegion": [
+            3,
+            16,
+            860,
+            784
+          ]
+        },
+        "gemstoneEnter": {
+          "nativeRect": {
+            "x": 16,
+            "y": 569.21875,
+            "width": 398,
+            "height": 60,
+            "right": 414,
+            "bottom": 629.21875
+          },
+          "pixelBounds": [
+            32,
+            1138,
+            828,
+            1259
+          ],
+          "pixels": 96316,
+          "changedPixelsOver1RGB": 3241,
+          "changedFractionOver1RGB": 0.03364965322480169,
+          "changedPixelsOver10RGB": 1265,
+          "maxRGBChange": 195,
+          "meanChannelChange": [
+            0.5087939698492462,
+            0.42994933344407993,
+            0.17344989409859213
+          ],
+          "changedBoundsWithinRegion": [
+            0,
+            0,
+            796,
+            121
+          ]
+        },
+        "selectorPerimeters": {
+          "nativeRect": {
+            "x": 12,
+            "y": 635.21875,
+            "width": 406,
+            "height": 74,
+            "right": 418,
+            "bottom": 709.21875
+          },
+          "pixelBounds": [
+            24,
+            1270,
+            836,
+            1419
+          ],
+          "pixels": 120988,
+          "changedPixelsOver1RGB": 2667,
+          "changedFractionOver1RGB": 0.022043508447118724,
+          "changedPixelsOver10RGB": 2331,
+          "maxRGBChange": 235,
+          "meanChannelChange": [
+            0.7487354117763745,
+            0.7466690911495355,
+            0.84922471650081
+          ],
+          "changedBoundsWithinRegion": [
+            0,
+            0,
+            812,
+            149
+          ]
+        },
+        "brandLighting": {
+          "nativeRect": {
+            "x": 40.421875,
+            "y": 10,
+            "width": 349.15625,
+            "height": 134.421875,
+            "right": 389.578125,
+            "bottom": 144.421875
+          },
+          "pixelBounds": [
+            80,
+            20,
+            780,
+            289
+          ],
+          "pixels": 188300,
+          "changedPixelsOver1RGB": 6938,
+          "changedFractionOver1RGB": 0.03684545937334041,
+          "changedPixelsOver10RGB": 391,
+          "maxRGBChange": 128,
+          "meanChannelChange": [
+            0.07469463621879979,
+            0.1331279872543813,
+            0.23050451407328731
+          ],
+          "changedBoundsWithinRegion": [
+            31,
+            29,
+            513,
+            238
+          ]
+        }
+      }
+    }
+  ]
+}

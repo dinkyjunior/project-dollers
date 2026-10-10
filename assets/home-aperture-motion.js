@@ -237,7 +237,7 @@
   const entry = home.querySelector('[data-home-entry]');
   if (entry) {
     // The original native CTA and its accessible label/navigation are intact.
-    // The gemstone stylesheet turns these existing wrappers into clear caps.
+    // The photographic gemstone atlas remains underneath these small glints.
     for (const [index, side] of ['left', 'right'].entries()) {
       let cap = entry.querySelector('.home-entry-diamond.is-' + side);
       if (!cap) {
@@ -250,8 +250,8 @@
         // These points follow the white specular hits and cut intersections
         // in the native jewel endcaps, leaving the dark centre text clear.
         const facets = side === 'left'
-          ? [[38, 4], [19, 34], [82, 75]]
-          : [[62, 4], [81, 34], [18, 75]];
+          ? [[57, 10], [19, 72], [77, 48]]
+          : [[43, 16], [81, 76], [23, 52]];
         facets.forEach(([x, y], ordinal) => {
           addGlint(cap, x, y, 'cap', index * 3 + ordinal);
         });
@@ -267,9 +267,18 @@
       }
     }
     if (!entry.querySelector('.home-gem-glint-edge')) {
-      addGlint(entry, 24, 15, 'edge', 7);
-      addGlint(entry, 78, 85, 'edge', 8);
+      addGlint(entry, 24, 4, 'edge', 7);
+      addGlint(entry, 78, 94, 'edge', 8);
     }
+  }
+
+  const gate = home.querySelector('.aperture-gate');
+  if (gate && !gate.querySelector('.home-gem-glint-ring')) {
+    // These points belong to the restored photographic casting's outer metal.
+    // The entrance scene and emblem remain clear of synthetic glints.
+    [[14, 30], [86, 30], [32, 94], [68, 94]].forEach(([x, y], index) => {
+      addGlint(gate, x, y, 'ring', 10 + index);
+    });
   }
 
   // Measure only at native layout events. Resizing a viewport or returning to

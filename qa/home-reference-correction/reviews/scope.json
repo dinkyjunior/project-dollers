@@ -1,0 +1,86 @@
+{
+  "status": "passed-read-only-final-candidate-scope",
+  "reviewedAtUTC": "2026-10-10T00:51:56.471825+00:00",
+  "head": "bf3a3bc732d66a21face990456ee5f21543d4aa9",
+  "comparisonBase": "bf3a3bc732d66a21face990456ee5f21543d4aa9",
+  "changedHomeFiles": [
+    {
+      "path": "assets/home-aperture-motion.css",
+      "sha256": "cade489bfd2842d291dbf4cbcd5cbe72eb4a20a990365e7874a0bd8b8670fc0e",
+      "bytes": 6211
+    },
+    {
+      "path": "assets/home-aperture-motion.js",
+      "sha256": "eaf7f8a1425b1d059fb06b8ffd8e61532dab1d7ce485a308bef8b9b2cd9c0425",
+      "bytes": 15961
+    },
+    {
+      "path": "assets/home-aperture.css",
+      "sha256": "7ab94eb0219f24947fd1432dde46c12687742e56f40f43a248f5c31c6222d25c",
+      "bytes": 6458
+    },
+    {
+      "path": "assets/home-gem-controls.css",
+      "sha256": "22810aed986a477032aaf9107c594258346cddbc71551d4943111adf274e840f",
+      "bytes": 9333
+    },
+    {
+      "path": "assets/home-gem-layout.css",
+      "sha256": "474b744b8000e62107de14958449efada4a9bf9bfe7d8027aa799045a335a30b",
+      "bytes": 5277
+    },
+    {
+      "path": "index.html",
+      "sha256": "aa0abef7e296b2206196f324ec38487c85a4b39a2b4dddac48867b0cd666f313",
+      "bytes": 33902
+    }
+  ],
+  "newArtworkFiles": [
+    {
+      "path": "assets/home/aperture-refined.webp",
+      "bytes": 307862,
+      "sha256": "65643cc07a3083f74350478a3aae38b31fde489db8ca0306a8924d1b1de2b257"
+    },
+    {
+      "path": "reference/home-refined-chrome-master.png",
+      "bytes": 1379542,
+      "sha256": "c1d13d6dd57ba2d59910fcac699ae77c69ce2c01adfc5e227b852906b981550b"
+    },
+    {
+      "path": "reference/HOME_REFINED_CHROME_PROVENANCE.json",
+      "bytes": 2631,
+      "sha256": "42ea40efda8405f4047ac9471cac85325c72b302048739098f90388f88e8a436"
+    }
+  ],
+  "protectedGroups": {
+    "allProtectedTrackedFiles": 5072,
+    "dataFiles": 7,
+    "sourceWorkflows": 2,
+    "savedBackupFiles": 24,
+    "coldRoutePNGs": 20
+  },
+  "allOtherTrackedFilesExactToBase": true,
+  "scopeMethod": "Full git diff vs fixed source head contains exactly six allowed Home files. Earlier per-file SHA audit of all5072 protected files bound this same source head; key cold-route PNGs and original Home materials independently compared again. New untracked QA captures/evidence are outside runtime and are not relabelled as prior records.",
+  "protectedResearchHTMLSuffixSHA256": "6de9aa6b254285e4c908ed3509fb3b37a83c4112ad2140fcda93de8cf5774b1a",
+  "homeNavRemoved": true,
+  "iconOnlySportSelectors": true,
+  "noInherited68pxNavReserve": true,
+  "brandLightingRetained": true,
+  "newArtworkNativeDimensions": [
+    1315,
+    1197
+  ],
+  "newArtworkAlphaIdenticalToSavedMaster": true,
+  "rejectedSVGFilesAndPriorBackupPreserved": true,
+  "provenanceQualification": "User four-sport 1303\u00d7571 chat attachment; original binary unavailable. Generated material is implementation artwork, not the approved source.",
+  "materialGeometryQualification": true,
+  "priorCLIReceipt": {
+    "path": "/workspace/recovery-qa/home-restore-candidate-scope-audit.json",
+    "sha256": "90c4b8d2681b27d2d932dad28de34d7ef10e472dc249fb65bed7b56f2799d74e",
+    "reuseReason": "Saved current data, research controllers and source builders unchanged from previously passing seven isolated CLI checks. No test repeated unnecessarily.",
+    "limits": "Team integrity fixture11tests includes1raw-cache arithmetic skip; npm test not run because actual Playwright is browser-owned."
+  },
+  "browserOrProviderCallsMade": false,
+  "repositoryEditsMadeByAudit": false,
+  "decisionLimit": "Scope/source/provenance integrity only; actual native render review and deployment checks pending."
+}
