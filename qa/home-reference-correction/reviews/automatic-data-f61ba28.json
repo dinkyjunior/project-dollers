@@ -1,0 +1,383 @@
+{
+  "status": "accepted-data-only-delta-with-factual-qualifications",
+  "reviewedAtUTC": "2026-10-10T01:30:59.903591+00:00",
+  "baseApplicationCommit": "5e8e1f1d3918dc8432a88cb2ba690a809a748d61",
+  "automaticDataCommit": "f61ba289a49425a5e9dbe4bf3f94948a60140f0d",
+  "parentIsPublishedApplicationCommit": true,
+  "changedFiles": [
+    {
+      "path": "assets/data/current.json",
+      "beforeSHA256": "845a55266df48404bb5ac81001045e3d613fc96a4cddcf1c38e49807c76c419d",
+      "afterSHA256": "da9a2edf38738d698e85ffe7dea1656d46e3b79023b0359d0be0bb8c1b343db4",
+      "afterBytes": 1085437,
+      "recursiveLeafOperations": 366,
+      "leafFieldCounts": {
+        "refreshAfter": 1,
+        "checkedAt": 91,
+        "generatedAt": 2,
+        "nflverse_games": 1,
+        "sha256": 5,
+        "retrievedAt": 104,
+        "espn_steelers_roster": 80,
+        "official_steelers_roster": 80,
+        "espn_athlete_4431424": 1,
+        "etag": 1
+      }
+    },
+    {
+      "path": "assets/data/matchup-breakdown.json",
+      "beforeSHA256": "8e769008a2633cc4f41c21a85bc9d518c15e18603ea0e9be563a853bf82bc244",
+      "afterSHA256": "9c9dbf7aa6415769cd1fdefc5e74941d5c94c234cb6cd4330a1aadfaae0e4295",
+      "afterBytes": 28048530,
+      "recursiveLeafOperations": 20793,
+      "leafFieldCounts": {
+        "gameId": 23,
+        "playerId": 92,
+        "retrievedAt": 19651,
+        "sha256": 405,
+        "currentRetrievedAt": 1,
+        "currentSha256": 1,
+        "teamDetailsRetrievedAt": 1,
+        "teamDetailsSha256": 1,
+        "generatedAt": 1,
+        "etag": 2,
+        "bytes": 23,
+        "reportStatus": 23,
+        "sourceTimestamp": 252,
+        "espnId": 45,
+        "injury": 58,
+        "name": 70,
+        "position": 67,
+        "practiceStatus": 8,
+        "1": 22,
+        "0": 40,
+        "weeklyReport": 7
+      }
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "beforeSHA256": "8fe65174aaa946a632b41081b4b0f8daccd5a7f872f0f3dfc182b559ea000c33",
+      "afterSHA256": "03e27bfebb7e2188b6e073dcc5a1d44553c576883829a4415bf9813c0a19ed0a",
+      "afterBytes": 7108758,
+      "recursiveLeafOperations": 1417,
+      "leafFieldCounts": {
+        "nflverse_games": 1,
+        "generatedAt": 1,
+        "scheduleRetrievedAt": 1273,
+        "retrievedAt": 140,
+        "etag": 1,
+        "sha256": 1
+      }
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "beforeSHA256": "15d6e1580aaa21427398a54f48b3a0fc19d7a2d7c5b46b79708a73b5d88a02cc",
+      "afterSHA256": "4864527bf04c425533e366d66ef92fb7edc481cb894ef087005e40eff83ac1dd",
+      "afterBytes": 33508,
+      "recursiveLeafOperations": 29,
+      "leafFieldCounts": {
+        "generatedAt": 1,
+        "playerHistorySha256": 1,
+        "retrievedAt": 10,
+        "snapshotSha256CanonicalJson": 1,
+        "etag": 1,
+        "sha256": 4,
+        "checkedAt": 11
+      }
+    },
+    {
+      "path": "assets/data/team-details.json",
+      "beforeSHA256": "cebfb08ca05699d0524258525794877c169777d7a5c66637447c189d3ac3802a",
+      "afterSHA256": "99387af311531794bbd3628ce287c592d221aca144357cc6e26673da6dba20c7",
+      "afterBytes": 2292695,
+      "recursiveLeafOperations": 69,
+      "leafFieldCounts": {
+        "generatedAt": 1,
+        "retrievedAt": 34,
+        "etag": 1,
+        "sha256": 26,
+        "bytes": 7
+      }
+    }
+  ],
+  "onlyFiveSourceBooksChanged": true,
+  "homeAll15BodiesPreservedByDataCommit": true,
+  "nonDataCodeAssetsWorkflowsTestsAndHistoricalQAExact": true,
+  "factComparison": {
+    "currentSnapshot": "All values equivalent after explicit retrieval/hash/cache-source metadata removal; roster/standings/stats/records/schedule unchanged.",
+    "playerHistory": "All1273 historical game rows and factual values unchanged; retrieval/source hashes advance.",
+    "teamDetails": "All team schedules/results/records/metrics unchanged; retrieval/source hashes advance.",
+    "provenance": "Metadata and canonical dependent checksums only.",
+    "matchupBreakdown": "No schedule, score, odds, player statistical value, QB role/projection or global roster transaction changes. Exactly15 identity-normalized nonmetadata operations, all confined to eight partial availability-list/bulletin changes below.",
+    "retainedFactualStatusChanges": 1,
+    "previewListChanges": [
+      {
+        "team": "CHI",
+        "gameId": "2026_05_CHI_GB",
+        "list": "players",
+        "added": [],
+        "removed": [],
+        "retainedPlayerChanges": [
+          {
+            "id": "00-0038411",
+            "name": "Anthony Johnson Jr.",
+            "changedFields": {
+              "reportStatus": {
+                "before": "Injured Reserve",
+                "after": "Out"
+              }
+            }
+          }
+        ],
+        "orderChanged": false
+      },
+      {
+        "team": "CLE",
+        "gameId": "2026_05_CLE_NYJ",
+        "list": "players",
+        "added": [
+          {
+            "id": "00-0040704",
+            "name": "Dillon Gabriel",
+            "reportStatus": "Injured Reserve",
+            "injury": "Back"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0036953",
+            "name": "Teven Jenkins",
+            "reportStatus": "Out",
+            "injury": "Back"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "LAC",
+        "gameId": "2026_06_LAC_KC",
+        "list": "currentTeamBulletin",
+        "added": [
+          {
+            "id": "00-0041550",
+            "name": "Brenen Thompson",
+            "reportStatus": "Out",
+            "injury": "Quadriceps"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0041381",
+            "name": "Rodney Shelley",
+            "reportStatus": "Questionable",
+            "injury": "Hamstring"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "LAC",
+        "gameId": "2026_05_DEN_LAC",
+        "list": "players",
+        "added": [
+          {
+            "id": "00-0041550",
+            "name": "Brenen Thompson",
+            "reportStatus": "Out",
+            "injury": "Quadriceps"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0041381",
+            "name": "Rodney Shelley",
+            "reportStatus": "Questionable",
+            "injury": "Hamstring"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "NYJ",
+        "gameId": "2026_05_CLE_NYJ",
+        "list": "players",
+        "added": [
+          {
+            "id": "00-0037083",
+            "name": "Kingsley Enagbare",
+            "reportStatus": "Questionable",
+            "injury": "Knee"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0038120",
+            "name": "Breece Hall",
+            "reportStatus": "Out",
+            "injury": "Quadriceps"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "PHI",
+        "gameId": "2026_06_CAR_PHI",
+        "list": "currentTeamBulletin",
+        "added": [
+          {
+            "id": "00-0035662",
+            "name": "Hollywood Brown",
+            "reportStatus": "Out",
+            "injury": "Ankle"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0034844",
+            "name": "Saquon Barkley",
+            "reportStatus": "Out",
+            "injury": "Hamstring"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "PHI",
+        "gameId": "2026_05_PHI_JAX",
+        "list": "players",
+        "added": [
+          {
+            "id": "00-0035662",
+            "name": "Hollywood Brown",
+            "reportStatus": "Out",
+            "injury": "Ankle"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0034844",
+            "name": "Saquon Barkley",
+            "reportStatus": "Out",
+            "injury": "Hamstring"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      },
+      {
+        "team": "WAS",
+        "gameId": "2026_05_NYG_WAS",
+        "list": "players",
+        "added": [
+          {
+            "id": "00-0033955",
+            "name": "Jeremy McNichols",
+            "reportStatus": "Injured Reserve",
+            "injury": "Quadriceps"
+          }
+        ],
+        "removed": [
+          {
+            "id": "00-0031588",
+            "name": "Stefon Diggs",
+            "reportStatus": "Out",
+            "injury": "Hamstring"
+          }
+        ],
+        "retainedPlayerChanges": [],
+        "orderChanged": true
+      }
+    ],
+    "partialListQualification": "Added/removed entries belong to limited provider preview lists, not full injury reports or team roster transactions. Absence does not establish healthy, active or eligibility. Upcoming currentTeamBulletin remains a dated team bulletin, not confirmed next-week availability.",
+    "orderOnlyAvailabilityLists": [
+      {
+        "team": "DET",
+        "gameId": "2026_05_DET_ARI",
+        "list": "players"
+      },
+      {
+        "team": "GB",
+        "gameId": "2026_06_DAL_GB",
+        "list": "currentTeamBulletin"
+      },
+      {
+        "team": "GB",
+        "gameId": "2026_05_CHI_GB",
+        "list": "players"
+      },
+      {
+        "team": "NYG",
+        "gameId": "2026_05_NYG_WAS",
+        "list": "players"
+      }
+    ],
+    "startingQBMissingStatistics": {
+      "count": 25,
+      "sameMultiset": true,
+      "orderChanged": true
+    },
+    "sourceAliasChanges": {
+      "references": 62,
+      "before": "espn_fixture_summary_401872980",
+      "after": "espn_matchup_summary_401872980",
+      "sameURL": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "qualification": "Both refer to same Dallas\u2013Tampa Bay event. Prefix changes are provenance selection; no statistic changed. Raw response hashes differ across fetches; no claim of identical raw upstream body."
+    }
+  },
+  "normalizationExcludedFields": [
+    "bytes",
+    "checkedAt",
+    "currentRetrievedAt",
+    "currentSha256",
+    "currentSourceHashes",
+    "etag",
+    "generatedAt",
+    "playerHistorySha256",
+    "refreshAfter",
+    "retrievedAt",
+    "scheduleRetrievedAt",
+    "sha256",
+    "snapshotSha256CanonicalJson",
+    "sourceHashes",
+    "sourceTimestamp",
+    "teamDetailsRetrievedAt",
+    "teamDetailsSha256"
+  ],
+  "checks": [
+    {
+      "command": "python3 scripts/refresh-data.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "receiptSHA256": "61a06783f553b0d786da2233c3673aaa438f23d4bfa13f7df0a9bf63084b07c4",
+      "outsideGitReceipt": "/workspace/recovery-qa/home-reference-correction-f61-data-check.json",
+      "qualification": "Saved source-integrity/dependency validation, not fresh upstream verification."
+    },
+    {
+      "command": "python3 scripts/refresh-team-details.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "receiptSHA256": "f3b12489291d799b75976b4789a14b117a8421cce1643d4bfe0a0836e8c570fe",
+      "outsideGitReceipt": "/workspace/recovery-qa/home-reference-correction-f61-team-check.json",
+      "qualification": "Saved source-integrity/dependency validation, not fresh upstream verification."
+    },
+    {
+      "command": "python3 scripts/refresh-matchup-breakdown.py --check",
+      "exitCode": 0,
+      "status": "passed",
+      "receiptSHA256": "6da95530ce330a91c978f1fabdfb2b3fb50404294d4aafda61bc4e4974064428",
+      "outsideGitReceipt": "/workspace/recovery-qa/home-reference-correction-f61-matchup-check.json",
+      "qualification": "Saved source-integrity/dependency validation, not fresh upstream verification."
+    }
+  ],
+  "upstreamQualification": "This independent audit compared committed source books, source declaration URLs and saved integrity rules. No provider calls made; exact original newly fetched response replay and cross-provider confirmation are not claimed. Reported injury change remains source-reported, not independently medically or eligibility certified.",
+  "immutableOriginalEvidencePreserved": true,
+  "browserOrProviderCallsMade": false,
+  "runtimeFilesEditedByAuditor": false,
+  "deploymentClaim": null,
+  "nextHostedCheck": "Root-owned targeted strict-HTTPS current-book identity/hash check after actual new Pages success; previously executed full Home browser snapshots remain bound to original5e8 source and are not relabelled."
+}
