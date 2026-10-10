@@ -1,0 +1,169 @@
+{
+  "status": "accepted-with-timing-qualification",
+  "reviewer": "home_motion_review",
+  "reviewedAt": "2026-10-10T01:24:59.078247+00:00",
+  "scope": "Independent read-only hosted Home reduced-motion restoration and route-return review; no app/controller/helper/browser edits.",
+  "evidence": {
+    "preserved_failure": {
+      "file": "qa/home-reference-correction/hosted-webkit-attempt1-reduced-resume/results.json",
+      "sha256": "bfd9bc766f376de9034e882b8716014191fb893b07b4805cbafe2d89fc2ffcc8"
+    },
+    "focused_trace": {
+      "file": "qa/home-reference-correction/hosted-reduced-motion-repro/results.json",
+      "sha256": "32e747c5177896658c0c7e4474a9b953125e320b37cf4c0ae5534a75fdca5f2f"
+    },
+    "final_hosted_report": {
+      "file": "qa/home-reference-correction/hosted-webkit/results.json",
+      "sha256": "a2b5551610550cc01c509623b64a2e9c03b493ab4cf2d170298b1691038411ef"
+    },
+    "final_executed_helper": {
+      "file": "qa/home-reference-correction/hosted-webkit/executed-helper.cjs",
+      "sha256": "a738a123afc51b4100682f46b95590aa978faa00e169fb9f22a299d911bf4a6b"
+    },
+    "immutable_local_motion_review": {
+      "file": "qa/home-reference-correction/reviews/motion.json",
+      "sha256": "5f3a2bc6204f2ee2ff6c17f6524c4b7cd4dff86e195ec0a17d4081395ca2a312"
+    }
+  },
+  "hostedURL": "https://dinkyjunior.github.io/project-dollers/",
+  "strictTLS": true,
+  "browser": "26.0",
+  "sourceFilesStable": 15,
+  "exactHTTP200ServedBodies": 22,
+  "viewports": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "nativeClocksRunningAndAdvancing": 161,
+      "restorationObservedAfterMs": 462,
+      "minimumRestoredClockAdvanceMs": 10753,
+      "minimumReturnedClockAdvanceMs": 8853,
+      "visibleOriginals": [
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-393x852-reduced.png",
+          "sha256": "2a3d5336abc9ccde983fdab43447bde3e345b9acd783787bf3e84720f3c91766",
+          "distinctRGB": 373367,
+          "directlyViewed": false
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-393x852-reduced-restored-a.png",
+          "sha256": "ef723fc43fbf8617fb174c0c16769bc2aaca90fcd1ea7d5b6daa9a754639514a",
+          "distinctRGB": 373246,
+          "directlyViewed": true
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-393x852-reduced-restored-b.png",
+          "sha256": "eff42fd98f511e229e8bd4ecad81a50a59beb7c8947a3188a3d9fb9afc0d2e27",
+          "distinctRGB": 374777,
+          "directlyViewed": true
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-393x852-return-a.png",
+          "sha256": "4d0c4ec4854d09e1f19492662d0db18d5c2ed0fbd0cee85ee283b5d2fc3e69db",
+          "distinctRGB": 375130,
+          "directlyViewed": false
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-393x852-return-b.png",
+          "sha256": "dbffa7c38f2889bed76f8c4e50b92005daa818adcafb8ae5ac3a9a9565317c2f",
+          "distinctRGB": 374666,
+          "directlyViewed": false
+        }
+      ],
+      "restoredPairChangedFractionByRegion": {
+        "brand": 0.101685,
+        "gate": 0.314153,
+        "entry": 0.088343,
+        "dock": 0.1379
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "nativeClocksRunningAndAdvancing": 161,
+      "restorationObservedAfterMs": 373.0,
+      "minimumRestoredClockAdvanceMs": 10600,
+      "minimumReturnedClockAdvanceMs": 10752,
+      "visibleOriginals": [
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-430x896-reduced.png",
+          "sha256": "f6faca3d2928d53ead76fd9056922e3f3181e329901cecf6369cb1e4e966f12f",
+          "distinctRGB": 413672,
+          "directlyViewed": false
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-430x896-reduced-restored-a.png",
+          "sha256": "cfc8f1f3e9e0d46b7004929e85f62c167579b890b9ee389296e1a9a489409e54",
+          "distinctRGB": 413372,
+          "directlyViewed": true
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-430x896-reduced-restored-b.png",
+          "sha256": "0669102a28d263e0a1a1e6cec07c9dbbda16d284257ba947b90e81cea9a75e45",
+          "distinctRGB": 415787,
+          "directlyViewed": true
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-430x896-return-a.png",
+          "sha256": "b48b8a01a29e4ba744dd327853434d906886312b801c7bed05a2adcbaf51f111",
+          "distinctRGB": 415330,
+          "directlyViewed": false
+        },
+        {
+          "file": "qa/home-reference-correction/hosted-webkit/home-nfl-430x896-return-b.png",
+          "sha256": "362069297c65288239cc7f4b7fa4a70de9f504eff5d089ae78b667605803bbcb",
+          "distinctRGB": 414600,
+          "directlyViewed": false
+        }
+      ],
+      "restoredPairChangedFractionByRegion": {
+        "brand": 0.101894,
+        "gate": 0.314561,
+        "entry": 0.030758,
+        "dock": 0.12133
+      }
+    }
+  ],
+  "preservedFocusedTrace": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "firstThreeBlankPaintsIdenticalSha256": "6eb6d5a9c07c4622cadc996dd8d215f8cfd2dab6efad638204119ba9fee5df39",
+      "firstThreeBlankPaintBytes": 8824,
+      "eventualFirstObservedRunning": {
+        "sample": "paint-2000",
+        "observation": "before",
+        "elapsedMs": 3058
+      }
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "firstThreeBlankPaintsIdenticalSha256": "531898a72ef3fa979cd9bdb04483aa20713ab8efa3547928785f9f8de9a10ce7",
+      "firstThreeBlankPaintBytes": 9925,
+      "eventualFirstObservedRunning": {
+        "sample": "paint-2000",
+        "observation": "after",
+        "elapsedMs": 6040.0
+      }
+    }
+  ],
+  "diagnosis": "The fixed 260 ms assertion sampled a genuinely paused WPE state after native media emulation. The focused trace naturally reached running clocks without controller/event/style/clock substitutions. Its first three paints were blank and are retained; their blank-to-visible difference is excluded as motion proof. The fresh bounded suite independently proves two fully visible restored originals with all 161 native clocks advancing on both phones.",
+  "sourceAssessment": "Existing controller uses the genuine MediaQueryList change listener and route/visibility/intersection state. Data remained reduced while fresh matchMedia was false in the delayed trace. Precise callback/finite page-in cause remains uninstrumented and unproven; current evidence does not justify changing the controller.",
+  "visualAssessment": "Directly viewed both genuine hosted restored A/B pairs. Continuous photographic chrome, sapphire lane, local stadium, dense gem face, brand material and four icon-only glass selectors remain visible; travelling lane and selector light locations change naturally with no large unmatched rods.",
+  "limits": [
+    "Observed times include native WPE emulation and tool/paint overhead; they are not physical iPhone latency guarantees.",
+    "Inactive routes cancel native CSS objects; no retained animation phase, no-restart or immediate-resume certificate.",
+    "No physical iPhone FPS test or registered pixel-identical chat-reference comparison."
+  ],
+  "appChangesRequired": false,
+  "priorEvidencePreserved": true
+}
