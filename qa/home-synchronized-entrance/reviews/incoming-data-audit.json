@@ -1,0 +1,3247 @@
+{
+  "schemaVersion": 1,
+  "status": "static-incoming-git-comparison-complete",
+  "generatedAt": "2026-10-10T06:56:31.839655+00:00",
+  "repository": "/workspace/project-dollers",
+  "baseRevision": "66426461535fb8a51994c4c871bea765c7b936ed",
+  "incomingRevision": "5b76ab8f07798d594db4586330f277898e757bf0",
+  "instructionsRead": "AGENTS.md",
+  "scope": "Read-only fixed-revision audit; only this review receipt is written. No browser, validator, provider request, fetch, checkout or application edit performed.",
+  "changedBounds": [
+    {
+      "path": "assets/data/current.json",
+      "before": {
+        "bytes": 1085437,
+        "sha256": "10febe54019d962c2c0dd0e94fe4f4f2b8291c9d42cb28c330d37245ff56cfef",
+        "gitBlob": "8c6e66f6525796c69b1b28573dd9e15e83ca041a"
+      },
+      "after": {
+        "bytes": 1082076,
+        "sha256": "701d94d2f05c2f733f93ae74c231088a1d3388ad677531e02a8c522ac7f44e62",
+        "gitBlob": "9f9e6b1601106e914f88d21c4fee81b6dfc0c6d2"
+      },
+      "changedTopLevelFields": [
+        "context",
+        "disagreements",
+        "generatedAt",
+        "playerHistory",
+        "provenance",
+        "retrievedAt",
+        "roster",
+        "sources",
+        "steelers"
+      ],
+      "unchangedTopLevelFields": [
+        "currentWeek",
+        "schemaVersion",
+        "season",
+        "teamNames",
+        "teams",
+        "throughWeek",
+        "unavailable",
+        "weeks"
+      ]
+    },
+    {
+      "path": "assets/data/matchup-breakdown.json",
+      "before": {
+        "bytes": 28048694,
+        "sha256": "bc04682c475b0940e56fa8542a698f3598d0b5770cc47f6108377b830a224ba8",
+        "gitBlob": "26cde4c102bad236130ccb1255150a3865b207f7"
+      },
+      "after": {
+        "bytes": 27935615,
+        "sha256": "43d19d7b245edebea0c6bbd1e4a9d8094354869c216fb3e73383a14915bd7694",
+        "gitBlob": "929f0594cd54e81ecc89a320d1d21efacab34ffd"
+      },
+      "changedTopLevelFields": [
+        "coverage",
+        "dependencies",
+        "disagreements",
+        "generatedAt",
+        "retrievedAt",
+        "sources",
+        "teams"
+      ],
+      "unchangedTopLevelFields": [
+        "currentWeek",
+        "provenance",
+        "schemaVersion",
+        "season",
+        "throughWeek"
+      ],
+      "changedTeamFields": {
+        "ARI": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "ATL": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "BAL": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "BUF": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "CAR": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "CHI": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "CIN": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "CLE": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "DAL": [
+          "depth",
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "DEN": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "DET": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "GB": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "HOU": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "IND": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "JAX": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "KC": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "LA": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "LAC": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "LV": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "MIA": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "MIN": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "NE": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "NO": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "NYG": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "NYJ": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "PHI": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "PIT": [
+          "depth",
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "SEA": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "SF": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "TB": [
+          "depth",
+          "fixtureReports",
+          "headToHeadCoverage",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "TEN": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ],
+        "WAS": [
+          "fixtureReports",
+          "headToHeadCoverage",
+          "injuries",
+          "players",
+          "qbEvidence",
+          "roster"
+        ]
+      }
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "before": {
+        "bytes": 7108758,
+        "sha256": "366ac5d8d637c41d158cf8c0e2469613267ab92d64495625e5b09fcad5f8a47d",
+        "gitBlob": "ad2a53aebec8e45f34e0d6658547fd7d31bc1a6e"
+      },
+      "after": {
+        "bytes": 7099916,
+        "sha256": "c05169cc06f06f1990bad169aec528dff122fb4cb0eb2676eb6989e3965af3fa",
+        "gitBlob": "3e1d31ff221fae4073ffe53ababaeeb47756f5bd"
+      },
+      "changedTopLevelFields": [
+        "currentSourceHashes",
+        "generatedAt",
+        "players",
+        "sources"
+      ],
+      "unchangedTopLevelFields": [
+        "coverage",
+        "disagreements",
+        "note",
+        "opponents",
+        "retrievedAt",
+        "schemaVersion",
+        "scope",
+        "season"
+      ]
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "before": {
+        "bytes": 33508,
+        "sha256": "53aba7c7dbf9e829dda4ea6b67baaf728f1e4e3eff1f6e224685d47b54320047",
+        "gitBlob": "072d46986b5134bb766eb7b674affd0d9d6cbf59"
+      },
+      "after": {
+        "bytes": 32255,
+        "sha256": "22a7c5698418de7863a59ec19a6cf195c5a30bd9dea72b4579c90032bb4d8077",
+        "gitBlob": "a535a322e4eefec60f39c8153df902394e797c3d"
+      },
+      "changedTopLevelFields": [
+        "datasets",
+        "generatedAt",
+        "playerHistorySha256",
+        "playerHistoryValidation",
+        "retrievedAt",
+        "rosterVerification",
+        "snapshotSha256CanonicalJson",
+        "sources",
+        "validation"
+      ],
+      "unchangedTopLevelFields": [
+        "historyRefreshCommand",
+        "refreshCadence",
+        "refreshCommand",
+        "schemaVersion",
+        "sourcePolicy",
+        "validateCommand"
+      ]
+    },
+    {
+      "path": "assets/data/team-details.json",
+      "before": {
+        "bytes": 2292695,
+        "sha256": "64068acaa1f5befae475675413f0d0c052c1ce368007e98c2a48179b65b78e27",
+        "gitBlob": "a4928f7d2ff724cfccbc35050113d155600afae8"
+      },
+      "after": {
+        "bytes": 2292324,
+        "sha256": "2c6c40f2c19e977651bd45e7694f195694edba61277c5a5a9292c5ec42d68640",
+        "gitBlob": "d94c043346a854b8e7ac573749bc5d6eb35fa987"
+      },
+      "changedTopLevelFields": [
+        "generatedAt",
+        "provenance",
+        "retrievedAt",
+        "sources",
+        "teams"
+      ],
+      "unchangedTopLevelFields": [
+        "coverage",
+        "currentWeek",
+        "disagreements",
+        "schemaVersion",
+        "season",
+        "throughWeek"
+      ],
+      "changedTeamFields": {
+        "DAL": [
+          "depth"
+        ]
+      }
+    }
+  ],
+  "sourceManifestDeltas": {
+    "assets/data/current.json": {
+      "counts": [
+        30,
+        29
+      ],
+      "removedIds": [
+        "espn_athlete_4431424"
+      ],
+      "addedIds": [],
+      "changedBodyHashes": [
+        {
+          "sourceId": "espn_steelers_roster",
+          "sha256Before": "b187d599870fc5291dee148c85dbfc392c8f687c109f6306dbb33f6682ed3a93",
+          "sha256After": "7f78569e7a0b28e0b0a54b0a26e5055e1cc53880f8b092e449945c812880e539"
+        },
+        {
+          "sourceId": "nflverse_depth",
+          "sha256Before": "09be43a6e8b166ad6a8deccc9caa3a1ecc0773cbdfbd927842e80ff36c0f8e9c",
+          "sha256After": "779f5b89c5c9dec4e000e8595eda21169b9fa66d568dca6122450219aa4eea17"
+        },
+        {
+          "sourceId": "nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "nflverse_injuries",
+          "sha256Before": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+          "sha256After": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f"
+        },
+        {
+          "sourceId": "nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        },
+        {
+          "sourceId": "official_steelers_roster",
+          "sha256Before": "66cf6dd28d58f437ee553d2e8796600f25e4bcbecd4a7f0675eef7590106ba01",
+          "sha256After": "8a7cfe13f7ab3ac9b488233fd369753bb5a96f186f38b5c9074c6d41690d1a7c"
+        }
+      ]
+    },
+    "assets/data/matchup-breakdown.json": {
+      "counts": [
+        125,
+        125
+      ],
+      "removedIds": [],
+      "addedIds": [],
+      "changedBodyHashes": [
+        {
+          "sourceId": "espn_fixture_summary_401872980",
+          "sha256Before": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+          "sha256After": "fe9723cbc850f54b6b834491da56f83a97f590a6cc10131aa582836a88511ee8"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872981",
+          "sha256Before": "1b277c71ec0c2fedc591eb8867b2a963a273d87241ec333d3f06ccc9f54b90d8",
+          "sha256After": "4784b9aef0606f1d31d0851cd899fbe2f6a497bfc257ff82f9201f65f145698e"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872982",
+          "sha256Before": "63f61c191e7740826ba30a2b5efb81539688f69e256bc43dbde19ffb3e6a5957",
+          "sha256After": "fb05374500384382773758e0dbc654287a00224af69a1dd8622d06c16642f1b2"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872983",
+          "sha256Before": "cde0615f98409bbe015638d59f03f79531de80a5d32bbc16ff9e4a3685499d34",
+          "sha256After": "58a7950b19469eaff0bb32a40fb111818daf0569e960f42b708d4d95000e7b20"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872984",
+          "sha256Before": "4d5f6185bcfca418909c212918757270b35cfb1ea6b5482ac05b4e2c7de731ec",
+          "sha256After": "8d25d16aff2069797a47db14fc84385adefc58073739022a658892be6f2b21c7"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872985",
+          "sha256Before": "294ec4b61c17e70df79a8a201bd56201eca0b037fd92aacb92d53212f1d568fc",
+          "sha256After": "4c85c22cc8a557a2803fd700ee3deed5c0bb3c67af638e91d86fa751aae0aa1f"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872986",
+          "sha256Before": "45b78e44fd2c51334c941bcea9bc8b9e03ee2aeee339b4b4e9f11585e0d28b7a",
+          "sha256After": "2cb7c3885221030f7567d68487237b579d4cda266c7c8a6e97a70e34d2da5220"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872987",
+          "sha256Before": "a8b09de1376570a1e1100830d3c82b2ee5840a9690499a2d1f48c7323e794c26",
+          "sha256After": "ba95217769f75cb1755d76149bd5fdca88af88b6e5f5d074b8f670dae5b57e20"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872988",
+          "sha256Before": "0b0ae49015b7e1207dfeaea9925d313509711febe57b3975abb7bc2bb4094065",
+          "sha256After": "4f64f827b1347d9e5307ea7de06b8a384567601baa414e3d0b09e14f38fe42a5"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872989",
+          "sha256Before": "c87568a0dd3ed714327d08936ce452fadee92ac7ecc95ecffeb5ce519734db3a",
+          "sha256After": "21e603773e5e0e191b6fa5747209dc29fe00baba12c18f01d68d1bd0f6b74e10"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872990",
+          "sha256Before": "665f390bb380a179477c38ec5d65a88c93a2dc1fbfdf0113a96a26b71db6f7b1",
+          "sha256After": "7989a119bba78bb36c5fd1289b6ae1112f84eb015e29f8e5123b0ffcb1b9e864"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872991",
+          "sha256Before": "edf1f0b2457efd6d0fbf1570333bda7d0338cc9397ef14a5ef8c92b7c268bdc4",
+          "sha256After": "8037222eb17c6ec11f15fc68f8e56c3ba9a8f88feedcf7cf3a04641b49c791f4"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872992",
+          "sha256Before": "9cd6290f768db745bb67fa0333bfa3483119a6618646c38275953bf4ff2255a0",
+          "sha256After": "d900dab2ad9c975ee86fa4f8fb32e3274740b0ca90c03753c2c5d0380624e16a"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872993",
+          "sha256Before": "666f0cbcf6437c9f091349638d7da9721f7b29a082b4403a6ec023ca691cc19d",
+          "sha256After": "7802b1f044eb3f4eb4544966e3cbe4c7b401f4ed4caa5112f578aa0d3c224927"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872994",
+          "sha256Before": "2998dff4e9a0342e679c1fda32efb6a1c0646bfdf41e1f9fdd3c13ad9b7650ce",
+          "sha256After": "41cb868a55f53d50a266e02324f8ec080c1c9563cefd837f4fa52bcef304e496"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401872998",
+          "sha256Before": "4e734dfcd9197396e18f962685a7bb4a710848ced349ae5b170df8afc1258155",
+          "sha256After": "c34eb6e71312b028fd5f23f774e2768cd83049230db5e96d06829d9e6023f85a"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401873002",
+          "sha256Before": "96629f5e654ccae344aca0a60d3b79a50eab4e93020c7f473026984ebb98d4bb",
+          "sha256After": "f06b528c085767e9537e1d84456c0864d0056a65425a561f529eb13b121adbd0"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401873006",
+          "sha256Before": "5ce840c6acff95c98de465da49a918deffc36e1100a61e66637a2e0d4d794b33",
+          "sha256After": "e46f972c93dc40e79a3c80bd95ce82b802a48d98f14304c5fef32e75ace50a86"
+        },
+        {
+          "sourceId": "espn_fixture_summary_401873007",
+          "sha256Before": "f180d974644d4a2b87b75ed3137cd7afabe2cde641625cfec81379d55b1f7470",
+          "sha256After": "334d339b78c411a1d940aa8bb7ca0115bfe28ef8521558c11f5d3ee2a98361b6"
+        },
+        {
+          "sourceId": "espn_matchup_depth_DAL",
+          "sha256Before": "08bb881a918a84dd3699f71571b64a0d3ec8d05f4fb7a8784364e2d5ea457b05",
+          "sha256After": "0c67ffecc81671a53fd00447ddaa460aa3f080c5c9ae5f11d37862ac4163857c"
+        },
+        {
+          "sourceId": "espn_matchup_depth_PIT",
+          "sha256Before": "dabe5d96388562401632875425175e74a9f7727491b7be3321a22fe534a05382",
+          "sha256After": "a56a8d2af1f7c1123aa826f509368ae5a60609c4b53bb6546b779505be32ddc4"
+        },
+        {
+          "sourceId": "espn_matchup_depth_TB",
+          "sha256Before": "58f1405eb18aad3b6d98108f607b20a9b8c3bb605f4540f62c4f68e1ac276766",
+          "sha256After": "77eef4291835e8bdfdde075b294bfa44f18b79660b58e248beb190f57120fe62"
+        },
+        {
+          "sourceId": "espn_matchup_roster_DAL",
+          "sha256Before": "ae080ff230f410af0543336321281cda23d644abcb86c699e529398d176f16dd",
+          "sha256After": "b441535a4bf64517e3e5bc21882348048e8afd9223cddfb07e78eb0623be8f5d"
+        },
+        {
+          "sourceId": "espn_matchup_roster_PIT",
+          "sha256Before": "5ccf64e84baefe826fca9ec6964332a78885decffcf3e70a0404c38ed0129084",
+          "sha256After": "9b79c9b220ff3ae5be47af068bea56c401b28b30ac61314c3cb709096c4b107e"
+        },
+        {
+          "sourceId": "espn_matchup_roster_TB",
+          "sha256Before": "559d4006c8019051b1ca4e099f8a880e2d3d8cf99ae07188d5d6bf652438341a",
+          "sha256After": "842919931e5f554110ffa578977caee6290219e9e353b7d0baec39c0979a26dd"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401772960",
+          "sha256Before": "0cd8d5192c29e90aef9d5a4ab4e062c5ace33ccd5373cf2d1b2a7a9813e09ca9",
+          "sha256After": "622d7081f072d72467cf9503e2c7a41ca8ff277c3d1c36f32b7612cd41f320ea"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872658",
+          "sha256Before": "4e3dc7977a2e209d707b9eacc2528507bc8a5cfd88d36cbae3994f297e20465d",
+          "sha256After": "83239c50cbbc015ccc3a37d5b6cacf47f765153c8d912ee1386fc6eb522c0c2e"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872925",
+          "sha256Before": "90a1ec32d93760fb7d6af4fad79589ef190eea52288e5b9f4b06c964ccff4096",
+          "sha256After": "adc45b47764af6b4dbfb7d0b7b974fc073e4beb347dbfa6375be52cb4c6063ec"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872930",
+          "sha256Before": "c76970f2dd5dd8841565b7ab1197a5f55f168a02dec75bc3f2a9f6911264020f",
+          "sha256After": "4368fc09f881a40a2afe0eccabba97428743c68a1e895630fe48f0ec31b472c1"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872935",
+          "sha256Before": "5b3eb1d4649dce96e1fe28fe7d54f79786cd8f18c46eaf4a0873d309c1849c0f",
+          "sha256After": "053e47ea1c924ce5cb5511092d42ce397f3ddb94d92919a97f1a368d6dcaa93f"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872944",
+          "sha256Before": "4d38e846b5f5de24fd92333d0a435c96a7b5f4739e42b3f74ad3155570380880",
+          "sha256After": "243f8aac58e204b494e26529ab98fd0b69df82e7168071211a9a6e07e4acad83"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872946",
+          "sha256Before": "493f6866e16c4fd0036958f9e25a4db7d83ce7fc15654f74f8880e68005cf2d8",
+          "sha256After": "9c34fb3acdc98c10351d774ef5ad07053efff38b06d921b4c44ba7f9f627c9ee"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872950",
+          "sha256Before": "807abc90c5acee9021e2aaa097396aebf5aeb2249b0262a7b6d1ae917b01700b",
+          "sha256After": "f2f49ab0ef90ca980d04bd9828b907fe0475a029ec4c12927827522594ae4365"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872959",
+          "sha256Before": "09804d6573e4008241cd334fe9b789e13de939e7494e82a4a8a8a612a81f0178",
+          "sha256After": "6794e115169789d7aa8aa4f1273f79cfa85ef5737356b1dc03da6bfd7497e20e"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872960",
+          "sha256Before": "c97c451305e8903cd46c178cf6975d2c05a5d295e1af38da311afc83c812499f",
+          "sha256After": "f5b65e0d62f6b9e10a154c079d5fe19d1cb63767bbd82306a0edbd5abea0401a"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872964",
+          "sha256Before": "9aad82160b573a765751c4027f63a16cd429edb49c9a9bd606f150f57502b52c",
+          "sha256After": "12e79f907006330a02ed75317cfba2fe820935d87b0d9bb92ccab70ad74cde14"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872967",
+          "sha256Before": "cb230033ad99e55cd765d0dc928e7b37abab2e250f1ea4d007729303ef063902",
+          "sha256After": "6a638fac0a7dd498901cdc25964303bb8b9250dafdfe78baaf19758bc0015ce5"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872968",
+          "sha256Before": "2faebf8429d14f782475945cc87e9bd7dc9975718d9e50eaf1f1415e8e3a362b",
+          "sha256After": "d1fdaf452b128d7be0d9ce8ed7a7ae97b40fcfde3ef782574c9c025f8f722f75"
+        },
+        {
+          "sourceId": "espn_matchup_summary_401872980",
+          "sha256Before": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+          "sha256After": "fe9723cbc850f54b6b834491da56f83a97f590a6cc10131aa582836a88511ee8"
+        },
+        {
+          "sourceId": "espn_start_summary_401437849",
+          "sha256Before": "cef4991040db5ce509ee49f4fb29b02bf585cadad2e41fac0afb1e56c8453b07",
+          "sha256After": "2bea5603bbe60221d236a74f4dc5b39f8a71046dfda305cd61655a614c316da0"
+        },
+        {
+          "sourceId": "espn_start_summary_401671654",
+          "sha256Before": "756581faeea944065057b7950acd8e4ddcdcbe893ebc256e14e187602de1bc05",
+          "sha256After": "4c2c9eea486ad6f9657e6bf044320b8f6136bde99893091bff0df637b2099576"
+        },
+        {
+          "sourceId": "espn_start_summary_401671671",
+          "sha256Before": "602c3a746414666f81a98f0c71a8530d2eef0203715e8225ad254bbb176f8af1",
+          "sha256After": "5f4e429ea3cec0099bc6e71ad54d18a6bcbb99479add2db76e06ebd2396a987d"
+        },
+        {
+          "sourceId": "espn_start_summary_401671738",
+          "sha256Before": "2566283f0d1f8f85c1b76ad7014ab2b083e75ee8dff5287e7d871c7e12cd6705",
+          "sha256After": "6a6ad096ce10f0e77444adcb04af02023916566a4a21c71516f21f91cf4d2da2"
+        },
+        {
+          "sourceId": "espn_start_summary_401671803",
+          "sha256Before": "195249d51460a04b8ddd5ed36706ce4aecfae70d0b6e1a6ab3307ce0ead853ff",
+          "sha256After": "887c7f98793eaee764999418efd6956412bdc71eb34e690d0681f43c98e5c647"
+        },
+        {
+          "sourceId": "espn_start_summary_401671821",
+          "sha256Before": "09f71530bfa88d505d15de407ac83673abac06b655cd84f5b6c74a7b2404de95",
+          "sha256After": "6a1f49b80dc5937d0ee35789767f102aa4ea6c423712031b9a838ce8f1279676"
+        },
+        {
+          "sourceId": "espn_start_summary_401671846",
+          "sha256Before": "062b94d8e1041f4afe0ee377ccaa2aba1fbcd34467edfd071aa77589aa573f4f",
+          "sha256After": "61ff49954e704ce7d83f8b06c468b523de091299f1c09f54db46e6bc71e48b49"
+        },
+        {
+          "sourceId": "espn_start_summary_401671877",
+          "sha256Before": "01fc75a4d665f25be8c7f5b1965c3bdd1403887b4706eb2458d3fa054781ed0a",
+          "sha256After": "3a7e00340055a0c960967b67b3c55b8df78262728a924a823f4081925e64d36b"
+        },
+        {
+          "sourceId": "espn_start_summary_401772801",
+          "sha256Before": "6c949aef9d9e9e9fa7fb7126b1b999786729bc075a185eb3b78271338cc8852c",
+          "sha256After": "38b2681508f8553aac14820b7ae48949b40fd3b47955020682eb08036b025169"
+        },
+        {
+          "sourceId": "espn_start_summary_401772808",
+          "sha256Before": "2a65dc4c1aedd9efc6f259ad918f88d601c272c15db01fd74388c8ba3c3a03ec",
+          "sha256After": "2078a234cb2f436669e125c62aa9012f4146fb0a4446d33b21d2839bf098d6c6"
+        },
+        {
+          "sourceId": "espn_start_summary_401772817",
+          "sha256Before": "a07ff0c69e2d9dd0ea7d0940cea943b809c354765a0b3ca3a1cdf14ec7055ca4",
+          "sha256After": "57ee91662c1a005071b35dda0b9bea05bc98a4f104da040e884b0354da0916f3"
+        },
+        {
+          "sourceId": "espn_start_summary_401872933",
+          "sha256Before": "a0876ca9bcce3625b131184a7873bf40c9b02aa8aca906c7a6c62816f9c3a9c6",
+          "sha256After": "c13c0e759514e0617a98844b30e628533ab3bac32c11a7c50d1e3aa17a035981"
+        },
+        {
+          "sourceId": "espn_start_summary_401872955",
+          "sha256Before": "c754a4dd42390a07c8b255131047bea49186719a956c0db48ede958b3c99e7a9",
+          "sha256After": "06e524312d011ddeb66d1c809696633dbc966d1a68e0f04e72447837955ee962"
+        },
+        {
+          "sourceId": "espn_start_summary_401872972",
+          "sha256Before": "9d96b2688789e237663ab81337a0a5267d2a751034572bee228148f7600c370d",
+          "sha256After": "04238438c5f44e868cb6307b58044edb0e7d7b1b236c878d1cebfcf5cab03055"
+        },
+        {
+          "sourceId": "espn_start_summary_401872977",
+          "sha256Before": "208acffe8c2737ae937f6e9c7f1445c90e2c54ad06c334a6148db943cdd8409c",
+          "sha256After": "75b3c72b47292d8b0101d273c2f8940795123ca78e71a0aa70f5fdd955aee81a"
+        },
+        {
+          "sourceId": "nflverse_depth",
+          "sha256Before": "09be43a6e8b166ad6a8deccc9caa3a1ecc0773cbdfbd927842e80ff36c0f8e9c",
+          "sha256After": "779f5b89c5c9dec4e000e8595eda21169b9fa66d568dca6122450219aa4eea17"
+        },
+        {
+          "sourceId": "nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "nflverse_injuries",
+          "sha256Before": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+          "sha256After": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f"
+        },
+        {
+          "sourceId": "nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        },
+        {
+          "sourceId": "team_espn_roster_DAL",
+          "sha256Before": "1b328528da03f7e9b6906374e361ca8eaf8cfa2c1e823e5391c133b6a8eb5a82",
+          "sha256After": "16b8760f3ffff2518e309725c17bfa4dc51277b91e1e65ebc1f381f95d2210f1"
+        },
+        {
+          "sourceId": "team_espn_schedule_DAL_2025",
+          "sha256Before": "8722baa4ef7ff8eaca5031491147f41855ebf18480068a5995a8762bc6bf410e",
+          "sha256After": "e86879362c4885959e8e4159d3a45d8f7e75020d0383688890aecad616a024b8"
+        },
+        {
+          "sourceId": "team_espn_schedule_DAL_2026",
+          "sha256Before": "9d910054048e79e81b21aa5fc8f0fc42dbdb6e03a4cedfbf6747d8c0278a5ac5",
+          "sha256After": "9050dac3a925e7d30c947f18524923a5a6b6a46fdb284e828d9d5d77721bb0a5"
+        },
+        {
+          "sourceId": "team_espn_summary_401772510",
+          "sha256Before": "8439e4033a0b1242c223d8b0a17652bc2fcedfaf9da0281cdfa92e52866cc8eb",
+          "sha256After": "b17329c46d1bc22009e44490dcea75298017204d121cc84afc8e7103d61e8070"
+        },
+        {
+          "sourceId": "team_espn_summary_401772694",
+          "sha256Before": "3fa6c93881ccdc54dd56424d4125a0a27b588226cd314844375046b01c534fea",
+          "sha256After": "85a908e20ae22b428f9a6bd854245efca5e0d790caa3174fbdaa91403b5ef6e4"
+        },
+        {
+          "sourceId": "team_espn_summary_401772710",
+          "sha256Before": "f2d0841d381805d25ac8068a94af4b4e639f4d563cf3ba1bab8114b3cf75db8c",
+          "sha256After": "add0165ed0de767be5c138a0022fab26d0d140c53958cc0157a65f379404d767"
+        },
+        {
+          "sourceId": "team_espn_summary_401772762",
+          "sha256Before": "d237f8db1ff2ca091a41a2b6236dcc09e73019f7b33594bbec8102aed1a29151",
+          "sha256After": "12595341a6537bc5aaf23403f808bd48efb9eaa3fb91a693acc7b46a2abbec73"
+        },
+        {
+          "sourceId": "team_espn_summary_401772818",
+          "sha256Before": "ce2f5071d1991965079bc5b8dd2aa81be592701c99708948b3af28b0bb31bc2e",
+          "sha256After": "330c9a8983be1f2f7741de6b4587acc19eae29b3e3668c9a5947f5d484bfb17a"
+        },
+        {
+          "sourceId": "team_espn_summary_401772819",
+          "sha256Before": "9894487dcff08ea266d165b9d5f93efb8f12730adfb41ab0689eafb2dae88145",
+          "sha256After": "52aaf16fac50b0f5dba4d6d6a431de0719d10afa078b224a4d77bcfe05d04a63"
+        },
+        {
+          "sourceId": "team_espn_summary_401772834",
+          "sha256Before": "c02b59e46bd2a6340d3afdb467fe6e0fc0cbd58123168be077b759dbdf2bec06",
+          "sha256After": "1ed17daad15ecf7b802c417bd441c5aa182e0acac90cd266739262a64ed02a06"
+        },
+        {
+          "sourceId": "team_espn_summary_401772844",
+          "sha256Before": "4e76829866063f3861065585f1eb0207950d0ffd360309e56a98a8d7c2a89018",
+          "sha256After": "3f08d4c2b92571bb7a7f8c74bf2a5c8e5418c519248830f8c2594d57c39f5244"
+        },
+        {
+          "sourceId": "team_espn_summary_401772850",
+          "sha256Before": "51392f19ea6972688ad90a024c9da6ca61650791ca79a0cd68b45cd5ba0e02ff",
+          "sha256After": "48d01bfedff190b4584587dcbb444de1da8ad0097b16dc8bc75cabc63266f19d"
+        },
+        {
+          "sourceId": "team_espn_summary_401772858",
+          "sha256Before": "d1f883e0e1978cab01cfcff6047f981d36320983e0e81fe9acf9d98d2a7242bb",
+          "sha256After": "5bb5533e24d5d62e361035923b79254ed696a2ae0180f15ff1b9a8002cd45ba9"
+        },
+        {
+          "sourceId": "team_espn_summary_401772864",
+          "sha256Before": "a89c3b93e6141153e81a263655fe612c0eb5f0a14ea9758b4b6906f11c169bcb",
+          "sha256After": "1b1adb9b86315cd50d9b1045d4013560e55dba8e042bd5d2eb33b3788209fa07"
+        },
+        {
+          "sourceId": "team_espn_summary_401772890",
+          "sha256Before": "566c8b240bcbd3500dec517c3c22103ef28bc6cf93da57efef6501ba7167517f",
+          "sha256After": "2f443e0fe1531060b8b205c36f67310c718f2450e627ea7d9e2501c4825231a6"
+        },
+        {
+          "sourceId": "team_espn_summary_401772910",
+          "sha256Before": "e2bab7484c65faa987e2a82984cb93d259a9ac50dbaea4c659669ecd455374c0",
+          "sha256After": "c237dff7978c662572ca80af1c1e0728f20de6df24906a6ad01b2e94fcb6206c"
+        },
+        {
+          "sourceId": "team_espn_summary_401772921",
+          "sha256Before": "8731eaf1b828fc18676ec22d44d3616e6bc879dc456dec356c8bcec0a116ca8b",
+          "sha256After": "3bc8a32640e949abbb7e26e1591f56f2e948d36a62943b4e1dd6be378dddb7f3"
+        },
+        {
+          "sourceId": "team_espn_summary_401772933",
+          "sha256Before": "dde817da7d2bae1e2e0977bb94e92b975bc1926b69137ff39d0911376f23a9ba",
+          "sha256After": "5a05199f2a17fd59f12cb966fe0500728d034a2d866680cfc202be2c978f6a57"
+        },
+        {
+          "sourceId": "team_espn_summary_401772947",
+          "sha256Before": "103dc6b017d479c06b5494a0a9a0e5ffe1ba1b035af363b0aabd7f87f04ee64a",
+          "sha256After": "2e39b6846b201742c1f7be51f2c237ed0037e3a185f4a83de17c024ffe7482b8"
+        },
+        {
+          "sourceId": "team_espn_summary_401772963",
+          "sha256Before": "bf40d1fcba2ce7fda09d9e95faad3dcfd318bcd54e3c385fdaab1fc4876e6577",
+          "sha256After": "3ea3f9a958bb7aaf168976cb298203aae4656497980e2c108c7f68cbf4f32e71"
+        },
+        {
+          "sourceId": "team_espn_summary_401872930",
+          "sha256Before": "c76970f2dd5dd8841565b7ab1197a5f55f168a02dec75bc3f2a9f6911264020f",
+          "sha256After": "4368fc09f881a40a2afe0eccabba97428743c68a1e895630fe48f0ec31b472c1"
+        },
+        {
+          "sourceId": "team_espn_summary_401872944",
+          "sha256Before": "4d38e846b5f5de24fd92333d0a435c96a7b5f4739e42b3f74ad3155570380880",
+          "sha256After": "e01fd84f9ce00fc5009a4521290eff670547172e65f1c943405dfd97004a7e93"
+        },
+        {
+          "sourceId": "team_espn_summary_401872960",
+          "sha256Before": "c97c451305e8903cd46c178cf6975d2c05a5d295e1af38da311afc83c812499f",
+          "sha256After": "f5b65e0d62f6b9e10a154c079d5fe19d1cb63767bbd82306a0edbd5abea0401a"
+        },
+        {
+          "sourceId": "team_espn_summary_401872967",
+          "sha256Before": "cb230033ad99e55cd765d0dc928e7b37abab2e250f1ea4d007729303ef063902",
+          "sha256After": "4a15521a79ee8cd4686dbc43df5769245e5c8d78c267de78599f0a96695f0b5e"
+        },
+        {
+          "sourceId": "team_espn_summary_401872980",
+          "sha256Before": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+          "sha256After": "fe9723cbc850f54b6b834491da56f83a97f590a6cc10131aa582836a88511ee8"
+        },
+        {
+          "sourceId": "team_nflverse_depth",
+          "sha256Before": "09be43a6e8b166ad6a8deccc9caa3a1ecc0773cbdfbd927842e80ff36c0f8e9c",
+          "sha256After": "779f5b89c5c9dec4e000e8595eda21169b9fa66d568dca6122450219aa4eea17"
+        },
+        {
+          "sourceId": "team_nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "team_nflverse_injuries",
+          "sha256Before": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+          "sha256After": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f"
+        },
+        {
+          "sourceId": "team_nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        }
+      ]
+    },
+    "assets/data/player-history.json": {
+      "counts": [
+        24,
+        24
+      ],
+      "removedIds": [],
+      "addedIds": [],
+      "changedBodyHashes": [
+        {
+          "sourceId": "nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        }
+      ]
+    },
+    "assets/data/provenance.json": {
+      "counts": [
+        30,
+        29
+      ],
+      "removedIds": [
+        "espn_athlete_4431424"
+      ],
+      "addedIds": [],
+      "changedBodyHashes": [
+        {
+          "sourceId": "espn_steelers_roster",
+          "sha256Before": "b187d599870fc5291dee148c85dbfc392c8f687c109f6306dbb33f6682ed3a93",
+          "sha256After": "7f78569e7a0b28e0b0a54b0a26e5055e1cc53880f8b092e449945c812880e539"
+        },
+        {
+          "sourceId": "nflverse_depth",
+          "sha256Before": "09be43a6e8b166ad6a8deccc9caa3a1ecc0773cbdfbd927842e80ff36c0f8e9c",
+          "sha256After": "779f5b89c5c9dec4e000e8595eda21169b9fa66d568dca6122450219aa4eea17"
+        },
+        {
+          "sourceId": "nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "nflverse_injuries",
+          "sha256Before": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+          "sha256After": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f"
+        },
+        {
+          "sourceId": "nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        },
+        {
+          "sourceId": "official_steelers_roster",
+          "sha256Before": "66cf6dd28d58f437ee553d2e8796600f25e4bcbecd4a7f0675eef7590106ba01",
+          "sha256After": "8a7cfe13f7ab3ac9b488233fd369753bb5a96f186f38b5c9074c6d41690d1a7c"
+        }
+      ]
+    },
+    "assets/data/team-details.json": {
+      "counts": [
+        32,
+        32
+      ],
+      "removedIds": [],
+      "addedIds": [],
+      "changedBodyHashes": [
+        {
+          "sourceId": "espn_roster_DAL",
+          "sha256Before": "1b328528da03f7e9b6906374e361ca8eaf8cfa2c1e823e5391c133b6a8eb5a82",
+          "sha256After": "16b8760f3ffff2518e309725c17bfa4dc51277b91e1e65ebc1f381f95d2210f1"
+        },
+        {
+          "sourceId": "espn_schedule_DAL_2025",
+          "sha256Before": "8722baa4ef7ff8eaca5031491147f41855ebf18480068a5995a8762bc6bf410e",
+          "sha256After": "e86879362c4885959e8e4159d3a45d8f7e75020d0383688890aecad616a024b8"
+        },
+        {
+          "sourceId": "espn_schedule_DAL_2026",
+          "sha256Before": "9d910054048e79e81b21aa5fc8f0fc42dbdb6e03a4cedfbf6747d8c0278a5ac5",
+          "sha256After": "9050dac3a925e7d30c947f18524923a5a6b6a46fdb284e828d9d5d77721bb0a5"
+        },
+        {
+          "sourceId": "espn_summary_401772510",
+          "sha256Before": "8439e4033a0b1242c223d8b0a17652bc2fcedfaf9da0281cdfa92e52866cc8eb",
+          "sha256After": "b17329c46d1bc22009e44490dcea75298017204d121cc84afc8e7103d61e8070"
+        },
+        {
+          "sourceId": "espn_summary_401772694",
+          "sha256Before": "3fa6c93881ccdc54dd56424d4125a0a27b588226cd314844375046b01c534fea",
+          "sha256After": "85a908e20ae22b428f9a6bd854245efca5e0d790caa3174fbdaa91403b5ef6e4"
+        },
+        {
+          "sourceId": "espn_summary_401772710",
+          "sha256Before": "f2d0841d381805d25ac8068a94af4b4e639f4d563cf3ba1bab8114b3cf75db8c",
+          "sha256After": "add0165ed0de767be5c138a0022fab26d0d140c53958cc0157a65f379404d767"
+        },
+        {
+          "sourceId": "espn_summary_401772762",
+          "sha256Before": "d237f8db1ff2ca091a41a2b6236dcc09e73019f7b33594bbec8102aed1a29151",
+          "sha256After": "12595341a6537bc5aaf23403f808bd48efb9eaa3fb91a693acc7b46a2abbec73"
+        },
+        {
+          "sourceId": "espn_summary_401772818",
+          "sha256Before": "ce2f5071d1991965079bc5b8dd2aa81be592701c99708948b3af28b0bb31bc2e",
+          "sha256After": "330c9a8983be1f2f7741de6b4587acc19eae29b3e3668c9a5947f5d484bfb17a"
+        },
+        {
+          "sourceId": "espn_summary_401772819",
+          "sha256Before": "9894487dcff08ea266d165b9d5f93efb8f12730adfb41ab0689eafb2dae88145",
+          "sha256After": "52aaf16fac50b0f5dba4d6d6a431de0719d10afa078b224a4d77bcfe05d04a63"
+        },
+        {
+          "sourceId": "espn_summary_401772834",
+          "sha256Before": "c02b59e46bd2a6340d3afdb467fe6e0fc0cbd58123168be077b759dbdf2bec06",
+          "sha256After": "1ed17daad15ecf7b802c417bd441c5aa182e0acac90cd266739262a64ed02a06"
+        },
+        {
+          "sourceId": "espn_summary_401772844",
+          "sha256Before": "4e76829866063f3861065585f1eb0207950d0ffd360309e56a98a8d7c2a89018",
+          "sha256After": "3f08d4c2b92571bb7a7f8c74bf2a5c8e5418c519248830f8c2594d57c39f5244"
+        },
+        {
+          "sourceId": "espn_summary_401772850",
+          "sha256Before": "51392f19ea6972688ad90a024c9da6ca61650791ca79a0cd68b45cd5ba0e02ff",
+          "sha256After": "48d01bfedff190b4584587dcbb444de1da8ad0097b16dc8bc75cabc63266f19d"
+        },
+        {
+          "sourceId": "espn_summary_401772858",
+          "sha256Before": "d1f883e0e1978cab01cfcff6047f981d36320983e0e81fe9acf9d98d2a7242bb",
+          "sha256After": "5bb5533e24d5d62e361035923b79254ed696a2ae0180f15ff1b9a8002cd45ba9"
+        },
+        {
+          "sourceId": "espn_summary_401772864",
+          "sha256Before": "a89c3b93e6141153e81a263655fe612c0eb5f0a14ea9758b4b6906f11c169bcb",
+          "sha256After": "1b1adb9b86315cd50d9b1045d4013560e55dba8e042bd5d2eb33b3788209fa07"
+        },
+        {
+          "sourceId": "espn_summary_401772890",
+          "sha256Before": "566c8b240bcbd3500dec517c3c22103ef28bc6cf93da57efef6501ba7167517f",
+          "sha256After": "2f443e0fe1531060b8b205c36f67310c718f2450e627ea7d9e2501c4825231a6"
+        },
+        {
+          "sourceId": "espn_summary_401772910",
+          "sha256Before": "e2bab7484c65faa987e2a82984cb93d259a9ac50dbaea4c659669ecd455374c0",
+          "sha256After": "c237dff7978c662572ca80af1c1e0728f20de6df24906a6ad01b2e94fcb6206c"
+        },
+        {
+          "sourceId": "espn_summary_401772921",
+          "sha256Before": "8731eaf1b828fc18676ec22d44d3616e6bc879dc456dec356c8bcec0a116ca8b",
+          "sha256After": "3bc8a32640e949abbb7e26e1591f56f2e948d36a62943b4e1dd6be378dddb7f3"
+        },
+        {
+          "sourceId": "espn_summary_401772933",
+          "sha256Before": "dde817da7d2bae1e2e0977bb94e92b975bc1926b69137ff39d0911376f23a9ba",
+          "sha256After": "5a05199f2a17fd59f12cb966fe0500728d034a2d866680cfc202be2c978f6a57"
+        },
+        {
+          "sourceId": "espn_summary_401772947",
+          "sha256Before": "103dc6b017d479c06b5494a0a9a0e5ffe1ba1b035af363b0aabd7f87f04ee64a",
+          "sha256After": "2e39b6846b201742c1f7be51f2c237ed0037e3a185f4a83de17c024ffe7482b8"
+        },
+        {
+          "sourceId": "espn_summary_401772963",
+          "sha256Before": "bf40d1fcba2ce7fda09d9e95faad3dcfd318bcd54e3c385fdaab1fc4876e6577",
+          "sha256After": "3ea3f9a958bb7aaf168976cb298203aae4656497980e2c108c7f68cbf4f32e71"
+        },
+        {
+          "sourceId": "espn_summary_401872930",
+          "sha256Before": "c76970f2dd5dd8841565b7ab1197a5f55f168a02dec75bc3f2a9f6911264020f",
+          "sha256After": "4368fc09f881a40a2afe0eccabba97428743c68a1e895630fe48f0ec31b472c1"
+        },
+        {
+          "sourceId": "espn_summary_401872944",
+          "sha256Before": "4d38e846b5f5de24fd92333d0a435c96a7b5f4739e42b3f74ad3155570380880",
+          "sha256After": "e01fd84f9ce00fc5009a4521290eff670547172e65f1c943405dfd97004a7e93"
+        },
+        {
+          "sourceId": "espn_summary_401872960",
+          "sha256Before": "c97c451305e8903cd46c178cf6975d2c05a5d295e1af38da311afc83c812499f",
+          "sha256After": "f5b65e0d62f6b9e10a154c079d5fe19d1cb63767bbd82306a0edbd5abea0401a"
+        },
+        {
+          "sourceId": "espn_summary_401872967",
+          "sha256Before": "cb230033ad99e55cd765d0dc928e7b37abab2e250f1ea4d007729303ef063902",
+          "sha256After": "4a15521a79ee8cd4686dbc43df5769245e5c8d78c267de78599f0a96695f0b5e"
+        },
+        {
+          "sourceId": "espn_summary_401872980",
+          "sha256Before": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+          "sha256After": "fe9723cbc850f54b6b834491da56f83a97f590a6cc10131aa582836a88511ee8"
+        },
+        {
+          "sourceId": "nflverse_depth",
+          "sha256Before": "09be43a6e8b166ad6a8deccc9caa3a1ecc0773cbdfbd927842e80ff36c0f8e9c",
+          "sha256After": "779f5b89c5c9dec4e000e8595eda21169b9fa66d568dca6122450219aa4eea17"
+        },
+        {
+          "sourceId": "nflverse_games",
+          "sha256Before": "7447960bdd5a5c908facccd7ae8284f6b8f6091c791cca334f12ec0b685cda8c",
+          "sha256After": "c8350c9086e844df42ae773a8698d07b036be674bbc702262325cc1875e06c07"
+        },
+        {
+          "sourceId": "nflverse_injuries",
+          "sha256Before": "21e35d2a84353248c734c39400466552588f6e3064037a7fef2118ef265ae604",
+          "sha256After": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f"
+        },
+        {
+          "sourceId": "nflverse_roster",
+          "sha256Before": "b53fe21976ae8980a23f97a93ae8846fe8185304b8cf6631f160fd65ceccfbd9",
+          "sha256After": "adcdaf91b00de7167ce53907bd2dc1457f03cf0fec75eb2db9bb866fe26195e5"
+        }
+      ]
+    }
+  },
+  "pittsburghIdentityNormalization": {
+    "joinKey": "Stable GSIS id; arrays are compared by id, not array offset. Depth slots use playerId + position + unit.",
+    "rosterCounts": [
+      80,
+      79
+    ],
+    "addedIds": [],
+    "removedIds": [
+      "00-0040176"
+    ],
+    "sharedIdCount": 79,
+    "removedPlayer": {
+      "id": "00-0040176",
+      "name": "Bradyn Swinson",
+      "espnId": "4431424",
+      "previousRosterStatus": "Practice squad",
+      "previousVerification": "disputed",
+      "previousOfficialMembership": false,
+      "previousEspnMembership": false,
+      "allTeamIncomingMatchupRosterMatches": 0,
+      "interpretation": "The incoming current-team dataset no longer includes this formerly disputed identity. Absence does not establish a release, inactive status, destination team or erased provider history."
+    },
+    "sharedRosterChangedFieldBounds": [
+      {
+        "playerId": "00-0023459",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0027969",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0031136",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0033055",
+        "changedFields": [
+          "depth",
+          "injury",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0033729",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0033757",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0033886",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0033941",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0034051",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0034277",
+        "changedFields": [
+          "depth",
+          "injury",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0034771",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0034810",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0035239",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0035286",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0035594",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0035640",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0035699",
+        "changedFields": [
+          "depth",
+          "injury",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036139",
+        "changedFields": [
+          "depth",
+          "injury",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036165",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036252",
+        "changedFields": [
+          "depth",
+          "injury",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036323",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036333",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036396",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036504",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036617",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036775",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036783",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036862",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0036894",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0037228",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0037274",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0037336",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0037382",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0037480",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038135",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038388",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038395",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038409",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038558",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038577",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038581",
+        "changedFields": [
+          "depth",
+          "name",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0038645",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039054",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039110",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039358",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039389",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039457",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039555",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039609",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039626",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039716",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039739",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039741",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039871",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039883",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039896",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0039931",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040160",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040188",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040203",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040231",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040232",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040322",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040341",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040527",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040618",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0040678",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041261",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041263",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041393",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041396",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041397",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041398",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041400",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041401",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041482",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041489",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041490",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      },
+      {
+        "playerId": "00-0041565",
+        "changedFields": [
+          "depth",
+          "rosterVerification"
+        ]
+      }
+    ],
+    "sharedRosterChangesExcludingRetrievalAndHashMetadata": [
+      {
+        "playerId": "00-0033055",
+        "nameBefore": "Jalen Ramsey",
+        "nameAfter": "Jalen Ramsey",
+        "fields": {
+          "injury": {
+            "before": {
+              "playerId": "00-0033055",
+              "name": "Jalen Ramsey",
+              "position": "CB",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Wrist",
+              "sourceId": "nflverse_injuries"
+            },
+            "after": {
+              "playerId": "00-0033055",
+              "name": "Jalen Ramsey",
+              "position": "CB",
+              "week": 5,
+              "reportStatus": "Questionable",
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Wrist",
+              "sourceId": "nflverse_injuries"
+            }
+          }
+        }
+      },
+      {
+        "playerId": "00-0034277",
+        "nameBefore": "DeShon Elliott",
+        "nameAfter": "DeShon Elliott",
+        "fields": {
+          "injury": {
+            "before": {
+              "playerId": "00-0034277",
+              "name": "DeShon Elliott",
+              "position": "S",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Knee",
+              "sourceId": "nflverse_injuries"
+            },
+            "after": {
+              "playerId": "00-0034277",
+              "name": "DeShon Elliott",
+              "position": "S",
+              "week": 5,
+              "reportStatus": "Out",
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Knee",
+              "sourceId": "nflverse_injuries"
+            }
+          }
+        }
+      },
+      {
+        "playerId": "00-0035699",
+        "nameBefore": "Jamel Dean",
+        "nameAfter": "Jamel Dean",
+        "fields": {
+          "injury": {
+            "before": {
+              "playerId": "00-0035699",
+              "name": "Jamel Dean",
+              "position": "CB",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Ankle",
+              "sourceId": "nflverse_injuries"
+            },
+            "after": {
+              "playerId": "00-0035699",
+              "name": "Jamel Dean",
+              "position": "CB",
+              "week": 5,
+              "reportStatus": "Out",
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Ankle",
+              "sourceId": "nflverse_injuries"
+            }
+          }
+        }
+      },
+      {
+        "playerId": "00-0036139",
+        "nameBefore": "Rico Dowdle",
+        "nameAfter": "Rico Dowdle",
+        "fields": {
+          "injury": {
+            "before": {
+              "playerId": "00-0036139",
+              "name": "Rico Dowdle",
+              "position": "RB",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Toe",
+              "sourceId": "nflverse_injuries"
+            },
+            "after": {
+              "playerId": "00-0036139",
+              "name": "Rico Dowdle",
+              "position": "RB",
+              "week": 5,
+              "reportStatus": "Questionable",
+              "practiceStatus": "Limited Participation in Practice",
+              "injury": "Toe",
+              "sourceId": "nflverse_injuries"
+            }
+          }
+        }
+      },
+      {
+        "playerId": "00-0036252",
+        "nameBefore": "Michael Pittman",
+        "nameAfter": "Michael Pittman",
+        "fields": {
+          "injury": {
+            "before": {
+              "playerId": "00-0036252",
+              "name": "Michael Pittman",
+              "position": "WR",
+              "week": 5,
+              "reportStatus": null,
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Foot",
+              "sourceId": "nflverse_injuries"
+            },
+            "after": {
+              "playerId": "00-0036252",
+              "name": "Michael Pittman",
+              "position": "WR",
+              "week": 5,
+              "reportStatus": "Out",
+              "practiceStatus": "Did Not Participate In Practice",
+              "injury": "Foot",
+              "sourceId": "nflverse_injuries"
+            }
+          }
+        }
+      },
+      {
+        "playerId": "00-0038581",
+        "nameBefore": "K.J. Henry",
+        "nameAfter": "KJ Henry",
+        "fields": {
+          "name": {
+            "before": "K.J. Henry",
+            "after": "KJ Henry"
+          }
+        }
+      }
+    ],
+    "nameNormalization": {
+      "id": "00-0038581",
+      "before": "K.J. Henry",
+      "after": "KJ Henry",
+      "interpretation": "Same player identity; spelling normalization does not add or remove a player."
+    }
+  },
+  "playerHistoryNormalization": {
+    "playerCounts": [
+      80,
+      79
+    ],
+    "gameRowCounts": [
+      1273,
+      1272
+    ],
+    "removedPlayerIds": [
+      "00-0040176"
+    ],
+    "addedPlayerIds": [],
+    "removedGameRows": [
+      {
+        "playerId": "00-0040176",
+        "gameId": "2025_12_NE_CIN",
+        "season": 2025,
+        "week": 12,
+        "team": "NE",
+        "opponent": "CIN",
+        "statsSourceId": "nflverse_player_stats_2025"
+      }
+    ],
+    "sharedPlayerGameMembershipChanges": [],
+    "sharedPlayerChangesAfterStrippingDeclaredMetadata": [],
+    "sharedGameRowsWithScheduleRetrievedAtRefresh": 1272,
+    "interpretation": "80→79 player histories and 1273→1272 rows are fully explained by removing Swinson from this Pittsburgh-current-roster-scoped lazy history. His removed record was one verified NE game vs CIN in 2025; all 1272 surviving statistical rows and game membership remain unchanged. The prior row remains recoverable in the base Git revision; this audit does not claim an independent player archive retains it.",
+    "sharedGameRowsWithAdditionalRetrievalMetadataChanges": [
+      {
+        "playerId": "00-0023459",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0023459",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0023459",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0023459",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0027969",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0027969",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0027969",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0027969",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0031136",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0031136",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0031136",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0031136",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033055",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033055",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033055",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033055",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033729",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033729",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033729",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033729",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033757",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033886",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033886",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033886",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033886",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033941",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033941",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0033941",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0034771",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0034810",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0034810",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0034810",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0034810",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035286",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035286",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035286",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035286",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035594",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035594",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035594",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035640",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035640",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035640",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035640",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035699",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035699",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035699",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0035699",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036139",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036139",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036252",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036252",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036252",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036323",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036323",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036323",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036323",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036333",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036333",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036333",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036504",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036617",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036617",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036617",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036617",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036862",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036862",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036862",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036894",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036894",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036894",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0036894",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037228",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037228",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037228",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037228",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037336",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0037480",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038135",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038135",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038135",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038135",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038409",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038409",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038558",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038558",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038558",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038558",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038577",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038577",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038577",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038577",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0038645",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039110",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039110",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039110",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039110",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039739",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039739",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039739",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039739",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039741",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039741",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039741",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039741",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039871",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0039871",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040160",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040160",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040160",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040188",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040188",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040188",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040231",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040231",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040341",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040678",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040678",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0040678",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041393",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041393",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041393",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041397",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041397",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041397",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041397",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041398",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041401",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041401",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041401",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041401",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041482",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041489",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041489",
+        "gameId": "2026_03_CIN_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041489",
+        "gameId": "2026_04_PIT_CLE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041490",
+        "gameId": "2026_02_PIT_NE",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      },
+      {
+        "playerId": "00-0041490",
+        "gameId": "2026_01_ATL_PIT",
+        "changedFields": [
+          "retrievedAt",
+          "scheduleRetrievedAt"
+        ]
+      }
+    ],
+    "sharedGameRowsWithStatisticalOrOtherNonMetadataChanges": []
+  },
+  "provenanceCounts": {
+    "validationRosterCount": [
+      80,
+      79
+    ],
+    "activeRosterCount": [
+      53,
+      53
+    ],
+    "disagreements": [
+      11,
+      10
+    ],
+    "rosterVerification": {
+      "confirmed": [
+        69,
+        69
+      ],
+      "disputed": [
+        11,
+        10
+      ]
+    },
+    "explanation": "11→10 disagreements removes Swinson membership dispute with the identity; 69 confirmed and 53 active remain unchanged. ESPN athlete 4431424 is consequently removed from current/provenance source manifests and related sourceIds. Remaining conflicts stay explicit; a validation status stored in upstream provenance is not this audit executing a validator."
+  },
+  "depthAndAvailability": {
+    "currentPittsburghDepthSourceTimestamp": [
+      "2026-10-09T14:19:58Z",
+      "2026-10-10T06:02:29Z"
+    ],
+    "sharedPittsburghDepthDifferencesAfterRemovingSourceTimestamp": [],
+    "pittsburghWeeklyReportUpdates": [
+      {
+        "playerId": "00-0033055",
+        "name": "Jalen Ramsey",
+        "week": 5,
+        "reportBefore": null,
+        "reportAfter": "Questionable",
+        "injury": "Wrist",
+        "practiceStatus": "Limited Participation in Practice",
+        "sourceId": "nflverse_injuries"
+      },
+      {
+        "playerId": "00-0034277",
+        "name": "DeShon Elliott",
+        "week": 5,
+        "reportBefore": null,
+        "reportAfter": "Out",
+        "injury": "Knee",
+        "practiceStatus": "Limited Participation in Practice",
+        "sourceId": "nflverse_injuries"
+      },
+      {
+        "playerId": "00-0035699",
+        "name": "Jamel Dean",
+        "week": 5,
+        "reportBefore": null,
+        "reportAfter": "Out",
+        "injury": "Ankle",
+        "practiceStatus": "Did Not Participate In Practice",
+        "sourceId": "nflverse_injuries"
+      },
+      {
+        "playerId": "00-0036139",
+        "name": "Rico Dowdle",
+        "week": 5,
+        "reportBefore": null,
+        "reportAfter": "Questionable",
+        "injury": "Toe",
+        "practiceStatus": "Limited Participation in Practice",
+        "sourceId": "nflverse_injuries"
+      },
+      {
+        "playerId": "00-0036252",
+        "name": "Michael Pittman",
+        "week": 5,
+        "reportBefore": null,
+        "reportAfter": "Out",
+        "injury": "Foot",
+        "practiceStatus": "Did Not Participate In Practice",
+        "sourceId": "nflverse_injuries"
+      }
+    ],
+    "teamDetailsPittsburghSubtreeUnchanged": true,
+    "teamDetailsSubstantiveTeamChange": "DAL depth only; PIT team-details is exactly unchanged.",
+    "dallasDepthSlotChanges": [
+      {
+        "identity": [
+          "00-0035227",
+          "FS",
+          "Base 3-4 D"
+        ],
+        "before": {
+          "name": "P.J. Locke",
+          "playerId": "00-0035227",
+          "espnId": "3929850",
+          "position": "FS",
+          "rank": 3,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        },
+        "after": {
+          "name": "P.J. Locke",
+          "playerId": "00-0035227",
+          "espnId": "3929850",
+          "position": "FS",
+          "rank": 2,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        }
+      },
+      {
+        "identity": [
+          "00-0037578",
+          "FS",
+          "Base 3-4 D"
+        ],
+        "before": {
+          "name": "Juanyeh Thomas",
+          "playerId": "00-0037578",
+          "espnId": "4360590",
+          "position": "FS",
+          "rank": 2,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        },
+        "after": null
+      },
+      {
+        "identity": [
+          "00-0039465",
+          "NB",
+          "Base 3-4 D"
+        ],
+        "before": {
+          "name": "Reddy Steward",
+          "playerId": "00-0039465",
+          "espnId": "4428584",
+          "position": "NB",
+          "rank": 1,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        },
+        "after": null
+      },
+      {
+        "identity": [
+          "00-0040865",
+          "NB",
+          "Base 3-4 D"
+        ],
+        "before": {
+          "name": "Caleb Downs",
+          "playerId": "00-0040865",
+          "espnId": "4870706",
+          "position": "NB",
+          "rank": 2,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        },
+        "after": {
+          "name": "Caleb Downs",
+          "playerId": "00-0040865",
+          "espnId": "4870706",
+          "position": "NB",
+          "rank": 1,
+          "unit": "Base 3-4 D",
+          "sourceIds": [
+            "nflverse_depth"
+          ]
+        }
+      }
+    ],
+    "matchupPittsburghDepthUnchangedAfterRemovingMetadata": true,
+    "matchupPittsburghPlayerResearchUnchangedAfterRemovingMetadata": true,
+    "interpretation": "New weekly Questionable/Out reports are source-published week-5 status, not a confirmed game-day inactive list. Depth is a published order, not confirmation of starters. No values were invented, backfilled or substituted in this audit.",
+    "dallasDepthTimestampOnlySlotsRefreshed": 68
+  },
+  "snapshotBindings": {
+    "incomingRetrievedAt": "2026-10-10T06:30:23Z",
+    "incomingGeneratedAt": "2026-10-10T06:30:25Z",
+    "canonicalSnapshotSha256ReportedByProvenance": {
+      "before": "ef399cd379760c818353ff0a205de68ce7a417f4261fd943b959574bdbd20f17",
+      "after": "74cbadba692834ccafa7b90f534ceb25674d3b4e2e85f0c114cb1d9b060db90f",
+      "interpretation": "Canonical embedded-snapshot hash is distinct from the exact file-byte SHA256 listed under changedBounds."
+    },
+    "matchupDependencies": {
+      "currentSha256": "701d94d2f05c2f733f93ae74c231088a1d3388ad677531e02a8c522ac7f44e62",
+      "teamDetailsSha256": "2c6c40f2c19e977651bd45e7694f195694edba61277c5a5a9292c5ec42d68640",
+      "currentRetrievedAt": "2026-10-10T06:30:23Z",
+      "teamDetailsRetrievedAt": "2026-10-10T06:30:23Z",
+      "startingRoleEvidenceSha256": "c519979ea31519ef988d6ca88658f54e7d74b32081b105d43ad200f9c826d838",
+      "season": 2026,
+      "currentWeek": 5
+    },
+    "incomingDependencyHashesMatchObservedGitFileBytes": true,
+    "incomingPlayerHistoryHashMatchesObservedGitFileBytes": true,
+    "unchangedRosterSourceSha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e"
+  },
+  "recommendedPostRebaseChecks": [
+    {
+      "command": "npm run data:check",
+      "purpose": "Validate newly synchronized current/provenance/history bindings."
+    },
+    {
+      "command": "npm run test:data",
+      "purpose": "Run existing synthetic integrity regressions without publishing fixtures."
+    },
+    {
+      "command": "npm run test:updates",
+      "purpose": "Run existing automatic-update behavior groups."
+    },
+    {
+      "command": "npm run test:sources",
+      "purpose": "Run existing source-monitor regressions."
+    },
+    {
+      "command": "python3 qa/team-details/data.test.py",
+      "purpose": "Run saved team-details consistency checks; independent raw-source tests need a matching cache."
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py",
+      "purpose": "Run existing matchup integrity checks; raw-source evidence must match incoming snapshot SHA256."
+    }
+  ],
+  "limits": [
+    "No validators or browsers were run by this auditor; execution and final visual QA belong to the parent task.",
+    "Provider status/hash/timestamps are observed from committed manifests, not independently retrieved or factually re-verified.",
+    "Incoming origin data changes do not alter application source or local Home work.",
+    "No live deployment, confirmed participation, inactive list, starting lineup or player transfer is established by this static comparison."
+  ]
+}

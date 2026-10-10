@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Dollar · Home comparison</title>
+<style>
+  *{box-sizing:border-box} body{margin:0;background:#050910;color:#eaf2ff;font:15px/1.55 system-ui,sans-serif}
+  main{max-width:1180px;margin:auto;padding:28px 20px}h1{font-size:26px;line-height:1.2}h2{margin-top:38px;font-size:20px}
+  a{color:#85cfff}p{max-width:860px;color:#b8c7de}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+  button{font:inherit;padding:10px 18px;border:1px solid #45648c;border-radius:8px;background:#101e33;color:#eaf2ff;cursor:pointer}
+  button[aria-pressed=true]{background:#1a3b67;border-color:#8dcaff}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,430px));gap:20px}
+  figure{margin:0}figcaption{margin:8px 0 14px;font-size:13px;color:#b8c7de}img{display:block;width:100%;height:auto;border:1px solid #2a3c54}
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.note{border-left:2px solid #6dbdff;padding-left:14px}
+  @media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pair{gap:10px}main{padding:20px 12px}}
+</style>
+<main>
+  <h1>Home entrance, jewel and lighting review</h1>
+  <p>The approved visual source is the user's four-sport chat attachment. Its original image bytes are unavailable in this workspace. These are actual browser screenshots of the implementation, with before/after comparisons; this page does not claim a registered pixel comparison with the attachment.</p>
+  <p class="note">Visual review rejected an earlier Chromium capture with an unpainted NBA court. That original and its focused reproduction remain saved. The accepted captures below use the corrected image decoding and explicitly check the first visible venue.</p>
+  <div class="controls" aria-label="Choose screenshot set">
+    <button data-set="local-webkit-corrected" aria-pressed="true">Local WebKit</button>
+    <button data-set="local-chromium-corrected" aria-pressed="false">Local Chromium</button>
+  </div>
+  <div id="comparison"></div>
+  <p><a id="report" href="local-webkit-corrected/results.json">Original browser report</a> · <a href="reviews/cli-regressions.json">Data regression receipt</a> · <a href="RELEASE.md">Release record and limits</a></p>
+</main>
+<script>
+  const sports=['nfl','nba','nrl','ufc'];
+  const phones=[[393,852],[430,896]];
+  const baselines={nfl:[393,852],nba:[430,896],nrl:[430,896],ufc:[393,852]};
+  function figure(src,label){return `<figure><a href="${src}"><img src="${src}" alt="${label}" loading="lazy"></a><figcaption>${label}</figcaption></figure>`;}
+  function render(set){
+    const content=document.querySelector('#comparison');
+    content.innerHTML=sports.map(sport=>{
+      const [w,h]=baselines[sport];const filename=`home-${sport}-${w}x${h}.png`;
+      return `<h2>${sport.toUpperCase()} · ${w} × ${h} · before and after</h2><div class="pair">${figure('baseline-webkit/'+filename,'Before · original WebKit capture')}${figure(set+'/'+filename,'Refined · original browser capture')}</div>`;
+    }).join('')+phones.map(([w,h])=>`<h2>All four sports · ${w} × ${h}</h2><div class="grid">${sports.map(sport=>figure(`${set}/home-${sport}-${w}x${h}.png`,`${sport.toUpperCase()} · ${w} × ${h}`)).join('')}</div>`).join('');
+    document.querySelector('#report').href=set+'/results.json';
+    document.querySelectorAll('[data-set]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.set===set)));
+  }
+  document.querySelectorAll('[data-set]').forEach(button=>button.addEventListener('click',()=>render(button.dataset.set)));
+  render('local-webkit-corrected');
+</script>
+</html>

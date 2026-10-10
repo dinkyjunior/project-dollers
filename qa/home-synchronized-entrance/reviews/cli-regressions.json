@@ -1,0 +1,84 @@
+{
+  "status": "passed-existing-independent-cli-regressions",
+  "scope": "Home-only synchronized entrance source protection; source data and original test fixtures unchanged.",
+  "head": "64300cd79bf2f64f30544e0b16cc5b80b14ddebb",
+  "sourceBase": "66426461535fb8a51994c4c871bea765c7b936ed",
+  "sourceCurrentRetrievedAt": "2026-10-10T05:25:01Z",
+  "dataHashes": {
+    "assets/data/current.json": "10febe54019d962c2c0dd0e94fe4f4f2b8291c9d42cb28c330d37245ff56cfef",
+    "assets/data/matchup-breakdown.json": "bc04682c475b0940e56fa8542a698f3598d0b5770cc47f6108377b830a224ba8",
+    "assets/data/player-history.json": "366ac5d8d637c41d158cf8c0e2469613267ab92d64495625e5b09fcad5f8a47d",
+    "assets/data/provenance.json": "53aba7c7dbf9e829dda4ea6b67baaf728f1e4e3eff1f6e224685d47b54320047",
+    "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+    "assets/data/team-details.json": "64068acaa1f5befae475675413f0d0c052c1ce368007e98c2a48179b65b78e27"
+  },
+  "commands": [
+    {
+      "command": "npm run test:data",
+      "exitCode": 0,
+      "status": "passed",
+      "testCount": 22,
+      "behaviorGroups": null,
+      "fullToolOutputLog": "/workspace/recovery-qa/home-synchronized-cli-test-data.log",
+      "executionChunk": "379fe8",
+      "npmVersionNotice": "Informational npm update notice only; no installation or app change occurred."
+    },
+    {
+      "command": "npm run test:updates",
+      "exitCode": 0,
+      "status": "passed",
+      "testCount": null,
+      "behaviorGroups": 8,
+      "fullToolOutputLog": "/workspace/recovery-qa/home-synchronized-cli-test-updates.log",
+      "executionChunk": "c4fcfa",
+      "npmVersionNotice": "Informational npm update notice only; no installation or app change occurred."
+    },
+    {
+      "command": "npm run test:sources",
+      "exitCode": 0,
+      "status": "passed",
+      "testCount": 7,
+      "behaviorGroups": null,
+      "fullToolOutputLog": "/workspace/recovery-qa/home-synchronized-cli-test-sources.log",
+      "executionChunk": "0436eb",
+      "npmVersionNotice": "Informational npm update notice only; no installation or app change occurred."
+    },
+    {
+      "command": "npm run data:check",
+      "exitCode": 0,
+      "status": "passed",
+      "testCount": null,
+      "behaviorGroups": null,
+      "fullToolOutputLog": "/workspace/recovery-qa/home-synchronized-cli-data-check.log",
+      "executionChunk": "c9e3ab",
+      "npmVersionNotice": "Informational npm update notice only; no installation or app change occurred."
+    }
+  ],
+  "dataCheck": {
+    "teamCount": 32,
+    "rosterCount": 80,
+    "activeRosterCount": 53,
+    "season": 2026,
+    "currentWeek": 5,
+    "throughWeek": 5,
+    "playerHistory": {
+      "status": "passed",
+      "playerCount": 80,
+      "gameRowCount": 1273,
+      "firstSeason": 2005,
+      "lastSeason": 2026,
+      "unavailableSeasons": [],
+      "backfillRows": 0
+    },
+    "disagreements": 11,
+    "qualification": "Existing provider conflicts remain explicit; passed integrity validation does not assert all providers agree."
+  },
+  "failedTests": 0,
+  "skippedTests": 0,
+  "modifiedApplicationDataTests": false,
+  "browserOrProviderCallsMade": false,
+  "notRun": [
+    "npm test/legacy Home-nav browser suites: sole browser owner owns all engines, and old snapshot expectations should not overwrite historical evidence."
+  ],
+  "reviewLimit": "These actual CLI results validate saved source integrity and refresh behavior, not native artwork paint, synchronization geometry, FPS or hosted publication."
+}

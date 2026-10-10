@@ -8,7 +8,16 @@
 
   const svgNamespace = 'http://www.w3.org/2000/svg';
   const selectorSports = new Set(['nfl', 'nba', 'nrl', 'ufc']);
-  const selectorCircuits = new Map();
+  const lightCircuits = new Map();
+  // Measured solid optical rims in the polished atlas's shared 1488 × 224
+  // presentation frame. The circuit follows gemstone material, not its larger
+  // native hit target. Every outline starts at top centre and runs clockwise.
+  const entryOpticalRims = {
+    nfl: [[744, 5], [1412, 5], [1481, 64], [1481, 171], [1412, 220], [76, 220], [6, 171], [6, 64], [76, 5]],
+    nba: [[744, 5], [1412, 5], [1481, 65], [1481, 169], [1412, 217], [76, 217], [6, 169], [6, 65], [76, 5]],
+    nrl: [[744, 5], [1412, 5], [1481, 64], [1481, 168], [1412, 215], [76, 215], [6, 168], [6, 64], [76, 5]],
+    ufc: [[744, 6], [1412, 6], [1481, 64], [1481, 166], [1412, 214], [76, 214], [6, 166], [6, 64], [76, 6]]
+  };
 
   function svgElement(name, attributes) {
     const node = document.createElementNS(svgNamespace, name);
@@ -35,7 +44,7 @@
     defs.append(gradient);
   }
 
-  function addSelectorCircuit(button, sport, index) {
+  function addSelectorCircuit(button, sport) {
     if (button.querySelector('.home-gem-selector-circuit')) return;
     if (!selectorSports.has(sport)) return;
     const id = 'home-gem-circuit-' + sport;
@@ -43,8 +52,6 @@
       class: 'home-gem-selector-circuit', viewBox: '0 0 100 100',
       preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false'
     });
-    circuit.style.setProperty('--home-gem-circuit-duration', (6.7 + index * .73) + 's');
-    circuit.style.setProperty('--home-gem-circuit-delay', (-index * 1.61 - .42) + 's');
     const defs = svgElement('defs', {});
     const gradient = svgElement('linearGradient', {
       id, x1: '0%', y1: '0%', x2: '100%', y2: '0%'
@@ -68,22 +75,73 @@
       circuit.append(path);
     }
     button.append(circuit);
-    selectorCircuits.set(button, circuit);
-    measureSelectorCircuit(button);
+    lightCircuits.set(button, { circuit, kind: 'selector' });
+    measureLightCircuit(button);
   }
 
-  function measureSelectorCircuit(button) {
-    const circuit = selectorCircuits.get(button);
-    if (!circuit) return;
-    const width = button.offsetWidth;
-    const height = button.offsetHeight;
+  function measureLightCircuit(button) {
+    const installed = lightCircuits.get(button);
+    if (!installed) return;
+    const { circuit, kind } = installed;
+    // Border-free controls use border-box sizing. Resolved CSS dimensions keep
+    // fractional grid widths intact and exclude transient hover transforms.
+    const controlStyle = getComputedStyle(button);
+    const width = Number.parseFloat(controlStyle.width) || button.offsetWidth;
+    const height = Number.parseFloat(controlStyle.height) || button.offsetHeight;
     if (!width || !height) return;
-    const radius = Math.min(12, width / 2, height / 2);
     circuit.setAttribute('viewBox', `0 0 ${width + 4} ${height + 4}`);
+    if (kind === 'entry') {
+      const face = getComputedStyle(button, '::before');
+      const artWidth = Number.parseFloat(face.width) || width;
+      const artHeight = Number.parseFloat(face.height) || artWidth * 224 / 1488;
+      const left = 2 + (Number.parseFloat(face.left) || 0);
+      const top = 2 + (height - artHeight) / 2;
+      const rim = entryOpticalRims[home.dataset.homeSport] || entryOpticalRims.nfl;
+      const d = rim.map(([x, y], index) => (index ? 'L' : 'M') +
+        (left + x * artWidth / 1488).toFixed(3) + ' ' +
+        (top + y * artHeight / 224).toFixed(3)).join(' ') + 'Z';
+      circuit.querySelectorAll('path').forEach(path => path.setAttribute('d', d));
+      return;
+    }
+    const radius = Math.min(12, width / 2, height / 2);
     // SVG coordinates use this native button's measured pixels. The highlight
-    // follows the actual twelve-pixel corner rather than stretching a square.
-    const d = `M${2 + radius} 2H${2 + width - radius}Q${2 + width} 2 ${2 + width} ${2 + radius}V${2 + height - radius}Q${2 + width} ${2 + height} ${2 + width - radius} ${2 + height}H${2 + radius}Q2 ${2 + height} 2 ${2 + height - radius}V${2 + radius}Q2 2 ${2 + radius} 2Z`;
+    // starts at top centre and travels clockwise, like both ring lanes. A
+    // resize changes only this closed path, never its CSS phase or clock.
+    const d = `M${2 + width / 2} 2H${2 + width - radius}Q${2 + width} 2 ${2 + width} ${2 + radius}V${2 + height - radius}Q${2 + width} ${2 + height} ${2 + width - radius} ${2 + height}H${2 + radius}Q2 ${2 + height} 2 ${2 + height - radius}V${2 + radius}Q2 2 ${2 + radius} 2H${2 + width / 2}Z`;
     circuit.querySelectorAll('path').forEach(path => path.setAttribute('d', d));
+  }
+
+  function addEntryCircuit(button) {
+    if (button.querySelector('.home-gem-entry-circuit')) return;
+    const id = 'home-gem-circuit-entry';
+    const circuit = svgElement('svg', {
+      class: 'home-gem-entry-circuit', viewBox: '0 0 100 100',
+      preserveAspectRatio: 'none', 'aria-hidden': 'true', focusable: 'false'
+    });
+    const defs = svgElement('defs', {});
+    const gradient = svgElement('linearGradient', {
+      id, x1: '0%', y1: '0%', x2: '100%', y2: '0%'
+    });
+    for (const [offset, side] of [['0%', 'left'], ['49.9%', 'left'], ['50%', 'right'], ['100%', 'right']]) {
+      gradient.append(svgElement('stop', {
+        offset, 'stop-color': 'rgb(var(--home-gem-light-' + side + '-rgb))'
+      }));
+    }
+    defs.append(gradient);
+    circuit.append(defs);
+    for (const part of ['tail', 'hot', 'pin']) {
+      circuit.append(svgElement('path', {
+        class: 'home-gem-entry-' + part, pathLength: '1000', fill: 'none',
+        stroke: part === 'pin' ? '#f4ffff' : 'url(#' + id + ')',
+        'vector-effect': 'non-scaling-stroke', 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
+      }));
+    }
+    button.append(circuit);
+    lightCircuits.set(button, { circuit, kind: 'entry' });
+    measureLightCircuit(button);
+    // The existing sport-selector event updates geometry only. The same CSS
+    // animation objects, duration and phase survive every selection.
+    home.addEventListener('pd:home-sport', () => measureLightCircuit(button));
   }
 
   function addGlint(parent, x, y, kind, ordinal) {
@@ -230,12 +288,13 @@
 
   addRingSpecularGradient();
 
-  [...home.querySelectorAll('[data-home-select]')].forEach((button, index) => {
-    addSelectorCircuit(button, button.dataset.homeSelect, index);
+  [...home.querySelectorAll('[data-home-select]')].forEach(button => {
+    addSelectorCircuit(button, button.dataset.homeSelect);
   });
 
   const entry = home.querySelector('[data-home-entry]');
   if (entry) {
+    addEntryCircuit(entry);
     // The original native CTA and its accessible label/navigation are intact.
     // The photographic gemstone atlas remains underneath these small glints.
     for (const [index, side] of ['left', 'right'].entries()) {
@@ -284,17 +343,21 @@
   // Measure only at native layout events. Resizing a viewport or returning to
   // Home updates the real perimeter; animation remains entirely CSS driven.
   if ('ResizeObserver' in window) {
-    const selectorResize = new ResizeObserver(entries => {
-      entries.forEach(({ target }) => measureSelectorCircuit(target));
+    const circuitResize = new ResizeObserver(entries => {
+      entries.forEach(({ target }) => measureLightCircuit(target));
     });
-    selectorCircuits.forEach((circuit, button) => selectorResize.observe(button));
+    lightCircuits.forEach((installed, button) => circuitResize.observe(button));
   } else {
     window.addEventListener('resize', () => {
-      selectorCircuits.forEach((circuit, button) => measureSelectorCircuit(button));
+      lightCircuits.forEach((installed, button) => measureLightCircuit(button));
     }, { passive: true });
   }
 
   installBrandLighting();
 
+  // Measuring native controls can flush styles. Keep every continuous lane
+  // unanimated until all of them exist, then start their zero-delay CSS clocks
+  // together in one style update. Sport selection and resizing do not reset it.
+  home.dataset.homeLightCircuitReady = 'true';
   home.dataset.homeGemMotionInstalled = 'true';
 })();

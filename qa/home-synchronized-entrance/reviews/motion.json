@@ -1,0 +1,103 @@
+{
+  "reviewer": "home_motion_review",
+  "status": "accepted-local-motion",
+  "scope": "Independent current-source Home continuous-border timing, native fractional geometry after natural layout delivery, lifecycle and visible original-paint review. Deployment and live-hosted acceptance are separate.",
+  "source": {
+    "index.html": "d88c04818149505154a82422bc9298b26d38be48d98ac7e00753dd6cdc436cbc",
+    "assets/home-aperture-motion.js": "66d13e10fee36df58d827f25425c719a7a14922fef32b99af41d21b357f709e6",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883"
+  },
+  "unchangedLifecycleControllerSha256": "4a55cb0f869cc4a7b7c2eb54495ebff5a3c3460bd91eec2ea01faaa19372cb52",
+  "reports": [
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-corrected/results.json",
+      "sha256": "3bad10ccd2cef1f7ee7ac093a6f90883af2c3531c785731b6fc67a3725c7cd4f",
+      "browser": "26.0",
+      "engine": "webkit",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ]
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-chromium-corrected/results.json",
+      "sha256": "4a62d945f24e3ebe05f90b60f0b43e2c0291f46cddd959d2d21aaa707ae94285",
+      "browser": "151.0.7922.173",
+      "engine": "chromium",
+      "viewports": [
+        {
+          "width": 393,
+          "height": 852
+        },
+        {
+          "width": 430,
+          "height": 896
+        }
+      ]
+    }
+  ],
+  "nativeTimingProof": {
+    "fullSuiteSamples": 32,
+    "actualClosedPathsPerSample": 17,
+    "actualNativeDurationMs": 8800,
+    "actualNativeDelayMs": 0,
+    "sharedStartTimeCurrentTimeProgressSpread": 0,
+    "computedDashSpread": 0,
+    "sportAndResizeRetainInitialSharedStartTime": true,
+    "fiveBreatheClocksMatchSeventeenPathCurrentTimesInNormalRestoredReturnedStates": true,
+    "all165InfiniteClocksAdvanceNormalRestoredReturned": true,
+    "reducedAndInactiveInfiniteClocks": 0,
+    "fixedSpatialNBAHalvesVerifiedForRingEntryAndSelector": true,
+    "bothFrozenFifteenFileMapsAndTwentyTwoExactServedBodiesIndependentlyVerified": true
+  },
+  "fractionalGeometryProof": {
+    "allInitialSportRestoredReturnedAndChromiumResizeSamplesMatchNativeSVGViewBoxes": true,
+    "webkitImmediateResizeReadContainsPreObserverOldViewBox": true,
+    "focusedNaturalObserverSettledReport": "qa/home-synchronized-entrance/local-webkit-resize-settled/results.json",
+    "focusedReportSha256": "44359cc67f5254d6d3783c395c1640c54886ea34c03dba93125ff9c60a65c368",
+    "bothDirectionsAllFiveActualWidthsPlusFourAndHeightsPlusFourMatch": true,
+    "allSeventeenActualStartTimesRetainedAndClocksAdvanceTogetherAcrossResize": true,
+    "untouchedSettledAndLaterOriginalsDiffer": true,
+    "geometryWasNotChangedByTest": true
+  },
+  "paintProof": {
+    "sixteenFirstSelectedOriginalsHaveBoundPhotographicVenuePixels": true,
+    "twelveGenuineNaturalNormalRestoredReturnedPairsHaveIndependentAtLeastFiveLevelPixelChangesInBrandRingEntryAndDock": true,
+    "originalPngBodiesIndependentlyHashVerified": true,
+    "directOriginalViews": [
+      "local-chromium-corrected/home-nba-430x896.png",
+      "chromium-venue-repro-sync/nba-393-0.png",
+      "chromium-venue-repro-sync/nba-430-0.png",
+      "local-webkit-corrected/home-nfl-393x852-motion-a.png",
+      "local-webkit-corrected/home-nfl-393x852-motion-b.png",
+      "local-webkit-corrected/home-nrl-430x896.png",
+      "local-chromium-corrected/home-ufc-430x896.png",
+      "local-webkit-resize-settled/home-resize-393-to-430-settled.png",
+      "local-webkit-resize-settled/home-resize-430-to-393-settled.png"
+    ],
+    "finding": "Matched selector heads visibly follow all four outer borders. Ring and gem highlights stay local to their material; independent brand glints do not obstruct controls. Expanded photographic venues and continuous chrome are visible, including the corrected NBA430 court. No visual-motion blocker in these directly reviewed frames."
+  },
+  "preservedFailure": {
+    "absentVenueOriginal": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+    "focusedReport": "qa/home-synchronized-entrance/chromium-venue-repro/results.json",
+    "focusedReportSha256": "946669ee0aa4ab5008728f3837fec20e81f59d7faa20f0fdbbbc0df96468345e",
+    "correction": "Only four venue image decoding hints changed async to sync; no forced decode, style replacement or animation-clock workaround.",
+    "correctedColdReport": "qa/home-synchronized-entrance/chromium-venue-repro-sync/results.json",
+    "correctedColdReportSha256": "922cb00bd251699deae18e0aa0faf3b5e5d1bcab12cc6ab133776c44b9ed6c11",
+    "malformedEarlyPathCheckpointRetained": "qa/home-synchronized-entrance/entrance-checkpoint/results.json"
+  },
+  "qualifications": [
+    "Initial, sport and resize clocks preserve their shared startTime. Genuine hidden routes and reduced-motion cancel/recreate CSS objects; new groups remain synchronized, but prior phase retention and immediate resume timing are not certified.",
+    "WebKit computed dash can lag freshly read WAAPI progress. Within every captured sample all17 match exactly; no same-tick painted-style versus WAAPI phase claim.",
+    "The immediate WebKit resized geometry read is not a screenshot; its old viewBox updates through genuine ResizeObserver layout delivery. Focused settled native paints and later observations match without app changes. Measured tool durations are not physical-device resize latency guarantees.",
+    "Native browser evidence does not certify physical-iPhone 60fps, registered pixel-exact reference comparison or live-site behavior.",
+    "Independent brand/diamond sparkle and venue atmosphere are intentionally outside the synchronized continuous-border period."
+  ],
+  "appSourceEditedDuringReview": false
+}

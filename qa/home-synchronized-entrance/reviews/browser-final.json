@@ -1,0 +1,280 @@
+{
+  "schema": "project-dollar-bounded-specialist-audit/v1",
+  "reviewer": "home_browser_final",
+  "createdAt": "2026-10-10T06:56:47.903650+00:00",
+  "status": "accepted",
+  "scope": "Closed corrected local Chromium and WPE reports, existing original-pixel proof, direct replacement-owner visual checks, and focused native WPE resize-observer settling evidence",
+  "soleBrowserOwner": true,
+  "DOMStyleClockResponseSubstitution": false,
+  "source": {
+    "index.html": "d88c04818149505154a82422bc9298b26d38be48d98ac7e00753dd6cdc436cbc",
+    "assets/home-aperture.css": "e9e16dabfa8c61c25b68d9c5c8765fb478d42b573285b22ffbbfc6a70d29225a",
+    "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "assets/home-gem-layout.css": "ba0a878d321b3704cffbcbeb5de7c753f2638449274a4d4ffc0772d35508d97f",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+    "assets/home-brand-lighting.css": "adf79e188bc2d47aa0be2b594f9a8ba097c7c556505b57e6ff24dfa6c76be2e3",
+    "assets/home-aperture-motion.js": "66d13e10fee36df58d827f25425c719a7a14922fef32b99af41d21b357f709e6",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+    "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "sourceCurrentlyMatchesBoundReports": true,
+  "runs": [
+    {
+      "engine": "chromium",
+      "runtime": "151.0.7922.173",
+      "report": "qa/home-synchronized-entrance/local-chromium-corrected/results.json",
+      "reportSha256": "4a62d945f24e3ebe05f90b60f0b43e2c0291f46cddd959d2d21aaa707ae94285",
+      "executedHelperSha256": "743a8c8a1226fe90f1d9ad5ee9cd8659e7964277211901bb80d688e599d2ca22",
+      "venueHelperSha256": "9c7731eed6535630acee9dcc86b0efc6caf29f397d6f0e4bf11f680e00edd1e1",
+      "sourceStable": true,
+      "browserClosed": true,
+      "actualExactServedBodyCount": 22,
+      "pixelProof": "qa/home-synchronized-entrance/local-chromium-corrected/pixel-motion-source-proof.json",
+      "pixelProofSha256": "0216ce05a78f007c96506712592e2e69ff107b3e20cb6f6b624159fc3a064e22",
+      "originalCount": 34,
+      "coreNativeActionCount": 30,
+      "viewports": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeSynchronizedSamples": 8,
+          "borderPaths": 17,
+          "infiniteNativeHomeClocks": 165,
+          "allOriginalVenuePixelGuardsPassed": true,
+          "consoleHTTPAndRequestFailures": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeSynchronizedSamples": 8,
+          "borderPaths": 17,
+          "infiniteNativeHomeClocks": 165,
+          "allOriginalVenuePixelGuardsPassed": true,
+          "consoleHTTPAndRequestFailures": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "extraViewportStatuses": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 600
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 700
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "runtime": "26.0",
+      "report": "qa/home-synchronized-entrance/local-webkit-corrected/results.json",
+      "reportSha256": "3bad10ccd2cef1f7ee7ac093a6f90883af2c3531c785731b6fc67a3725c7cd4f",
+      "executedHelperSha256": "743a8c8a1226fe90f1d9ad5ee9cd8659e7964277211901bb80d688e599d2ca22",
+      "venueHelperSha256": "9c7731eed6535630acee9dcc86b0efc6caf29f397d6f0e4bf11f680e00edd1e1",
+      "sourceStable": true,
+      "browserClosed": true,
+      "actualExactServedBodyCount": 22,
+      "pixelProof": "qa/home-synchronized-entrance/local-webkit-corrected/pixel-motion-source-proof.json",
+      "pixelProofSha256": "3cd4fcb2e882662c24a9df0682eaec0b192950e1965c17fc7f272b76e6cc6eae",
+      "originalCount": 26,
+      "coreNativeActionCount": 30,
+      "viewports": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "status": "passed",
+          "nativeSynchronizedSamples": 8,
+          "borderPaths": 17,
+          "infiniteNativeHomeClocks": 165,
+          "allOriginalVenuePixelGuardsPassed": true,
+          "consoleHTTPAndRequestFailures": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "status": "passed",
+          "nativeSynchronizedSamples": 8,
+          "borderPaths": 17,
+          "infiniteNativeHomeClocks": 165,
+          "allOriginalVenuePixelGuardsPassed": true,
+          "consoleHTTPAndRequestFailures": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "extraViewportStatuses": []
+    }
+  ],
+  "independentlyDirectlyViewed": [
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-corrected/home-nfl-393x852.png",
+      "sha256": "80cbcb8025b4b43ceec484b28c73de5d16c045ed901d626e82323c2cf02f091e",
+      "correctVenueVisiblyPainted": true,
+      "cleanBorderGeometryAndNoClippedControls": true
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-corrected/home-nba-430x896.png",
+      "sha256": "8c4e1facbc16a0d1e2077a48bd91baa0c5d41cd1a5c8f2fefb81288dfe5e3ca0",
+      "correctVenueVisiblyPainted": true,
+      "cleanBorderGeometryAndNoClippedControls": true
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-corrected/home-ufc-430x896.png",
+      "sha256": "50411d278af0cab469562ad15f0987546bf4c8bd8f9b1c58db813a61d5a0b2e5",
+      "correctVenueVisiblyPainted": true,
+      "cleanBorderGeometryAndNoClippedControls": true
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-resize-settled/home-resize-393-to-430-settled.png",
+      "sha256": "4340a8b59d307d279e0d8b25dbb902341220a54ce47d87add9d4bfa85496c908",
+      "correctVenueVisiblyPainted": true,
+      "cleanBorderGeometryAndNoClippedControls": true
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit-resize-settled/home-resize-430-to-393-settled.png",
+      "sha256": "e25af47f276294edac659b68d55e2cb7c84281ce02b032028baff11b3476e019",
+      "correctVenueVisiblyPainted": true,
+      "cleanBorderGeometryAndNoClippedControls": true
+    }
+  ],
+  "priorDirectVisualReview": {
+    "reviewer": "home_native_render",
+    "path": "qa/home-synchronized-entrance/reviews/browser.json",
+    "sha256": "578b2f8b8ea048abc92482f33b14b9dd03ec431a841d3e5dcf349b11f8e4d160",
+    "claimAttributedToPriorReviewer": "All sixteen corrected sport/phone originals and all four Chromium responsive viewport pairs were directly viewed by the former sole browser owner; this replacement reviewer directly inspected only the five originals listed above."
+  },
+  "nativeResizeObserverQualification": {
+    "report": "qa/home-synchronized-entrance/local-webkit-resize-settled/results.json",
+    "reportSha256": "44359cc67f5254d6d3783c395c1640c54886ea34c03dba93125ff9c60a65c368",
+    "executedHelperSha256": "5dd0d7311e8d351da2626481405b10eeac1f34f26ec24a1800dd800ada020061",
+    "sourceStable": true,
+    "browserClosed": true,
+    "transitions": [
+      {
+        "from": {
+          "width": 393,
+          "height": 852
+        },
+        "to": {
+          "width": 430,
+          "height": 896
+        },
+        "immediateSampleBeforeObserverGeometryMatched": false,
+        "postPaintAllFiveViewBoxesMatchComputedWidthAndHeightPlusFour": true,
+        "allSeventeenNativeStartTimesRetained": true,
+        "allSeventeenNativeTimesAdvanceTogether": true,
+        "settledOriginal": {
+          "file": "home-resize-393-to-430-settled.png",
+          "sha256": "4340a8b59d307d279e0d8b25dbb902341220a54ce47d87add9d4bfa85496c908",
+          "bytes": 2586124,
+          "at": "2026-10-10T06:54:25.427Z",
+          "naturalAnimationPhase": true
+        },
+        "naturallyChangedLaterOriginal": {
+          "file": "home-resize-393-to-430-later.png",
+          "sha256": "58a6461c69e45c557eb46356e6712e6ef67f07b41c5ff8953e231c89cb59675a",
+          "bytes": 2568456,
+          "at": "2026-10-10T06:54:32.927Z",
+          "naturalAnimationPhase": true
+        }
+      },
+      {
+        "from": {
+          "width": 430,
+          "height": 896
+        },
+        "to": {
+          "width": 393,
+          "height": 852
+        },
+        "immediateSampleBeforeObserverGeometryMatched": false,
+        "postPaintAllFiveViewBoxesMatchComputedWidthAndHeightPlusFour": true,
+        "allSeventeenNativeStartTimesRetained": true,
+        "allSeventeenNativeTimesAdvanceTogether": true,
+        "settledOriginal": {
+          "file": "home-resize-430-to-393-settled.png",
+          "sha256": "e25af47f276294edac659b68d55e2cb7c84281ce02b032028baff11b3476e019",
+          "bytes": 2276939,
+          "at": "2026-10-10T06:54:56.328Z",
+          "naturalAnimationPhase": true
+        },
+        "naturallyChangedLaterOriginal": {
+          "file": "home-resize-430-to-393-later.png",
+          "sha256": "dffe1bdf2f1c11e612ce1a9764788305e80ea3b1e772fafd6ac17342a8b7dbf6",
+          "bytes": 2266135,
+          "at": "2026-10-10T06:55:03.331Z",
+          "naturalAnimationPhase": true
+        }
+      }
+    ],
+    "finding": "The raw immediate WPE viewport samples precede native ResizeObserver geometry delivery. After a bounded read-only exact geometry condition and untouched natural original paint, the five circuits match current fractional CSS dimensions. All seventeen clocks retain their starts and advance together. The original reports do not certify immediate observer delivery."
+  },
+  "findings": [
+    "Actual venue photographs are visible in the three directly checked corrected sport originals and both resized originals. The chrome opening, wordmark, gemstone facets and selector marks stay crisp at DPR2, with visible lighting on complete borders and clear venue detail.",
+    "Closed raw reports verify native controls, unavailable entries, keyboard selection, direct refresh persistence, genuine reduced-motion settling, inactive Home pause, and NFL entry/return on both required phone viewports.",
+    "Existing original-pixel proofs bind changed pixels in the brand, ring, entry and selector regions to naturally advancing native paint. No substituted pixels, responses, DOM, styles or clocks are accepted.",
+    "All seventeen closed border paths share one 8.8-second native clock with equal phase in the recorded natural, sport, resize, reduced-restored and route-returned samples. The targeted resize proof adds geometry completion to the clock-only resize sample."
+  ],
+  "limitations": [
+    "The approved chat render remains the visual authority, but original attachment bytes are unavailable for registered pixel comparison. This receipt accepts the refined material/render and native behavior; it does not claim registered pixel identity.",
+    "Desktop Chromium/WPE mobile emulation does not certify physical iPhone Safari, device frame rate or cold mobile-network latency.",
+    "Reduced-motion restoration and route return are verified after native media/paint settling; immediate continuation and retained phase across hiding/reduced motion are not claimed.",
+    "Hosted deployment and strict-TLS hosted browser verification remain pending."
+  ],
+  "priorFailuresPreserved": [
+    "qa/home-synchronized-entrance/entrance-checkpoint/results.json",
+    "qa/home-synchronized-entrance/local-chromium/results.json",
+    "qa/home-synchronized-entrance/local-chromium/rejected-venue-visual-review.json",
+    "qa/home-synchronized-entrance/chromium-venue-repro/results.json"
+  ]
+}

@@ -1,31 +1,25 @@
-/* One locally bundled, high-resolution gemstone atlas supplies the optical
-   crown, pavilion and end cuts. CSS presents each original row without editing
-   or resampling the source artwork. Native labels/navigation stay separate. */
+/* A native lossless photographic atlas supplies the polished gem material.
+   The shared 1488 x 224 presentation frames preserve the source aspect ratio;
+   native labels and input remain separate from its optical surface. */
 .page[data-page="home"] {
-  --home-gem-face: url("home/gem-atlas.webp");
-  --home-gem-face-size: 106.297578% 497.087379%;
-  --home-gem-face-position: 50.549451% 6.356968%;
-  --home-gem-face-aspect: 1445 / 206;
+  --home-gem-face: url("home/gem-atlas-polished.webp");
+  --home-gem-face-size: 103.2258064516% 457.1428571429%;
+  --home-gem-face-position: 50% 5.25%;
+  --home-gem-face-aspect: 1488 / 224;
   --home-gem-light-left-rgb: 40 84 255;
   --home-gem-light-right-rgb: 40 84 255;
 }
 .page[data-page="home"][data-home-sport="nba"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 35.784314%;
-  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-face-position: 50% 36.375%;
   --home-gem-light-right-rgb: 255 22 56;
 }
 .page[data-page="home"][data-home-sport="nrl"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 65.563725%;
-  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-face-position: 50% 67%;
   --home-gem-light-left-rgb: 0 255 94;
   --home-gem-light-right-rgb: 0 255 94;
 }
 .page[data-page="home"][data-home-sport="ufc"] {
-  --home-gem-face-size: 106.297578% 492.307692%;
-  --home-gem-face-position: 50.549451% 95.465686%;
-  --home-gem-face-aspect: 1445 / 208;
+  --home-gem-face-position: 50% 97.125%;
   --home-gem-light-left-rgb: 255 22 56;
   --home-gem-light-right-rgb: 255 22 56;
 }
@@ -47,7 +41,9 @@
     drop-shadow(2px 0 2px rgb(var(--home-gem-light-right-rgb) / .75))
     drop-shadow(-3px 1px 8px rgb(var(--home-gem-light-left-rgb) / .32))
     drop-shadow(3px 1px 8px rgb(var(--home-gem-light-right-rgb) / .32));
-  filter: var(--home-gem-cast-shadow);
+  /* Cast light belongs to the optical artwork. Native lettering remains
+     outside filtered raster compositing so its translucent edges stay crisp. */
+  filter: none;
   overflow: visible;
 }
 .page[data-page="home"] .home-entry::before {
@@ -64,6 +60,7 @@
   border: 0;
   background: var(--home-gem-face) var(--home-gem-face-position) /
     var(--home-gem-face-size) no-repeat;
+  filter: var(--home-gem-cast-shadow);
   box-shadow: none;
   animation: none;
   pointer-events: none;
@@ -127,19 +124,25 @@
   background: linear-gradient(180deg, #03081208, #01040966);
 }
 .page[data-page="home"] .home-sport-option {
+  --home-control-radius: 12px;
   --gem-selector-left: #2862ff;
   --gem-selector-right: #2862ff;
   --gem-selector-left-rgb: 40 98 255;
   --gem-selector-right-rgb: 40 98 255;
-  border: 2px solid transparent;
-  border-radius: 12px;
+  --gem-selector-core-left: #a8d9ff;
+  --gem-selector-core-right: #a8d9ff;
+  /* The measured SVG and this masked outline use the same native box. A
+     transparent native border would shrink the SVG's percentage containing
+     block while its viewBox still used offsetWidth, displacing its runner. */
+  border: 0;
+  border-radius: var(--home-control-radius);
   min-height: 68px;
   color: #eaf5fd;
   background: radial-gradient(ellipse at 10% 0%, rgb(var(--gem-selector-left-rgb) / .19), transparent 66%) padding-box,
     radial-gradient(ellipse at 90% 100%, rgb(var(--gem-selector-right-rgb) / .16), transparent 66%) padding-box,
     linear-gradient(180deg, #0914209c, #02070d59 54%, #08131d80) padding-box;
-  box-shadow: -1px 0 4px rgb(var(--gem-selector-left-rgb) / .85),
-    1px 0 4px rgb(var(--gem-selector-right-rgb) / .85),
+  box-shadow: -1px 0 4px rgb(var(--gem-selector-left-rgb) / 1),
+    1px 0 4px rgb(var(--gem-selector-right-rgb) / 1),
     -3px 0 10px rgb(var(--gem-selector-left-rgb) / .45),
     3px 0 10px rgb(var(--gem-selector-right-rgb) / .45),
     inset 0 1px 0 #efffff44, inset 0 -1px 0 #0009;
@@ -151,43 +154,59 @@
   --gem-selector-right: #ff2548;
   --gem-selector-left-rgb: 40 98 255;
   --gem-selector-right-rgb: 255 37 72;
+  --gem-selector-core-right: #ffc0c9;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="nrl"] {
   --gem-selector-left: #00ff7f;
   --gem-selector-right: #00ff7f;
   --gem-selector-left-rgb: 0 255 127;
   --gem-selector-right-rgb: 0 255 127;
+  --gem-selector-core-left: #c1ffde;
+  --gem-selector-core-right: #c1ffde;
 }
 .page[data-page="home"] .home-sport-option[data-home-select="ufc"] {
   --gem-selector-left: #ff153e;
   --gem-selector-right: #ff153e;
   --gem-selector-left-rgb: 255 21 62;
   --gem-selector-right-rgb: 255 21 62;
+  --gem-selector-core-left: #ffc0c9;
+  --gem-selector-core-right: #ffc0c9;
 }
 .page[data-page="home"] .home-sport-option::before,
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
   content: "";
   position: absolute;
-  inset: 1px;
-  border-radius: 9px;
-  border: 1px solid #dffaff28;
-  background: none;
-  box-shadow: inset 0 0 2px #efffff40;
-  opacity: .5;
+  /* Fine ice light shares the saturated cut's centreline. It remains lit
+     around all four sides while the short travelling highlight passes. */
+  inset: -.5px;
+  width: auto;
+  height: auto;
+  padding: 1px;
+  border-radius: calc(var(--home-control-radius) + .5px);
+  border: 0;
+  background: linear-gradient(90deg, var(--gem-selector-core-left) 0 49.8%, var(--gem-selector-core-right) 50.2% 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-shadow: none;
+  opacity: .92;
   pointer-events: none;
   animation: none;
-  z-index: 1;
+  z-index: 3;
 }
 .page[data-page="home"] .home-sport-option::after,
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::after {
   content: "";
   position: absolute;
-  inset: -2px;
+  /* A two-pixel cut centred on the native outer edge matches the travelling
+     SVG's centreline; neither layer is scaled inside a border padding box. */
+  inset: -1px;
   width: auto;
   height: auto;
   padding: 2px;
   border: 0;
-  border-radius: inherit;
+  border-radius: calc(var(--home-control-radius) + 1px);
   background: linear-gradient(90deg, var(--gem-selector-left) 0 49.8%, var(--gem-selector-right) 50.2% 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -209,8 +228,7 @@
     inset 0 1px 0 #f5ffff88, inset 0 -1px 0 #0009;
 }
 .page[data-page="home"] .home-sport-option[aria-pressed="true"]::before {
-  opacity: .5;
-  border-color: #efffff3a;
+  opacity: 1;
 }
 .page[data-page="home"] .home-sport-option > img,
 .page[data-page="home"] .home-sport-option > span:not(.home-gem-glint) {
@@ -238,11 +256,12 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .page[data-page="home"] .home-entry:not(:disabled):hover {
-    filter: brightness(1.08) var(--home-gem-cast-shadow);
     transform: translateY(-1px);
   }
+  .page[data-page="home"] .home-entry:not(:disabled):hover::before {
+    filter: brightness(1.08) var(--home-gem-cast-shadow);
+  }
   .page[data-page="home"] .home-sport-option:hover {
-    background-color: #182734;
     transform: translateY(-1px);
   }
 }

@@ -1,6 +1,7 @@
 /* Home-only motion. Fixed sport hues are never rotated: short highlights move
    along the photographic metal channel and each complete selector perimeter. */
 .page[data-page="home"] {
+  --home-light-period: 8.8s;
   --home-motion-highlight-left: #90adff;
   --home-motion-highlight-right: #90adff;
 }
@@ -20,22 +21,17 @@
      stroke made the previous channel look painted over instead of recessed. */
   stroke: url(#home-aperture-moving-specular);
   stroke-width: 5.5;
-  stroke-dasharray: 11 225 7 341 14 402;
+  stroke-dasharray: 24 976;
   opacity: .8;
-  animation: pd-home-aperture-channel 8.8s linear infinite;
-  animation-play-state: var(--home-motion-play-state, paused);
 }
 .page[data-page="home"] .aperture-channel-art .aperture-metal-runner {
   stroke: #dad7cc;
   stroke-width: 3.5;
   stroke-dasharray: 12 988;
   opacity: .46;
-  animation: pd-home-aperture-channel 21.3s linear infinite reverse;
-  animation-delay: -7.4s;
-  animation-play-state: var(--home-motion-play-state, paused);
 }
 
-.page[data-page="home"] .home-gem-selector-circuit {
+.page[data-page="home"] :is(.home-gem-selector-circuit, .home-gem-entry-circuit) {
   display: block;
   position: absolute;
   inset: -2px;
@@ -44,13 +40,23 @@
   overflow: visible;
   z-index: 4;
   pointer-events: none;
-  animation: pd-home-gem-breathe 5.4s ease-in-out infinite;
-  animation-delay: var(--home-gem-circuit-delay, 0s);
+}
+.page[data-page="home"] .home-gem-entry-circuit { z-index: 2; }
+.page[data-page="home"] :is(.aperture-channel-art .aperture-neon-runner,
+  .aperture-channel-art .aperture-metal-runner,
+  .home-gem-selector-circuit, .home-gem-selector-circuit path,
+  .home-gem-entry-circuit, .home-gem-entry-circuit path) {
+  animation: none;
+}
+.page[data-page="home"][data-home-light-circuit-ready="true"] :is(
+  .aperture-channel-art .aperture-neon-runner, .aperture-channel-art .aperture-metal-runner,
+  .home-gem-selector-circuit path, .home-gem-entry-circuit path) {
+  animation: pd-home-aperture-channel var(--home-light-period) linear 0s infinite normal;
   animation-play-state: var(--home-motion-play-state, paused);
 }
-.page[data-page="home"] .home-gem-selector-circuit path {
-  animation: pd-home-aperture-channel var(--home-gem-circuit-duration, 7s) linear infinite;
-  animation-delay: var(--home-gem-circuit-delay, 0s);
+.page[data-page="home"][data-home-light-circuit-ready="true"] :is(
+  .home-gem-selector-circuit, .home-gem-entry-circuit) {
+  animation: pd-home-gem-breathe var(--home-light-period) ease-in-out 0s infinite normal;
   animation-play-state: var(--home-motion-play-state, paused);
 }
 .page[data-page="home"] .home-gem-selector-tail {
@@ -67,6 +73,21 @@
   stroke-width: 1.25;
   stroke-dasharray: 7 993;
   opacity: .96;
+}
+.page[data-page="home"] .home-gem-entry-tail {
+  stroke-width: 4;
+  stroke-dasharray: 49 951;
+  opacity: .22;
+}
+.page[data-page="home"] .home-gem-entry-hot {
+  stroke-width: 2.2;
+  stroke-dasharray: 24 976;
+  opacity: .8;
+}
+.page[data-page="home"] .home-gem-entry-pin {
+  stroke-width: 1;
+  stroke-dasharray: 7 993;
+  opacity: .85;
 }
 
 .page[data-page="home"] .home-gem-glint {
@@ -161,6 +182,8 @@
   .page[data-page="home"] .aperture-metal-runner,
   .page[data-page="home"] .home-gem-selector-circuit,
   .page[data-page="home"] .home-gem-selector-circuit path,
+  .page[data-page="home"] .home-gem-entry-circuit,
+  .page[data-page="home"] .home-gem-entry-circuit path,
   .page[data-page="home"] .home-gem-glint,
   .page[data-page="home"] .home-gem-facet-reflection::before {
     animation: none !important;
@@ -170,6 +193,10 @@
   .page[data-page="home"] .home-gem-selector-tail { opacity: .12; }
   .page[data-page="home"] .home-gem-selector-hot { opacity: .35; }
   .page[data-page="home"] .home-gem-selector-pin { opacity: .58; }
+  .page[data-page="home"] .home-gem-entry-circuit { opacity: .9; }
+  .page[data-page="home"] .home-gem-entry-tail { opacity: .1; }
+  .page[data-page="home"] .home-gem-entry-hot { opacity: .35; }
+  .page[data-page="home"] .home-gem-entry-pin { opacity: .58; }
   .page[data-page="home"] .home-gem-glint { opacity: .18; transform: none; }
   .page[data-page="home"] .home-gem-facet-reflection::before { opacity: 0; transform: none; }
 }

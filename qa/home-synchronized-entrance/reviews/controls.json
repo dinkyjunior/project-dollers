@@ -1,0 +1,650 @@
+{
+  "schema": "project-dollar-bounded-specialist-audit/v1",
+  "reviewer": "home_controls_review",
+  "createdAt": "2026-10-10T06:38:49.091278+00:00",
+  "status": "accepted-controls-release-blocked",
+  "scope": "Home entry and four selectors: controls, material quality, native interaction and geometry evidence; no app source changes during this audit",
+  "reference": {
+    "source": "Latest approved 1303x571 four-sport image attached in chat",
+    "binaryAvailable": false,
+    "registeredPixelComparison": false
+  },
+  "source": {
+    "index.html": "205bcd0cc281dd696e395b2ebcc65e50f1f980c7a042541aaa5e669fb445d5aa",
+    "assets/home-aperture.css": "e9e16dabfa8c61c25b68d9c5c8765fb478d42b573285b22ffbbfc6a70d29225a",
+    "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "assets/home-gem-layout.css": "ba0a878d321b3704cffbcbeb5de7c753f2638449274a4d4ffc0772d35508d97f",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+    "assets/home-brand-lighting.css": "adf79e188bc2d47aa0be2b594f9a8ba097c7c556505b57e6ff24dfa6c76be2e3",
+    "assets/home-aperture-motion.js": "66d13e10fee36df58d827f25425c719a7a14922fef32b99af41d21b357f709e6",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+    "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "browserReports": [
+    {
+      "report": "qa/home-synchronized-entrance/local-webkit/results.json",
+      "sha256": "178a1f660c77825eb2fa9637c4c9fc2fd8514be771e794e7d5a202b20b6d0e7d",
+      "engine": "webkit",
+      "passed": true,
+      "closed": true,
+      "sourceStable": true,
+      "servedBodiesVerified": 22,
+      "nativeActions": 30,
+      "mainOriginals": [
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nfl-393x852.png",
+          "sha256": "226b99f02c7ef3c4646f01f738a9c1fffd2bdf387b8a5cb3cb46251caa3fc4a4",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nfl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nba-393x852.png",
+          "sha256": "622165fb72cfbb25f0daa576e495c29b70cd3f80eabf95b1518eaccdab778fa9",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nba"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nrl-393x852.png",
+          "sha256": "e6a59b5a08c8cf8dc30d1602421a2e3b06f6acffb1fd1b9709e2d21a874f346d",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nrl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-ufc-393x852.png",
+          "sha256": "f67016d488e61d79a293d7ce9d69e0e5a8ed3bf5af087cd25d17b96dcad5f2f6",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "ufc"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nfl-430x896.png",
+          "sha256": "0e9adb8fde2b3543645558d3c9763c50b5dcc41bdd0d8b99e28c538d14ad8deb",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nfl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nba-430x896.png",
+          "sha256": "8c3cbc221e7438377d78fd79bd5a37ed615d5ecdcea5e9cc395d4a7df0eda6fe",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nba"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-nrl-430x896.png",
+          "sha256": "f8040e1c6f1ec8393802ea369c5ae3dd1bca72188daeaf981b44b833b269d470",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nrl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-webkit/home-ufc-430x896.png",
+          "sha256": "585426b9c5d0d3eaeb7ac45648ee3ae9bdda5e4d7bffa0363caa0c566f599282",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "ufc"
+        }
+      ],
+      "controlMeasurements": [
+        {
+          "viewport": "393x852",
+          "sport": "nfl",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "nba",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "nrl",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "ufc",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nfl",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nba",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nrl",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "ufc",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        }
+      ],
+      "extraViewportStatuses": []
+    },
+    {
+      "report": "qa/home-synchronized-entrance/local-chromium/results.json",
+      "sha256": "e58cdd2d30a1605f325c340fa802bf9423a1eb060580eb5642c2fca2f2d9b7c2",
+      "engine": "chromium",
+      "passed": true,
+      "closed": true,
+      "sourceStable": true,
+      "servedBodiesVerified": 22,
+      "nativeActions": 30,
+      "mainOriginals": [
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nfl-393x852.png",
+          "sha256": "68e9b4d38a31b851415d141b342462e6d6cfc3dc8642f33c9e41011063df8d6a",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nfl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nba-393x852.png",
+          "sha256": "4ae95fe27822132ec95db0d52a3133a7d82a9529e005dd1b4edaa74934e837ee",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nba"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nrl-393x852.png",
+          "sha256": "3d5d65c88b940021545eb8952c77d2d91267ffef9ee82d119b3105114df83b47",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "nrl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-ufc-393x852.png",
+          "sha256": "13c744e4238c502f34601de18680280a497f8cacef3b77252fd57eab365908a5",
+          "pixelDimensions": [
+            786,
+            1704
+          ],
+          "sport": "ufc"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nfl-430x896.png",
+          "sha256": "e91b532acd8963c39acf268ae6debf5189b7aa1d40e2463386fb3464f237d8fa",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nfl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+          "sha256": "41a5f9eb1cb3aad26e7dfe7992eb187fec58058c50cc056a75cd3c5fbcabd350",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nba"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-nrl-430x896.png",
+          "sha256": "e8375aa2c95d30acaddcba4c696c28dd1b45177e8ff2e4778e8ec06cd8a6b086",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "nrl"
+        },
+        {
+          "path": "qa/home-synchronized-entrance/local-chromium/home-ufc-430x896.png",
+          "sha256": "08fc2c77bfea151269fd2d2a012ba6a2c539d4b9148768934ff20674e27a6789",
+          "pixelDimensions": [
+            860,
+            1792
+          ],
+          "sport": "ufc"
+        }
+      ],
+      "controlMeasurements": [
+        {
+          "viewport": "393x852",
+          "sport": "nfl",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "nba",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "nrl",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "393x852",
+          "sport": "ufc",
+          "entry": [
+            361,
+            60
+          ],
+          "selector": [
+            85,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nfl",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nba",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "nrl",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        },
+        {
+          "viewport": "430x896",
+          "sport": "ufc",
+          "entry": [
+            398,
+            60
+          ],
+          "selector": [
+            94.25,
+            68
+          ],
+          "allFiveHit": true
+        }
+      ],
+      "extraViewportStatuses": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 600
+          },
+          "status": "passed"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 700
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "proofSummary": {
+    "mainOriginalsHashVerified": 16,
+    "nativeActions": 60,
+    "allFiveControlsGeometrySamples": 80,
+    "minimumTargetWidthCSSpx": 85,
+    "minimumTargetHeightCSSpx": 60,
+    "allTargetsAtLeast44CSSpx": true,
+    "unobscuredCenterHitTests": true,
+    "noHomeNavigationBar": true,
+    "noHorizontalOverflow": true,
+    "allFourSportSelectorsEnabledAndIconOnly": true,
+    "onlyNFLAllowsEntry": true,
+    "servedBodyHashChecks": 44,
+    "recordedConsoleRequestAndNativeFailures": 0,
+    "normalizedCircuitMaximumPhaseSpread": 0,
+    "chromiumFractionalSelectorSVGBoundsMatchNativePlus4": true,
+    "chromiumFractionalSelectorGeometrySampleCount": 64
+  },
+  "directVisualInputs": [
+    {
+      "path": "qa/home-synchronized-entrance/material-preview/home-nfl-393x852.png",
+      "sha256": "bc73c3973e1e4552f117d9fed922cc40c7b4b44f90cba63d62cc9d9f6748e4aa"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/material-preview/home-nba-430x896.png",
+      "sha256": "0d2f9d53f6bfe149d31af83c4d1939749a27a3a07ed58f6e39905342c1bf144a"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit/home-nfl-393x852.png",
+      "sha256": "226b99f02c7ef3c4646f01f738a9c1fffd2bdf387b8a5cb3cb46251caa3fc4a4"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-webkit/home-nba-430x896.png",
+      "sha256": "8c3cbc221e7438377d78fd79bd5a37ed615d5ecdcea5e9cc395d4a7df0eda6fe"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+      "sha256": "41a5f9eb1cb3aad26e7dfe7992eb187fec58058c50cc056a75cd3c5fbcabd350"
+    }
+  ],
+  "visualVerdict": {
+    "gem": "Photographic facet caps, crisp cut edges and dark refractive planes are materially cleaner than the old lossy bar; native frame aspect is preserved. Translucent native lettering remains readable and unfiltered. No flat-vector regression.",
+    "selectors": "All four sides retain a steady fine ice core and compact bright sport-color bloom. Clear glass shows the floor, icon shapes remain centered and unwashed, and the moving heads follow the same outer geometry.",
+    "spacing": "Gem and selector outlines are visibly aligned and comfortably separated. Overall mobile aspect leaves more reflective floor than the reference panel; exact full-frame replication is not asserted.",
+    "blockers": []
+  },
+  "materialBinding": {
+    "atlas": "assets/home/gem-atlas-polished.webp",
+    "sha256": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "nativeCanvas": [
+      1536,
+      1024
+    ],
+    "sharedFrame": [
+      1488,
+      224
+    ],
+    "encoding": "lossless WebP; source frame never upscaled",
+    "css": "assets/home-gem-controls.css",
+    "cssSha256": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "provenance": "reference/HOME_GEM_POLISHED_PROVENANCE.json"
+  },
+  "limitations": [
+    "This controls audit directly inspected two final WebKit originals, the final Chromium NBA430 original, and two earlier same-source material-preview paints. It hash-verified all 16 final originals and reviewed native proof from both engines.",
+    "Automated WebKit and Chromium mobile emulation does not constitute physical iPhone or hosted-site verification.",
+    "No pixel-identical claim: approved reference binary is unavailable in this workspace.",
+    "Data accuracy, deployment and other screens are outside this specialist scope."
+  ],
+  "failures": [],
+  "fractionalGeometrySampling": [
+    {
+      "initialViewport": 393,
+      "sample": "initial",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "natural-430",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "natural-later",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "after-native-nba-selection",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "after-native-viewport-resize",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "after-return-to-initial-viewport-and-nfl",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "after-genuine-reduced-motion-restoration",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 393,
+      "sample": "after-genuine-nfl-route-return",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "initial",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "natural-430",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "natural-later",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "after-native-nba-selection",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "after-native-viewport-resize",
+      "activeViewport": 393,
+      "nativeSelectorWidth": 85,
+      "measuredSvgWidth": 89,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "after-return-to-initial-viewport-and-nfl",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "after-genuine-reduced-motion-restoration",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    },
+    {
+      "initialViewport": 430,
+      "sample": "after-genuine-nfl-route-return",
+      "activeViewport": 430,
+      "nativeSelectorWidth": 94.25,
+      "measuredSvgWidth": 98.25,
+      "selectorsChecked": 4
+    }
+  ],
+  "releaseAcceptance": false,
+  "releaseBlockers": [
+    {
+      "path": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+      "sha256": "41a5f9eb1cb3aad26e7dfe7992eb187fec58058c50cc056a75cd3c5fbcabd350",
+      "finding": "The NBA court scene is absent from this original Chromium screenshot even though native control geometry and all action assertions passed. Directly visually confirmed. Browser owner must diagnose and repair or qualify this genuine full-screen paint failure before release.",
+      "controlMaterialAffected": false
+    }
+  ]
+}

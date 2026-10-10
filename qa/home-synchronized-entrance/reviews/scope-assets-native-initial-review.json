@@ -1,0 +1,312 @@
+{
+  "status": "blocked-native-NBA430-Chromium-venue-paint",
+  "reviewedAtUTC": "2026-10-10T06:37:37.895919+00:00",
+  "role": "Independent read-only scope, native-source, performance and actual screenshot review",
+  "sourceAudit": {
+    "file": "qa/home-synchronized-entrance/reviews/scope-assets-local.json",
+    "sha256": "a7a3851ba923004296b003383f2a80b2be7423f86fde172fdf8797ed10a926f9",
+    "protectedApplicationBaseCommit": "66426461535fb8a51994c4c871bea765c7b936ed",
+    "sixExistingHomeFilesOnly": true,
+    "protectedResearchSuffixSHA256": "6de9aa6b254285e4c908ed3509fb3b37a83c4112ad2140fcda93de8cf5774b1a",
+    "currentDataTestsWorkflowsBackupsUnchanged": true,
+    "threeNativeLosslessMastersExact": true
+  },
+  "closedBrowserReports": [
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/results.json",
+      "sha256": "178a1f660c77825eb2fa9637c4c9fc2fd8514be771e794e7d5a202b20b6d0e7d",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "sourceAndDataBodiesMatch": true,
+      "exactHTTPBodies": 22,
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "borderPaths": 17,
+          "samples": 8,
+          "maxNormalizedDashSpread": 0,
+          "errors": [],
+          "HTTPFailures": [],
+          "requestFailures": []
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "borderPaths": 17,
+          "samples": 8,
+          "maxNormalizedDashSpread": 0,
+          "errors": [],
+          "HTTPFailures": [],
+          "requestFailures": []
+        }
+      ]
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/results.json",
+      "sha256": "e58cdd2d30a1605f325c340fa802bf9423a1eb060580eb5642c2fca2f2d9b7c2",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "sourceAndDataBodiesMatch": true,
+      "exactHTTPBodies": 22,
+      "cases": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "borderPaths": 17,
+          "samples": 8,
+          "maxNormalizedDashSpread": 0,
+          "errors": [],
+          "HTTPFailures": [],
+          "requestFailures": []
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "borderPaths": 17,
+          "samples": 8,
+          "maxNormalizedDashSpread": 0,
+          "errors": [],
+          "HTTPFailures": [],
+          "requestFailures": []
+        }
+      ]
+    }
+  ],
+  "directlyViewedUntouchedOriginals": [
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nfl-393x852.png",
+      "sha256": "226b99f02c7ef3c4646f01f738a9c1fffd2bdf387b8a5cb3cb46251caa3fc4a4",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nba-393x852.png",
+      "sha256": "622165fb72cfbb25f0daa576e495c29b70cd3f80eabf95b1518eaccdab778fa9",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nrl-393x852.png",
+      "sha256": "e6a59b5a08c8cf8dc30d1602421a2e3b06f6acffb1fd1b9709e2d21a874f346d",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-ufc-393x852.png",
+      "sha256": "f67016d488e61d79a293d7ce9d69e0e5a8ed3bf5af087cd25d17b96dcad5f2f6",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nfl-430x896.png",
+      "sha256": "0e9adb8fde2b3543645558d3c9763c50b5dcc41bdd0d8b99e28c538d14ad8deb",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nba-430x896.png",
+      "sha256": "8c3cbc221e7438377d78fd79bd5a37ed615d5ecdcea5e9cc395d4a7df0eda6fe",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-nrl-430x896.png",
+      "sha256": "f8040e1c6f1ec8393802ea369c5ae3dd1bca72188daeaf981b44b833b269d470",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-webkit/home-ufc-430x896.png",
+      "sha256": "585426b9c5d0d3eaeb7ac45648ee3ae9bdda5e4d7bffa0363caa0c566f599282",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nfl-393x852.png",
+      "sha256": "68e9b4d38a31b851415d141b342462e6d6cfc3dc8642f33c9e41011063df8d6a",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nba-393x852.png",
+      "sha256": "4ae95fe27822132ec95db0d52a3133a7d82a9529e005dd1b4edaa74934e837ee",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nrl-393x852.png",
+      "sha256": "3d5d65c88b940021545eb8952c77d2d91267ffef9ee82d119b3105114df83b47",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-ufc-393x852.png",
+      "sha256": "13c744e4238c502f34601de18680280a497f8cacef3b77252fd57eab365908a5",
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nfl-430x896.png",
+      "sha256": "e91b532acd8963c39acf268ae6debf5189b7aa1d40e2463386fb3464f237d8fa",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+      "sha256": "41a5f9eb1cb3aad26e7dfe7992eb187fec58058c50cc056a75cd3c5fbcabd350",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "blocked-missing-venue"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-nrl-430x896.png",
+      "sha256": "e8375aa2c95d30acaddcba4c696c28dd1b45177e8ff2e4778e8ec06cd8a6b086",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    },
+    {
+      "file": "qa/home-synchronized-entrance/local-chromium/home-ufc-430x896.png",
+      "sha256": "08fc2c77bfea151269fd2d2a012ba6a2c539d4b9148768934ff20674e27a6789",
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "DPR": 2,
+      "directlyViewedOriginal": true,
+      "visualStatus": "no-visible-crop-stretch-or-material-blocker"
+    }
+  ],
+  "nativeVisualBlocker": {
+    "file": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+    "issue": "The basketball arena and court are completely absent behind the NBA emblem, leaving a flat navy opening. The same frozen source paints the scene correctly in WebKit 430 and Chromium 393. Natural image decode and HTTP assertions alone did not detect the missing actual paint.",
+    "scope": "One of sixteen directly viewed native phone/sport original frames; remaining fifteen have no visible missing scene, bad crop, stretch, or broken material.",
+    "regionDiagnostic": [
+      {
+        "engine": "webkit",
+        "screenshot": "qa/home-synchronized-entrance/local-webkit/home-nba-430x896.png",
+        "sameLeftVenueRegion": [
+          130,
+          600,
+          310,
+          900
+        ],
+        "RGBStandardDeviation": 72.09325261349838,
+        "uniqueRGBColours": 41251
+      },
+      {
+        "engine": "chromium",
+        "screenshot": "qa/home-synchronized-entrance/local-chromium/home-nba-430x896.png",
+        "sameLeftVenueRegion": [
+          130,
+          600,
+          310,
+          900
+        ],
+        "RGBStandardDeviation": 18.68444630480841,
+        "uniqueRGBColours": 662
+      }
+    ],
+    "requiredResolution": "Browser owner must diagnose native visibility/painting, make a targeted Home correction if needed, and provide new untouched natural screenshots and closed source-consistent reports before publication."
+  },
+  "visualRefinementsObserved": [
+    "Continuous polished chrome and wider venue opening improve the entry to the field.",
+    "Native gem bevels have clean larger facets and a navy translucent center.",
+    "Original gold/diamond branding remains crisp at both DPR 2 phone sizes.",
+    "Selectors remain icon-only and translucent with no duplicate sport names or Home bottom navigation.",
+    "NBA retains blue/red spatial halves; NRL and UFC lighting follow their sport colours."
+  ],
+  "qualifications": [
+    "Latest chat render is the visual authority; no registered pixel-identical reference comparison is claimed.",
+    "Tall iPhone canvases show additional reflected floor below compact controls.",
+    "WebKit performance timing exposes zero decodedBodySize for many image/style entries; its aggregate cannot certify total cold payload.",
+    "The three new assets total 4,214,036 bytes, an additional 2,980,764 bytes over preserved replaced runtimes. No cold latency, physical iPhone, or physical 60 FPS certification is claimed."
+  ],
+  "browserLaunchedByAuditor": false,
+  "applicationEditsByAuditor": false,
+  "historicalQAAltered": false
+}

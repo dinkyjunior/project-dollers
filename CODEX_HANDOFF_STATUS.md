@@ -1,5 +1,13 @@
 # Project Dollar$ handoff — premium current-data pass
 
+## Current Home — synchronized entrance and native gemstone refinement (10 October 2026)
+
+The latest request targets pixelated gemstone material, uneven border pace and the narrow sports entrance. This pass preserves the original branding and venue photographs, bundles native lossless brand/gem/chrome material, expands the field opening, and aligns seventeen perimeter paths to one 8.8-second cycle. Icon-only glass selectors and no Home bottom navigation remain. NFL is functional; other sports remain selectable Coming soon environments.
+
+Read [the release record](qa/home-synchronized-entrance/RELEASE.md) and [actual original before/after gallery](qa/home-synchronized-entrance/index.html). The chat render is the approved visual source; its binary is unavailable locally. Earlier technically passing Chromium evidence was visually rejected for a missing first NBA court paint. Preserve it and its focused reproduction; accepted corrected suites check the actual first visible venue. Publication remains pending until corrected local reviews close and the real hosted site is verified.
+
+Preserve all previous source, evidence and backups. Fetch both remote branches and ordinarily rebase before every push. PR #1 is already merged; update it with an authorized follow-up comment. Automatic NFL data updates remain active and must be preserved.
+
 ## Latest Home correction — 10 October 2026 (Sydney)
 
 The user rejected the previous continuous SVG/flat-gem Home. The corrective build restores photographic cut-gem material and polished concentric chrome, removes bulky metal joins, keeps translucent icon-only selectors and no Home bottom navigation, and preserves current NFL/team/matchup data and controllers. The supplied four-sport chat image remains the authority. This is a reviewed visual correction, not a claim of literal pixel identity.

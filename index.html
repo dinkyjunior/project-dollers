@@ -32,11 +32,11 @@
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
-    <link rel="stylesheet" href="assets/home-aperture.css?v=reference-20261010-v2" />
-    <link rel="stylesheet" href="assets/home-gem-controls.css?v=reference-20261010-v2" />
-    <link rel="stylesheet" href="assets/home-gem-layout.css?v=reference-20261010-v2" />
-    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=reference-20261010-v2" />
-    <link rel="stylesheet" href="assets/home-brand-lighting.css?v=reference-20261010-v2" />
+    <link rel="stylesheet" href="assets/home-aperture.css?v=synchronized-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-gem-controls.css?v=synchronized-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-gem-layout.css?v=synchronized-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=synchronized-20261010-v1" />
+    <link rel="stylesheet" href="assets/home-brand-lighting.css?v=synchronized-20261010-v1" />
     <script src="assets/team-details.js?v=matchup-20261009-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
@@ -50,7 +50,7 @@
     <script src="assets/home-interactions.js?v=gem-20261009-v1" defer></script>
     <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/nfl-dashboard-motion.js?v=replica-20261008-v2" defer></script>
-    <script src="assets/home-aperture-motion.js?v=reference-20261010-v2" defer></script>
+    <script src="assets/home-aperture-motion.js?v=synchronized-20261010-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
@@ -98,7 +98,7 @@
             </div>
             <header class="home-header">
               <h1 class="brand" aria-label="Project Dollar">
-                <img class="home-brand-mark" src="assets/home/gate-brand.webp" alt="" aria-hidden="true" width="1800" height="693" fetchpriority="high" decoding="async" />
+                <img class="home-brand-mark" src="assets/home/gate-brand-lossless.webp" alt="" aria-hidden="true" width="2022" height="778" fetchpriority="high" decoding="async" />
                 <span class="brand-glint" aria-hidden="true"></span><span class="brand-glint brand-glint-secondary" aria-hidden="true"></span>
               </h1>
               <p class="brand-subtitle">SPORTS DATA &amp; RESEARCH</p>
@@ -107,14 +107,14 @@
               <div class="aperture-gate">
                 <span class="aperture-neon-halo" aria-hidden="true"></span><span class="aperture-neon-halo-inner" aria-hidden="true"></span>
                 <div class="aperture-venue"><div class="home-scene-drift">
-                  <img src="assets/home/gate-scenes-nfl.webp" data-home-scene="nfl" alt="" width="1200" height="1200" decoding="async" fetchpriority="high" />
-                  <img src="assets/home/gate-scenes-nba.webp" data-home-scene="nba" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
-                  <img src="assets/home/gate-scenes-nrl.webp" data-home-scene="nrl" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
-                  <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="async" loading="lazy" hidden />
+                  <img src="assets/home/gate-scenes-nfl.webp" data-home-scene="nfl" alt="" width="1200" height="1200" decoding="sync" fetchpriority="high" />
+                  <img src="assets/home/gate-scenes-nba.webp" data-home-scene="nba" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
+                  <img src="assets/home/gate-scenes-nrl.webp" data-home-scene="nrl" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
+                  <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
                 </div></div>
                 <div class="aperture-rail"></div>
-                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/aperture-refined.webp" alt="" width="1315" height="1197" decoding="async" fetchpriority="high" />
-                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/aperture-refined.webp" alt="" width="1315" height="1197" decoding="async" />
+                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" fetchpriority="high" />
+                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
                 <div class="aperture-inset"></div>
                 <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
                 <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
@@ -129,24 +129,24 @@
                     <filter id="home-aperture-bloom" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9" /></filter>
                     <filter id="home-aperture-hotspot" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow" /><feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
                   </defs>
-                  <path class="aperture-neon-bloom" d="M657 92 C945.293 92 1179 296.606 1179 549 C1179 801.394 945.293 1006 657 1006 C368.707 1006 135 801.394 135 549 C135 296.606 368.707 92 657 92 Z" />
-                  <path class="aperture-neon-track" d="M657 92 C945.293 92 1179 296.606 1179 549 C1179 801.394 945.293 1006 657 1006 C368.707 1006 135 801.394 135 549 C135 296.606 368.707 92 657 92 Z" />
-                  <path class="aperture-neon-core" d="M657 92 C945.293 92 1179 296.606 1179 549 C1179 801.394 945.293 1006 657 1006 C368.707 1006 135 801.394 135 549 C135 296.606 368.707 92 657 92 Z" />
-                  <path class="aperture-neon-inner-track" d="M657 158 C897.243 158 1092 333.061 1092 549 C1092 764.939 897.243 940 657 940 C416.757 940 222 764.939 222 549 C222 333.061 416.757 158 657 158 Z" />
+                  <path class="aperture-neon-bloom" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
+                  <path class="aperture-neon-track" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
+                  <path class="aperture-neon-core" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
+                  <path class="aperture-neon-inner-track" d="M658 83 C954.023 83 1194 303.540 1194 575.5 C1194 847.460 954.023 1068 658 1068 C361.977 1068 122 847.460 122 575.5 C122 303.540 361.977 83 658 83 Z" />
                   <path class="aperture-neon-outer-track" d="M657 31 C394.49 31 183.26 210 80 419 C42.49 490 19.14 620 27 700 C-35.21 1040 112.18 1183 657 1183 C1201.82 1183 1349.21 1040 1287 700 C1294.86 620 1271.51 490 1234 419 C1130.74 210 919.51 31 657 31Z" />
-                  <path class="aperture-neon-runner" pathLength="1000" d="M657 92 C945.293 92 1179 296.606 1179 549 C1179 801.394 945.293 1006 657 1006 C368.707 1006 135 801.394 135 549 C135 296.606 368.707 92 657 92 Z" />
-                  <path class="aperture-metal-runner" pathLength="1000" d="M657 158 C897.243 158 1092 333.061 1092 549 C1092 764.939 897.243 940 657 940 C416.757 940 222 764.939 222 549 C222 333.061 416.757 158 657 158 Z" />
+                  <path class="aperture-neon-runner" pathLength="1000" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
+                  <path class="aperture-metal-runner" pathLength="1000" d="M658 83 C954.023 83 1194 303.540 1194 575.5 C1194 847.460 954.023 1068 658 1068 C361.977 1068 122 847.460 122 575.5 C122 303.540 361.977 83 658 83 Z" />
                 </svg>
                 <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
               </div>
               <div class="home-floor"><span class="home-floor-shimmer"></span></div>
               <div class="aperture-floor-reflection">
-                <img class="home-metal-reflection-image" src="assets/home/aperture-refined.webp" alt="" width="1315" height="1197" decoding="async" />
-                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/aperture-refined.webp" alt="" width="1315" height="1197" decoding="async" />
+                <img class="home-metal-reflection-image" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
+                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
               </div>
             </div>
             <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
-              <span data-home-entry-label>Enter</span><svg class="icon" data-home-entry-arrow aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>
+              <span data-home-entry-label>Enter</span>
             </button>
             <div class="home-sport-dock" role="group" aria-label="Choose a sport">
               <button class="home-sport-option" data-home-select="nfl" aria-pressed="true" aria-label="Select NFL"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /></button>
