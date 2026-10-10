@@ -27,6 +27,8 @@ The WebKit suite's immediate post-resize geometry sample preceded native ResizeO
 
 [Six specialist local gates](local-acceptance.json) accepted the frozen Home source: materials, controls, reference refinement, scope preservation, browser behavior and motion. Their receipts distinguish direct visual inspection, source and image identity, native browser observations and their limits. Actual publication and strict-HTTPS hosted verification are recorded separately after completion.
 
+Ordinary rebases preserve incoming production data through `958ee56`; all fifteen accepted Home inputs remain byte-identical. [Integrated data checks](integrated-data-validation.json) passed the saved-data validator, 22 core tests, eight update-behavior groups, seven source tests and ten team-data tests. One independent raw-cache arithmetic check is skipped without its cache. The legacy matchup suite retains six source-manifest failures against its historical fixture (27 other tests pass); this prior fixture limitation is not hidden, relabelled as passed or repaired by replacing evidence. This Home release introduces no research-controller or statistical-value changes.
+
 ## Practical limits
 
 This is a material visual refinement, not a claim of registered pixel identity with the chat render. The photographic background and casting are reconstructed artwork, and the taller target phones reveal more foreground floor than the short reference panels.

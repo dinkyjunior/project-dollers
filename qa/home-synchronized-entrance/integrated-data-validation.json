@@ -1,0 +1,59 @@
+{
+  "status": "integrated-snapshot-validated-with-historical-fixture-limit",
+  "completedAt": "2026-10-10T07:00:26.197515+00:00",
+  "integratedMain": "958ee5603e03b74991df3e8312fa32e27cfe66dd",
+  "acceptedHomeSourceUnchanged": true,
+  "dataBodies": {
+    "current.json": "fc2dcdb3700083fcc1e8c4f29848ac9d034d5c6dac56b44ff1fe867b2b89dae7",
+    "matchup-breakdown.json": "a7cc0525c0d09b63df77073ae9ce3ebc049bbf4061e0206ca468aca39434169f",
+    "player-history.json": "0c50464868871541551ecb976a789d830f7503d5275d10c290659d3d381b57d9",
+    "provenance.json": "0a605b26fe5059dc12180d3537dce859c9a9d10a43bf660e0cdb92e7ea65c0c1",
+    "roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+    "snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+    "team-details.json": "17d29cbef8c2466020fc547b2d695621afa856f42cf920a0f5ae75758e52acb5"
+  },
+  "checks": [
+    {
+      "command": "npm run test:data",
+      "exitCode": 0,
+      "outcome": "22 tests passed",
+      "output": "reviews/integrated-data.log",
+      "sha256": "007085199e146b31a98a0e46406b313526bac6f6b33a8992fbab8ef8902a54c7"
+    },
+    {
+      "command": "npm run test:updates",
+      "exitCode": 0,
+      "outcome": "8 update-behavior groups passed",
+      "output": "reviews/integrated-updates.log",
+      "sha256": "1e7d9da697390da1f9c2b480fc0c7248a8c0707ac1d0f44263030b0031132222"
+    },
+    {
+      "command": "npm run test:sources",
+      "exitCode": 0,
+      "outcome": "7 tests passed",
+      "output": "reviews/integrated-sources.log",
+      "sha256": "ee80d6113eeff15e80d6be2e18caec15ad9b78bd0d947d18f1a55de668155dd6"
+    },
+    {
+      "command": "npm run data:check",
+      "exitCode": 0,
+      "outcome": "Saved snapshot/provenance integrity passed; 79 retained roster players,1272 history rows,10 explicit provider disagreements",
+      "output": "reviews/integrated-check.log",
+      "sha256": "756420ac1d7d2751deae3292b118b87cc3782b8d8fd5ab7f1d5fca155b027a79"
+    },
+    {
+      "command": "python3 qa/team-details/data.test.py",
+      "exitCode": 0,
+      "outcome": "11 tests executed:10 passed,1 independent raw-source arithmetic check skipped without cache",
+      "output": "reviews/integrated-team.log",
+      "sha256": "46a0eadef145338dc4d3a8e385e172c9265126e8117dc0448ae9bbc27fa897a1"
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py",
+      "exitCode": 1,
+      "outcome": "33 tests executed:27 passed,6 historical source-manifest fixture failures; fixture belongs to another snapshot. Source assertions refuse stale evidence; no fixture/test was modified or disabled.",
+      "output": "reviews/integrated-matchup.log",
+      "sha256": "fef52341f8f1d548364513d30b64c820dd98f6dfb00010ae48e9ffb692964063"
+    }
+  ]
+}

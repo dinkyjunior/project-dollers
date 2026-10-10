@@ -1,0 +1,116 @@
+test_actual_weekly_practice_survives_differently_scoped_depth_news (__main__.MatchupDataChecks.test_actual_weekly_practice_survives_differently_scoped_depth_news) ... ok
+test_advancing_week_does_not_reassign_archived_inactive_bulletin (__main__.MatchupDataChecks.test_advancing_week_does_not_reassign_archived_inactive_bulletin) ... ok
+test_audit_archives_reproduce_source_response_hashes (__main__.MatchupDataChecks.test_audit_archives_reproduce_source_response_hashes) ... FAIL
+test_changed_quote_or_mismatched_event_cannot_establish_role (__main__.MatchupDataChecks.test_changed_quote_or_mismatched_event_cannot_establish_role) ... ok
+test_depth_injury_news_never_acquires_inferred_upcoming_week (__main__.MatchupDataChecks.test_depth_injury_news_never_acquires_inferred_upcoming_week) ... ok
+test_direct_role_contradictions_null_both_candidates (__main__.MatchupDataChecks.test_direct_role_contradictions_null_both_candidates) ... ok
+test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list (__main__.MatchupDataChecks.test_event_report_is_scoped_partial_and_never_confirms_official_inactive_list) ... ok
+test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap (__main__.MatchupDataChecks.test_final_boxscore_basic_fields_preserve_unknown_categories_and_schema_gap) ... ok
+test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate (__main__.MatchupDataChecks.test_final_boxscore_conflict_keeps_both_evidence_and_nulls_dependent_rate) ... ok
+test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash (__main__.MatchupDataChecks.test_final_boxscore_requires_exact_offensive_identity_and_unmodified_source_hash) ... ok
+test_final_passing_boxscore_never_confirms_schedule_role_candidate (__main__.MatchupDataChecks.test_final_passing_boxscore_never_confirms_schedule_role_candidate) ... ok
+test_incorrect_evolving_final_score_refused (__main__.MatchupDataChecks.test_incorrect_evolving_final_score_refused) ... ok
+test_injury_identity_merging_retains_published_practice (__main__.MatchupDataChecks.test_injury_identity_merging_retains_published_practice) ... FAIL
+test_linked_snapshot_checksums_and_all_clubs (__main__.MatchupDataChecks.test_linked_snapshot_checksums_and_all_clubs) ... ok
+test_live_event_never_enters_completed_statistics_or_confirmed_starts (__main__.MatchupDataChecks.test_live_event_never_enters_completed_statistics_or_confirmed_starts) ... ok
+test_missing_passing_cell_does_not_become_zero_or_rating (__main__.MatchupDataChecks.test_missing_passing_cell_does_not_become_zero_or_rating) ... ok
+test_missing_statistics_do_not_substitute_older_qb_start (__main__.MatchupDataChecks.test_missing_statistics_do_not_substitute_older_qb_start) ... FAIL
+test_missing_used_pbp_field_refused (__main__.MatchupDataChecks.test_missing_used_pbp_field_refused) ... ok
+test_one_snap_first_play_role_keeps_null_statistics (__main__.MatchupDataChecks.test_one_snap_first_play_role_keeps_null_statistics) ... ok
+test_opponent_starts_include_actual_prior_seasons_and_no_padding (__main__.MatchupDataChecks.test_opponent_starts_include_actual_prior_seasons_and_no_padding) ... FAIL
+test_optional_unverified_cache_explicit_unavailable (__main__.MatchupDataChecks.test_optional_unverified_cache_explicit_unavailable) ... ok
+test_position_changed_receiver_keeps_known_zero_offensive_snaps (__main__.MatchupDataChecks.test_position_changed_receiver_keeps_known_zero_offensive_snaps) ... FAIL
+test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive (__main__.MatchupDataChecks.test_projection_is_inferred_and_reported_out_is_not_confirmed_inactive) ... ok
+test_real_target_disagreement_nulls_only_affected_cell_and_rate (__main__.MatchupDataChecks.test_real_target_disagreement_nulls_only_affected_cell_and_rate) ... ok
+test_relief_attempts_do_not_establish_a_start (__main__.MatchupDataChecks.test_relief_attempts_do_not_establish_a_start) ... ok
+test_required_unverified_cache_refused (__main__.MatchupDataChecks.test_required_unverified_cache_refused) ... ok
+test_scramble_rusher_id_is_in_dropback_denominator (__main__.MatchupDataChecks.test_scramble_rusher_id_is_in_dropback_denominator) ... ok
+test_source_correction_resolves_exact_html_recapped_role (__main__.MatchupDataChecks.test_source_correction_resolves_exact_html_recapped_role) ... ok
+test_stale_manifest_refused_before_source_assertions (__main__.MatchupDataChecks.test_stale_manifest_refused_before_source_assertions) ... FAIL
+test_tracking_is_not_fabricated_or_hits_mislabelled_pressure (__main__.MatchupDataChecks.test_tracking_is_not_fabricated_or_hits_mislabelled_pressure) ... ok
+test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes (__main__.MatchupDataChecks.test_truncated_pbp_with_static_final_scores_cannot_certify_zeroes) ... ok
+test_uncorroborated_role_is_not_confirmed_or_padded (__main__.MatchupDataChecks.test_uncorroborated_role_is_not_confirmed_or_padded) ... ok
+test_unfinished_or_mismatched_final_boxscore_cannot_enter_history (__main__.MatchupDataChecks.test_unfinished_or_mismatched_final_boxscore_cannot_enter_history) ... ok
+
+======================================================================
+FAIL: test_audit_archives_reproduce_source_response_hashes (__main__.MatchupDataChecks.test_audit_archives_reproduce_source_response_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 522, in test_audit_archives_reproduce_source_response_hashes
+    manifest = source_manifest()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+======================================================================
+FAIL: test_injury_identity_merging_retains_published_practice (__main__.MatchupDataChecks.test_injury_identity_merging_retains_published_practice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 510, in test_injury_identity_merging_retains_published_practice
+    for raw in source_rows("nflverse_injuries"):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 32, in source_rows
+    manifest = source_manifest()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+======================================================================
+FAIL: test_missing_statistics_do_not_substitute_older_qb_start (__main__.MatchupDataChecks.test_missing_statistics_do_not_substitute_older_qb_start)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 402, in test_missing_statistics_do_not_substitute_older_qb_start
+    games = source_rows("nflverse_games")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 32, in source_rows
+    manifest = source_manifest()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+======================================================================
+FAIL: test_opponent_starts_include_actual_prior_seasons_and_no_padding (__main__.MatchupDataChecks.test_opponent_starts_include_actual_prior_seasons_and_no_padding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 377, in test_opponent_starts_include_actual_prior_seasons_and_no_padding
+    games = source_rows("nflverse_games")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 32, in source_rows
+    manifest = source_manifest()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+======================================================================
+FAIL: test_position_changed_receiver_keeps_known_zero_offensive_snaps (__main__.MatchupDataChecks.test_position_changed_receiver_keeps_known_zero_offensive_snaps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 498, in test_position_changed_receiver_keeps_known_zero_offensive_snaps
+    mapping = {row["pfr_id"]: row["gsis_id"] for row in source_rows("nflverse_player_ids") if row.get("pfr_id") and row.get("gsis_id")}
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 32, in source_rows
+    manifest = source_manifest()
+               ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+======================================================================
+FAIL: test_stale_manifest_refused_before_source_assertions (__main__.MatchupDataChecks.test_stale_manifest_refused_before_source_assertions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 536, in test_stale_manifest_refused_before_source_assertions
+    path.write_text(json.dumps({**source_manifest(), "snapshotSha256": "0" * 64}))
+                                  ^^^^^^^^^^^^^^^^^
+  File "/workspace/project-dollers/qa/matchup-breakdown/data.test.py", line 27, in source_manifest
+    raise AssertionError("Source manifest belongs to a different snapshot; generate fresh evidence for this build")
+AssertionError: Source manifest belongs to a different snapshot; generate fresh evidence for this build
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.275s
+
+FAILED (failures=6)
