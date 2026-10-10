@@ -1,0 +1,2736 @@
+{
+  "schemaVersion": 1,
+  "status": "application-facts-equal-with-explicit-additional-attribution-and-order-deltas",
+  "reviewer": "/root/home_scope_final",
+  "independentReviewer": "/root/home_scope_final/incoming_data_audit",
+  "generatedAtUTC": "2026-10-10T07:12:28.114553+00:00",
+  "baseReviewedRelease": "e78d38c817d575a5e316da59a5a6af042113905b",
+  "incomingDirectRefreshChild": "bf89c373dd063c86b98b7217c31c681a5c63a50e",
+  "parentRelationshipVerified": true,
+  "scope": "Fixed-revision read-only supplementary audit of e78d38c to bf89c37; no historical broad redo, source mutation or browser/validator execution.",
+  "changedBounds": [
+    {
+      "path": "assets/data/current.json",
+      "before": {
+        "bytes": 1082076,
+        "sha256": "fc2dcdb3700083fcc1e8c4f29848ac9d034d5c6dac56b44ff1fe867b2b89dae7",
+        "gitBlob": "66038a1ffa341b0031ec94edd75c2857c2295582"
+      },
+      "after": {
+        "bytes": 1082076,
+        "sha256": "d50535492c8e54b4b34426c6e6784c6acd3129149e28ff59dd6bf5c0e66ac32f",
+        "gitBlob": "7a7f760884c82850aeccb931905f74ffe91e4df0"
+      },
+      "rawChangedLeaves": 355,
+      "timestampLeaves": 194,
+      "otherDeclaredProvenanceHashOrByteLeaves": 161,
+      "remainingRawPositionalLeaves": 0,
+      "changedLeafNames": {
+        "refreshAfter": 1,
+        "checkedAt": 89,
+        "generatedAt": 2,
+        "sha256": 3,
+        "retrievedAt": 102,
+        "espn_steelers_roster": 79,
+        "official_steelers_roster": 79
+      },
+      "strict958NormalizationEqual": true,
+      "strict958ResidualLeaves": 0,
+      "strict958SHABefore": "5ca6c30e8f7418bbd8b0b80add19d0b02605ffc518c035b897aec80fbda0a994",
+      "strict958SHAAfter": "5ca6c30e8f7418bbd8b0b80add19d0b02605ffc518c035b897aec80fbda0a994",
+      "extendedNormalizationEqual": true,
+      "extendedCanonicalSHA256BothRevisions": "5ca6c30e8f7418bbd8b0b80add19d0b02605ffc518c035b897aec80fbda0a994",
+      "independentCanonicalHashCrossCheckPassed": true
+    },
+    {
+      "path": "assets/data/matchup-breakdown.json",
+      "before": {
+        "bytes": 27935615,
+        "sha256": "a7cc0525c0d09b63df77073ae9ce3ebc049bbf4061e0206ca468aca39434169f",
+        "gitBlob": "18d102853ee608c1e3195bfad9ff238d6b10e86d"
+      },
+      "after": {
+        "bytes": 27935615,
+        "sha256": "71895ff5f999a1194f2818a90b597a274368392b8f5520d812fef5f4a52dfe79",
+        "gitBlob": "ebe879e254cb68d217a0491863dd156624bf0075"
+      },
+      "rawChangedLeaves": 20327,
+      "timestampLeaves": 19771,
+      "otherDeclaredProvenanceHashOrByteLeaves": 439,
+      "remainingRawPositionalLeaves": 117,
+      "changedLeafNames": {
+        "gameId": 23,
+        "playerId": 24,
+        "retrievedAt": 19562,
+        "sha256": 382,
+        "currentRetrievedAt": 1,
+        "currentSha256": 1,
+        "teamDetailsRetrievedAt": 1,
+        "teamDetailsSha256": 1,
+        "0": 44,
+        "team": 2,
+        "1": 24,
+        "generatedAt": 1,
+        "bytes": 55,
+        "sourceTimestamp": 206
+      },
+      "strict958NormalizationEqual": false,
+      "strict958ResidualLeaves": 75,
+      "strict958SHABefore": "c1233f926bcfb529aaa8f168b1b5cfb4a42237fd2b7abeee374ad33acbf914f1",
+      "strict958SHAAfter": "bf83f8eafdd81eab3270ba1ccdd66d97dd452d72e351f27ed4d48c398c7fba98",
+      "extendedNormalizationEqual": true,
+      "extendedCanonicalSHA256BothRevisions": "830c6258dabe92bcda35196aa8fe1da5f4aee79003adfefb86bde96dfae7c492",
+      "independentCanonicalHashCrossCheckPassed": true
+    },
+    {
+      "path": "assets/data/player-history.json",
+      "before": {
+        "bytes": 7099916,
+        "sha256": "0c50464868871541551ecb976a789d830f7503d5275d10c290659d3d381b57d9",
+        "gitBlob": "8a2e044c0d293d9c468d7c5ecb6c74267fe49268"
+      },
+      "after": {
+        "bytes": 7099916,
+        "sha256": "083086a3a2c28f1011ae5e26a9ed916caea21948fee2a425519b5c687fc6f947",
+        "gitBlob": "ade83b4462d449e9747b883b90121000aa65464c"
+      },
+      "rawChangedLeaves": 1413,
+      "timestampLeaves": 1413,
+      "otherDeclaredProvenanceHashOrByteLeaves": 0,
+      "remainingRawPositionalLeaves": 0,
+      "changedLeafNames": {
+        "generatedAt": 1,
+        "scheduleRetrievedAt": 1272,
+        "retrievedAt": 140
+      },
+      "strict958NormalizationEqual": true,
+      "strict958ResidualLeaves": 0,
+      "strict958SHABefore": "732834163b560c32f3e2eb2dd446f7643cad39a8bd674a9e8f46851c1e8e05c1",
+      "strict958SHAAfter": "732834163b560c32f3e2eb2dd446f7643cad39a8bd674a9e8f46851c1e8e05c1",
+      "extendedNormalizationEqual": true,
+      "extendedCanonicalSHA256BothRevisions": "732834163b560c32f3e2eb2dd446f7643cad39a8bd674a9e8f46851c1e8e05c1",
+      "independentCanonicalHashCrossCheckPassed": true
+    },
+    {
+      "path": "assets/data/provenance.json",
+      "before": {
+        "bytes": 32255,
+        "sha256": "0a605b26fe5059dc12180d3537dce859c9a9d10a43bf660e0cdb92e7ea65c0c1",
+        "gitBlob": "40dd2ef25cc7bf2b6d4a6aacec6505ead481b8d3"
+      },
+      "after": {
+        "bytes": 32255,
+        "sha256": "1ea9768a7352b5ac472067bc9ef5b79b403d4b85cd85a24617c3848b06211ca5",
+        "gitBlob": "ffa270928dd55ff13d225c43c1f0169a61caa490"
+      },
+      "rawChangedLeaves": 24,
+      "timestampLeaves": 20,
+      "otherDeclaredProvenanceHashOrByteLeaves": 4,
+      "remainingRawPositionalLeaves": 0,
+      "changedLeafNames": {
+        "generatedAt": 1,
+        "playerHistorySha256": 1,
+        "retrievedAt": 9,
+        "snapshotSha256CanonicalJson": 1,
+        "sha256": 2,
+        "checkedAt": 10
+      },
+      "strict958NormalizationEqual": true,
+      "strict958ResidualLeaves": 0,
+      "strict958SHABefore": "ff65609d5f00d38aa0973ee1853f0c9705a46b1c1ef45e7f5cd7697200d9fe01",
+      "strict958SHAAfter": "ff65609d5f00d38aa0973ee1853f0c9705a46b1c1ef45e7f5cd7697200d9fe01",
+      "extendedNormalizationEqual": true,
+      "extendedCanonicalSHA256BothRevisions": "ff65609d5f00d38aa0973ee1853f0c9705a46b1c1ef45e7f5cd7697200d9fe01",
+      "independentCanonicalHashCrossCheckPassed": true
+    },
+    {
+      "path": "assets/data/team-details.json",
+      "before": {
+        "bytes": 2292324,
+        "sha256": "17d29cbef8c2466020fc547b2d695621afa856f42cf920a0f5ae75758e52acb5",
+        "gitBlob": "b634924f654683a11e61c2a540aa4fa97119d97e"
+      },
+      "after": {
+        "bytes": 2292324,
+        "sha256": "9f6de5b675c744b31192454de1c8abbf4fad07fe825ffb3a05f4ed8737315bee",
+        "gitBlob": "e0a547c6ab584b8a1055044ac54a8a0eb5ba5dec"
+      },
+      "rawChangedLeaves": 75,
+      "timestampLeaves": 35,
+      "otherDeclaredProvenanceHashOrByteLeaves": 40,
+      "remainingRawPositionalLeaves": 0,
+      "changedLeafNames": {
+        "generatedAt": 1,
+        "retrievedAt": 34,
+        "sha256": 23,
+        "bytes": 17
+      },
+      "strict958NormalizationEqual": true,
+      "strict958ResidualLeaves": 0,
+      "strict958SHABefore": "ea0066040018bc20ab1fdc9f13cd8e0da5fb715fcb9c31d918b6a5d01a5ef067",
+      "strict958SHAAfter": "ea0066040018bc20ab1fdc9f13cd8e0da5fb715fcb9c31d918b6a5d01a5ef067",
+      "extendedNormalizationEqual": true,
+      "extendedCanonicalSHA256BothRevisions": "ea0066040018bc20ab1fdc9f13cd8e0da5fb715fcb9c31d918b6a5d01a5ef067",
+      "independentCanonicalHashCrossCheckPassed": true
+    }
+  ],
+  "onlyFiveDataJSONFilesChanged": true,
+  "changedNonDataPaths": [],
+  "HomeAndOtherApplicationSourceUnchangedFromReviewedRelease": true,
+  "prior958Normalization": {
+    "definition": {
+      "method": "Compare every parsed leaf, preserving dictionary membership and array lengths. Remove only actually differing leaves belonging to the explicitly declared metadata classes on both sides. Sort only the one declared diagnostic list by (playerId, gameId). All other fields and array order remain intact.",
+      "timestampNames": [
+        "checkedAt",
+        "currentRetrievedAt",
+        "generatedAt",
+        "refreshAfter",
+        "retrievedAt",
+        "scheduleRetrievedAt",
+        "sourceTimestamp",
+        "teamDetailsRetrievedAt"
+      ],
+      "extraProvenanceExclusions": {
+        "current.json": [
+          "sources[].sha256",
+          "roster[].rosterVerification.sourceHashes.{official_steelers_roster,espn_steelers_roster}",
+          "playerHistory.sha256"
+        ],
+        "player-history.json": [],
+        "provenance.json": [
+          "sources[].sha256",
+          "snapshotSha256CanonicalJson",
+          "playerHistorySha256"
+        ],
+        "team-details.json": [
+          "sources[].sha256",
+          "sources[].bytes"
+        ],
+        "matchup-breakdown.json": [
+          "sources[].sha256",
+          "sources[].bytes",
+          "dependencies.currentSha256",
+          "dependencies.teamDetailsSha256",
+          "disagreements[].evidence.sha256",
+          "coverage.startingRoleDisagreements[].evidence.sha256",
+          "teams.*.players.*.gameLog[].started.evidence.sha256",
+          "teams.*.players.*.gameLog[].finalBoxscoreEvidence.sha256"
+        ]
+      },
+      "excludedFieldsAreOnlyObservedChangedLeaves": true,
+      "statisticStatusIdentityGameFieldsExcluded": false,
+      "canonicalEncoding": "json.dumps(sort_keys=True,separators=(comma,colon),ensure_ascii=False), UTF-8",
+      "independentNormalizedSHA256CrossCheckAllFive": true
+    },
+    "strictOutcome": "Four files equal. Matchup has 75 strict residual leaves; the prior classifier is not silently expanded.",
+    "strictResiduals": [
+      {
+        "path": [
+          "disagreements",
+          0,
+          "gameId"
+        ],
+        "before": "2026_01_ATL_PIT",
+        "after": "2026_03_MIN_TB"
+      },
+      {
+        "path": [
+          "disagreements",
+          0,
+          "playerId"
+        ],
+        "before": "00-0037238",
+        "after": "00-0041048"
+      },
+      {
+        "path": [
+          "disagreements",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_matchup_summary_401872658",
+        "after": "espn_matchup_summary_401872959"
+      },
+      {
+        "path": [
+          "disagreements",
+          0,
+          "team"
+        ],
+        "before": "ATL",
+        "after": "TB"
+      },
+      {
+        "path": [
+          "disagreements",
+          0,
+          "values",
+          0
+        ],
+        "before": 4,
+        "after": 3
+      },
+      {
+        "path": [
+          "disagreements",
+          0,
+          "values",
+          1
+        ],
+        "before": 5,
+        "after": 4
+      },
+      {
+        "path": [
+          "disagreements",
+          1,
+          "playerId"
+        ],
+        "before": "00-0037741",
+        "after": "00-0037238"
+      },
+      {
+        "path": [
+          "disagreements",
+          1,
+          "values",
+          0
+        ],
+        "before": 3,
+        "after": 4
+      },
+      {
+        "path": [
+          "disagreements",
+          1,
+          "values",
+          1
+        ],
+        "before": 4,
+        "after": 5
+      },
+      {
+        "path": [
+          "disagreements",
+          2,
+          "gameId"
+        ],
+        "before": "2026_03_MIN_TB",
+        "after": "2026_01_ATL_PIT"
+      },
+      {
+        "path": [
+          "disagreements",
+          2,
+          "playerId"
+        ],
+        "before": "00-0041048",
+        "after": "00-0037741"
+      },
+      {
+        "path": [
+          "disagreements",
+          2,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_matchup_summary_401872959",
+        "after": "espn_matchup_summary_401872658"
+      },
+      {
+        "path": [
+          "disagreements",
+          2,
+          "team"
+        ],
+        "before": "TB",
+        "after": "ATL"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "sackRate",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "sackRate",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      }
+    ]
+  },
+  "knownMissingStatisticsOrderDelta": {
+    "path": "/coverage/startingQBMissingStatistics",
+    "fullRecordMembershipExactlyEqual": true,
+    "recordCount": 21,
+    "orderChanged": true,
+    "normalizationKey": [
+      "playerId",
+      "gameId"
+    ]
+  },
+  "additionalDisagreementOrderDelta": {
+    "path": "/disagreements",
+    "totalRecords": 21,
+    "reorderedIndices": [
+      0,
+      1,
+      2
+    ],
+    "firstThreeFullRecordsEqualAfterDeclaredMetadataExclusions": true,
+    "laterEighteenRecordsAndOrderEqualAfterDeclaredMetadataExclusions": true,
+    "beforeFirstThree": [
+      {
+        "team": "ATL",
+        "playerId": "00-0037238",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          4,
+          5
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      {
+        "team": "ATL",
+        "playerId": "00-0037741",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0041048",
+        "gameId": "2026_03_MIN_TB",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872959",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      }
+    ],
+    "afterFirstThree": [
+      {
+        "team": "TB",
+        "playerId": "00-0041048",
+        "gameId": "2026_03_MIN_TB",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872959",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      {
+        "team": "ATL",
+        "playerId": "00-0037238",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          4,
+          5
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      {
+        "team": "ATL",
+        "playerId": "00-0037741",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      }
+    ],
+    "normalization": "Sort only first three by canonical full-record JSON; preserve later records and order."
+  },
+  "additionalSourceAttributionDelta": {
+    "leafChanges": 62,
+    "playerGameRecords": 20,
+    "gameId": "2026_05_TB_DAL",
+    "teams": [
+      "DAL",
+      "TB"
+    ],
+    "beforeAlias": "espn_fixture_summary_401872980",
+    "afterAlias": "espn_matchup_summary_401872980",
+    "normalizationURL": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+    "aliasURLHashBytesEqualWithinEachRevision": true,
+    "baseDeclarations": [
+      {
+        "id": "espn_fixture_summary_401872980",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "provider": "ESPN",
+        "required": false,
+        "httpStatus": 200,
+        "etag": null,
+        "lastModified": null,
+        "retrievedAt": "2026-10-10T06:44:10Z",
+        "status": "verified",
+        "sha256": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+        "bytes": 604166,
+        "tlsVerified": true,
+        "season": 2026,
+        "watch": true
+      },
+      {
+        "id": "espn_matchup_summary_401872980",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "provider": "ESPN",
+        "required": false,
+        "httpStatus": 200,
+        "etag": null,
+        "lastModified": null,
+        "retrievedAt": "2026-10-10T06:44:09Z",
+        "status": "verified",
+        "sha256": "1f9c06796fc1459f361a88c35225d322dedc7fb6b998b656a926b0982cdd78d3",
+        "bytes": 604166,
+        "tlsVerified": true
+      }
+    ],
+    "incomingDeclarations": [
+      {
+        "id": "espn_fixture_summary_401872980",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "provider": "ESPN",
+        "required": false,
+        "httpStatus": 200,
+        "etag": null,
+        "lastModified": null,
+        "retrievedAt": "2026-10-10T07:04:45Z",
+        "status": "verified",
+        "sha256": "66183f26caad96cad5a6e64db982f8a625023a526d818e40a0297a67a38a741c",
+        "bytes": 604163,
+        "tlsVerified": true,
+        "season": 2026,
+        "watch": true
+      },
+      {
+        "id": "espn_matchup_summary_401872980",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+        "provider": "ESPN",
+        "required": false,
+        "httpStatus": 200,
+        "etag": null,
+        "lastModified": null,
+        "retrievedAt": "2026-10-10T07:04:45Z",
+        "status": "verified",
+        "sha256": "66183f26caad96cad5a6e64db982f8a625023a526d818e40a0297a67a38a741c",
+        "bytes": 604163,
+        "tlsVerified": true
+      }
+    ],
+    "changedLeafKinds": {
+      "advancedProvenance/fieldSources/sackRate/1": 2,
+      "advancedProvenance/fieldSources/targetShare/1": 20,
+      "finalBoxscoreEvidence/sourceIds/0": 20,
+      "sourceIds/0": 20
+    },
+    "affectedPlayers": [
+      {
+        "team": "DAL",
+        "playerId": "00-0033077"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0036358"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0036997"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0037247"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0037801"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038041"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038547"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0038738"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039062"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039410"
+      },
+      {
+        "team": "DAL",
+        "playerId": "00-0039530"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0033921"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0036919"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0038129"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0038951"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0039050"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0039361"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0040129"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0040237"
+      },
+      {
+        "team": "TB",
+        "playerId": "00-0041251"
+      }
+    ],
+    "exactChangedLeaves": [
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "sackRate",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0033077",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036358",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0036997",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037247",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0037801",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038041",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038547",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0038738",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039062",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039410",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "DAL",
+          "players",
+          "00-0039530",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0033921",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0036919",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038129",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0038951",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039050",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0039361",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040129",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0040237",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "sackRate",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "advancedProvenance",
+          "fieldSources",
+          "targetShare",
+          1
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "finalBoxscoreEvidence",
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      },
+      {
+        "path": [
+          "teams",
+          "TB",
+          "players",
+          "00-0041251",
+          "gameLog",
+          0,
+          "sourceIds",
+          0
+        ],
+        "before": "espn_fixture_summary_401872980",
+        "after": "espn_matchup_summary_401872980"
+      }
+    ],
+    "qualification": "The attribution identifiers actually change. Only these observed leaves are canonicalized to the common declared URL in the separately stated extended proof."
+  },
+  "extendedNormalization": {
+    "recipe": "Start with only observed differing metadata leaves declared by the prior normalization and its missing-statistics list sort. Then sort only first three root disagreement records by canonical full-record JSON; map only the 62 observed changed DAL/TB gameLog attribution leaves to the identical declared ESPN URL.",
+    "allFiveEqual": true,
+    "remainingUnexplainedLeaves": 0,
+    "noStatsStatusIdentityGameMembershipFieldsExcluded": true,
+    "noOtherArrayOrderNormalized": true,
+    "canonicalEncoding": "json.dumps(sort_keys=True,separators=(comma,colon),ensure_ascii=False), UTF-8",
+    "finding": "No numerical statistic, report status, player identity or game membership value deltas remain after these exact explicit metadata, attribution and diagnostic-order transformations."
+  },
+  "observedProviderManifestChanges": {
+    "assets/data/current.json": {
+      "sourceCount": 29,
+      "sourceMembershipEqual": true,
+      "changedBodyHashIds": [
+        "espn_steelers_roster",
+        "official_steelers_roster"
+      ],
+      "changedBodyByteCountIds": []
+    },
+    "assets/data/matchup-breakdown.json": {
+      "sourceCount": 125,
+      "sourceMembershipEqual": true,
+      "changedBodyHashIds": [
+        "espn_fixture_summary_401872980",
+        "espn_fixture_summary_401872981",
+        "espn_fixture_summary_401872982",
+        "espn_fixture_summary_401872983",
+        "espn_fixture_summary_401872984",
+        "espn_fixture_summary_401872985",
+        "espn_fixture_summary_401872986",
+        "espn_fixture_summary_401872987",
+        "espn_fixture_summary_401872988",
+        "espn_fixture_summary_401872989",
+        "espn_fixture_summary_401872990",
+        "espn_fixture_summary_401872991",
+        "espn_fixture_summary_401872992",
+        "espn_fixture_summary_401872993",
+        "espn_fixture_summary_401872994",
+        "espn_fixture_summary_401872998",
+        "espn_fixture_summary_401873002",
+        "espn_fixture_summary_401873006",
+        "espn_fixture_summary_401873007",
+        "espn_matchup_depth_DAL",
+        "espn_matchup_depth_PIT",
+        "espn_matchup_depth_TB",
+        "espn_matchup_roster_DAL",
+        "espn_matchup_roster_PIT",
+        "espn_matchup_roster_TB",
+        "espn_matchup_summary_401772960",
+        "espn_matchup_summary_401872658",
+        "espn_matchup_summary_401872925",
+        "espn_matchup_summary_401872930",
+        "espn_matchup_summary_401872935",
+        "espn_matchup_summary_401872944",
+        "espn_matchup_summary_401872946",
+        "espn_matchup_summary_401872950",
+        "espn_matchup_summary_401872959",
+        "espn_matchup_summary_401872960",
+        "espn_matchup_summary_401872964",
+        "espn_matchup_summary_401872967",
+        "espn_matchup_summary_401872968",
+        "espn_matchup_summary_401872980",
+        "espn_start_summary_401671601",
+        "espn_start_summary_401671651",
+        "espn_start_summary_401671671",
+        "espn_start_summary_401671692",
+        "espn_start_summary_401671729",
+        "espn_start_summary_401671752",
+        "espn_start_summary_401671803",
+        "espn_start_summary_401671806",
+        "espn_start_summary_401772801",
+        "espn_start_summary_401772808",
+        "espn_start_summary_401772817",
+        "espn_start_summary_401872933",
+        "espn_start_summary_401872955",
+        "espn_start_summary_401872972",
+        "espn_start_summary_401872977",
+        "team_espn_roster_DAL",
+        "team_espn_schedule_DAL_2025",
+        "team_espn_schedule_DAL_2026",
+        "team_espn_summary_401772694",
+        "team_espn_summary_401772710",
+        "team_espn_summary_401772762",
+        "team_espn_summary_401772818",
+        "team_espn_summary_401772819",
+        "team_espn_summary_401772834",
+        "team_espn_summary_401772850",
+        "team_espn_summary_401772858",
+        "team_espn_summary_401772864",
+        "team_espn_summary_401772890",
+        "team_espn_summary_401772910",
+        "team_espn_summary_401772921",
+        "team_espn_summary_401772933",
+        "team_espn_summary_401772947",
+        "team_espn_summary_401772963",
+        "team_espn_summary_401872930",
+        "team_espn_summary_401872944",
+        "team_espn_summary_401872960",
+        "team_espn_summary_401872967",
+        "team_espn_summary_401872980"
+      ],
+      "changedBodyByteCountIds": [
+        "espn_fixture_summary_401872980",
+        "espn_fixture_summary_401872981",
+        "espn_fixture_summary_401872982",
+        "espn_fixture_summary_401872983",
+        "espn_fixture_summary_401872984",
+        "espn_fixture_summary_401872985",
+        "espn_fixture_summary_401872986",
+        "espn_fixture_summary_401872987",
+        "espn_fixture_summary_401872988",
+        "espn_fixture_summary_401872989",
+        "espn_fixture_summary_401872990",
+        "espn_fixture_summary_401872991",
+        "espn_fixture_summary_401872992",
+        "espn_fixture_summary_401872993",
+        "espn_fixture_summary_401872994",
+        "espn_fixture_summary_401872998",
+        "espn_fixture_summary_401873006",
+        "espn_matchup_summary_401772960",
+        "espn_matchup_summary_401872658",
+        "espn_matchup_summary_401872925",
+        "espn_matchup_summary_401872930",
+        "espn_matchup_summary_401872935",
+        "espn_matchup_summary_401872944",
+        "espn_matchup_summary_401872946",
+        "espn_matchup_summary_401872950",
+        "espn_matchup_summary_401872959",
+        "espn_matchup_summary_401872960",
+        "espn_matchup_summary_401872964",
+        "espn_matchup_summary_401872967",
+        "espn_matchup_summary_401872968",
+        "espn_matchup_summary_401872980",
+        "espn_start_summary_401772801",
+        "espn_start_summary_401772808",
+        "espn_start_summary_401772817",
+        "espn_start_summary_401872933",
+        "espn_start_summary_401872955",
+        "espn_start_summary_401872972",
+        "espn_start_summary_401872977",
+        "team_espn_summary_401772694",
+        "team_espn_summary_401772710",
+        "team_espn_summary_401772762",
+        "team_espn_summary_401772818",
+        "team_espn_summary_401772819",
+        "team_espn_summary_401772858",
+        "team_espn_summary_401772890",
+        "team_espn_summary_401772910",
+        "team_espn_summary_401772921",
+        "team_espn_summary_401772933",
+        "team_espn_summary_401772947",
+        "team_espn_summary_401772963",
+        "team_espn_summary_401872930",
+        "team_espn_summary_401872944",
+        "team_espn_summary_401872960",
+        "team_espn_summary_401872967",
+        "team_espn_summary_401872980"
+      ]
+    },
+    "assets/data/player-history.json": {
+      "sourceCount": 24,
+      "sourceMembershipEqual": true,
+      "changedBodyHashIds": [],
+      "changedBodyByteCountIds": []
+    },
+    "assets/data/provenance.json": {
+      "sourceCount": 29,
+      "sourceMembershipEqual": true,
+      "changedBodyHashIds": [
+        "espn_steelers_roster",
+        "official_steelers_roster"
+      ],
+      "changedBodyByteCountIds": []
+    },
+    "assets/data/team-details.json": {
+      "sourceCount": 32,
+      "sourceMembershipEqual": true,
+      "changedBodyHashIds": [
+        "espn_roster_DAL",
+        "espn_schedule_DAL_2025",
+        "espn_schedule_DAL_2026",
+        "espn_summary_401772694",
+        "espn_summary_401772710",
+        "espn_summary_401772762",
+        "espn_summary_401772818",
+        "espn_summary_401772819",
+        "espn_summary_401772834",
+        "espn_summary_401772850",
+        "espn_summary_401772858",
+        "espn_summary_401772864",
+        "espn_summary_401772890",
+        "espn_summary_401772910",
+        "espn_summary_401772921",
+        "espn_summary_401772933",
+        "espn_summary_401772947",
+        "espn_summary_401772963",
+        "espn_summary_401872930",
+        "espn_summary_401872944",
+        "espn_summary_401872960",
+        "espn_summary_401872967",
+        "espn_summary_401872980"
+      ],
+      "changedBodyByteCountIds": [
+        "espn_summary_401772694",
+        "espn_summary_401772710",
+        "espn_summary_401772762",
+        "espn_summary_401772818",
+        "espn_summary_401772819",
+        "espn_summary_401772858",
+        "espn_summary_401772890",
+        "espn_summary_401772910",
+        "espn_summary_401772921",
+        "espn_summary_401772933",
+        "espn_summary_401772947",
+        "espn_summary_401772963",
+        "espn_summary_401872930",
+        "espn_summary_401872944",
+        "espn_summary_401872960",
+        "espn_summary_401872967",
+        "espn_summary_401872980"
+      ]
+    }
+  },
+  "previousSupplementPreserved": {
+    "path": "qa/home-synchronized-entrance/reviews/incoming-data-958ee56.json",
+    "sha256": "df1be74fa4bd235603a27a4cf718f46999acf5ee90d4dd0b6676f2da5612ca95",
+    "bytes": 22014
+  },
+  "validationBoundary": "No validators were run. This static receipt is bounded to parsed data comparison. Actual hosted acceptance and any existing integrity/source checks remain parent-owned.",
+  "limits": [
+    "The original classifier fails for matchup; extended equality requires the additional source-attribution and disagreement-order transformations stated here.",
+    "Provider hashes and byte counts changed across revisions. SameURL and same within-revision hash/bytes do not assert unchanged provider bodies across revisions or independently verified sports truth.",
+    "Freshness and actual checksum/source identifiers remain intact in committed data; normalization only modifies in-memory audit copies.",
+    "No deployment, browser, validators, network calls, checkout or source/data writes were performed by either auditor."
+  ],
+  "mutationScope": "Only this distinct incoming-data-bf89c37.json receipt; earlier receipts and application/data source are preserved."
+}
