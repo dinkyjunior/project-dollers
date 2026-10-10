@@ -6,6 +6,8 @@ The user rejected the previous continuous SVG/flat-gem Home. The corrective buil
 
 Read [the correction and validation](qa/home-reference-correction/RELEASE.md) and [actual before/after screenshots](qa/home-reference-correction/index.html). Preserve prior artwork, generated masters, saved work, immutable evidence and backups. Before the next push, explicitly fetch and normally rebase latest codex-rebuild and main; never force-push. Verify the actual hosted app before reporting deployment. PR #1 is already merged; append an authorized follow-up rather than treating it as an open draft.
 
+Production commit `5e8e1f1d3918dc8432a88cb2ba690a809a748d61` is deployed by successful Pages run [38011690243](https://github.com/dinkyjunior/project-dollers/actions/runs/38011690243). Subsequent actual strict-HTTPS WebKit verification passed both phones and all four sports: 22 exact Home/data bodies, 30 native actions and 26 visible original PNGs, with no recorded errors or failed requests. [Hosted evidence](qa/home-reference-correction/hosted-webkit/results.json) and [independent acceptance](qa/home-reference-correction/hosted-webkit/independent-acceptance.json) prove actual decoded artwork, current loaded-data identity, reduced/inactive stops and naturally advancing visible restored motion. Automatic NFL refresh remains active. Hosted evidence is an evidence-only codex-rebuild follow-up; it does not require another application deployment.
+
 The historical continuous release records below describe the rejected appearance; their technical passes are not current visual approval.
 
 ## Current Home — continuous entrance release (9 October UTC / 10 October 2026 Sydney)
