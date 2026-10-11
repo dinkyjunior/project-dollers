@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T02:24:06Z",
-  "retrievedAt": "2026-10-11T02:24:04Z",
-  "snapshotSha256CanonicalJson": "0bec1d479db9ee7e9dcca380d3bd3c3f30af8bb2fa3055e9119540dced78b39b",
+  "generatedAt": "2026-10-11T03:32:40Z",
+  "retrievedAt": "2026-10-11T03:32:38Z",
+  "snapshotSha256CanonicalJson": "dffa265c79a02ca35af00780fc8045ceb6c65a08ba3104127052f58d15e830b9",
   "sources": [
     {
       "id": "nflverse_games",
@@ -10,12 +10,12 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
-      "etag": "\"ed6f584af9b940fee8b1b8bd08c7de6a78127ac0ab3ac6d321e094478ef9d505\"",
+      "etag": "\"3ae5929ba4b5e3becdf5d3e57a25bbc5e852c4b98539ee8db0201d6e06eff468\"",
       "lastModified": null,
-      "retrievedAt": "2026-10-11T02:24:04Z",
+      "retrievedAt": "2026-10-11T03:32:38Z",
       "status": "verified",
-      "sha256": "6bdf396f9e7b24bd9dc0e18831a5b170ec67ff9ae367aa5c0198f4c0c6ef9d87",
-      "bytes": 2184003
+      "sha256": "78db66075d4246f4a7000b1ea413296d1f01373004df7a85601b516858368b4d",
+      "bytes": 2184005
     },
     {
       "id": "nflverse_teams",
@@ -25,7 +25,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DE8C1878E14FA9\"",
       "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
-      "retrievedAt": "2026-10-11T02:24:04Z",
+      "retrievedAt": "2026-10-11T03:32:38Z",
       "status": "verified",
       "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
       "bytes": 18919
@@ -38,7 +38,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF26D3A2569890\"",
       "lastModified": "Sat, 10 Oct 2026 13:37:31 GMT",
-      "retrievedAt": "2026-10-11T02:24:05Z",
+      "retrievedAt": "2026-10-11T03:32:38Z",
       "status": "verified",
       "sha256": "de8d8492f4225c9e2788dcc692e0908a0a418f151f12639987ec3228a13264e2",
       "bytes": 966021
@@ -51,7 +51,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF26E1D43E9C28\"",
       "lastModified": "Sat, 10 Oct 2026 15:19:08 GMT",
-      "retrievedAt": "2026-10-11T02:24:05Z",
+      "retrievedAt": "2026-10-11T03:32:38Z",
       "status": "verified",
       "sha256": "bda143a5f21ce606cf62cbf1f2ba832392e9f2cde73a8f733d4bc5d04f1598ff",
       "bytes": 2012053
@@ -64,7 +64,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF26D2FB655143\"",
       "lastModified": "Sat, 10 Oct 2026 13:32:51 GMT",
-      "retrievedAt": "2026-10-11T02:24:05Z",
+      "retrievedAt": "2026-10-11T03:32:39Z",
       "status": "verified",
       "sha256": "c1a5bc5291f1fa1e1e813e7c1f1820c3777d1a307538863d2b606189ddbb190e",
       "bytes": 60124678
@@ -77,7 +77,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF26D304913A4F\"",
       "lastModified": "Sat, 10 Oct 2026 13:33:06 GMT",
-      "retrievedAt": "2026-10-11T02:24:05Z",
+      "retrievedAt": "2026-10-11T03:32:39Z",
       "status": "verified",
       "sha256": "b440d6d8b06300da4a7315031857bdaf16fb31fb5ee8e9b050206dbe60dcdf7f",
       "bytes": 160886
@@ -90,9 +90,9 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-11T02:24:07Z",
+      "retrievedAt": "2026-10-11T03:32:41Z",
       "status": "verified",
-      "sha256": "647205b244135d85d48104fc110f9621276a03b22fa80ca421042328b9cbeb8f",
+      "sha256": "6ef10800b75219227140608f1fdf6873fec03b993c9654492373b38cec03cb0e",
       "bytes": 446774
     },
     {
@@ -103,9 +103,9 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-11T02:24:07Z",
+      "retrievedAt": "2026-10-11T03:32:41Z",
       "status": "verified",
-      "sha256": "56399562d14c8a1779acc84081360acedce6378bebe8021bf215db07015c1abe",
+      "sha256": "6096a134c63ff92ae15cbd0908a90d1f020ad1257c6e38e9cfb2447f5c9f3bcf",
       "bytes": 372455
     },
     {
@@ -635,6 +635,22 @@
     ],
     "disagreements": [
       {
+        "playerId": "00-0036252",
+        "name": "Michael Pittman",
+        "field": "rosterStatus",
+        "primary": "Active",
+        "official": "Reserve/Injured",
+        "espn": "injuredReserveOrOut",
+        "note": "Official current category differs from the primary release; categories retain their source wording.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-11T03:32:41Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
         "playerId": "00-0035239",
         "name": "Sean Murphy-Bunting",
         "field": "jersey",
@@ -646,7 +662,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -662,7 +678,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -678,7 +694,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -694,7 +710,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -710,7 +726,23 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0040341",
+        "name": "Doneiko Slaughter",
+        "field": "rosterStatus",
+        "primary": "Practice squad",
+        "official": "Active",
+        "espn": "defense",
+        "note": "Official current category differs from the primary release; categories retain their source wording.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -726,7 +758,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -742,7 +774,23 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0038409",
+        "name": "Lew Nichols III",
+        "field": "rosterStatus",
+        "primary": "Practice squad",
+        "official": "Active",
+        "espn": "offense",
+        "note": "Official current category differs from the primary release; categories retain their source wording.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -758,7 +806,23 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0036775",
+        "name": "Brandon Smith",
+        "field": "rosterStatus",
+        "primary": "Practice squad",
+        "official": "Active",
+        "espn": "offense",
+        "note": "Official current category differs from the primary release; categories retain their source wording.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -774,7 +838,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -790,13 +854,13 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-11T02:24:07Z",
+        "checkedAt": "2026-10-11T03:32:41Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       }
     ]
   },
-  "playerHistorySha256": "901dd160553c9f26b92b7463b53e76d87682e8f63a851a35838352d20b732866",
+  "playerHistorySha256": "bb74797f84d77fd3c98d232bf914b136644a86e4279654486b365e7c53904379",
   "playerHistoryValidation": {
     "status": "passed",
     "playerCount": 79,
@@ -839,8 +903,8 @@
       "espn_steelers_roster",
       "official_steelers_roster"
     ],
-    "confirmed": 69,
-    "disputed": 10,
+    "confirmed": 65,
+    "disputed": 14,
     "unavailable": 0,
     "retained": 0,
     "officialRosterCount": 77,
