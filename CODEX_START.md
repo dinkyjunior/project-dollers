@@ -6,7 +6,9 @@ The latest Home refinement preserves the approved original wordmark, smooth nati
 
 Both frozen mobile browser suites passed at 393×852 and 430×896, including actual paint, native controls, visibility/navigation/reduced-motion recovery, source identity and real logo pixel changes. Read [the release record](qa/home-brand-jewels/RELEASE.md), [the before/after gallery](qa/home-brand-jewels/index.html), and [native QA receipt](qa/home-brand-jewels/LOCAL_RECEIPT.json). The approved chat attachment remains the visual authority; exact registered pixel identity and physical iPhone performance are not certified.
 
-Preserve previous releases, all 24 backups and the latest verified automatic data updates. Before pushing, fetch and normally rebase both remote branches; never force-push. Actual-host verification is a separate post-publication step. PR #1 is already merged and receives an authorized follow-up comment.
+Production `b052272e9d73edbe9905304942cadbcadeae3da8` combines the reviewed Home release with the latest automatic NFL refresh. Actual Pages run [38122036547](https://github.com/dinkyjunior/project-dollers/actions/runs/38122036547) completed successfully. The [actual strict-HTTPS hosted WebKit report](qa/home-brand-jewels/hosted-webkit/results.json) passed both phones and all four sports: twenty-two exact source/data bodies, thirty native actions and first venue paint, with no recorded console, HTTP or request failures. Its browser is closed and its inputs stayed stable. Hosted evidence is an evidence-only codex-rebuild follow-up.
+
+Preserve previous releases, all 24 backups and the latest verified automatic data updates. Before pushing, explicitly fetch both remote branches and ordinarily integrate any new changes; never force-push. PR #1 is already merged and receives an authorized follow-up comment.
 
 ## Current Home — synchronized entrance and native gemstone refinement (10 October 2026)
 

@@ -6,6 +6,8 @@ The latest Home refinement preserves the original approved artwork and adds loca
 
 Read [the current release record](qa/home-brand-jewels/RELEASE.md), [the mobile comparison gallery](qa/home-brand-jewels/index.html), and [native QA receipt](qa/home-brand-jewels/LOCAL_RECEIPT.json). Preserve all historical releases and new automatic NFL data. Follow ordinary fetch/rebase before push and verify the actual hosted result after publication. PR #1 is already merged; update its authorized follow-up without reopening a merge.
 
+Production `b052272e9d73edbe9905304942cadbcadeae3da8` is published by successful actual Pages run [38122036547](https://github.com/dinkyjunior/project-dollers/actions/runs/38122036547). The [strict-HTTPS hosted WebKit suite](qa/home-brand-jewels/hosted-webkit/results.json) passed both target phones, all four sports, thirty native actions and twenty-two exact Home/data responses. First venues paint, inputs stayed stable and the browser is closed, with no recorded console, HTTP or request failures. Hosted evidence and the preserved automatic-data closure are an evidence-only codex-rebuild follow-up, without another application deployment.
+
 ## Latest Home correction — 10 October 2026 (Sydney)
 
 The user rejected the previous continuous SVG/flat-gem Home. The corrective build restores photographic cut-gem material and polished concentric chrome, removes bulky metal joins, keeps translucent icon-only selectors and no Home bottom navigation, and preserves current NFL/team/matchup data and controllers. The supplied four-sport chat image remains the authority. This is a reviewed visual correction, not a claim of literal pixel identity.

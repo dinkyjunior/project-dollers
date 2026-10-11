@@ -1,0 +1,1064 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-10-11T07:41:59.672493+00:00",
+  "status": "passed-bounded-postpublication-automatic-data-integration",
+  "reviewer": "gem_selector_refinement; independent factual projection by protected_scope_review",
+  "scope": "Bounded latest automatic data integration closure 4c21b4f to b052272 during its current production build. No application code/data changes, browser or network recrawl, broad source/test re-audit, commit or push. Previous receipts remain immutable.",
+  "fromCommit": "4c21b4fdba90098417b38df64d9ed9ef01fabf20",
+  "incomingCommit": "b052272e9d73edbe9905304942cadbcadeae3da8",
+  "automaticCommitParent": "e6ee1ea4ac039535e3935abd5ce83b77a0bb1850",
+  "comparisonBoundary": "The published Home release e6ee1ea lies between the audited data commits. All seven data bodies at that published parent are byte-exact 4c21b4f; the automatic b052272 commit itself changes only the five expected JSON paths.",
+  "observedIntegratedHEAD": "b052272e9d73edbe9905304942cadbcadeae3da8",
+  "observedIntegratedTree": "7b044e73e2b7cd4d3d812aff674d21644b1ea14b",
+  "changedPaths": [
+    "assets/data/current.json",
+    "assets/data/matchup-breakdown.json",
+    "assets/data/player-history.json",
+    "assets/data/provenance.json",
+    "assets/data/team-details.json"
+  ],
+  "integratedPreservation": {
+    "head": "b052272e9d73edbe9905304942cadbcadeae3da8",
+    "tree": "7b044e73e2b7cd4d3d812aff674d21644b1ea14b",
+    "automaticCommitParent": "e6ee1ea4ac039535e3935abd5ce83b77a0bb1850",
+    "all7DataBodiesByteEqualIncoming": true,
+    "dataManifest": {
+      "assets/data/current.json": "d2c7fe1d3aa17e1578024fcd374df42317b879263341aa59c57c54c06a72b9d6",
+      "assets/data/matchup-breakdown.json": "4d1009539b9dcafe1d0bf3db9ffe4aa30472eb07dcc68214bcee9d9cd3413719",
+      "assets/data/player-history.json": "dc400c335b11d9e3e0439b1aeecba167987921818381aa104713e18214cfbd1f",
+      "assets/data/provenance.json": "6aa4a7a14c422d2a3db03579d3ac669a2ccb4ce93205d8ddac741d79b98d4761",
+      "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+      "assets/data/snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+      "assets/data/team-details.json": "7f2926fa59b570e1e03454eee68a20bb6241d3c15978dd0724eb86bfd90a9815"
+    },
+    "validatedScriptsAndStartingRoleEvidenceEqualIncoming": true,
+    "closedVisualReports": [
+      {
+        "file": "qa/home-brand-jewels/local-chromium/results.json",
+        "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+        "all15HomeFilesEqualCurrent": true
+      },
+      {
+        "file": "qa/home-brand-jewels/local-webkit/results.json",
+        "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+        "all15HomeFilesEqualCurrent": true
+      }
+    ],
+    "all15HomeFilesEqualCurrent": true,
+    "earlierReceiptHashes": {
+      "qa/home-brand-jewels/reviews/controls-scope-data-final.json": "6793dea0c7e71d173c4fb63999a2f059baaf81bc8b46c2683138447f8d00deb2",
+      "qa/home-brand-jewels/reviews/incoming-data-b4af580.json": "634994c02b0238d54fa7828b092e5f150fa7daba36638e8c86a913283ef89901",
+      "qa/home-brand-jewels/reviews/protected-source-final.json": "e9a73566244dafc879eea7bfd76968144c368adc634d7b31ee69483e6f562b16",
+      "qa/home-brand-jewels/reviews/incoming-data-4c21b4f.json": "6f7c056821f632513bdd9c352b1d41521550eef2792c96aeec8e28c05ecf1268"
+    },
+    "earlierReceiptsUnmodified": true,
+    "publishedParentAll7DataBodiesEqualPreviousAudited4c21b4f": true,
+    "automaticCommitChangedOnlyExpectedFiveJSONPaths": true,
+    "changedPaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ]
+  },
+  "validation": {
+    "method": "Existing core/team/matchup --check validators ran once against an exact isolated Git export of b052272. Integrated seven data bodies, validator scripts and starting-role evidence match that validated export byte-for-byte.",
+    "commands": [
+      {
+        "command": "python3 -B scripts/refresh-data.py --check",
+        "exitCode": 0,
+        "result": {
+          "status": "passed",
+          "teamCount": 32,
+          "rosterCount": 79,
+          "activeRosterCount": 55,
+          "season": 2026,
+          "currentWeek": 5,
+          "throughWeek": 5,
+          "featured": [
+            "Aaron Rodgers",
+            "Jaylen Warren",
+            "DK Metcalf",
+            "Michael Pittman",
+            "Pat Freiermuth"
+          ],
+          "disagreements": [
+            {
+              "playerId": "00-0035239",
+              "name": "Sean Murphy-Bunting",
+              "field": "jersey",
+              "primary": "26",
+              "official": 27,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0038395",
+              "name": "Terell Smith",
+              "field": "jersey",
+              "primary": "36",
+              "official": 39,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0039883",
+              "name": "Daequan Hardy",
+              "field": "membership",
+              "primary": "PIT",
+              "official": "No matched entry in complete current roster",
+              "espn": "PIT",
+              "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0039626",
+              "name": "Cole Burgess",
+              "field": "membership",
+              "primary": "PIT",
+              "official": "No matched entry in complete current roster",
+              "espn": "PIT",
+              "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0038388",
+              "name": "Darius Rush",
+              "field": "jersey",
+              "primary": "36",
+              "official": 38,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0038581",
+              "name": "KJ Henry",
+              "field": "position",
+              "primary": "DL",
+              "official": "LB",
+              "espn": "LB",
+              "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0039054",
+              "name": "Marte Mapu",
+              "field": "jersey",
+              "primary": "14",
+              "official": 48,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0037382",
+              "name": "Brandon Johnson",
+              "field": "jersey",
+              "primary": "82",
+              "official": 89,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0036165",
+              "name": "Isaiah Hodgins",
+              "field": "jersey",
+              "primary": "89",
+              "official": 82,
+              "espn": null,
+              "note": "Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            },
+            {
+              "playerId": "00-0040618",
+              "name": "Max Hurleman",
+              "field": "position",
+              "primary": "WR",
+              "official": "WR",
+              "espn": "RB",
+              "note": "Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.",
+              "sourceIds": [
+                "official_steelers_roster",
+                "espn_steelers_roster"
+              ],
+              "checkedAt": "2026-10-11T07:37:23Z",
+              "retained": false,
+              "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+            }
+          ],
+          "provenanceHash": "passed",
+          "playerHistory": {
+            "status": "passed",
+            "playerCount": 79,
+            "gameRowCount": 1272,
+            "coverage": {
+              "firstSeason": 2005,
+              "lastSeason": 2026,
+              "availableSeasons": [
+                2005,
+                2006,
+                2007,
+                2008,
+                2009,
+                2010,
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016,
+                2017,
+                2018,
+                2019,
+                2020,
+                2021,
+                2022,
+                2023,
+                2024,
+                2025,
+                2026
+              ],
+              "unavailableSeasons": [],
+              "status": "verified",
+              "cachedRowsNeedingBackfill": 0
+            }
+          }
+        },
+        "stderr": ""
+      },
+      {
+        "command": "python3 -B scripts/refresh-team-details.py --check",
+        "exitCode": 0,
+        "result": {
+          "teams": 32,
+          "uniqueRegularSeasonGames": 544,
+          "sourceCount": 32,
+          "disagreements": 4
+        },
+        "stderr": ""
+      },
+      {
+        "command": "python3 -B scripts/refresh-matchup-breakdown.py --check",
+        "exitCode": 0,
+        "result": {
+          "teams": 32,
+          "players": 801,
+          "playerGameRows": 8118,
+          "explicitQuarterbackStartRows": 835,
+          "disputedStartingRoleRows": 19,
+          "unavailableStartingRoleRows": 9,
+          "sources": 125,
+          "disagreements": 20
+        },
+        "stderr": ""
+      }
+    ],
+    "allThreeExitZero": true,
+    "networkFetches": 0,
+    "validationExportSHA256": "5192a1bd8e079656e84eddcfae88783d8e260285c243d96d137321eb9d2f2de8"
+  },
+  "factualDeltaConclusion": {
+    "classification": "Explicit retrieval/hash/transport metadata updates and missing-QB diagnostic ordering only; no retained sporting-fact or source-alias changes.",
+    "context": {
+      "retrievedAtBefore": "2026-10-11T07:25:19Z",
+      "retrievedAtAfter": "2026-10-11T07:37:20Z",
+      "seasonBefore": 2026,
+      "seasonAfter": 2026,
+      "currentWeekBefore": 5,
+      "currentWeekAfter": 5,
+      "throughWeekBefore": 5,
+      "throughWeekAfter": 5
+    },
+    "all79KeyedRosterIdentitiesStatusesStatsLast5AndOrderingUnchanged": true,
+    "all79KeyedPlayerHistoriesUnchanged": true,
+    "allRetainedTeamGameMatchupFactsUnchanged": true,
+    "sourceIDsStatusesHTTPAndTLSTrustUnchanged": true,
+    "missingQBDiagnosticExact21RowMultisetUnchangedOnlyOrderChanged": true,
+    "newSourceAliasReferenceChanges": 0,
+    "priorDisclosed62DALTBESPNAliasReplacementsUnchanged": true
+  },
+  "independentFactualAudit": {
+    "schemaVersion": 1,
+    "completedAtUTC": "2026-10-11T07:41:13.790337+00:00",
+    "status": "passed",
+    "scope": "Bounded fixed-commit git-show automatic-data audit. Comparison is restricted to assets/data because intervening release changes outside data are expected. No working-tree source/QA files, browser, network, app/QA edits, Git mutation, or tests were used. Only this /tmp scratch result was written.",
+    "fromCommit": "4c21b4fdba90098417b38df64d9ed9ef01fabf20",
+    "toCommit": "b052272e9d73edbe9905304942cadbcadeae3da8",
+    "automaticCommitParent": "e6ee1ea4ac039535e3935abd5ce83b77a0bb1850",
+    "automaticCommitChangedPathsAgainstItsOwnParent": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "changedAssetsDataPathsAcrossRequestedBoundary": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "checks": {
+      "automaticCommitChangesExactlyFiveExpectedJSONPathsAgainstItsOwnParent": true,
+      "dataBoundaryChangesExactlyFiveExpectedJSONPaths": true,
+      "otherTwoDataBodiesByteExactPriorCommit": true,
+      "all79RosterIDsRetained": true,
+      "typedKeyedRosterIdentityStatusStatsHistoryUnchanged": true,
+      "rosterOrderingUnchanged": true,
+      "all79PlayerHistoryIDsRetained": true,
+      "typedKeyedPlayerHistoryFactsUnchanged": true,
+      "sourceIDsStatusHTTPAndTrustUnchanged": true,
+      "missingQBExact21RowMultisetUnchanged": true,
+      "noRetainedFactChangesOutsideDisclosedSourceAliases": true,
+      "allDisclosedSourceAliasesProveCommittedURLProviderStatusHTTPTrustHashByteEquivalence": true
+    },
+    "normalization": {
+      "explicitTimeFieldsExcluded": [
+        "checkedAt",
+        "currentRetrievedAt",
+        "generatedAt",
+        "refreshAfter",
+        "retrievedAt",
+        "scheduleRetrievedAt",
+        "sourceTimestamp",
+        "teamDetailsRetrievedAt"
+      ],
+      "explicitHashFieldsAndHashMapsExcluded": [
+        "currentSha256",
+        "currentSnapshotSha256",
+        "currentSourceHashes",
+        "playerHistorySha256",
+        "sha256",
+        "snapshotSha256CanonicalJson",
+        "sourceHashes",
+        "teamDetailsSha256"
+      ],
+      "explicitTransportFieldsExcluded": [
+        "etag",
+        "lastModified"
+      ],
+      "sourceResponseByteCountsExcludedOnlyAt": "sources[index].bytes",
+      "onlyArraySorted": "coverage.startingQBMissingStatistics; full row content and multiplicity retained",
+      "sourceReferenceIDsRetained": true,
+      "sourceStatusFieldsRetained": true,
+      "typedStatGameRosterHistoryIdentityFactsRetained": true
+    },
+    "files": {
+      "assets/data/current.json": {
+        "beforeSha256": "3a93c35d5d04a99774ec8f5fa6e66b9e3b314af0f900c0cc316bb1abbae5e948",
+        "afterSha256": "d2c7fe1d3aa17e1578024fcd374df42317b879263341aa59c57c54c06a72b9d6",
+        "metadataExcludedCanonicalBeforeSHA256": "21254cc31cd1a817d44a3ab3f12f1ae3829fcc6504fac9a0ee24ba23ca35a96b",
+        "metadataExcludedCanonicalAfterSHA256": "21254cc31cd1a817d44a3ab3f12f1ae3829fcc6504fac9a0ee24ba23ca35a96b",
+        "retainedDifferenceCount": 0,
+        "retainedDifferences": []
+      },
+      "assets/data/matchup-breakdown.json": {
+        "beforeSha256": "df4f9a126d4ee589a40bed979bee05f82e0f1c8b323130e1598233721667607c",
+        "afterSha256": "4d1009539b9dcafe1d0bf3db9ffe4aa30472eb07dcc68214bcee9d9cd3413719",
+        "metadataExcludedCanonicalBeforeSHA256": "9265792cfdbc103fc7af019221f2dc992e424fb7df00a0af1f13a0e9dbacbcbe",
+        "metadataExcludedCanonicalAfterSHA256": "9265792cfdbc103fc7af019221f2dc992e424fb7df00a0af1f13a0e9dbacbcbe",
+        "retainedDifferenceCount": 0,
+        "retainedDifferences": []
+      },
+      "assets/data/player-history.json": {
+        "beforeSha256": "e6f046a980a7f0ecc8829b7f4f82e33f868a5dca01a9127e5710525b96b22b29",
+        "afterSha256": "dc400c335b11d9e3e0439b1aeecba167987921818381aa104713e18214cfbd1f",
+        "metadataExcludedCanonicalBeforeSHA256": "791587364e93f00458f4d09b0274fcf09712f24f4e18aafcd45295c77f3f1e24",
+        "metadataExcludedCanonicalAfterSHA256": "791587364e93f00458f4d09b0274fcf09712f24f4e18aafcd45295c77f3f1e24",
+        "retainedDifferenceCount": 0,
+        "retainedDifferences": []
+      },
+      "assets/data/provenance.json": {
+        "beforeSha256": "bca932a354402dfabeb69eea88a023df7c0f844ae5662cd480ab4c9f36b8667e",
+        "afterSha256": "6aa4a7a14c422d2a3db03579d3ac669a2ccb4ce93205d8ddac741d79b98d4761",
+        "metadataExcludedCanonicalBeforeSHA256": "b6d5cae467fe2739e0d59867eaa4d7b5ed50035fcd13402f61a1ad131f4f7758",
+        "metadataExcludedCanonicalAfterSHA256": "b6d5cae467fe2739e0d59867eaa4d7b5ed50035fcd13402f61a1ad131f4f7758",
+        "retainedDifferenceCount": 0,
+        "retainedDifferences": []
+      },
+      "assets/data/team-details.json": {
+        "beforeSha256": "7632f08788002d5bea49e420139b7bfa4722642a56e1baa2a21e02734ec8710f",
+        "afterSha256": "7f2926fa59b570e1e03454eee68a20bb6241d3c15978dd0724eb86bfd90a9815",
+        "metadataExcludedCanonicalBeforeSHA256": "b651671e009eca6e2f921c599cb22da9cbf9271afadd7ffe857c29ea9799e8a1",
+        "metadataExcludedCanonicalAfterSHA256": "b651671e009eca6e2f921c599cb22da9cbf9271afadd7ffe857c29ea9799e8a1",
+        "retainedDifferenceCount": 0,
+        "retainedDifferences": []
+      }
+    },
+    "otherPreservedDataBodies": {
+      "assets/data/roster-source.json": {
+        "beforeSha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+        "afterSha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+        "byteExact": true
+      },
+      "assets/data/snapshot.js": {
+        "beforeSha256": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+        "afterSha256": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+        "byteExact": true
+      }
+    },
+    "roster": {
+      "countBefore": 79,
+      "countAfter": 79,
+      "addedIDs": [],
+      "removedIDs": [],
+      "typedKeyedChangedRows": {},
+      "fieldChanges": {
+        "identity": [],
+        "status": [],
+        "statsAndLast5": []
+      },
+      "orderChanged": false
+    },
+    "playerHistory": {
+      "countBefore": 79,
+      "countAfter": 79,
+      "addedIDs": [],
+      "removedIDs": [],
+      "typedKeyedChangedPlayers": {}
+    },
+    "sourceStatusProofs": {
+      "assets/data/current.json": {
+        "countBefore": 29,
+        "countAfter": 29,
+        "addedSourceIDs": [],
+        "removedSourceIDs": [],
+        "statusIdentityTrustChanges": []
+      },
+      "assets/data/matchup-breakdown.json": {
+        "countBefore": 125,
+        "countAfter": 125,
+        "addedSourceIDs": [],
+        "removedSourceIDs": [],
+        "statusIdentityTrustChanges": []
+      },
+      "assets/data/player-history.json": {
+        "countBefore": 24,
+        "countAfter": 24,
+        "addedSourceIDs": [],
+        "removedSourceIDs": [],
+        "statusIdentityTrustChanges": []
+      },
+      "assets/data/provenance.json": {
+        "countBefore": 29,
+        "countAfter": 29,
+        "addedSourceIDs": [],
+        "removedSourceIDs": [],
+        "statusIdentityTrustChanges": []
+      },
+      "assets/data/team-details.json": {
+        "countBefore": 32,
+        "countAfter": 32,
+        "addedSourceIDs": [],
+        "removedSourceIDs": [],
+        "statusIdentityTrustChanges": []
+      }
+    },
+    "startingQBMissingStatistics": {
+      "countBefore": 21,
+      "countAfter": 21,
+      "exactRowsBefore": [
+        {
+          "playerId": "00-0036212",
+          "gameId": "2026_02_CAR_ATL",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0031503",
+          "gameId": "2024_17_MIA_CLE",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0039910",
+          "gameId": "2026_03_SEA_WAS",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0039910",
+          "gameId": "2025_08_WAS_KC",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038579",
+          "gameId": "2024_15_ATL_LV",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038579",
+          "gameId": "2024_08_KC_LV",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0034771",
+          "gameId": "2024_14_JAX_TEN",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028986",
+          "gameId": "2026_04_NYJ_CHI",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038998",
+          "gameId": "2024_17_LV_NO",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038998",
+          "gameId": "2024_16_NO_GB",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035289",
+          "gameId": "2024_14_LV_TB",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035289",
+          "gameId": "2024_13_LV_KC",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0036879",
+          "gameId": "2022_11_PHI_IND",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028118",
+          "gameId": "2025_17_NE_NYJ",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028118",
+          "gameId": "2025_16_NYJ_NO",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_17_IND_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_16_NYG_ATL",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_14_NO_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0032268",
+          "gameId": "2024_09_WAS_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035704",
+          "gameId": "2026_04_LAC_SEA",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035704",
+          "gameId": "2026_03_SEA_WAS",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        }
+      ],
+      "exactRowsAfter": [
+        {
+          "playerId": "00-0035289",
+          "gameId": "2024_14_LV_TB",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035289",
+          "gameId": "2024_13_LV_KC",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028986",
+          "gameId": "2026_04_NYJ_CHI",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035704",
+          "gameId": "2026_04_LAC_SEA",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0035704",
+          "gameId": "2026_03_SEA_WAS",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028118",
+          "gameId": "2025_17_NE_NYJ",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0028118",
+          "gameId": "2025_16_NYJ_NO",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038998",
+          "gameId": "2024_17_LV_NO",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038998",
+          "gameId": "2024_16_NO_GB",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0036212",
+          "gameId": "2026_02_CAR_ATL",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_17_IND_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_16_NYG_ATL",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038476",
+          "gameId": "2024_14_NO_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038579",
+          "gameId": "2024_15_ATL_LV",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0038579",
+          "gameId": "2024_08_KC_LV",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0039910",
+          "gameId": "2026_03_SEA_WAS",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0039910",
+          "gameId": "2025_08_WAS_KC",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0036879",
+          "gameId": "2022_11_PHI_IND",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0031503",
+          "gameId": "2024_17_MIA_CLE",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0034771",
+          "gameId": "2024_14_JAX_TEN",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        },
+        {
+          "playerId": "00-0032268",
+          "gameId": "2024_09_WAS_NYG",
+          "sourceIds": [
+            "nflverse_games"
+          ],
+          "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"
+        }
+      ],
+      "multisetEqual": true,
+      "rowSetEqual": true,
+      "orderEqual": false,
+      "duplicatesBefore": {},
+      "duplicatesAfter": {},
+      "addedRows": [],
+      "removedRows": [],
+      "orderBefore": [
+        [
+          "00-0036212",
+          "2026_02_CAR_ATL"
+        ],
+        [
+          "00-0031503",
+          "2024_17_MIA_CLE"
+        ],
+        [
+          "00-0039910",
+          "2026_03_SEA_WAS"
+        ],
+        [
+          "00-0039910",
+          "2025_08_WAS_KC"
+        ],
+        [
+          "00-0038579",
+          "2024_15_ATL_LV"
+        ],
+        [
+          "00-0038579",
+          "2024_08_KC_LV"
+        ],
+        [
+          "00-0034771",
+          "2024_14_JAX_TEN"
+        ],
+        [
+          "00-0028986",
+          "2026_04_NYJ_CHI"
+        ],
+        [
+          "00-0038998",
+          "2024_17_LV_NO"
+        ],
+        [
+          "00-0038998",
+          "2024_16_NO_GB"
+        ],
+        [
+          "00-0035289",
+          "2024_14_LV_TB"
+        ],
+        [
+          "00-0035289",
+          "2024_13_LV_KC"
+        ],
+        [
+          "00-0036879",
+          "2022_11_PHI_IND"
+        ],
+        [
+          "00-0028118",
+          "2025_17_NE_NYJ"
+        ],
+        [
+          "00-0028118",
+          "2025_16_NYJ_NO"
+        ],
+        [
+          "00-0038476",
+          "2024_17_IND_NYG"
+        ],
+        [
+          "00-0038476",
+          "2024_16_NYG_ATL"
+        ],
+        [
+          "00-0038476",
+          "2024_14_NO_NYG"
+        ],
+        [
+          "00-0032268",
+          "2024_09_WAS_NYG"
+        ],
+        [
+          "00-0035704",
+          "2026_04_LAC_SEA"
+        ],
+        [
+          "00-0035704",
+          "2026_03_SEA_WAS"
+        ]
+      ],
+      "orderAfter": [
+        [
+          "00-0035289",
+          "2024_14_LV_TB"
+        ],
+        [
+          "00-0035289",
+          "2024_13_LV_KC"
+        ],
+        [
+          "00-0028986",
+          "2026_04_NYJ_CHI"
+        ],
+        [
+          "00-0035704",
+          "2026_04_LAC_SEA"
+        ],
+        [
+          "00-0035704",
+          "2026_03_SEA_WAS"
+        ],
+        [
+          "00-0028118",
+          "2025_17_NE_NYJ"
+        ],
+        [
+          "00-0028118",
+          "2025_16_NYJ_NO"
+        ],
+        [
+          "00-0038998",
+          "2024_17_LV_NO"
+        ],
+        [
+          "00-0038998",
+          "2024_16_NO_GB"
+        ],
+        [
+          "00-0036212",
+          "2026_02_CAR_ATL"
+        ],
+        [
+          "00-0038476",
+          "2024_17_IND_NYG"
+        ],
+        [
+          "00-0038476",
+          "2024_16_NYG_ATL"
+        ],
+        [
+          "00-0038476",
+          "2024_14_NO_NYG"
+        ],
+        [
+          "00-0038579",
+          "2024_15_ATL_LV"
+        ],
+        [
+          "00-0038579",
+          "2024_08_KC_LV"
+        ],
+        [
+          "00-0039910",
+          "2026_03_SEA_WAS"
+        ],
+        [
+          "00-0039910",
+          "2025_08_WAS_KC"
+        ],
+        [
+          "00-0036879",
+          "2022_11_PHI_IND"
+        ],
+        [
+          "00-0031503",
+          "2024_17_MIA_CLE"
+        ],
+        [
+          "00-0034771",
+          "2024_14_JAX_TEN"
+        ],
+        [
+          "00-0032268",
+          "2024_09_WAS_NYG"
+        ]
+      ]
+    },
+    "sourceAliasChanges": {
+      "retainedReferenceChangeCount": 0,
+      "retainedReferenceChanges": [],
+      "equivalenceProofs": []
+    },
+    "otherRetainedFactChanges": [],
+    "context": {
+      "retrievedAtBefore": "2026-10-11T07:25:19Z",
+      "retrievedAtAfter": "2026-10-11T07:37:20Z",
+      "seasonBefore": 2026,
+      "seasonAfter": 2026,
+      "currentWeekBefore": 5,
+      "currentWeekAfter": 5,
+      "throughWeekBefore": 5,
+      "throughWeekAfter": 5
+    }
+  },
+  "independentFactualScratchSHA256": "042f01226db0e59b59816e6bd1ba882cd6c5b20070d7abf2ef79eab2de72a272",
+  "limits": [
+    "Closed native Chromium and WebKit visual reports captured c3760a6 data. All 15 Home sources remain byte-exact; this receipt validates b052272 data separately and does not claim a new visual browser run.",
+    "Current hosted Pages build 38122036547 was pending when this bounded local closure began. Hosted response equality and behavior belong to the later actual-host QA receipt.",
+    "Source validation uses committed verification records and existing validators; no new remote provider body fetch was performed."
+  ],
+  "blockers": []
+}
