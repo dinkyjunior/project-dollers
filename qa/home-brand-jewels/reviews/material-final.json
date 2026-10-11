@@ -1,0 +1,588 @@
+{
+  "review": "Independent final native screenshot material acceptance",
+  "reviewer": "material_review",
+  "reviewedAtUTC": "2026-10-11T07:18:40.762754+00:00",
+  "status": "accepted",
+  "blockingFindings": [],
+  "method": {
+    "actualPaintDirectlyViewed": true,
+    "finalFullSportPhoneScreenshots": 16,
+    "naturalBrandFrames": 24,
+    "reducedMotionBrandOrPerimeterCaptures": 8,
+    "baselineFullPhoneComparisons": 2,
+    "browserLaunchedByReviewer": false,
+    "sourceEditedByReviewer": false,
+    "imageEditedByReviewer": false,
+    "clockForcedByReviewer": false,
+    "testsRunByReviewer": false,
+    "specificOriginalDetailRecheck": "qa/home-brand-jewels/local-webkit/home-nfl-393x852.png; Enter label clearly painted in exact SHA-verified original"
+  },
+  "findings": {
+    "brand": "Accepted in Chromium and WPE WebKit at both phone sizes. PROJECT retains dense crisp diamond cuts; local white/blue facet and pin changes are visible when natural frames are compared. DOLLAR retains saturated warm gold, dark counters and bevel depth, with localized changing reflections. No floating starfield, uniform white wash, moving letter geometry or loss of readability observed.",
+    "greenMoneybag": "Accepted. Velvet folds, gold rope, tassels and dollar emblem retain their texture, color and position across the final brand sequences. Added reflected light does not visibly intrude into the bag.",
+    "gemAtlas": "Accepted in all four sports and both sizes. CTA keeps its long horizontal proportion, full chamfered corners and recognizable cut planes. Highlights remain on the gem faces; readable white Enter/coming-soon text occupies the darker center. NBA remains visibly blue on the left and red on the right.",
+    "selectors": "Accepted. Floor texture is visibly transmitted through all four selector faces with clear centered logos. Rounded perimeter light is thin and contained; moving hot spots do not produce broad opaque cards or cover the icons.",
+    "portal": "Accepted. Color emission remains visible in the recessed circular channel while the surrounding silver rails and dark gaps remain separate. NBA retains a clear blue/red split; venue imagery and central league logos remain crisp.",
+    "reducedMotion": "Accepted stationary appearance. Brand raster stays crisp without added dynamic sparkles; gem geometry, selector transparency and readable labels remain intact.",
+    "preservation": "All three native rasters have their baseline byte hashes and dimensions. Brand runtime decoded RGBA exactly equals the preserved original PNG master."
+  },
+  "limitations": [
+    "This is qualitative acceptance of frozen native local screenshots and natural sample sequences. Added brand changes are subtle in individual still frames; no claim that every raster diamond sparkles independently or that the effect has a measured perceptual strength.",
+    "Screenshots cannot establish continuous frame pacing, exact GPU composition, physical iPhone Safari behavior or a live hosted production result. WPE WebKit is a local WebKit engine.",
+    "No pixel-registered comparison to the original chat attachment is claimed. Preserved source assets are the existing generated implementation assets, as recorded by their provenance.",
+    "Moving highlight phases differ between baseline and final captures, so full-screen visual comparison is not treated as proof that every corresponding screenshot pixel is unchanged."
+  ],
+  "assets": [
+    {
+      "path": "assets/home/gate-brand-lossless.webp",
+      "sha256": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+      "dimensions": [
+        2022,
+        778
+      ],
+      "mode": "RGBA",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "assets/home/gem-atlas-polished.webp",
+      "sha256": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "unchangedFromBaseline": true
+    },
+    {
+      "path": "assets/home/aperture-immersive.webp",
+      "sha256": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+      "dimensions": [
+        1315,
+        1197
+      ],
+      "mode": "RGBA",
+      "unchangedFromBaseline": true
+    }
+  ],
+  "brandMaster": {
+    "path": "reference/home-brand-original-master.png",
+    "sha256": "22a50dcba81eb50d9e691fd881f7ee1ed9cd074c8e07bb8a04940994278866fd",
+    "dimensions": [
+      2022,
+      778
+    ],
+    "decodedRGBAExactlyEqualToRuntime": true
+  },
+  "reports": [
+    {
+      "path": "qa/home-brand-jewels/local-chromium/results.json",
+      "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+      "status": "passed",
+      "completedAt": "2026-10-11T07:11:08.720Z",
+      "browserClosed": true,
+      "sourceStable": true,
+      "nativeInput": true,
+      "DOMStyleClockResponseSubstitution": false,
+      "physicalIPhone": false,
+      "currentSourceMatchesReport": true,
+      "sourceHashes": {
+        "index.html": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+        "assets/home-aperture.css": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+        "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+        "assets/home-gem-layout.css": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+        "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+        "assets/home-brand-lighting.css": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+        "assets/home-aperture-motion.js": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+        "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+        "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+        "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+        "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+        "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+        "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+        "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+        "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+      }
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/results.json",
+      "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+      "status": "passed",
+      "completedAt": "2026-10-11T07:14:48.290Z",
+      "browserClosed": true,
+      "sourceStable": true,
+      "nativeInput": true,
+      "DOMStyleClockResponseSubstitution": false,
+      "physicalIPhone": false,
+      "currentSourceMatchesReport": true,
+      "sourceHashes": {
+        "index.html": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+        "assets/home-aperture.css": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+        "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+        "assets/home-gem-layout.css": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+        "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+        "assets/home-brand-lighting.css": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+        "assets/home-aperture-motion.js": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+        "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+        "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+        "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+        "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+        "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+        "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+        "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+        "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+      }
+    }
+  ],
+  "reviewedImageInputs": [
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-393x852.png",
+      "sha256": "93ee1397fc5fb7b22884f71b5346f9b5304178b47ef4e26d7a1b7b9701c7a2a6",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nba-393x852.png",
+      "sha256": "e6f57c023ce928184299e861a15292b1ac92e600b1e081f4dda0737ff6e956e7",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nrl-393x852.png",
+      "sha256": "aefa978611f8cad328c672e4ceed5cb86416f641f21f3e0856de098f3761a8ff",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-ufc-393x852.png",
+      "sha256": "7e968d23d6dd500b053062cdf60274389c6e32b4b9aa789ed2429e5a09eb7799",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-0.png",
+      "sha256": "06f7c9b724902e873e399683345d4eb774327e1f06b504a8fa51a7ab5b6c2238",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-1.png",
+      "sha256": "154e31a763d1e0d6b7558e72762d5dec5cb584cfc439244cc021d199a96df273",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-2.png",
+      "sha256": "d179d826288787dcd5647ad94565aeff3f99a284107cb3a3d0b54a031a336248",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-3.png",
+      "sha256": "72481aac64ac79097e6393b36005372e84f00cdd88e3c1e998dd795e86e9c4f6",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-4.png",
+      "sha256": "dde7fece84b08166944c2e71d850f5a6e71b85f116f58274ae162d82ba2fa889",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-5.png",
+      "sha256": "8c5b1b7f390b37028169906b92964fe8cf09184766e9243a7c1a84ad6c0feae8",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-393x852-reduced.png",
+      "sha256": "e57e85891550bb745d3ffe2ce7cf8009fa120533b74ffbd82a1b72c1c0d19917",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-393x852-reduced-perimeter.png",
+      "sha256": "693faec04b12dc01d148b2553dd4ba7d9172ef00dfb647cb7357bc948a851316",
+      "dimensions": [
+        786,
+        1028
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-430x896.png",
+      "sha256": "fa03d19feb2ab61b3303c2fbaa22b1b8c7d316fcc41f4db8c5965ee162fa442d",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nba-430x896.png",
+      "sha256": "6643c23a32b16e4e5d528ee3ed9cb6a91b4726f375942dbeebe320cdd247f522",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nrl-430x896.png",
+      "sha256": "62cc33275cd554b73ad852a9582730eaef0047d7fa3b49a1680ea2765349056a",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-ufc-430x896.png",
+      "sha256": "f5c76488c511bfd2fa0df6a757efbca344e98e39e72997d8280b82a82015feea",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-0.png",
+      "sha256": "2def9800a7c6e55b2e017c5bcd70a92460fd4ff62b81e75d19b18e086f8a7d99",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-1.png",
+      "sha256": "f7fb82e215fc38e5cb0aed38af64fda0240bfc7488b4621fb6007d79d8805815",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-2.png",
+      "sha256": "fddec19ffdfd24c170701a25c73e32437e4798c5a90ac629b5d9ef5a78f00abc",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-3.png",
+      "sha256": "62d792e04bf5e035a22ff468f5309628150eba12f41bb8a643afe0fc1b7b1ce9",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-4.png",
+      "sha256": "22fa350e0719ce61983191517e4342d59aa14b3dcc94555040599a0bdc07912f",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-5.png",
+      "sha256": "584ddf02170bff00257bc8a5d4a3d3804b3102b96d6e5e880026936ea3856ef7",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-430x896-reduced.png",
+      "sha256": "d33ecd33b6256cffd2a4c0261bc4d4e2637c4c52f02d5ed79b3bd00b9731aaba",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-430x896-reduced-perimeter.png",
+      "sha256": "1c7755aaa418217803b4eebda7469be42a3f5a89f9714a32b9fa67d4b6bb503e",
+      "dimensions": [
+        860,
+        1096
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-393x852.png",
+      "sha256": "3895567a566e0395b7b27432a988e74b66f625087c56e5663906f176fcf4f2b1",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nba-393x852.png",
+      "sha256": "d28f581ecdc3b58094e3e055a9f824f53d63e6fcef677d9454986244fb0b783a",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nrl-393x852.png",
+      "sha256": "8290c62e22c6bda591d464c9bc281c3459778bcac8bd26e5132fd756614f6a54",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-ufc-393x852.png",
+      "sha256": "a2e9a149cfb153447ba3ad9d4d32a8893888c72154f939ed8595cbb46e4e7229",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-0.png",
+      "sha256": "3c495f48e7e8a1a27fe3dd1d46e19f902e7606a38a46c369cad84e1f693e286c",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-1.png",
+      "sha256": "ca43e65bd2c709a4ad82281334408b56cd14fd236dd8f2afc080c202514ce233",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-2.png",
+      "sha256": "8a5eea3ef96b0a79f835ca76d8786821ba563048cca3e0e17c254e2928c16209",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-3.png",
+      "sha256": "75ccfdb23ccda1bddcf63ba9ee8b962cf1cd5a2b93e5767020761fbb999370c6",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-4.png",
+      "sha256": "de5f1a11b75a4631ac9aea9ab8456c9206ff8f038f955b48944d9fa89de4df06",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-5.png",
+      "sha256": "1090956d6575f35e8965589d9cb8686ec06df8cca4367f37a90615f22937076c",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-393x852-reduced.png",
+      "sha256": "8d4c6502ed00b34689ba0498a7e147cf59f762fd9b66346ccc12914c4e9adec5",
+      "dimensions": [
+        638,
+        246
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-393x852-reduced-perimeter.png",
+      "sha256": "e0885879b03e84c35bcea200772e678314c1b0bff1d77e8087ad2212f92ff823",
+      "dimensions": [
+        786,
+        1026
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-430x896.png",
+      "sha256": "b24b7fe09f027173967e9237f3ea60820785c8250435c56962e881d8da9e2ce8",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nba-430x896.png",
+      "sha256": "2942908e57f9cff408e1e2cc96fd1b030f69c9b4af3baf5749c321e3849386d6",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nrl-430x896.png",
+      "sha256": "de80c96ac14dbe3da88f9eeda8ae855f8b501494a48cc9d55888958f530cfd9e",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-ufc-430x896.png",
+      "sha256": "b84717ff4f34c2c04ef162f7aae116b06bdbcb347d085cbd423cef22fc1f5244",
+      "dimensions": [
+        860,
+        1792
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-0.png",
+      "sha256": "110abe7ab6c44767790c01eaaa4ebac8db79a027a2886deeede90508a355fae2",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-1.png",
+      "sha256": "dc889835eee2dcb5009060826cfa5ef24b9ff2f62fbba5e2d0a15763f4607363",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-2.png",
+      "sha256": "df5b2031875bddf319b7a8793ae7411a95ce630e5a8e187e196122f581cdf868",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-3.png",
+      "sha256": "19c5e017c2550ba26a8a96f97412f0ef23361866f86f08a51ed30156256004ed",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-4.png",
+      "sha256": "466313e399372405ce7160eb860f09c771acdb3c876fe5f043889673f93cea6f",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-5.png",
+      "sha256": "56934b8fe2c862ec2761b4ff11d5c28de7fb635c7aa4bad45d6b62b1178af8fc",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-430x896-reduced.png",
+      "sha256": "5628e62495c4560713ab7e2c5ca00e7e6bfbed80cafa367e8632f3106ba3726f",
+      "dimensions": [
+        700,
+        270
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-430x896-reduced-perimeter.png",
+      "sha256": "2cc6ec6b84aef410de54a28ac3627b889b92fc4cad2309b53263237ce7049ab6",
+      "dimensions": [
+        860,
+        1094
+      ],
+      "purpose": "final actual paint"
+    },
+    {
+      "path": "qa/home-brand-jewels/baseline-chromium/home-nfl-393x852.png",
+      "sha256": "b8fe6aea954d5f24cf9394815e133d9e6d9b36727049a7b2f305c5b541e21d55",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "baseline visual comparison"
+    },
+    {
+      "path": "qa/home-brand-jewels/baseline-webkit-v2/home-nfl-393x852.png",
+      "sha256": "2904d2046ce290ea06ae2733f58a28ba751bfca60902b858269f8ef22c5d5fb9",
+      "dimensions": [
+        786,
+        1704
+      ],
+      "purpose": "baseline visual comparison"
+    }
+  ]
+}

@@ -162,7 +162,8 @@
   function installBrandLighting() {
     const brand = home.querySelector('.home-header .brand');
     if (!brand || brand.querySelector('.home-brand-lighting')) return;
-    // These coordinates belong to the approved, unchanged 1800 × 693 wordmark.
+    // Sampled paths use the existing normalized 1800 × 693 coordinate space;
+    // the approved 2022 × 778 lossless raster itself remains byte-for-byte intact.
     // Inset face outlines exclude the gold mounts, letter counters, background
     // and green moneybag. Points were sampled on existing bright crystal facets.
     // This gives every PROJECT letter distributed scintillation; the individual
@@ -198,89 +199,149 @@
       preserveAspectRatio: 'xMidYMid meet', 'aria-hidden': 'true', focusable: 'false'
     });
     const defs = svgElement('defs', {});
-    const goldSun = svgElement('linearGradient', {
-      id: 'home-brand-gold-sun', x1: '0%', y1: '0%', x2: '16%', y2: '100%'
-    });
-    for (const [offset, colour, opacity] of [
-      ['0%', '#fff7c6', '.85'], ['25%', '#ffdc77', '.3'],
-      ['53%', '#ffd450', '.08'], ['80%', '#ffe893', '.2'], ['100%', '#fff5be', '.5']
-    ]) goldSun.append(svgElement('stop', { offset, 'stop-color': colour, 'stop-opacity': opacity }));
-    const goldSweep = svgElement('linearGradient', {
-      id: 'home-brand-gold-sweep', x1: '0%', y1: '0%', x2: '100%', y2: '22%'
-    });
-    for (const [offset, colour, opacity] of [
-      ['0%', '#ffca59', '0'], ['36%', '#ffe499', '0'], ['44%', '#fff2b6', '.3'],
-      ['49%', '#fff9d1', '.8'], ['52%', '#fff6c4', '.55'], ['60%', '#ffd975', '0'], ['100%', '#ffcf66', '0']
-    ]) goldSweep.append(svgElement('stop', { offset, 'stop-color': colour, 'stop-opacity': opacity }));
-    const crystalHalo = svgElement('radialGradient', { id: 'home-brand-crystal-pin-bloom' });
-    const goldHalo = svgElement('radialGradient', { id: 'home-brand-gold-pin-bloom' });
-    for (const [offset, opacity] of [['0%', '.72'], ['28%', '.22'], ['100%', '0']]) {
-      crystalHalo.append(svgElement('stop', { offset, 'stop-color': '#e8f4ff', 'stop-opacity': opacity }));
-      goldHalo.append(svgElement('stop', { offset, 'stop-color': '#ffebb0', 'stop-opacity': opacity }));
+    function gradient(kind, id, attrs, stops) {
+      const light = svgElement(kind, { id, ...attrs });
+      stops.forEach(([offset, colour, opacity]) => light.append(svgElement('stop', {
+        offset, 'stop-color': colour, 'stop-opacity': opacity
+      })));
+      defs.append(light);
     }
-    defs.append(goldSun, goldSweep, crystalHalo, goldHalo);
+    gradient('linearGradient', 'home-brand-gold-sun', {
+      x1: '0%', y1: '0%', x2: '18%', y2: '100%'
+    }, [['0%', '#fff6c0', '.6'], ['30%', '#ffd27a', '.16'],
+      ['65%', '#ffc74d', '0'], ['100%', '#ffeab1', '.22']]);
+    gradient('linearGradient', 'home-brand-crystal-sweep', {
+      x1: '0%', y1: '100%', x2: '100%', y2: '0%'
+    }, [['0%', '#adcfff', '0'], ['34%', '#adcfff', '0'],
+      ['43%', '#c8e7ff', '.16'], ['47%', '#eff9ff', '.5'],
+      ['49%', '#fff', '.93'], ['52%', '#e8f5ff', '.5'],
+      ['59%', '#aacfff', '.1'], ['68%', '#adcfff', '0'], ['100%', '#adcfff', '0']]);
+    gradient('linearGradient', 'home-brand-gold-sweep', {
+      x1: '0%', y1: '100%', x2: '100%', y2: '0%'
+    }, [['0%', '#ffc764', '0'], ['26%', '#ffc764', '0'],
+      ['38%', '#ffe29b', '.12'], ['46%', '#fff0b9', '.4'],
+      ['49%', '#fff9d7', '.94'], ['53%', '#fff4c7', '.58'],
+      ['62%', '#ffd884', '.14'], ['76%', '#ffc764', '0'], ['100%', '#ffc764', '0']]);
+    gradient('linearGradient', 'home-brand-gold-edge', {
+      x1: '0%', y1: '0%', x2: '32%', y2: '100%'
+    }, [['0%', '#fffbe2', '.97'], ['28%', '#ffe69a', '.5'],
+      ['58%', '#ffc15e', '.08'], ['100%', '#fff2be', '.85']]);
+    for (const metal of [false, true]) {
+      gradient('radialGradient', 'home-brand-' + (metal ? 'gold' : 'crystal') + '-pin-bloom', {},
+        [['0%', metal ? '#fff3c2' : '#edf8ff', '.78'],
+          ['24%', metal ? '#ffe5a4' : '#cfe8ff', '.3'],
+          ['100%', metal ? '#ffcf79' : '#b5d8ff', '0']]);
+    }
+    const crystalFaces = svgElement('clipPath', {
+      id: 'home-brand-crystal-faces', clipPathUnits: 'userSpaceOnUse'
+    });
+    const goldFaces = svgElement('clipPath', {
+      id: 'home-brand-gold-faces', clipPathUnits: 'userSpaceOnUse'
+    });
+    defs.append(crystalFaces, goldFaces);
     lighting.append(defs);
 
     let pointOrdinal = 0;
-    function addPoint(parent, x, y, metal) {
+    function addPoint(parent, x, y, metal, pin) {
       const ordinal = pointOrdinal++;
-      const size = metal ? 15 + ordinal % 4 * 2 : 9 + ordinal % 5 * 1.7;
-      const duration = metal ? 11.6 + ordinal % 6 * .69 : 5.7 + ordinal % 13 * .31;
+      const duration = metal ? 7.8 : 4.9 + ordinal % 9 * .23;
       const point = svgElement('g', {
-        class: 'home-brand-point home-brand-point-' + (metal ? 'gold' : 'crystal'),
+        class: pin ? 'home-brand-point home-brand-point-' + (metal ? 'gold' : 'crystal') : 'home-brand-facet',
         transform: `translate(${x} ${y})`
       });
-      // Independent, deterministic phases do not restart on sport selection.
+      // Deterministic phases avoid synchronized flashes. CSS owns the clock;
+      // the shared Home lifecycle controls when these decorative lights run.
       point.style.setProperty('--brand-point-duration', duration.toFixed(2) + 's');
       point.style.setProperty('--brand-point-delay', (-(ordinal * .61803398875 % 1) * duration).toFixed(3) + 's');
-      const waist = metal ? 1.6 : 1.15;
-      const halfArm = size * .54;
-      point.append(svgElement('circle', {
-        class: 'home-brand-point-bloom', r: (size * .68).toFixed(2),
-        fill: 'url(#home-brand-' + (metal ? 'gold' : 'crystal') + '-pin-bloom)'
-      }));
-      point.append(svgElement('path', {
-        class: 'home-brand-point-rays',
-        d: `M0 ${-size}L${waist} ${-waist}L${size} 0L${waist} ${waist}L0 ${size}L${-waist} ${waist}L${-size} 0L${-waist} ${-waist}Z`
-      }));
-      point.append(svgElement('path', {
-        class: 'home-brand-point-fine',
-        d: `M${-halfArm} ${-halfArm}L.7 -.7L${halfArm} ${halfArm}L-.7 .7Z M${halfArm} ${-halfArm}L.7 .7L${-halfArm} ${halfArm}L-.7 -.7Z`
-      }));
-      point.append(svgElement('circle', { class: 'home-brand-point-core', r: metal ? '2.2' : '1.75' }));
+      if (!pin) {
+        const size = 10 + ordinal % 4 * 3;
+        const angle = ordinal % 2 ? 18 : -23;
+        const cut = svgElement('g', { transform: `rotate(${angle})` });
+        // Small triangular planes catch light inside sampled native diamonds.
+        // They leave the raster's detailed cut, blue shadows and settings visible.
+        cut.append(svgElement('path', {
+          d: `M${-size} 0L0 ${-size * .7}L${size * .28} 0Z`, fill: '#f7fcff', opacity: '.9'
+        }));
+        cut.append(svgElement('path', {
+          d: `M0 ${-size * .7}L${size} ${size * .12}L${size * .28} 0Z`, fill: '#c4e3ff', opacity: '.54'
+        }));
+        cut.append(svgElement('path', {
+          d: `M${-size} 0L${size * .28} 0L0 ${size * .62}Z`, fill: '#e9f7ff', opacity: '.38'
+        }));
+        point.append(cut);
+      } else {
+        const size = metal ? 20 + ordinal % 3 * 3 : 15 + ordinal % 4 * 2.7;
+        const waist = metal ? 1.9 : 1.55;
+        const halfArm = size * .48;
+        point.append(svgElement('circle', {
+          r: (size * .9).toFixed(2),
+          fill: 'url(#home-brand-' + (metal ? 'gold' : 'crystal') + '-pin-bloom)'
+        }));
+        point.append(svgElement('path', {
+          class: 'home-brand-point-rays',
+          d: `M0 ${-size}L${waist} ${-waist}L${size} 0L${waist} ${waist}L0 ${size}L${-waist} ${waist}L${-size} 0L${-waist} ${-waist}Z`
+        }));
+        point.append(svgElement('path', {
+          class: 'home-brand-point-fine',
+          d: `M${-halfArm} ${-halfArm}L.8 -.8L${halfArm} ${halfArm}L-.8 .8Z M${halfArm} ${-halfArm}L.8 .8L${-halfArm} ${halfArm}L-.8 -.8Z`
+        }));
+        point.append(svgElement('circle', { class: 'home-brand-point-core', r: metal ? '2.8' : '2.4' }));
+      }
       parent.append(point);
     }
 
+    const crystalReflection = svgElement('g', { 'clip-path': 'url(#home-brand-crystal-faces)' });
+    crystalReflection.append(svgElement('rect', {
+      class: 'home-brand-crystal-reflection', x: '0', y: '65', width: '340', height: '250',
+      fill: 'url(#home-brand-crystal-sweep)'
+    }));
+    lighting.append(crystalReflection);
     crystalLetters.forEach(([letter, face, points]) => {
       const id = 'home-brand-crystal-face-' + letter;
       const clip = svgElement('clipPath', { id, clipPathUnits: 'userSpaceOnUse' });
       clip.append(svgElement('path', { d: face, 'clip-rule': 'evenodd' }));
+      crystalFaces.append(svgElement('path', { d: face, 'clip-rule': 'evenodd' }));
       defs.append(clip);
       const scintillation = svgElement('g', {
         class: 'home-brand-crystal-letter', 'data-brand-letter': letter, 'clip-path': 'url(#' + id + ')'
       });
-      points.forEach(([x, y]) => addPoint(scintillation, x, y, false));
+      points.forEach(([x, y], index) => addPoint(scintillation, x, y, false, index % 4 === 0));
       lighting.append(scintillation);
     });
+    const goldReflection = svgElement('g', { 'clip-path': 'url(#home-brand-gold-faces)' });
+    goldReflection.append(svgElement('rect', {
+      class: 'home-brand-gold-warmth', x: '60', y: '345', width: '1310', height: '275',
+      fill: 'url(#home-brand-gold-sun)'
+    }));
+    goldReflection.append(svgElement('rect', {
+      class: 'home-brand-gold-reflection', x: '0', y: '340', width: '420', height: '285',
+      fill: 'url(#home-brand-gold-sweep)'
+    }));
+    lighting.append(goldReflection);
+    const goldEdges = [
+      'M74 358H221L245 381 M74 390V606H222L245 583',
+      'M322 357H461L484 381 M294 390V581L322 607H461L484 583',
+      'M549 357H595 M549 373V607H674',
+      'M735 357H785 M735 373V607H865',
+      'M984 358H1037L1060 442 M913 607H943 M1062 607H1107',
+      'M1169 358H1316L1350 381 M1169 390V607H1220 M1299 607H1350'
+    ];
     goldLetters.forEach(([letter, face, points], index) => {
       const id = 'home-brand-gold-face-' + letter;
       const clip = svgElement('clipPath', { id, clipPathUnits: 'userSpaceOnUse' });
       clip.append(svgElement('path', { d: face, 'clip-rule': 'evenodd' }));
+      goldFaces.append(svgElement('path', { d: face, 'clip-rule': 'evenodd' }));
       defs.append(clip);
       const reflection = svgElement('g', {
         class: 'home-brand-gold-letter', 'data-brand-letter': letter, 'clip-path': 'url(#' + id + ')'
       });
-      reflection.append(svgElement('rect', {
-        class: 'home-brand-gold-warmth', x: '0', y: '330', width: '1390', height: '300',
-        fill: 'url(#home-brand-gold-sun)'
-      }));
-      const sweep = svgElement('rect', {
-        class: 'home-brand-gold-reflection', x: '0', y: '330', width: '1390', height: '300',
-        fill: 'url(#home-brand-gold-sweep)'
+      const edge = svgElement('path', {
+        class: 'home-brand-gold-edge', d: goldEdges[index], fill: 'none',
+        stroke: 'url(#home-brand-gold-edge)', 'stroke-width': '3.4', 'stroke-linecap': 'round', 'stroke-linejoin': 'round'
       });
-      sweep.style.setProperty('--brand-gold-delay', (-index * .51 - 3.2) + 's');
-      reflection.append(sweep);
-      points.forEach(([x, y]) => addPoint(reflection, x, y, true));
+      edge.style.setProperty('--brand-edge-delay', (-2.8 - index * .43).toFixed(2) + 's');
+      reflection.append(edge);
+      points.forEach(([x, y]) => addPoint(reflection, x, y, true, true));
       lighting.append(reflection);
     });
     brand.append(lighting);

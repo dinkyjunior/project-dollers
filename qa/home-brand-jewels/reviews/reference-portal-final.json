@@ -1,0 +1,157 @@
+{
+  "reviewer": "reference_portal_refinement",
+  "status": "accepted",
+  "completedAtUTC": "2026-10-11T07:16:21.509222+00:00",
+  "scope": "Home entrance reference fidelity and material quality only",
+  "reference": {
+    "source": "Approved four-sport 1303x571 image attached in user chat",
+    "localRegisteredSourceAvailable": false,
+    "assessment": "Qualitative composition, shape, lighting and material comparison; not exact registered pixel identity"
+  },
+  "beforeInspected": [
+    {
+      "path": "qa/home-synchronized-entrance/hosted-webkit/home-nfl-393x852.png",
+      "sha256": "dd47ed7cc66f8bb03eb2be2fafb8322bcd24f1c7841e78739143cb2e6e26b6c6"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/hosted-webkit/home-nba-430x896.png",
+      "sha256": "d10b93648948cc05920071574196e5f91b283e46424661aa7eba5bda908fa731"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/hosted-webkit/home-nrl-393x852.png",
+      "sha256": "6b37c0e9e4e666e5d10f7eabbc2082dce4818be4ce069e8be09ea3f62c660e88"
+    },
+    {
+      "path": "qa/home-synchronized-entrance/hosted-webkit/home-ufc-393x852.png",
+      "sha256": "b2af250ae0b2d3b65ed73189d1d96cffce4ea6042b0ff76719e4080e33c9cea0"
+    }
+  ],
+  "iterationInspected": [
+    "/workspace/recovery-qa/home-brand-jewels/preview-chromium/home-nfl-393x852.png",
+    "/workspace/recovery-qa/home-brand-jewels/preview-chromium/home-nba-393x852.png",
+    "/workspace/recovery-qa/home-brand-jewels/preview-strong-core/home-nfl-393x852.png",
+    "/workspace/recovery-qa/home-brand-jewels/preview-strong-core/home-nba-430x896.png",
+    "/workspace/recovery-qa/home-brand-jewels/preview-strong-core/home-nrl-393x852.png",
+    "/workspace/recovery-qa/home-brand-jewels/preview-strong-core/home-ufc-393x852.png"
+  ],
+  "afterInspected": [
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-393x852.png",
+      "sha256": "93ee1397fc5fb7b22884f71b5346f9b5304178b47ef4e26d7a1b7b9701c7a2a6"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nba-393x852.png",
+      "sha256": "e6f57c023ce928184299e861a15292b1ac92e600b1e081f4dda0737ff6e956e7"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nrl-393x852.png",
+      "sha256": "aefa978611f8cad328c672e4ceed5cb86416f641f21f3e0856de098f3761a8ff"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-ufc-393x852.png",
+      "sha256": "7e968d23d6dd500b053062cdf60274389c6e32b4b9aa789ed2429e5a09eb7799"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nfl-430x896.png",
+      "sha256": "fa03d19feb2ab61b3303c2fbaa22b1b8c7d316fcc41f4db8c5965ee162fa442d"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nba-430x896.png",
+      "sha256": "6643c23a32b16e4e5d528ee3ed9cb6a91b4726f375942dbeebe320cdd247f522"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-nrl-430x896.png",
+      "sha256": "62cc33275cd554b73ad852a9582730eaef0047d7fa3b49a1680ea2765349056a"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/home-ufc-430x896.png",
+      "sha256": "f5c76488c511bfd2fa0df6a757efbca344e98e39e72997d8280b82a82015feea"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nfl-393x852.png",
+      "sha256": "3895567a566e0395b7b27432a988e74b66f625087c56e5663906f176fcf4f2b1"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/home-nba-430x896.png",
+      "sha256": "2942908e57f9cff408e1e2cc96fd1b030f69c9b4af3baf5749c321e3849386d6"
+    }
+  ],
+  "originalBrandNaturalFramesInspected": [
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-0.png",
+      "sha256": "06f7c9b724902e873e399683345d4eb774327e1f06b504a8fa51a7ab5b6c2238"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-3.png",
+      "sha256": "72481aac64ac79097e6393b36005372e84f00cdd88e3c1e998dd795e86e9c4f6"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-4.png",
+      "sha256": "dde7fece84b08166944c2e71d850f5a6e71b85f116f58274ae162d82ba2fa889"
+    }
+  ],
+  "closedReports": {
+    "local-chromium": {
+      "path": "qa/home-brand-jewels/local-chromium/results.json",
+      "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+      "status": "passed",
+      "sourceStable": true,
+      "browserClosed": true
+    },
+    "local-webkit": {
+      "path": "qa/home-brand-jewels/local-webkit/results.json",
+      "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+      "status": "passed",
+      "sourceStable": true,
+      "browserClosed": true
+    }
+  },
+  "frozenSource": {
+    "index.html": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+    "assets/home-aperture.css": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+    "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "assets/home-gem-layout.css": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+    "assets/home-brand-lighting.css": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+    "assets/home-aperture-motion.js": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+    "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "rejectedInitialGap": "Initial 2.7-native-pixel ice core remained visually too subtle; replaced by narrow 6.5-native-pixel sport-split emission after a second actual-browser trial.",
+  "findings": {
+    "chrome": "Continuous native chrome, smooth clean casting and broad lower entrance retain physical reflections; stronger ice core stays inside colored glass and does not cover metal.",
+    "blue": "Navy recesses remain dark; lighter cyan/white emission has clearer hierarchy than previous pale periwinkle core.",
+    "sports": "NBA remains blue-left/red-right with aligned seam; emerald NRL and ruby UFC retain correct atmosphere and photographed venues.",
+    "layout": "Native aperture proportions, relative logo placement and control geometry preserved. Corridor now scales by width and fades after dock instead of stretching wet-floor texture throughout tall phone.",
+    "gem": "Native lossless faceted gem face and translucent unfiltered Enter label remain crisp; native art aspect preserved.",
+    "selectors": "All four icon-only translucent buttons remain legible, unclipped and surrounded by consistent travelling illumination.",
+    "brand": "Original diamond texture, gold bevels and moneybag stay legible and crisp. Natural brand frame4 has a warmer passing gold reflection; fine localized crystal flash avoids broad whitewash.",
+    "motionProof": "Both closed native reports pass; Chromium read-only interior pixel proof shows natural-time change in all seven PROJECT letters and all six DOLLAR faces, while conservative moneybag interior is unchanged."
+  },
+  "pixelProof": {
+    "path": "qa/home-brand-jewels/local-chromium/pixel-native-proof.json",
+    "sha256": "e49c4c7e986d219513f43f4193fae4943230e2435535d7a47e5b96fb49f3af0a"
+  },
+  "remainingDifferences": [
+    "Real locally bundled venue photography and chrome details differ from the generated reference artwork.",
+    "Other sports retain Coming soon entry labels and cannot enter unsupported dashboards.",
+    "Tall iPhone aspect ratios retain additional black framing below the compact reference composition."
+  ],
+  "qualifications": [
+    "Visual acceptance is a reviewed improvement toward the approved composition and material treatment, not a promise of perfect pixel identity.",
+    "Chromium all eight sport/phone screenshots and selected WebKit NFL393/NBA430 originals were visually inspected directly by this reviewer; remaining WebKit screenshots were validated by the separate native-browser QA owner.",
+    "Mobile browser emulation is not physical iPhone or 60fps certification.",
+    "Functional and data audits are separate review gates; this receipt does not independently certify factual sports data."
+  ],
+  "blockingFindings": [],
+  "sourceEditsByReviewer": [
+    "assets/home-aperture.css",
+    "assets/home-gem-layout.css"
+  ]
+}

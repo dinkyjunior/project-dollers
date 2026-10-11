@@ -1,0 +1,19 @@
+# Home diamond, gold and entrance refinement — 11 October 2026
+
+The visual authority is the latest four-sport render attached in the conversation. Original attachment bytes are unavailable in this executor; the existing preserved local artwork is not presented as an exported reference panel. All comparison statements are qualitative.
+
+The existing PROJECT diamond, DOLLAR gold and green moneybag artwork is unchanged. New localized facet flashes, sparse bright pins, two coherent material reflections and warm gold edge hits make the logo visibly glisten. Face clips preserve the counters, settings, bevel shadows and bag. The 2022×778 original lossless brand, 1315×1197 chrome and 1536×1024 gemstone atlas remain byte-for-byte unchanged.
+
+The entrance keeps the native casting and venue geometry. Its brighter ice channel is approximately two CSS pixels at 393px, with compact blue emission and navy recesses. The blue corridor filter preserves more cyan highlights instead of reducing them to pale violet. The background keeps the reference's compact proportions, including the safe-area top inset, and fades below the sport dock rather than stretching wet-floor photography over the whole phone.
+
+The faceted Enter artwork and translucent icon-only sport selectors are retained. Seventeen perimeter paths keep their shared 8.8-second cycle. Logo reflections use independent decorative cadences. All added motion observes the existing visibility, navigation and reduced-motion controls. There are no new runtime rasters, requests, timers or per-frame JavaScript.
+
+Scope is five existing Home files: index.html, home-aperture.css, home-gem-layout.css, home-brand-lighting.css and the installBrandLighting function in home-aperture-motion.js. Other screen markup, controllers, tests, workflows, saved artwork and backups are preserved. New verified automatic NFL data commits are integrated separately, with their provenance and unavailable/disagreement states retained.
+
+## Validation and publication
+
+Closed baseline Chromium and WebKit captures are preserved beside the final source-bound browser evidence. The first proposed ring refinement was rejected as too subtle; the second stronger compact core was inspected before freezing the application. A preliminary WebKit baseline helper had an inappropriate screenshot-encoding time bound; its diagnostic artifacts remain in the recovery workspace. The corrected baseline uses actual native sample times and leaves app behavior unchanged.
+
+Both final suites passed in Chromium 151 and genuine WPE WebKit 26 at 393×852 and 430×896: eight sport/phone originals per engine, thirty native actions per engine, all twenty-two exact HTTP 200 Home/data bodies, seventeen synchronized perimeter paths, and zero recorded JavaScript, console, HTTP or transport failures. Natural brand captures verify changing pixels in all thirteen implemented SVG face-clip interiors at both phones, with the moneybag unchanged. All 124 brand motion objects stop for reduced/inactive states and recover on restoration/return. Native artwork remains crisp and ratio-correct. Chromium also checks tablet, desktop, a short phone and a narrow phone; one actual desktop original is preserved.
+
+[Local receipt](LOCAL_RECEIPT.json), [independent reviews](reviews/) and [before/after gallery](index.html) retain the exact input/report/original hashes. A withdrawn low-detail image-review concern about the Enter label was resolved by original-detail inspection and exact pixel/hash verification, without altering the capture or app. Actual-host verification follows publication and is saved separately on codex-rebuild with the deployment and PR follow-up. A build command alone is not deployment proof. No exact reference-pixel equivalence, physical iPhone rendering or measured 60fps is asserted.

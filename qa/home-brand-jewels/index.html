@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Dollar — Home refinement evidence</title>
+<style>
+  :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #030711; color: #eaf4ff; }
+  body { max-width: 1120px; margin: auto; padding: 24px; }
+  h1 { font-size: clamp(24px, 4vw, 36px); line-height: 1.15; }
+  a { color: #85d9ff; } p { max-width: 880px; color: #b9cadc; }
+  label { display: inline-flex; gap: 10px; align-items: center; margin: 8px 16px 8px 0; }
+  select { background: #0e192a; color: #fff; border: 1px solid #426180; padding: 8px 12px; border-radius: 8px; font: inherit; }
+  .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; align-items: start; }
+  figure { margin: 0; padding: 12px; border: 1px solid #24384f; border-radius: 12px; background: #070e1c; }
+  figcaption { margin-bottom: 10px; color: #c4dbed; }
+  figure img { display: block; width: 100%; height: auto; max-width: 430px; margin: auto; background: #010307; }
+  .sports { margin: 26px 0; }
+  .film { display: flex; overflow-x: auto; gap: 14px; padding-bottom: 12px; }
+  .film figure { flex: 0 0 310px; }
+  .film img { width: 100%; }
+  .note { font-size: 14px; color: #92adc4; }
+  @media(max-width:600px) { body { padding: 14px; } .grid { gap: 8px; } figure { padding: 5px; } figcaption { font-size: 12px; } }
+</style>
+<h1>Home — diamond, gold and entrance refinement</h1>
+<p>The approved visual source is the four-sport render attached in the chat. These are actual, unaltered browser captures of the existing build and the reviewed revision. The comparison is qualitative; no registered pixel comparison with an exported source image is claimed.</p>
+<p><a href="../../#home">Open Project Dollar</a> · <a href="RELEASE.md">Implementation and QA record</a></p>
+<label>Phone size <select id="size"><option value="393x852">393 × 852</option><option value="430x896">430 × 896</option></select></label>
+<div class="grid">
+  <figure><figcaption>Before — actual WebKit Home</figcaption><img id="before" src="baseline-webkit-v2/home-nfl-393x852.png" alt="Previous NFL Home at 393 by 852"></figure>
+  <figure><figcaption>After — actual WebKit Home</figcaption><img id="after" src="local-webkit/home-nfl-393x852.png" alt="Refined NFL Home at 393 by 852"></figure>
+</div>
+<div class="sports">
+  <label>Sport <select id="sport"><option value="nfl">NFL / Sapphire</option><option value="nba">NBA / Blue and red</option><option value="nrl">NRL / Emerald</option><option value="ufc">UFC / Ruby</option></select></label>
+  <div class="grid">
+    <figure><figcaption>Reviewed revision — Chromium</figcaption><img id="chromium" loading="lazy" src="local-chromium/home-nfl-393x852.png" alt="Refined NFL Home in Chromium"></figure>
+    <figure><figcaption>Reviewed revision — WebKit</figcaption><img id="webkit" loading="lazy" src="local-webkit/home-nfl-393x852.png" alt="Refined NFL Home in WebKit"></figure>
+  </div>
+</div>
+<h2>Diamond and gold light — natural browser samples</h2>
+<p>Six native crops sampled while the real animations ran. Actual capture times are recorded in each browser report. The artwork and green moneybag remain unchanged.</p>
+<div class="film" id="film"></div>
+<p class="note">NFL entry and sport selection are functional. NBA, NRL and UFC remain Coming soon. The synchronized perimeter lights retain their shared 8.8-second cycle; the localized logo reflections use separate decorative rhythms. Chromium and WebKit are browser-engine checks, not a physical iPhone performance certification.</p>
+<p><a href="local-chromium/results.json">Chromium native QA</a> · <a href="local-webkit/results.json">WebKit native QA</a> · <a href="local-webkit/pixel-native-proof.json">Native brand pixel evidence</a></p>
+<script>
+const size=document.querySelector('#size'),sport=document.querySelector('#sport');
+function update(){
+  const v=size.value,s=sport.value;
+  for(const id of ['before','after','chromium','webkit']) {
+    const folder={before:'baseline-webkit-v2',after:'local-webkit',chromium:'local-chromium',webkit:'local-webkit'}[id];
+    const current=id==='before'||id==='after'?'nfl':s;
+    document.getElementById(id).src=folder+'/home-'+current+'-'+v+'.png';
+    document.getElementById(id).alt=current.toUpperCase()+' Home at '+v.replace('x',' by ');
+  }
+  const film=document.querySelector('#film'); film.replaceChildren();
+  for(let i=0;i<6;i++) {
+    const f=document.createElement('figure'),c=document.createElement('figcaption'),img=document.createElement('img');
+    c.textContent='Natural sample '+(i+1); img.src='local-webkit/brand-'+v+'-'+i+'.png';
+    img.alt='Actual diamond and gold logo, natural sample '+(i+1); img.loading='lazy'; f.append(c,img); film.append(f);
+  }
+}
+size.addEventListener('change',update);sport.addEventListener('change',update);update();
+</script>
+</html>

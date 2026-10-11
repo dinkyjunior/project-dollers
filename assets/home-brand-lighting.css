@@ -1,5 +1,5 @@
-/* Original approved raster wordmark, with small vector light hits mounted in
-   its own native coordinate space. All masks exclude the green moneybag. */
+/* Light is mounted over the unchanged approved lossless wordmark. Face clips
+   preserve counters, dark bevels and the green moneybag; artwork never moves. */
 .page[data-page="home"] .home-header .brand-glint {
   display: none;
   animation: none;
@@ -14,80 +14,100 @@
   overflow: hidden;
   pointer-events: none;
 }
-.page[data-page="home"] .home-brand-point {
-  opacity: .04;
-  animation: pd-home-brand-crystal-point var(--brand-point-duration, 8s) ease-in-out infinite;
+.page[data-page="home"] :is(.home-brand-point, .home-brand-facet) {
+  opacity: 0;
+  animation: pd-home-brand-crystal-point var(--brand-point-duration, 5.8s) ease-in-out infinite;
   animation-delay: var(--brand-point-delay, 0s);
   animation-play-state: var(--home-motion-play-state, paused);
 }
-.page[data-page="home"] .home-brand-point-rays {
-  fill: #f5faff;
+.page[data-page="home"] .home-brand-facet {
+  animation-name: pd-home-brand-crystal-facet;
 }
-.page[data-page="home"] .home-brand-point-fine {
-  fill: #bad6ff;
-  opacity: .46;
-}
-.page[data-page="home"] .home-brand-point-core {
-  fill: #fff;
-}
+.page[data-page="home"] .home-brand-point-rays { fill: #f7fbff; }
+.page[data-page="home"] .home-brand-point-fine { fill: #c6ddff; opacity: .52; }
+.page[data-page="home"] .home-brand-point-core { fill: #fff; }
 .page[data-page="home"] .home-brand-point-gold {
-  opacity: .03;
   animation-name: pd-home-brand-gold-point;
 }
-.page[data-page="home"] .home-brand-point-gold .home-brand-point-rays {
-  fill: #fff1b5;
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-rays { fill: #fff5c5; }
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-fine { fill: #ffd884; opacity: .4; }
+.page[data-page="home"] .home-brand-point-gold .home-brand-point-core { fill: #fffce6; }
+.page[data-page="home"] .home-brand-crystal-reflection {
+  opacity: 0;
+  animation: pd-home-brand-crystal-surface 6.4s cubic-bezier(.34, 0, .3, 1) infinite;
+  animation-delay: -1.6s;
+  animation-play-state: var(--home-motion-play-state, paused);
 }
-.page[data-page="home"] .home-brand-point-gold .home-brand-point-fine {
-  fill: #ffd578;
-  opacity: .33;
-}
-.page[data-page="home"] .home-brand-point-gold .home-brand-point-core {
-  fill: #fff8dc;
-}
-.page[data-page="home"] .home-brand-gold-warmth {
-  opacity: .12;
-}
+.page[data-page="home"] .home-brand-gold-warmth { opacity: .055; }
 .page[data-page="home"] .home-brand-gold-reflection {
-  opacity: .09;
-  animation: pd-home-brand-gold-surface 17.3s ease-in-out infinite;
-  animation-delay: var(--brand-gold-delay, -3.2s);
+  opacity: 0;
+  animation: pd-home-brand-gold-surface 7.8s cubic-bezier(.34, 0, .3, 1) infinite;
+  animation-delay: -2.8s;
+  animation-play-state: var(--home-motion-play-state, paused);
+}
+.page[data-page="home"] .home-brand-gold-edge {
+  opacity: .035;
+  animation: pd-home-brand-gold-edge 7.8s ease-in-out infinite;
+  animation-delay: var(--brand-edge-delay, 0s);
   animation-play-state: var(--home-motion-play-state, paused);
 }
 
-/* Only opacity changes on tiny facet-mounted points. There is no star field,
-   wide glare, moving letter artwork or glow layer covering readable letters. */
+/* Sparse pins and cut-shaped facet flashes are legible at iPhone size. Most
+   sampled diamonds use facets, so the face reads as jewelry rather than stars. */
 @keyframes pd-home-brand-crystal-point {
-  0%, 19%, 37%, 100% { opacity: .035; }
-  24% { opacity: .28; }
-  26% { opacity: .97; }
-  28.5% { opacity: .13; }
-  31% { opacity: .67; }
-  34% { opacity: .045; }
+  0%, 19%, 35%, 100% { opacity: 0; }
+  23% { opacity: .25; }
+  26% { opacity: 1; }
+  28.5% { opacity: .14; }
+  31% { opacity: .72; }
+  34% { opacity: .025; }
+}
+@keyframes pd-home-brand-crystal-facet {
+  0%, 18%, 40%, 100% { opacity: 0; }
+  23% { opacity: .18; }
+  27% { opacity: .72; }
+  31% { opacity: .12; }
+  35% { opacity: .48; }
 }
 @keyframes pd-home-brand-gold-point {
-  0%, 33%, 53%, 100% { opacity: .025; }
-  39% { opacity: .13; }
-  42% { opacity: .81; }
-  46% { opacity: .19; }
-  49% { opacity: .4; }
-}
-@keyframes pd-home-brand-gold-surface {
-  0%, 100% { opacity: .045; transform: translateX(-250px); }
-  35% { opacity: .105; }
-  60% { opacity: .13; }
-  80% { opacity: .085; }
-  100% { transform: translateX(310px); }
+  0%, 26%, 46%, 100% { opacity: 0; }
+  30% { opacity: .23; }
+  34% { opacity: .96; }
+  38% { opacity: .16; }
+  42% { opacity: .52; }
 }
 
-/* Reduced motion keeps the photographic diamond/gold material and a tiny
-   steady surface highlight, with every added motion object removed. */
+/* One reflected light crosses each material as a coherent surface. The narrow
+   cream/white core travels fully outside the clips before its invisible reset. */
+@keyframes pd-home-brand-crystal-surface {
+  0%, 8% { opacity: 0; transform: translateX(-360px); }
+  17% { opacity: .3; }
+  28% { opacity: .46; }
+  43% { opacity: .34; }
+  58%, 100% { opacity: 0; transform: translateX(1470px); }
+}
+@keyframes pd-home-brand-gold-surface {
+  0%, 10% { opacity: 0; transform: translateX(-430px); }
+  20% { opacity: .24; }
+  32% { opacity: .4; }
+  45% { opacity: .34; }
+  63%, 100% { opacity: 0; transform: translateX(1470px); }
+}
+@keyframes pd-home-brand-gold-edge {
+  0%, 17%, 46%, 100% { opacity: .035; }
+  24% { opacity: .26; }
+  30% { opacity: .76; }
+  35% { opacity: .17; }
+  40% { opacity: .36; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .page[data-page="home"] .home-brand-point,
-  .page[data-page="home"] .home-brand-gold-reflection {
+  .page[data-page="home"] :is(.home-brand-point, .home-brand-facet,
+    .home-brand-crystal-reflection, .home-brand-gold-reflection, .home-brand-gold-edge) {
     animation: none !important;
     will-change: auto;
   }
-  .page[data-page="home"] .home-brand-point { opacity: .12; }
-  .page[data-page="home"] .home-brand-point-gold { opacity: .08; }
-  .page[data-page="home"] .home-brand-gold-reflection { opacity: .065; transform: none; }
+  .page[data-page="home"] :is(.home-brand-point, .home-brand-facet,
+    .home-brand-crystal-reflection, .home-brand-gold-reflection) { opacity: 0; }
+  .page[data-page="home"] .home-brand-gold-edge { opacity: .045; }
 }

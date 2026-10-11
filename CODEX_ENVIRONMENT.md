@@ -1,5 +1,11 @@
 # Codex Cloud Environment — Project Dollar$
 
+## Current Home — diamond and gold light, compact entrance (11 October 2026)
+
+The latest Home refinement preserves the original approved artwork and adds localized diamond/gold lighting with a stronger compact portal channel. Actual Chromium and WebKit checks passed both target phones; original image bytes, non-Home source and 24 backups are preserved. The existing local server and authenticated GitHub access are working. No setup restart, Figma upgrade or new plugin is required.
+
+Read [the current release record](qa/home-brand-jewels/RELEASE.md), [the mobile comparison gallery](qa/home-brand-jewels/index.html), and [native QA receipt](qa/home-brand-jewels/LOCAL_RECEIPT.json). Preserve all historical releases and new automatic NFL data. Follow ordinary fetch/rebase before push and verify the actual hosted result after publication. PR #1 is already merged; update its authorized follow-up without reopening a merge.
+
 ## Latest Home correction — 10 October 2026 (Sydney)
 
 The user rejected the previous continuous SVG/flat-gem Home. The corrective build restores photographic cut-gem material and polished concentric chrome, removes bulky metal joins, keeps translucent icon-only selectors and no Home bottom navigation, and preserves current NFL/team/matchup data and controllers. The supplied four-sport chat image remains the authority. This is a reviewed visual correction, not a claim of literal pixel identity.

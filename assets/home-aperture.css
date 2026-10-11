@@ -75,26 +75,28 @@
   stroke: url(#home-aperture-colour);
   stroke-width: 42;
   /* Saturated glass/reflection detail stays photographic beneath emission. */
-  opacity: .22;
+  opacity: .30;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-bloom {
   fill: none;
   stroke: url(#home-aperture-colour);
   stroke-width: 60;
-  opacity: .28;
+  opacity: .36;
   filter: url(#home-aperture-bloom);
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-core {
   fill: none;
-  stroke: #abbfff;
-  stroke-width: 2.5;
-  opacity: .65;
+  /* A narrow glass emission core sits inside the native blue channel.
+     Sport-split specular colour preserves NBA's two halves and team hues. */
+  stroke: url(#home-aperture-moving-specular) #c5f2ff;
+  stroke-width: 6.5;
+  opacity: .82;
 }
 .page[data-page="home"] .aperture-channel-art .aperture-neon-inner-track {
   fill: none;
   stroke: url(#home-aperture-colour);
-  stroke-width: 2.2;
-  opacity: .38;
+  stroke-width: 3;
+  opacity: .56;
 }
 /* The photographic toroid defines the outer casting. An extra synthetic edge
    does not improve its material and must not draw a circular halo or foot. */

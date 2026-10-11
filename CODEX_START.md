@@ -1,5 +1,13 @@
 # Codex Start Here
 
+## Current Home — diamond and gold light, compact entrance (11 October 2026)
+
+The latest Home refinement preserves the approved original wordmark, smooth native chrome and faceted Enter artwork. Localized diamond facet flashes, coherent crystal/gold reflections and warm gold edge hits are added; the entrance has stronger ice-cyan emission over navy glass. The background now keeps compact reference proportions and fades below the sport dock. All seventeen border paths retain their synchronized 8.8-second cycle. NFL entry works; other sport environments remain selectable Coming soon.
+
+Both frozen mobile browser suites passed at 393×852 and 430×896, including actual paint, native controls, visibility/navigation/reduced-motion recovery, source identity and real logo pixel changes. Read [the release record](qa/home-brand-jewels/RELEASE.md), [the before/after gallery](qa/home-brand-jewels/index.html), and [native QA receipt](qa/home-brand-jewels/LOCAL_RECEIPT.json). The approved chat attachment remains the visual authority; exact registered pixel identity and physical iPhone performance are not certified.
+
+Preserve previous releases, all 24 backups and the latest verified automatic data updates. Before pushing, fetch and normally rebase both remote branches; never force-push. Actual-host verification is a separate post-publication step. PR #1 is already merged and receives an authorized follow-up comment.
+
 ## Current Home — synchronized entrance and native gemstone refinement (10 October 2026)
 
 The latest request targets pixelated gemstone material, uneven border pace and the narrow sports entrance. This pass preserves the original branding and venue photographs, bundles native lossless brand/gem/chrome material, expands the field opening, and aligns seventeen perimeter paths to one 8.8-second cycle. Icon-only glass selectors and no Home bottom navigation remain. NFL is functional; other sports remain selectable Coming soon environments.

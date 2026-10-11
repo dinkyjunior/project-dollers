@@ -49,7 +49,13 @@ body:has(.page[data-page="home"].active) {
 .page[data-page="home"] .home-architecture {
   inset: calc(-10px - env(safe-area-inset-top, 0px))
     calc(-1 * var(--home-page-gutter)) auto;
-  height: max(calc(100dvh + 10px), calc(min(100vw, 430px) * 1.75 + 22px));
+  height: calc(min(100vw, 430px) * 1.75 + 22px + env(safe-area-inset-top, 0px));
+}
+/* The reference ends just below its sport dock. Fade the native corridor
+   after the controls instead of stretching reflective pavement on tall phones. */
+.page[data-page="home"] .home-architecture::after {
+  background: linear-gradient(180deg, #01030715, transparent 15% calc(100% - 36px), #010307 100%),
+    radial-gradient(ellipse at 50% 19%, #0007, transparent 40%);
 }
 .page[data-page="home"] .home-header {
   height: auto;
@@ -138,16 +144,19 @@ body:has(.page[data-page="home"].active) {
 /* Local sapphire emission preserves navy glass and neutral white metal. */
 .page[data-page="home"][data-home-sport="nfl"],
 .page[data-page="home"][data-home-sport="nba"] {
-  --home-left: #245aff;
-  --home-left-rgb: 36 90 255;
+  --home-left: #145bff;
+  --home-left-rgb: 20 91 255;
 }
 .page[data-page="home"][data-home-sport="nfl"] {
-  --home-right: #245aff;
-  --home-right-rgb: 36 90 255;
-  --home-accent: #5983ff;
+  --home-right: #145bff;
+  --home-right-rgb: 20 91 255;
+  --home-accent: #70a4ff;
+  --home-motion-highlight-left: #8ceaff;
+  --home-motion-highlight-right: #8ceaff;
 }
 .page[data-page="home"][data-home-sport="nba"] {
-  --home-accent: #5983ff;
+  --home-accent: #70a4ff;
+  --home-motion-highlight-left: #8ceaff;
 }
 .page[data-page="home"][data-home-sport="nfl"] .home-corridor,
 .page[data-page="home"][data-home-sport="nba"] .home-corridor:not(.home-corridor-half) {

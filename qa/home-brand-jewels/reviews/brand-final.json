@@ -1,0 +1,452 @@
+{
+  "reviewer": "brand_diamond_gold",
+  "status": "accepted",
+  "completedAtUTC": "2026-10-11T07:18:19.051440+00:00",
+  "scope": "Home original approved PROJECT diamond / DOLLAR gold wordmark lighting only; final actual native browser material review",
+  "sourceEditsByImplementationAgent": [
+    "assets/home-brand-lighting.css",
+    "assets/home-aperture-motion.js:installBrandLighting() only"
+  ],
+  "sourceEditsDuringThisFinalReview": [],
+  "implementation": {
+    "preservedRaster": {
+      "path": "assets/home/gate-brand-lossless.webp",
+      "nativeWidth": 2022,
+      "nativeHeight": 778,
+      "sha256": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+      "unchangedBytes": true,
+      "decodedEqualityToApprovedPNGMaster": "Verified by source/provenance audit, unchanged file hash preserved in both final capture source manifests",
+      "noRedrawResizeOrRecompression": true
+    },
+    "overlaySpace": {
+      "width": 1800,
+      "height": 693,
+      "qualification": "Existing normalized sampled overlay coordinates, not native raster dimensions"
+    },
+    "project": {
+      "sampledLocations": 98,
+      "sparsePinGlints": 27,
+      "cutShapedFacetFlashes": 71,
+      "sharedClippedReflectionBands": 1,
+      "facetCadenceSeconds": [
+        4.9,
+        6.74
+      ],
+      "sharedReflectionCadenceSeconds": 6.4
+    },
+    "dollar": {
+      "pinGlints": 18,
+      "localizedWarmEdgeAccents": 6,
+      "sharedCoherentReflectionBands": 1,
+      "sharedReflectionCadenceSeconds": 7.8
+    },
+    "masks": "Existing thirteen sampled front-face paths and even-odd counters retained; background, dark mounts and green moneybag excluded",
+    "borderCadenceSeconds": 8.8,
+    "animatedBrandDOMTargets": 124,
+    "lifecycle": "All five animated classes inherit --home-motion-play-state; reduced-motion CSS removes moving highlights. Inactive display:none and animation:none can cancel/recreate CSS clocks; uninterrupted navigation phase retention is not claimed.",
+    "rendering": "Only opacity and two band translations animate; no frame JavaScript, timers, animated filters/blur or per-point layer promotions. Properties are compositor-friendly; GPU-only SVG execution is not certified."
+  },
+  "beforeEvidenceInspected": [
+    {
+      "path": "qa/home-brand-jewels/baseline-chromium/brand-393x852-0.png",
+      "sha256": "60e861eaaf9b6820914a9768b409b624329ca0cab349d4eb41b8ce1217ab22bb"
+    },
+    {
+      "path": "qa/home-brand-jewels/baseline-chromium/brand-430x896-0.png",
+      "sha256": "e520e76a95ad7409ec66c622ea5db06dd58982dc2c0fe043781100e1c3bdeddf"
+    }
+  ],
+  "finalActualNativeOriginalsInspected": [
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-0.png",
+      "sha256": "3c495f48e7e8a1a27fe3dd1d46e19f902e7606a38a46c369cad84e1f693e286c"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-393x852-4.png",
+      "sha256": "de5f1a11b75a4631ac9aea9ab8456c9206ff8f038f955b48944d9fa89de4df06"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-0.png",
+      "sha256": "110abe7ab6c44767790c01eaaa4ebac8db79a027a2886deeede90508a355fae2"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-webkit/brand-430x896-5.png",
+      "sha256": "56934b8fe2c862ec2761b4ff11d5c28de7fb635c7aa4bad45d6b62b1178af8fc"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-0.png",
+      "sha256": "06f7c9b724902e873e399683345d4eb774327e1f06b504a8fa51a7ab5b6c2238"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-393x852-4.png",
+      "sha256": "dde7fece84b08166944c2e71d850f5a6e71b85f116f58274ae162d82ba2fa889"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-0.png",
+      "sha256": "2def9800a7c6e55b2e017c5bcd70a92460fd4ff62b81e75d19b18e086f8a7d99"
+    },
+    {
+      "path": "qa/home-brand-jewels/local-chromium/brand-430x896-4.png",
+      "sha256": "22fa350e0719ce61983191517e4342d59aa14b3dcc94555040599a0bdc07912f"
+    }
+  ],
+  "finalVisualFindings": {
+    "diamond": "Original crystal texture stays crisp. Localized cool facet flashes and sparse glints are distinguishable across naturally elapsed samples without a broad white layer flattening the wordmark.",
+    "gold": "Narrow warm cream reflection and edge hits brighten localized gold surfaces; counters, shaded bevels and DOLLAR readability remain clear. Reviewed peaks do not read as animated letter outlines.",
+    "moneybag": "Original green folds, gold tie and dollar emblem remain intact. Read-only conservative moneybag interior pixel comparison is exactly static in both engines and phone sizes.",
+    "motion": "All thirteen implemented face-clip interiors change over natural time on both phone sizes in both engines. Each active phone advances 124 brand clocks; reduced and inactive phases have zero running native clocks; normal motion and route return restore 124 naturally running clocks."
+  },
+  "finalNativeEvidence": {
+    "chromium": {
+      "closedReport": {
+        "path": "qa/home-brand-jewels/local-chromium/results.json",
+        "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+        "status": "passed",
+        "browserClosed": true,
+        "sourceStable": true,
+        "completedAtUTC": "2026-10-11T07:11:08.720Z"
+      },
+      "readOnlyNativePixelProof": {
+        "path": "qa/home-brand-jewels/local-chromium/pixel-native-proof.json",
+        "sha256": "e49c4c7e986d219513f43f4193fae4943230e2435535d7a47e5b96fb49f3af0a",
+        "reportHashBindingVerified": true
+      },
+      "allTwentySixFaceInteriorsChangeAcrossNaturalSamples": true,
+      "perPhoneEvidence": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "faceClipInteriors": 13,
+          "everyInteriorChangesAbove3RGB": true,
+          "minimumFaceChangedPercent": 7.084,
+          "maximumFaceChangedPercent": 73.327,
+          "advancingOriginalBrandClocks": 124,
+          "conservativeMoneybagChangedPixels": 0,
+          "naturalSampleTimesMilliseconds": [
+            2392.899999976158,
+            3192.300000011921,
+            4290.899999976158,
+            5691.300000011921,
+            7190.899999976158,
+            8894.399999976158
+          ],
+          "naturalOriginals": [
+            "qa/home-brand-jewels/local-chromium/brand-393x852-0.png",
+            "qa/home-brand-jewels/local-chromium/brand-393x852-1.png",
+            "qa/home-brand-jewels/local-chromium/brand-393x852-2.png",
+            "qa/home-brand-jewels/local-chromium/brand-393x852-3.png",
+            "qa/home-brand-jewels/local-chromium/brand-393x852-4.png",
+            "qa/home-brand-jewels/local-chromium/brand-393x852-5.png"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "faceClipInteriors": 13,
+          "everyInteriorChangesAbove3RGB": true,
+          "minimumFaceChangedPercent": 6.182,
+          "maximumFaceChangedPercent": 72.322,
+          "advancingOriginalBrandClocks": 124,
+          "conservativeMoneybagChangedPixels": 0,
+          "naturalSampleTimesMilliseconds": [
+            2434.800000011921,
+            3239,
+            4342.400000035763,
+            5737.699999988079,
+            7228.900000035763,
+            8937.800000011921
+          ],
+          "naturalOriginals": [
+            "qa/home-brand-jewels/local-chromium/brand-430x896-0.png",
+            "qa/home-brand-jewels/local-chromium/brand-430x896-1.png",
+            "qa/home-brand-jewels/local-chromium/brand-430x896-2.png",
+            "qa/home-brand-jewels/local-chromium/brand-430x896-3.png",
+            "qa/home-brand-jewels/local-chromium/brand-430x896-4.png",
+            "qa/home-brand-jewels/local-chromium/brand-430x896-5.png"
+          ]
+        }
+      ],
+      "nativeLifecycle": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "reduced",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "inactive",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "restored",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "returned",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "reduced",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "inactive",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "restored",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "returned",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        }
+      ],
+      "allSeventeenBorderClocksSynchronized": true,
+      "nativeInput": true,
+      "DOMStyleClockResponseSubstitution": false,
+      "physicalIPhone": false
+    },
+    "webkit": {
+      "closedReport": {
+        "path": "qa/home-brand-jewels/local-webkit/results.json",
+        "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+        "status": "passed",
+        "browserClosed": true,
+        "sourceStable": true,
+        "completedAtUTC": "2026-10-11T07:14:48.290Z"
+      },
+      "readOnlyNativePixelProof": {
+        "path": "qa/home-brand-jewels/local-webkit/pixel-native-proof.json",
+        "sha256": "04a41fd066d5c5767be8b7c2e2b9eaaa7e3890a1db6dd68b3de897550d90572c",
+        "reportHashBindingVerified": true
+      },
+      "allTwentySixFaceInteriorsChangeAcrossNaturalSamples": true,
+      "perPhoneEvidence": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "faceClipInteriors": 13,
+          "everyInteriorChangesAbove3RGB": true,
+          "minimumFaceChangedPercent": 7.236,
+          "maximumFaceChangedPercent": 56.666,
+          "advancingOriginalBrandClocks": 124,
+          "conservativeMoneybagChangedPixels": 0,
+          "naturalSampleTimesMilliseconds": [
+            9872,
+            11458,
+            11791,
+            13276,
+            14872,
+            16365.000000000002
+          ],
+          "naturalOriginals": [
+            "qa/home-brand-jewels/local-webkit/brand-393x852-0.png",
+            "qa/home-brand-jewels/local-webkit/brand-393x852-1.png",
+            "qa/home-brand-jewels/local-webkit/brand-393x852-2.png",
+            "qa/home-brand-jewels/local-webkit/brand-393x852-3.png",
+            "qa/home-brand-jewels/local-webkit/brand-393x852-4.png",
+            "qa/home-brand-jewels/local-webkit/brand-393x852-5.png"
+          ]
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "faceClipInteriors": 13,
+          "everyInteriorChangesAbove3RGB": true,
+          "minimumFaceChangedPercent": 6.942,
+          "maximumFaceChangedPercent": 76.169,
+          "advancingOriginalBrandClocks": 124,
+          "conservativeMoneybagChangedPixels": 0,
+          "naturalSampleTimesMilliseconds": [
+            9885,
+            11706,
+            13655.000000000002,
+            15464,
+            15848,
+            18267
+          ],
+          "naturalOriginals": [
+            "qa/home-brand-jewels/local-webkit/brand-430x896-0.png",
+            "qa/home-brand-jewels/local-webkit/brand-430x896-1.png",
+            "qa/home-brand-jewels/local-webkit/brand-430x896-2.png",
+            "qa/home-brand-jewels/local-webkit/brand-430x896-3.png",
+            "qa/home-brand-jewels/local-webkit/brand-430x896-4.png",
+            "qa/home-brand-jewels/local-webkit/brand-430x896-5.png"
+          ]
+        }
+      ],
+      "nativeLifecycle": [
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "reduced",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "inactive",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "restored",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 393,
+            "height": 852
+          },
+          "phase": "returned",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "reduced",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "inactive",
+          "brandObjects": 124,
+          "nativeClocks": 0,
+          "runningNativeClocks": 0
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "restored",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        },
+        {
+          "viewport": {
+            "width": 430,
+            "height": 896
+          },
+          "phase": "returned",
+          "brandObjects": 124,
+          "nativeClocks": 124,
+          "runningNativeClocks": 124
+        }
+      ],
+      "allSeventeenBorderClocksSynchronized": true,
+      "nativeInput": true,
+      "DOMStyleClockResponseSubstitution": false,
+      "physicalIPhone": false
+    }
+  },
+  "frozenSource": {
+    "index.html": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+    "assets/home-aperture.css": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+    "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "assets/home-gem-layout.css": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+    "assets/home-brand-lighting.css": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+    "assets/home-aperture-motion.js": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+    "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "currentFilesMatchFrozenCaptureSource": true,
+  "earlierImplementationReceipts": [
+    "qa/home-brand-jewels/brand-before-after.md",
+    "qa/home-brand-jewels/brand-source-audit.md"
+  ],
+  "qualifications": [
+    "Twenty-six face interiors means thirteen sampled SVG front-face clips at each of two viewports per engine; it does not mean every raster diamond is individually editable or independently certified.",
+    "Native crop review and natural-time pixel masks establish visible localized motion; baseline and final screenshots are not registered identical-phase or approved-reference pixel comparisons.",
+    "Conservative moneybag interior is exactly static; untouched original file hash and explicit clipping establish source artwork preservation.",
+    "Reduced-motion and route changes may remove/recreate native CSS animation objects; receipts certify stopped inactive motion and naturally restored motion, not uninterrupted phase retention.",
+    "Mobile browser emulation is not physical iPhone, 60fps certification or verified GPU-only execution.",
+    "This specialist receipt reviews Home brand materials and motion only; factual sports data and other-page regression audits are separate."
+  ],
+  "blockingFindings": []
+}
