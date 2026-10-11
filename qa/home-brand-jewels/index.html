@@ -23,6 +23,7 @@
 </style>
 <h1>Home — diamond, gold and entrance refinement</h1>
 <p>The approved visual source is the four-sport render attached in the chat. These are actual, unaltered browser captures of the existing build and the reviewed revision. The comparison is qualitative; no registered pixel comparison with an exported source image is claimed.</p>
+<p class="note">NFL before captures come from this pass. Other before sport captures come from the previous release, whose fifteen Home inputs match the new baseline byte-for-byte; <a href="comparison-source-identity.json">source identity record</a>.</p>
 <p><a href="../../#home">Open Project Dollar</a> · <a href="RELEASE.md">Implementation and QA record</a></p>
 <label>Phone size <select id="size"><option value="393x852">393 × 852</option><option value="430x896">430 × 896</option></select></label>
 <div class="grid">
@@ -46,8 +47,8 @@ const size=document.querySelector('#size'),sport=document.querySelector('#sport'
 function update(){
   const v=size.value,s=sport.value;
   for(const id of ['before','after','chromium','webkit']) {
-    const folder={before:'baseline-webkit-v2',after:'local-webkit',chromium:'local-chromium',webkit:'local-webkit'}[id];
-    const current=id==='before'||id==='after'?'nfl':s;
+    const folder={before:s==='nfl'?'baseline-webkit-v2':'../home-synchronized-entrance/local-webkit-corrected',after:'local-webkit',chromium:'local-chromium',webkit:'local-webkit'}[id];
+    const current=s;
     document.getElementById(id).src=folder+'/home-'+current+'-'+v+'.png';
     document.getElementById(id).alt=current.toUpperCase()+' Home at '+v.replace('x',' by ');
   }

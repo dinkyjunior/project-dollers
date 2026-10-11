@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/gem_selector_refinement",
+  "recordedAtUTC": "2026-10-11T07:25:32.797790+00:00",
+  "status": "passed-bounded-incoming-data-integration",
+  "scope": "Read-only post-rebase/merge automatic data integration closure before publication. No application code, runtime data or previous receipt was edited; no browser was launched. Only this fresh receipt was written.",
+  "observedHEAD": "b1d8f73717a1d5ec38fa7dd43297dda6553be3d0",
+  "observedHEADTree": "8f3f78cefce0802ba4e9cda13c715d8684ee8a65",
+  "treeMatchesRootPrepublicationTree": true,
+  "incomingChange": {
+    "fromCommit": "c3760a6d44634e29743ec520944c67e281c162bd",
+    "preservedIncomingCommit": "b4af58015e48b134cdbc70e6ad598d4733bb31e7",
+    "author": "github-actions[bot]",
+    "onlyFiveJSONFilesChanged": true,
+    "files": [
+      {
+        "file": "assets/data/current.json",
+        "beforeSha256": "2e5f9a8811ce14d4c1256e2c32b433f9fbc243e8e0897950c3753597daf27519",
+        "incomingSha256": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1",
+        "workingSha256": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1",
+        "byteExactIncoming": true
+      },
+      {
+        "file": "assets/data/matchup-breakdown.json",
+        "beforeSha256": "ffa88b32b666264d3af3c5a31dff90cc92a9290064ed89dcf2afe78269283f29",
+        "incomingSha256": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d",
+        "workingSha256": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d",
+        "byteExactIncoming": true
+      },
+      {
+        "file": "assets/data/player-history.json",
+        "beforeSha256": "b310681806e228453d9a43a056fe96bd7b81a7b02b83ed3b5627be1fc4218c31",
+        "incomingSha256": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e",
+        "workingSha256": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e",
+        "byteExactIncoming": true
+      },
+      {
+        "file": "assets/data/provenance.json",
+        "beforeSha256": "b386a6b2eddf4e6031dd769aeeff79c575a61d6acd116abcb3dfd2a25414d98d",
+        "incomingSha256": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12",
+        "workingSha256": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12",
+        "byteExactIncoming": true
+      },
+      {
+        "file": "assets/data/team-details.json",
+        "beforeSha256": "731ae562f1bcb7e312b91caa53f31ed3ec452fc5f183b675c83d3b3b1918c36a",
+        "incomingSha256": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462",
+        "workingSha256": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462",
+        "byteExactIncoming": true
+      }
+    ],
+    "allCurrentFilesByteExactIncoming": true
+  },
+  "dataManifest": {
+    "assets/data/current.json": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1",
+    "assets/data/matchup-breakdown.json": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d",
+    "assets/data/player-history.json": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e",
+    "assets/data/provenance.json": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12",
+    "assets/data/roster-source.json": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+    "assets/data/snapshot.js": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+    "assets/data/team-details.json": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462"
+  },
+  "factualDelta": {
+    "summary": "No roster, statistic, game, player-history or disagreement facts changed in the reviewed projection. Retrieval/check/generation times, dependent snapshot hashes and two roster-provider body hashes advance. One 21-row missing-starting-QB-stat diagnostic list changes order while retaining its exact row multiset.",
+    "retrievedAtBefore": "2026-10-11T06:43:51Z",
+    "retrievedAtAfter": "2026-10-11T07:04:28Z",
+    "generatedAtBefore": "2026-10-11T06:43:53Z",
+    "generatedAtAfter": "2026-10-11T07:04:30Z",
+    "seasonBeforeAfter": [
+      2026,
+      2026
+    ],
+    "currentWeekBeforeAfter": [
+      5,
+      5
+    ],
+    "throughWeekBeforeAfter": [
+      5,
+      5
+    ],
+    "rosterIDsBeforeAfter": [
+      79,
+      79
+    ],
+    "sameRosterIDs": true,
+    "sameRosterOrder": true,
+    "keyedRosterChangedPlayerCounts": {
+      "name": 0,
+      "number": 0,
+      "position": 0,
+      "rosterStatus": 0,
+      "officialCurrentMembership": 0,
+      "seasonStats": 0,
+      "stats": 0,
+      "injury": 0,
+      "last5": 0,
+      "historyStatus": 0
+    },
+    "sourcesWithChangedBodyHash": [
+      "espn_steelers_roster",
+      "official_steelers_roster"
+    ],
+    "sourceStatusChanges": [],
+    "projectionMethod": {
+      "metadataKeysExcluded": [
+        "bytes",
+        "checkedAt",
+        "currentRetrievedAt",
+        "currentSourceHashes",
+        "etag",
+        "generatedAt",
+        "lastModified",
+        "refreshAfter",
+        "retrievedAt",
+        "scheduleRetrievedAt",
+        "sha256",
+        "snapshotSha256CanonicalJson",
+        "sourceHashes",
+        "sourceTimestamp",
+        "teamDetailsRetrievedAt"
+      ],
+      "additionalExcludedSuffix": "Sha256",
+      "soleOrderingCanonicalization": "coverage.startingQBMissingStatistics",
+      "files": [
+        {
+          "file": "assets/data/current.json",
+          "factualProjectionEqual": true,
+          "factualProjectionSha256Before": "2b2810b226cfbe3a98036fea85b2a358ece2d1d308d0d87945347fa081196218",
+          "factualProjectionSha256After": "2b2810b226cfbe3a98036fea85b2a358ece2d1d308d0d87945347fa081196218"
+        },
+        {
+          "file": "assets/data/matchup-breakdown.json",
+          "factualProjectionEqual": true,
+          "factualProjectionSha256Before": "0f3e3175c61104603cafe8a535bb2a4b3df3fda316051c07ddb0ab1eeaa0b9a3",
+          "factualProjectionSha256After": "0f3e3175c61104603cafe8a535bb2a4b3df3fda316051c07ddb0ab1eeaa0b9a3",
+          "coverageMissingStatistics": {
+            "beforeRows": 21,
+            "afterRows": 21,
+            "orderChanged": true,
+            "exactRowsMultisetEqual": true
+          }
+        },
+        {
+          "file": "assets/data/player-history.json",
+          "factualProjectionEqual": true,
+          "factualProjectionSha256Before": "fe9850e9370b213bb9f9cc056bb339b613e6f25016b08d3f600a576365e12690",
+          "factualProjectionSha256After": "fe9850e9370b213bb9f9cc056bb339b613e6f25016b08d3f600a576365e12690"
+        },
+        {
+          "file": "assets/data/provenance.json",
+          "factualProjectionEqual": true,
+          "factualProjectionSha256Before": "7b6a555407ba35ae3f227b3c9385673cd8e19c1e11a1300cd81310c4fc80db85",
+          "factualProjectionSha256After": "7b6a555407ba35ae3f227b3c9385673cd8e19c1e11a1300cd81310c4fc80db85"
+        },
+        {
+          "file": "assets/data/team-details.json",
+          "factualProjectionEqual": true,
+          "factualProjectionSha256Before": "87ea79a53772d6a209e33c8b06ed4d56272b61a81ad86f030782bece49e3e3ca",
+          "factualProjectionSha256After": "87ea79a53772d6a209e33c8b06ed4d56272b61a81ad86f030782bece49e3e3ca"
+        }
+      ]
+    },
+    "exactRawLeafChangeSummary": [
+      {
+        "path": "assets/data/current.json",
+        "baseSha256": "2e5f9a8811ce14d4c1256e2c32b433f9fbc243e8e0897950c3753597daf27519",
+        "incomingSha256": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1",
+        "currentByteExactIncoming": true,
+        "changes": 356,
+        "leafNames": {
+          "refreshAfter": 1,
+          "checkedAt": 89,
+          "generatedAt": 2,
+          "sha256": 3,
+          "retrievedAt": 102,
+          "espn_steelers_roster": 79,
+          "official_steelers_roster": 79,
+          "bytes": 1
+        },
+        "changesSample": [
+          [
+            "/context/refreshAfter",
+            "2026-10-11T12:43:51Z",
+            "2026-10-11T13:04:28Z"
+          ],
+          [
+            "/disagreements/0/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/1/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/2/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/3/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/4/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/5/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/disagreements/6/checkedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ]
+        ]
+      },
+      {
+        "path": "assets/data/matchup-breakdown.json",
+        "baseSha256": "ffa88b32b666264d3af3c5a31dff90cc92a9290064ed89dcf2afe78269283f29",
+        "incomingSha256": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d",
+        "currentByteExactIncoming": true,
+        "changes": 20080,
+        "leafNames": {
+          "gameId": 21,
+          "playerId": 20,
+          "retrievedAt": 19515,
+          "sha256": 309,
+          "currentRetrievedAt": 1,
+          "currentSha256": 1,
+          "teamDetailsRetrievedAt": 1,
+          "teamDetailsSha256": 1,
+          "generatedAt": 1,
+          "sourceTimestamp": 210
+        },
+        "changesSample": [
+          [
+            "/coverage/startingQBMissingStatistics/0/gameId",
+            "2026_04_LAC_SEA",
+            "2024_09_WAS_NYG"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/0/playerId",
+            "00-0035704",
+            "00-0032268"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/1/gameId",
+            "2026_03_SEA_WAS",
+            "2026_04_LAC_SEA"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/2/gameId",
+            "2024_17_LV_NO",
+            "2026_03_SEA_WAS"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/2/playerId",
+            "00-0038998",
+            "00-0035704"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/3/gameId",
+            "2024_16_NO_GB",
+            "2026_04_NYJ_CHI"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/3/playerId",
+            "00-0038998",
+            "00-0028986"
+          ],
+          [
+            "/coverage/startingQBMissingStatistics/4/gameId",
+            "2025_17_NE_NYJ",
+            "2024_14_LV_TB"
+          ]
+        ]
+      },
+      {
+        "path": "assets/data/player-history.json",
+        "baseSha256": "b310681806e228453d9a43a056fe96bd7b81a7b02b83ed3b5627be1fc4218c31",
+        "incomingSha256": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e",
+        "currentByteExactIncoming": true,
+        "changes": 1413,
+        "leafNames": {
+          "generatedAt": 1,
+          "scheduleRetrievedAt": 1272,
+          "retrievedAt": 140
+        },
+        "changesSample": [
+          [
+            "/generatedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/players/00-0023459/games/2008_14_HOU_GB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2008_15_GB_JAX/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2009_09_GB_TB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2009_13_BAL_GB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2011_01_NO_GB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2011_04_DEN_GB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/players/00-0023459/games/2011_11_TB_GB/scheduleRetrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ]
+        ]
+      },
+      {
+        "path": "assets/data/provenance.json",
+        "baseSha256": "b386a6b2eddf4e6031dd769aeeff79c575a61d6acd116abcb3dfd2a25414d98d",
+        "incomingSha256": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12",
+        "currentByteExactIncoming": true,
+        "changes": 25,
+        "leafNames": {
+          "generatedAt": 1,
+          "playerHistorySha256": 1,
+          "retrievedAt": 9,
+          "snapshotSha256CanonicalJson": 1,
+          "bytes": 1,
+          "sha256": 2,
+          "checkedAt": 10
+        },
+        "changesSample": [
+          [
+            "/generatedAt",
+            "2026-10-11T06:43:53Z",
+            "2026-10-11T07:04:30Z"
+          ],
+          [
+            "/playerHistorySha256",
+            "b310681806e228453d9a43a056fe96bd7b81a7b02b83ed3b5627be1fc4218c31",
+            "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e"
+          ],
+          [
+            "/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/snapshotSha256CanonicalJson",
+            "74688737698589214b3bb2ed6b73524191cc16b57b0a7307b8bad53cae598306",
+            "6e3a515c2653d11b55d61f3c581f882c21402c94c63eb0dead82965753ec6bae"
+          ],
+          [
+            "/sources/0/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/1/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/2/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/3/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ]
+        ]
+      },
+      {
+        "path": "assets/data/team-details.json",
+        "baseSha256": "731ae562f1bcb7e312b91caa53f31ed3ec452fc5f183b675c83d3b3b1918c36a",
+        "incomingSha256": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462",
+        "currentByteExactIncoming": true,
+        "changes": 53,
+        "leafNames": {
+          "generatedAt": 1,
+          "retrievedAt": 34,
+          "sha256": 18
+        },
+        "changesSample": [
+          [
+            "/generatedAt",
+            "2026-10-11T06:43:57Z",
+            "2026-10-11T07:04:34Z"
+          ],
+          [
+            "/provenance/teamIdentity/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/0/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/1/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/2/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/3/retrievedAt",
+            "2026-10-11T06:43:51Z",
+            "2026-10-11T07:04:28Z"
+          ],
+          [
+            "/sources/4/retrievedAt",
+            "2026-10-11T06:43:56Z",
+            "2026-10-11T07:04:33Z"
+          ]
+        ]
+      }
+    ],
+    "projectionQualification": "Only explicitly listed transport/provenance timestamp/hash fields are omitted. The diagnostic coverage list alone is sorted to remove ordering noise. Saved incoming JSON is preserved byte-for-byte and all validators operate on the raw files."
+  },
+  "currentWorkingTreeValidation": {
+    "networkRequestsMade": false,
+    "commands": [
+      {
+        "command": "python3 -B scripts/refresh-data.py --check",
+        "exitCode": 0,
+        "result": {
+          "status": "passed",
+          "teamCount": 32,
+          "rosterCount": 79,
+          "activeRosterCount": 55,
+          "season": 2026,
+          "currentWeek": 5,
+          "throughWeek": 5,
+          "provenanceHash": "passed",
+          "disagreements": 10,
+          "playerHistory": {
+            "status": "passed",
+            "playerCount": 79,
+            "gameRowCount": 1272
+          }
+        }
+      },
+      {
+        "command": "python3 -B scripts/refresh-team-details.py --check",
+        "exitCode": 0,
+        "result": {
+          "teams": 32,
+          "uniqueRegularSeasonGames": 544,
+          "sourceCount": 32,
+          "disagreements": 4
+        }
+      },
+      {
+        "command": "python3 -B scripts/refresh-matchup-breakdown.py --check",
+        "exitCode": 0,
+        "result": {
+          "teams": 32,
+          "players": 801,
+          "playerGameRows": 8118,
+          "explicitQuarterbackStartRows": 835,
+          "disputedStartingRoleRows": 19,
+          "unavailableStartingRoleRows": 9,
+          "sources": 125,
+          "disagreements": 20
+        }
+      }
+    ],
+    "dependencyChecksIncluded": [
+      "current snapshot canonical provenance checksum",
+      "player-history checksum and row/source validation",
+      "team-details statistics/source validation",
+      "matchup current/team-details/starting-role-evidence dependency hashes and player-game-source validation"
+    ]
+  },
+  "visualEvidenceContinuity": {
+    "all15HomeRuntimeFilesEqualBothClosedNativeReports": true,
+    "reports": [
+      {
+        "file": "qa/home-brand-jewels/local-chromium/results.json",
+        "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+        "status": "passed",
+        "sourceStable": true,
+        "browserClosed": true,
+        "all15HomeRuntimeHashesByteExactCurrent": true,
+        "capturedDataVersion": "c3760a6d44634e29743ec520944c67e281c162bd",
+        "capturedDataRetrievedAt": "2026-10-11T06:43:51Z"
+      },
+      {
+        "file": "qa/home-brand-jewels/local-webkit/results.json",
+        "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+        "status": "passed",
+        "sourceStable": true,
+        "browserClosed": true,
+        "all15HomeRuntimeHashesByteExactCurrent": true,
+        "capturedDataVersion": "c3760a6d44634e29743ec520944c67e281c162bd",
+        "capturedDataRetrievedAt": "2026-10-11T06:43:51Z"
+      }
+    ],
+    "earlierControlsReceipt": {
+      "file": "qa/home-brand-jewels/reviews/controls-scope-data-final.json",
+      "sha256": "6793dea0c7e71d173c4fb63999a2f059baaf81bc8b46c2683138447f8d00deb2",
+      "leftUnmodified": true
+    },
+    "nonHomeHTMLSuffixSHA256": "6de9aa6b254285e4c908ed3509fb3b37a83c4112ad2140fcda93de8cf5774b1a",
+    "suffixStillMatchesProtectedBaseline": true,
+    "freshBrowserOnNewDatasetRun": false,
+    "qualification": "The closed browser reports retain their captured c3760a6 dataset hashes and retrieval age. Their Home code/artwork remains byte-exact current. This separate receipt validates and binds the newer b4af580 dataset, whose reviewed sporting facts are unchanged."
+  },
+  "publication": {
+    "publishedByThisReviewer": false,
+    "hostedNewDataVerifiedByThisReviewer": false
+  },
+  "limitations": [
+    "Internal schema, source/provenance status and dependency consistency were checked using existing repository validators; providers were not independently re-fetched.",
+    "This prepublication receipt adds no physical-device, hosted-runtime or new browser claim."
+  ],
+  "blockers": []
+}

@@ -1,0 +1,4105 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent protected_scope_review child",
+  "scope": "Final read-only post-rebase/merge source and protected-file closure. This new receipt is the only file written by this reviewer; no browser, network fetch, git mutation, application/data edit, or deployment was performed.",
+  "startedAtUTC": "2026-10-11T07:24:28.026334+00:00",
+  "completedAtUTC": "2026-10-11T07:24:30.980736+00:00",
+  "status": "passed",
+  "baselineCommit": "3d6b64bc8f6673220a1a62d03d9e9f1e7a67010a",
+  "observedHEAD": "b1d8f73717a1d5ec38fa7dd43297dda6553be3d0",
+  "observedTree": "8f3f78cefce0802ba4e9cda13c715d8684ee8a65",
+  "expectedMergedTree": "8f3f78cefce0802ba4e9cda13c715d8684ee8a65",
+  "observedHEADAtEnd": "b1d8f73717a1d5ec38fa7dd43297dda6553be3d0",
+  "observedTreeAtEnd": "8f3f78cefce0802ba4e9cda13c715d8684ee8a65",
+  "workingTreeStatusBeforeReceipt": [],
+  "checks": {
+    "expectedMergedTreeMatches": true,
+    "HEADAndTreeStableDuringAudit": true,
+    "Home15SourceStableDuringAudit": true,
+    "Home15WorkingFilesMatchObservedHEAD": true,
+    "bothClosedNativeReportsMatchCurrentHome15": true,
+    "onlyAuthorizedHomeAndAutomaticDataExistingRuntimeChanges": true,
+    "allExistingQATestAndHelperSourcesMatchInitial": true,
+    "allTrackedBackupsMatchInitialGitBlobs": true,
+    "all24BackupsMatchInitialRecordedSHA256AndByteCounts": true,
+    "allProtectedRuntimeSubgroupsMatchInitial": true,
+    "nonHomeHTMLSuffixByteExactInitial": true,
+    "nonHomeHTMLSuffixMatchesExpectedSHA256": true,
+    "all7CurrentDataBodiesByteExactB4AF580": true,
+    "onlyFiveAuthorizedAutomaticDataPathsAdvancedFromC3760A6ToB4AF580": true,
+    "earlierControlsScopeDataReceiptUnchanged": true
+  },
+  "home15SourceSHA256": {
+    "index.html": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+    "assets/home-aperture.css": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+    "assets/home-gem-controls.css": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+    "assets/home-gem-layout.css": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+    "assets/home-aperture-motion.css": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+    "assets/home-brand-lighting.css": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+    "assets/home-aperture-motion.js": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+    "assets/home-interactions.js": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+    "assets/home/aperture-immersive.webp": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+    "assets/home/gem-atlas-polished.webp": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+    "assets/home/gate-brand-lossless.webp": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+    "assets/home/gate-scenes-nfl.webp": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+    "assets/home/gate-scenes-nba.webp": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+    "assets/home/gate-scenes-nrl.webp": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+    "assets/home/gate-scenes-ufc.webp": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68"
+  },
+  "home15GitProofs": [
+    {
+      "path": "index.html",
+      "sha256": "17752708883a7e450f8f553a3bee7343a2c9ff34d7eeca70c177d75699d2d47c",
+      "currentGitBlob": "5da7dfa2cc961b871353fae736abe8b291b8e346",
+      "headGitBlob": "5da7dfa2cc961b871353fae736abe8b291b8e346",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-aperture.css",
+      "sha256": "c29d88ee37dbc2e847afafe83bfee138f62dddec5efbad57a1ae4100226b55b8",
+      "currentGitBlob": "87866ef004a15098944c4a90093621f27424db67",
+      "headGitBlob": "87866ef004a15098944c4a90093621f27424db67",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-gem-controls.css",
+      "sha256": "bec762aecefa5baafd1e166fcb0f986e7281709e92b4f72bccd8ddcec891a532",
+      "currentGitBlob": "b2a1242e800c5aebb210c412ce3bbd7d1e905a68",
+      "headGitBlob": "b2a1242e800c5aebb210c412ce3bbd7d1e905a68",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-gem-layout.css",
+      "sha256": "a2434b6b6c1a15713ea8026b605b08800372382b681fc403cb9c158b22aff8b0",
+      "currentGitBlob": "471fd8f28aeec1bd580eab2a50068e31c425c5ea",
+      "headGitBlob": "471fd8f28aeec1bd580eab2a50068e31c425c5ea",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-aperture-motion.css",
+      "sha256": "5c5b985e52d3ab9915e513a4a1de07312a7083942442eda68f0ddae4cdf2f883",
+      "currentGitBlob": "45ba51ce9419b86a86b3b24193b7a981aa48ed2f",
+      "headGitBlob": "45ba51ce9419b86a86b3b24193b7a981aa48ed2f",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-brand-lighting.css",
+      "sha256": "79e922bf5a91719ce201e1cef9e64ce2f9aa336b1dc76da337cd26956eb6cbd2",
+      "currentGitBlob": "53b77199c852f322cdde1f187acf549eee982dd7",
+      "headGitBlob": "53b77199c852f322cdde1f187acf549eee982dd7",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-aperture-motion.js",
+      "sha256": "63fffd621e5b6458be192162225832081d92d1b863a7b899be8e97a9737b8b3f",
+      "currentGitBlob": "09349f3e22b352e35975dea7e4bd5e23d552d332",
+      "headGitBlob": "09349f3e22b352e35975dea7e4bd5e23d552d332",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home-interactions.js",
+      "sha256": "126f2e80455c93170405c257b609051d1f3e5c64dc6a5e389d95b4b60716b9fa",
+      "currentGitBlob": "0549b9f40dc3fc904200b84015bcd6f7d111a956",
+      "headGitBlob": "0549b9f40dc3fc904200b84015bcd6f7d111a956",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/aperture-immersive.webp",
+      "sha256": "bbbb855453b570fd6efd5cb98752bc585c4f33bfd0e930cc3afc9d6746f01f06",
+      "currentGitBlob": "2098d710ba76cafb2696103f533d80077ba5770b",
+      "headGitBlob": "2098d710ba76cafb2696103f533d80077ba5770b",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gem-atlas-polished.webp",
+      "sha256": "54aaccca66a1d057b8e28d544c50d7765f03ea38766a616af4a6cca3116d3365",
+      "currentGitBlob": "024bfad9c48ee97ea4fa1168bf3993c61e758341",
+      "headGitBlob": "024bfad9c48ee97ea4fa1168bf3993c61e758341",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gate-brand-lossless.webp",
+      "sha256": "c729d40d997a0a873fa103dc88d80c5598121d7006a1d4bdd335df9b275e2531",
+      "currentGitBlob": "411c2c38d3acdb369ab2e6c8ef1ddf02dc1c396f",
+      "headGitBlob": "411c2c38d3acdb369ab2e6c8ef1ddf02dc1c396f",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gate-scenes-nfl.webp",
+      "sha256": "987432b26872945dc79a64919b8116c1160be8b09355535f080a15cf120335cb",
+      "currentGitBlob": "3a21649e5205b058d78ec88fc5b4fc8fc9ed913c",
+      "headGitBlob": "3a21649e5205b058d78ec88fc5b4fc8fc9ed913c",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gate-scenes-nba.webp",
+      "sha256": "f140c8fdf39dfad803085242356c00f9aa7bd984f42e9fd9f010444246503336",
+      "currentGitBlob": "f4b68810c04c3806ba4af80d6cae02234c62b5c2",
+      "headGitBlob": "f4b68810c04c3806ba4af80d6cae02234c62b5c2",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gate-scenes-nrl.webp",
+      "sha256": "ed385cdeadfbe39a6f253751201f8e1ec44aa26d07ada3434a64b0e384bbfcaf",
+      "currentGitBlob": "e2f917c20705d2559363e358b29740abacb775d4",
+      "headGitBlob": "e2f917c20705d2559363e358b29740abacb775d4",
+      "matchesObservedHEAD": true
+    },
+    {
+      "path": "assets/home/gate-scenes-ufc.webp",
+      "sha256": "c6d68a0e6545562373695f5e5986b79509344046e6a574493fb5e121c2cf6f68",
+      "currentGitBlob": "be885fee499791c66ff47dfb08df6945b7e6c797",
+      "headGitBlob": "be885fee499791c66ff47dfb08df6945b7e6c797",
+      "matchesObservedHEAD": true
+    }
+  ],
+  "closedNativeReports": {
+    "chromium": {
+      "path": "qa/home-brand-jewels/local-chromium/results.json",
+      "sha256": "c18c4ad4421d1345d09f73891ff8393b37df2e4c9f4d04e4e6548c7b178e819d",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "completedAt": "2026-10-11T07:11:08.720Z",
+      "sourceCount": 15,
+      "finalSourceCount": 15,
+      "sourceKeySetMatchesCurrent": true,
+      "finalSourceKeySetMatchesCurrent": true,
+      "sourceMismatchPaths": [],
+      "finalSourceMismatchPaths": [],
+      "servedHomeBodiesCount": 15,
+      "servedBodyMismatchPaths": []
+    },
+    "webkit": {
+      "path": "qa/home-brand-jewels/local-webkit/results.json",
+      "sha256": "cc5dfe9c8839774ed09f90eb1759e3ea62d4d0e1c5d7df098d2dcce237d7a8a3",
+      "status": "passed",
+      "browserClosed": true,
+      "sourceStable": true,
+      "completedAt": "2026-10-11T07:14:48.290Z",
+      "sourceCount": 15,
+      "finalSourceCount": 15,
+      "sourceKeySetMatchesCurrent": true,
+      "finalSourceKeySetMatchesCurrent": true,
+      "sourceMismatchPaths": [],
+      "finalSourceMismatchPaths": [],
+      "servedHomeBodiesCount": 15,
+      "servedBodyMismatchPaths": []
+    }
+  },
+  "protectedExistingRuntime": {
+    "checkedCount": 286,
+    "exactBaselineCount": 276,
+    "changedPaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json",
+      "assets/home-aperture-motion.js",
+      "assets/home-aperture.css",
+      "assets/home-brand-lighting.css",
+      "assets/home-gem-layout.css",
+      "index.html"
+    ],
+    "authorizedHomePaths": [
+      "assets/home-aperture-motion.js",
+      "assets/home-aperture.css",
+      "assets/home-brand-lighting.css",
+      "assets/home-gem-layout.css",
+      "index.html"
+    ],
+    "allowedAutomaticDataPaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "unexpectedChangedPaths": [],
+    "proofMethod": "git hash-object --no-filters working file compared with initial commit Git blob ID; no objects written. All existing assets, scripts, workflows, index.html, 404.html, and package manifests are covered.",
+    "fileProofs": [
+      {
+        "path": ".github/workflows/build-approved-pages.yml",
+        "baselineGitBlob": "02c07c6a74b88aab388c35555ea16a52820dd130",
+        "currentGitBlob": "02c07c6a74b88aab388c35555ea16a52820dd130",
+        "matchesBaseline": true
+      },
+      {
+        "path": ".github/workflows/refresh-nfl-data.yml",
+        "baselineGitBlob": "a860987d8951a350a03c230da782a5365e208237",
+        "currentGitBlob": "a860987d8951a350a03c230da782a5365e208237",
+        "matchesBaseline": true
+      },
+      {
+        "path": "404.html",
+        "baselineGitBlob": "893bd3cd3f99d99a7142b39a6178b938e90dbcc4",
+        "currentGitBlob": "893bd3cd3f99d99a7142b39a6178b938e90dbcc4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/app.js",
+        "baselineGitBlob": "059291f549ea4d0a6b06c71d023bdb5c7e9a4a67",
+        "currentGitBlob": "059291f549ea4d0a6b06c71d023bdb5c7e9a4a67",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/data-updates.js",
+        "baselineGitBlob": "b5c2b2919cf5c9940b6f0a7d7236b9b8e76cc57b",
+        "currentGitBlob": "b5c2b2919cf5c9940b6f0a7d7236b9b8e76cc57b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/data/current.json",
+        "baselineGitBlob": "7a7f760884c82850aeccb931905f74ffe91e4df0",
+        "currentGitBlob": "fd74b76a29bd0fb27d480b035f9dc220ed3886e8",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/data/matchup-breakdown.json",
+        "baselineGitBlob": "ebe879e254cb68d217a0491863dd156624bf0075",
+        "currentGitBlob": "dfafe5da09df17d8e163752ff993a920bbcd17b8",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/data/player-history.json",
+        "baselineGitBlob": "ade83b4462d449e9747b883b90121000aa65464c",
+        "currentGitBlob": "3220ca1d4973b6257491e7e4c588841ea9fb2952",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/data/provenance.json",
+        "baselineGitBlob": "ffa270928dd55ff13d225c43c1f0169a61caa490",
+        "currentGitBlob": "99c476e484a7a49e125241d98a199f00f3855236",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/data/roster-source.json",
+        "baselineGitBlob": "c08b136e464feddb7b556f1685d7397302c59aef",
+        "currentGitBlob": "c08b136e464feddb7b556f1685d7397302c59aef",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/data/snapshot.js",
+        "baselineGitBlob": "b107bc48350a07b654e37a5c3fad8d2b1c9b8157",
+        "currentGitBlob": "b107bc48350a07b654e37a5c3fad8d2b1c9b8157",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/data/team-details.json",
+        "baselineGitBlob": "e0a547c6ab584b8a1055044ac54a8a0eb5ba5dec",
+        "currentGitBlob": "493fb2cf3a4b9ddee5b4378f26f4d732352f705d",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/energy.svg",
+        "baselineGitBlob": "e17c5874d62145aea9afa2c8affabacef2f09c16",
+        "currentGitBlob": "e17c5874d62145aea9afa2c8affabacef2f09c16",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/favicon.svg",
+        "baselineGitBlob": "ff7d7c74d48d44f6de24f11e6d8218aac47ef13d",
+        "currentGitBlob": "ff7d7c74d48d44f6de24f11e6d8218aac47ef13d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Anton-Regular.ttf",
+        "baselineGitBlob": "4d65707db9d8663ccfa99cd28cd3a4e0025be178",
+        "currentGitBlob": "4d65707db9d8663ccfa99cd28cd3a4e0025be178",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Anton-Regular.woff2",
+        "baselineGitBlob": "39a19854b4fd6454b28db8e376917e1e4f066252",
+        "currentGitBlob": "39a19854b4fd6454b28db8e376917e1e4f066252",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/ArchivoBlack-OFL.txt",
+        "baselineGitBlob": "8894736938f94c6c7a81f27501f26151c412fcbc",
+        "currentGitBlob": "8894736938f94c6c7a81f27501f26151c412fcbc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Barlow-BlackItalic.ttf",
+        "baselineGitBlob": "8f59d47d118ab6bf84b7da39ad50a4cfee36a19a",
+        "currentGitBlob": "8f59d47d118ab6bf84b7da39ad50a4cfee36a19a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Barlow-BlackItalic.woff2",
+        "baselineGitBlob": "20c9d0b0a9b88f87f21b792a70a4769ccb2e6813",
+        "currentGitBlob": "20c9d0b0a9b88f87f21b792a70a4769ccb2e6813",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Barlow-OFL.txt",
+        "baselineGitBlob": "2f22ba6ca4dbc12145ae40b14c3368f387cba0e2",
+        "currentGitBlob": "2f22ba6ca4dbc12145ae40b14c3368f387cba0e2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/BarlowCondensed-OFL.txt",
+        "baselineGitBlob": "2f22ba6ca4dbc12145ae40b14c3368f387cba0e2",
+        "currentGitBlob": "2f22ba6ca4dbc12145ae40b14c3368f387cba0e2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/BarlowCondensed-SemiBold.ttf",
+        "baselineGitBlob": "9df66576492bee4bd0559066825472808fa98adc",
+        "currentGitBlob": "9df66576492bee4bd0559066825472808fa98adc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/BarlowCondensed-SemiBold.woff2",
+        "baselineGitBlob": "9ac4f4021156145997013056638ba07698496e64",
+        "currentGitBlob": "9ac4f4021156145997013056638ba07698496e64",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/Inter-OFL.txt",
+        "baselineGitBlob": "21f6aff961064c2e429f570995e446bcdd555422",
+        "currentGitBlob": "21f6aff961064c2e429f570995e446bcdd555422",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/NFLRobotoCondensed-Latin.woff2",
+        "baselineGitBlob": "509d0ed0be63d863083d29f36b75b3bce49355a2",
+        "currentGitBlob": "509d0ed0be63d863083d29f36b75b3bce49355a2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/NFLRobotoCondensed-OFL.txt",
+        "baselineGitBlob": "2096249e0b96e28b439f4653bf9cd7809d467bcc",
+        "currentGitBlob": "2096249e0b96e28b439f4653bf9cd7809d467bcc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/NFLTeko-Latin.woff2",
+        "baselineGitBlob": "a7acad5f43fc89674411452ece3ca78e0f1d148d",
+        "currentGitBlob": "a7acad5f43fc89674411452ece3ca78e0f1d148d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/NFLTeko-OFL.txt",
+        "baselineGitBlob": "11fd1f04d16d1f3d65bb3e7de7dab7daeb7fab42",
+        "currentGitBlob": "11fd1f04d16d1f3d65bb3e7de7dab7daeb7fab42",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/OFL.txt",
+        "baselineGitBlob": "93feddee37145696e123ea65a6772cab09663f9e",
+        "currentGitBlob": "93feddee37145696e123ea65a6772cab09663f9e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/PDArchivoBlack-Latin.woff2",
+        "baselineGitBlob": "0a07c3273ff90ebde15e4f45e845e0199965ab88",
+        "currentGitBlob": "0a07c3273ff90ebde15e4f45e845e0199965ab88",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/fonts/PDInter-Latin.woff2",
+        "baselineGitBlob": "a900ae2b6131130c59235e31421991e382f6ca85",
+        "currentGitBlob": "a900ae2b6131130c59235e31421991e382f6ca85",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/football-stadium.png",
+        "baselineGitBlob": "8773d36359d7016923dadcbc03751e180b0b4778",
+        "currentGitBlob": "8773d36359d7016923dadcbc03751e180b0b4778",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/football-stadium.webp",
+        "baselineGitBlob": "6cc15c6ac6c831ebac0cda55c71c4f67bc516c39",
+        "currentGitBlob": "6cc15c6ac6c831ebac0cda55c71c4f67bc516c39",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/football.svg",
+        "baselineGitBlob": "694099573edf65f9f1aa9e4370b8283c120e4c2a",
+        "currentGitBlob": "694099573edf65f9f1aa9e4370b8283c120e4c2a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-aperture-motion.css",
+        "baselineGitBlob": "45ba51ce9419b86a86b3b24193b7a981aa48ed2f",
+        "currentGitBlob": "45ba51ce9419b86a86b3b24193b7a981aa48ed2f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-aperture-motion.js",
+        "baselineGitBlob": "0dca3df82f8a7680d202b5f106f6b68504857b61",
+        "currentGitBlob": "09349f3e22b352e35975dea7e4bd5e23d552d332",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/home-aperture.css",
+        "baselineGitBlob": "00592191a72c8bcb85a985e88b3659875e83db15",
+        "currentGitBlob": "87866ef004a15098944c4a90093621f27424db67",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/home-brand-lighting.css",
+        "baselineGitBlob": "090b56eaea7e34415a4111bd2c9dd2713ce46594",
+        "currentGitBlob": "53b77199c852f322cdde1f187acf549eee982dd7",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/home-brand.svg",
+        "baselineGitBlob": "8fb9c816182e09deb5ee43d5f16291549972cf88",
+        "currentGitBlob": "8fb9c816182e09deb5ee43d5f16291549972cf88",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-diamond.css",
+        "baselineGitBlob": "0fcf29bda9bf3dc1e4560ff4b2c5fda56f312e44",
+        "currentGitBlob": "0fcf29bda9bf3dc1e4560ff4b2c5fda56f312e44",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-diamond.js",
+        "baselineGitBlob": "7d8339affc1ba16ae668dd0cd926e4e98d551a8e",
+        "currentGitBlob": "7d8339affc1ba16ae668dd0cd926e4e98d551a8e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-gate-motion.css",
+        "baselineGitBlob": "fd6a16e8b4da491767f79c1b53f46caffd4f30c0",
+        "currentGitBlob": "fd6a16e8b4da491767f79c1b53f46caffd4f30c0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-gate-motion.js",
+        "baselineGitBlob": "453bb61a8fe0341cca705fdee731e5bd7eeb5e4c",
+        "currentGitBlob": "453bb61a8fe0341cca705fdee731e5bd7eeb5e4c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-gem-controls.css",
+        "baselineGitBlob": "b2a1242e800c5aebb210c412ce3bbd7d1e905a68",
+        "currentGitBlob": "b2a1242e800c5aebb210c412ce3bbd7d1e905a68",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-gem-layout.css",
+        "baselineGitBlob": "a2c06a73a2e0cbca0ff831ea37fba805eecffd65",
+        "currentGitBlob": "471fd8f28aeec1bd580eab2a50068e31c425c5ea",
+        "matchesBaseline": false
+      },
+      {
+        "path": "assets/home-interactions.js",
+        "baselineGitBlob": "0549b9f40dc3fc904200b84015bcd6f7d111a956",
+        "currentGitBlob": "0549b9f40dc3fc904200b84015bcd6f7d111a956",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-premium.css",
+        "baselineGitBlob": "c0018de10f2b5b55f76a920141d64fb4c2c96994",
+        "currentGitBlob": "c0018de10f2b5b55f76a920141d64fb4c2c96994",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home-typography.css",
+        "baselineGitBlob": "c17e6c37debf77d1837d942bcb2eea20e333d199",
+        "currentGitBlob": "c17e6c37debf77d1837d942bcb2eea20e333d199",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/README.md",
+        "baselineGitBlob": "cd269f40bdabff380cbcf7c50473832a28508d4c",
+        "currentGitBlob": "cd269f40bdabff380cbcf7c50473832a28508d4c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/aperture-immersive.webp",
+        "baselineGitBlob": "2098d710ba76cafb2696103f533d80077ba5770b",
+        "currentGitBlob": "2098d710ba76cafb2696103f533d80077ba5770b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/aperture-photographic.webp",
+        "baselineGitBlob": "bc7b07f8f0c743b99872fa6b5933b26a3dc387f7",
+        "currentGitBlob": "bc7b07f8f0c743b99872fa6b5933b26a3dc387f7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/aperture-refined.webp",
+        "baselineGitBlob": "a4160533a1b0d4dfce35d773d7e0f3838acac3f2",
+        "currentGitBlob": "a4160533a1b0d4dfce35d773d7e0f3838acac3f2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/aperture-tapered.webp",
+        "baselineGitBlob": "62a331af149e092f8c1de2c1aa754228671c5f6c",
+        "currentGitBlob": "62a331af149e092f8c1de2c1aa754228671c5f6c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/asset-provenance.json",
+        "baselineGitBlob": "006624de85e014affc4c3f205906e303cd9969a7",
+        "currentGitBlob": "006624de85e014affc4c3f205906e303cd9969a7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/continuous-gate.svg",
+        "baselineGitBlob": "099deb30b8cf599f7572dca19282cce24c3c9e77",
+        "currentGitBlob": "099deb30b8cf599f7572dca19282cce24c3c9e77",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/entry-crystal-nba.svg",
+        "baselineGitBlob": "1e21090fea6bb34cc01a7415145f93014a9ad360",
+        "currentGitBlob": "1e21090fea6bb34cc01a7415145f93014a9ad360",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/entry-crystal-nfl.svg",
+        "baselineGitBlob": "5284451d5844b86009b05b4871afbb2967c29499",
+        "currentGitBlob": "5284451d5844b86009b05b4871afbb2967c29499",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/entry-crystal-nrl.svg",
+        "baselineGitBlob": "ef9fbc8f943ecd0cb00827fa686c8a0baa3667d3",
+        "currentGitBlob": "ef9fbc8f943ecd0cb00827fa686c8a0baa3667d3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/entry-crystal-ufc.svg",
+        "baselineGitBlob": "1d5a3ee51add131f730809038b051e9be63ef0ec",
+        "currentGitBlob": "1d5a3ee51add131f730809038b051e9be63ef0ec",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-brand-lossless.webp",
+        "baselineGitBlob": "411c2c38d3acdb369ab2e6c8ef1ddf02dc1c396f",
+        "currentGitBlob": "411c2c38d3acdb369ab2e6c8ef1ddf02dc1c396f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-brand.webp",
+        "baselineGitBlob": "de373b93b45cefb0830f8285209267320ecb4e87",
+        "currentGitBlob": "de373b93b45cefb0830f8285209267320ecb4e87",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-metal.webp",
+        "baselineGitBlob": "51032cae15321090ccce0afd3c891d970820e77d",
+        "currentGitBlob": "51032cae15321090ccce0afd3c891d970820e77d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-scenes-nba.webp",
+        "baselineGitBlob": "f4b68810c04c3806ba4af80d6cae02234c62b5c2",
+        "currentGitBlob": "f4b68810c04c3806ba4af80d6cae02234c62b5c2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-scenes-nfl.webp",
+        "baselineGitBlob": "3a21649e5205b058d78ec88fc5b4fc8fc9ed913c",
+        "currentGitBlob": "3a21649e5205b058d78ec88fc5b4fc8fc9ed913c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-scenes-nrl.webp",
+        "baselineGitBlob": "e2f917c20705d2559363e358b29740abacb775d4",
+        "currentGitBlob": "e2f917c20705d2559363e358b29740abacb775d4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gate-scenes-ufc.webp",
+        "baselineGitBlob": "be885fee499791c66ff47dfb08df6945b7e6c797",
+        "currentGitBlob": "be885fee499791c66ff47dfb08df6945b7e6c797",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-atlas-polished.webp",
+        "baselineGitBlob": "024bfad9c48ee97ea4fa1168bf3993c61e758341",
+        "currentGitBlob": "024bfad9c48ee97ea4fa1168bf3993c61e758341",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-atlas.webp",
+        "baselineGitBlob": "5cbe5ee235f4905091dfe7d76ec1ad382a64b062",
+        "currentGitBlob": "5cbe5ee235f4905091dfe7d76ec1ad382a64b062",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-dual.svg",
+        "baselineGitBlob": "89e29bcd1185df441f024d7c1f651b3352ac433f",
+        "currentGitBlob": "89e29bcd1185df441f024d7c1f651b3352ac433f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-emerald.svg",
+        "baselineGitBlob": "9659298f103d09325757ae9b549e6dfc29aa5795",
+        "currentGitBlob": "9659298f103d09325757ae9b549e6dfc29aa5795",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-ruby.svg",
+        "baselineGitBlob": "5503498b18d66a4b0178ae5defb048ff2cd6ccc1",
+        "currentGitBlob": "5503498b18d66a4b0178ae5defb048ff2cd6ccc1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/gem-sapphire.svg",
+        "baselineGitBlob": "24474fd975195ecfc9d3b36c68b7a755c02abebe",
+        "currentGitBlob": "24474fd975195ecfc9d3b36c68b7a755c02abebe",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/luxury-corridor.webp",
+        "baselineGitBlob": "9562156f287f8e4fa2ab0415fd6c9f1cfa211a24",
+        "currentGitBlob": "9562156f287f8e4fa2ab0415fd6c9f1cfa211a24",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/luxury-portal.webp",
+        "baselineGitBlob": "7a335ae3b21c31d1f288085299af91845f5bedf7",
+        "currentGitBlob": "7a335ae3b21c31d1f288085299af91845f5bedf7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/nba.svg",
+        "baselineGitBlob": "811472883832cdd9414bb920cfce9fc0c8a1caac",
+        "currentGitBlob": "811472883832cdd9414bb920cfce9fc0c8a1caac",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/home/nfl.svg",
+        "baselineGitBlob": "f62d2791f730707ba0e96c7f7c4515aa58607c0b",
+        "currentGitBlob": "f62d2791f730707ba0e96c7f7c4515aa58607c0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/icons.svg",
+        "baselineGitBlob": "dcc4d77898de796cb3a2a7087c2263bc4f8d15f8",
+        "currentGitBlob": "dcc4d77898de796cb3a2a7087c2263bc4f8d15f8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/illumination.css",
+        "baselineGitBlob": "5d1301dd4fd2ea402c8ddc3c79e0443cd3a4f7c9",
+        "currentGitBlob": "5d1301dd4fd2ea402c8ddc3c79e0443cd3a4f7c9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ari.png",
+        "baselineGitBlob": "2c4cb0f3b1c14e6a19f7917a3521a49a073966f3",
+        "currentGitBlob": "2c4cb0f3b1c14e6a19f7917a3521a49a073966f3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ari.webp",
+        "baselineGitBlob": "f15590a51736bc2755f6a12a7cae14ba870bbeeb",
+        "currentGitBlob": "f15590a51736bc2755f6a12a7cae14ba870bbeeb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/atl.png",
+        "baselineGitBlob": "03c2111b09773d001639c4416796191a133c1d17",
+        "currentGitBlob": "03c2111b09773d001639c4416796191a133c1d17",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/atl.webp",
+        "baselineGitBlob": "6e555ed02a311de2b1864e34cb39d6ce69ec1d9a",
+        "currentGitBlob": "6e555ed02a311de2b1864e34cb39d6ce69ec1d9a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/bal.png",
+        "baselineGitBlob": "8c7e69773cef1779b3a591231cd288c6a91c6b3b",
+        "currentGitBlob": "8c7e69773cef1779b3a591231cd288c6a91c6b3b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/bal.webp",
+        "baselineGitBlob": "fa408a302bc036e3a1f8b1feb1cdd38cb3a23c7c",
+        "currentGitBlob": "fa408a302bc036e3a1f8b1feb1cdd38cb3a23c7c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/buf.png",
+        "baselineGitBlob": "5fb86c3c9b0011065d0941b3c2dbb70a44baa0e1",
+        "currentGitBlob": "5fb86c3c9b0011065d0941b3c2dbb70a44baa0e1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/buf.webp",
+        "baselineGitBlob": "210df918dcb0503678708c12917ff90c6b0d7599",
+        "currentGitBlob": "210df918dcb0503678708c12917ff90c6b0d7599",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/car.png",
+        "baselineGitBlob": "6fa7bcca6804d1ea66153b93bf18093d85cad8fa",
+        "currentGitBlob": "6fa7bcca6804d1ea66153b93bf18093d85cad8fa",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/car.webp",
+        "baselineGitBlob": "6926ee20034f52dab109c6a9980fb2439504cefd",
+        "currentGitBlob": "6926ee20034f52dab109c6a9980fb2439504cefd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/chi.png",
+        "baselineGitBlob": "2d08f6cf36962e5846023d5113d972e34c959ea9",
+        "currentGitBlob": "2d08f6cf36962e5846023d5113d972e34c959ea9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/chi.webp",
+        "baselineGitBlob": "da27210d97136679dc64aa73290dee24b9fc48f1",
+        "currentGitBlob": "da27210d97136679dc64aa73290dee24b9fc48f1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/cin.png",
+        "baselineGitBlob": "f687adc72d8e541add6d2ea166bdf70e21f3dbc8",
+        "currentGitBlob": "f687adc72d8e541add6d2ea166bdf70e21f3dbc8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/cin.webp",
+        "baselineGitBlob": "fda27353c4e46940db51f2b719eb08d52aa5fe8e",
+        "currentGitBlob": "fda27353c4e46940db51f2b719eb08d52aa5fe8e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/cle.png",
+        "baselineGitBlob": "4207d05eb1e285079c7b8b81834c7d99fd926c7c",
+        "currentGitBlob": "4207d05eb1e285079c7b8b81834c7d99fd926c7c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/cle.webp",
+        "baselineGitBlob": "3ba3d6e9ba4ee6205e272cbbec7a55902185cf9b",
+        "currentGitBlob": "3ba3d6e9ba4ee6205e272cbbec7a55902185cf9b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/dal.png",
+        "baselineGitBlob": "575f75a9ee3d0ffe40f041128a4a794123af0461",
+        "currentGitBlob": "575f75a9ee3d0ffe40f041128a4a794123af0461",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/dal.webp",
+        "baselineGitBlob": "676d74b40497276413df87190dfe710d9bfa9048",
+        "currentGitBlob": "676d74b40497276413df87190dfe710d9bfa9048",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/den.png",
+        "baselineGitBlob": "2774fabdbeafd4264c3cdcf2b19f22e01ea6f04e",
+        "currentGitBlob": "2774fabdbeafd4264c3cdcf2b19f22e01ea6f04e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/den.webp",
+        "baselineGitBlob": "49a4f5d02020566a79a589455e57ba26a364167e",
+        "currentGitBlob": "49a4f5d02020566a79a589455e57ba26a364167e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/det.png",
+        "baselineGitBlob": "3ba94fb252654aff73de01f049950e945656487c",
+        "currentGitBlob": "3ba94fb252654aff73de01f049950e945656487c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/det.webp",
+        "baselineGitBlob": "bd16e53849b5443e618990341ee7c1c5015e05c1",
+        "currentGitBlob": "bd16e53849b5443e618990341ee7c1c5015e05c1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/gb.png",
+        "baselineGitBlob": "2a413fe5f8bcbfe9af13ce28083f715e9de48176",
+        "currentGitBlob": "2a413fe5f8bcbfe9af13ce28083f715e9de48176",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/gb.webp",
+        "baselineGitBlob": "1ddb3ca87e8fbac9ef707e6b8165ba6f534a4d16",
+        "currentGitBlob": "1ddb3ca87e8fbac9ef707e6b8165ba6f534a4d16",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/hou.png",
+        "baselineGitBlob": "3ec3d3bf61fba3da0d2ced4e0c655a30040a0541",
+        "currentGitBlob": "3ec3d3bf61fba3da0d2ced4e0c655a30040a0541",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/hou.webp",
+        "baselineGitBlob": "557b8804b55457fab36521bb6b147f0531b13b87",
+        "currentGitBlob": "557b8804b55457fab36521bb6b147f0531b13b87",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ind.png",
+        "baselineGitBlob": "12c80e04199bd9392d3f3cab64cf9af0ada7b236",
+        "currentGitBlob": "12c80e04199bd9392d3f3cab64cf9af0ada7b236",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ind.webp",
+        "baselineGitBlob": "72ab1c4f1b628350600d52acec8bf6e3ed69cabb",
+        "currentGitBlob": "72ab1c4f1b628350600d52acec8bf6e3ed69cabb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/jax.png",
+        "baselineGitBlob": "0c018748bac02c2f9b9e7206a403ba4e7c70a426",
+        "currentGitBlob": "0c018748bac02c2f9b9e7206a403ba4e7c70a426",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/jax.webp",
+        "baselineGitBlob": "3450de673984b5f1c626e97525519ca54260796a",
+        "currentGitBlob": "3450de673984b5f1c626e97525519ca54260796a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/kc.png",
+        "baselineGitBlob": "7bfaec55e245936f6fcd89e5e550f3fd1f7d68c4",
+        "currentGitBlob": "7bfaec55e245936f6fcd89e5e550f3fd1f7d68c4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/kc.webp",
+        "baselineGitBlob": "94077a927491e27ac37261aee1834a7b18f3b011",
+        "currentGitBlob": "94077a927491e27ac37261aee1834a7b18f3b011",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/la.png",
+        "baselineGitBlob": "d3efc9ab3647eb1a45aff579362b03889562c1e3",
+        "currentGitBlob": "d3efc9ab3647eb1a45aff579362b03889562c1e3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lac.png",
+        "baselineGitBlob": "c29759c6fa7268bbfb9b27a7fff48509cc0a9194",
+        "currentGitBlob": "c29759c6fa7268bbfb9b27a7fff48509cc0a9194",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lac.webp",
+        "baselineGitBlob": "6f2bc00e3a7bd0b27ad6d577b1b7ce163e223eb3",
+        "currentGitBlob": "6f2bc00e3a7bd0b27ad6d577b1b7ce163e223eb3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lar.png",
+        "baselineGitBlob": "d3efc9ab3647eb1a45aff579362b03889562c1e3",
+        "currentGitBlob": "d3efc9ab3647eb1a45aff579362b03889562c1e3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lar.webp",
+        "baselineGitBlob": "bacbd1ebf79c27200e27bf2fb31b6d665afc2cf7",
+        "currentGitBlob": "bacbd1ebf79c27200e27bf2fb31b6d665afc2cf7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lv.png",
+        "baselineGitBlob": "5cd7e287455cc971b16da1c8aeeb1d7eae2bc973",
+        "currentGitBlob": "5cd7e287455cc971b16da1c8aeeb1d7eae2bc973",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/lv.webp",
+        "baselineGitBlob": "af51f7adb5dded90f2fa38bd7e0df2c59d46a456",
+        "currentGitBlob": "af51f7adb5dded90f2fa38bd7e0df2c59d46a456",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/mia.png",
+        "baselineGitBlob": "69afec689f62429fd54108064e1bad0d123d4151",
+        "currentGitBlob": "69afec689f62429fd54108064e1bad0d123d4151",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/mia.webp",
+        "baselineGitBlob": "0826158ca972eb59ef14993cbfa79cd75ba03e6f",
+        "currentGitBlob": "0826158ca972eb59ef14993cbfa79cd75ba03e6f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/min.png",
+        "baselineGitBlob": "760bae2c7dc2914a0d362bac5179f75089025475",
+        "currentGitBlob": "760bae2c7dc2914a0d362bac5179f75089025475",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/min.webp",
+        "baselineGitBlob": "12002897192386ad7d676b7d1f8fda7e3ff19894",
+        "currentGitBlob": "12002897192386ad7d676b7d1f8fda7e3ff19894",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nba.png",
+        "baselineGitBlob": "0c0ad68effbdee683997db9231bd849f8f4b97cc",
+        "currentGitBlob": "0c0ad68effbdee683997db9231bd849f8f4b97cc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nba.webp",
+        "baselineGitBlob": "7f77994ff9503c72a9ceaac4bea204c3fecc43b8",
+        "currentGitBlob": "7f77994ff9503c72a9ceaac4bea204c3fecc43b8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ne.png",
+        "baselineGitBlob": "cc46492d93efc041f919623ea3c6e9771dcfa37f",
+        "currentGitBlob": "cc46492d93efc041f919623ea3c6e9771dcfa37f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ne.webp",
+        "baselineGitBlob": "3803c4720ea7116815c1d185de746746fc4c7792",
+        "currentGitBlob": "3803c4720ea7116815c1d185de746746fc4c7792",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nfl.png",
+        "baselineGitBlob": "a3eb4dca117ed99f6b567eb789d33ca553a2fe3e",
+        "currentGitBlob": "a3eb4dca117ed99f6b567eb789d33ca553a2fe3e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nfl.webp",
+        "baselineGitBlob": "9088ee0bb140cc5fef67ec33c3704c4c6168f9e2",
+        "currentGitBlob": "9088ee0bb140cc5fef67ec33c3704c4c6168f9e2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/no.png",
+        "baselineGitBlob": "5431de55b6baf1917b03c7050e3d91b99009645f",
+        "currentGitBlob": "5431de55b6baf1917b03c7050e3d91b99009645f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/no.webp",
+        "baselineGitBlob": "a7d7d1eb0fe67abf49b99f96dde785f8f8743c7d",
+        "currentGitBlob": "a7d7d1eb0fe67abf49b99f96dde785f8f8743c7d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nrl.png",
+        "baselineGitBlob": "60abd01f2195fb71218068361a0eb48bd15e4a24",
+        "currentGitBlob": "60abd01f2195fb71218068361a0eb48bd15e4a24",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nrl.webp",
+        "baselineGitBlob": "32287001244503d8d6fee724753d619208a39f90",
+        "currentGitBlob": "32287001244503d8d6fee724753d619208a39f90",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nyg.png",
+        "baselineGitBlob": "ad9aba137511ddd8444195d095cddf4367717793",
+        "currentGitBlob": "ad9aba137511ddd8444195d095cddf4367717793",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nyg.webp",
+        "baselineGitBlob": "22c3b30d051d9d980dcd8aa0dac8d745a90c3607",
+        "currentGitBlob": "22c3b30d051d9d980dcd8aa0dac8d745a90c3607",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nyj.png",
+        "baselineGitBlob": "1a36173cfca6ac8edf2ff01d868ee43788e0b2cd",
+        "currentGitBlob": "1a36173cfca6ac8edf2ff01d868ee43788e0b2cd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/nyj.webp",
+        "baselineGitBlob": "ff6c63f3381dd05792e4efc7ccdcb1ce449284d5",
+        "currentGitBlob": "ff6c63f3381dd05792e4efc7ccdcb1ce449284d5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/phi.png",
+        "baselineGitBlob": "96a84315ec543084bc2d9a61342c203fa7f10171",
+        "currentGitBlob": "96a84315ec543084bc2d9a61342c203fa7f10171",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/phi.webp",
+        "baselineGitBlob": "d78784eead811f3d3be3e67613f8c21c036cebb2",
+        "currentGitBlob": "d78784eead811f3d3be3e67613f8c21c036cebb2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/pit.png",
+        "baselineGitBlob": "06d888a26041817a68b3687a50df124e6c64c9d6",
+        "currentGitBlob": "06d888a26041817a68b3687a50df124e6c64c9d6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/pit.webp",
+        "baselineGitBlob": "b50f7c3a0b3b25d8a89f12d5d9886e6c2069b61f",
+        "currentGitBlob": "b50f7c3a0b3b25d8a89f12d5d9886e6c2069b61f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/sea.png",
+        "baselineGitBlob": "7ce146657f3b5286528feda6ca8b51650f96d003",
+        "currentGitBlob": "7ce146657f3b5286528feda6ca8b51650f96d003",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/sea.webp",
+        "baselineGitBlob": "4cf20ca2275cd2cb9135db5f304c73e2b9dfdfe7",
+        "currentGitBlob": "4cf20ca2275cd2cb9135db5f304c73e2b9dfdfe7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/sf.png",
+        "baselineGitBlob": "9312119e8698847f4b32b7bd5f52cf2076f2e704",
+        "currentGitBlob": "9312119e8698847f4b32b7bd5f52cf2076f2e704",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/sf.webp",
+        "baselineGitBlob": "df51078f2eb35ba7e14eff6e495303e381d48c1e",
+        "currentGitBlob": "df51078f2eb35ba7e14eff6e495303e381d48c1e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/tb.png",
+        "baselineGitBlob": "a26f41e9fdd1711b23e6e058f7a78d9bc3006c38",
+        "currentGitBlob": "a26f41e9fdd1711b23e6e058f7a78d9bc3006c38",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/tb.webp",
+        "baselineGitBlob": "bfb667b30d3031e34e28b1e5b09d3f67ede6ecdb",
+        "currentGitBlob": "bfb667b30d3031e34e28b1e5b09d3f67ede6ecdb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ten.png",
+        "baselineGitBlob": "ce633778eda478257c1a4d3c374860b9c6e11935",
+        "currentGitBlob": "ce633778eda478257c1a4d3c374860b9c6e11935",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ten.webp",
+        "baselineGitBlob": "01d3ff96bf764f5e09236cb9a3e34af50bff6ca7",
+        "currentGitBlob": "01d3ff96bf764f5e09236cb9a3e34af50bff6ca7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/ufc.svg",
+        "baselineGitBlob": "e43acb8043b4e7bd9c15e68c22759c7b135c49de",
+        "currentGitBlob": "e43acb8043b4e7bd9c15e68c22759c7b135c49de",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/was.png",
+        "baselineGitBlob": "826978dd774fbb204e2e0f518749a1ab3bcb480c",
+        "currentGitBlob": "826978dd774fbb204e2e0f518749a1ab3bcb480c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/wsh.png",
+        "baselineGitBlob": "826978dd774fbb204e2e0f518749a1ab3bcb480c",
+        "currentGitBlob": "826978dd774fbb204e2e0f518749a1ab3bcb480c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/logos/wsh.webp",
+        "baselineGitBlob": "ea03b56f0ce747387f98776d0e7dd9abe97a8a02",
+        "currentGitBlob": "ea03b56f0ce747387f98776d0e7dd9abe97a8a02",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/matchup-breakdown-motion.js",
+        "baselineGitBlob": "7ad75af9075d68557986af9abca3b7b0f4de4841",
+        "currentGitBlob": "7ad75af9075d68557986af9abca3b7b0f4de4841",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/matchup-breakdown.css",
+        "baselineGitBlob": "dc06b6608ccb9151ee03bc2af5dca5bec6c13a42",
+        "currentGitBlob": "dc06b6608ccb9151ee03bc2af5dca5bec6c13a42",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/matchup-breakdown.js",
+        "baselineGitBlob": "99a276ab0e85e7a54404e9645b961efcd44a476d",
+        "currentGitBlob": "99a276ab0e85e7a54404e9645b961efcd44a476d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/motion.css",
+        "baselineGitBlob": "a5336406d249cb584f5d739a9e60c90a17101e11",
+        "currentGitBlob": "a5336406d249cb584f5d739a9e60c90a17101e11",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/motion.js",
+        "baselineGitBlob": "81054cd171cc0f58a6b13ec29309bf1fbd1c92fb",
+        "currentGitBlob": "81054cd171cc0f58a6b13ec29309bf1fbd1c92fb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard-chrome.css",
+        "baselineGitBlob": "9883ae434eb3a2e6f0c7af26c1cb7ec7a068a190",
+        "currentGitBlob": "9883ae434eb3a2e6f0c7af26c1cb7ec7a068a190",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard-motion.css",
+        "baselineGitBlob": "11283c90e4e98200257b94e3814becb5257a2c7f",
+        "currentGitBlob": "11283c90e4e98200257b94e3814becb5257a2c7f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard-motion.js",
+        "baselineGitBlob": "033d02cb9fb6986f1b5ba3e82119828fdfd46b17",
+        "currentGitBlob": "033d02cb9fb6986f1b5ba3e82119828fdfd46b17",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard.css",
+        "baselineGitBlob": "b8e0012be1fbf902acc810622e3251f9b300c56d",
+        "currentGitBlob": "b8e0012be1fbf902acc810622e3251f9b300c56d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard.js",
+        "baselineGitBlob": "0f8731d8e49799d89c7ed2794d313a29f84a5587",
+        "currentGitBlob": "0f8731d8e49799d89c7ed2794d313a29f84a5587",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/afc.svg",
+        "baselineGitBlob": "63d78191feaac1acf6eca1d322af9dbc99ca7577",
+        "currentGitBlob": "63d78191feaac1acf6eca1d322af9dbc99ca7577",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/asset-provenance.json",
+        "baselineGitBlob": "7c1f2a46e4bd956a80d5d61228584bd24d9b9231",
+        "currentGitBlob": "7c1f2a46e4bd956a80d5d61228584bd24d9b9231",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/bevel-corner.svg",
+        "baselineGitBlob": "e4b5b68aa2fd4ba6ef9c3dedecffc8b03e62dfc0",
+        "currentGitBlob": "e4b5b68aa2fd4ba6ef9c3dedecffc8b03e62dfc0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/control-blue.svg",
+        "baselineGitBlob": "c0d49e57f4991e7a87f77cbeb8098e27d8bd87b6",
+        "currentGitBlob": "c0d49e57f4991e7a87f77cbeb8098e27d8bd87b6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/control-cyan.svg",
+        "baselineGitBlob": "4800eeddf80dde2edfee55b992e05130e38dd8ad",
+        "currentGitBlob": "4800eeddf80dde2edfee55b992e05130e38dd8ad",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/control-gold.svg",
+        "baselineGitBlob": "be16118c2a06e35a924e409a84e6d51e8ec6e855",
+        "currentGitBlob": "be16118c2a06e35a924e409a84e6d51e8ec6e855",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/diamond-premium.svg",
+        "baselineGitBlob": "57a31d0269568cb1bddce008c70cc56afd96ab64",
+        "currentGitBlob": "57a31d0269568cb1bddce008c70cc56afd96ab64",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/diamond.svg",
+        "baselineGitBlob": "09308cf7bb95a2786bd0c71ddcc593e97bb5ab04",
+        "currentGitBlob": "09308cf7bb95a2786bd0c71ddcc593e97bb5ab04",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/frame-rail.svg",
+        "baselineGitBlob": "223c100603b5642293d1f6af17e8e0aec4b5e45c",
+        "currentGitBlob": "223c100603b5642293d1f6af17e8e0aec4b5e45c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-ind-upright.webp",
+        "baselineGitBlob": "c19ca7d5db504923d251cc79626ccd5d036213f1",
+        "currentGitBlob": "c19ca7d5db504923d251cc79626ccd5d036213f1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-ind.webp",
+        "baselineGitBlob": "e18260c428b5cc75de72c82fba1eba997d1aa457",
+        "currentGitBlob": "e18260c428b5cc75de72c82fba1eba997d1aa457",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-pit-upright.webp",
+        "baselineGitBlob": "b6f186ecb51560002ebb62de933003ff19214962",
+        "currentGitBlob": "b6f186ecb51560002ebb62de933003ff19214962",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/helmet-pit.webp",
+        "baselineGitBlob": "9e33232e6b0c6d585c9fc640565c38239f212d3b",
+        "currentGitBlob": "9e33232e6b0c6d585c9fc640565c38239f212d3b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/light-flare.svg",
+        "baselineGitBlob": "06b477f277b85da6065315502a534044a29b1b81",
+        "currentGitBlob": "06b477f277b85da6065315502a534044a29b1b81",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/medallion-ring.svg",
+        "baselineGitBlob": "d4c1129aed20cc2429d305900e7cc8192ddc475e",
+        "currentGitBlob": "d4c1129aed20cc2429d305900e7cc8192ddc475e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/nfl-dashboard/nfc.svg",
+        "baselineGitBlob": "c41455df8ee80594287b80316a420c517e0377d7",
+        "currentGitBlob": "c41455df8ee80594287b80316a420c517e0377d7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/player-assets.json",
+        "baselineGitBlob": "673631ae566e3c5c9955e1c1ceed9c1fffc6f01f",
+        "currentGitBlob": "673631ae566e3c5c9955e1c1ceed9c1fffc6f01f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/player-research.css",
+        "baselineGitBlob": "af3f383a2a3325ae203c52299ccea5f2c3577515",
+        "currentGitBlob": "af3f383a2a3325ae203c52299ccea5f2c3577515",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/player-research.js",
+        "baselineGitBlob": "664f595bf27baa8339c4f5ef200f03e2139cf7f7",
+        "currentGitBlob": "664f595bf27baa8339c4f5ef200f03e2139cf7f7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/13977.webp",
+        "baselineGitBlob": "6191dbcda524629979a08eb511335c90196fe15c",
+        "currentGitBlob": "6191dbcda524629979a08eb511335c90196fe15c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/17372.webp",
+        "baselineGitBlob": "2f0567bb132bda0e8499574fb27f06ea3c9608a2",
+        "currentGitBlob": "2f0567bb132bda0e8499574fb27f06ea3c9608a2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/2969961.webp",
+        "baselineGitBlob": "599c3eb2064c140a3f86e018ca6ef54e66ab85de",
+        "currentGitBlob": "599c3eb2064c140a3f86e018ca6ef54e66ab85de",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/2975674.webp",
+        "baselineGitBlob": "6cbdfc9e45cf34b1a0efc11883cac5cf04d9f5d9",
+        "currentGitBlob": "6cbdfc9e45cf34b1a0efc11883cac5cf04d9f5d9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/2978524.webp",
+        "baselineGitBlob": "ec40ac6578a77bd701157a61060e6b3ab8b02853",
+        "currentGitBlob": "ec40ac6578a77bd701157a61060e6b3ab8b02853",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3045282.webp",
+        "baselineGitBlob": "93bc033ea381f1405a399c667302dd980cc96efb",
+        "currentGitBlob": "93bc033ea381f1405a399c667302dd980cc96efb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3045373.webp",
+        "baselineGitBlob": "1ccef0c0410155a6e8360a8cc3a683fcda35f9c2",
+        "currentGitBlob": "1ccef0c0410155a6e8360a8cc3a683fcda35f9c2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3047495.webp",
+        "baselineGitBlob": "21925a3441ebba3b737c501b41cca5bb5dc4cfc6",
+        "currentGitBlob": "21925a3441ebba3b737c501b41cca5bb5dc4cfc6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3051397.webp",
+        "baselineGitBlob": "1d0e08a022ec7ba0a82be00c973c0fc9e7cc5386",
+        "currentGitBlob": "1d0e08a022ec7ba0a82be00c973c0fc9e7cc5386",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3116407.webp",
+        "baselineGitBlob": "8a3c85bc1f32b38df2c6a49e97bdcd948e720c64",
+        "currentGitBlob": "8a3c85bc1f32b38df2c6a49e97bdcd948e720c64",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3116689.webp",
+        "baselineGitBlob": "bc745a771784ce4a5ab901685f58e5ea73abdedb",
+        "currentGitBlob": "bc745a771784ce4a5ab901685f58e5ea73abdedb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3873935.webp",
+        "baselineGitBlob": "b2950f992547944794165ece84faba99cdd84e00",
+        "currentGitBlob": "b2950f992547944794165ece84faba99cdd84e00",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3929846.webp",
+        "baselineGitBlob": "8d10ca27dd5aa04f772c6773863660e0912c494a",
+        "currentGitBlob": "8d10ca27dd5aa04f772c6773863660e0912c494a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/3932668.webp",
+        "baselineGitBlob": "4c893f44ae42658fa1cd5b0126b753dc694e7b21",
+        "currentGitBlob": "4c893f44ae42658fa1cd5b0126b753dc694e7b21",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4035198.webp",
+        "baselineGitBlob": "a933d4ff6c852665c6ee9f0c494a67a1933223ce",
+        "currentGitBlob": "a933d4ff6c852665c6ee9f0c494a67a1933223ce",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4035253.webp",
+        "baselineGitBlob": "8f4c549498107b016c1742589a14a05be13ddfa3",
+        "currentGitBlob": "8f4c549498107b016c1742589a14a05be13ddfa3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4035656.webp",
+        "baselineGitBlob": "277b4c309c45a5877622e6f525ba36e13d5ffe73",
+        "currentGitBlob": "277b4c309c45a5877622e6f525ba36e13d5ffe73",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4035687.webp",
+        "baselineGitBlob": "1eaea291d9329dd148e13c2df5f2b87a3face578",
+        "currentGitBlob": "1eaea291d9329dd148e13c2df5f2b87a3face578",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4037333.webp",
+        "baselineGitBlob": "2b123e3dd333cc1afc256d2bd98da21a3dc6f070",
+        "currentGitBlob": "2b123e3dd333cc1afc256d2bd98da21a3dc6f070",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4037457.webp",
+        "baselineGitBlob": "2c510c06c917364e5b97bc05c253acb0cd67fd17",
+        "currentGitBlob": "2c510c06c917364e5b97bc05c253acb0cd67fd17",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4038815.webp",
+        "baselineGitBlob": "d36d2f336e5fcd38576612610676e35255032fe7",
+        "currentGitBlob": "d36d2f336e5fcd38576612610676e35255032fe7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4047650.webp",
+        "baselineGitBlob": "d7f63868aee3c7142438025f63d99a3466fd37bc",
+        "currentGitBlob": "d7f63868aee3c7142438025f63d99a3466fd37bc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4240577.webp",
+        "baselineGitBlob": "15aabeaf02cfb5fad8061eb9b62d00f423003799",
+        "currentGitBlob": "15aabeaf02cfb5fad8061eb9b62d00f423003799",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4240759.webp",
+        "baselineGitBlob": "d93639351628f64865bb321dd55ded0ed1786783",
+        "currentGitBlob": "d93639351628f64865bb321dd55ded0ed1786783",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4241087.webp",
+        "baselineGitBlob": "9cc4c012e8274c2e7f9b3e0a48bac29cbcc1a1fb",
+        "currentGitBlob": "9cc4c012e8274c2e7f9b3e0a48bac29cbcc1a1fb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4242207.webp",
+        "baselineGitBlob": "c4139fbadfc0d96a22a00512cee38f511d801c52",
+        "currentGitBlob": "c4139fbadfc0d96a22a00512cee38f511d801c52",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4242540.webp",
+        "baselineGitBlob": "46625fb0df4d31ea41480afc1991734f15065c30",
+        "currentGitBlob": "46625fb0df4d31ea41480afc1991734f15065c30",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4361411.webp",
+        "baselineGitBlob": "336ab6a9051b5fd0169175e35c2391a6d59d2686",
+        "currentGitBlob": "336ab6a9051b5fd0169175e35c2391a6d59d2686",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4361652.webp",
+        "baselineGitBlob": "33eea45fa74128a48573a25ed6fd4a17785bb635",
+        "currentGitBlob": "33eea45fa74128a48573a25ed6fd4a17785bb635",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4362858.webp",
+        "baselineGitBlob": "43634b2767ca5ad47699f0cdc950ddd45a80fff9",
+        "currentGitBlob": "43634b2767ca5ad47699f0cdc950ddd45a80fff9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4363034.webp",
+        "baselineGitBlob": "2a18eaa7cdb9abd2fab0f3a0b7e1deb4ff1411bf",
+        "currentGitBlob": "2a18eaa7cdb9abd2fab0f3a0b7e1deb4ff1411bf",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4368304.webp",
+        "baselineGitBlob": "3852599fc7bbe220b9cd628e094be8652a058d0c",
+        "currentGitBlob": "3852599fc7bbe220b9cd628e094be8652a058d0c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4372056.webp",
+        "baselineGitBlob": "f75e6d616af0ee1aabb45e11e56a370e1f8cc812",
+        "currentGitBlob": "f75e6d616af0ee1aabb45e11e56a370e1f8cc812",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4372098.webp",
+        "baselineGitBlob": "1e205d2eb86bca30fecb1fb61615d9305e9f7e3a",
+        "currentGitBlob": "1e205d2eb86bca30fecb1fb61615d9305e9f7e3a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4373830.webp",
+        "baselineGitBlob": "c414f18d6da3205ba5ee16c598c47c0d9f497efc",
+        "currentGitBlob": "c414f18d6da3205ba5ee16c598c47c0d9f497efc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4426368.webp",
+        "baselineGitBlob": "8768a8137f07a8ca1415a75e6dd2461680a70ca8",
+        "currentGitBlob": "8768a8137f07a8ca1415a75e6dd2461680a70ca8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4426506.webp",
+        "baselineGitBlob": "3a7062af8ecaf4c3ea9fa1cdc05210851e8a67c3",
+        "currentGitBlob": "3a7062af8ecaf4c3ea9fa1cdc05210851e8a67c3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4426694.webp",
+        "baselineGitBlob": "a5cba22291523f3ba197c8cb8bdefe475e5ef024",
+        "currentGitBlob": "a5cba22291523f3ba197c8cb8bdefe475e5ef024",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4426882.webp",
+        "baselineGitBlob": "97a8e81f6f30baeed459a989cd1a69f4375459b6",
+        "currentGitBlob": "97a8e81f6f30baeed459a989cd1a69f4375459b6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4427170.webp",
+        "baselineGitBlob": "c5239f1bc1b00147986bef78d5f0bdb841b46f40",
+        "currentGitBlob": "c5239f1bc1b00147986bef78d5f0bdb841b46f40",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4428119.webp",
+        "baselineGitBlob": "080d3dc76bb951796e789b05d7519df52fcb319c",
+        "currentGitBlob": "080d3dc76bb951796e789b05d7519df52fcb319c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4428909.webp",
+        "baselineGitBlob": "9bf70e501cf576300c55a51cd70afae24f0c4c8f",
+        "currentGitBlob": "9bf70e501cf576300c55a51cd70afae24f0c4c8f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4429164.webp",
+        "baselineGitBlob": "c9551ee229a7057c363cddbd0fa209b66198e729",
+        "currentGitBlob": "c9551ee229a7057c363cddbd0fa209b66198e729",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4429490.webp",
+        "baselineGitBlob": "c8265e30699ab57eb259d16bc92277800ebe5af0",
+        "currentGitBlob": "c8265e30699ab57eb259d16bc92277800ebe5af0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4429743.webp",
+        "baselineGitBlob": "6926d452c298916ace3a7342ad7273eabd217977",
+        "currentGitBlob": "6926d452c298916ace3a7342ad7273eabd217977",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4429775.webp",
+        "baselineGitBlob": "c96e8d9402224271e2182a37ec8013589d2351d3",
+        "currentGitBlob": "c96e8d9402224271e2182a37ec8013589d2351d3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4429955.webp",
+        "baselineGitBlob": "f41df4a6f0b22c6c346c3a0ec92b03f134060f69",
+        "currentGitBlob": "f41df4a6f0b22c6c346c3a0ec92b03f134060f69",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4430802.webp",
+        "baselineGitBlob": "86cd0480b4a4662b4c638bfe2a7d7c13ccedbef4",
+        "currentGitBlob": "86cd0480b4a4662b4c638bfe2a7d7c13ccedbef4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4430947.webp",
+        "baselineGitBlob": "c5c168a65d10d616603c122ccaf26f2e37a353bd",
+        "currentGitBlob": "c5c168a65d10d616603c122ccaf26f2e37a353bd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4431258.webp",
+        "baselineGitBlob": "07e1d3bc66d5591702bacaceb3856efb1cfe5816",
+        "currentGitBlob": "07e1d3bc66d5591702bacaceb3856efb1cfe5816",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4431424.webp",
+        "baselineGitBlob": "f239595555dc9eefdffea6bfa5e3406bace978db",
+        "currentGitBlob": "f239595555dc9eefdffea6bfa5e3406bace978db",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4431492.webp",
+        "baselineGitBlob": "434d991005b149b733e095c05c8d685f81d17b2a",
+        "currentGitBlob": "434d991005b149b733e095c05c8d685f81d17b2a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4431590.webp",
+        "baselineGitBlob": "d0fce8f45b3617416565cb573fb92a9fd4600023",
+        "currentGitBlob": "d0fce8f45b3617416565cb573fb92a9fd4600023",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4566198.webp",
+        "baselineGitBlob": "769d835f5950da94d9c5e099e4f89f6529d3f932",
+        "currentGitBlob": "769d835f5950da94d9c5e099e4f89f6529d3f932",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4567979.webp",
+        "baselineGitBlob": "7d54fdbe5dc3578331c434635a1f5305b94c4c80",
+        "currentGitBlob": "7d54fdbe5dc3578331c434635a1f5305b94c4c80",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4569474.webp",
+        "baselineGitBlob": "b4885dd5b015f5209579a38005fa3cf0261a800b",
+        "currentGitBlob": "b4885dd5b015f5209579a38005fa3cf0261a800b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4569987.webp",
+        "baselineGitBlob": "59558df5ad9f695b232f7e134f64adec215a36fd",
+        "currentGitBlob": "59558df5ad9f695b232f7e134f64adec215a36fd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4570044.webp",
+        "baselineGitBlob": "681154313388cfc44b57f24b23d12c4593300e9f",
+        "currentGitBlob": "681154313388cfc44b57f24b23d12c4593300e9f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4570898.webp",
+        "baselineGitBlob": "c0a4b5cb9efe358807bc578dc5921b27bb7e68ad",
+        "currentGitBlob": "c0a4b5cb9efe358807bc578dc5921b27bb7e68ad",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4573443.webp",
+        "baselineGitBlob": "8d5cf1f314991bd66291dc5bce5d939d6c09fe15",
+        "currentGitBlob": "8d5cf1f314991bd66291dc5bce5d939d6c09fe15",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4608004.webp",
+        "baselineGitBlob": "e41eed404810e71c5b8f41cf5d17c8a17713f1c7",
+        "currentGitBlob": "e41eed404810e71c5b8f41cf5d17c8a17713f1c7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4682980.webp",
+        "baselineGitBlob": "78cc5f30fd5cf7ecbdf8f86a2cd8d6a7d5577af6",
+        "currentGitBlob": "78cc5f30fd5cf7ecbdf8f86a2cd8d6a7d5577af6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4685261.webp",
+        "baselineGitBlob": "bfca42c1bebe87a744f4d9e6ea31e786ead862f3",
+        "currentGitBlob": "bfca42c1bebe87a744f4d9e6ea31e786ead862f3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4685327.webp",
+        "baselineGitBlob": "26b7dc137b78dbeb1774c7e8aca7b6ac754c99eb",
+        "currentGitBlob": "26b7dc137b78dbeb1774c7e8aca7b6ac754c99eb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4692628.webp",
+        "baselineGitBlob": "4291b953e8b8beef6a50f6d3bea4852a98c58cda",
+        "currentGitBlob": "4291b953e8b8beef6a50f6d3bea4852a98c58cda",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4693370.webp",
+        "baselineGitBlob": "8158eeb18586fbf625cc239c3e5030f345e2a54e",
+        "currentGitBlob": "8158eeb18586fbf625cc239c3e5030f345e2a54e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4694237.webp",
+        "baselineGitBlob": "66e6aa66869616ee0ac2388cc1a078aebb1d5ed6",
+        "currentGitBlob": "66e6aa66869616ee0ac2388cc1a078aebb1d5ed6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4714771.webp",
+        "baselineGitBlob": "0e58710c1389b7d166592bba38d560ba7ac70473",
+        "currentGitBlob": "0e58710c1389b7d166592bba38d560ba7ac70473",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4820584.webp",
+        "baselineGitBlob": "950ebed4b1327a31ea68022043170043ac749e55",
+        "currentGitBlob": "950ebed4b1327a31ea68022043170043ac749e55",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/4917486.webp",
+        "baselineGitBlob": "a3267cec2521f3ec9e9b3892fba2277007ed23b4",
+        "currentGitBlob": "a3267cec2521f3ec9e9b3892fba2277007ed23b4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/5081338.webp",
+        "baselineGitBlob": "e13972e429e1266cbb925663fda8228e1ae0e01c",
+        "currentGitBlob": "e13972e429e1266cbb925663fda8228e1ae0e01c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/5081508.webp",
+        "baselineGitBlob": "ce60ddc94fcab3fb48fd6b5e29d16846a23b18c1",
+        "currentGitBlob": "ce60ddc94fcab3fb48fd6b5e29d16846a23b18c1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/5084849.webp",
+        "baselineGitBlob": "ab6a99468ee073f38c7704cfb3ffb94038abbd6f",
+        "currentGitBlob": "ab6a99468ee073f38c7704cfb3ffb94038abbd6f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/5150136.webp",
+        "baselineGitBlob": "a084b10b3f0bcfe86d430398cc38933fff474d48",
+        "currentGitBlob": "a084b10b3f0bcfe86d430398cc38933fff474d48",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/5192448.webp",
+        "baselineGitBlob": "aa98c0a58de30fbae83139f47dfce0dfafa6a06b",
+        "currentGitBlob": "aa98c0a58de30fbae83139f47dfce0dfafa6a06b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/8439.webp",
+        "baselineGitBlob": "b8febdc3266059d26663f251a45d32356edd8842",
+        "currentGitBlob": "b8febdc3266059d26663f251a45d32356edd8842",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/aaron-rodgers.png",
+        "baselineGitBlob": "cfaff8cdfba2a51cc45dd5d97d548b024e54fefa",
+        "currentGitBlob": "cfaff8cdfba2a51cc45dd5d97d548b024e54fefa",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/dk-metcalf.png",
+        "baselineGitBlob": "f8672012d31911a77ed4b75ce9fe1eec0eab5130",
+        "currentGitBlob": "f8672012d31911a77ed4b75ce9fe1eec0eab5130",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/jaylen-warren.png",
+        "baselineGitBlob": "9907a2e5c8f1005d77356db75d508f0623a9a979",
+        "currentGitBlob": "9907a2e5c8f1005d77356db75d508f0623a9a979",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/pat-freiermuth.png",
+        "baselineGitBlob": "bdf8675cd205e3559c55052ce35206713f9fe69a",
+        "currentGitBlob": "bdf8675cd205e3559c55052ce35206713f9fe69a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/players/roman-wilson.png",
+        "baselineGitBlob": "c486b46159569a1852df7a3023fcfbfbbe6fcdb0",
+        "currentGitBlob": "c486b46159569a1852df7a3023fcfbfbbe6fcdb0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/premium.css",
+        "baselineGitBlob": "d7984c7e9b63b9f2b2ea4d76c68bfc769b31c159",
+        "currentGitBlob": "d7984c7e9b63b9f2b2ea4d76c68bfc769b31c159",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/refinements.css",
+        "baselineGitBlob": "41853b393ad78fc06714792edd573a9b1d05995e",
+        "currentGitBlob": "41853b393ad78fc06714792edd573a9b1d05995e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/roster-energy.svg",
+        "baselineGitBlob": "b77f6d02ab896bdece827ee800c549b32aa7b402",
+        "currentGitBlob": "b77f6d02ab896bdece827ee800c549b32aa7b402",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/sources.json",
+        "baselineGitBlob": "1a1ea86a80239e0d7382df40699cc18ba48762f6",
+        "currentGitBlob": "1a1ea86a80239e0d7382df40699cc18ba48762f6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/stadium.jpg",
+        "baselineGitBlob": "290b43171df82d3d3b0f1c25db96aa06bd6e7d07",
+        "currentGitBlob": "290b43171df82d3d3b0f1c25db96aa06bd6e7d07",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/styles.css",
+        "baselineGitBlob": "353c88ca2082a9183940b6a601f9ca21086c55c2",
+        "currentGitBlob": "353c88ca2082a9183940b6a601f9ca21086c55c2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details-motion.js",
+        "baselineGitBlob": "076c5e459fea038da3184adc800ec56173258098",
+        "currentGitBlob": "076c5e459fea038da3184adc800ec56173258098",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details.css",
+        "baselineGitBlob": "5657a99a424572af897ce222df15b7664d680707",
+        "currentGitBlob": "5657a99a424572af897ce222df15b7664d680707",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details.js",
+        "baselineGitBlob": "a5e65013f5bd08e78838e8097a7beb381e0fd5e8",
+        "currentGitBlob": "a5e65013f5bd08e78838e8097a7beb381e0fd5e8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/asset-provenance.json",
+        "baselineGitBlob": "4b79cfcfe1381120218a9d3dd39797b1cf59de9d",
+        "currentGitBlob": "4b79cfcfe1381120218a9d3dd39797b1cf59de9d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/dal.svg",
+        "baselineGitBlob": "638d058df4ffa62eb2f56a1c3a51202f92c68200",
+        "currentGitBlob": "638d058df4ffa62eb2f56a1c3a51202f92c68200",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/helmet-tb-decorative.webp",
+        "baselineGitBlob": "84c75c7c9425b60fe95489393c3c50b8c43272db",
+        "currentGitBlob": "84c75c7c9425b60fe95489393c3c50b8c43272db",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/home-control-nba.svg",
+        "baselineGitBlob": "61ac531dbaf328464ee5c8fb396b974c3ec906cd",
+        "currentGitBlob": "61ac531dbaf328464ee5c8fb396b974c3ec906cd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/home-control-nfl.svg",
+        "baselineGitBlob": "0e7f524cb8eb291a76acb562502386a8b809ac5a",
+        "currentGitBlob": "0e7f524cb8eb291a76acb562502386a8b809ac5a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/home-control-nrl.svg",
+        "baselineGitBlob": "15d8bd568fe802f704c6e9a01a17ec61c7d61a77",
+        "currentGitBlob": "15d8bd568fe802f704c6e9a01a17ec61c7d61a77",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/home-control-ufc.svg",
+        "baselineGitBlob": "e2b04a519546954c2d52615e8bd449b650c0fedc",
+        "currentGitBlob": "e2b04a519546954c2d52615e8bd449b650c0fedc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/tb.svg",
+        "baselineGitBlob": "a12b0016c64af4dad9dfd934776c10ba88c78e78",
+        "currentGitBlob": "a12b0016c64af4dad9dfd934776c10ba88c78e78",
+        "matchesBaseline": true
+      },
+      {
+        "path": "assets/team-details/ui-icons.svg",
+        "baselineGitBlob": "0c9ed3d8a13317837d0e01701154e3718aa21dc1",
+        "currentGitBlob": "0c9ed3d8a13317837d0e01701154e3718aa21dc1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "index.html",
+        "baselineGitBlob": "31adb8b580dce1ffd1e9ff086c40f87f5a50be64",
+        "currentGitBlob": "5da7dfa2cc961b871353fae736abe8b291b8e346",
+        "matchesBaseline": false
+      },
+      {
+        "path": "package-lock.json",
+        "baselineGitBlob": "b5eceed2415593cc7764dbbf0edbf7f8759b5aaa",
+        "currentGitBlob": "b5eceed2415593cc7764dbbf0edbf7f8759b5aaa",
+        "matchesBaseline": true
+      },
+      {
+        "path": "package.json",
+        "baselineGitBlob": "1c52fb2d9c6c0ae91cf8167047dacc15ae5ea32f",
+        "currentGitBlob": "1c52fb2d9c6c0ae91cf8167047dacc15ae5ea32f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "scripts/check-source-updates.py",
+        "baselineGitBlob": "21573f3472f7c89ac729e4ae9d6178c7c848cb84",
+        "currentGitBlob": "21573f3472f7c89ac729e4ae9d6178c7c848cb84",
+        "matchesBaseline": true
+      },
+      {
+        "path": "scripts/refresh-data.py",
+        "baselineGitBlob": "dd17d991e86b67769bc3126f109b122e5e71f722",
+        "currentGitBlob": "dd17d991e86b67769bc3126f109b122e5e71f722",
+        "matchesBaseline": true
+      },
+      {
+        "path": "scripts/refresh-matchup-breakdown.py",
+        "baselineGitBlob": "fc55444ba7433ef5c3da23bc250d38d421683a72",
+        "currentGitBlob": "fc55444ba7433ef5c3da23bc250d38d421683a72",
+        "matchesBaseline": true
+      },
+      {
+        "path": "scripts/refresh-team-details.py",
+        "baselineGitBlob": "fdc0e1ec593feddf61dffa1fda9690fea22ad8a2",
+        "currentGitBlob": "fdc0e1ec593feddf61dffa1fda9690fea22ad8a2",
+        "matchesBaseline": true
+      }
+    ]
+  },
+  "protectedRuntimeSubgroups": {
+    "nonHomeRuntimeCSSJS": {
+      "checkedCount": 22,
+      "exactBaselineCount": 22,
+      "paths": [
+        "assets/app.js",
+        "assets/data-updates.js",
+        "assets/data/snapshot.js",
+        "assets/illumination.css",
+        "assets/matchup-breakdown-motion.js",
+        "assets/matchup-breakdown.css",
+        "assets/matchup-breakdown.js",
+        "assets/motion.css",
+        "assets/motion.js",
+        "assets/nfl-dashboard-chrome.css",
+        "assets/nfl-dashboard-motion.css",
+        "assets/nfl-dashboard-motion.js",
+        "assets/nfl-dashboard.css",
+        "assets/nfl-dashboard.js",
+        "assets/player-research.css",
+        "assets/player-research.js",
+        "assets/premium.css",
+        "assets/refinements.css",
+        "assets/styles.css",
+        "assets/team-details-motion.js",
+        "assets/team-details.css",
+        "assets/team-details.js"
+      ]
+    },
+    "scripts": {
+      "checkedCount": 4,
+      "exactBaselineCount": 4,
+      "paths": [
+        "scripts/check-source-updates.py",
+        "scripts/refresh-data.py",
+        "scripts/refresh-matchup-breakdown.py",
+        "scripts/refresh-team-details.py"
+      ]
+    },
+    "workflows": {
+      "checkedCount": 2,
+      "exactBaselineCount": 2,
+      "paths": [
+        ".github/workflows/build-approved-pages.yml",
+        ".github/workflows/refresh-nfl-data.yml"
+      ]
+    },
+    "manifests": {
+      "checkedCount": 2,
+      "exactBaselineCount": 2,
+      "paths": [
+        "package-lock.json",
+        "package.json"
+      ]
+    },
+    "unchangedHomeRuntime": {
+      "checkedCount": 9,
+      "exactBaselineCount": 9,
+      "paths": [
+        "assets/home-aperture-motion.css",
+        "assets/home-diamond.css",
+        "assets/home-diamond.js",
+        "assets/home-gate-motion.css",
+        "assets/home-gate-motion.js",
+        "assets/home-gem-controls.css",
+        "assets/home-interactions.js",
+        "assets/home-premium.css",
+        "assets/home-typography.css"
+      ]
+    },
+    "gemAtlases": {
+      "checkedCount": 2,
+      "exactBaselineCount": 2,
+      "paths": [
+        "assets/home/gem-atlas-polished.webp",
+        "assets/home/gem-atlas.webp"
+      ]
+    }
+  },
+  "existingQATestHelperSources": {
+    "checkedCount": 273,
+    "exactBaselineCount": 273,
+    "extensions": [
+      ".js",
+      ".cjs",
+      ".mjs",
+      ".py",
+      ".sh"
+    ],
+    "fileProofs": [
+      {
+        "path": "qa/auto-integration.cjs",
+        "baselineGitBlob": "09d8ab0f4d30b054cf0bf1bfcc366f447b9c083a",
+        "currentGitBlob": "09d8ab0f4d30b054cf0bf1bfcc366f447b9c083a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/data-updates.test.cjs",
+        "baselineGitBlob": "2c3b38c6b72e803ee7dc8e12957341f35fa5e42e",
+        "currentGitBlob": "2c3b38c6b72e803ee7dc8e12957341f35fa5e42e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/data.test.py",
+        "baselineGitBlob": "dbc937f41aafad974032e18345b67b345c418779",
+        "currentGitBlob": "dbc937f41aafad974032e18345b67b345c418779",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/capture-baseline.cjs",
+        "baselineGitBlob": "439094cfbb15f8f937459fe4987e0529cdfaaaf7",
+        "currentGitBlob": "439094cfbb15f8f937459fe4987e0529cdfaaaf7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/capture-prototype.cjs",
+        "baselineGitBlob": "b309f053517f5d52e02e046e19a26cf81d6fd6b1",
+        "currentGitBlob": "b309f053517f5d52e02e046e19a26cf81d6fd6b1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/create-source-backup.py",
+        "baselineGitBlob": "93ad8ec8f36057099ab7ce54c80b560e6744a1ec",
+        "currentGitBlob": "93ad8ec8f36057099ab7ce54c80b560e6744a1ec",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/current-chromium-v2/executed-helper.cjs",
+        "baselineGitBlob": "e7cabe6cf7ad00fdf7eb81891db3d1dd9bccca65",
+        "currentGitBlob": "e7cabe6cf7ad00fdf7eb81891db3d1dd9bccca65",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/current-chromium.cjs",
+        "baselineGitBlob": "e7cabe6cf7ad00fdf7eb81891db3d1dd9bccca65",
+        "currentGitBlob": "e7cabe6cf7ad00fdf7eb81891db3d1dd9bccca65",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/current-chromium/executed-helper.cjs",
+        "baselineGitBlob": "bb019f50e6531a96689c36e8e0aef62ca4355bf0",
+        "currentGitBlob": "bb019f50e6531a96689c36e8e0aef62ca4355bf0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/executed-home-continuous-seal-current-source.cjs",
+        "baselineGitBlob": "a897146a17be366c356777eea5bb4c0fcfab0e0e",
+        "currentGitBlob": "a897146a17be366c356777eea5bb4c0fcfab0e0e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/executed-home-continuous-seal-publication.cjs",
+        "baselineGitBlob": "1a362c00dc2c89188cc742cad87455476efbaaa1",
+        "currentGitBlob": "1a362c00dc2c89188cc742cad87455476efbaaa1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/functional-iteration-chromium/executed-helper.cjs",
+        "baselineGitBlob": "e968075422e4388238bcd8b07f97aea8ee44ac93",
+        "currentGitBlob": "e968075422e4388238bcd8b07f97aea8ee44ac93",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/functional-iteration-v2-chromium/executed-helper.cjs",
+        "baselineGitBlob": "1f0e141084aebcb1acf7c8aedee0a7034e3070a5",
+        "currentGitBlob": "1f0e141084aebcb1acf7c8aedee0a7034e3070a5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/hosted-gallery.cjs",
+        "baselineGitBlob": "ce6e87e50c7c3fe6560657c418e7657d779ad732",
+        "currentGitBlob": "ce6e87e50c7c3fe6560657c418e7657d779ad732",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/hosted-source-current/executed-helper.cjs",
+        "baselineGitBlob": "50ffce65b9d2fa75a5586083452e6166dc63e525",
+        "currentGitBlob": "50ffce65b9d2fa75a5586083452e6166dc63e525",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/hosted-source-integration.cjs",
+        "baselineGitBlob": "50ffce65b9d2fa75a5586083452e6166dc63e525",
+        "currentGitBlob": "50ffce65b9d2fa75a5586083452e6166dc63e525",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/hosted-webkit/executed-helper.cjs",
+        "baselineGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "currentGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/local-chromium-final/executed-helper.cjs",
+        "baselineGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "currentGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/local-chromium/executed-helper.cjs",
+        "baselineGitBlob": "dc0624bbf99600e5308d592ceb274e5713cfe30f",
+        "currentGitBlob": "dc0624bbf99600e5308d592ceb274e5713cfe30f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/local-webkit-current/executed-helper.cjs",
+        "baselineGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "currentGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/local-webkit-final/executed-helper.cjs",
+        "baselineGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "currentGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/local-webkit/executed-helper.cjs",
+        "baselineGitBlob": "dc0624bbf99600e5308d592ceb274e5713cfe30f",
+        "currentGitBlob": "dc0624bbf99600e5308d592ceb274e5713cfe30f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/native.cjs",
+        "baselineGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "currentGitBlob": "2d0e35e5bbba8423f685587109bd2627a4be4f0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/probe-nfl-images.cjs",
+        "baselineGitBlob": "fdf6883894f3067f8d82de874fcb44c005201502",
+        "currentGitBlob": "fdf6883894f3067f8d82de874fcb44c005201502",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/probe-reduced-webkit.cjs",
+        "baselineGitBlob": "38471bc001a9457998d961a299f11bd43daa601d",
+        "currentGitBlob": "38471bc001a9457998d961a299f11bd43daa601d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/protected-current.cjs",
+        "baselineGitBlob": "864f0a876688bfa86e929705d3f46f42fc5690e2",
+        "currentGitBlob": "864f0a876688bfa86e929705d3f46f42fc5690e2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/protected.cjs",
+        "baselineGitBlob": "904826b521ceee370a4ca312c0f92923aa5e6a84",
+        "currentGitBlob": "904826b521ceee370a4ca312c0f92923aa5e6a84",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/record-hosted-phone-paint.cjs",
+        "baselineGitBlob": "054f6637b50f7ae078daec3cfed6ac93690de170",
+        "currentGitBlob": "054f6637b50f7ae078daec3cfed6ac93690de170",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/seal-current.cjs",
+        "baselineGitBlob": "9c549946333442d850617c394832fef63c5a541b",
+        "currentGitBlob": "9c549946333442d850617c394832fef63c5a541b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/seal-hosted.cjs",
+        "baselineGitBlob": "a5509304b62d0aa2e1c5b9ca91f4f1b944c98776",
+        "currentGitBlob": "a5509304b62d0aa2e1c5b9ca91f4f1b944c98776",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/seal-native.cjs",
+        "baselineGitBlob": "46dbfb5ba5743a33edcdd3b9e8001ec0458d2aa5",
+        "currentGitBlob": "46dbfb5ba5743a33edcdd3b9e8001ec0458d2aa5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-continuous/seal-source-integration.cjs",
+        "baselineGitBlob": "ee72668508bc950f1d7cbb2b1d4179581292ef35",
+        "currentGitBlob": "ee72668508bc950f1d7cbb2b1d4179581292ef35",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gate.cjs",
+        "baselineGitBlob": "24bf88857bb5070f50fb20b05526ec947a17954d",
+        "currentGitBlob": "24bf88857bb5070f50fb20b05526ec947a17954d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gate/independent-hosted/review.cjs",
+        "baselineGitBlob": "839fe90afc0bfc6997b037597436a2f081371dfd",
+        "currentGitBlob": "839fe90afc0bfc6997b037597436a2f081371dfd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gate/layout-probe.cjs",
+        "baselineGitBlob": "ea2ab602625d55f83705bb35d0d67b81a403212a",
+        "currentGitBlob": "ea2ab602625d55f83705bb35d0d67b81a403212a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gate/live-capture.cjs",
+        "baselineGitBlob": "b5f3099fb31b6608e780e07cca37dec8a68a012d",
+        "currentGitBlob": "b5f3099fb31b6608e780e07cca37dec8a68a012d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gate/motion-probe.cjs",
+        "baselineGitBlob": "863a565ca67a8cc13b7b3b1ad6c79a4b12d32530",
+        "currentGitBlob": "863a565ca67a8cc13b7b3b1ad6c79a4b12d32530",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/capture-baseline.cjs",
+        "baselineGitBlob": "8dc0b8eff9c4cb51979f539d67256c07f115a8b7",
+        "currentGitBlob": "8dc0b8eff9c4cb51979f539d67256c07f115a8b7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/capture-candidate.cjs",
+        "baselineGitBlob": "53479445eab8aead66dba8154ceb6c460b866167",
+        "currentGitBlob": "53479445eab8aead66dba8154ceb6c460b866167",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/create-source-backup.py",
+        "baselineGitBlob": "3dfe1f6a89206b0630e3d77b9c6ce8378bb48866",
+        "currentGitBlob": "3dfe1f6a89206b0630e3d77b9c6ce8378bb48866",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/final-native-cta-paint.cjs",
+        "baselineGitBlob": "759ce320dda0a669e31542f2b91d1ad513eb7450",
+        "currentGitBlob": "759ce320dda0a669e31542f2b91d1ad513eb7450",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/final-native.cjs",
+        "baselineGitBlob": "a8effea1c364010fe02e52837c590d83f366b9b3",
+        "currentGitBlob": "a8effea1c364010fe02e52837c590d83f366b9b3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/gallery-live-native-v2.cjs",
+        "baselineGitBlob": "79fdd8bc5e202b1cbed3a3264315341feba3725f",
+        "currentGitBlob": "79fdd8bc5e202b1cbed3a3264315341feba3725f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/gallery-live-native.cjs",
+        "baselineGitBlob": "e2e9b3f635ca3025091c66b8d8385b59e849c006",
+        "currentGitBlob": "e2e9b3f635ca3025091c66b8d8385b59e849c006",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/gallery-native.cjs",
+        "baselineGitBlob": "096c9a4df57bc12c4b0369124195eaf9380027f4",
+        "currentGitBlob": "096c9a4df57bc12c4b0369124195eaf9380027f4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/gallery-resource-diagnostic.cjs",
+        "baselineGitBlob": "43d138416095caf989b0d9df876a23ff0ccd2d0c",
+        "currentGitBlob": "43d138416095caf989b0d9df876a23ff0ccd2d0c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/seal-local.cjs",
+        "baselineGitBlob": "b1c9f81dc8fdf5ae57ce5db50127d675fd50a655",
+        "currentGitBlob": "b1c9f81dc8fdf5ae57ce5db50127d675fd50a655",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/source-companion-v2.cjs",
+        "baselineGitBlob": "e6084b460bb749f8ebc3d13d1e148045905953ad",
+        "currentGitBlob": "e6084b460bb749f8ebc3d13d1e148045905953ad",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/source-companion-v3.cjs",
+        "baselineGitBlob": "c95d3019f2effe5f92d0e39e18f1afda01aa6cc6",
+        "currentGitBlob": "c95d3019f2effe5f92d0e39e18f1afda01aa6cc6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem-point/source-companion.cjs",
+        "baselineGitBlob": "f6f53dcd816d6334d6d96da2ee43aae18568b230",
+        "currentGitBlob": "f6f53dcd816d6334d6d96da2ee43aae18568b230",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/accept-hosted.py",
+        "baselineGitBlob": "9a08c56b4e039522f4aa2f809cb321f18486c152",
+        "currentGitBlob": "9a08c56b4e039522f4aa2f809cb321f18486c152",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/accept-release.py",
+        "baselineGitBlob": "d58b2d3030a9f1b1e3ae0ae2e9250e6f49e43496",
+        "currentGitBlob": "d58b2d3030a9f1b1e3ae0ae2e9250e6f49e43496",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/accept-source-current.py",
+        "baselineGitBlob": "dfcc88c4b60417b652f53b9ad9f7e5c7c378c12f",
+        "currentGitBlob": "dfcc88c4b60417b652f53b9ad9f7e5c7c378c12f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/build-backup.py",
+        "baselineGitBlob": "ffe74d14e014c5f3ea38579854e0e9d2c450f008",
+        "currentGitBlob": "ffe74d14e014c5f3ea38579854e0e9d2c450f008",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/build-gallery.py",
+        "baselineGitBlob": "e302340dda07eabf386d4be5d821c2b88995fbec",
+        "currentGitBlob": "e302340dda07eabf386d4be5d821c2b88995fbec",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/capture.cjs",
+        "baselineGitBlob": "b069459151a6458f5b588c0f9f06bba3728e4b91",
+        "currentGitBlob": "b069459151a6458f5b588c0f9f06bba3728e4b91",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/controls-audit.cjs",
+        "baselineGitBlob": "19bdb812f7a2d31e0b97fa7327670652e0aa9e02",
+        "currentGitBlob": "19bdb812f7a2d31e0b97fa7327670652e0aa9e02",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/diagnostics/scroll-native-v1-home-ready-error.cjs",
+        "baselineGitBlob": "cf80e71d073019cd19ca8e142ea3db5c3190522d",
+        "currentGitBlob": "cf80e71d073019cd19ca8e142ea3db5c3190522d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/diagnostics/scroll-native-v2-webkit-mobile-wheel-unsupported.cjs",
+        "baselineGitBlob": "46239bf478a32419cb24321de577d419041bfb1a",
+        "currentGitBlob": "46239bf478a32419cb24321de577d419041bfb1a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/final-native.cjs",
+        "baselineGitBlob": "b439bf699d8f975bc98784628791afa2789bb25d",
+        "currentGitBlob": "b439bf699d8f975bc98784628791afa2789bb25d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/reviews/audit-source-integration-5144.py",
+        "baselineGitBlob": "0046d7d3ac889a794001d1eba08abeb50cdcf9c9",
+        "currentGitBlob": "0046d7d3ac889a794001d1eba08abeb50cdcf9c9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/reviews/audit-source-integration-607d.py",
+        "baselineGitBlob": "2ee478b917aa093e737999036e702c51b362cf6e",
+        "currentGitBlob": "2ee478b917aa093e737999036e702c51b362cf6e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/reviews/audit-source-integration-current.py",
+        "baselineGitBlob": "2576b7eb31229571d3b90c43c9039f6d3a585712",
+        "currentGitBlob": "2576b7eb31229571d3b90c43c9039f6d3a585712",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/reviews/audit-source-integration.py",
+        "baselineGitBlob": "7226e443a6681ede2d34bdc2bc40ef2bced2e06f",
+        "currentGitBlob": "7226e443a6681ede2d34bdc2bc40ef2bced2e06f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/scroll-native.cjs",
+        "baselineGitBlob": "e968643357863b23eb42ad5e2df59714daa0250a",
+        "currentGitBlob": "e968643357863b23eb42ad5e2df59714daa0250a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/source-companion-v2.cjs",
+        "baselineGitBlob": "2376adea5b37decbcec59d94ab983a1c261affa4",
+        "currentGitBlob": "2376adea5b37decbcec59d94ab983a1c261affa4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/source-companion-v3.cjs",
+        "baselineGitBlob": "0144c59681621d9600b9dc6ec4f212adc00015e2",
+        "currentGitBlob": "0144c59681621d9600b9dc6ec4f212adc00015e2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-gem/source-companion.cjs",
+        "baselineGitBlob": "38ba65a4f8df43551771856e3eecdb79ac534058",
+        "currentGitBlob": "38ba65a4f8df43551771856e3eecdb79ac534058",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/about-escape-diagnosis.cjs",
+        "baselineGitBlob": "e9fbc539b812a2c613537301262464e371819e41",
+        "currentGitBlob": "e9fbc539b812a2c613537301262464e371819e41",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/backup-current.py",
+        "baselineGitBlob": "c7ac183cf087079459eb07c22f8a399cbe0d900b",
+        "currentGitBlob": "c7ac183cf087079459eb07c22f8a399cbe0d900b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/capture.cjs",
+        "baselineGitBlob": "21fd7b8c68b02247967498aa2e6d5dd5c6000bd1",
+        "currentGitBlob": "21fd7b8c68b02247967498aa2e6d5dd5c6000bd1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/compare-refresh.py",
+        "baselineGitBlob": "49c46f979ca81d6384ceb5a1c35be7726aadfbfd",
+        "currentGitBlob": "49c46f979ca81d6384ceb5a1c35be7726aadfbfd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/compare.cjs",
+        "baselineGitBlob": "18bc94e2e409a2b82eff1abe54eba3105e5a853f",
+        "currentGitBlob": "18bc94e2e409a2b82eff1abe54eba3105e5a853f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/functional.cjs",
+        "baselineGitBlob": "9271b2aed9010cbef881ef5e744ce08f5638991e",
+        "currentGitBlob": "9271b2aed9010cbef881ef5e744ce08f5638991e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/inactive-motion-diagnosis.cjs",
+        "baselineGitBlob": "dabc944539398de7842978a4e8390f45b173892a",
+        "currentGitBlob": "dabc944539398de7842978a4e8390f45b173892a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/failed-webkit-about-immediate/functional.cjs",
+        "baselineGitBlob": "65939bf4e37ff9ea30e0beae0deb77459260bf9f",
+        "currentGitBlob": "65939bf4e37ff9ea30e0beae0deb77459260bf9f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/lifecycle-probe-first-4a55cb0f/lifecycle-fixed-probe.cjs",
+        "baselineGitBlob": "ff315d28425281aa1ec7fbcc072be861ef7f9c8f",
+        "currentGitBlob": "ff315d28425281aa1ec7fbcc072be861ef7f9c8f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/lifecycle-probe-fourth-raf-polling/lifecycle-fixed-probe.cjs",
+        "baselineGitBlob": "388dfe1a6675e613e2895a04e3b52ed0f8170e38",
+        "currentGitBlob": "388dfe1a6675e613e2895a04e3b52ed0f8170e38",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/lifecycle-probe-second-pending-pause/lifecycle-fixed-probe.cjs",
+        "baselineGitBlob": "499d2e422bbf8da7c5e39528a1f50b63f61b3236",
+        "currentGitBlob": "499d2e422bbf8da7c5e39528a1f50b63f61b3236",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/lifecycle-probe-third-reduced/lifecycle-fixed-probe.cjs",
+        "baselineGitBlob": "8d414a36ba8fa592fe7ec1335bf2b6ca798da3ae",
+        "currentGitBlob": "8d414a36ba8fa592fe7ec1335bf2b6ca798da3ae",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/motion-authored-dwell/failed-motion-review.cjs",
+        "baselineGitBlob": "68a5b7d89336de1aa1425e570f3363e42a6c807e",
+        "currentGitBlob": "68a5b7d89336de1aa1425e570f3363e42a6c807e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/iterations/pre-native-lifecycle/motion-review.cjs",
+        "baselineGitBlob": "d42cbb889263ca0d2fcb4f929586c05add57ec45",
+        "currentGitBlob": "d42cbb889263ca0d2fcb4f929586c05add57ec45",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/lifecycle-fixed-probe.cjs",
+        "baselineGitBlob": "b96bf4faace68f229b001405ede5eff990d93fdb",
+        "currentGitBlob": "b96bf4faace68f229b001405ede5eff990d93fdb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/manual-refresh.cjs",
+        "baselineGitBlob": "f897c1093252f785c1a3c90ff51147c60021e285",
+        "currentGitBlob": "f897c1093252f785c1a3c90ff51147c60021e285",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/motion-review.cjs",
+        "baselineGitBlob": "d42cbb889263ca0d2fcb4f929586c05add57ec45",
+        "currentGitBlob": "d42cbb889263ca0d2fcb4f929586c05add57ec45",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/preserve.py",
+        "baselineGitBlob": "731246738cbb2efc2e3b476db3545284a1f2228f",
+        "currentGitBlob": "731246738cbb2efc2e3b476db3545284a1f2228f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/record-acceptance.cjs",
+        "baselineGitBlob": "96a5c4ca916581a3dec606c4a2f61eab4115039e",
+        "currentGitBlob": "96a5c4ca916581a3dec606c4a2f61eab4115039e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/refresh-integration/current-data-ui.cjs",
+        "baselineGitBlob": "38c69132b90e8a41b6422d3ac3467ddaa3c517ed",
+        "currentGitBlob": "38c69132b90e8a41b6422d3ac3467ddaa3c517ed",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/refresh-integration/post-refresh-manual.cjs",
+        "baselineGitBlob": "30d0a06acc1671afcfc51603b11707dbaf80910c",
+        "currentGitBlob": "30d0a06acc1671afcfc51603b11707dbaf80910c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/refresh-integration/post-refresh-smoke.cjs",
+        "baselineGitBlob": "124928249c08a46b7933c9e34a9591e8ee4a00bb",
+        "currentGitBlob": "124928249c08a46b7933c9e34a9591e8ee4a00bb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/refresh-integration/verify-current-data.py",
+        "baselineGitBlob": "949f46e5805f36f27ad0c8c7a9fcd490ea17ca5b",
+        "currentGitBlob": "949f46e5805f36f27ad0c8c7a9fcd490ea17ca5b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/review/review.cjs",
+        "baselineGitBlob": "5c5e8de3eb1079dca8f8128908de8147ddeb913d",
+        "currentGitBlob": "5c5e8de3eb1079dca8f8128908de8147ddeb913d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-luxury/verify-publication.py",
+        "baselineGitBlob": "49029030c9980fade6f246379f3a251f35ace5cf",
+        "currentGitBlob": "49029030c9980fade6f246379f3a251f35ace5cf",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/capture.cjs",
+        "baselineGitBlob": "8cb1d142a09d2b1d52088a31e7b2da5edda1d28a",
+        "currentGitBlob": "8cb1d142a09d2b1d52088a31e7b2da5edda1d28a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/compare-refresh.py",
+        "baselineGitBlob": "a935aa11c49956299fe735dc8c650384fc34c7e0",
+        "currentGitBlob": "a935aa11c49956299fe735dc8c650384fc34c7e0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/compare.py",
+        "baselineGitBlob": "8b79df21054ed42b968e9f82d0cebd9543e4d423",
+        "currentGitBlob": "8b79df21054ed42b968e9f82d0cebd9543e4d423",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/functional.cjs",
+        "baselineGitBlob": "65c01511bc389035858e937256b865dee024c69e",
+        "currentGitBlob": "65c01511bc389035858e937256b865dee024c69e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/iterations/ground-guard-expectation/motion-review.cjs",
+        "baselineGitBlob": "8fefb7693442d3223e1f1444d6619581e9f3e6f7",
+        "currentGitBlob": "8fefb7693442d3223e1f1444d6619581e9f3e6f7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/motion-review.cjs",
+        "baselineGitBlob": "a75139588ca69dfd1dd658d5c21499b4a489f4fa",
+        "currentGitBlob": "a75139588ca69dfd1dd658d5c21499b4a489f4fa",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/refresh-integration/manual-refresh.cjs",
+        "baselineGitBlob": "f585e1f562e527d299eeb55ec6de4d86bad90447",
+        "currentGitBlob": "f585e1f562e527d299eeb55ec6de4d86bad90447",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/refresh-integration/post-refresh-manual.cjs",
+        "baselineGitBlob": "af5bae2791e274115f223b0f64848af8c4b4a5a7",
+        "currentGitBlob": "af5bae2791e274115f223b0f64848af8c4b4a5a7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/refresh-integration/post-refresh-smoke.cjs",
+        "baselineGitBlob": "07b0317a4946a696cdd788641418cf612b2db848",
+        "currentGitBlob": "07b0317a4946a696cdd788641418cf612b2db848",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/review/review.cjs",
+        "baselineGitBlob": "2cb792ff47119eea7221bcbc707f8e3ea16d66ed",
+        "currentGitBlob": "2cb792ff47119eea7221bcbc707f8e3ea16d66ed",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-metal/verify-publication.py",
+        "baselineGitBlob": "a28da84f06df56fb9df5fb8eae0c5a79da5fda47",
+        "currentGitBlob": "a28da84f06df56fb9df5fb8eae0c5a79da5fda47",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/accessible-controls.cjs",
+        "baselineGitBlob": "02a33190b0015e4af3dc4093d3484cb5e6c096e8",
+        "currentGitBlob": "02a33190b0015e4af3dc4093d3484cb5e6c096e8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/asset-review/review.cjs",
+        "baselineGitBlob": "19eca615575bbf8bffc530d950ca9d36b63b7f23",
+        "currentGitBlob": "19eca615575bbf8bffc530d950ca9d36b63b7f23",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/compare.py",
+        "baselineGitBlob": "df9c331ec8c98d30dc87ed3f805e38e614c381fd",
+        "currentGitBlob": "df9c331ec8c98d30dc87ed3f805e38e614c381fd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/independent-hosted/review.cjs",
+        "baselineGitBlob": "25d9c3367f205e3eb8e65f0243167a4b23d452d2",
+        "currentGitBlob": "25d9c3367f205e3eb8e65f0243167a4b23d452d2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/live-capture.cjs",
+        "baselineGitBlob": "9c96b8f998d54ab0b265c23b8d5dd24de91f3773",
+        "currentGitBlob": "9c96b8f998d54ab0b265c23b8d5dd24de91f3773",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/post-refresh-smoke.cjs",
+        "baselineGitBlob": "f9ab6acfd02ec668e7e2b3381b2d41db184e1040",
+        "currentGitBlob": "f9ab6acfd02ec668e7e2b3381b2d41db184e1040",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-neon/post-refresh/manual-refresh.cjs",
+        "baselineGitBlob": "75c83f7316ae1f1168d35f24b057e5fe7be035b5",
+        "currentGitBlob": "75c83f7316ae1f1168d35f24b057e5fe7be035b5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/accept-data-follow-up.py",
+        "baselineGitBlob": "695f6c788f689b4e399fb10a533d1dea90a444cf",
+        "currentGitBlob": "695f6c788f689b4e399fb10a533d1dea90a444cf",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/accept-hosted.py",
+        "baselineGitBlob": "afa3e52dc6865c7a586389a0cf5f0387dbf630a2",
+        "currentGitBlob": "afa3e52dc6865c7a586389a0cf5f0387dbf630a2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/accept-return-resume.py",
+        "baselineGitBlob": "e8a4fad70ed3fbc024bad3942ba0af2414a493ad",
+        "currentGitBlob": "e8a4fad70ed3fbc024bad3942ba0af2414a493ad",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/final-chromium/executed-helper.cjs",
+        "baselineGitBlob": "97a6d134618d74f3d19be43093aeac11afbc7e20",
+        "currentGitBlob": "97a6d134618d74f3d19be43093aeac11afbc7e20",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/final-webkit/executed-helper.cjs",
+        "baselineGitBlob": "4dc64c5e340ff252521d57002c00f5c3c06e39fb",
+        "currentGitBlob": "4dc64c5e340ff252521d57002c00f5c3c06e39fb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/hosted-data-follow-up/executed-helper.cjs",
+        "baselineGitBlob": "c81ed3f97f3eeb1af18e7ca8965b83ab0e1f3edb",
+        "currentGitBlob": "c81ed3f97f3eeb1af18e7ca8965b83ab0e1f3edb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/hosted-gallery/executed-helper.cjs",
+        "baselineGitBlob": "973d4b7275fe058b6e77dd401acd4b06de8fc68a",
+        "currentGitBlob": "973d4b7275fe058b6e77dd401acd4b06de8fc68a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/hosted-reduced-motion-repro/executed-helper.cjs",
+        "baselineGitBlob": "9e37e621b3c9e943d3a6ae28eadbfc304a5dd591",
+        "currentGitBlob": "9e37e621b3c9e943d3a6ae28eadbfc304a5dd591",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/hosted-webkit-attempt1-reduced-resume/executed-helper.cjs",
+        "baselineGitBlob": "81c1d41ba7efdd8882ca47ffc5ca9f99216fdcfb",
+        "currentGitBlob": "81c1d41ba7efdd8882ca47ffc5ca9f99216fdcfb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/hosted-webkit/executed-helper.cjs",
+        "baselineGitBlob": "86dab4fb7c8b63fc6a5bf80bfdc1c1f9a3269274",
+        "currentGitBlob": "86dab4fb7c8b63fc6a5bf80bfdc1c1f9a3269274",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/local-chromium/executed-helper.cjs",
+        "baselineGitBlob": "442958ee1644276e13512ae93295b0d9f948de60",
+        "currentGitBlob": "442958ee1644276e13512ae93295b0d9f948de60",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/pixel-hosted-phases.py",
+        "baselineGitBlob": "8f1274f791ef6a951ddf5c5185cb3c8309c39c60",
+        "currentGitBlob": "8f1274f791ef6a951ddf5c5185cb3c8309c39c60",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/pixel-region-motion.py",
+        "baselineGitBlob": "382f2ac0d736d2973226da48558cc3ed9c7fec0c",
+        "currentGitBlob": "382f2ac0d736d2973226da48558cc3ed9c7fec0c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-reference-correction/webkit-return-repro/executed-helper.cjs",
+        "baselineGitBlob": "4f06fb33b2c915c3ba148dff0d7d450d8571d063",
+        "currentGitBlob": "4f06fb33b2c915c3ba148dff0d7d450d8571d063",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/baseline-webkit/executed-helper.cjs",
+        "baselineGitBlob": "f89aef526e725d2e3e42c1e3e81726dfc65220da",
+        "currentGitBlob": "f89aef526e725d2e3e42c1e3e81726dfc65220da",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/chromium-venue-repro-sync/executed-helper.cjs",
+        "baselineGitBlob": "4558cb5d68ade832183dd9442ae8e6591efc8401",
+        "currentGitBlob": "4558cb5d68ade832183dd9442ae8e6591efc8401",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/chromium-venue-repro/executed-helper.cjs",
+        "baselineGitBlob": "8f892afd8c2dbac90ec0b0fd57cd8c3d87212e68",
+        "currentGitBlob": "8f892afd8c2dbac90ec0b0fd57cd8c3d87212e68",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/entrance-checkpoint/executed-helper.cjs",
+        "baselineGitBlob": "24634ffd7b7a240770bfb8a6dacef86fece32d47",
+        "currentGitBlob": "24634ffd7b7a240770bfb8a6dacef86fece32d47",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/hosted-webkit/executed-helper.cjs",
+        "baselineGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "currentGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/hosted-webkit/executed-venue-paint.py",
+        "baselineGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "currentGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-chromium-corrected/executed-helper.cjs",
+        "baselineGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "currentGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-chromium-corrected/executed-venue-paint.py",
+        "baselineGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "currentGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-chromium/executed-helper.cjs",
+        "baselineGitBlob": "bf7c743806d25ed45956f19d0ab177f9073fda5c",
+        "currentGitBlob": "bf7c743806d25ed45956f19d0ab177f9073fda5c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-webkit-corrected/executed-helper.cjs",
+        "baselineGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "currentGitBlob": "524f8de93f9508f3da11c525d797935a10569ac2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-webkit-corrected/executed-venue-paint.py",
+        "baselineGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "currentGitBlob": "4fbe37c4b4ce9e78c50fd46b1535405001cdb85b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-webkit-resize-settled/executed-helper.cjs",
+        "baselineGitBlob": "6f61fa518cfb43ff67e61148cc6d2cf80b6f1c81",
+        "currentGitBlob": "6f61fa518cfb43ff67e61148cc6d2cf80b6f1c81",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/local-webkit/executed-helper.cjs",
+        "baselineGitBlob": "addbf4590b6890950d89e73ef97b4ad4aa460bb8",
+        "currentGitBlob": "addbf4590b6890950d89e73ef97b4ad4aa460bb8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/home-synchronized-entrance/material-preview/executed-helper.cjs",
+        "baselineGitBlob": "0d6cc837e719c382aa8b8ebfe8acb83941b75baf",
+        "currentGitBlob": "0d6cc837e719c382aa8b8ebfe8acb83941b75baf",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/hosted-firefox.cjs",
+        "baselineGitBlob": "a2335f44535a60748025b0532efb8d083ecb70e9",
+        "currentGitBlob": "a2335f44535a60748025b0532efb8d083ecb70e9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/hosted-http-audit.py",
+        "baselineGitBlob": "f3f096bd988b8d8f4d324c0143189e410ba2ab69",
+        "currentGitBlob": "f3f096bd988b8d8f4d324c0143189e410ba2ab69",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/hosted-refresh-smoke.cjs",
+        "baselineGitBlob": "6c87310071b998255626563dd2014ae4e806948e",
+        "currentGitBlob": "6c87310071b998255626563dd2014ae4e806948e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/hosted-webkit.cjs",
+        "baselineGitBlob": "0da334ba11959c871c7f30b6c86063dceb83d4c3",
+        "currentGitBlob": "0da334ba11959c871c7f30b6c86063dceb83d4c3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/hosted.cjs",
+        "baselineGitBlob": "fa1f8daae68d7829f740fe3d4686aa05a4cb60f7",
+        "currentGitBlob": "fa1f8daae68d7829f740fe3d4686aa05a4cb60f7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/build-backup.py",
+        "baselineGitBlob": "bf71bc55570cee69a0efb9c15cb9b339998d5a94",
+        "currentGitBlob": "bf71bc55570cee69a0efb9c15cb9b339998d5a94",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/build-gallery.py",
+        "baselineGitBlob": "ae5ebaadbbd14927a8b24939bd1ab14836b407bd",
+        "currentGitBlob": "ae5ebaadbbd14927a8b24939bd1ab14836b407bd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/controls.cjs",
+        "baselineGitBlob": "19bf96ceaf6f04b0eab4e722d9a3177674e3c66d",
+        "currentGitBlob": "19bf96ceaf6f04b0eab4e722d9a3177674e3c66d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/current-availability-delta.cjs",
+        "baselineGitBlob": "9e8dec0bd02932cc47cb8fed17fb873236cec8b8",
+        "currentGitBlob": "9e8dec0bd02932cc47cb8fed17fb873236cec8b8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/current-source-delta.cjs",
+        "baselineGitBlob": "3b0aef8dc7167bc6c4371692696d4c5d552249b0",
+        "currentGitBlob": "3b0aef8dc7167bc6c4371692696d4c5d552249b0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/data.test.py",
+        "baselineGitBlob": "b197a32a4e1a79628ddb555b890ad22d0808ef32",
+        "currentGitBlob": "b197a32a4e1a79628ddb555b890ad22d0808ef32",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/final-transition-native-v2.cjs",
+        "baselineGitBlob": "0afe22cf518f31ff22f0a51e0c38d3199cad0bb3",
+        "currentGitBlob": "0afe22cf518f31ff22f0a51e0c38d3199cad0bb3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/final-transition-native-v3.cjs",
+        "baselineGitBlob": "287dbd94600d258fe734ab24921872bb5bd12177",
+        "currentGitBlob": "287dbd94600d258fe734ab24921872bb5bd12177",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/final-transition-native-v4.cjs",
+        "baselineGitBlob": "cd90631235f91a878840f7bd2c8169f25312e1be",
+        "currentGitBlob": "cd90631235f91a878840f7bd2c8169f25312e1be",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/final-transition-native-v5.cjs",
+        "baselineGitBlob": "3899d3b185ba3a4da996cd428bdc3857ed953a2d",
+        "currentGitBlob": "3899d3b185ba3a4da996cd428bdc3857ed953a2d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/final-transition-native.cjs",
+        "baselineGitBlob": "3a2f866a426c75755b6da5649730017604483a47",
+        "currentGitBlob": "3a2f866a426c75755b6da5649730017604483a47",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/hosted.cjs",
+        "baselineGitBlob": "613282fc37c1e8229e26e41c2d21ed4a95b931e6",
+        "currentGitBlob": "613282fc37c1e8229e26e41c2d21ed4a95b931e6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/incoming-injury-detail.cjs",
+        "baselineGitBlob": "ed77684f669453295663eb81afb0fa860150d470",
+        "currentGitBlob": "ed77684f669453295663eb81afb0fa860150d470",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/incoming-live-header.cjs",
+        "baselineGitBlob": "cf6ca8578656f45da718561c9018e6d3b3e58097",
+        "currentGitBlob": "cf6ca8578656f45da718561c9018e6d3b3e58097",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/incoming-source-native.cjs",
+        "baselineGitBlob": "d077d43830ac0faa821f4d7036cb9cf79da3ae0b",
+        "currentGitBlob": "d077d43830ac0faa821f4d7036cb9cf79da3ae0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/injury-context-v2.test.cjs",
+        "baselineGitBlob": "f9b5707362ebad02fe53ac43fff21443f0491b32",
+        "currentGitBlob": "f9b5707362ebad02fe53ac43fff21443f0491b32",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/injury-context.test.cjs",
+        "baselineGitBlob": "df4c393b5bfd08cabfa4a5f1cc63301530e345b2",
+        "currentGitBlob": "df4c393b5bfd08cabfa4a5f1cc63301530e345b2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/model.cjs",
+        "baselineGitBlob": "bf3fc72fea4692d7d7852034421e64e8e2b21efe",
+        "currentGitBlob": "bf3fc72fea4692d7d7852034421e64e8e2b21efe",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/model.test.cjs",
+        "baselineGitBlob": "1cb79ba166e8d24def6ea069440f00f8b33a7e8a",
+        "currentGitBlob": "1cb79ba166e8d24def6ea069440f00f8b33a7e8a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/protected.cjs",
+        "baselineGitBlob": "d33460d85b82b76c336f63cd6a5575cf9d88a461",
+        "currentGitBlob": "d33460d85b82b76c336f63cd6a5575cf9d88a461",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/qa.cjs",
+        "baselineGitBlob": "ab6eaf0e5cd43dca7f0b25c9cedb7a499d0afa23",
+        "currentGitBlob": "ab6eaf0e5cd43dca7f0b25c9cedb7a499d0afa23",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/release/base-team-details-before-upcoming.js",
+        "baselineGitBlob": "e2c4a199210ea5c5bc10bc8a53ca5c9d0f3286f5",
+        "currentGitBlob": "e2c4a199210ea5c5bc10bc8a53ca5c9d0f3286f5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/release/final-transition-native-v1.js",
+        "baselineGitBlob": "3a2f866a426c75755b6da5649730017604483a47",
+        "currentGitBlob": "3a2f866a426c75755b6da5649730017604483a47",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/check-numeric-source.py",
+        "baselineGitBlob": "dfe8d04b3f22d434b2669de892c96a80c5e60857",
+        "currentGitBlob": "dfe8d04b3f22d434b2669de892c96a80c5e60857",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/inspect.cjs",
+        "baselineGitBlob": "515baf4471f10df08e07651bec702691ad394c0b",
+        "currentGitBlob": "515baf4471f10df08e07651bec702691ad394c0b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v2.cjs",
+        "baselineGitBlob": "435cbb643bd3d3f62e05f7b1787cfe11ee255cc8",
+        "currentGitBlob": "435cbb643bd3d3f62e05f7b1787cfe11ee255cc8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v3.cjs",
+        "baselineGitBlob": "8b8dcd93ace28c52e034e420773505dc314d5b65",
+        "currentGitBlob": "8b8dcd93ace28c52e034e420773505dc314d5b65",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v4.cjs",
+        "baselineGitBlob": "28d7a922c3993eee5bfd6ecde595492c4fb2dc95",
+        "currentGitBlob": "28d7a922c3993eee5bfd6ecde595492c4fb2dc95",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause-v5.cjs",
+        "baselineGitBlob": "8c7d8c8f92f94eeea942c498c672f20472b3aab2",
+        "currentGitBlob": "8c7d8c8f92f94eeea942c498c672f20472b3aab2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/assets-motion-evidence/webkit-paint-cause.cjs",
+        "baselineGitBlob": "0caad832447d788b040d740d42e2f957914bc020",
+        "currentGitBlob": "0caad832447d788b040d740d42e2f957914bc020",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/controls-evidence/hosted-cold-entry-before-fix/hosted-cold-entry-diagnostic.cjs",
+        "baselineGitBlob": "a669661f4313461825edc0967ef1ab263381559a",
+        "currentGitBlob": "a669661f4313461825edc0967ef1ab263381559a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/controls-evidence/live-fixture-native.cjs",
+        "baselineGitBlob": "37e665682f7d7e28584785ba0e2723af78a00025",
+        "currentGitBlob": "37e665682f7d7e28584785ba0e2723af78a00025",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/controls-evidence/v6-dialog-close-harness-race.cjs",
+        "baselineGitBlob": "51652f544027cc957b497e278aa20a660db8febc",
+        "currentGitBlob": "51652f544027cc957b497e278aa20a660db8febc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/data-final-transition-evidence/check-final-player-fallback.py",
+        "baselineGitBlob": "4fda739d13e46cd56699bd9ee28f5d1f9d5a8fa2",
+        "currentGitBlob": "4fda739d13e46cd56699bd9ee28f5d1f9d5a8fa2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-dataset-final-refresh.py",
+        "baselineGitBlob": "e416c028f55a05009e21eaf2b23a18251a13f3e4",
+        "currentGitBlob": "e416c028f55a05009e21eaf2b23a18251a13f3e4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-dataset.py",
+        "baselineGitBlob": "753e2457c4f169fa761fb28c38de7bf0302abc6f",
+        "currentGitBlob": "753e2457c4f169fa761fb28c38de7bf0302abc6f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-final-basic-current-math.py",
+        "baselineGitBlob": "a70faccbfc8a7bc48e27ab4493af2d92ed52b586",
+        "currentGitBlob": "a70faccbfc8a7bc48e27ab4493af2d92ed52b586",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-final-basic-source-book.py",
+        "baselineGitBlob": "b5ad11ef479b2617ece34050e397466ae3e87834",
+        "currentGitBlob": "b5ad11ef479b2617ece34050e397466ae3e87834",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-final-transition-math.py",
+        "baselineGitBlob": "c4b22d5fa610c19b018d691054cb33693b543120",
+        "currentGitBlob": "c4b22d5fa610c19b018d691054cb33693b543120",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-fixture-context-final-basic.py",
+        "baselineGitBlob": "92a0d33164f78d2674772d0dbd3485dd337659e8",
+        "currentGitBlob": "92a0d33164f78d2674772d0dbd3485dd337659e8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-fixture-context-final-refresh.py",
+        "baselineGitBlob": "5c462eb94110c23bafbb2720f9a04170a6047b35",
+        "currentGitBlob": "5c462eb94110c23bafbb2720f9a04170a6047b35",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-fixture-context.py",
+        "baselineGitBlob": "e43bc43265f379fbd6204a29d39e4e9e2ec065b6",
+        "currentGitBlob": "e43bc43265f379fbd6204a29d39e4e9e2ec065b6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-incoming-3735200-projected-equivalence.cjs",
+        "baselineGitBlob": "91e898fbd009d7ff7ad199024d8f732054d2449e",
+        "currentGitBlob": "91e898fbd009d7ff7ad199024d8f732054d2449e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-projected-equivalence.cjs",
+        "baselineGitBlob": "0ceb04aa611fac6232510cc08afed2048362c249",
+        "currentGitBlob": "0ceb04aa611fac6232510cc08afed2048362c249",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/audit-upcoming-resolver.cjs",
+        "baselineGitBlob": "7a2075151c749d6a5159e0e194ee2c8026bdab25",
+        "currentGitBlob": "7a2075151c749d6a5159e0e194ee2c8026bdab25",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-3c1adb0/audit-final-transition-math-v2.py",
+        "baselineGitBlob": "bd09782f01360c443e27d52eceb8d262a8e055b3",
+        "currentGitBlob": "bd09782f01360c443e27d52eceb8d262a8e055b3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-699e4f8/historical-depth-updater-guard/data-test-a6310841.py",
+        "baselineGitBlob": "8c205a982c10aef6b9106ac980d49ed4b8ef0901",
+        "currentGitBlob": "8c205a982c10aef6b9106ac980d49ed4b8ef0901",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/source-evidence/incoming-699e4f8/historical-depth-updater-guard/refresh-matchup-breakdown-8c57731b.py",
+        "baselineGitBlob": "e7702535f4beb71a3b41a862ae6eb20541c79361",
+        "currentGitBlob": "e7702535f4beb71a3b41a862ae6eb20541c79361",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-preflight.cjs",
+        "baselineGitBlob": "cbc889d44fa305da7b333f1e1fe4880fda9a8ed5",
+        "currentGitBlob": "cbc889d44fa305da7b333f1e1fe4880fda9a8ed5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/reviews/visual-evidence/select-webkit-temporal.cjs",
+        "baselineGitBlob": "b764be406d9ecd0ad19052c44603ca9a2050303b",
+        "currentGitBlob": "b764be406d9ecd0ad19052c44603ca9a2050303b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/run-durable.py",
+        "baselineGitBlob": "30ad33d55b085cdbc1eadd4dfcbb1049ecd1a386",
+        "currentGitBlob": "30ad33d55b085cdbc1eadd4dfcbb1049ecd1a386",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/run.cjs",
+        "baselineGitBlob": "393eb728ffc3671d97bec5a0847387c9098e9667",
+        "currentGitBlob": "393eb728ffc3671d97bec5a0847387c9098e9667",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/settle-native-dialog-close.cjs",
+        "baselineGitBlob": "525afb20f6ad693a829991fea65ed07b8c4de6ba",
+        "currentGitBlob": "525afb20f6ad693a829991fea65ed07b8c4de6ba",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/source-monitor.test.py",
+        "baselineGitBlob": "06fe4d06bc276bc3f146fecb92e5fede7ac04853",
+        "currentGitBlob": "06fe4d06bc276bc3f146fecb92e5fede7ac04853",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/team-upcoming.test.cjs",
+        "baselineGitBlob": "e5a44b0dd7778ed593fa3542ce16cc27faa63c1c",
+        "currentGitBlob": "e5a44b0dd7778ed593fa3542ce16cc27faa63c1c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/updates.cjs",
+        "baselineGitBlob": "f687d36c27188809ecb531e11543c9a4da9d1d9c",
+        "currentGitBlob": "f687d36c27188809ecb531e11543c9a4da9d1d9c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-deployed.py",
+        "baselineGitBlob": "e30857919753256e6d8012b4cf39f4336e9f74a6",
+        "currentGitBlob": "e30857919753256e6d8012b4cf39f4336e9f74a6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-final-source-extension-hosted.py",
+        "baselineGitBlob": "86fbe8fd74abdc804a4ce8033e19c32cba3b7722",
+        "currentGitBlob": "86fbe8fd74abdc804a4ce8033e19c32cba3b7722",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-final-source-extension.py",
+        "baselineGitBlob": "c16324473ba36696fce7056e876dfdd35cfaa22e",
+        "currentGitBlob": "c16324473ba36696fce7056e876dfdd35cfaa22e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-final-transition.py",
+        "baselineGitBlob": "c330ea9697519ad5e2a54eb0ba026fb5954e7220",
+        "currentGitBlob": "c330ea9697519ad5e2a54eb0ba026fb5954e7220",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-incoming-source-v2.py",
+        "baselineGitBlob": "dd42d0f484104d8fd7a2814a0498ec0ad1619cd1",
+        "currentGitBlob": "dd42d0f484104d8fd7a2814a0498ec0ad1619cd1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-incoming-source-v3.py",
+        "baselineGitBlob": "8cef5cf509f826e9efd4fd1693329470ebff23b7",
+        "currentGitBlob": "8cef5cf509f826e9efd4fd1693329470ebff23b7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-incoming-source.py",
+        "baselineGitBlob": "e8473966aa193909efee5f3085c633d6d53148d4",
+        "currentGitBlob": "e8473966aa193909efee5f3085c633d6d53148d4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-release.py",
+        "baselineGitBlob": "04fb18070a17ec7b83a217a2cabdeb309728d141",
+        "currentGitBlob": "04fb18070a17ec7b83a217a2cabdeb309728d141",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/matchup-breakdown/verify-upcoming-delta.py",
+        "baselineGitBlob": "90583ec4fbee291f90b328541b337fbfcc0b07a7",
+        "currentGitBlob": "90583ec4fbee291f90b328541b337fbfcc0b07a7",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/next-pass/home-check.cjs",
+        "baselineGitBlob": "6ad84a6a3bd34f40b62a6eda681ce5463c989770",
+        "currentGitBlob": "6ad84a6a3bd34f40b62a6eda681ce5463c989770",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/controls.cjs",
+        "baselineGitBlob": "0154552218becda22507f5a1e356b7e015525472",
+        "currentGitBlob": "0154552218becda22507f5a1e356b7e015525472",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/full-content.cjs",
+        "baselineGitBlob": "2f8643c9455bde1946f221245aaf6dc93b424593",
+        "currentGitBlob": "2f8643c9455bde1946f221245aaf6dc93b424593",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/integration.cjs",
+        "baselineGitBlob": "1d36c65bdd229c8c2bf28bd2a6f760ff16b2d591",
+        "currentGitBlob": "1d36c65bdd229c8c2bf28bd2a6f760ff16b2d591",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/motion.cjs",
+        "baselineGitBlob": "4288924231fef604b4637ebeb0b0f3941601868f",
+        "currentGitBlob": "4288924231fef604b4637ebeb0b0f3941601868f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/paint.cjs",
+        "baselineGitBlob": "4553673873f6a6de6b20d184c8135a8aff0462c5",
+        "currentGitBlob": "4553673873f6a6de6b20d184c8135a8aff0462c5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/qa.cjs",
+        "baselineGitBlob": "2780d5421a71b78fb3eeac83049fd2dcb8ac63dc",
+        "currentGitBlob": "2780d5421a71b78fb3eeac83049fd2dcb8ac63dc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/regression.cjs",
+        "baselineGitBlob": "4ece75b0290a7175710d71e04eb5875f9823e813",
+        "currentGitBlob": "4ece75b0290a7175710d71e04eb5875f9823e813",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-dashboard/run.cjs",
+        "baselineGitBlob": "2f0f934fd38db98d980a87d4c2cfd632910b6bb5",
+        "currentGitBlob": "2f0f934fd38db98d980a87d4c2cfd632910b6bb5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-diamond/verify-publication.py",
+        "baselineGitBlob": "71c9a4e2d2d6fd1cc485d63cab213ab2154ea147",
+        "currentGitBlob": "71c9a4e2d2d6fd1cc485d63cab213ab2154ea147",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-replica/build-gallery.py",
+        "baselineGitBlob": "2ed81eca7df717cb8d6e96a63616ef45f5e8ee0a",
+        "currentGitBlob": "2ed81eca7df717cb8d6e96a63616ef45f5e8ee0a",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-replica/build-live-gallery.py",
+        "baselineGitBlob": "f8fe5398177e7e87be8d087f892764e52b40a3b2",
+        "currentGitBlob": "f8fe5398177e7e87be8d087f892764e52b40a3b2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-replica/manual-refresh.cjs",
+        "baselineGitBlob": "ab467b7777a0e41710e21576424bfcff9ad4c20e",
+        "currentGitBlob": "ab467b7777a0e41710e21576424bfcff9ad4c20e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-replica/paint-rail.cjs",
+        "baselineGitBlob": "8db65ebfa64ea4a907e1b981b678444459a7916d",
+        "currentGitBlob": "8db65ebfa64ea4a907e1b981b678444459a7916d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/nfl-replica/verify-publication.py",
+        "baselineGitBlob": "6f80cbb4a2f613e2edeea6ab8f3cc0032385aa1f",
+        "currentGitBlob": "6f80cbb4a2f613e2edeea6ab8f3cc0032385aa1f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/run.cjs",
+        "baselineGitBlob": "0d742f26c6deda1023abf83a0680074ce3f466c0",
+        "currentGitBlob": "0d742f26c6deda1023abf83a0680074ce3f466c0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/source-updates.test.py",
+        "baselineGitBlob": "33bc3f51edceba892238fc8f6e8c4f6c4a929930",
+        "currentGitBlob": "33bc3f51edceba892238fc8f6e8c4f6c4a929930",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/build-gallery.cjs",
+        "baselineGitBlob": "1a5823efce8998caef444772e34f02667a669485",
+        "currentGitBlob": "1a5823efce8998caef444772e34f02667a669485",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/capture-ready.cjs",
+        "baselineGitBlob": "2e0102e68301f88d271ba0263cd0cb19a05cc039",
+        "currentGitBlob": "2e0102e68301f88d271ba0263cd0cb19a05cc039",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/controls-batched-candidate.cjs",
+        "baselineGitBlob": "0d36486f4a0525522cd1131ab530d7a978e6ad8c",
+        "currentGitBlob": "0d36486f4a0525522cd1131ab530d7a978e6ad8c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/controls.cjs",
+        "baselineGitBlob": "0d36486f4a0525522cd1131ab530d7a978e6ad8c",
+        "currentGitBlob": "0d36486f4a0525522cd1131ab530d7a978e6ad8c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/data.test.py",
+        "baselineGitBlob": "7a8122d249b9cdfdab0a490273f20be6e9fed507",
+        "currentGitBlob": "7a8122d249b9cdfdab0a490273f20be6e9fed507",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/hosted-deployment.cjs",
+        "baselineGitBlob": "9e1e72b6bad018d4213aa7edcc88826a250e70d2",
+        "currentGitBlob": "9e1e72b6bad018d4213aa7edcc88826a250e70d2",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/hosted-durable.py",
+        "baselineGitBlob": "d1937ed167a80a76163bcb1a380212fa4caa9cb0",
+        "currentGitBlob": "d1937ed167a80a76163bcb1a380212fa4caa9cb0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/post-refresh-durable.py",
+        "baselineGitBlob": "614c44452e6ba3991bfdc82b07bebf6674f6a14d",
+        "currentGitBlob": "614c44452e6ba3991bfdc82b07bebf6674f6a14d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/post-refresh.cjs",
+        "baselineGitBlob": "b97444c6a572c3b98a637ca427943a789de5c0bf",
+        "currentGitBlob": "b97444c6a572c3b98a637ca427943a789de5c0bf",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/qa.cjs",
+        "baselineGitBlob": "5eb292f0a428da40c0ef7fc9ee809efaa50bcf66",
+        "currentGitBlob": "5eb292f0a428da40c0ef7fc9ee809efaa50bcf66",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/regression-run.cjs",
+        "baselineGitBlob": "9caf2cd9c23094c153e22d1948e1ae8053b69ffa",
+        "currentGitBlob": "9caf2cd9c23094c153e22d1948e1ae8053b69ffa",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/control-evidence/controls-pre-batching-571f85b.cjs",
+        "baselineGitBlob": "d5da3e3b5e16e73c02a13deeb8cc50d2fecc09dd",
+        "currentGitBlob": "d5da3e3b5e16e73c02a13deeb8cc50d2fecc09dd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/control-evidence/independent-route-audit.cjs",
+        "baselineGitBlob": "e80f615a6c0a60eda8fe111171e8c66434b9af09",
+        "currentGitBlob": "e80f615a6c0a60eda8fe111171e8c66434b9af09",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/control-evidence/post-refresh-desktop-dc18f986.cjs",
+        "baselineGitBlob": "eb52f3248be700f4b73253691456baa5c286fec1",
+        "currentGitBlob": "eb52f3248be700f4b73253691456baa5c286fec1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/control-evidence/post-refresh-pre-desktop-89f0bab0.cjs",
+        "baselineGitBlob": "ea17a0fa73210a722f2a5bb132d98f626f70c540",
+        "currentGitBlob": "ea17a0fa73210a722f2a5bb132d98f626f70c540",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/control-evidence/verify-native-v3.py",
+        "baselineGitBlob": "abc0887dbced45804ac0e55d2133ebad1f0307b6",
+        "currentGitBlob": "abc0887dbced45804ac0e55d2133ebad1f0307b6",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/data-evidence/check-hosted-data-outcomes.py",
+        "baselineGitBlob": "bff3087e21da54fb9ad7bb8ca34c81d33aac1cc3",
+        "currentGitBlob": "bff3087e21da54fb9ad7bb8ca34c81d33aac1cc3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/data-evidence/check-native-data-outcomes.py",
+        "baselineGitBlob": "e009a97496ee89c98f244b0991cb3a1a6b2f78d5",
+        "currentGitBlob": "e009a97496ee89c98f244b0991cb3a1a6b2f78d5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/home-gate.cjs",
+        "baselineGitBlob": "24bf88857bb5070f50fb20b05526ec947a17954d",
+        "currentGitBlob": "24bf88857bb5070f50fb20b05526ec947a17954d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/hosted-webkit.cjs",
+        "baselineGitBlob": "0da334ba11959c871c7f30b6c86063dceb83d4c3",
+        "currentGitBlob": "0da334ba11959c871c7f30b6c86063dceb83d4c3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/nfl-dashboard/qa.cjs",
+        "baselineGitBlob": "2780d5421a71b78fb3eeac83049fd2dcb8ac63dc",
+        "currentGitBlob": "2780d5421a71b78fb3eeac83049fd2dcb8ac63dc",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/team-details/controls.cjs",
+        "baselineGitBlob": "d5da3e3b5e16e73c02a13deeb8cc50d2fecc09dd",
+        "currentGitBlob": "d5da3e3b5e16e73c02a13deeb8cc50d2fecc09dd",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/team-details/qa.cjs",
+        "baselineGitBlob": "fe9b4990c3129b63eb735cbb8872345002877fa4",
+        "currentGitBlob": "fe9b4990c3129b63eb735cbb8872345002877fa4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/executed-helpers/v2/qa/team-details/run.cjs",
+        "baselineGitBlob": "c72873afbb54b5b6d5f83fa299d8e7aad2e1d731",
+        "currentGitBlob": "c72873afbb54b5b6d5f83fa299d8e7aad2e1d731",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/integration/home-webkit-paint-probe/probe.cjs",
+        "baselineGitBlob": "4a8b8b12d73cbbc4282347ffe4cc709fa0bd02e8",
+        "currentGitBlob": "4a8b8b12d73cbbc4282347ffe4cc709fa0bd02e8",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/integration/pre-capture-ready/hosted-deployment-d98403ae.cjs",
+        "baselineGitBlob": "3a8b86c437b9303bc4ca45e547abef84afb1e5cb",
+        "currentGitBlob": "3a8b86c437b9303bc4ca45e547abef84afb1e5cb",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/integration/pre-capture-ready/post-refresh-9b6ae313.cjs",
+        "baselineGitBlob": "b42916ac8650b2c4b1d2b63e082870bdec4dce8d",
+        "currentGitBlob": "b42916ac8650b2c4b1d2b63e082870bdec4dce8d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/integration/pre-capture-ready/verify-publication-eb52d873.py",
+        "baselineGitBlob": "a5cad842766e592b7b96f2ecf6c9d3a011514766",
+        "currentGitBlob": "a5cad842766e592b7b96f2ecf6c9d3a011514766",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/integration/pre-native-action/post-refresh-b5063410.cjs",
+        "baselineGitBlob": "f4614742002cecfd1c57ed3e334556ca0ce3cd86",
+        "currentGitBlob": "f4614742002cecfd1c57ed3e334556ca0ce3cd86",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/capture-resurrects-fallback/executed-legacy-instrumented.cjs",
+        "baselineGitBlob": "ab704d2239478da6dc1a2784d74d72e1a238c6a3",
+        "currentGitBlob": "ab704d2239478da6dc1a2784d74d72e1a238c6a3",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/legacy-run-before-safe-resume.cjs",
+        "baselineGitBlob": "f36329c0157dd0450203213c5d0a58694a6f1957",
+        "currentGitBlob": "f36329c0157dd0450203213c5d0a58694a6f1957",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/native-capture-control/executed-legacy-instrumented.cjs",
+        "baselineGitBlob": "f4631df823a2f31dd550ce8dccf46eaa67047584",
+        "currentGitBlob": "f4631df823a2f31dd550ce8dccf46eaa67047584",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/probe-executed-safe-resume.cjs",
+        "baselineGitBlob": "c9d4d51dbc84ba4f20f86926fc6e5215ff715ced",
+        "currentGitBlob": "c9d4d51dbc84ba4f20f86926fc6e5215ff715ced",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/probe.cjs",
+        "baselineGitBlob": "649181924d88d940a431d3fbb7ce3775620f7e2f",
+        "currentGitBlob": "649181924d88d940a431d3fbb7ce3775620f7e2f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe-cold/safe-resume-control/executed-legacy-instrumented.cjs",
+        "baselineGitBlob": "ae5a4020861d68ec19612fe8cb6985070c98d65c",
+        "currentGitBlob": "ae5a4020861d68ec19612fe8cb6985070c98d65c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/motion-probe/probe.cjs",
+        "baselineGitBlob": "3e174abf9c6001401a9c9d266cca729af6589d29",
+        "currentGitBlob": "3e174abf9c6001401a9c9d266cca729af6589d29",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/progress-probe.cjs",
+        "baselineGitBlob": "577e11bdce80ed0e492ad8519782d6742a05de63",
+        "currentGitBlob": "577e11bdce80ed0e492ad8519782d6742a05de63",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/sources/pre-equivalence/hosted-deployment-3b557042.cjs",
+        "baselineGitBlob": "3f8e9d80d5b205f5743e177a928f454dde1dcd33",
+        "currentGitBlob": "3f8e9d80d5b205f5743e177a928f454dde1dcd33",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/sources/pre-equivalence/post-refresh-dc18f986.cjs",
+        "baselineGitBlob": "eb52f3248be700f4b73253691456baa5c286fec1",
+        "currentGitBlob": "eb52f3248be700f4b73253691456baa5c286fec1",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/reviews/sources/pre-equivalence/verify-publication-48579167.py",
+        "baselineGitBlob": "5b36a8eb5b26687f3f39ce2699052b1a4c322635",
+        "currentGitBlob": "5b36a8eb5b26687f3f39ce2699052b1a4c322635",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/run-durable.py",
+        "baselineGitBlob": "cb1c2d64fc909ab5c83ee5e889efed4f98b5d294",
+        "currentGitBlob": "cb1c2d64fc909ab5c83ee5e889efed4f98b5d294",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/run.cjs",
+        "baselineGitBlob": "bb75198762478c2414fbd0a4fbe95528f16c0a19",
+        "currentGitBlob": "bb75198762478c2414fbd0a4fbe95528f16c0a19",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/source-audit.py",
+        "baselineGitBlob": "c70ce536f24d1d818c654a11e371a1f3451e4463",
+        "currentGitBlob": "c70ce536f24d1d818c654a11e371a1f3451e4463",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/supervise-owned-qa.py",
+        "baselineGitBlob": "48413191001bb732733a195c04a362fcba536818",
+        "currentGitBlob": "48413191001bb732733a195c04a362fcba536818",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/test-source-equivalence.py",
+        "baselineGitBlob": "6c23ae0af42476f62e44ba64bebfb9398f2eba46",
+        "currentGitBlob": "6c23ae0af42476f62e44ba64bebfb9398f2eba46",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/verify-publication.py",
+        "baselineGitBlob": "9ed569bfc94da1a7f65d37ad40121a4f1dc367f0",
+        "currentGitBlob": "9ed569bfc94da1a7f65d37ad40121a4f1dc367f0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "qa/team-details/verify-source-equivalence.py",
+        "baselineGitBlob": "6af9e410f031d1b874ddfbe2567a79b2d1541c16",
+        "currentGitBlob": "6af9e410f031d1b874ddfbe2567a79b2d1541c16",
+        "matchesBaseline": true
+      }
+    ]
+  },
+  "originalBackups": {
+    "checkedTrackedCount": 24,
+    "exactBaselineGitBlobCount": 24,
+    "recordedManifestSource": "3d6b64bc8f6673220a1a62d03d9e9f1e7a67010a:qa/home-synchronized-entrance/reviews/scope-final.json protectedSource.preservedRootBackups",
+    "recordedSHA256AndByteCountChecked": 24,
+    "gitBlobProofs": [
+      {
+        "path": "backups/project-dollar-home-continuous-source.json",
+        "baselineGitBlob": "fd66b0a633c26ad93a7f304161a1ff943b0d608b",
+        "currentGitBlob": "fd66b0a633c26ad93a7f304161a1ff943b0d608b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-continuous-source.sha256",
+        "baselineGitBlob": "07206c8d5f30e750ef8aace39472289c59903965",
+        "currentGitBlob": "07206c8d5f30e750ef8aace39472289c59903965",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-continuous-source.zip",
+        "baselineGitBlob": "a0f2e779964667dbb939a1aa635d631919b90012",
+        "currentGitBlob": "a0f2e779964667dbb939a1aa635d631919b90012",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.json",
+        "baselineGitBlob": "762d064b721244d89e4eb35e20c6e0be7d2bab7f",
+        "currentGitBlob": "762d064b721244d89e4eb35e20c6e0be7d2bab7f",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.sha256",
+        "baselineGitBlob": "1cc7259ab817b7de56a2ab360929113f4d17ce85",
+        "currentGitBlob": "1cc7259ab817b7de56a2ab360929113f4d17ce85",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.zip",
+        "baselineGitBlob": "2e0a5b0fc6982f6c7ded5d968b1cd756b3248bb4",
+        "currentGitBlob": "2e0a5b0fc6982f6c7ded5d968b1cd756b3248bb4",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.json",
+        "baselineGitBlob": "d61ca0adda6f7654c31ccde7144e5061fc76629e",
+        "currentGitBlob": "d61ca0adda6f7654c31ccde7144e5061fc76629e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.sha256",
+        "baselineGitBlob": "a1e63e8f10646849fa2cf1521358f1a95d4dd198",
+        "currentGitBlob": "a1e63e8f10646849fa2cf1521358f1a95d4dd198",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.zip",
+        "baselineGitBlob": "74532dbe45b7cfc41342d3f3377711a40d731cc9",
+        "currentGitBlob": "74532dbe45b7cfc41342d3f3377711a40d731cc9",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.json",
+        "baselineGitBlob": "15641bb69e89c55c13f6b59b23362d081243b640",
+        "currentGitBlob": "15641bb69e89c55c13f6b59b23362d081243b640",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.sha256",
+        "baselineGitBlob": "ab893a0fe490bd6eca2e40bb7cdfb329658efe37",
+        "currentGitBlob": "ab893a0fe490bd6eca2e40bb7cdfb329658efe37",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.zip",
+        "baselineGitBlob": "a41aca6ff50b5eb10c69e55b578e87f6bd29c761",
+        "currentGitBlob": "a41aca6ff50b5eb10c69e55b578e87f6bd29c761",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.json",
+        "baselineGitBlob": "c04b08d1132629cdd02d6d6c57499f4038b629b5",
+        "currentGitBlob": "c04b08d1132629cdd02d6d6c57499f4038b629b5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.sha256",
+        "baselineGitBlob": "6aa95e507a9e598216419fda373050b9275a8536",
+        "currentGitBlob": "6aa95e507a9e598216419fda373050b9275a8536",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.zip",
+        "baselineGitBlob": "adef0e255807f5ffe6ae1653faa8f359503f64c5",
+        "currentGitBlob": "adef0e255807f5ffe6ae1653faa8f359503f64c5",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.json",
+        "baselineGitBlob": "99bcd24348227d445583946fe74b4e65b3c2a2e0",
+        "currentGitBlob": "99bcd24348227d445583946fe74b4e65b3c2a2e0",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.sha256",
+        "baselineGitBlob": "a796800c2b6cac49bc06df9ecd93681dfdeeca0c",
+        "currentGitBlob": "a796800c2b6cac49bc06df9ecd93681dfdeeca0c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.zip",
+        "baselineGitBlob": "5e475a1e1c3f35bab9cb475f3a7c08b976f2eb9b",
+        "currentGitBlob": "5e475a1e1c3f35bab9cb475f3a7c08b976f2eb9b",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.json",
+        "baselineGitBlob": "fe8162dda149adcc6b26cc45f45c7856c1a7943c",
+        "currentGitBlob": "fe8162dda149adcc6b26cc45f45c7856c1a7943c",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.sha256",
+        "baselineGitBlob": "3a7271ac4f4d5e3e5a8a2b208f3c3a1505b807de",
+        "currentGitBlob": "3a7271ac4f4d5e3e5a8a2b208f3c3a1505b807de",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.zip",
+        "baselineGitBlob": "ab5fe6a4889b9a6330edc66fe4da8318eda3294e",
+        "currentGitBlob": "ab5fe6a4889b9a6330edc66fe4da8318eda3294e",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.json",
+        "baselineGitBlob": "80c970296b8ad6a873a2623f5b30eca08c3ac48d",
+        "currentGitBlob": "80c970296b8ad6a873a2623f5b30eca08c3ac48d",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.sha256",
+        "baselineGitBlob": "f8c88f08c328e6b944875c992ecc342503a36c14",
+        "currentGitBlob": "f8c88f08c328e6b944875c992ecc342503a36c14",
+        "matchesBaseline": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.zip",
+        "baselineGitBlob": "7196f54d81a17dc6e3479d94ce004e04b238ba8c",
+        "currentGitBlob": "7196f54d81a17dc6e3479d94ce004e04b238ba8c",
+        "matchesBaseline": true
+      }
+    ],
+    "recordedHashProofs": [
+      {
+        "path": "backups/project-dollar-home-continuous-source.json",
+        "recordedSha256": "738d021c0ce5781faf7a3795181d77a02a88b09b337902cb8a98923a2e169fa9",
+        "currentSha256": "738d021c0ce5781faf7a3795181d77a02a88b09b337902cb8a98923a2e169fa9",
+        "recordedBytes": 155791,
+        "currentBytes": 155791,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-continuous-source.sha256",
+        "recordedSha256": "920a37e27b55a46a801c41a773927325c6ea5841632ec2ad4cf701db5bd616e3",
+        "currentSha256": "920a37e27b55a46a801c41a773927325c6ea5841632ec2ad4cf701db5bd616e3",
+        "recordedBytes": 108,
+        "currentBytes": 108,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-continuous-source.zip",
+        "recordedSha256": "a19fdd94a28e4b26104cb918cd3b41821de9e74282eb311b0903e1e5d8caaed5",
+        "currentSha256": "a19fdd94a28e4b26104cb918cd3b41821de9e74282eb311b0903e1e5d8caaed5",
+        "recordedBytes": 30484594,
+        "currentBytes": 30484594,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.json",
+        "recordedSha256": "73a6f2e548ed8486205c59df720f5fde1950229cdf9091d0023e4cd5520e1ac8",
+        "currentSha256": "73a6f2e548ed8486205c59df720f5fde1950229cdf9091d0023e4cd5520e1ac8",
+        "recordedBytes": 117075,
+        "currentBytes": 117075,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.sha256",
+        "recordedSha256": "73043f9be75eb59263ecfba1fc8c63992b44bdb76eaf2f211943e0459b80ef47",
+        "currentSha256": "73043f9be75eb59263ecfba1fc8c63992b44bdb76eaf2f211943e0459b80ef47",
+        "recordedBytes": 104,
+        "currentBytes": 104,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source-v2.zip",
+        "recordedSha256": "aa9f70f17d39c70a41f54dfa5ebfacbbe401d137a726888aaccd46d5b98137cb",
+        "currentSha256": "aa9f70f17d39c70a41f54dfa5ebfacbbe401d137a726888aaccd46d5b98137cb",
+        "recordedBytes": 22188532,
+        "currentBytes": 22188532,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.json",
+        "recordedSha256": "7d0f1ef56f0af9678d1e5ae948bfc0f759bc4d57d53f3c74c0e3adcfa920a7b1",
+        "currentSha256": "7d0f1ef56f0af9678d1e5ae948bfc0f759bc4d57d53f3c74c0e3adcfa920a7b1",
+        "recordedBytes": 112562,
+        "currentBytes": 112562,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.sha256",
+        "recordedSha256": "b050c3c6cfae283721d508768878599e86f897cdb1cdc256324d850ae016f338",
+        "currentSha256": "b050c3c6cfae283721d508768878599e86f897cdb1cdc256324d850ae016f338",
+        "recordedBytes": 101,
+        "currentBytes": 101,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-gem-source.zip",
+        "recordedSha256": "a9d8efc1aee1a20a2deab0e74e1732f146ade142fc6e3f4306fb36c2eca9ea01",
+        "currentSha256": "a9d8efc1aee1a20a2deab0e74e1732f146ade142fc6e3f4306fb36c2eca9ea01",
+        "recordedBytes": 21948530,
+        "currentBytes": 21948530,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.json",
+        "recordedSha256": "91b219c245328a9571af9a24fcbbd4f551809d149bb7fe70d6d8897ed4739a53",
+        "currentSha256": "91b219c245328a9571af9a24fcbbd4f551809d149bb7fe70d6d8897ed4739a53",
+        "recordedBytes": 131402,
+        "currentBytes": 131402,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.sha256",
+        "recordedSha256": "465215b9078b02b2ffd4f5027af848dc51591141ea5fca86b96e3ac0ca308c8e",
+        "currentSha256": "465215b9078b02b2ffd4f5027af848dc51591141ea5fca86b96e3ac0ca308c8e",
+        "recordedBytes": 105,
+        "currentBytes": 105,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-home-tapered-source.zip",
+        "recordedSha256": "bd8d415769a76c414c24ad793aff273ac00adecb578d0bd805a0781f60aa22a2",
+        "currentSha256": "bd8d415769a76c414c24ad793aff273ac00adecb578d0bd805a0781f60aa22a2",
+        "recordedBytes": 27336625,
+        "currentBytes": 27336625,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.json",
+        "recordedSha256": "ee90a115c75b43585e48b14879b96615b2fe9a55eecc73fbc9fef4f100ea5918",
+        "currentSha256": "ee90a115c75b43585e48b14879b96615b2fe9a55eecc73fbc9fef4f100ea5918",
+        "recordedBytes": 115690,
+        "currentBytes": 115690,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.sha256",
+        "recordedSha256": "953014da2cbd24c49a1f3e4e785334ca2f0cc39bf53b1053b7114bc9bbe6b83d",
+        "currentSha256": "953014da2cbd24c49a1f3e4e785334ca2f0cc39bf53b1053b7114bc9bbe6b83d",
+        "recordedBytes": 103,
+        "currentBytes": 103,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v2.zip",
+        "recordedSha256": "714e9ee52650d71c28118438d175b22511542709dab000ed28f193ace54a9e85",
+        "currentSha256": "714e9ee52650d71c28118438d175b22511542709dab000ed28f193ace54a9e85",
+        "recordedBytes": 82494016,
+        "currentBytes": 82494016,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.json",
+        "recordedSha256": "1ab0ef40b120a58fd07a643792db45a2253c57da7e87028091103db655ad6023",
+        "currentSha256": "1ab0ef40b120a58fd07a643792db45a2253c57da7e87028091103db655ad6023",
+        "recordedBytes": 116841,
+        "currentBytes": 116841,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.sha256",
+        "recordedSha256": "c2168d558ec9bc31a30bab9a461729e6a33d98676185879ca42123cd4f244422",
+        "currentSha256": "c2168d558ec9bc31a30bab9a461729e6a33d98676185879ca42123cd4f244422",
+        "recordedBytes": 103,
+        "currentBytes": 103,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v3.zip",
+        "recordedSha256": "eca8ab10185a3b64073a9de308330a32070ae96a7bd70bd7edacacceac2df537",
+        "currentSha256": "eca8ab10185a3b64073a9de308330a32070ae96a7bd70bd7edacacceac2df537",
+        "recordedBytes": 82521489,
+        "currentBytes": 82521489,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.json",
+        "recordedSha256": "c2953c30ddec493ca5d839b3bdb672b4b76046a0ed5409c69677cb8ca7cb564a",
+        "currentSha256": "c2953c30ddec493ca5d839b3bdb672b4b76046a0ed5409c69677cb8ca7cb564a",
+        "recordedBytes": 130501,
+        "currentBytes": 130501,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.sha256",
+        "recordedSha256": "fdb5180c0d0543a9b1e13d19d6258e9711e4b5437fb682c8d2fdcf1477b61361",
+        "currentSha256": "fdb5180c0d0543a9b1e13d19d6258e9711e4b5437fb682c8d2fdcf1477b61361",
+        "recordedBytes": 103,
+        "currentBytes": 103,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source-v4.zip",
+        "recordedSha256": "5c296bb3fb2ca1f499c93169af59765511e965ce94ae363b0a097a18d1795efe",
+        "currentSha256": "5c296bb3fb2ca1f499c93169af59765511e965ce94ae363b0a097a18d1795efe",
+        "recordedBytes": 84555987,
+        "currentBytes": 84555987,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.json",
+        "recordedSha256": "40782d85ffa4714c5506db87d3ecb05d0c85dfef52b0e300ef63b511444a2797",
+        "currentSha256": "40782d85ffa4714c5506db87d3ecb05d0c85dfef52b0e300ef63b511444a2797",
+        "recordedBytes": 110434,
+        "currentBytes": 110434,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.sha256",
+        "recordedSha256": "9f5d56baf04c9bae6115eeb7d12ad7a793fde13ba9dc5d12f072a88a361d25ea",
+        "currentSha256": "9f5d56baf04c9bae6115eeb7d12ad7a793fde13ba9dc5d12f072a88a361d25ea",
+        "recordedBytes": 100,
+        "currentBytes": 100,
+        "matchesRecordedSHA256AndBytes": true
+      },
+      {
+        "path": "backups/project-dollar-matchup-source.zip",
+        "recordedSha256": "c12100c0d33f18c505cd034f2a871303aa276399797f805a7f1ea0d2f0775f98",
+        "currentSha256": "c12100c0d33f18c505cd034f2a871303aa276399797f805a7f1ea0d2f0775f98",
+        "recordedBytes": 82322060,
+        "currentBytes": 82322060,
+        "matchesRecordedSHA256AndBytes": true
+      }
+    ]
+  },
+  "nonHomeHTMLSuffix": {
+    "marker": "      <section class=\"page nfl-premium-dashboard",
+    "baselineMarkerOccurrences": 1,
+    "currentMarkerOccurrences": 1,
+    "sha256": "6de9aa6b254285e4c908ed3509fb3b37a83c4112ad2140fcda93de8cf5774b1a",
+    "byteExactInitial": true,
+    "bytes": 19280
+  },
+  "automaticDataAdvance": {
+    "fromCommit": "c3760a6d44634e29743ec520944c67e281c162bd",
+    "incomingCommit": "b4af58015e48b134cdbc70e6ad598d4733bb31e7",
+    "incomingCommitAuthor": "github-actions[bot]",
+    "advancedPaths": [
+      "assets/data/current.json",
+      "assets/data/matchup-breakdown.json",
+      "assets/data/player-history.json",
+      "assets/data/provenance.json",
+      "assets/data/team-details.json"
+    ],
+    "allCurrentDataBodiesMatchIncoming": true,
+    "fileProofs": [
+      {
+        "path": "assets/data/current.json",
+        "sha256": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": true,
+        "incomingSha256": "893a8895893b92fbd7bb898ea0c7af7ba0d11f6b46d574574302d229eab6c2f1"
+      },
+      {
+        "path": "assets/data/matchup-breakdown.json",
+        "sha256": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": true,
+        "incomingSha256": "de10e66d6c6f1ab0b3b75fdf6e79cf612844f624efb5b3bbe62261d2e64ea93d"
+      },
+      {
+        "path": "assets/data/player-history.json",
+        "sha256": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": true,
+        "incomingSha256": "701cf2b2132e9b0f672b67eb49c46599d183b221a13b0c96b4b9f335323ee47e"
+      },
+      {
+        "path": "assets/data/provenance.json",
+        "sha256": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": true,
+        "incomingSha256": "6273e24bbf2d8d25f8b90a36f11a12c697f48f4c09c3bb96b7f93b5ceb76ad12"
+      },
+      {
+        "path": "assets/data/roster-source.json",
+        "sha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": false,
+        "incomingSha256": "fcf434f9902ffa36aa35a6a54f2124c7328b833dbb4ea487310a39f5ecffcc0e"
+      },
+      {
+        "path": "assets/data/snapshot.js",
+        "sha256": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": false,
+        "incomingSha256": "073c8571475e5439df1a0d7078881eabc62fbdb000c26854decc68477e938416"
+      },
+      {
+        "path": "assets/data/team-details.json",
+        "sha256": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462",
+        "currentEqualsIncomingB4AF580": true,
+        "changedSinceC3760A6": true,
+        "incomingSha256": "d120867fb2efb621a1ba4f5e569b4f39709263bb35357f64b3df15a24bf9b462"
+      }
+    ]
+  },
+  "earlierReceiptPreserved": {
+    "path": "qa/home-brand-jewels/reviews/controls-scope-data-final.json",
+    "sha256Before": "6793dea0c7e71d173c4fb63999a2f059baaf81bc8b46c2683138447f8d00deb2",
+    "sha256After": "6793dea0c7e71d173c4fb63999a2f059baaf81bc8b46c2683138447f8d00deb2",
+    "unchanged": true
+  },
+  "scopeInspection": {
+    "outsideHomeSelectorBleedFound": false,
+    "evidence": "The reviewed five Home source hashes still equal the earlier independent selector inspection and both closed browser reports. Changed CSS selectors target Home descendants; changed keyframes have only Home-brand consumers; changed JS is inside installBrandLighting and appends to home.querySelector(.home-header .brand). index.html changes are Home asset cache versions and Home sapphire filter. Existing body/app-shell :has(Home.active) rules remain byte-preserved.",
+    "minorHomeReach": "Changed --home-accent also colors the existing Home availability notice border via unchanged home-premium.css. Entry and selector materials use separate fixed variables."
+  },
+  "limitations": [
+    "No browser was launched for this source audit; browser evidence comes from the two existing closed native runs whose Home15 source and served-body hashes match current source.",
+    "New local scope receipt does not itself constitute publication.",
+    "Sources may change after the recorded audit; this receipt pins the observed HEAD, tree and exact Home15 bytes.",
+    "Huge QA screenshot files were not read or audited."
+  ]
+}
