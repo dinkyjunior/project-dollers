@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-10-12T22:58:14.970959+00:00",
+  "scope": "Read-only runtime readiness. No browser launched; no source or data changed.",
+  "git": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "stdout": "ef29763d994389617566a5aaa5f1e976bd8a48d2",
+    "stderr": ""
+  },
+  "runtime": {
+    "node": {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "v24.19.0",
+      "stderr": ""
+    },
+    "python": {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "Python 3.12.14",
+      "stderr": ""
+    },
+    "chromium": {
+      "command": [
+        "/usr/bin/chromium",
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "Chromium 151.0.7922.173 built on Debian GNU/Linux 13 (trixie)",
+      "stderr": ""
+    },
+    "playwrightResolution": {
+      "command": [
+        "node",
+        "-e",
+        "let f=require.resolve(\"playwright/package.json\");console.log(JSON.stringify({file:f,version:require(f).version,webkit:require(\"playwright\").webkit.executablePath()}))"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"file\":\"/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/package.json\",\"version\":\"1.62.1\",\"webkit\":\"/home/agent/.cache/ms-playwright/webkit-2336/pw_run.sh\"}",
+      "stderr": ""
+    }
+  },
+  "files": [
+    {
+      "path": "/usr/bin/chromium",
+      "exists": true,
+      "bytes": 5064,
+      "sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779"
+    },
+    {
+      "path": "/usr/lib/chromium/chromium",
+      "exists": true,
+      "bytes": 321686360,
+      "sha256": "d387400aaf740ccb75e5e996a34aa0940e6e97683a4eabd6ae34c1eed6804723"
+    },
+    {
+      "path": "/usr/local/share/ca-certificates/environment-proxy-ca.crt",
+      "exists": true,
+      "bytes": 1309,
+      "sha256": "7fa2d7d439db8bfa7c191457e61af5e3f4eb412314eb148766ac09e93786e4c3"
+    },
+    {
+      "path": "/workspace/.onboarding/project-dollers/node_modules/playwright/package.json",
+      "exists": true,
+      "bytes": 2238,
+      "sha256": "718c91812946dcfbb4b724cfa0084ee3be205c571df09094f218bc4571f43c2b"
+    },
+    {
+      "path": "/workspace/.onboarding/playwright-browsers/webkit-2248/minibrowser-wpe/bin/MiniBrowser",
+      "exists": false
+    },
+    {
+      "path": "/workspace/.onboarding/webkit-runtime/package-verification.json",
+      "exists": false
+    }
+  ],
+  "findings": [
+    "Project-compatible Playwright1.58.2 modules exist under workspace onboarding; unqualified module resolution uses global1.62.1.",
+    "Chromium151 is installed; browser executable presence does not prove a successful launched audit.",
+    "Official workspace WebKit2248 and authenticated workspace shared libraries are absent after recovery.",
+    "The supplied per-runtime TLS CA file exists; no certificate or hostname-verification bypass is authorized or needed.",
+    "Hosted evidence must bind the newly reviewed snapshot, not the older731-body frozen candidate or its previous QA receipts."
+  ]
+}

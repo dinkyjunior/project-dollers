@@ -2,8 +2,8 @@
 """Check public provider validators before rebuilding the NFL snapshot.
 
 This does not retrieve player statistics or reset their retrieval timestamps.
-The refresh workflow runs a full validated fetch when a source changes, on an
-explicit forced refresh, or after a six-hour safety interval. GitHub schedules
+The refresh workflow runs a full validated fetch daily, when a source changes,
+on an explicit forced refresh, or after a six-hour safety interval. GitHub schedules
 are best effort; repository_dispatch is an authorized integration hook, not an
 already connected provider webhook.
 """
@@ -21,7 +21,8 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 UTC = dt.timezone.utc
-HOURLY_CRON = "7 * * * *"
+HOURLY_CRON = "7 0-16,18-23 * * *"
+DAILY_CRON = "7 17 * * *"
 MAX_AGE = dt.timedelta(hours=6)
 
 
@@ -37,7 +38,9 @@ def cadence(snapshot, now, event="workflow_dispatch", cron=""):
     """Return whether this invocation is eligible to perform small HEAD checks."""
     if event != "schedule":
         return True, "Authorized manual or integration trigger"
-    if cron == HOURLY_CRON:
+    if cron == DAILY_CRON:
+        return True, "Daily full-source refresh"
+    if cron in (HOURLY_CRON, "7 * * * *"):
         return True, "Hourly provider availability check"
     kickoffs = snapshot.get("context", {}).get("refreshGameKickoffsUtc", [])
     # Backward compatibility while the first expanded snapshot is published.
@@ -168,8 +171,10 @@ def main():
     args = parser.parse_args()
     now = dt.datetime.now(UTC)
     snapshot = json.loads((ROOT / "assets/data/current.json").read_text())
+    daily = args.event == "schedule" and args.cron == DAILY_CRON
+    force = args.force or daily
     eligible, reason = cadence(snapshot, now, args.event, args.cron)
-    if not eligible and not args.force:
+    if not eligible and not force:
         result = {"checkedAt": iso(now), "shouldRefresh": False, "checks": [], "cadenceReason": reason}
     else:
         # Archival releases stay cached. Current PBP/snaps and small ESPN
@@ -179,7 +184,8 @@ def main():
         sources = monitored_sources(snapshot, matchup)
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
             checks = list(pool.map(check_source, sources))
-        result = {**decision(snapshot, checks, now, args.force), "cadenceReason": reason}
+        result = {**decision(snapshot, checks, now, force), "cadenceReason": reason,
+                  "dailyScheduledRefresh": daily}
     print(json.dumps(result, indent=2))
     if args.github_output:
         with Path(args.github_output).open("a") as handle:

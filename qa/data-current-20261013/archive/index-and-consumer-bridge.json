@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "indexChanges": 933,
+  "gameEntryHashOrBytesChanges": 828,
+  "catalogReportHashChanges": 105,
+  "allOtherIndexValuesUnchanged": true,
+  "originalNormalizer": {
+    "path": "qa/game-report/reviews/refresh-reliability/reviewed-script-1b018da745e7.py",
+    "sha256": "1b018da745e7e4170568d67115fc57df0e4b67754299a19ea2d2049c6c5ea9bf",
+    "finding": "bool(raw.get(flag)) collapses absent/null flags and explicit false into false; original bodies are required to distinguish them."
+  },
+  "reportNativeConsumers": [
+    {
+      "path": "assets/game-report.js",
+      "sha256": "1e00bfaa9c1205955c4346e943ba8294262cb70f37c361170739bd859a4eb902",
+      "scoringPlaysTokenCount": 0,
+      "isPenaltyTokenCount": 0,
+      "isTurnoverTokenCount": 0
+    },
+    {
+      "path": "assets/game-report.css",
+      "sha256": "234141bc4153cf937747e601307a6479baccb4e0b6a8bd7ecfd79894b5895a1c",
+      "scoringPlaysTokenCount": 0,
+      "isPenaltyTokenCount": 0,
+      "isTurnoverTokenCount": 0
+    }
+  ],
+  "candidateReceiptSha256": "e7c566f168d73f2a7e483fad86bc70ab42723b157a3ae0eaf321179896d698d6",
+  "details": "All per-report changes are independently enumerated in the candidate receipt. This index bridge only changes checksums/byte sizes; it does not claim a new source retrieval."
+}

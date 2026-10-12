@@ -1,0 +1,24 @@
+'use strict';
+// Independent isolated consumer assertions. Synthetic fixtures stay in this VM;
+// they never replace a browser response or enter a published data book.
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto'),path=require('node:path');
+const ROOT=path.resolve(__dirname,'../../..'),file=ROOT+'/assets/nfl-dashboard.js',source=fs.readFileSync(file,'utf8');
+const originalExposure='window.PDNFLDashboard = {render,deriveTeamResults:teamResults};';
+assert.equal(source.split(originalExposure).length,2,'Single exact module exposure');
+const nodes={'recap-title':{},'recap-content':{}};
+const sandbox={window:{},document:{getElementById:id=>nodes[id]},Set,Map,Object,Number,String,JSON};
+vm.runInNewContext(source.replace(originalExposure,'window.PDNFLDashboard = {render,deriveTeamResults:teamResults,__test(c,s){context=c;recap(s);return leaderboards(s,"isolated");}};'),sandbox,{filename:file});
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const context={state:{nflLeaderExpanded:new Set()},data:{season:2026},esc,number:v=>v===null||v===undefined?'—':String(v),teamName:v=>v};
+const fixtures=[
+{name:'Stats behind current final results remain independently labelled',snapshot:{throughWeek:5,leadersWeek:4,recapWeek:5,leaders:{QB:[{name:'Known QB',yards:244,td:1}],RB:[],WR:[]},recap:[{id:'exact-final',season:2026,week:5,home_team:'DAL',away_team:'HOU',status:'final',home_score:34,away_score:30}]},test(html){assert.match(html,/PASSING · WEEK 4/);assert.equal(nodes['recap-title'].textContent,'WEEK 5 · RESULTS');assert.match(nodes['recap-content'].innerHTML,/data-game="exact-final"/);assert.match(nodes['recap-content'].innerHTML,/Week 5/);}},
+{name:'Null stats period never falls back to standings week',snapshot:{throughWeek:5,leadersWeek:null,recapWeek:null,leaders:{QB:[],RB:[],WR:[]},recap:[]},test(html){assert.match(html,/AWAITING VERIFIED WEEK/);assert.doesNotMatch(html,/PASSING · WEEK 5/);assert.equal(nodes['recap-title'].textContent,'WEEKLY RECAP');assert.match(nodes['recap-content'].innerHTML,/No verified completed/);}},
+{name:'Partial statistics and recap retain separate coverage notices',snapshot:{throughWeek:5,leadersWeek:5,recapWeek:5,leadersContext:{partialWeek:true,completedGamesInWeek:2,scheduledGamesInWeek:14},recapContext:{partialWeek:true,completedGamesInWeek:3,scheduledGamesInWeek:14},leaders:{QB:[{name:'Known QB',yards:0,td:null}],RB:[],WR:[]},recap:[{id:'partial-final',season:2026,week:5,home_team:'DAL',away_team:'HOU',status:'final',home_score:0,away_score:7}]},test(html){assert.match(html,/2 of 14 games with published statistics/);assert.match(nodes['recap-content'].innerHTML,/3 of 14 games final/);assert.match(html,/<span>0<\/span><span>—<\/span>/);}},
+{name:'Completed coverage adds no pending qualifier',snapshot:{throughWeek:5,leadersWeek:5,recapWeek:5,leadersContext:{partialWeek:false,completedGamesInWeek:14,scheduledGamesInWeek:14},recapContext:{partialWeek:false,completedGamesInWeek:14,scheduledGamesInWeek:14},leaders:{QB:[],RB:[],WR:[]},recap:[{id:'complete',season:2026,week:5,home_team:'DAL',away_team:'HOU',status:'final',home_score:34,away_score:30}]},test(html){assert.doesNotMatch(html,/weekly leaders may change/);assert.doesNotMatch(nodes['recap-content'].innerHTML,/more results pending/);}},
+{name:'Saved older schema context remains explicit',snapshot:{throughWeek:4,leadersWeek:3,leaders:{QB:[],RB:[],WR:[]},recap:[{id:'old-contract',season:2026,week:3,home_team:'DAL',away_team:'HOU',status:'final',home_score:1,away_score:2}]},test(html){assert.match(html,/PASSING · WEEK 3/);assert.equal(nodes['recap-title'].textContent,'WEEK 3 · RESULTS');}},
+{name:'Current cells are escaped and null statistics are unavailable',snapshot:{throughWeek:5,leadersWeek:5,recapWeek:5,leaders:{QB:[{name:'<script>bad</script>',yards:null,td:null}],RB:[],WR:[]},recap:[]},test(html){assert.doesNotMatch(html,/<script>/);assert.match(html,/&lt;script&gt;/);assert.match(html,/<span>—<\/span><span>—<\/span>/);}}
+];
+const results=[];
+for(const f of fixtures){const before=JSON.stringify(f.snapshot),html=sandbox.window.PDNFLDashboard.__test(context,f.snapshot);f.test(html);assert.equal(JSON.stringify(f.snapshot),before,'Consumer never mutates raw period or cells');results.push({name:f.name,status:'passed'});}
+const receipt={status:'passed',checkedAt:new Date().toISOString(),dashboardSha256:crypto.createHash('sha256').update(source).digest('hex'),cases:results.length,results,qualification:'Isolated synthetic consumer tests of exact production module. No provider-data or native-browser freshness claim; fixtures never enter app data.'};
+fs.writeFileSync(__dirname+'/leader-context-consumer-results.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt,null,2));

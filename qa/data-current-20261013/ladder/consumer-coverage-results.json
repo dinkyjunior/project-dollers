@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "qualification": "Independent read-only root-consumer source binding review. Synthetic fixtures executed in a non-browser VM; no claim of native geometry, zero height change or external-provider verification.",
+  "dashboardSha256": "fbad7a1d57fb1c441bfcd81c943812945869d51511a719191ffdedf06efffed5",
+  "appSha256": "1a271cba7f50cb55bbbfdef617b809f2b68ba17f470d32429ede6604d1f00799",
+  "cases": 6,
+  "results": [
+    {
+      "name": "Root consumer separates published-statistics coverage from final-score recap coverage",
+      "status": "pass"
+    },
+    {
+      "name": "Root consumer explicit-null statistics never substitutes the final-score week",
+      "status": "pass"
+    },
+    {
+      "name": "Root consumer supports older context-free snapshots without inventing publication counts",
+      "status": "pass"
+    },
+    {
+      "name": "Root consumer pregame availability treats null as unavailable, not numeric zero",
+      "status": "pass"
+    },
+    {
+      "name": "App fallback preserves explicit unavailable leader/recap context",
+      "status": "pass"
+    },
+    {
+      "name": "App fallback keeps legacy undefined-week fields readable",
+      "status": "pass"
+    }
+  ],
+  "geometryQualification": "Existing page-scoped note class adds roughly one 8px line per partially covered leader panel, plus margins; longer footer may wrap. Native two-phone/desktop QA must assess final bounds. No Home markup or stylesheet edits by this reviewer."
+}

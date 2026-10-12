@@ -1,0 +1,467 @@
+{
+  "checkedAt": "2026-10-12T22:57:54Z",
+  "shouldRefresh": true,
+  "sourceChanges": [
+    "nflverse_games",
+    "nflverse_roster",
+    "nflverse_player_stats",
+    "nflverse_depth",
+    "nflverse_injuries",
+    "nflverse_snaps_2026",
+    "nflverse_pbp_2026"
+  ],
+  "fullFetchSafetyIntervalHours": 6,
+  "oldestRequiredRetrievalAgeSeconds": 51178,
+  "forced": true,
+  "safetyRefreshDue": true,
+  "requiredErrors": [],
+  "checks": [
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"b765868f1e1081cd23a9488c0e20ac997036e4eee3bac448eb455bcfb347bb47\"",
+      "lastModified": null,
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_teams",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/teams/teams_colors_logos.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": false,
+      "httpStatus": 304,
+      "status": "unchanged",
+      "reason": "Provider confirmed matching validator"
+    },
+    {
+      "id": "nflverse_roster",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_2026.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF288009B37419\"",
+      "lastModified": "Mon, 12 Oct 2026 16:44:09 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_player_stats",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+      "required": true,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF2892FBFF919F\"",
+      "lastModified": "Mon, 12 Oct 2026 18:59:46 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_depth",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF287FB581F7A4\"",
+      "lastModified": "Mon, 12 Oct 2026 16:41:48 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_injuries",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF287FA2CDA59F\"",
+      "lastModified": "Mon, 12 Oct 2026 16:41:16 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_snaps_2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF285079AFC320\"",
+      "lastModified": "Mon, 12 Oct 2026 11:03:41 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "nflverse_pbp_2026",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": true,
+      "httpStatus": 200,
+      "etag": "\"0x8DF2892B800FC4C\"",
+      "lastModified": "Mon, 12 Oct 2026 18:57:52 GMT",
+      "status": "available",
+      "reason": "Compared entity tags"
+    },
+    {
+      "id": "espn_matchup_depth_DAL",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/depthcharts",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_matchup_roster_DAL",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal/roster",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_matchup_depth_TB",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/depthcharts",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_matchup_roster_TB",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb/roster",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_matchup_depth_PIT",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/depthcharts",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_matchup_roster_PIT",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit/roster",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873004",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873004",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872991",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872991",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872999",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872999",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872993",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872993",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872997",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872997",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872994",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872994",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872998",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872998",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872990",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872990",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873012",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873012",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872982",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872982",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872983",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873007",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873007",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872980",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872980",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872995",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872995",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872989",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872989",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873020",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873020",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872996",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872996",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872984",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872984",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873003",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873003",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872985",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872985",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872981",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872981",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873006",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873006",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873005",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873005",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872986",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872986",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873015",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873015",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873014",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873014",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872987",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872987",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873001",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873001",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873000",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873000",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872988",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872988",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873002",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873002",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401872992",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872992",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "id": "espn_fixture_summary_401873008",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401873008",
+      "required": false,
+      "previousStatus": "verified",
+      "changed": false,
+      "status": "error",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "note": "Source availability check does not renew statistics retrieval timestamps",
+  "cadenceReason": "Authorized manual or integration trigger"
+}

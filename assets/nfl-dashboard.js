@@ -171,8 +171,10 @@
       const players = snapshot.leaders?.[position] || [];
       const expanded = state.nflLeaderExpanded.has(position);
       const shown = expanded ? players : players.slice(0,5);
-      const week = snapshot.leadersWeek ?? snapshot.throughWeek;
-      return `<section class="leader-panel nfl-leader-panel nfl-framed nfl-motion-zone" data-nfl-leader-panel="${position}"><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><div class="nfl-leader-heading"><div><h2>TOP ${position}s</h2><span>${labels[position]} · ${finite(week) && Number(week) > 0 ? `WEEK ${week}` : 'AWAITING VERIFIED WEEK'}</span></div><button id="nfl-${panel}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="leaders" data-position="${position}" aria-expanded="${expanded}" aria-label="${expanded ? 'Collapse' : 'View all available'} ${position} leaders">${expanded ? 'Show less' : 'View all'} ${rightChevron}</button></div><div class="leader-columns"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div>${shown.length ? shown.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(readablePlayerName(player))}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</section>`;
+      const week = Object.hasOwn(snapshot,'leadersWeek') ? snapshot.leadersWeek : snapshot.throughWeek;
+      const coverage = snapshot.leadersContext;
+      const coverageNote = coverage?.partialWeek ? `<p class="nfl-dataset-note">${esc(coverage.completedGamesInWeek)} of ${esc(coverage.scheduledGamesInWeek)} games with published statistics · weekly leaders may change.</p>` : '';
+      return `<section class="leader-panel nfl-leader-panel nfl-framed nfl-motion-zone" data-nfl-leader-panel="${position}"><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><div class="nfl-leader-heading"><div><h2>TOP ${position}s</h2><span>${labels[position]} · ${finite(week) && Number(week) > 0 ? `WEEK ${week}` : 'AWAITING VERIFIED WEEK'}</span></div><button id="nfl-${panel}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="leaders" data-position="${position}" aria-expanded="${expanded}" aria-label="${expanded ? 'Collapse' : 'View all available'} ${position} leaders">${expanded ? 'Show less' : 'View all'} ${rightChevron}</button></div><div class="leader-columns"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div>${shown.length ? shown.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(readablePlayerName(player))}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${coverageNote}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</section>`;
     }).join('');
   }
 
@@ -199,10 +201,12 @@
 
   function recap(snapshot) {
     const {esc,number,teamName} = context;
-    const week = snapshot.recapWeek ?? snapshot.leadersWeek;
+    const week = Object.hasOwn(snapshot,'recapWeek') ? snapshot.recapWeek : snapshot.leadersWeek;
     const games = snapshot.recap || [];
     $('recap-title').textContent = finite(week) && Number(week) > 0 ? `WEEK ${week} · RESULTS` : 'WEEKLY RECAP';
-    $('recap-content').innerHTML = games.length ? `<p class="nfl-dataset-note">${context.data.season} · completed source results for Week ${esc(week)}</p>${games.map(game => {
+    const coverage = snapshot.recapContext;
+    const coverageText = coverage?.partialWeek ? ` · ${coverage.completedGamesInWeek} of ${coverage.scheduledGamesInWeek} games final; more results pending` : '';
+    $('recap-content').innerHTML = games.length ? `<p class="nfl-dataset-note">${context.data.season} · completed source results for Week ${esc(week)}${esc(coverageText)}</p>${games.map(game => {
       const complete = game.status === 'final' && finite(game.home_score) && finite(game.away_score), gameId = game.id || game.game_id;
       const result = `<strong>${number(game.away_score)}–${number(game.home_score)}</strong>`;
       return `<div class="nfl-recap-game"><span>${esc(teamName(game.away_team))} <small>@</small> ${esc(teamName(game.home_team))}</span>${complete && gameId ? `<button class="nfl-detail-button nfl-recap-report" data-nfl-action="report" data-game="${esc(gameId)}" data-team="${esc(game.away_team)}" aria-label="Open ${esc(teamName(game.away_team))} at ${esc(teamName(game.home_team))} game report, ${esc(game.season || context.data.season)} Week ${esc(game.week)}">${result} ${rightChevron}</button>` : result}</div>`;
@@ -270,7 +274,9 @@
     preview();
     const provenance = $('nfl-data-context');
     if (provenance) {
-      provenance.textContent = `${data.season} · source-backed snapshot · records W${snapshot.throughWeek} · stats ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}`;
+      const recapWeek = Object.hasOwn(snapshot,'recapWeek') ? snapshot.recapWeek : snapshot.leadersWeek;
+      const orderLabel = state.nflSort === 'PCT' ? 'PCT/DIFF' : state.nflSort;
+      provenance.textContent = `${data.season} · records W${snapshot.throughWeek} · stats ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'} · recap ${finite(recapWeek) ? `W${recapWeek}` : 'unavailable'}${snapshot.recapContext?.partialWeek ? ' · week in progress' : ''} · ${orderLabel} order; not playoff seeds`;
       provenance.title = `${sourceContext(snapshot)}. Form and home/away splits are calculated from complete retained final scores; sorted rows are not official playoff seeds.`;
     }
     if (!bound) bind();

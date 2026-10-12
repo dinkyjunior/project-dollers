@@ -1,0 +1,41 @@
+{
+  "scope": "Existing isolated producer/controller behavior tests on restored ef29763. Not certification of newest external factual records or browser behavior.",
+  "results": [
+    {
+      "name": "automatic-update-behavior",
+      "command": [
+        "node",
+        "qa/data-updates.test.cjs"
+      ],
+      "startedAt": "2026-10-12T22:58:27.878897+00:00",
+      "completedAt": "2026-10-12T22:58:28.515108+00:00",
+      "exitCode": 0,
+      "logSha256": "a19ae5fc17eb6677ba64034a25ebd85eb3e8d5d1657332d6734b32296862c4b2",
+      "log": "automatic-update-behavior.log"
+    },
+    {
+      "name": "source-monitor-behavior",
+      "command": [
+        "python3",
+        "qa/source-updates.test.py"
+      ],
+      "startedAt": "2026-10-12T22:58:28.515149+00:00",
+      "completedAt": "2026-10-12T22:58:28.607751+00:00",
+      "exitCode": 0,
+      "logSha256": "83166b089fbcb82fac63f22522fa6ae99bb5e46368cd35d756277fd463dd6346",
+      "log": "source-monitor-behavior.log"
+    },
+    {
+      "name": "core-construction-behavior",
+      "command": [
+        "python3",
+        "qa/data.test.py"
+      ],
+      "startedAt": "2026-10-12T22:58:28.607777+00:00",
+      "completedAt": "2026-10-12T22:58:28.883541+00:00",
+      "exitCode": 0,
+      "logSha256": "c0762b43972ef9ded184ebf323b3b81077a427f6ae67393c5bf2dadb6d057dcc",
+      "log": "core-construction-behavior.log"
+    }
+  ]
+}

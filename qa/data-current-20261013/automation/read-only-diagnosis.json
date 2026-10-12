@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-12T22:57:23.396244+00:00",
+  "scope": "Read-only diagnosis; no application/workflow source changes",
+  "repositoryHead": "ef29763d994389617566a5aaa5f1e976bd8a48d2",
+  "sourceFiles": {
+    ".github/workflows/refresh-nfl-data.yml": "476370e182722b5ca2eda58ac5c85111951aa08d1cd07c1b8dbb407a970541cb",
+    "scripts/check-source-updates.py": "dc7bcec4de0fed75a71f3e46e8d5a8d1277ecedbf7beb4a1ea5d6252de717117",
+    "assets/data-updates.js": "d972e7085e22d40673c43585b37fe4d262dcb035c1e769d06a34ea80c49bdb07",
+    "assets/team-details.js": "b62aee40126dcddc64911114b141fa53510707dd4bf599ae260dce3b9cd30fb1",
+    "assets/matchup-breakdown.js": "44e9fc46e15a68583ef1c1417ed5ee9f7c9f7ceac4456668fff6383d4ed7e0de",
+    "assets/game-report.js": "1e00bfaa9c1205955c4346e943ba8294262cb70f37c361170739bd859a4eb902"
+  },
+  "snapshot": {
+    "season": 2026,
+    "currentWeek": 5,
+    "retrievedAt": "2026-10-12T08:44:57Z",
+    "oldestRequiredSourceRetrievedAt": "2026-10-12T08:44:57Z"
+  },
+  "existingAutomation": {
+    "hourlyCron": "7 * * * *",
+    "extraCron": "22,37,52 * * * *",
+    "fullFetchSafetyHours": 6,
+    "currentGameWindow": "kickoff -1h through +8h",
+    "providerWindow": "06:30\u201307:45 UTC daily; 08:30\u201309:45 UTC in-season",
+    "manualForce": true,
+    "connectedProviderWebhook": false,
+    "retainsPriorSnapshotOnRequiredProviderFailure": true,
+    "allCurrentDatasets": [
+      "current",
+      "provenance",
+      "player-history",
+      "team-details",
+      "matchup-breakdown",
+      "game-reports/index-and-details"
+    ],
+    "remoteState": "previously disabled for hosted audit; current remote state cannot be independently read"
+  },
+  "clientAutomation": {
+    "sameOriginOnly": true,
+    "coreActiveIntervalSeconds": 120,
+    "teamMatchupReportHistoryActiveIntervalSeconds": 90,
+    "rechecksOn": [
+      "initial-open",
+      "focus",
+      "visibility-resume",
+      "online",
+      "manual-refresh"
+    ],
+    "actualProvidersQueriedByClient": false,
+    "description": "Client loads newly published same-origin snapshots; it cannot refresh upstream data itself."
+  },
+  "access": {
+    "ghWorkflowList": "could not get workflows: Get https://api.github.com/repos/dinkyjunior/project-dollers/actions/workflows?per_page=50&page=1: Forbidden",
+    "ghAuthStatus": "Failed to log in to github.com using token (GH_TOKEN); active account true; token invalid",
+    "gitNativeRead": "Available per root task context; distinct from workflow API authorization",
+    "callableGithubConnector": false
+  },
+  "recommendedChange": {
+    "dailyForceCron": "7 17 * * *",
+    "dailySydneyTime": "04:07 AEDT / 03:07 AEST the following calendar day",
+    "additionalCadence": "Preserve hourly safety and adaptive 15-minute game/provider windows",
+    "requiredSourceFailure": "Keep validated previous snapshot; fail visibly instead of publishing partial/unverified data",
+    "remoteEnableRequired": true,
+    "ifCredentialBlocked": "Restore GitHub account authorization, or user repo Actions > Refresh verified NFL data > Enable workflow; run force_refresh=true and independently verify actual completed run and hosted data"
+  },
+  "tests": {
+    "qa/source-updates.test.py": {
+      "passed": 7,
+      "failed": 0
+    },
+    "qa/matchup-breakdown/source-monitor.test.py": {
+      "passed": 6,
+      "failed": 0
+    }
+  },
+  "limitations": [
+    "Cron execution is GitHub best effort, not guaranteed to the minute.",
+    "Provider corrections can arrive after a game ends; source retrieval time is not the game/stat update time.",
+    "Existing disabled workflow is not automatically enabled by editing its YAML."
+  ]
+}

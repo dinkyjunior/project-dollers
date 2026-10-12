@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "qualification": "Pure producer and original application function contracts; no browser launched and no published data JSON written by this agent.",
+  "checks": [
+    {
+      "i": 0,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "e4f254",
+        "wall_time_seconds": 0.253248737,
+        "exit_code": 0,
+        "original_token_count": 339,
+        "output": "test_current_shows_new_final_and_same_week_published_leaders (__main__.LatestCoverageTests.test_current_shows_new_final_and_same_week_published_leaders) ... ok\ntest_final_regular_season_week_keeps_results_without_week19 (__main__.LatestCoverageTests.test_final_regular_season_week_keeps_results_without_week19) ... ok\ntest_historical_entering_week_and_future_latest_remain_distinct (__main__.LatestCoverageTests.test_historical_entering_week_and_future_latest_remain_distinct) ... ok\ntest_mislabeled_period_retrieval_or_partial_coverage_rejects_candidate (__main__.LatestCoverageTests.test_mislabeled_period_retrieval_or_partial_coverage_rejects_candidate) ... ok\ntest_pregame_first_week_remains_unavailable (__main__.LatestCoverageTests.test_pregame_first_week_remains_unavailable) ... ok\ntest_recap_new_scores_does_not_wait_for_player_release (__main__.LatestCoverageTests.test_recap_new_scores_does_not_wait_for_player_release) ... ok\ntest_source_context_keeps_independent_retrieval_and_game_coverage (__main__.LatestCoverageTests.test_source_context_keeps_independent_retrieval_and_game_coverage) ... ok\ntest_statistics_gap_uses_available_week_not_empty_claim (__main__.LatestCoverageTests.test_statistics_gap_uses_available_week_not_empty_claim) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.060s\n\nOK\n"
+      }
+    },
+    {
+      "i": 1,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "a450d7",
+        "wall_time_seconds": 0.30671113,
+        "exit_code": 0,
+        "original_token_count": 31,
+        "output": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.197s\n\nOK\n"
+      }
+    },
+    {
+      "i": 2,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "a3e398",
+        "wall_time_seconds": 0.04338547,
+        "exit_code": 0,
+        "original_token_count": 352,
+        "output": "{\n  \"status\": \"pass\",\n  \"appJsSha256\": \"b3b7418f915d952d43338884cdb2dc74e1de6bab452d556909fd12a86dfd09b5\",\n  \"qualification\": \"Unmodified application function bodies exercised in a non-browser VM; direct #nfl route is supported. No new query routing is asserted. Native rendering/navigation checks remain separate.\",\n  \"cases\": 8,\n  \"results\": [\n    {\n      \"name\": \"Direct #nfl cold load follows the current week, then advances at the next verified week\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"A manually selected historical period remains pinned across updates and navigation\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"A manually selected future research period stays selected when Current advances\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"Selecting Current after historical research restores automatic week tracking\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"Missing research selection resets safely to Current and retains non-period controls\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"Unknown manual week cannot alter the selected period or mode\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"Failed rendering rolls back the snapshot, selected week and follow mode\",\n      \"status\": \"pass\"\n    },\n    {\n      \"name\": \"A source correction within the same current week preserves Current and other controls\",\n      \"status\": \"pass\"\n    }\n  ]\n}\n"
+      }
+    },
+    {
+      "i": 3,
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "92d505",
+        "wall_time_seconds": 0.019547944,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const pages = [...document.querySelectorAll('.page')];
-  const state = { week: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
+  const state = { week: null, weekMode: 'latest', conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
   let data = null, assets = { players: {}, logos: {} };
   let playerHistory = null, rawPlayerHistory = null, historyPromise = null, historyError = null, historyHash = null, lastHistoryCheck = 0, updater = null, updateStatus = {};
   const $ = id => document.getElementById(id);
@@ -105,9 +105,11 @@
     tabs[next].focus(); tabs[next].click();
   }));
   function leaderboard(snapshot) {
+    const week = Object.hasOwn(snapshot,'leadersWeek') ? snapshot.leadersWeek : snapshot.throughWeek;
+    const contextLabel = available(week) && Number(week) > 0 ? `WK ${week}` : 'AWAITING VERIFIED WEEK';
     return ['QB','RB'].map(position => {
       const players = snapshot.leaders?.[position] || [];
-      return `<section class="leader-panel"><h2>TOP 5 ${position}s <span>(WK ${snapshot.leadersWeek ?? snapshot.throughWeek})</span></h2><div class="leader-columns"><span>PLAYER</span><span>YDS</span><span>TD</span></div>${players.length ? players.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(player.short || player.name)}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="section-note">Verified leaders unavailable for this week.</p>'}</section>`;
+      return `<section class="leader-panel"><h2>TOP 5 ${position}s <span>(${contextLabel})</span></h2><div class="leader-columns"><span>PLAYER</span><span>YDS</span><span>TD</span></div>${players.length ? players.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(player.short || player.name)}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="section-note">Verified leaders unavailable for this week.</p>'}</section>`;
     }).join('');
   }
   function gameStatus(game) {
@@ -136,9 +138,10 @@
       const player = snapshot.leaders?.[position]?.[0];
       return player ? `<div class="recap-stat"><span>${position === 'QB' ? 'PASSING' : 'RUSHING'} LEADER</span><strong>${esc(player.name)}</strong><b>${number(player.yards)}<small> YDS</small></b><p>${number(player.td)} touchdowns · Week ${snapshot.leadersWeek ?? snapshot.throughWeek}</p></div>` : '';
     }).join('');
-    const recapWeek = snapshot.recapWeek ?? snapshot.leadersWeek ?? snapshot.throughWeek;
-    const note = Number(state.week) - 1 !== recapWeek ? `<p class="section-note">Latest verified recap: Week ${recapWeek}. Results for Week ${Number(state.week)-1} are not yet available.</p>` : '';
-    return `${note}${players}${games.length ? `<section class="research-panel"><h3>Week ${snapshot.leadersWeek ?? snapshot.throughWeek} results</h3>${games.map(game => `<div class="recap-game"><span>${esc(teamName(game.away_team))} @ ${esc(teamName(game.home_team))}</span><b>${number(game.away_score)}–${number(game.home_score)}</b></div>`).join('')}</section>` : `<p class="section-note">No verified results are available for the recap week.</p>`}${sourceNote('leaders', `${data.season} · Week ${snapshot.leadersWeek ?? snapshot.throughWeek}`)}`;
+    const recapWeek = Object.hasOwn(snapshot,'recapWeek') ? snapshot.recapWeek : snapshot.leadersWeek ?? snapshot.throughWeek;
+    const note = snapshot.recapContext?.partialWeek ? `<p class="section-note">Week ${recapWeek} · ${snapshot.recapContext.completedGamesInWeek} of ${snapshot.recapContext.scheduledGamesInWeek} games final as of source retrieval.</p>` : '';
+    const recapLabel = available(recapWeek) && Number(recapWeek) > 0 ? `Week ${recapWeek}` : 'Verified results unavailable';
+    return `${note}${players}${games.length ? `<section class="research-panel"><h3>${recapLabel} results</h3>${games.map(game => `<div class="recap-game"><span>${esc(teamName(game.away_team))} @ ${esc(teamName(game.home_team))}</span><b>${number(game.away_score)}–${number(game.home_score)}</b></div>`).join('')}</section>` : `<p class="section-note">No verified results are available for the recap week.</p>`}${sourceNote('weeklyRecap', `${data.season} · ${recapLabel}`)}`;
   }
   function renderDashboard() {
     if (window.PDNFLDashboard) {
@@ -146,6 +149,8 @@
       return;
     }
     const snapshot = data.weeks[state.week];
+    const leaderWeek = Object.hasOwn(snapshot,'leadersWeek') ? snapshot.leadersWeek : snapshot.throughWeek;
+    const recapWeek = Object.hasOwn(snapshot,'recapWeek') ? snapshot.recapWeek : snapshot.leadersWeek ?? snapshot.throughWeek;
     $('week-select').value = state.week;
     document.querySelectorAll('[data-week]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.week === state.week)));
     document.querySelectorAll('[data-conference]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.conference === state.conference)));
@@ -159,10 +164,10 @@
     toggle.textContent = state.standingsExpanded ? 'Featured teams' : `All ${all.length} teams`;
     toggle.setAttribute('aria-expanded',String(state.standingsExpanded));
     $('ladder-leaders').innerHTML = leaderboard(snapshot);
-    $('players-leaders').innerHTML = leaderboard(snapshot) + sourceNote('leaders', `${data.season} · Week ${snapshot.leadersWeek ?? snapshot.throughWeek} · yards leaders`);
+    $('players-leaders').innerHTML = leaderboard(snapshot) + sourceNote('leaders', `${data.season} · ${available(leaderWeek) && Number(leaderWeek) > 0 ? `Week ${leaderWeek}` : 'weekly leaders unavailable'} · yards leaders`);
     $('featured-matchup').innerHTML = matchup(snapshot.fixture);
     $('fixture-context').textContent = `${data.season} · WEEK ${state.week}`;
-    $('recap-title').textContent = `Week ${snapshot.leadersWeek ?? snapshot.throughWeek} in numbers`;
+    $('recap-title').textContent = available(recapWeek) && Number(recapWeek) > 0 ? `Week ${recapWeek} in numbers` : 'Weekly recap';
     $('recap-content').innerHTML = recap(snapshot);
   }
   function playerDetails(player) {
@@ -237,6 +242,9 @@
   function changeWeek(week) {
     if (!data?.weeks[week]) return;
     state.week = String(week);
+    // Selecting Current follows the verified feed across week boundaries.
+    // Other selections pin the research period until Current is selected again.
+    state.weekMode = Number(week) === data.currentWeek ? 'latest' : 'pinned';
     preserveScroll(() => { renderDashboard(); renderRoster(); renderTeamMatchup(); });
   }
   function renderRoster() {
@@ -343,16 +351,20 @@
   function applySnapshot(snapshot) {
     const previous = data;
     const previousWeek = state.week;
+    const previousWeekMode = state.weekMode;
     const previousPlayer = state.openPlayer;
     const oldHistoryHash = data?.playerHistory?.sha256;
     try {
       data = snapshot;
-      if (!data.weeks[state.week]) state.week = String(data.currentWeek);
+      if (state.weekMode === 'latest' || !data.weeks[state.week]) {
+        state.week = String(data.currentWeek);
+        state.weekMode = 'latest';
+      }
       if (state.openPlayer && !data.roster.some(player => player.id === state.openPlayer)) state.openPlayer = null;
       preserveScroll(renderAll);
       window.PD_DATA = data;
     } catch (error) {
-      data = previous; state.week = previousWeek; state.openPlayer = previousPlayer;
+      data = previous; state.week = previousWeek; state.weekMode = previousWeekMode; state.openPlayer = previousPlayer;
       window.PD_DATA = previous;
       if (previous) preserveScroll(renderAll);
       throw error;

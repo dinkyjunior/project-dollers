@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-12T23:26:30.611750+00:00",
+  "status": "PASS",
+  "scope": "Daily full-fetch schedule and source-monitor CLI behavior, no network calls or dataset writes",
+  "sourceFiles": {
+    ".github/workflows/refresh-nfl-data.yml": "431935f7c8f51c2efda0138b6dcd1e777c5c267961b3fe3e554a31f1b8eb8b83",
+    "scripts/check-source-updates.py": "1b3a9ababfd7d863a50f9e4975e51ac1f0e76a286ba5a90aa586942f327575e8",
+    "qa/daily-refresh.test.py": "aaa041f6228241c38c92576bf7c6554754d038c1587ed2e91cfcde894450c979"
+  },
+  "dailyCronUtc": "7 17 * * *",
+  "dailySydney": "04:07 AEDT / 03:07 AEST the following day",
+  "hourlyOtherHours": "7 0-16,18-23 * * *",
+  "extraCadence": "22,37,52 * * * *; eligible game and source release windows",
+  "tests": [
+    {
+      "script": "qa/daily-refresh.test.py",
+      "exitCode": 0,
+      "passed": 9,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.012s\n\nOK\n"
+    },
+    {
+      "script": "qa/source-updates.test.py",
+      "exitCode": 0,
+      "passed": 7,
+      "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "script": "qa/matchup-breakdown/source-monitor.test.py",
+      "exitCode": 0,
+      "passed": 6,
+      "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.021s\n\nOK\n"
+    }
+  ],
+  "publicationGate": "Required provider errors keep should_refresh=false and fail; no data may publish from that invocation",
+  "timestamps": "Source bytes and retrievedAt values remain unchanged by the monitor",
+  "remoteEnabledState": "PENDING ROOT VERIFICATION; local PASS is not remote enable/run confirmation",
+  "hostedResult": "PENDING ROOT PUBLICATION AND LIVE VERIFICATION"
+}

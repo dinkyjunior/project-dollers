@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "scope": "Saved committed data integrity before fresh-source generation; not proof of current source access or full raw archive metadata correctness.",
+  "coreSeason": 2026,
+  "savedCurrentWeek": 5,
+  "knownLimitation": "Condensed archived scoring-play penalty/turnover metadata still needs independent source repair; non-rendered flags are outside these checks.",
+  "checks": [
+    {
+      "scope": "core",
+      "result": {
+        "chunk_id": "575c2b",
+        "wall_time_seconds": 0.347672575,
+        "exit_code": 0,
+        "original_token_count": 2737,
+        "output": "Warning: truncated output (original token count: 2737)\nTotal output lines: 327\n\n{\n  \"status\": \"passed\",\n  \"teamCount\": 32,\n  \"rosterCount\": 79,\n  \"activeRosterCount\": 48,\n  \"season\": 2026,\n  \"currentWeek\": 5,\n  \"throughWeek\": 5,\n  \"featured\": [\n    \"Aaron Rodgers\",\n    \"Jaylen Warren\",\n    \"DK Metcalf\",\n    \"Michael Pittman\",\n    \"Pat Freiermuth\"\n  ],\n  \"disagreements\": [\n    {\n      \"playerId\": \"00-0038409\",\n      \"name\": \"Lew Nichols III\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"Active\",\n      \"official\": \"Practice Squad\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0036775\",\n      \"name\": \"Brandon Smith\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"Active\",\n      \"official\": \"Practice Squad\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039883\",\n      \"name\": \"Daequan Hardy\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039626\",\n      \"name\": \"Cole Burgess\",\n      \"field\": \"membership\",\n      \"primary\": \"PIT\",\n      \"official\": \"No matched entry in complete current roster\",\n      \"espn\": \"PIT\",\n      \"note\": \"Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038388\",\n      \"name\": \"Darius Rush\",\n      \"field\": \"jersey\",\n      \"primary\": \"36\",\n      \"official\": 38,\n      \"espn\": null,\n      \"note\": \"Verified current official jersey differs from the primary release; a missing ESPN jersey is unavailable, not a contradictory number.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038581\",\n      \"name\": \"KJ Henry\",\n      \"field\": \"position\",\n      \"primary\": \"DL\",\n      \"official\": \"LB\",\n      \"espn\": \"LB\",\n      \"note\": \"Providers report different position families; broad DB/CB, DL/DT, OL/C, RB/FB and K/PK labels alone are not conflicts.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0039054\",\n      \"name\": \"Marte Mapu\",\n      \"field\": \"jersey\",\n      \"primary\":…737 tokens truncated…\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"defense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0038395\",\n      \"name\": \"Terell Smith\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"defense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0041565\",\n      \"name\": \"Drew Allar\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0040203\",\n      \"name\": \"Will Howard\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0041490\",\n      \"name\": \"Eli Heidenreich\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    },\n    {\n      \"playerId\": \"00-0036139\",\n      \"name\": \"Rico Dowdle\",\n      \"field\": \"rosterStatus\",\n      \"primary\": \"INA\",\n      \"official\": \"Active\",\n      \"espn\": \"offense\",\n      \"note\": \"Official current category differs from the primary release; categories retain their source wording.\",\n      \"sourceIds\": [\n        \"official_steelers_roster\",\n        \"espn_steelers_roster\"\n      ],\n      \"checkedAt\": \"2026-10-12T08:45:00Z\",\n      \"retained\": false,\n      \"action\": \"Primary record preserved; source conflict explicitly flagged for current-roster presentation.\"\n    }\n  ],\n  \"provenanceHash\": \"passed\",\n  \"playerHistory\": {\n    \"status\": \"passed\",\n    \"playerCount\": 79,\n    \"gameRowCount\": 1290,\n    \"coverage\": {\n      \"firstSeason\": 2005,\n      \"lastSeason\": 2026,\n      \"availableSeasons\": [\n        2005,\n        2006,\n        2007,\n        2008,\n        2009,\n        2010,\n        2011,\n        2012,\n        2013,\n        2014,\n        2015,\n        2016,\n        2017,\n        2018,\n        2019,\n        2020,\n        2021,\n        2022,\n        2023,\n        2024,\n        2025,\n        2026\n      ],\n      \"unavailableSeasons\": [],\n      \"status\": \"verified\",\n      \"cachedRowsNeedingBackfill\": 0\n    }\n  }\n}\n"
+      }
+    },
+    {
+      "scope": "team",
+      "result": {
+        "chunk_id": "33c94f",
+        "wall_time_seconds": 0.128430909,
+        "exit_code": 0,
+        "original_token_count": 24,
+        "output": "{\n  \"teams\": 32,\n  \"uniqueRegularSeasonGames\": 544,\n  \"sourceCount\": 32,\n  \"disagreements\": 4\n}\n"
+      }
+    },
+    {
+      "scope": "matchup",
+      "result": {
+        "chunk_id": "618ff5",
+        "wall_time_seconds": 0.78946486,
+        "exit_code": 0,
+        "original_token_count": 54,
+        "output": "{\n  \"teams\": 32,\n  \"players\": 801,\n  \"playerGameRows\": 8435,\n  \"explicitQuarterbackStartRows\": 856,\n  \"disputedStartingRoleRows\": 19,\n  \"unavailableStartingRoleRows\": 10,\n  \"sources\": 139,\n  \"disagreements\": 23\n}\n"
+      }
+    },
+    {
+      "scope": "reports",
+      "result": {
+        "chunk_id": "769d0e",
+        "wall_time_seconds": 1.001266696,
+        "session_id": 98850,
+        "original_token_count": 0,
+        "output": ""
+      }
+    }
+  ],
+  "reportsCompletion": {
+    "exitCode": 0,
+    "games": 444,
+    "players": 28405,
+    "plays": 80462,
+    "drives": 9504,
+    "quarterChecks": 888
+  }
+}

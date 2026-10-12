@@ -1,0 +1,44 @@
+{
+  "status": "diagnostic-defect-confirmed",
+  "qualification": "Direct unmodified applySnapshot source extracted into a stubbed non-browser VM. Source datasets here are explicitly synthetic test fixtures and never published. Expected latest-mode behavior requires a mode flag to distinguish implicit and pinned selections.",
+  "appJsSha256": "34bac0032d0f47504921111165bd867015c161219de39e51cf5515239e804459",
+  "functionSha256": "8a26d2f4b99f35bc72b78ba45e1367b4495f3c89ef8117a9f97cb2f4cfd3ab51",
+  "results": [
+    {
+      "name": "cold-load",
+      "previousWeek": null,
+      "previousCurrentWeek": 5,
+      "newCurrentWeek": 5,
+      "actualSelectedWeek": "5",
+      "desiredSelectedWeek": "5",
+      "meetsDesiredContract": true
+    },
+    {
+      "name": "implicit-current-week-advances",
+      "previousWeek": "5",
+      "previousCurrentWeek": 5,
+      "newCurrentWeek": 6,
+      "actualSelectedWeek": "5",
+      "desiredSelectedWeek": "6",
+      "meetsDesiredContract": false
+    },
+    {
+      "name": "pinned-old-week-preserved",
+      "previousWeek": "2",
+      "previousCurrentWeek": 5,
+      "newCurrentWeek": 6,
+      "actualSelectedWeek": "2",
+      "desiredSelectedWeek": "2",
+      "meetsDesiredContract": true
+    },
+    {
+      "name": "missing-selection-resets",
+      "previousWeek": "19",
+      "previousCurrentWeek": 5,
+      "newCurrentWeek": 6,
+      "actualSelectedWeek": "6",
+      "desiredSelectedWeek": "6",
+      "meetsDesiredContract": true
+    }
+  ]
+}

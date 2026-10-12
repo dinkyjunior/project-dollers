@@ -818,9 +818,16 @@ def build_snapshot(datasets, metadata, now, requested_season):
         disagreements.append({"issue": "Weekly player statistics lack a corroborating final game score",
                               "gameIds": invalid_stat_games, "action": "Statistics excluded until final game can be verified"})
         stats = [r for r in stats if r["game_id"] in completed_game_ids]
-    unfinished = sorted([g for g in raw_games if not g.get("away_score")], key=lambda g: (g["gameday"], g["gametime"] or "23:59"))
+    unfinished = sorted([g for g in raw_games if g["game_id"] not in completed_game_ids], key=lambda g: (g["gameday"], g["gametime"] or "23:59"))
     upcoming = [g for g in unfinished if kickoff(g) is None or kickoff(g) >= now]
-    current_week = int(upcoming[0]["week"]) if upcoming else max(int(g["week"]) for g in raw_games)
+    # A scheduled kickoff passing is not proof that the game is final. Keep
+    # Current on its week during the same eight-hour source/release window used
+    # by check-source-updates.py. Overdue unresolved old scores must not pin the
+    # app indefinitely; no live or in-progress game status is inferred here.
+    current_candidates = [game for game in unfinished
+                          if ((starts := kickoff(game)) is not None and starts >= now - dt.timedelta(hours=8))
+                          or (starts is None and game.get("gameday", "") >= now.astimezone(ET).date().isoformat())]
+    current_week = int(current_candidates[0]["week"]) if current_candidates else max(int(g["week"]) for g in raw_games)
     through_week = max([int(g["week"]) for g in finished], default=0)
     stats_week = max([int(r["week"]) for r in stats], default=0)
     teams = {}
@@ -881,13 +888,34 @@ def build_snapshot(datasets, metadata, now, requested_season):
     for week in sorted(set(int(g["week"]) for g in raw_games)):
         # The selected current week shows every final score available now;
         # historical/future fixture views retain entering-week record context.
-        through = min(week if week == current_week else week - 1, through_week)
+        coverage_limit = week if week == current_week else week - 1
+        through = min(coverage_limit, through_week)
         records, standings_groups = standings(teams, raw_games, through)
-        leader_week = min(week - 1, stats_week) if stats_week and week > 1 else None
+        # Scores and weekly statistics are published independently. Do not keep
+        # Current a week behind, or hide final scores while player rows release.
+        # A missing statistics week is not labelled as a verified empty week.
+        leader_week = max((int(row["week"]) for row in stats if int(row["week"]) <= coverage_limit), default=None)
+        recap_week = max((int(game["week"]) for game in finished if int(game["week"]) <= coverage_limit), default=None)
         leaders = collect_weekly_leaders(stats, leader_week)
+        recap_games = [game for game in finished if int(game["week"]) == recap_week]
+        leader_game_ids = sorted({row["game_id"] for row in stats if int(row["week"]) == leader_week})
+        scheduled_leader_games = sum(int(game["week"]) == leader_week for game in raw_games)
+        scheduled_recap_games = sum(int(game["week"]) == recap_week for game in raw_games)
+        leader_context = {"status": "verified" if leader_week is not None else "unavailable", "season": requested_season,
+                          "week": leader_week, "sourceIds": ["nflverse_player_stats"],
+                          "retrievedAt": metadata["nflverse_player_stats"]["retrievedAt"], "coverageGameIds": leader_game_ids,
+                          "completedGamesInWeek": len(leader_game_ids), "scheduledGamesInWeek": scheduled_leader_games,
+                          "partialWeek": bool(leader_game_ids) and len(leader_game_ids) < scheduled_leader_games,
+                          "note": "Published weekly player rows corroborated by final game scores; unreleased games and missing values are not substituted."}
+        recap_context = {"status": "verified" if recap_games else "unavailable", "season": requested_season,
+                         "week": recap_week, "sourceIds": ["nflverse_games"], "retrievedAt": metadata["nflverse_games"]["retrievedAt"],
+                         "completedGamesInWeek": len(recap_games), "scheduledGamesInWeek": scheduled_recap_games,
+                         "partialWeek": bool(recap_games) and len(recap_games) < scheduled_recap_games,
+                         "note": "Verified final scores as of source retrieval; a partially completed week does not include unfinished games."}
         fixture_raw = next((g for g in raw_games if int(g["week"]) == week and "PIT" in (g["home_team"], g["away_team"])), None)
-        weeks[str(week)] = {"throughWeek": through, "leadersWeek": leader_week, "recapWeek": leader_week, "conferences": standings_groups, "leaders": leaders,
-                            "recap": [normalize_game(g, standings(teams, raw_games, max(0, int(g["week"]) - 1))[0]) for g in raw_games if int(g["week"]) == leader_week and g.get("away_score")],
+        weeks[str(week)] = {"throughWeek": through, "leadersWeek": leader_week, "recapWeek": recap_week, "conferences": standings_groups, "leaders": leaders,
+                            "leadersContext": leader_context, "recapContext": recap_context,
+                            "recap": [normalize_game(g, standings(teams, raw_games, max(0, int(g["week"]) - 1))[0]) for g in recap_games],
                             "fixture": normalize_game(fixture_raw, records) if fixture_raw else None,
                             "standingsContext": "Latest completed games as of retrieval" if week == current_week else "Entering selected week; future records use latest completed games",
                             "completedGamesInThroughWeek": sum(int(g["week"]) == through for g in finished),
@@ -934,12 +962,16 @@ def build_snapshot(datasets, metadata, now, requested_season):
                         key=lambda g: g["gameday"], reverse=True)[:5] if opponent else []
     historical_games = [normalize_game(g, {}) for g in historical]
     provenance = {
+        "currentWeek": {"status": "derived", "sourceIds": ["nflverse_games"], "season": requested_season,
+                        "note": "Current follows the earliest unfinished scheduled fixture within eight hours after kickoff or a future fixture. This schedule/source-release window does not verify live or in-progress game status. Overdue missing finals are not assumed complete and do not indefinitely pin the prior week; post-season fallback retains the last scheduled regular-season week."},
         "standings": {"status": "derived", "sourceIds": ["nflverse_games", "nflverse_teams"], "season": requested_season, "throughWeek": through_week,
                       "note": "Calculated from final regular-season scores as of retrieval; a week can be partly completed. Sorted by win percentage, point differential, then abbreviation; not official playoff seeding. rank intentionally null."},
-        "weeklyLeaders": {"status": "verified", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week,
+        "weeklyLeaders": {"status": "verified" if stats else "unavailable", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week,
                           "limit": LEADER_LIMIT,
                           "positions": {position: {"yardsField": fields[0], "touchdownsField": fields[1]} for position, fields in LEADER_FIELDS.items()},
-                          "note": "Up to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Previous available week; future selected weeks explicitly retain latest verified leader week."},
+                          "note": "Up to 16 quarterbacks by passing yards, running backs by rushing yards, and wide receivers by receiving yards. Same-position touchdown totals break tied yards, then name. Only verified regular-season rows corroborated by final game scores are included; missing yard/TD cells remain unavailable. Current shows the latest published statistics week; historical research retains entering-week coverage and future weeks retain the latest verified week."},
+        "weeklyRecap": {"status": "verified" if finished else "unavailable", "sourceIds": ["nflverse_games"], "season": requested_season,
+                        "throughWeek": through_week, "note": "Final-score coverage is independent of player-stat publication. Current shows the latest verified results week, including a clearly qualified partially completed week; historical research retains entering-week coverage."},
         "roster": {"status": "verified", "sourceIds": ["nflverse_roster"], "season": requested_season, "week": current_week, "note": "Current retained roster: active, reserve and practice squad; cut players excluded."},
         "playerStats": {"status": "derived" if stats else "unavailable", "sourceIds": ["nflverse_player_stats"], "season": requested_season, "throughWeek": stats_week, "note": "Summed regular-season weekly statistics, gated to corroborated final games. Missing source row or numeric cell is unavailable, not assumed zero; missing required source columns reject refresh. games means games with a statistics row, not confirmed appearances or snaps. NFL passer rating calculated from verified attempts/completions/yards/TD/INT."},
         "teamStats": {"status": "derived" if game_count else "unavailable", "sourceIds": ["nflverse_games", "nflverse_player_stats"], "season": requested_season, "throughWeek": pit_stats_week, "coverageGameIds": sorted(pit_stat_game_ids), "note": "Gross passing yards displayed separately; total yards uses passing minus sack yards plus rushing. Per-game denominators use only completed Steelers games with verified team-stat rows; scores without released statistics are excluded from these totals."},
@@ -1007,6 +1039,34 @@ def validate(data):
     source_ids = {s["id"] for s in data["sources"]}
     source_map = {source["id"]: source for source in data["sources"]}
     assert all(source_id in source_ids for group in data["provenance"].values() for source_id in group["sourceIds"])
+    for week in data["weeks"].values():
+        # These contexts were added after the original snapshot schema. Retain
+        # validation support for saved older snapshots, but reject inconsistent
+        # coverage or regenerated timestamps in every newly produced context.
+        for field, week_field, source_id in (("leadersContext", "leadersWeek", "nflverse_player_stats"),
+                                              ("recapContext", "recapWeek", "nflverse_games")):
+            context = week.get(field)
+            if context is None:
+                continue
+            assert context["season"] == data["season"] and context["week"] == week[week_field], "Weekly coverage context differs from its displayed period"
+            assert context["sourceIds"] == [source_id], "Weekly coverage context has the wrong provider"
+            assert context["retrievedAt"] == source_map[source_id]["retrievedAt"], "Weekly coverage context must retain source retrieval time"
+            assert context["status"] == ("verified" if context["week"] is not None else "unavailable"), "Weekly coverage availability differs from its period"
+        leader_context = week.get("leadersContext")
+        if leader_context is not None:
+            coverage = leader_context["coverageGameIds"]
+            assert len(coverage) == len(set(coverage)), "Leader coverage repeats a game"
+            assert leader_context["completedGamesInWeek"] == len(coverage), "Leader game count differs from published statistics coverage"
+            assert leader_context["scheduledGamesInWeek"] >= len(coverage), "Leader statistics cover more finals than scheduled games"
+            assert leader_context["partialWeek"] == (bool(coverage) and len(coverage) < leader_context["scheduledGamesInWeek"]), "Leader partial-week label differs from statistics coverage"
+        recap_context = week.get("recapContext")
+        if recap_context is not None:
+            recap = week["recap"]
+            assert recap_context["completedGamesInWeek"] == len(recap), "Recap final-game count differs from retained results"
+            assert recap_context["scheduledGamesInWeek"] >= len(recap), "Recap contains more finals than scheduled games"
+            assert recap_context["partialWeek"] == (bool(recap) and len(recap) < recap_context["scheduledGamesInWeek"]), "Recap partial-week label differs from final-game coverage"
+            assert all(game["season"] == data["season"] and game["week"] == week["recapWeek"] and game["status"] == "final"
+                       for game in recap), "Recap contains unfinished or differently scoped results"
     for player in data["roster"]:
         verification = player.get("rosterVerification")
         if not verification:
@@ -1137,7 +1197,7 @@ def main():
                   "rosterVerification": roster_checks,
                   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
                   "refreshCommand": "python3 scripts/refresh-data.py", "validateCommand": "python3 scripts/refresh-data.py --check",
-                  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
+                  "refreshCadence": "Daily full validated fetch at 17:07 UTC (04:07 AEDT / 03:07 AEST the following Sydney day); source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. GitHub schedules are best effort. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
                   "historyRefreshCommand": "python3 scripts/refresh-data.py --refresh-history"}
     atomic_json(HISTORY_PATH, history, compact=True)
     atomic_json(ROOT / "assets/data/current.json", data, compact=True)

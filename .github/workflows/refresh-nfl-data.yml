@@ -2,9 +2,12 @@ name: Refresh verified NFL data
 
 on:
   schedule:
-    # Hourly fallback, with additional 15-minute checks around verified NFL
-    # kickoffs and the provider's daily release windows. Cron can be delayed.
-    - cron: '7 * * * *'
+    # Daily full fetch at 17:07 UTC (04:07 AEDT / 03:07 AEST next day).
+    # The other hourly checks exclude 17 UTC so this never schedules two
+    # refreshes at the same instant. GitHub cron execution can be delayed.
+    - cron: '7 17 * * *'
+    - cron: '7 0-16,18-23 * * *'
+    # Additional checks around verified kickoffs and provider release windows.
     - cron: '22,37,52 * * * *'
   workflow_dispatch:
     inputs:
@@ -82,6 +85,7 @@ jobs:
           python3 qa/matchup-breakdown/source-monitor.test.py
           python3 qa/data.test.py
           python3 qa/source-updates.test.py
+          python3 qa/daily-refresh.test.py
       - name: Publish the validated snapshot
         id: publish
         if: steps.sources.outputs.should_refresh == 'true'

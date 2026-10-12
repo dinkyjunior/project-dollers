@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-12T23:32:55.238445+00:00",
+  "scope": "Independent rerun of isolated daily scheduler and research-source monitoring behavior, no external or production-execution proof.",
+  "results": [
+    {
+      "name": "daily-refresh-independent",
+      "command": [
+        "python3",
+        "qa/daily-refresh.test.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "15f6dc6580ba907260e8900ada5bd0cb38044dfc7c956968f3af599fcf0ebd12",
+      "log": "daily-refresh-independent.log"
+    },
+    {
+      "name": "research-monitor-independent",
+      "command": [
+        "python3",
+        "qa/matchup-breakdown/source-monitor.test.py"
+      ],
+      "exitCode": 0,
+      "logSha256": "1e43b905e11ca028139fe5078016515111aaf7cebf8d6a3e224b7d03b9cb6ac9",
+      "log": "research-monitor-independent.log"
+    }
+  ]
+}

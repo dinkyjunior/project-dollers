@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "appJsSha256": "1a271cba7f50cb55bbbfdef617b809f2b68ba17f470d32429ede6604d1f00799",
+  "qualification": "Unmodified application function bodies exercised in a non-browser VM; direct #nfl route is supported. No new query routing is asserted. Native rendering/navigation checks remain separate.",
+  "cases": 8,
+  "results": [
+    {
+      "name": "Direct #nfl cold load follows the current week, then advances at the next verified week",
+      "status": "pass"
+    },
+    {
+      "name": "A manually selected historical period remains pinned across updates and navigation",
+      "status": "pass"
+    },
+    {
+      "name": "A manually selected future research period stays selected when Current advances",
+      "status": "pass"
+    },
+    {
+      "name": "Selecting Current after historical research restores automatic week tracking",
+      "status": "pass"
+    },
+    {
+      "name": "Missing research selection resets safely to Current and retains non-period controls",
+      "status": "pass"
+    },
+    {
+      "name": "Unknown manual week cannot alter the selected period or mode",
+      "status": "pass"
+    },
+    {
+      "name": "Failed rendering rolls back the snapshot, selected week and follow mode",
+      "status": "pass"
+    },
+    {
+      "name": "A source correction within the same current week preserves Current and other controls",
+      "status": "pass"
+    }
+  ]
+}

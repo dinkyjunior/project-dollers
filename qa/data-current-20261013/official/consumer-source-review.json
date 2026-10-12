@@ -1,0 +1,23 @@
+{
+  "status": "qualified_pass",
+  "reviewedAt": "2026-10-12T23:28:08.203417+00:00",
+  "files": {
+    "assets/app.js": "1a271cba7f50cb55bbbfdef617b809f2b68ba17f470d32429ede6604d1f00799",
+    "assets/nfl-dashboard.js": "9b8de129dda3c6dd8dd03fa360e6230ddf80814bf13259aa9c2d8b584dca81bb",
+    "scripts/refresh-data.py": "8eb2a8988ee51846d568727613daf8f7526b1bc52804c008bf22e944008efe68"
+  },
+  "sourceContractFindings": [
+    "Current standings computed from every source-final regular-season score through current coverage; records independently match all224 fresh primary fields.",
+    "Revised Current weekly leaders select maximum available verified stats week bounded by current coverage; recap selects maximum source-final week separately.",
+    "Explicit null leadersWeek/recapWeek does not fall back to a different period.",
+    "Partial-week contexts retain their actual source retrieval timestamp and scheduled game denominator.",
+    "Current selection follows verified feed transition; noncurrent selections pin research week.",
+    "Source rank remains null; PCT then point differential then abbreviation is a display order, not official NFL playoff tie-breaking."
+  ],
+  "remainingLimitations": [
+    "No native browser run by this reviewer; no geometry or hosted deployment claim.",
+    "Current_week tracks first future unresolved kickoff; during final game of week after kickoff it may advance to next upcoming week before old game goes final. Records still reflect retained actual finals, but label must disclose coverage.",
+    "Sorted order explanation currently accessibility title/label only; user-visible ordering context and all16teams default recommended.",
+    "Independent NFL/ESPN direct standings access blocked by cloud tunnel403; no official seed/order confirmation."
+  ]
+}
