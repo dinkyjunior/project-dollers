@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-12T04:24:47.910833+00:00",
+  "source": "nflverse-games.receipt.json",
+  "checks": [
+    {
+      "dataset": "team-details.json",
+      "sha256": "bd0849fabfe3d867f6096feadb54877982dcc5306a062a623ac374831a33b7bc",
+      "uniqueGames": 544,
+      "finalGames": 345
+    },
+    {
+      "dataset": "matchup-breakdown.json",
+      "sha256": "fa0d3455b169c5780b8aaa899fb22dc4280860ceb34b22dd902b23e32407e115",
+      "uniqueGames": 622,
+      "finalGames": 423
+    }
+  ],
+  "missing": [],
+  "disagreements": [],
+  "status": "passed",
+  "qualification": "Independent fresh public-source crosscheck of all unique completed scheduled/archived game identity, season/week, teams and final scores in existing Team/Matchup books. Source alias normalization for franchise labels only. Does not establish individual stats, starter status, practice participation or physical participation."
+}

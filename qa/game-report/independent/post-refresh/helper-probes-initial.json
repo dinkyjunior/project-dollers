@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-10-12T07:45:05.465764+00:00",
+  "helperSha256": "08fcfa80ac8b1d1298806f26b2f3c8fe859295c604c05160b941b6179981ba16",
+  "cases": [
+    {
+      "case": "metadata-only",
+      "passed": true,
+      "exitCode": 0,
+      "status": "passed",
+      "error": null,
+      "receiptSha256": "edcaf6b2be1af114913fec49974a4d4c3d5cf658ffd4e7525513e6e24105b29f"
+    },
+    {
+      "case": "changed-player-stat",
+      "passed": true,
+      "exitCode": 2,
+      "status": "needs_targeted_data_review",
+      "error": null,
+      "receiptSha256": "15d87fb4fbc89bd8bdad3c05b24c5b251a37cf111a21e9b02609201d5fc3308c"
+    },
+    {
+      "case": "swapped-source-readings",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "Named source/value mapping: 2006_13_TB_PIT/0",
+      "receiptSha256": "8de798fa3cc3639c164b73872dad69ba9e0a0053ff17323e3676f8a39a3287db"
+    },
+    {
+      "case": "removed-retained-archive",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "Previously addressable reports disappeared: ['2006_11_ATL_BAL']",
+      "receiptSha256": "aeff98914b33ce6dded394bb491eab7c24d43238eb2899c4328359a59a991ed7"
+    }
+  ],
+  "passed": true,
+  "productionUnchanged": true,
+  "scope": "Four new outside-repository isolated fixtures; book/detail symlinks read-only except detached individual fake copies; no provider requests, refresh build or browser",
+  "qualification": "The metadata-only timestamp and modified player value are controlled fixtures, not historical-source claims."
+}

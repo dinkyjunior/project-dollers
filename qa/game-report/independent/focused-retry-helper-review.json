@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-12T07:43:43.389523+00:00",
+  "kind": "independent-static-prelaunch-review",
+  "status": "passed",
+  "nativeBrowserUsed": false,
+  "applicationOrHelperEditedByReviewer": false,
+  "reviewedFiles": {
+    "qa/game-report/independent/round2-focused-native.cjs": "dc30c106a8051b180f68d5f23e0bff8492659aea0a198cbb9908878c039100be",
+    "qa/game-report/independent/native-integrity-focused.cjs": "877d3049d23458278276190a4e253eaa921362d66a93f4066bb739f7cb9c747c",
+    "qa/game-report/independent/round2-native.cjs": "7a705efbea1b1e36b7ab85403a245af2d0a4fb1bce628f7bd3d0fd179ac5fb3a",
+    "qa/game-report/independent/native-integrity-audit.cjs": "758fc69b4d43502f2076926374fa13a7194bad028001d04af7c4e737e1c75d05",
+    "qa/game-report/independent/native-visible-motion-audit.cjs": "b7d5d3bad908adda8520e8c17ce53c1322f04f11b2e5452edf4e09875db224a9",
+    "qa/game-report/independent/cross-screen-disagreement-matrix-v4.json": "05d79d7064311309873f1c68d536558aaf15a2d790f93fd9a1ccbfde956d1e95"
+  },
+  "originalConsumedHelperUnchangedSincePriorReview": true,
+  "originalConsumedIntegrityModuleUnchangedSincePriorReview": true,
+  "startupProof": [
+    "Refuses launch until original browserClosed true, sourceStable true, and original status remainsfailed.",
+    "Requires current runtime manifest equal original finalSource before launch; checks manifest unchanged again after focused run.",
+    "Uses fresh output directory; saves executed helper and relevant imported modules with SHA guards."
+  ],
+  "coverageReview": [
+    "Only skipped Report tail, NFL, Steelers, source-integrity and direct route functions execute; copied Home/Team/Matchup functions are unused.",
+    "Report tail checks exact textContent plus visible whitespace-normalized descriptions, all quarters, keyboard/CTAs/reload, normal/reduced/restored/hidden native motion, exact Back/nativeBack, aliases/invalid routes, all linked navigation and historical franchises.",
+    "Actual associated label/labelledby evidence replaces empty native select innerText. No selected-option-only fallback is accepted.",
+    "Image readiness waits on actual viewport and page-scroll clip intersection; pending offscreen lazy rows remain recorded.",
+    "Steelers all tabs/filters/research remain. Integrity independently opens a genuinely closed native roster card, waits for actual raw/effective checked history, then canonical raw hashes and all matrix masks retain strict assertions.",
+    "Native source/value/URL/retrieval pairing, own/opponent unavailable aggregates, Bowers targets and historic kickoff checks remain substantive.",
+    "Every original direct route reload remains. Native errors/HTTP failures/genuine request failures still fail the result."
+  ],
+  "proofOrderingIssueClosed": "capture() now waits visibleImagesReady before genuine paint.capture; image readiness is never assessed only after PNG acquisition. Page-in plus two original animation frames and unpaused screenshots remain.",
+  "originalRunStatusAtReview": "running",
+  "originalBrowserClosedAtReview": false,
+  "qualification": "Prelaunch static review only, no claim of actual focused native success. Owner must wait for closure/transfer and preserve failed original receipt. Composite must attribute completed prefixes and focused results separately for each browser/viewport."
+}

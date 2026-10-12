@@ -1,0 +1,51 @@
+{
+  "scope": "Shipping route logic only; not a substitute for native-browser QA",
+  "checkedAt": "2026-10-12T04:29:57.029Z",
+  "checks": [
+    {
+      "name": "Report keeps exact event and encoded matchup filter context",
+      "passed": true
+    },
+    {
+      "name": "Direct numeric ESPN alias remains exact and unknown tab defaults to Overview",
+      "passed": true
+    },
+    {
+      "name": "External, malformed and unsupported return destinations stay within team research",
+      "passed": true
+    },
+    {
+      "name": "Legacy team-report deep link does not create a Back reopen loop",
+      "passed": true
+    },
+    {
+      "name": "A second report preserves original return context instead of nesting reports",
+      "passed": true
+    },
+    {
+      "name": "Missing game and malformed team never mutate the current route",
+      "passed": true
+    },
+    {
+      "name": "Every implemented report tab and legitimate Home/NFL/Steelers return stays intact",
+      "passed": true
+    },
+    {
+      "name": "Back/forward report dispatch does not add history entries",
+      "passed": true
+    },
+    {
+      "name": "Report aliases dispatch to the report controller and only the matching page is visible",
+      "passed": true
+    },
+    {
+      "name": "A legacy team redirect emits the actual report route without a stale team event",
+      "passed": true
+    },
+    {
+      "name": "Unknown unrelated routes retain the existing safe Home fallback",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

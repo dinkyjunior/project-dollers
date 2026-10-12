@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-10-12T04:56:31.853226+00:00",
+  "status": "passed",
+  "priorValidatorReceiptSha256": "eeac637995a6fce37a1d4c8da8dbe4c912ee1a284178a6049854092e98643c59",
+  "unchangedCoreAndTeamInputs": {
+    "assets/data/current.json": true,
+    "assets/data/team-details.json": true
+  },
+  "retainedCore22AndTeam11Checks": true,
+  "finalMatchupSha256": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186",
+  "finalMatchupBuilderSha256": "fb262674133c359456bb3a8137b91c035e1474e07df4c8a669ed49bdc24b7f7b",
+  "finalMatchupManifestSha256": "2a9079f8066b6aeac71cb818ac451c096d73d4202f78bea2683fc3c837a2c3a2",
+  "newCommands": [
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py --source-manifest /workspace/recovery-qa/game-report-current-matchup-evidence-final/source-manifest.json",
+      "exitCode": 0,
+      "tests": 33,
+      "skipped": 0
+    },
+    {
+      "command": "python3 qa/game-report/independent/audit-report-data.py --output qa/game-report/independent/data-final-frozen-444.json",
+      "exitCode": 0,
+      "assertions": 1165830,
+      "games": 444,
+      "failures": 0,
+      "receiptSha256": "5a831b479cfa9a703611512cff2b3f026a3b08dd3d423697647f3bdc25fb6157"
+    }
+  ],
+  "finalReportIndexSha256": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda",
+  "actualCorrectedHistoricalFields": [
+    {
+      "game": "2024_17_ARI_LA",
+      "field": "kickoffUtc",
+      "status": "disputed",
+      "value": null,
+      "sourceValues": [
+        "2024-12-29T01:15:00Z",
+        "2024-12-29T01:00:00Z"
+      ]
+    },
+    {
+      "game": "2020_14_WAS_SF",
+      "field": "neutralSite",
+      "status": "disputed",
+      "value": null,
+      "sourceValues": [
+        true,
+        false
+      ]
+    }
+  ],
+  "builderReview": "Reviewed secondary QB candidates cite their actual recap source and remain stats-null/unavailable; event-club guard refuses when neither reviewed candidate matches either schedule QB ID. Trimming retains missing-stat diagnostic slots rather than substituting older starts. No participation/start/GP or zero inference introduced.",
+  "qualification": "Earlier immutable receipts retain their original source fingerprints.22core/11rawTeam inputs remained exact;33source-bound Matchup tests and entire444report source joins rerun for genuinely changed current inputs. No tests relaxed or source metadata forged."
+}

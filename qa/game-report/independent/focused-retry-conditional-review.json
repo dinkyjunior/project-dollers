@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-12T07:52:23.713120+00:00",
+  "status": "passed",
+  "kind": "bounded-independent-static-review-of-unexecuted-conditional-focused-helper",
+  "nativeBrowserUsed": false,
+  "filesEditedByReviewer": [
+    "qa/game-report/independent/focused-retry-conditional-review.json"
+  ],
+  "helperSha256": "3743b3a2359ef077acb9efbec4563cd46cad2e023838af202f8a9642d0094e5e",
+  "integrityFocusedSha256": "877d3049d23458278276190a4e253eaa921362d66a93f4066bb739f7cb9c747c",
+  "priorReview": "qa/game-report/independent/focused-retry-helper-review.json",
+  "conditionalCoverage": {
+    "exactOriginalScopeCount": 8,
+    "scopes": [
+      "Independent new Game Report",
+      "Unchanged Home all sports and native NFL entry",
+      "NFL standings controls and Dallas linked entry",
+      "Team controls and every visible previous-game report",
+      "Matchup QB/advanced/player controls and every Form/H2H report",
+      "Steelers full roster filter and player research regression",
+      "Cross-screen verified source conflicts and native unavailable aggregates",
+      "Direct routes and native refresh across existing screens"
+    ],
+    "reuseConditions": [
+      "Exact width and height match an original viewport.",
+      "Original browser/console errors, failed HTTP responses and genuine request failures all zero.",
+      "Each original section must exist with a closed passed/failed verdict.",
+      "Every passed section is explicitly recorded with original immutable receipt SHA and viewport; no execution repeats.",
+      "Every failed section executes its focused function; Home/Team/Matchup failures cannot be silently omitted.",
+      "Failed Game Report prefix reuse additionally requires exactly the same original first-phone whitespace failure message and gameReport original line55 stack location.",
+      "Original section remains failed; completed prefix and focused previously unrun tail are separately qualified."
+    ]
+  },
+  "verifiedPrefixCounts": {
+    "sourceFixture": "2026_04_DAL_HOU",
+    "primaryCategoryRows": 29,
+    "normalizedProfileFields": 568,
+    "assertedInHelper": [
+      29,
+      568
+    ]
+  },
+  "previousProofOrderingCorrectionPreserved": "visibleImagesReady still precedes genuine unpaused paint.capture; original finite entry/two frames retained.",
+  "originalConsumedFilesUnchanged": {
+    "qa/game-report/independent/round2-native.cjs": true,
+    "qa/game-report/independent/native-integrity-audit.cjs": true
+  },
+  "remainingCriticalCoverageOrPrerequisiteBugFound": false,
+  "qualification": "Static prelaunch review, not native success. Original full audit must close and pass source-freeze guards; sole browser ownership transfer remains required. Compose results per viewport and retain the original failed receipt."
+}

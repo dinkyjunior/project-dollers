@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-12T04:52:26.774Z",
+  "reviewer": "report_ui_integrity_review",
+  "scope": "Read-only exact-source Node VM with minimal fake DOM and locally supplied fetch bytes. Independent structural audit of every indexed report and an independently preserved ESPN summary. No browser, actual HTTP, visual, touch, or frame-rate claim.",
+  "sources": {
+    "gameReportJS": {
+      "path": "assets/game-report.js",
+      "sha256": "d47b510bf223f7f900aecd960905c00a628fd4b5dcc1870ba50c89a28bf8d055"
+    },
+    "gameReportCSS": {
+      "path": "assets/game-report.css",
+      "sha256": "0a8f0011c34493ccc4ddcaefa3a6ec067e49cad0ec03f8cdc180ea8f6c2255c1"
+    },
+    "index": {
+      "path": "assets/data/game-reports.json",
+      "sha256": "af6a77d13be6d74b2d0f74dcc40cbfe08be0a5f318e2a6accb3c82d50d9d6b03"
+    }
+  },
+  "fixedFindings": [
+    "Fractional defensive sacks and tackles for loss previously rounded to whole integers; the UI lead corrected playerValue formatting to preserve one decimal.",
+    "Cached A to B to A could finish synchronously before loading=pending, stranding a resolved Promise and preventing refresh; the UI lead inserted a microtask before refresh body execution."
+  ],
+  "checks": [
+    {
+      "case": "cached A to B to A, then forced refresh",
+      "passed": true,
+      "fetchStubCalls": 2,
+      "reportId": "2026_04_DAL_HOU"
+    },
+    {
+      "case": "bytes mismatch rejected",
+      "passed": true,
+      "error": "Report byte count does not match the verified index. Refresh the report snapshot."
+    },
+    {
+      "case": "hash mismatch rejected",
+      "passed": true,
+      "error": "The game report checksum does not match its verified index. The inconsistent report was rejected."
+    },
+    {
+      "case": "identity mismatch rejected",
+      "passed": true,
+      "error": "The report does not match the requested game identity, score or provenance."
+    },
+    {
+      "case": "same-game failure retains preceding verified report",
+      "passed": true,
+      "error": "Retained the preceding report for this game. Independent audit simulated network failure"
+    },
+    {
+      "case": "older index rejected without losing report",
+      "passed": true,
+      "error": "Retained the preceding report for this game. Older report snapshot rejected"
+    },
+    {
+      "case": "delayed A response cannot replace completed route B",
+      "passed": true,
+      "reportId": "2026_01_DAL_NYG"
+    },
+    {
+      "case": "unavailable new game does not retain another game",
+      "passed": true,
+      "error": "Independent audit simulated unavailable different game"
+    },
+    {
+      "case": "null, zero and fractional defensive counts stay distinct",
+      "passed": true,
+      "actual": {
+        "null": "—",
+        "zero": "0",
+        "halfSack": "0.5",
+        "halfTFL": "0.5"
+      }
+    }
+  ],
+  "structural": {
+    "indexedReports": 444,
+    "playerRows": 28405,
+    "teamViews": 888,
+    "knownQuarterSumsChecked": 888,
+    "fractionalSackRows": 466,
+    "fractionalTacklesForLossRows": 51,
+    "unavailableReceivingTargets": 7,
+    "errors": [],
+    "boxCategoryRows": {
+      "passing": 1063,
+      "rushing": 3653,
+      "receiving": 7080,
+      "kickReturns": 1296,
+      "defensive": 18231,
+      "fumbles": 1449,
+      "puntReturns": 740,
+      "kicking": 879,
+      "punting": 869,
+      "interceptions": 604
+    },
+    "logoTeams": 32,
+    "canonicalLALogo": "assets/logos/lar.webp"
+  },
+  "currentGame": {
+    "gameId": "2026_04_DAL_HOU",
+    "quarters": {
+      "HOU": [
+        10,
+        6,
+        7,
+        7
+      ],
+      "DAL": [
+        3,
+        3,
+        14,
+        14
+      ]
+    },
+    "stats": {
+      "DAL": {
+        "totalOffense": 399,
+        "netPassing": 324,
+        "rushing": 75,
+        "turnovers": 0,
+        "thirdDownMade": 5,
+        "thirdDownAttempts": 14,
+        "fourthDownMade": 1,
+        "fourthDownAttempts": 1,
+        "redZoneTD": 4,
+        "redZoneAttempts": 4,
+        "possession": "33:27",
+        "penalties": 6,
+        "penaltyYards": 47,
+        "firstDowns": 28,
+        "plays": 73,
+        "rushingAttempts": 25,
+        "sacks": 3,
+        "sackYardsLost": 11,
+        "completions": 32,
+        "passingAttempts": 45,
+        "yardsPerPlay": 5.5,
+        "yardsPerPass": 6.8,
+        "yardsPerRush": 3
+      },
+      "HOU": {
+        "totalOffense": 397,
+        "netPassing": 335,
+        "rushing": 62,
+        "turnovers": 0,
+        "thirdDownMade": 3,
+        "thirdDownAttempts": 10,
+        "fourthDownMade": 0,
+        "fourthDownAttempts": 0,
+        "redZoneTD": 2,
+        "redZoneAttempts": 2,
+        "possession": "26:33",
+        "penalties": 13,
+        "penaltyYards": 90,
+        "firstDowns": 16,
+        "plays": 52,
+        "rushingAttempts": 19,
+        "sacks": 2,
+        "sackYardsLost": 12,
+        "completions": 21,
+        "passingAttempts": 31,
+        "yardsPerPlay": 7.6,
+        "yardsPerPass": 10.2,
+        "yardsPerRush": 3.3
+      }
+    },
+    "snapshotStrongText": [
+      "<strong>14–7</strong>",
+      "<strong>+13</strong>",
+      "<strong>+11</strong>"
+    ],
+    "cumulativeValues": [
+      "<b>3</b>",
+      "<b>10</b>",
+      "<b>6</b>",
+      "<b>16</b>",
+      "<b>20</b>",
+      "<b>23</b>",
+      "<b>34</b>",
+      "<b>30</b>"
+    ],
+    "performanceSelections": [
+      {
+        "team": "DAL",
+        "kind": "passing",
+        "rows": 1,
+        "leader": "Dak Prescott",
+        "leaderYards": 335
+      },
+      {
+        "team": "DAL",
+        "kind": "rushing",
+        "rows": 4,
+        "leader": "Javonte Williams",
+        "leaderYards": 62
+      },
+      {
+        "team": "DAL",
+        "kind": "receiving",
+        "rows": 9,
+        "leader": "CeeDee Lamb",
+        "leaderYards": 189
+      },
+      {
+        "team": "HOU",
+        "kind": "passing",
+        "rows": 1,
+        "leader": "C.J. Stroud",
+        "leaderYards": 347
+      },
+      {
+        "team": "HOU",
+        "kind": "rushing",
+        "rows": 4,
+        "leader": "David Montgomery",
+        "leaderYards": 24
+      },
+      {
+        "team": "HOU",
+        "kind": "receiving",
+        "rows": 10,
+        "leader": "Nico Collins",
+        "leaderYards": 118
+      }
+    ],
+    "fullBoxHeadings": [
+      "<h4>PASSING</h4>",
+      "<h4>RUSHING</h4>",
+      "<h4>RECEIVING</h4>",
+      "<h4>DEFENSIVE</h4>",
+      "<h4>KICKING</h4>",
+      "<h4>PUNTING</h4>",
+      "<h4>KICK RETURNS</h4>",
+      "<h4>PUNT RETURNS</h4>",
+      "<h4>PASSING</h4>",
+      "<h4>RUSHING</h4>",
+      "<h4>RECEIVING</h4>",
+      "<h4>DEFENSIVE</h4>",
+      "<h4>KICKING</h4>",
+      "<h4>PUNTING</h4>",
+      "<h4>KICK RETURNS</h4>",
+      "<h4>PUNT RETURNS</h4>"
+    ]
+  },
+  "independentRawSource": {
+    "path": "/workspace/recovery-qa/game-report-source-cache/espn-summary-401872967.json",
+    "sha256": "9f69baa76a290b6f3ad279d912d8c421a2adbef750586de61bf62c7f1bf9093c",
+    "bytes": 607388,
+    "sourceMatches": true,
+    "categoryRows": 79,
+    "statCells": 504,
+    "mismatches": []
+  },
+  "passed": true
+}

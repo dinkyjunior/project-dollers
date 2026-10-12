@@ -3,7 +3,7 @@
   const pages = [...document.querySelectorAll('.page')];
   const state = { week: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
   let data = null, assets = { players: {}, logos: {} };
-  let playerHistory = null, historyPromise = null, historyError = null, historyHash = null, updater = null, updateStatus = {};
+  let playerHistory = null, rawPlayerHistory = null, historyPromise = null, historyError = null, historyHash = null, lastHistoryCheck = 0, updater = null, updateStatus = {};
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#${name}"></use></svg>`;
@@ -47,9 +47,11 @@
   function openPage(id, writeHash = true) {
     const teamRoute = /^team\//i.test(id);
     const matchupRoute = /^matchup\//i.test(id);
+    const reportRoute = /^game-report(?:\?|\/|$)/i.test(id);
     const requestedRoute = id;
     if (teamRoute) id = 'team-details';
     if (matchupRoute) id = 'matchup-breakdown';
+    if (reportRoute) id = 'game-report';
     if (!pages.some(page => page.dataset.page === id)) id = 'home';
     const changed = document.querySelector('.page.active')?.dataset.page !== id;
     pages.forEach(page => {
@@ -61,10 +63,31 @@
       if (button.dataset.nav === (id === 'steelers' ? 'nfl' : id)) button.setAttribute('aria-current', 'page');
       else button.removeAttribute('aria-current');
     });
-    if (writeHash && location.hash !== `#${teamRoute || matchupRoute ? requestedRoute : id}`) history.pushState(null, '', `#${teamRoute || matchupRoute ? requestedRoute : id}`);
+    if (writeHash && location.hash !== `#${teamRoute || matchupRoute || reportRoute ? requestedRoute : id}`) history.pushState(null, '', `#${teamRoute || matchupRoute || reportRoute ? requestedRoute : id}`);
     if (teamRoute) window.PDTeamDetails?.route(requestedRoute);
     if (matchupRoute) window.MatchupBreakdown?.route(requestedRoute);
-    document.dispatchEvent(new CustomEvent('pd:route-change', {detail:{page:id}}));
+    if (reportRoute) window.PDGameReport?.route(requestedRoute);
+    // A controller can redirect a legacy deep link to its dedicated screen.
+    // Do not emit the superseded outer route after that redirect completes.
+    if (document.querySelector('.page.active')?.dataset.page === id) document.dispatchEvent(new CustomEvent('pd:route-change', {detail:{page:id}}));
+  }
+  function openGameReport(abbr, gameId, tab = 'overview', returnRoute = location.hash.slice(1)) {
+    const team = String(abbr || '').trim().toUpperCase(), game = String(gameId || '').trim();
+    if (!/^[A-Z]{2,3}$/.test(team) || !game) return false;
+    const params = new URLSearchParams({team,game,tab:['overview','box','drives','plays'].includes(tab) ? tab : 'overview'});
+    let origin = String(returnRoute || '').replace(/^#/, '');
+    if (/^game-report(?:\?|\/|$)/i.test(origin)) origin = new URLSearchParams(origin.split('?')[1] || '').get('return') || `team/${team}`;
+    if (/^team\/[A-Z]{2,3}(?:\?|$)/i.test(origin)) {
+      const [path,query] = origin.split('?'), source = new URLSearchParams(query || '');
+      // A legacy report deep link must return to its team, rather than reopen
+      // the same report whenever Back is selected.
+      if (source.get('view') === 'report') { source.delete('view'); source.delete('game'); }
+      origin = `${path}${source.size ? `?${source}` : ''}`;
+    }
+    if (!/^(?:(?:team|matchup)\/[A-Z]{2,3}(?:\?|$)|(?:home|nfl|steelers)$)/i.test(origin)) origin = `team/${team}`;
+    params.set('return',origin);
+    openPage(`game-report?${params}`);
+    return true;
   }
   function selectTab(type, value) {
     document.querySelectorAll(`[data-${type}-tab]`).forEach(tab => {
@@ -102,7 +125,10 @@
     const ownScore = home ? game.home_score : game.away_score, opponentScore = home ? game.away_score : game.home_score;
     const details = game.status === 'final' ? `<strong>${number(ownScore)} <span class="versus">–</span> ${number(opponentScore)}</strong><span>FINAL · ${esc(date(game))}</span>` : `<strong>${esc(date(game))}</strong><span>${esc(time(game))}</span>`;
     const tag = link ? 'button' : 'div';
-    return `<${tag} class="game-card" ${link ? 'data-open="steelers" data-matchup-entry aria-label="Explore Steelers matchup research"' : ''}><span class="game-team"><img src="${esc(logo('pit'))}" alt="Pittsburgh Steelers" width="500" height="500" decoding="async"><strong>Steelers</strong><small>${esc(ownRecord || '—')} · ${home ? 'HOME' : 'AWAY'}</small></span><span class="game-center"><span class="fixture-week">WK ${game.week} · ${game.season} · ${status}</span>${details}<small>${esc(game.venue || 'Venue unavailable')}</small></span><span class="game-team"><img src="${esc(logo(opponent))}" alt="${esc(teamName(opponent))}" width="500" height="500" decoding="async"><strong>${esc(teamName(opponent))}</strong><small>${esc(opponentRecord || '—')} · ${home ? 'AWAY' : 'HOME'}</small></span></${tag}>`;
+    const gameId = game.id || game.game_id;
+    const report = game.status === 'final' && available(ownScore) && available(opponentScore) && gameId;
+    const action = report ? `data-game-report="${esc(gameId)}" data-report-team="PIT" aria-label="Open Pittsburgh Steelers vs ${esc(teamName(opponent))} game report"` : 'data-open="steelers" data-matchup-entry aria-label="Explore Steelers matchup research"';
+    return `<${tag} class="game-card" ${link ? action : ''}><span class="game-team"><img src="${esc(logo('pit'))}" alt="Pittsburgh Steelers" width="500" height="500" decoding="async"><strong>Steelers</strong><small>${esc(ownRecord || '—')} · ${home ? 'HOME' : 'AWAY'}</small></span><span class="game-center"><span class="fixture-week">WK ${game.week} · ${game.season} · ${status}</span>${details}<small>${esc(game.venue || 'Venue unavailable')}</small></span><span class="game-team"><img src="${esc(logo(opponent))}" alt="${esc(teamName(opponent))}" width="500" height="500" decoding="async"><strong>${esc(teamName(opponent))}</strong><small>${esc(opponentRecord || '—')} · ${home ? 'AWAY' : 'HOME'}</small></span></${tag}>`;
   }
   function recap(snapshot) {
     const games = snapshot.recap || [];
@@ -143,7 +169,7 @@
     return window.PDPlayerResearch.render(player, {data,state,history:playerHistory,error:historyError,loading:!!historyPromise,logo,teamName,metric,sourceNote,rosterVerificationNote:rosterVerificationNote(player)});
   }
   function preserveScroll(render) {
-    const positions = [...document.querySelectorAll('.page-scroll')].map(node => [node,node.scrollTop]);
+    const positions = [...document.querySelectorAll('.page-scroll,#sources-dialog')].map(node => [node,node.scrollTop]);
     const focused = document.activeElement;
     const card = focused?.closest?.('[data-player-id]');
     let selector = null;
@@ -166,7 +192,10 @@
   async function loadHistory(force = false) {
     if (historyPromise) return historyPromise;
     const summary = data?.playerHistory;
-    if (!force && playerHistory && historyHash === summary?.sha256) return playerHistory;
+    if (!force && playerHistory && historyHash === summary?.sha256 && Date.now()-lastHistoryCheck < 60000) return playerHistory;
+    const previousError = historyError;
+    let changed = false;
+    lastHistoryCheck = Date.now();
     historyError = null;
     const snapshot = data;
     const controller = new AbortController();
@@ -185,20 +214,24 @@
         const bundle = JSON.parse(new TextDecoder().decode(bytes));
         if (bundle.schemaVersion !== 1 || bundle.season !== snapshot.season || !bundle.players || !Array.isArray(bundle.sources)) throw new Error('History schema invalid');
         if (Object.entries(summary.currentSourceHashes || {}).some(([id,hash]) => bundle.currentSourceHashes?.[id] !== hash)) throw new Error('History source versions do not match');
+        if (!window.PDSourceIntegrity) throw new Error('History source integrity verification is unavailable');
+        const effective = await window.PDSourceIntegrity.apply('player-history',bundle,bytes,{signal:controller.signal});
         if (data.playerHistory?.sha256 !== summary.sha256) return null;
-        playerHistory = bundle; historyHash = summary.sha256; window.PD_HISTORY = bundle;
-        return bundle;
+        changed = !window.PDSourceIntegrity.sameSnapshot(playerHistory,effective);
+        if (changed) playerHistory = effective;
+        rawPlayerHistory = bundle; historyHash = summary.sha256; window.PD_HISTORY = playerHistory; window.PD_HISTORY_RAW = rawPlayerHistory;
+        return playerHistory;
       } catch (error) {
         if (data.playerHistory?.sha256 === summary?.sha256) historyError = error.message;
         return null;
       } finally {
         clearTimeout(timeout);
         historyPromise = null;
-        preserveScroll(() => { renderRoster(); renderSources(); });
+        if (changed || !playerHistory || historyError !== previousError) preserveScroll(() => { renderRoster(); renderSources(); });
         if (data.playerHistory?.sha256 !== summary?.sha256 && state.openPlayer) queueMicrotask(() => loadHistory());
       }
     })();
-    preserveScroll(renderRoster);
+    if (!playerHistory) preserveScroll(renderRoster);
     return historyPromise;
   }
   function changeWeek(week) {
@@ -246,7 +279,9 @@
       const home = game.home_team === 'PIT', opponent = home ? game.away_team : game.home_team;
       const own = home ? game.home_score : game.away_score, other = home ? game.away_score : game.home_score;
       const result = game.status === 'final' ? `${own > other ? 'W' : own === other ? 'T' : 'L'} ${own}–${other}` : time(game);
-      return `<div class="schedule-row"><span class="schedule-week">WK ${game.week}</span><img src="${esc(logo(opponent))}" alt="${esc(teamName(opponent))}" width="500" height="500" loading="lazy" decoding="async"><div><strong>${home ? 'vs' : '@'} ${esc(teamName(opponent))}</strong><span>${esc(date(game))}</span></div><div class="schedule-result"><b>${esc(result)}</b><small>${esc(game.status === 'final' ? 'FINAL' : game.venue || 'Venue unavailable')}</small></div></div>`;
+      const gameId = game.id || game.game_id, report = game.status === 'final' && available(own) && available(other) && gameId;
+      const score = `<b>${esc(result)}</b><small>${esc(game.status === 'final' ? 'FINAL' : game.venue || 'Venue unavailable')}</small>`;
+      return `<div class="schedule-row"><span class="schedule-week">WK ${game.week}</span><img src="${esc(logo(opponent))}" alt="${esc(teamName(opponent))}" width="500" height="500" loading="lazy" decoding="async"><div><strong>${home ? 'vs' : '@'} ${esc(teamName(opponent))}</strong><span>${esc(date(game))}</span></div><div class="schedule-result">${report ? `<button class="schedule-report" data-game-report="${esc(gameId)}" data-report-team="PIT" aria-label="Open Steelers ${home ? 'vs' : 'at'} ${esc(teamName(opponent))} game report, Week ${esc(game.week)}">${score}</button>` : score}</div></div>`;
     }).join('') + sourceNote('schedule',`${data.season} regular season · local kickoff time`);
   }
   function renderTeamStats() {
@@ -276,8 +311,10 @@
   function renderSources() {
     const provenance = Object.entries(data.provenance || {});
     const sources = [...(data.sources || []),...(playerHistory?.sources || []).filter(source=>!data.sources.some(existing=>existing.id === source.id))];
+    const historyIssues = (playerHistory?.disagreements || []).filter(issue => issue.fromIntegrityCatalog);
+    const historyIntegrity = `${historyError ? `<p class="history-status">History verification failed: ${esc(historyError)}${playerHistory ? ' Previous checked history retains its original source times.' : ' Unchecked history is unavailable.'}</p>` : ''}${historyIssues.length ? `<section class="roster-source-differences"><h3>Historical provider differences</h3>${historyIssues.map(issue => window.PDSourceIntegrity.describeIssue(issue,esc,timestamp)).join('')}</section>` : ''}`;
     const labels = { standings:'Conference records',weeklyLeaders:'Weekly leaders',roster:'Current roster',playerStats:'Player statistics',teamStats:'Team statistics',schedule:'Schedule & results',depthChart:'Depth chart',injuries:'Injury & practice reports',opponentAllowances:'Opponent positional allowance',historicalMatchups:'Previous meetings',weatherForecast:'Weather forecast',historicalPrices:'Archival lines (provider/time unavailable)' };
-    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : entry.note || '')}</p></div>`).join('')}</div>${data.roster.some(player => rosterEvidence(player)?.status === 'disputed') ? `<section class="roster-source-differences"><h3>Roster source differences</h3><p>Confirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.</p>${data.roster.filter(player => rosterEvidence(player)?.status === 'disputed').map(player => `<h4>${esc(player.name)}</h4>${rosterVerificationNote(player)}`).join('')}</section>` : ''}<p>Missing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : entry.note || '')}</p></div>`).join('')}</div>${data.roster.some(player => rosterEvidence(player)?.status === 'disputed') ? `<section class="roster-source-differences"><h3>Roster source differences</h3><p>Confirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.</p>${data.roster.filter(player => rosterEvidence(player)?.status === 'disputed').map(player => `<h4>${esc(player.name)}</h4>${rosterVerificationNote(player)}`).join('')}</section>` : ''}${historyIntegrity}<p>Missing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   function freshness() {
     if (!data) return;
@@ -332,8 +369,18 @@
       checkOnStart:false
     });
   }
+  const activeHistory = () => !!state.openPlayer && !document.hidden && document.querySelector('[data-page="steelers"]')?.classList.contains('active');
+  document.addEventListener('pd:update-status',event => {if (activeHistory() && ['updated','unchanged'].includes(event.detail?.state)) loadHistory(event.detail?.reason === 'manual');});
+  document.addEventListener('visibilitychange',() => {if(activeHistory())loadHistory();});
+  window.addEventListener('focus',() => {if(activeHistory())loadHistory();});
+  window.addEventListener('online',() => {if(activeHistory())loadHistory(true);});
+  setInterval(() => {if(activeHistory())loadHistory();},90000);
   document.addEventListener('click', event => {
     const button = event.target.closest('button'); if (!button) return;
+    if (button.dataset.gameReport) {
+      openGameReport(button.dataset.reportTeam || 'PIT',button.dataset.gameReport,button.dataset.reportTab);
+      return;
+    }
     if (button.dataset.open) {
       openPage(button.dataset.open);
       if (button.hasAttribute('data-matchup-entry')) selectTab('team','matchups');
@@ -403,7 +450,8 @@
   }
   window.PDApp = {
     openPage,
-    getContext: () => ({data,state,assets,esc,number,logo,teamName,date,time,timestamp}),
+    openGameReport,
+    getContext: () => ({data,state,assets,esc,number,logo,teamName,date,time,timestamp,history:playerHistory,rawHistory:rawPlayerHistory}),
     openLadder: (abbr, direct = false) => {
       if (direct && data) {
         state.conference = data.teams.find(team => team.abbr === abbr)?.conference || 'NFC';

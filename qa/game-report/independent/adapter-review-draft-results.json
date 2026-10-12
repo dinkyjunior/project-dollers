@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-10-12T05:52:56.792Z",
+  "kind": "independent-node-vm-model-tests",
+  "nativeBrowser": false,
+  "helperSha256": "cad9a00eb6abf5d981cd17951fe24da71cd1b2325939222f1039e2e0c3de774d",
+  "adapterPath": "/tmp/pd-source-integrity.js",
+  "adapterSha256": "f3fe5a4e9eb8ac90e13ce0d69605b4decfb6f403984a7b4c4037841db946a865",
+  "catalogPath": "/workspace/project-dollers/qa/game-report/independent/adapter-review-catalog-draft.json",
+  "catalogSha256": "a4682b519c4977a020ef679705f24f2edc41ff61b48c4f332e021fdeb1e64ea0",
+  "draftCatalog": true,
+  "sourceHashes": {
+    "assets/data/team-details.json": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "assets/data/matchup-breakdown.json": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186",
+    "assets/data/player-history.json": "343e7e28642765390c5f3d9aee7515fc182ef8906fb8555b229a82e925563930",
+    "assets/data/game-reports.json": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda"
+  },
+  "checks": [],
+  "failures": [
+    {
+      "name": "runner",
+      "error": "Error: Source event disagreement field is unsupported\n    at validate (/tmp/pd-source-integrity.js:21:93)\n    at /tmp/pd-source-integrity.js:40:25\n    at async Promise.all (index 0)\n    at async Object.apply (/tmp/pd-source-integrity.js:86:29)\n    at async run (/workspace/project-dollers/qa/game-report/independent/adapter-review-tests.cjs:80:23)"
+    }
+  ],
+  "fetchLog": [
+    "assets/data/game-reports.json"
+  ],
+  "status": "failed",
+  "qualification": "Actual frozen books and compact index; transport failures are isolated VM test cases. No native-browser, network-performance or visual claims."
+}

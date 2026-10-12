@@ -1,0 +1,19 @@
+# Historical Game Report QA
+
+Open [the desktop-compatible gallery](index.html) to inspect actual 393 × 852 and 430 × 896 native browser originals. The gallery creates only the selected one or two screenshot elements, displays their original aspect ratios and links each full Retina PNG. It does not stitch, unroll, crop, sharpen or upscale evidence.
+
+The visual authority is the user's latest Game Report attachment in this chat. Its original binary was unavailable locally. [The reference note](../../reference/GAME_REPORT_CHAT_SOURCE.md) records that limitation and distinguishes illustrative design data from verified event values. No generated artwork or website screenshot is represented as that approved source.
+
+The accepted V3 prototype reduced native content height from 1347 to 1165 px at 393 and 1331 to 1162 px at 430. Final report panel geometry preserves that checkpoint. [The scoped material closure](reviews/assets-reference-current-report-closure.json) binds the actual images, source hashes, protected Home inputs and 24 original backups. The [pose review](reviews/assets-reference-final-pose-v3.json) verifies correct inward-facing decorative empty shells and separate unmirrored official vector marks for either selected team.
+
+[Round 1 composite acceptance](final-round1-acceptance.json) retains the original full-site Chromium receipt's failed slash-format assertion. Every other full-site stage passed; the stronger native provenance retry passed at all three sizes on exactly the same frozen 731-body source, checking actual reading/value/provider/URL/retrieval associations. No failed receipt was renamed or rewritten to claim success.
+
+The subsequent Matchup correction displays a historical fixture's actual season and date year and clearly separates it from the latest research snapshot. [Its source bridge](final-round1-historical-context-bridge-acceptance.json) is separate from the earlier captured source. The Game Report code, layout, data and artwork remain protected through that change.
+
+**Independent QA2 accepted.** [The second composite](independent/final-round2-acceptance.json) records 1,322 genuine native inputs and all eight whole-site scopes at both phone sizes and desktop. The original and focused failed helper receipts remain unchanged; passing focused and NFL-only checks complete their actual missing coverage on the same 731 runtime bodies. All browsers closed. **Actual hosted verification is pending** and will be recorded after deployment and the automatic refresh run.
+
+The primary data evidence is the [final report and dependent-field audit](independent/data-final-integrity-dependent-444.json): 444 reports and 1,165,830 assertions. The [109-entry catalog/raw-reading audit](independent/catalog-raw-readings-final.json) records 2,543 independent assertions against checksum-bound raw provider responses. The [integrated integrity adapter](independent/adapter-review-integrated-final-results.json) passed 93 model checks, and the [final generator hardening](reviews/refresh-reliability/hardening-v6/acceptance.json) passed 79 isolated checks. These model/isolated checks are distinct from the native browser evidence. [Reverse disagreement coverage](independent/reverse-disagreement-closure.json) and the [validator receipt](independent/final-validator-receipt.json) are also preserved. Unknown or conflicting fields remain unavailable instead of receiving sample numbers.
+
+The [earlier frozen data audit](independent/data-final-frozen-444.json) remains an archive from before the final reverse-conflict and dependent-field corrections; it is not the primary final-data certificate.
+
+All original receipts, failed diagnostics and earlier prototypes remain intact. Decorative empty equipment and stadium imagery are distinct from official product, venue or player photographs. No player faces were generated. These checks are not physical iPhone or measured FPS certification.

@@ -1,0 +1,21 @@
+{
+  "status": "accepted_for_full_native_qa",
+  "checkedAt": "2026-10-12T05:11:09.975241+00:00",
+  "reviewer": "game_report_ui",
+  "priorVisualAcceptance": {
+    "path": "qa/game-report/reviews/ui-owner-v3.json",
+    "sha256": "3a2ed4d4e191756cb5899b0d9c69fa918b85d86856d6aced5103577c403ae300"
+  },
+  "source": {
+    "assets/game-report.js": "2eb2953175bc4de333c978bd86f04b4d8c71d40ebf8494a069fa8a5e27e250e2",
+    "assets/game-report.css": "0f133f55845938ba89acd4eb4d02e832a2e09a38df2ef67ce3b28a00498cb897"
+  },
+  "postPreviewChange": "Display-only providerTeamAbbreviations for exact-game text: historical STL/OAK now appear in quarter/cumulative/profile/source/play/drive/snapshot labels. Canonical route IDs, stat lookups and data attributes remain LA/LV. No art, layout, score or stat field changed. Dallas/Houston display strings are unchanged.",
+  "vmRegression": {
+    "path": "qa/game-report/reviews/report-ui-integrity.json",
+    "sha256": "835c8cb547bfc1bcdf6cc235744646e71969c4a8083b78c91b81200e06da0eac",
+    "checks": 9,
+    "status": "passed"
+  },
+  "nativeQARequired": "Root and browser owners must run full whole-site native QA1 and independent QA2 on this final JS before publication. Prior preview PNGs remain unmodified and bound to their own earlier source."
+}

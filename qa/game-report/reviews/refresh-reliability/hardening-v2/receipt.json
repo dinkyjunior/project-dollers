@@ -1,0 +1,204 @@
+{
+  "createdAt": "2026-10-12T05:13:13Z",
+  "sourceSha256": "717033b4b66a23b7c383e9bc0162a7da0c39954471f4d95669fa68e66de38e3d",
+  "helperSha256": "ac28a04ce238f5ba0ff8fc1ab0ee6b97817650656c2b1ad8881e036fd7fb54f0",
+  "frozenIndexSha256": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda",
+  "cases": [
+    {
+      "case": "provider-null-header",
+      "passed": true,
+      "status": "disputed"
+    },
+    {
+      "case": "provider-null-boxscore",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-gameInfo",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-scoringPlays",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-header-competitions",
+      "passed": true,
+      "status": "disputed"
+    },
+    {
+      "case": "provider-null-boxscore-teams",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-boxscore-players",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives-previous",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives-current",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-boxscore",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-drives",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-gameInfo",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-scoringPlays",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "null-number-not-zero",
+      "passed": true
+    },
+    {
+      "case": "real-zero-preserved",
+      "passed": true
+    },
+    {
+      "case": "strict-ssl-cert-and-hostname",
+      "passed": true
+    },
+    {
+      "case": "temporary-outage-retains-verified-report",
+      "passed": true
+    },
+    {
+      "case": "stale-dependency-rejected",
+      "passed": true
+    },
+    {
+      "case": "index-only-rebind-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "index-only-score-mismatch-rejected-before-write",
+      "passed": true
+    },
+    {
+      "case": "archival-reuse-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "input-drift-guard",
+      "passed": true,
+      "error": "Team-detail source changed during report construction; retry against stable inputs",
+      "detailFileChangedBeforeGuard": false,
+      "indexFileRetained": true
+    },
+    {
+      "case": "invalid-scoring-rejected",
+      "passed": true,
+      "error": "('2026_04_DAL_HOU', 'scoring final score')",
+      "detailFileChangedBeforeValidation": false,
+      "indexFileChangedBeforeValidation": false
+    },
+    {
+      "case": "malformed-matching-cache-graceful",
+      "passed": true
+    },
+    {
+      "case": "boxscore-absent-provenance-unavailable",
+      "passed": true
+    },
+    {
+      "case": "boxscore-null-provenance-unavailable",
+      "passed": true
+    },
+    {
+      "case": "cache-valid-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-tls-false-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-http-206-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-byte-count-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-url-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-hash-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-naive-timestamp-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-invalid-timestamp-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-status-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-header-rejected",
+      "passed": true
+    },
+    {
+      "case": "cache-invalid-json-type-rejected",
+      "passed": true
+    },
+    {
+      "case": "cache-malformed-json-rejected",
+      "passed": true
+    },
+    {
+      "case": "installation-old-detail-rename-rollback",
+      "passed": true
+    },
+    {
+      "case": "installation-new-detail-install-rollback",
+      "passed": true
+    },
+    {
+      "case": "installation-new-index-install-rollback",
+      "passed": true
+    },
+    {
+      "case": "production-protected-inputs-unchanged",
+      "passed": true
+    }
+  ],
+  "totalCases": 43,
+  "failures": [],
+  "productionInputsUnchanged": true,
+  "reviewScope": "Read-only source review and isolated temporary fixtures only. No browser or provider requests."
+}

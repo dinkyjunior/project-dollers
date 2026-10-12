@@ -1,0 +1,38 @@
+{
+  "reviewedAt": "2026-10-12T04:46:47.939035+00:00",
+  "status": "refinement-requested",
+  "approvedReference": "Current user Game Report chat attachment (779\u00d72020 displayed pixels); no exact attachment binary available to this audit",
+  "registeredPixelIdentity": false,
+  "actualNativeOriginals": {
+    "preview-393-top.png": "b9d1545cee814ca54718030d796f7048ca503e630275d0c62df914168bf3a336",
+    "preview-430-hero.png": "207180dbe408d55298a6b01d332991d5d098f89d5c188f61990c414b85ad0967",
+    "preview-393-players.png": "be7334db87c7bbbfb87e39e2155262afed8a4bfdc3395045165cab9280f53cc0",
+    "preview-430-bottom.png": "749410eb74153e7a1ec2520069fdfaeed725e8b359c576a3f4d8a3043979aa21",
+    "preview-430-top.png": "a8beec97e96f042c30b047f01c3893a70fbaa00d1944ad74a364dfbaca4d0410",
+    "preview-393-bottom.png": "345dd03b7960bdb4cee611f76158e13133592824f096a5ab9500ec83ec8411fc"
+  },
+  "findings": [
+    {
+      "severity": "visual",
+      "issue": "At430 brand artwork intrinsic height plus subtitle exceeds fixed83px header, clipping subtitle;393fits",
+      "owner": "game_report_ui"
+    },
+    {
+      "severity": "visual",
+      "issue": "Phone page content1347/1331CSSpx is materially taller than reference (~1019CSSpx at393); hero270CSSpx vs reference197 strongest density gap",
+      "owner": "game_report_ui",
+      "qualification": "Approximate qualitative source geometry, not registered pixel coordinates"
+    },
+    {
+      "severity": "visual",
+      "issue": "393Sources small copy wraps to4\u20135lines besidebutton; improve balanced two-card layout",
+      "owner": "game_report_ui"
+    }
+  ],
+  "acceptedObservations": [
+    "Main data hierarchy, team/quarter/comparison/cumulative/stat category sections match intended structure",
+    "Crisp bundled artwork and legible typed tables; real values differ intentionally from example",
+    "DAL34\u2013HOU30 final is corroborated; real quarters3/3/14/14 and10/6/7/7, net/rush totals sourcecorrect"
+  ],
+  "qualification": "Six representative untouched originals cover top/hero/player/bottom regions at both phones. This is a preliminary challenge review; final native double-QA and corrected screenshots still required."
+}

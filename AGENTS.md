@@ -4,12 +4,9 @@
 Build and refine Project Dollar$ as a premium mobile-first sports data and research interface.
 
 ## HARD SCOPE GATE
-Only Pages 1–3 are in scope until the user explicitly approves them:
-1. Home / sport selection
-2. NFL dashboard
-3. Pittsburgh Steelers roster
+The user's subsequent approvals expanded the original Pages 1–3 scope to the implemented team details, matchup research and, on 12 October 2026, a historical NFL Game Report linked from completed-game results. These approved screens and their existing linked controls are in scope. The latest request leaves Home unchanged until a later visual pass.
 
-DO NOT add Page 4 or later screens.
+Do not add unrelated screens or abandoned concept features. Preserve existing work, original artwork and backups. Game Report must use verified event-specific scores, quarters and statistics; the supplied render's sample values are design examples, not factual authority.
 
 ## Source of truth
 The approved eight-screen Project Dollar$ render from the ChatGPT project is the visual source of truth. The current website is NOT the visual source of truth.

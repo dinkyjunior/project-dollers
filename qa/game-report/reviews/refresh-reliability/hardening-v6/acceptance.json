@@ -1,0 +1,51 @@
+{
+  "createdAt": "2026-10-12T06:36:38.031554+00:00",
+  "verdict": "accepted",
+  "scriptSha256": "1e0bb61a60cb5033f2f48eea17b6ca8315b8f789669f01c19a11a26c8b82526e",
+  "indexSha256": "cd43314dc28faead43694a5c8658fd009cbdcf23caa16ce6221e0349dd679208",
+  "reliabilityCases": 68,
+  "catalogValidationCases": 11,
+  "totalCases": 79,
+  "failureCount": 0,
+  "caseReceiptSha256": "6e18c3be5f14d3e688c5ef107183f38c98ee72ba332fe0597f45d401b21fd9e4",
+  "catalogReceiptSha256": "ca347c29c76fc070c44449f2056d6ec1bbb329b81a47b049885d28ba7e2bdced",
+  "currentCheckReceiptSha256": "1b47b4340077c1ae495d7061b0e220d6de985a0f20e215f83946fccda54a4c52",
+  "reliabilityHelperSha256": "d7c5fbbafbac26886f607bd65929b656cad1cafc45edb06ab7856787f1db9b33",
+  "catalogHelperSha256": "be04aa85b83f021f7790a44b1d6957b4a1b27284d39e741de57467342062f474",
+  "productionInputsUnchanged": true,
+  "sourceStable": true,
+  "currentCheck": {
+    "status": "passed",
+    "games": 444,
+    "verified": 444,
+    "disputed": 0,
+    "unavailable": 0,
+    "players": 28405,
+    "plays": 80462,
+    "drives": 9504,
+    "quarterChecks": 888
+  },
+  "catalog": {
+    "rows": 109,
+    "trueConflicts": 18,
+    "venueLabelDisclosures": 91
+  },
+  "aggregateDependencyCase": {
+    "case": "dependent-team-sack-loss-null-typed-provenance-no-invented-alternative-idempotent",
+    "passed": true,
+    "priorTeamLoss": 53,
+    "afterTeamLoss": null,
+    "unavailableReason": {
+      "field": "stats.CLE.sackYardsLost",
+      "team": "CLE",
+      "reason": "Team sack-loss total unavailable because a contributing player's sack-loss field is disputed",
+      "sourceIds": [
+        "espn_fixture_summary_401872983",
+        "nflverse_player_stats"
+      ]
+    }
+  },
+  "humanCapsule": "Accepted frozen generator after79 isolated checks. Existing44 resilience checks remainpassed; five exact historical player conflicts preserve correctly named provider alternatives and null affected cells. CLE team sack-loss dependent total remains null with typed unavailable provenance and source reasons, without inventing a provider alternative. All444 current reports pass checksum/context/arithmetic validation; catalog109=18trueconflicts+91venue labels. Production files untouched during review.",
+  "preservedPreviousReview": "hardening-v5/acceptance.json and all earlier receipts remain unchanged",
+  "scope": "Read-only current --check and NEW isolated fixture roots only; no provider/browser, app/source/data edits or production generation."
+}

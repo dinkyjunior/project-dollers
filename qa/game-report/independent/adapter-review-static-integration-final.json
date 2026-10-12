@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-12T06:26:25.996720+00:00",
+  "reviewType": "independent-static-code-and-node-vm",
+  "status": "passed",
+  "nativeBrowserUsed": false,
+  "sourceHashes": {
+    "assets/source-integrity.js": "aef70f9afbacedee5c6060d9ba3925cc14a6a610f50163c886e2221f0b1ab8d6",
+    "assets/team-details.js": "b62aee40126dcddc64911114b141fa53510707dd4bf599ae260dce3b9cd30fb1",
+    "assets/matchup-breakdown.js": "f68cc5c94bba4d92e0b80b7ad3d1e635d21d0a49abd43e79bfa7843f2f3f6645",
+    "assets/app.js": "34bac0032d0f47504921111165bd867015c161219de39e51cf5515239e804459",
+    "assets/data/game-reports.json": "cd43314dc28faead43694a5c8658fd009cbdcf23caa16ce6221e0349dd679208",
+    "qa/game-report/independent/adapter-review-tests.cjs": "bee0ece34a49251fa1c51b5a8d5754314f35661764fbd6a23072db64b8d28064",
+    "qa/game-report/independent/adapter-review-integrated-final-results.json": "8e60d813192281adb99f7a5014063b5343ea5d818906368ccf0af38d803e0f74"
+  },
+  "modelChecks": 93,
+  "modelReceipt": "qa/game-report/independent/adapter-review-integrated-final-results.json",
+  "findingsClosed": [
+    "Catalog neutral/neutralSite normalization mismatch corrected.",
+    "Pre-aborted caller guarded before catalog Promise construction; failed background promises handled.",
+    "Five inherited conflicts use explicit source/value readings; old sourceIds/value order is never zipped.",
+    "Copy-on-write isolates changed paths without mutating original JSON; unaffected large branches remain shared/read-only.",
+    "First-load blocked More/Sources provide verification error and retry.",
+    "History catalog rechecks occur on manual core refresh, online/focus/resume and while an open history remains active."
+  ],
+  "integrationReview": [
+    {
+      "path": "assets/team-details.js",
+      "result": "Exact fetched bytes hashed/bound; effective dataset assigned only after source-integrity apply; raw dataset retained; own/allowed completeValue aggregates propagate null. Sources render explicit alternative descriptors independently of ordinary source filters. Unchanged sameSnapshot keeps controls; failures retain earlier effective."
+    },
+    {
+      "path": "assets/matchup-breakdown.js",
+      "result": "Exact raw bytes and schema validated before apply/assign; player totals and per-game values consume effective gameLog nulls. Independent PBP teamTargets/snaps/redzone retained; only disputed receiver targetShare is invalidated. Raw getter preserved. Sources verify alternative IDs, values and retrieval times."
+    },
+    {
+      "path": "assets/app.js",
+      "result": "History checksum/current-source-hash guards preserved, then player-history apply before assignment. Raw history exposed separately; manual data-refresh emits reasonmanual and triggers forced catalog check. SameSnapshot avoids unchanged roster/reading-state replacement; previous effective history retained with visible verification error on update failure."
+    }
+  ],
+  "qualification": "Static consumer review plus isolated Node VM tests against actual 109-item catalog and immutable real datasets. Native rendering, focus, navigation and performance must be verified by the designated browser owner; this receipt claims none of those.",
+  "catalog": {
+    "issues": 109,
+    "trueConflicts": 18,
+    "explicitValueAttribution": true
+  },
+  "finalStaticChecks": [
+    "Sources HTML attributes bind each explicit reading value to its own source ID and retrieval time; no sourceIds/values zipping.",
+    "Cold unavailable Matchup footer says DATA UNAVAILABLE CHECK FAILED; retained text requires actual prior effective dataset.",
+    "Final history change preserves #sources-dialog reading position, alongside roster scroll/focus.",
+    "Source/index runtime froze unchanged during bounded model rerun."
+  ]
+}

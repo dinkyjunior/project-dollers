@@ -190,11 +190,11 @@
       const helmet = equipment[abbr];
       return `<div class="nfl-matchup-team ${sideClass}${helmet ? ' has-helmet has-upright-helmet' : ' has-team-logo'}"><div class="nfl-equipment-wrap"><img class="nfl-matchup-helmet" src="${esc(helmet || logo(abbr))}" alt="${esc(team?.fullName || short)}${helmet ? ' decorative helmet' : ''}" width="${helmet ? '1254' : '500'}" height="${helmet ? '1254' : '500'}" decoding="async">${helmet ? `<img class="nfl-matchup-mark" src="${esc(logo(abbr))}" alt="" width="500" height="500" decoding="async">` : ''}</div><small>${esc(city)}</small><strong>${esc(short)}</strong></div>`;
     };
-    const final = game.status === 'final';
+    const final = game.status === 'final' && finite(game.home_score) && finite(game.away_score);
     const ownScore = game.home_team === 'PIT' ? game.home_score : game.away_score;
     const otherScore = game.home_team === 'PIT' ? game.away_score : game.home_score;
     const when = final ? `FINAL · ${number(ownScore)}–${number(otherScore)} · ${date(game)}` : `${date(game)} · ${time(game)}`;
-    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">VIEW MATCHUP ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">COMPARE TEAMS ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">TEAM FORM ${rightChevron}</button></div>`;
+    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">${final ? 'OPEN GAME REPORT' : 'VIEW MATCHUP'} ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">COMPARE TEAMS ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">TEAM FORM ${rightChevron}</button></div>`;
   }
 
   function recap(snapshot) {
@@ -202,7 +202,11 @@
     const week = snapshot.recapWeek ?? snapshot.leadersWeek;
     const games = snapshot.recap || [];
     $('recap-title').textContent = finite(week) && Number(week) > 0 ? `WEEK ${week} · RESULTS` : 'WEEKLY RECAP';
-    $('recap-content').innerHTML = games.length ? `<p class="nfl-dataset-note">${context.data.season} · completed source results for Week ${esc(week)}</p>${games.map(game => `<div class="nfl-recap-game"><span>${esc(teamName(game.away_team))} <small>@</small> ${esc(teamName(game.home_team))}</span><strong>${number(game.away_score)}–${number(game.home_score)}</strong></div>`).join('')}` : '<p class="nfl-dataset-note">No verified completed results are available for this recap week.</p>';
+    $('recap-content').innerHTML = games.length ? `<p class="nfl-dataset-note">${context.data.season} · completed source results for Week ${esc(week)}</p>${games.map(game => {
+      const complete = game.status === 'final' && finite(game.home_score) && finite(game.away_score), gameId = game.id || game.game_id;
+      const result = `<strong>${number(game.away_score)}–${number(game.home_score)}</strong>`;
+      return `<div class="nfl-recap-game"><span>${esc(teamName(game.away_team))} <small>@</small> ${esc(teamName(game.home_team))}</span>${complete && gameId ? `<button class="nfl-detail-button nfl-recap-report" data-nfl-action="report" data-game="${esc(gameId)}" data-team="${esc(game.away_team)}" aria-label="Open ${esc(teamName(game.away_team))} at ${esc(teamName(game.home_team))} game report, ${esc(game.season || context.data.season)} Week ${esc(game.week)}">${result} ${rightChevron}</button>` : result}</div>`;
+    }).join('')}` : '<p class="nfl-dataset-note">No verified completed results are available for this recap week.</p>';
   }
 
   function preview() {
@@ -294,6 +298,10 @@
       if (!action && !button.dataset.conference && !button.hasAttribute('data-standings-toggle')) return;
       // Prevent the legacy page navigation handler from opening future screens.
       event.stopImmediatePropagation();
+      if (action === 'report' && window.PDApp?.openGameReport) {
+        window.PDApp.openGameReport(button.dataset.team,button.dataset.game);
+        return;
+      }
       if (action === 'team-details') {
         window.PDTeamDetails?.enter(button.dataset.team);
         return;
@@ -302,9 +310,13 @@
         window.PDTeamDetails.enter('PIT');
         return;
       }
-      if (['matchup','compare'].includes(action) && window.MatchupBreakdown) {
+      if (['matchup','matchups','compare'].includes(action) && window.MatchupBreakdown) {
         const fixture = context.data.weeks?.[state.week]?.fixture;
         if (fixture) {
+          if (fixture.status === 'final' && finite(fixture.home_score) && finite(fixture.away_score) && window.PDApp?.openGameReport) {
+            window.PDApp.openGameReport('PIT',fixture.id || fixture.game_id);
+            return;
+          }
           window.MatchupBreakdown.enter('PIT',fixture.id || fixture.game_id,action === 'compare' ? 'form' : 'players');
           return;
         }
