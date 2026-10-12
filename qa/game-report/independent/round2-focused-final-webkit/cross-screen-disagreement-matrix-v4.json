@@ -1,0 +1,1613 @@
+{
+  "checkedAt": "2026-10-12T06:24:57.125685+00:00",
+  "status": "cross-screen-fix-required",
+  "sourceHashes": {
+    "assets/data/team-details.json": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "assets/data/matchup-breakdown.json": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186",
+    "assets/data/player-history.json": "343e7e28642765390c5f3d9aee7515fc182ef8906fb8555b229a82e925563930",
+    "assets/data/game-reports.json": "cd43314dc28faead43694a5c8658fd009cbdcf23caa16ce6221e0349dd679208"
+  },
+  "disagreements": [
+    {
+      "gameId": "2020_14_WAS_SF",
+      "season": 2020,
+      "week": 14,
+      "scope": "event",
+      "team": null,
+      "field": "neutralSite",
+      "reportField": "neutralSite",
+      "reportValue": null,
+      "values": [
+        true,
+        false
+      ],
+      "sourceIds": [
+        "nflverse_games",
+        "espn_game_report_401220356"
+      ],
+      "sources": {
+        "nflverse_games": {
+          "id": "nflverse_games",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"6b3e3273c9f0b94fce17d659df4287e15838fb10605e97e6ef393b7193dd67f6\"",
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "f4341ae31f4ea724fc63b9b78d4078293eabc0695408be1ab2dfdd228875fa88",
+          "bytes": 2184064
+        },
+        "espn_game_report_401220356": {
+          "id": "espn_game_report_401220356",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401220356",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:33:43Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "f3206ed863074d4222cba8a31e18b6e944184f989b0e415a66539b8940bc340c",
+          "bytes": 527789
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2020_14_WAS_SF.json",
+      "reportSha256": "804bd7359c0d5273fffcea9a6a4a7a7b3c2371b035eff203f4ece5734310bf64",
+      "reportRetrievedAt": "2026-10-12T04:33:43Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "club": "SF",
+          "path": "teams.SF.headToHeadGames[2].neutralSite",
+          "rawValue": true,
+          "neutralAlias": true
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "WAS",
+          "path": "teams.WAS.headToHeadGames[2].neutralSite",
+          "rawValue": true,
+          "neutralAlias": true
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.SF.players.00-0029892.gameLog[20].homeAway",
+          "rawValue": "neutral"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.SF.players.00-0035719.gameLog[22].homeAway",
+          "rawValue": "neutral"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.WAS.players.00-0035659.gameLog[16].homeAway",
+          "rawValue": "neutral"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "fixture header and historical game/profile kickoff",
+        "neutralSite AND neutral aliases, venueOf/venueKind and venue filters",
+        "matching player gameLog homeAway classification; unknown must not enter home/away/neutral buckets"
+      ]
+    },
+    {
+      "gameId": "2024_17_ARI_LA",
+      "season": 2024,
+      "week": 17,
+      "scope": "event",
+      "team": null,
+      "field": "kickoffUtc",
+      "reportField": "kickoffUtc",
+      "reportValue": null,
+      "values": [
+        "2024-12-29T01:15:00Z",
+        "2024-12-29T01:00:00Z"
+      ],
+      "sourceIds": [
+        "nflverse_games",
+        "espn_game_report_401671829"
+      ],
+      "sources": {
+        "nflverse_games": {
+          "id": "nflverse_games",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"6b3e3273c9f0b94fce17d659df4287e15838fb10605e97e6ef393b7193dd67f6\"",
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "f4341ae31f4ea724fc63b9b78d4078293eabc0695408be1ab2dfdd228875fa88",
+          "bytes": 2184064
+        },
+        "espn_game_report_401671829": {
+          "id": "espn_game_report_401671829",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671829",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:33:42Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "e6d3a84bd2a11b53b826522621d4b4506b848a2f32100b2a6e889c0100f89537",
+          "bytes": 458816
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2024_17_ARI_LA.json",
+      "reportSha256": "355c9c3a58740df8f4d6fc4545bbfd2df1964bb73ea3eb8f0b5efc7df8a72063",
+      "reportRetrievedAt": "2026-10-12T04:33:42Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "club": "ARI",
+          "path": "teams.ARI.headToHeadGames[2].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z",
+          "neutralAlias": null
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0033553.gameLog[3].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0037744.gameLog[22].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0038559.gameLog[22].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0039041.gameLog[21].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0039849.gameLog[16].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.BUF.players.00-0035500.gameLog[16].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "player-history",
+          "path": "players.00-0035239.games.2024_17_ARI_LA.kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "fixture header and historical game/profile kickoff",
+        "neutralSite AND neutral aliases, venueOf/venueKind and venue filters",
+        "matching player gameLog homeAway classification; unknown must not enter home/away/neutral buckets"
+      ]
+    },
+    {
+      "gameId": "2025_02_CLE_BAL",
+      "season": 2025,
+      "week": 2,
+      "scope": "team",
+      "team": "CLE",
+      "field": "netPassing",
+      "reportField": "stats.netPassing",
+      "reportValue": null,
+      "values": [
+        207,
+        208
+      ],
+      "sourceIds": [
+        "nflverse_player_stats_2025",
+        "espn_game_report_401772726"
+      ],
+      "sources": {
+        "nflverse_player_stats_2025": {
+          "id": "nflverse_player_stats_2025",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+          "provider": "nflverse",
+          "required": false,
+          "httpStatus": 200,
+          "etag": "\"0x8DEF95B1AFD7169\"",
+          "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+          "retrievedAt": "2026-10-12T04:29:53Z",
+          "status": "verified",
+          "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+          "bytes": 8656387
+        },
+        "espn_game_report_401772726": {
+          "id": "espn_game_report_401772726",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772726",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:28Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "069ea61f53e225202748af37a2392eb9f723d6e806ef5e3ea215c964f598c350",
+          "bytes": 583828
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2025_02_CLE_BAL.json",
+      "reportSha256": "4aee25e7c61d16a78bf2fa3f120968fc20157c803a3e9a33069ec0fcb66accc6",
+      "reportRetrievedAt": "2026-10-12T04:26:28Z",
+      "consumers": [
+        {
+          "book": "team-details",
+          "club": "BAL",
+          "path": "teams.BAL.games[32].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "team-details",
+          "club": "CLE",
+          "path": "teams.CLE.games[32].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "BAL",
+          "path": "teams.BAL.games[32].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "BAL",
+          "path": "teams.BAL.headToHeadGames[1].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.games[32].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.headToHeadGames[1].stats.CLE.netPassing",
+          "rawValue": 207,
+          "aggregateSide": "gained"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "selected game form rows / expanded game stats / H2H comparison",
+        "Team yards gained AND opponent allowed totals/per-game before aggregate"
+      ]
+    },
+    {
+      "gameId": "2025_02_CLE_BAL",
+      "season": 2025,
+      "week": 2,
+      "scope": "team",
+      "team": "CLE",
+      "field": "totalOffense",
+      "reportField": "stats.totalOffense",
+      "reportValue": null,
+      "values": [
+        322,
+        323
+      ],
+      "sourceIds": [
+        "nflverse_player_stats_2025",
+        "espn_game_report_401772726"
+      ],
+      "sources": {
+        "nflverse_player_stats_2025": {
+          "id": "nflverse_player_stats_2025",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+          "provider": "nflverse",
+          "required": false,
+          "httpStatus": 200,
+          "etag": "\"0x8DEF95B1AFD7169\"",
+          "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+          "retrievedAt": "2026-10-12T04:29:53Z",
+          "status": "verified",
+          "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+          "bytes": 8656387
+        },
+        "espn_game_report_401772726": {
+          "id": "espn_game_report_401772726",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772726",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:28Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "069ea61f53e225202748af37a2392eb9f723d6e806ef5e3ea215c964f598c350",
+          "bytes": 583828
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2025_02_CLE_BAL.json",
+      "reportSha256": "4aee25e7c61d16a78bf2fa3f120968fc20157c803a3e9a33069ec0fcb66accc6",
+      "reportRetrievedAt": "2026-10-12T04:26:28Z",
+      "consumers": [
+        {
+          "book": "team-details",
+          "club": "BAL",
+          "path": "teams.BAL.games[32].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "team-details",
+          "club": "CLE",
+          "path": "teams.CLE.games[32].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "BAL",
+          "path": "teams.BAL.games[32].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "BAL",
+          "path": "teams.BAL.headToHeadGames[1].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.games[32].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.headToHeadGames[1].stats.CLE.totalOffense",
+          "rawValue": 322,
+          "aggregateSide": "gained"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "selected game form rows / expanded game stats / H2H comparison",
+        "Team yards gained AND opponent allowed totals/per-game before aggregate"
+      ]
+    },
+    {
+      "gameId": "2025_03_DEN_LAC",
+      "season": 2025,
+      "week": 3,
+      "scope": "player",
+      "team": "LAC",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        9,
+        10
+      ],
+      "sourceIds": [
+        "nflverse_player_stats_2025",
+        "espn_game_report_401772735"
+      ],
+      "sources": {
+        "nflverse_player_stats_2025": {
+          "id": "nflverse_player_stats_2025",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+          "provider": "nflverse",
+          "required": false,
+          "httpStatus": 200,
+          "etag": "\"0x8DEF95B1AFD7169\"",
+          "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+          "retrievedAt": "2026-10-12T04:29:53Z",
+          "status": "verified",
+          "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+          "bytes": 8656387
+        },
+        "espn_game_report_401772735": {
+          "id": "espn_game_report_401772735",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772735",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:32Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "df1100cafc23375ff6d0486d8ebf2b870d234e03e319dc2d155f058e8c41583f",
+          "bytes": 604372
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2025_03_DEN_LAC.json",
+      "reportSha256": "e0cdbe7efd0506325409806a79286e9179079e4c203c88950366c0924f87ba0d",
+      "reportRetrievedAt": "2026-10-12T04:26:32Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.LAC.players.00-0038544.gameLog[14].stats.targets",
+          "rawValue": 9,
+          "derivedTargetShare": 20.0,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2025",
+            "nflverse_player_stats_2025"
+          ],
+          "derivedPath": "teams.LAC.players.00-0038544.gameLog[14].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4429025",
+      "playerMappings": [
+        {
+          "gsisId": "00-0038544",
+          "name": "Quentin Johnston",
+          "club": "LAC"
+        }
+      ],
+      "playerGsisId": "00-0038544",
+      "playerName": "Quentin Johnston",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2025_12_PIT_CHI",
+      "season": 2025,
+      "week": 12,
+      "scope": "player",
+      "team": "PIT",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        3,
+        2
+      ],
+      "sourceIds": [
+        "nflverse_player_stats_2025",
+        "espn_game_report_401772780"
+      ],
+      "sources": {
+        "nflverse_player_stats_2025": {
+          "id": "nflverse_player_stats_2025",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv",
+          "provider": "nflverse",
+          "required": false,
+          "httpStatus": 200,
+          "etag": "\"0x8DEF95B1AFD7169\"",
+          "lastModified": "Thu, 13 Aug 2026 16:51:22 GMT",
+          "retrievedAt": "2026-10-12T04:29:53Z",
+          "status": "verified",
+          "sha256": "e5e0615b3d96a3eaebfaee91e55afb4a4e7fe0caf057454177bcd7d6ad4bcfc2",
+          "bytes": 8656387
+        },
+        "espn_game_report_401772780": {
+          "id": "espn_game_report_401772780",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401772780",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:30Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "324c27144da60507deecedfa41ed7da72a6efb8d9d465203e3f801fa16970735",
+          "bytes": 583437
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2025_12_PIT_CHI.json",
+      "reportSha256": "ff7cf0a44e1e0f90aee3bcdde81dc14ab728fd44519ea5baa5147b2fef4ad4d0",
+      "reportRetrievedAt": "2026-10-12T04:26:30Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.PIT.players.00-0039739.gameLog[6].stats.targets",
+          "rawValue": 3,
+          "derivedTargetShare": 9.7,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2025",
+            "nflverse_player_stats_2025"
+          ],
+          "derivedPath": "teams.PIT.players.00-0039739.gameLog[6].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4431492",
+      "playerMappings": [
+        {
+          "gsisId": "00-0039739",
+          "name": "Roman Wilson",
+          "club": "PIT"
+        }
+      ],
+      "playerGsisId": "00-0039739",
+      "playerName": "Roman Wilson",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "season": 2026,
+      "week": 1,
+      "scope": "player",
+      "team": "ATL",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        4,
+        5
+      ],
+      "sourceIds": [
+        "espn_matchup_summary_401872658",
+        "nflverse_player_stats"
+      ],
+      "sources": {
+        "espn_matchup_summary_401872658": {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_01_ATL_PIT.json",
+      "reportSha256": "eb9ec203a61ea24bd393c4accdf63958c40a8d3766a0498c43ed3981b0a3cdcc",
+      "reportRetrievedAt": "2026-10-12T04:26:26Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ATL.players.00-0037238.gameLog[4].stats.targets",
+          "rawValue": null,
+          "derivedTargetShare": null,
+          "targetShareSourceIds": null,
+          "derivedPath": "teams.ATL.players.00-0037238.gameLog[4].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4426502",
+      "playerMappings": [
+        {
+          "gsisId": "00-0037238",
+          "name": "Drake London",
+          "club": "ATL"
+        }
+      ],
+      "playerGsisId": "00-0037238",
+      "playerName": "Drake London",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "season": 2026,
+      "week": 1,
+      "scope": "player",
+      "team": "ATL",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "espn_matchup_summary_401872658",
+        "nflverse_player_stats"
+      ],
+      "sources": {
+        "espn_matchup_summary_401872658": {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_01_ATL_PIT.json",
+      "reportSha256": "eb9ec203a61ea24bd393c4accdf63958c40a8d3766a0498c43ed3981b0a3cdcc",
+      "reportRetrievedAt": "2026-10-12T04:26:26Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ATL.players.00-0037741.gameLog[4].stats.targets",
+          "rawValue": null,
+          "derivedTargetShare": null,
+          "targetShareSourceIds": null,
+          "derivedPath": "teams.ATL.players.00-0037741.gameLog[4].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4361409",
+      "playerMappings": [
+        {
+          "gsisId": "00-0037741",
+          "name": "Jahan Dotson",
+          "club": "ATL"
+        }
+      ],
+      "playerGsisId": "00-0037741",
+      "playerName": "Jahan Dotson",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_02_JAX_DEN",
+      "season": 2026,
+      "week": 2,
+      "scope": "player",
+      "team": "JAX",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        8,
+        9
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872940"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872940": {
+          "id": "espn_game_report_401872940",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872940",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:32Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "7219265e78cce6bd9ec6e6adfdcc1352c85c5d07fa4daa4bc60d1931216acf06",
+          "bytes": 548098
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_02_JAX_DEN.json",
+      "reportSha256": "bdc4f9e2476a5ab6f965c404709c9af306290fb0da9877fdcb224b29814096d4",
+      "reportRetrievedAt": "2026-10-12T04:26:32Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.JAX.players.00-0039893.gameLog[3].stats.targets",
+          "rawValue": 8,
+          "derivedTargetShare": 28.6,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2026",
+            "nflverse_player_stats"
+          ],
+          "derivedPath": "teams.JAX.players.00-0039893.gameLog[3].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4432773",
+      "playerMappings": [
+        {
+          "gsisId": "00-0039893",
+          "name": "Brian Thomas Jr.",
+          "club": "JAX"
+        }
+      ],
+      "playerGsisId": "00-0039893",
+      "playerName": "Brian Thomas Jr.",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_02_MIN_CHI",
+      "season": 2026,
+      "week": 2,
+      "scope": "player",
+      "team": "CHI",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        5,
+        6
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872937"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872937": {
+          "id": "espn_game_report_401872937",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872937",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:30Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "fb04ea655593f078e1a38c0dd771a7a2162a52c832db263625881e020830edf3",
+          "bytes": 552962
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_02_MIN_CHI.json",
+      "reportSha256": "6f1cb578f9d805eaf38e18dc506a91d35357ef0a02d4360260fae6dfdb376abc",
+      "reportRetrievedAt": "2026-10-12T04:26:30Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.CHI.players.00-0036275.gameLog[3].stats.targets",
+          "rawValue": 5,
+          "derivedTargetShare": 16.7,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2026",
+            "nflverse_player_stats"
+          ],
+          "derivedPath": "teams.CHI.players.00-0036275.gameLog[3].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4259545",
+      "playerMappings": [
+        {
+          "gsisId": "00-0036275",
+          "name": "D'Andre Swift",
+          "club": "CHI"
+        }
+      ],
+      "playerGsisId": "00-0036275",
+      "playerName": "D'Andre Swift",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_02_PHI_TEN",
+      "season": 2026,
+      "week": 2,
+      "scope": "player",
+      "team": "PHI",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        2,
+        3
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872939"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872939": {
+          "id": "espn_game_report_401872939",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872939",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:37Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "fe45e631016d9871c47c050892685ca0f98d15ea015b362d297f0c7d25a7a7c8",
+          "bytes": 552855
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_02_PHI_TEN.json",
+      "reportSha256": "99dfd343625d45773c98c433ea89a81502791643c996954b70a276b9449e37bc",
+      "reportRetrievedAt": "2026-10-12T04:26:37Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.PHI.players.00-0034351.gameLog[1].stats.targets",
+          "rawValue": 2,
+          "derivedTargetShare": 5.9,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2026",
+            "nflverse_player_stats"
+          ],
+          "derivedPath": "teams.PHI.players.00-0034351.gameLog[1].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "3121023",
+      "playerMappings": [
+        {
+          "gsisId": "00-0034351",
+          "name": "Dallas Goedert",
+          "club": "PHI"
+        }
+      ],
+      "playerGsisId": "00-0034351",
+      "playerName": "Dallas Goedert",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_03_KC_MIA",
+      "season": 2026,
+      "week": 3,
+      "scope": "player",
+      "team": "MIA",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        7,
+        8
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872952"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872952": {
+          "id": "espn_game_report_401872952",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872952",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:35Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "6331fe809e47f378ce2df86b6218abb6f53e70f7445df4e3e48070f21e04c2c6",
+          "bytes": 535660
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_03_KC_MIA.json",
+      "reportSha256": "dbf29ba47ad8f5c528e73c91258f35d524d2d440c8a5e6613d9bae187781cb59",
+      "reportRetrievedAt": "2026-10-12T04:26:35Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.MIA.players.00-0041525.gameLog[2].stats.targets",
+          "rawValue": 7,
+          "derivedTargetShare": 20.0,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2026",
+            "nflverse_player_stats"
+          ],
+          "derivedPath": "teams.MIA.players.00-0041525.gameLog[2].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4869961",
+      "playerMappings": [
+        {
+          "gsisId": "00-0041525",
+          "name": "Chris Bell",
+          "club": "MIA"
+        }
+      ],
+      "playerGsisId": "00-0041525",
+      "playerName": "Chris Bell",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_03_LV_NO",
+      "season": 2026,
+      "week": 3,
+      "scope": "player",
+      "team": "LV",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        13,
+        14
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872961"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872961": {
+          "id": "espn_game_report_401872961",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872961",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:36Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "7b5f34f509c9cd1834d1cf10f034e4af20d1f3e9e8a1922810421637b24d8336",
+          "bytes": 619233
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_03_LV_NO.json",
+      "reportSha256": "e5771f8b0f20c7cb60568765aad24d62d8377d7f349790b1a658fe2cb0642fe6",
+      "reportRetrievedAt": "2026-10-12T04:26:36Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.LV.players.00-0039338.gameLog[2].stats.targets",
+          "rawValue": 13,
+          "derivedTargetShare": 43.3,
+          "targetShareSourceIds": [
+            "nflverse_pbp_2026",
+            "nflverse_player_stats"
+          ],
+          "derivedPath": "teams.LV.players.00-0039338.gameLog[2].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "4432665",
+      "playerMappings": [
+        {
+          "gsisId": "00-0039338",
+          "name": "Brock Bowers",
+          "club": "LV"
+        }
+      ],
+      "playerGsisId": "00-0039338",
+      "playerName": "Brock Bowers",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_03_MIN_TB",
+      "season": 2026,
+      "week": 3,
+      "scope": "player",
+      "team": "TB",
+      "field": "targets",
+      "reportField": "players.targets",
+      "reportValue": null,
+      "values": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "espn_matchup_summary_401872959",
+        "nflverse_player_stats"
+      ],
+      "sources": {
+        "espn_matchup_summary_401872959": {
+          "id": "espn_matchup_summary_401872959",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "fb392ed2ecbb92af206ba44061c9a4dcf4c7932f1a142dd60554d681fe72ff29",
+          "bytes": 630086,
+          "tlsVerified": true
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_03_MIN_TB.json",
+      "reportSha256": "33e420c58c57708ed860c0ae622300238f312e0bd1fa25712f6997f6d34aefe1",
+      "reportRetrievedAt": "2026-10-12T04:26:37Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.TB.players.00-0041048.gameLog[1].stats.targets",
+          "rawValue": null,
+          "derivedTargetShare": null,
+          "targetShareSourceIds": null,
+          "derivedPath": "teams.TB.players.00-0041048.gameLog[1].advanced.targetShare"
+        }
+      ],
+      "playerEspnId": "5220680",
+      "playerMappings": [
+        {
+          "gsisId": "00-0041048",
+          "name": "Ted Hurst III",
+          "club": "TB"
+        }
+      ],
+      "playerGsisId": "00-0041048",
+      "playerName": "Ted Hurst III",
+      "dependentConsumers": [
+        "receiving leader targets total/per game before sumRows",
+        "player game profile/allStats/history/opponent-history targets",
+        "advanced.targetShare; NFLverse player numerator conflicts, PBP denominator remains separately sourced",
+        "targets & snaps / receiver target share research dialogs"
+      ]
+    },
+    {
+      "gameId": "2026_05_CLE_NYJ",
+      "season": 2026,
+      "week": 5,
+      "scope": "team",
+      "team": "CLE",
+      "field": "netPassing",
+      "reportField": "stats.netPassing",
+      "reportValue": null,
+      "values": [
+        101,
+        102
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872983"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872983": {
+          "id": "espn_game_report_401872983",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:38:19Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "11c882759c324f501e0549e0e63830a9339672865141051ce45af06e1bdf1a1d",
+          "bytes": 664387
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "96c55199f6db52e059ae234de4d6dde6c2d5468e24ce384d7e2235d7ae09a713",
+      "reportRetrievedAt": "2026-10-12T04:38:19Z",
+      "consumers": [
+        {
+          "book": "team-details",
+          "club": "CLE",
+          "path": "teams.CLE.games[12].stats.CLE.netPassing",
+          "rawValue": 101,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "team-details",
+          "club": "NYJ",
+          "path": "teams.NYJ.games[12].stats.CLE.netPassing",
+          "rawValue": 101,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.games[12].stats.CLE.netPassing",
+          "rawValue": 101,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "NYJ",
+          "path": "teams.NYJ.games[12].stats.CLE.netPassing",
+          "rawValue": 101,
+          "aggregateSide": "allowed"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "selected game form rows / expanded game stats / H2H comparison",
+        "Team yards gained AND opponent allowed totals/per-game before aggregate"
+      ]
+    },
+    {
+      "gameId": "2026_05_CLE_NYJ",
+      "season": 2026,
+      "week": 5,
+      "scope": "team",
+      "team": "CLE",
+      "field": "totalOffense",
+      "reportField": "stats.totalOffense",
+      "reportValue": null,
+      "values": [
+        197,
+        198
+      ],
+      "sourceIds": [
+        "nflverse_player_stats",
+        "espn_game_report_401872983"
+      ],
+      "sources": {
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        },
+        "espn_game_report_401872983": {
+          "id": "espn_game_report_401872983",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:38:19Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "11c882759c324f501e0549e0e63830a9339672865141051ce45af06e1bdf1a1d",
+          "bytes": 664387
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "96c55199f6db52e059ae234de4d6dde6c2d5468e24ce384d7e2235d7ae09a713",
+      "reportRetrievedAt": "2026-10-12T04:38:19Z",
+      "consumers": [
+        {
+          "book": "team-details",
+          "club": "CLE",
+          "path": "teams.CLE.games[12].stats.CLE.totalOffense",
+          "rawValue": 197,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "team-details",
+          "club": "NYJ",
+          "path": "teams.NYJ.games[12].stats.CLE.totalOffense",
+          "rawValue": 197,
+          "aggregateSide": "allowed"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "CLE",
+          "path": "teams.CLE.games[12].stats.CLE.totalOffense",
+          "rawValue": 197,
+          "aggregateSide": "gained"
+        },
+        {
+          "book": "matchup-breakdown",
+          "club": "NYJ",
+          "path": "teams.NYJ.games[12].stats.CLE.totalOffense",
+          "rawValue": 197,
+          "aggregateSide": "allowed"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "selected game form rows / expanded game stats / H2H comparison",
+        "Team yards gained AND opponent allowed totals/per-game before aggregate"
+      ]
+    },
+    {
+      "gameId": "2026_05_CLE_NYJ",
+      "season": 2026,
+      "week": 5,
+      "scope": "player",
+      "team": "CLE",
+      "field": "sackYardsLost",
+      "reportField": "players.sackYardsLost",
+      "reportValue": null,
+      "values": [
+        54,
+        53
+      ],
+      "sourceIds": [
+        "espn_fixture_summary_401872983",
+        "nflverse_player_stats"
+      ],
+      "sources": {
+        "espn_fixture_summary_401872983": {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "96c55199f6db52e059ae234de4d6dde6c2d5468e24ce384d7e2235d7ae09a713",
+      "reportRetrievedAt": "2026-10-12T04:38:19Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.CLE.players.00-0033537.gameLog[0].stats.sackYardsLost",
+          "rawValue": null
+        }
+      ],
+      "playerEspnId": "3122840",
+      "playerMappings": [
+        {
+          "gsisId": "00-0033537",
+          "name": "Deshaun Watson",
+          "club": "CLE"
+        }
+      ],
+      "playerGsisId": "00-0033537",
+      "playerName": "Deshaun Watson",
+      "dependentConsumers": [
+        "Full game profile/allStats/history/opponent-history sackYardsLost",
+        "Unrelated independently sourced passing counts, sack rate, targets and team target share remain unchanged"
+      ]
+    },
+    {
+      "gameId": "2026_05_CLE_NYJ",
+      "season": 2026,
+      "week": 5,
+      "scope": "player",
+      "team": "CLE",
+      "field": "fumbles",
+      "reportField": "players.fumbles",
+      "reportValue": null,
+      "values": [
+        4,
+        3
+      ],
+      "sourceIds": [
+        "espn_fixture_summary_401872983",
+        "nflverse_player_stats"
+      ],
+      "sources": {
+        "espn_fixture_summary_401872983": {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "96c55199f6db52e059ae234de4d6dde6c2d5468e24ce384d7e2235d7ae09a713",
+      "reportRetrievedAt": "2026-10-12T04:38:19Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.CLE.players.00-0033537.gameLog[0].stats.fumbles",
+          "rawValue": null
+        }
+      ],
+      "playerEspnId": "3122840",
+      "playerMappings": [
+        {
+          "gsisId": "00-0033537",
+          "name": "Deshaun Watson",
+          "club": "CLE"
+        }
+      ],
+      "playerGsisId": "00-0033537",
+      "playerName": "Deshaun Watson",
+      "dependentConsumers": [
+        "Full game profile/allStats/history/opponent-history fumbles",
+        "Unrelated independently sourced passing counts, sack rate, targets and team target share remain unchanged"
+      ]
+    }
+  ],
+  "nonVenueConflictCount": 18,
+  "playerHistoryConflictOverlaps": [
+    {
+      "gameId": "2024_17_ARI_LA",
+      "season": 2024,
+      "week": 17,
+      "scope": "event",
+      "team": null,
+      "field": "kickoffUtc",
+      "reportField": "kickoffUtc",
+      "reportValue": null,
+      "values": [
+        "2024-12-29T01:15:00Z",
+        "2024-12-29T01:00:00Z"
+      ],
+      "sourceIds": [
+        "nflverse_games",
+        "espn_game_report_401671829"
+      ],
+      "sources": {
+        "nflverse_games": {
+          "id": "nflverse_games",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"6b3e3273c9f0b94fce17d659df4287e15838fb10605e97e6ef393b7193dd67f6\"",
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "f4341ae31f4ea724fc63b9b78d4078293eabc0695408be1ab2dfdd228875fa88",
+          "bytes": 2184064
+        },
+        "espn_game_report_401671829": {
+          "id": "espn_game_report_401671829",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401671829",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:33:42Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "e6d3a84bd2a11b53b826522621d4b4506b848a2f32100b2a6e889c0100f89537",
+          "bytes": 458816
+        }
+      },
+      "detailUrl": "assets/data/game-reports/2024_17_ARI_LA.json",
+      "reportSha256": "355c9c3a58740df8f4d6fc4545bbfd2df1964bb73ea3eb8f0b5efc7df8a72063",
+      "reportRetrievedAt": "2026-10-12T04:33:42Z",
+      "consumers": [
+        {
+          "book": "matchup-breakdown",
+          "club": "ARI",
+          "path": "teams.ARI.headToHeadGames[2].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z",
+          "neutralAlias": null
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0033553.gameLog[3].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0037744.gameLog[22].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0038559.gameLog[22].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0039041.gameLog[21].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.ARI.players.00-0039849.gameLog[16].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "matchup-breakdown",
+          "path": "teams.BUF.players.00-0035500.gameLog[16].kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        },
+        {
+          "book": "player-history",
+          "path": "players.00-0035239.games.2024_17_ARI_LA.kickoffUtc",
+          "rawValue": "2024-12-29T01:15:00Z"
+        }
+      ],
+      "playerEspnId": null,
+      "dependentConsumers": [
+        "fixture header and historical game/profile kickoff",
+        "neutralSite AND neutral aliases, venueOf/venueKind and venue filters",
+        "matching player gameLog homeAway classification; unknown must not enter home/away/neutral buckets"
+      ]
+    }
+  ],
+  "referenceFunctions": {
+    "team-details": [
+      "venueKind line26",
+      "selectedGames line28",
+      "aggregate line58",
+      "sourcesContent line153"
+    ],
+    "matchup-breakdown": [
+      "venueOf line38",
+      "selectedGames line48",
+      "sumRows line66",
+      "playerSummary line70",
+      "sourceContent line274"
+    ]
+  },
+  "note": "Raw books preserved. Effective masks must precede aggregation; cross-provider disagreement is not resolved by choosing either source. Venue-label aliases require disclosure, not numeric/domain masks."
+}

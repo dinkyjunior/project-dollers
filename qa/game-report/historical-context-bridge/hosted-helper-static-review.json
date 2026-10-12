@@ -1,0 +1,91 @@
+{
+  "status": "reviewed-with-two-coverage-findings",
+  "completedAt": "2026-10-12T07:48:24.332Z",
+  "scope": "Read-only static review only; no browser, main invocation or hosted request",
+  "helper": {
+    "path": "qa/game-report/hosted-verification.cjs",
+    "sha256": "8dd94f6ef904c46e55b791671a2d7f1dd742c05f84367d7e4014cd3cb4dadcd8"
+  },
+  "checks": {
+    "syntax": "node --check passed",
+    "guardedRequire": "require passed and exported only main/argumentsFor; main not invoked",
+    "argumentGuards": "Missing base, HTTP base and URL credentials rejected",
+    "strictTLS": "gate.launch(webkit,true) selects official MiniBrowser WPE, workspace verified libraries, supplied CA per process and HTTPS proxy. Context uses ignoreHTTPSErrors:false; no hostname-disable flags or response interception.",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 430,
+        "height": 896
+      },
+      {
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "controls": "Home sport controls, NFL Dallas expansion/details, selected prior Dallas report, report team/category/row/profile controls, box score, first drive, all plays, Sources, availability, historical Matchups tabs and Steelers player history selectors match source-generated hooks.",
+    "routeWaits": "Ready waits for active page, source roster, relevant source-integrity state, report/quarter markup, fonts and decoded visible images. Selected-game/team identity then asserted for Dallas; historical selected fixture asserted after Matchups.",
+    "exactBack": "Compares actual origin URL hash and team/tab/window/season/venue/mode/expanded before/after report Back. Current selected DAL-HOU event is the second latest Dallas completed game, so row click expands it rather than closing initial expansion.",
+    "directRefresh": "Navigates to explicit selected report with tab=plays, players=HOU, kind=rushing then document reloads; asserts all three states and game identity.",
+    "historicalContext": "Selected 2025_02_CLE_BAL fixture plus 2025 season badge, 2025 date context and Latest 2026 research snapshot asserted.",
+    "rawSourceProof": "Compares loaded PD_DATA and available raw team/matchup data, index and selected report objects to local producer JSON serializations. Actual delivered manifest response bytes separately hashed.",
+    "reportStats": "Exact-source VM confirmed hero quarter table exists independently of tab, 20 box tables, 21 drives, 192 plays, selected profile hooks and every raw stat field for Dak Prescott (21), Nico Collins (16) and first Dallas defensive-table profile Hunter Luepke (23).",
+    "resourceScope": {
+      "manifestBodies": 731,
+      "reportIndexDetails": 444,
+      "requiredBodies": 17,
+      "requiredDetailReports": 2,
+      "proactiveUnusedDetails": 0,
+      "versionQueryURLsHandled": true,
+      "nativeResponsesAndRequiredFetchesLabeled": true
+    },
+    "motion": "Untouched screenshots via capture-ready and animations:allow; two natural samples 430 ms apart, one optional third after 1730 ms if first hashes alias; checks fully visible native infinite clocks advance and some actual PNG bytes differ. Reduced motion checks no running infinite decorative clock; restore waits for running clocks.",
+    "honestQualifications": "Explicit cloud WPE, virtual mobile/touch/DPR2, no physical iPhone or actual-device FPS claim; bounded representative controls, no full-manifest fetch claim."
+  },
+  "findings": [
+    {
+      "id": "body-cancellation-correlation",
+      "severity": "medium",
+      "location": "qa/game-report/hosted-verification.cjs:220",
+      "issue": "Unreadable response bodies are exempted whenever any cancellation has the same URL. Multiple actual native requests to the same URL are common during direct reload or polling, so an unrelated canceled request can excuse an otherwise genuine body-read failure.",
+      "impact": "The every observed body qualification is weaker than request-specific cancellation evidence.",
+      "evidence": "row.requestCancellations.some(cancel=>cancel.url===item.url)",
+      "suggestion": "Run owner should correlate cancellations to the exact response.request identity or retain an explicit unresolved-reader-failure qualification; reviewer made no changes."
+    },
+    {
+      "id": "sources-allowed-subset",
+      "severity": "medium",
+      "location": "qa/game-report/hosted-verification.cjs:205",
+      "issue": "Sources assertion accepts any nonempty subset of the union of game.sources and index.sources, while its message claims exact selected producer metadata.",
+      "impact": "Missing expected source links or unrelated index-source links can pass. Current producer renders six HTTPS source entries, including three repeated ESPN URLs; multiplicity is not checked.",
+      "evidence": "links.length>0 && links.every(url=>url.startsWith(https:) && allowed.has(url))",
+      "suggestion": "Run owner should compare the displayed ordered URL list or multiset to (game.sources || index.sources).filter(valid HTTPS), or explicitly qualify the check as allowed-link membership; reviewer made no changes."
+    }
+  ],
+  "limits": [
+    "No hosted connection, runtime execution, browser visual output or physical-device behavior reviewed.",
+    "Static selector hooks and exact-source generated markup verified; no actual DOM selector resolution or event execution.",
+    "Response body audit covers first-party files present in runtime manifest; resource classification uses a temporal requiredFileCheckActive flag, so overlapping native responses may be labelled explicit-required-file-check.",
+    "Navigation cancellations remain qualified and are not proof that their response bodies were hashed."
+  ],
+  "reviewedSourceHashes": {
+    "qa/home-gate.cjs": "2d46b6d98463eb2686e4ac2b3f49231bc2cad114f45e0e999c892b1f6601e8e0",
+    "qa/hosted-webkit.cjs": "96dbd27d7f8005d412473a912d6f601c2861c8fd7dc94e0626a3045d8d8b85ad",
+    "qa/team-details/capture-ready.cjs": "23e6173c9ee0ca88ab53221dd036f0c02ac39a8b490b66698f4fb1740f361b80",
+    "qa/team-details/qa.cjs": "cd725d89a1701eb3bc577166c088cb1f270b00082316f905ad27418069b84e2d",
+    "assets/game-report.js": "1e00bfaa9c1205955c4346e943ba8294262cb70f37c361170739bd859a4eb902",
+    "assets/game-report.css": "234141bc4153cf937747e601307a6479baccb4e0b6a8bd7ecfd79894b5895a1c",
+    "assets/team-details.js": "b62aee40126dcddc64911114b141fa53510707dd4bf599ae260dce3b9cd30fb1",
+    "assets/matchup-breakdown.js": "44e9fc46e15a68583ef1c1417ed5ee9f7c9f7ceac4456668fff6383d4ed7e0de",
+    "assets/app.js": "34bac0032d0f47504921111165bd867015c161219de39e51cf5515239e804459",
+    "assets/nfl-dashboard.js": "17f07aae01279beefb2ef5e68874e053d206f3bae7e9cbfbd2ff0ee19c2a590a",
+    "assets/player-research.js": "6748ba663c42790c48d59f6de0661dd73e200267a8059642acbf5daeb7a1f7ae",
+    "assets/data/game-reports.json": "cd43314dc28faead43694a5c8658fd009cbdcf23caa16ce6221e0349dd679208"
+  },
+  "helperStable": true,
+  "codeFilesWritten": false,
+  "browserLaunched": false,
+  "mainInvoked": false
+}

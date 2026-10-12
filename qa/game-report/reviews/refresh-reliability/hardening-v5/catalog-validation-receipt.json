@@ -1,0 +1,67 @@
+{
+  "createdAt": "2026-10-12T06:13:49.092357+00:00",
+  "scriptSha256": "fbc275811d8d9739d04044f04121d3772eded7a8318f90d81626a7c42167f39e",
+  "helperSha256": "299cb18832463fa006f443d3aba0ce52bb9f4f5f78538e68f17e6a62bbbe35b2",
+  "cases": [
+    {
+      "case": "whole-444-reconciled-catalog-validates",
+      "passed": true,
+      "result": {
+        "status": "passed",
+        "games": 444,
+        "verified": 444,
+        "disputed": 0,
+        "unavailable": 0,
+        "players": 28405,
+        "plays": 80462,
+        "drives": 9504,
+        "quarterChecks": 888
+      }
+    },
+    {
+      "case": "catalog-row-omission-rejected",
+      "passed": true
+    },
+    {
+      "case": "catalog-context-tamper-rejected",
+      "passed": true
+    },
+    {
+      "case": "catalog-body-hash-tamper-rejected",
+      "passed": true
+    },
+    {
+      "case": "catalog-alternative-tamper-rejected",
+      "passed": true
+    },
+    {
+      "case": "catalog-dependency-tamper-rejected",
+      "passed": true
+    },
+    {
+      "case": "missing-catalog-rejected",
+      "passed": true
+    },
+    {
+      "case": "player-history-byte-drift-rejected",
+      "passed": true,
+      "error": "Report index requires refresh after player-history source changes"
+    },
+    {
+      "case": "known-conflict-missing-propagation-rejected",
+      "passed": true,
+      "error": "('2026_03_MIN_TB', 'Known research-source statistic conflict was not propagated into the report')"
+    },
+    {
+      "case": "production-bodies-unchanged",
+      "passed": true
+    },
+    {
+      "case": "source-stable",
+      "passed": true
+    }
+  ],
+  "totalCases": 11,
+  "failures": [],
+  "scope": "Full444 report validation in isolated root; production source/data read-only; no provider/browser requests"
+}

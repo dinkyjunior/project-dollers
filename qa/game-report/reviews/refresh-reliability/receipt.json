@@ -1,0 +1,183 @@
+{
+  "createdAt": "2026-10-12T04:58:57Z",
+  "sourceSha256": "1b018da745e7e4170568d67115fc57df0e4b67754299a19ea2d2049c6c5ea9bf",
+  "helperSha256": "ed8e314bdc8c2099ab2c17f941dd91b26b73c7f083a1ad835c623e30f47aa347",
+  "frozenIndexSha256": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda",
+  "cases": [
+    {
+      "case": "provider-null-header",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-boxscore",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-drives",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-gameInfo",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-scoringPlays",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-header-competitions",
+      "passed": true,
+      "status": "disputed"
+    },
+    {
+      "case": "provider-null-boxscore-teams",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-boxscore-players",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-drives-previous",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-drives-current",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-boxscore",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-drives",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-gameInfo",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-scoringPlays",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "null-number-not-zero",
+      "passed": true
+    },
+    {
+      "case": "real-zero-preserved",
+      "passed": true
+    },
+    {
+      "case": "strict-ssl-cert-and-hostname",
+      "passed": true
+    },
+    {
+      "case": "temporary-outage-retains-verified-report",
+      "passed": true
+    },
+    {
+      "case": "stale-dependency-rejected",
+      "passed": true
+    },
+    {
+      "case": "index-only-rebind-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "index-only-score-mismatch-rejected-before-write",
+      "passed": true
+    },
+    {
+      "case": "archival-reuse-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "input-drift-guard",
+      "passed": true,
+      "error": "Team-detail source changed during report construction; retry against stable inputs",
+      "detailFileChangedBeforeGuard": true,
+      "indexFileRetained": true
+    },
+    {
+      "case": "invalid-scoring-rejected",
+      "passed": true,
+      "error": "('2026_04_DAL_HOU', 'scoring final score')",
+      "detailFileChangedBeforeValidation": true,
+      "indexFileChangedBeforeValidation": true
+    },
+    {
+      "case": "malformed-matching-cache-graceful",
+      "passed": false,
+      "error": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')"
+    },
+    {
+      "case": "production-protected-inputs-unchanged",
+      "passed": true
+    }
+  ],
+  "totalCases": 26,
+  "failures": [
+    {
+      "case": "provider-null-header",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-boxscore",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-drives",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-gameInfo",
+      "passed": false,
+      "error": "AttributeError(\"'NoneType' object has no attribute 'get'\")"
+    },
+    {
+      "case": "provider-null-scoringPlays",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-boxscore-teams",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-boxscore-players",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "provider-null-drives-previous",
+      "passed": false,
+      "error": "TypeError(\"'NoneType' object is not iterable\")"
+    },
+    {
+      "case": "malformed-matching-cache-graceful",
+      "passed": false,
+      "error": "JSONDecodeError('Expecting property name enclosed in double quotes: line 1 column 2 (char 1)')"
+    }
+  ],
+  "productionInputsUnchanged": true,
+  "reviewScope": "Read-only source review and isolated temporary fixtures only. No browser or provider requests."
+}

@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-10-12T05:00:51.539005+00:00",
+  "verdict": "changes_requested_for_future_refresh_resilience",
+  "productionDataValid": true,
+  "currentCheck": {
+    "games": 444,
+    "verified": 444,
+    "players": 28405,
+    "plays": 80462,
+    "drives": 9504,
+    "quarterChecks": 888
+  },
+  "productionUntouched": true,
+  "reviewedSourceSha256": "1b018da745e7e4170568d67115fc57df0e4b67754299a19ea2d2049c6c5ea9bf",
+  "caseReceiptSha256": "368e3ad4ceafe37dcfa2c3311962d7375bd5d61733fb5276906af0c77572b608",
+  "cases": 26,
+  "failedCases": 9,
+  "recentSummaryRequestsPerRoutineRun": 30,
+  "historicalGamesNotRecrawledByDefault": 395,
+  "scheduledDesign": {
+    "concurrency": 4,
+    "perRequestTimeoutSeconds": 35,
+    "maxAttempts": 3,
+    "workflowTimeoutMinutes": 20,
+    "workflowDoesNotPublishAfterRefreshFailure": true,
+    "sourcesUseStrictCAAndHostnameValidation": true
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "area": "optional_public_summary_shapes",
+      "issue": "Verified final summary with optional null boxscore/drives/gameInfo/scoringPlays or null arrays raises and aborts the refresh run. Missing boxscore is currently labelled verified in the dataset provenance despite having no boxscore rows.",
+      "recommendation": "Safely parse optional typed containers, mark unavailable datasets explicitly, and retain prior verified final for structurally malformed retrievals."
+    },
+    {
+      "severity": "medium",
+      "area": "cache_replay",
+      "issue": "--use-cache returns json.loads outside the protected retrieval path. Matching checksum metadata does not make malformed JSON readable.",
+      "recommendation": "Validate saved JSON shape before replay; reject malformed cache as unusable and retrieve safely or expose unavailable without crashing."
+    },
+    {
+      "severity": "medium",
+      "area": "snapshot_transaction",
+      "issue": "Details are installed before stable-input guard; index is installed before validate. Failed manual refresh leaves altered local report files and may replace index with a rejected snapshot.",
+      "recommendation": "Build in isolated staging, validate complete staged snapshot and stable input hashes, then install. Scheduled set-e prevents failed data from being committed, but does not provide local rollback."
+    }
+  ],
+  "acceptedBehavior": [
+    "Verified event identity/season/team/home-away/final score gate excludes disputed detailed statistics",
+    "Missing numeric values stay null and real zero stays zero",
+    "Strict verified TLS context used for ordinary summary retrieval",
+    "Conditional validators and exact cache URL/hash validated",
+    "Temporary complete retrieval failure retains prior verified report, unchanged bytes and retrieval timestamps",
+    "Archive reuse avoids recrawl; explicit --refresh-history exists",
+    "--check binds current Team/Matchup body hashes and all report content hashes",
+    "--index-only metadata rebind performs no provider requests and refuses score/identity mismatch",
+    "No present-day injuries substituted for historical inactive lists"
+  ],
+  "isolation": "Controlled fixtures only under /workspace/recovery-qa/game-report-refresh-review; no provider requests or browser runs."
+}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "game_report_ui",
+  "checkedAt": "2026-10-12T05:09:34.465534+00:00",
+  "status": "accepted_for_native_functional_qa",
+  "appSources": {
+    "assets/game-report.js": "84d1f6cf13d075e06600538efbf6fe5671454facee30a4e7a1137f4a082280d3",
+    "assets/game-report.css": "0f133f55845938ba89acd4eb4d02e832a2e09a38df2ef67ce3b28a00498cb897",
+    "assets/data/game-reports.json": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda",
+    "assets/data/game-reports/2026_04_DAL_HOU.json": "cb5022ed2d9085b5025370b0333b00c42a29ae7881ddaf3be15cef09a55798a9"
+  },
+  "approvedVisualSource": "Latest user-attached Game Report reference in chat; illustrative values are not data authority. No locally accessible approved reference binary; no registered pixel-difference claim.",
+  "nativePreviewReport": {
+    "path": "qa/game-report/preview-v3/results.json",
+    "sha256": "9ad0c388f753fc3d43a12a26df1481886f43eec61a7cd30d225d407c0f3bc623"
+  },
+  "personallyViewedNativeOriginals": [
+    {
+      "path": "qa/game-report/preview-v3/preview-393-top.png",
+      "sha256": "d71cc43611ea949c0f028aec1eda18a99262466865bf84968f7726c9d4f3bd7e"
+    },
+    {
+      "path": "qa/game-report/preview-v3/preview-393-bottom.png",
+      "sha256": "439d42a0c2815f1a4d7da35e1730171213ebc72fc28300c072c57ff30a933d11"
+    },
+    {
+      "path": "qa/game-report/preview-v3/preview-430-top.png",
+      "sha256": "6ed367ec9831c97005109cb057ee9e0a38cc384d60fab3286ee9fc2cbf85a1f7"
+    },
+    {
+      "path": "qa/game-report/preview-v3/preview-430-bottom.png",
+      "sha256": "303b50cfeee9c75965c126474c3cbb42c9b14565a6fef9e43e9bd4c2224d3ecc"
+    }
+  ],
+  "visualAssessment": {
+    "accepted": [
+      "Native gold/chrome/cyan hardware is crisp and high contrast around every panel.",
+      "Decorative inward-facing silver/navy helmet equipment preserves original 1254-square aspect and official logo overlays.",
+      "Brand header is fully visible at both widths; the 430 clipped tagline was corrected.",
+      "Score and real quarter table remain live readable HTML; correct selected team/opponent columns.",
+      "Three source-derived snapshot cards, team comparison, player category/team controls, profile action, cumulative quarters, full box/plays actions, availability/source cards and research navigation match the reference hierarchy.",
+      "Source CTA now aligns with Sources title above two clear evidence lines; no five-line narrow text column.",
+      "Body tables retain readable type; accepted native source avoids cosmetic shrinking that compromises statistical reading."
+    ],
+    "density": {
+      "393": {
+        "initialCssHeight": 1347,
+        "acceptedCssHeight": 1165
+      },
+      "430": {
+        "initialCssHeight": 1331,
+        "acceptedCssHeight": 1162
+      },
+      "qualification": "The supplied illustrative composition is approximately 1020px at 393 width. Native report retains a roughly 14 percent greater scroll extent, with verified date/season/week context and real category counts. Qualitative material match, not exact registered identity."
+    }
+  },
+  "dataAndBehavior": {
+    "sourceDerivedScore": "DAL34\u2013HOU30 independently verified; same as illustrative total by coincidence.",
+    "quarters": {
+      "DAL": [
+        3,
+        3,
+        14,
+        14
+      ],
+      "HOU": [
+        10,
+        6,
+        7,
+        7
+      ]
+    },
+    "snapshots": [
+      "DAL Q4 14\u20137",
+      "DAL rushing +13",
+      "HOU net passing +11"
+    ],
+    "teamTotals": {
+      "DAL": {
+        "totalOffense": 399,
+        "netPassing": 324,
+        "rushing": 75
+      },
+      "HOU": {
+        "totalOffense": 397,
+        "netPassing": 335,
+        "rushing": 62
+      }
+    },
+    "fullBoxCategories": [
+      "passing",
+      "rushing",
+      "receiving",
+      "defensive",
+      "kicking",
+      "punting",
+      "kickReturns",
+      "puntReturns",
+      "fumbles",
+      "interceptions"
+    ],
+    "independentVmReceipt": {
+      "path": "qa/game-report/reviews/report-ui-integrity.json",
+      "sha256": "835c8cb547bfc1bcdf6cc235744646e71969c4a8083b78c91b81200e06da0eac"
+    },
+    "qualification": "Node VM/source regressions separately verified; whole-site native browser QA1 and QA2 are still required before publication."
+  },
+  "protectedScope": "UI author changed only new game-report.js/css and its review files. Home implementation/art unchanged. Parent owns authorized route/data/index/workflow integration."
+}

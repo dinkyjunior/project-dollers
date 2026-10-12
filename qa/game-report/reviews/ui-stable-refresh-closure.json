@@ -1,0 +1,21 @@
+{
+  "status": "accepted_for_full_native_qa",
+  "checkedAt": "2026-10-12T05:16:59.818968+00:00",
+  "reviewer": "game_report_ui",
+  "priorSemanticAcceptance": {
+    "path": "qa/game-report/reviews/ui-final-source-closure.json",
+    "sha256": "1fe754ce063090b4def624b2a2edf686af4880863826ef6fa8e1990f07282039"
+  },
+  "source": {
+    "assets/game-report.js": "4cdf2c4157bfba2c580714ef77310c35279661f34e71ade4169f6af6a9c4d4b4",
+    "assets/game-report.css": "0f133f55845938ba89acd4eb4d02e832a2e09a38df2ef67ce3b28a00498cb897"
+  },
+  "postPreviewChange": "Always revalidate report/index on requested refresh; keep native report DOM, open drives, existing light clocks and profile reading state when selected game ID and verified detail hash are unchanged. Rerender on report change or error recovery. Repeated identical failure messages preserve existing retained report DOM. No art, layout, factual value or selected-game route changes.",
+  "vmRegression": {
+    "path": "qa/game-report/reviews/report-ui-integrity.json",
+    "sha256": "835c8cb547bfc1bcdf6cc235744646e71969c4a8083b78c91b81200e06da0eac",
+    "checks": 9,
+    "status": "passed"
+  },
+  "nativeQARequired": "QA1 is adding a genuine-HTTP/native-DOM preservation assertion for refresh(true); independent QA2 remains required. No prior native preview evidence rewritten."
+}

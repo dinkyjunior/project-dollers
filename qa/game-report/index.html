@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Project Dollar · Game Report QA</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#030811;color:#e8f3ff;font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:1020px;margin:auto;padding:32px 20px 48px}h1{margin:0 0 8px;font-size:clamp(25px,4vw,36px);line-height:1.15;letter-spacing:-.8px}h2{margin:26px 0 10px;font-size:20px;line-height:1.3}p{margin:8px 0;color:#b5c8dc}a{color:#64d7ff;text-underline-offset:3px}a:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:4px}.eyebrow{margin-bottom:8px;color:#45cfff;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.status{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.status span{padding:5px 9px;border:1px solid #22617a;border-radius:6px;font-size:12px;color:#bdeaff;background:#071b2b}.status .pending{border-color:#806a34;color:#ffe1a3;background:#241a08}.controls{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0 16px;padding:16px;background:#091321;border:1px solid #1e354e;border-radius:10px}.controls label{display:grid;gap:5px;font-size:12px;color:#bcd0e5;flex:1;min-width:210px}select{width:100%;min-height:42px;padding:8px 10px;border:1px solid #355674;border-radius:6px;background:#07101b;color:#f4faff;font:inherit;font-size:14px}.screens{display:flex;justify-content:center;align-items:flex-start;gap:24px;flex-wrap:wrap}figure{margin:0;max-width:100%;width:var(--phone-width);background:#050b13;border:1px solid #244460;border-radius:12px;padding:10px}figcaption{display:flex;justify-content:space-between;gap:8px;margin-bottom:10px;color:#c9dcec;font-size:12px}figure a{display:block}figure img{display:block;width:100%;height:auto;background:#000}.caption{font-size:13px;max-width:850px}.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.links section{padding:14px 16px;border:1px solid #213c54;background:#07111f;border-radius:8px}.links h3{margin:0 0 8px;font-size:15px}.links ul{margin:0;padding-left:18px}.links li{margin:5px 0}.links a{overflow-wrap:anywhere}details{margin-top:18px;padding:14px 16px;border:1px solid #213c54;border-radius:8px}summary{cursor:pointer;color:#dbeeff;font-weight:600}.archive{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:12px;font-size:13px}footer{margin-top:28px;padding-top:14px;border-top:1px solid #213c54;font-size:12px;color:#8da8c3}@media(max-width:600px){main{padding:22px 12px 36px}.links{grid-template-columns:1fr}.screens{gap:18px}.controls{padding:12px}.controls label{min-width:180px}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Project Dollar · Local evidence</div>
+  <h1>Previous-game report</h1>
+  <p>Actual browser originals at 393 × 852 and 430 × 896, with source-bound visual, functional and data reviews.</p>
+  <div class="status" aria-label="Verification status">
+    <span>Report visual review accepted</span>
+    <span>Round 1 historical bridge saved</span>
+    <span id="qa2-status">Independent QA2: accepted · 1,322 inputs</span>
+    <span class="pending" id="hosted-status">Hosted verification: pending</span>
+  </div>
+  <p class="caption">The approved visual source is the <a href="../../reference/GAME_REPORT_CHAT_SOURCE.md">user’s chat attachment</a>. Its original binary was unavailable locally. These screenshots show the actual app; they are not substitute reference panels or a claim of exact pixel identity. Correct event-specific data replaces the render’s sample figures.</p>
+
+  <div class="controls">
+    <label for="view">Screen or section
+      <select id="view">
+        <option value="top">Dallas–Houston · Overview top</option>
+        <option value="snapshot">Game snapshot</option>
+        <option value="comparison">Team comparison</option>
+        <option value="players">Player performances</option>
+        <option value="quarters">Scoring by quarter</option>
+        <option value="bottom">Participation, sources and navigation</option>
+        <option value="box">Full boxscore</option>
+        <option value="drives">Drives</option>
+        <option value="plays">Play-by-play</option>
+        <option value="overtime">Overtime report</option>
+        <option value="hou">Houston-origin perspective · WebKit</option>
+        <option value="v3">Accepted V3 refinement checkpoint</option>
+      </select>
+    </label>
+    <label for="size">Phone viewport
+      <select id="size">
+        <option value="both">Both phone sizes</option>
+        <option value="393">393×852</option>
+        <option value="430">430×896</option>
+      </select>
+    </label>
+  </div>
+  <div id="screens" class="screens" aria-live="polite"></div>
+  <p id="screen-note" class="caption"></p>
+  <p class="caption">Each image is a single untouched native viewport capture at 2× pixel density. Click it to open its original. Section captures scroll the real interface naturally; they are not stitched, stretched or unrolled into a fabricated full page.</p>
+
+  <h2>Review evidence</h2>
+  <div class="links">
+    <section>
+      <h3>Visual and source continuity</h3>
+      <ul>
+        <li><a href="reviews/assets-reference-visual-v3.json">Accepted V3 material and density review</a></li>
+        <li><a href="reviews/assets-reference-final-pose-v3.json">Dallas/Houston pose and protected assets</a></li>
+        <li><a href="reviews/assets-reference-current-report-closure.json">Current report-only visual closure</a></li>
+        <li><a href="final-motion-pose-webkit-v3/results.json">Passed native WebKit pose/motion receipt</a></li>
+        <li><a href="../../assets/game-report/asset-provenance.json">Official marks and decorative equipment provenance</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Functional and historical context</h3>
+      <ul>
+        <li><a href="final-round1-acceptance.json">Round 1 composite acceptance</a></li>
+        <li><a href="final-round1-historical-context-bridge-acceptance.json">Historical season/date source bridge</a></li>
+        <li><a href="final-round1-chromium/results.json">Original full-site Chromium receipt</a></li>
+        <li><a href="final-round1-provenance-chromium-v2/results.json">Focused native provider-attribution retry</a></li>
+        <li><a href="independent/historical-context-native-v2/results.json">Historical context browser proof</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Data audit</h3>
+      <ul>
+        <li><a href="independent/data-final-integrity-dependent-444.json">Final report/dependency audit · 1,165,830 assertions</a></li>
+        <li><a href="independent/catalog-raw-readings-final.json">109 catalog entries · 2,543 raw-reading assertions</a></li>
+        <li><a href="independent/adapter-review-integrated-final-results.json">Integrated integrity adapter · 93 model checks</a></li>
+        <li><a href="reviews/refresh-reliability/hardening-v6/acceptance.json">Generator reliability · 79 isolated checks</a></li>
+        <li><a href="independent/reverse-disagreement-closure.json">Disagreement coverage closure</a></li>
+        <li><a href="independent/final-validator-receipt.json">Data validator receipt</a></li>
+      </ul>
+    </section>
+    <section id="release-evidence">
+      <h3>Remaining release gates</h3>
+      <p><a href="independent/final-round2-acceptance.json">Independent QA2 accepted</a> on the unchanged 731-file runtime, with 1,322 native inputs. Failed helper receipts remain preserved. Actual hosted verification is pending.</p>
+      <p><a href="README.md">Evidence notes and qualifications</a></p>
+    </section>
+  </div>
+  <p class="caption">The original full-site Chromium run retains its failed presentation-format assertion. The composite links its passing stages with a stronger passed native provenance retry on the same frozen source; no failed run is relabelled. The later Matchup historical-context correction is recorded separately. This gallery does not certify deployment.</p>
+
+  <details>
+    <summary>Earlier actual prototypes and originals</summary>
+    <p class="caption">These earlier local checkpoints preserve the refinement process and their original source contexts. They are not the approved reference or current release certification.</p>
+    <div class="archive">
+      <a href="preview-v1/preview-393-top.png">First prototype ·393</a>
+      <a href="preview-v1/preview-430-top.png">First prototype ·430</a>
+      <a href="preview-v3/preview-393-top.png">Accepted V3 ·393</a>
+      <a href="preview-v3/preview-430-top.png">Accepted V3 ·430</a>
+      <a href="preview-v3/results.json">V3 original manifest</a>
+      <a href="independent/data-final-frozen-444.json">Earlier data audit · before final conflict/dependency corrections</a>
+      <a href="final-round1-chromium/game-report-dal-hou-1440-top.png">Actual desktop framing</a>
+    </div>
+  </details>
+  <footer>12 October 2026 · Sydney. Home artwork, original source masters and saved backups remain preserved. Decorative equipment and stadium artwork are not official product or venue photographs. Physical iPhone and measured FPS certification are not claimed.</footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const view = document.getElementById('view');
+  const size = document.getElementById('size');
+  const holder = document.getElementById('screens');
+  const note = document.getElementById('screen-note');
+  const names = {top:'Overview top',snapshot:'Game snapshot',comparison:'Team comparison',players:'Player performances',quarters:'Scoring by quarter',bottom:'Participation, sources and navigation',box:'Full boxscore',drives:'Drives',plays:'Play-by-play',overtime:'Overtime report',hou:'Houston-origin perspective',v3:'Accepted V3 checkpoint'};
+  function file(kind,width) {
+    if (kind === 'hou') return `final-motion-pose-webkit-v3/pose-HOU-${width}.png`;
+    if (kind === 'v3') return `preview-v3/preview-${width}-top.png`;
+    if (['box','drives','plays','overtime'].includes(kind)) return `final-round1-chromium/game-report-${kind === 'box' ? 'box-score' : kind}-${width}.png`;
+    return `final-round1-chromium/game-report-dal-hou-${width}-${kind}.png`;
+  }
+  function render() {
+    const widths = size.value === 'both' ? [393,430] : [Number(size.value)];
+    holder.replaceChildren();
+    for (const width of widths) {
+      const height = width === 393 ? 852 : 896;
+      const figure = document.createElement('figure');
+      figure.style.setProperty('--phone-width',`${width + 22}px`);
+      const caption = document.createElement('figcaption');
+      const dimensions = document.createElement('strong'); dimensions.textContent = `${width}×${height}`;
+      const section = document.createElement('span'); section.textContent = names[view.value];
+      caption.append(dimensions,section);
+      const link = document.createElement('a'); link.href = file(view.value,width); link.target = '_blank'; link.rel = 'noopener';
+      const img = document.createElement('img'); img.src = link.href; img.width = width*2; img.height = height*2; img.alt = `${names[view.value]}: actual ${width}×${height} browser screenshot`; img.decoding = 'async';
+      link.append(img); figure.append(caption,link); holder.append(figure);
+    }
+    note.textContent = view.value === 'v3' ? 'Accepted refinement prototype, before later source-integrity and historical-context closures. Original checkpoint retained.' : view.value === 'hou' ? 'Passed frozen WebKit pose/motion checkpoint. Houston origin changes score order and turns only the empty equipment shells inward; official vector marks remain unmirrored.' : 'Frozen final Round 1 Chromium originals. The separately documented historical Matchup correction does not change the report artwork or default layout.';
+  }
+  view.addEventListener('change',render); size.addEventListener('change',render); render();
+})();
+</script>
+</body>
+</html>

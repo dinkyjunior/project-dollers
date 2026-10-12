@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-12T04:42:26.254900+00:00",
+  "status": "passed",
+  "testsUnmodified": true,
+  "sourceHashes": {
+    "assets/data/current.json": "51d07b18afb2ee0793d1f06e4fdd4cca5ac5cdbdc7677151254af25d1396f3cd",
+    "assets/data/team-details.json": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "assets/data/matchup-breakdown.json": "27ab5feb51a38fd980af694ee9a6e73f03429f25d45fd0e608be381ac6ff2a35",
+    "assets/data/game-reports.json": "5cc252536047d0d39b6840bb96160cd0bbf89b4f9f984bf78ca1490cccc37430",
+    "scripts/refresh-matchup-breakdown.py": "9b87923311130e8af784a4199dfc006c6974b164b2691f98a3dfcd1c408b97c4"
+  },
+  "commands": [
+    {
+      "command": "python3 qa/data.test.py",
+      "exitCode": 0,
+      "tests": 22,
+      "skipped": 0
+    },
+    {
+      "command": "python3 qa/team-details/data.test.py --cache-dir /workspace/recovery-qa/game-report-current-source-cache",
+      "exitCode": 0,
+      "tests": 11,
+      "skipped": 0,
+      "cacheStrictSourceChecks": true
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py --source-manifest /workspace/recovery-qa/game-report-current-matchup-evidence-corrected/source-manifest.json",
+      "exitCode": 0,
+      "tests": 33,
+      "skipped": 0,
+      "manifestSha256": "2073e58670524376c231eb305a61a3caaadf5cf3ddc6a96c179418857575193c",
+      "manifestSnapshotSha256": "27ab5feb51a38fd980af694ee9a6e73f03429f25d45fd0e608be381ac6ff2a35"
+    },
+    {
+      "command": "python3 qa/game-report/independent/audit-report-data.py --output qa/game-report/independent/data-final-444.json",
+      "exitCode": 0,
+      "assertions": 1164849,
+      "games": 444,
+      "failures": 0,
+      "receiptSha256": "111a0d2fb46afccfe2a0fcfaf6707f035b44224f7ce2cdc03c7d49850d0ef4d7"
+    }
+  ],
+  "baselineQualification": "Initial six historical-manifest failures remain recorded unchanged. Fresh actual source evidence and corrected role-candidate retention permit all33 unchanged source-bound tests to pass now. No historical source manifest was overwritten.",
+  "reportDependencies": {
+    "teamDetailsSha256": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "matchupBreakdownSha256": "27ab5feb51a38fd980af694ee9a6e73f03429f25d45fd0e608be381ac6ff2a35"
+  },
+  "retainedArchives": 19,
+  "linkedCurrentReports": 425,
+  "scriptReview": "Reviewed source-designated/recap-contradicted QB candidate slots are retained before historical trimming, including missing-stat diagnostic slots; no unknown role/statistical value becomes confirmed start, recorded GP or zero."
+}

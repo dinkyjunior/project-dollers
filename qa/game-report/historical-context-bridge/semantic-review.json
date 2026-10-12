@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "completedAt": "2026-10-12T07:08:21.591Z",
+  "scope": "Independent read-only source/function-local Node VM semantic review of exactly three historical-context display changes",
+  "nodeVersion": "v24.19.0",
+  "sourceHashes": {
+    "before": "f68cc5c94bba4d92e0b80b7ad3d1e635d21d0a49abd43e79bfa7843f2f3f6645",
+    "after": "44e9fc46e15a68583ef1c1417ed5ee9f7c9f7ceac4456668fff6383d4ed7e0de",
+    "data": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186"
+  },
+  "datasetSeason": 2026,
+  "method": "Compiled the exact source prefix before event registration in isolated Node VM contexts; exposed lexical dateTime/header/context/fixture/stat functions only in memory. Compared actual dataset fixtures, full affected render strings, selected-game windows and leader outputs across filters.",
+  "exactThreeChanges": true,
+  "unchangedOutsideThreeReplacements": true,
+  "handlersQueriesAndStatCodeByteUnchanged": true,
+  "counts": {
+    "teams": 32,
+    "teamFixtureEntries": 1216,
+    "distinctFixtures": 619,
+    "currentFixtures": 544,
+    "historicalFixtures": 672,
+    "validHistoricalDates": 672,
+    "unavailableDates": 2,
+    "historicalCalendarSeasonRolloverEntries": 43,
+    "currentCalendarSeasonRolloverEntries": 62,
+    "filterStates": 768
+  },
+  "samples": [
+    {
+      "team": "ARI",
+      "id": "2026_18_SF_ARI",
+      "season": 2026,
+      "beforeDate": "Mon, 11 Jan · 5:00 am AEDT",
+      "afterDate": "Mon, 11 Jan · 5:00 am AEDT",
+      "beforeBadge": "NFL<br>2026 REGULAR SEASON",
+      "afterBadge": "NFL<br>2026 REGULAR SEASON",
+      "beforeNote": "Last 5 team games · GP = stat games · DNP ≠ 0",
+      "afterNote": "Last 5 team games · GP = stat games · DNP ≠ 0"
+    },
+    {
+      "team": "ARI",
+      "id": "2025_18_ARI_LA",
+      "season": 2025,
+      "beforeDate": "Mon, 5 Jan · 8:25 am AEDT",
+      "afterDate": "Mon, 5 Jan 2026 · 8:25 am AEDT",
+      "beforeBadge": "NFL<br>2026 REGULAR SEASON",
+      "afterBadge": "NFL<br>2025 REGULAR SEASON",
+      "beforeNote": "Last 5 team games · GP = stat games · DNP ≠ 0",
+      "afterNote": "Latest 2026 research snapshot · Last 5 team games · GP = stat games · DNP ≠ 0"
+    },
+    {
+      "team": "BAL",
+      "id": "2025_02_CLE_BAL",
+      "season": 2025,
+      "beforeDate": "Mon, 15 Sept · 3:00 am AEST",
+      "afterDate": "Mon, 15 Sept 2025 · 3:00 am AEST",
+      "beforeBadge": "NFL<br>2026 REGULAR SEASON",
+      "afterBadge": "NFL<br>2025 REGULAR SEASON",
+      "beforeNote": "Last 5 team games · GP = stat games · DNP ≠ 0",
+      "afterNote": "Latest 2026 research snapshot · Last 5 team games · GP = stat games · DNP ≠ 0"
+    }
+  ],
+  "edgeCases": {
+    "nullGame": "Kickoff unavailable unchanged",
+    "invalidOrMissingKickoff": "Kickoff unavailable unchanged",
+    "numericStringCurrentSeason": "Current date unchanged",
+    "unresolvedFixture": "Dataset season fallback and research context unchanged"
+  },
+  "findings": [
+    "Historical fixtures use their own NFL season badge and explicit Sydney calendar year in kickoff dates.",
+    "Current-season date, badge and full context render strings match the prior source exactly for every dataset fixture.",
+    "Historical fixtures retain current research filters and gain the Latest 2026 research snapshot note.",
+    "All other source bytes, including handlers, query parsing/writing and statistic calculations, are unchanged.",
+    "Season/calendar-year rollovers display NFL season in the badge and calendar year in historical dates, while current-season rollover dates retain prior formatting."
+  ],
+  "limits": [
+    "No browser launched; this receipt does not certify visual layout, browser-specific Intl punctuation, navigation or event-handler execution.",
+    "Used the current raw local matchup dataset; did not run source-integrity networking or revalidate underlying sports facts.",
+    "Fixtures without valid kickoff timestamps remain explicitly unavailable."
+  ],
+  "appAndDataFilesWritten": false,
+  "sourceStable": true
+}

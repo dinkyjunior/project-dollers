@@ -1,0 +1,905 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/report_assets_visual",
+  "status": "accepted-final-local-source-visual-bridge",
+  "reviewedAt": "2026-10-12T05:31:45.599875+00:00",
+  "previousVisualReceipt": {
+    "path": "qa/game-report/reviews/assets-reference-visual-v3.json",
+    "sha256": "626bbdf5dd16640ef71159a42d48b9d0a45606e25005b22614f5c2b0058ba395"
+  },
+  "finalRound1Receipt": {
+    "path": "qa/game-report/round1-v2-chromium/results.json",
+    "sha256": "0a2b454daf816032c7946494b91bf5f2df85e5e2769f78b8793b3c1bcec6252b",
+    "status": "passed",
+    "browserClosed": true,
+    "sourceStable": true
+  },
+  "sourceBridge": {
+    "runtimeBodies": 730,
+    "unchangedAgainstAcceptedV3": 729,
+    "changed": [
+      {
+        "path": "assets/game-report.js",
+        "previousSha256": "84d1f6cf13d075e06600538efbf6fe5671454facee30a4e7a1137f4a082280d3",
+        "finalSha256": "4cdf2c4157bfba2c580714ef77310c35279661f34e71ade4169f6af6a9c4d4b4"
+      }
+    ],
+    "allCurrentLocalBodiesExactToRound1": true,
+    "semanticChangesReviewed": "Historical source names and abbreviations, valid return destinations, overtime marking, additional participant/profile actions. The actual Dallas/Houston report composition, source data, fonts, frames, assets and CSS remain unchanged."
+  },
+  "independentNativeChecks": {
+    "nativeOriginals": 45,
+    "allOriginalHashesExact": true,
+    "allRetinaDimensionsExact": true,
+    "allFourVisualAssetProvenanceHashesExact": true,
+    "phoneGeometry": [
+      {
+        "viewport": {
+          "width": 393,
+          "height": 852
+        },
+        "nativeContentHeight": 1165,
+        "V3PanelGeometryExact": true,
+        "panels": [
+          {
+            "class": "gr-brand",
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 78.5
+          },
+          {
+            "class": "gr-breadcrumb",
+            "x": 9,
+            "y": 88.5,
+            "width": 375,
+            "height": 24
+          },
+          {
+            "class": "gr-hero gr-framed",
+            "x": 9,
+            "y": 117.5,
+            "width": 375,
+            "height": 225.46875
+          },
+          {
+            "class": "gr-tabs",
+            "x": 9,
+            "y": 348.96875,
+            "width": 375,
+            "height": 36
+          },
+          {
+            "class": "gr-panel gr-framed gr-snapshot",
+            "x": 9,
+            "y": 392.96875,
+            "width": 375,
+            "height": 103.40625
+          },
+          {
+            "class": "gr-panel gr-framed gr-comparison",
+            "x": 9,
+            "y": 502.375,
+            "width": 375,
+            "height": 181
+          },
+          {
+            "class": "gr-panel gr-framed gr-performance",
+            "x": 9,
+            "y": 689.375,
+            "width": 375,
+            "height": 158
+          },
+          {
+            "class": "gr-panel gr-framed gr-scoring",
+            "x": 9,
+            "y": 853.375,
+            "width": 375,
+            "height": 129
+          },
+          {
+            "class": "gr-ancillary gr-framed",
+            "x": 9,
+            "y": 988.375,
+            "width": 375,
+            "height": 73.78125
+          },
+          {
+            "class": "gr-bottom-nav gr-framed",
+            "x": 9,
+            "y": 1070.15625,
+            "width": 375,
+            "height": 52
+          },
+          {
+            "class": "gr-footer",
+            "x": 9,
+            "y": 1128.15625,
+            "width": 375,
+            "height": 28.390625
+          }
+        ],
+        "noHorizontalOverflow": true,
+        "clippedText": []
+      },
+      {
+        "viewport": {
+          "width": 430,
+          "height": 896
+        },
+        "nativeContentHeight": 1162,
+        "V3PanelGeometryExact": true,
+        "panels": [
+          {
+            "class": "gr-brand",
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 84.484375
+          },
+          {
+            "class": "gr-breadcrumb",
+            "x": 9,
+            "y": 94.484375,
+            "width": 412,
+            "height": 24
+          },
+          {
+            "class": "gr-hero gr-framed",
+            "x": 9,
+            "y": 123.484375,
+            "width": 412,
+            "height": 229.34375
+          },
+          {
+            "class": "gr-tabs",
+            "x": 9,
+            "y": 358.828125,
+            "width": 412,
+            "height": 36
+          },
+          {
+            "class": "gr-panel gr-framed gr-snapshot",
+            "x": 9,
+            "y": 402.828125,
+            "width": 412,
+            "height": 94.140625
+          },
+          {
+            "class": "gr-panel gr-framed gr-comparison",
+            "x": 9,
+            "y": 502.96875,
+            "width": 412,
+            "height": 181
+          },
+          {
+            "class": "gr-panel gr-framed gr-performance",
+            "x": 9,
+            "y": 689.96875,
+            "width": 412,
+            "height": 158
+          },
+          {
+            "class": "gr-panel gr-framed gr-scoring",
+            "x": 9,
+            "y": 853.96875,
+            "width": 412,
+            "height": 129
+          },
+          {
+            "class": "gr-ancillary gr-framed",
+            "x": 9,
+            "y": 988.96875,
+            "width": 412,
+            "height": 70.78125
+          },
+          {
+            "class": "gr-bottom-nav gr-framed",
+            "x": 9,
+            "y": 1067.75,
+            "width": 412,
+            "height": 52
+          },
+          {
+            "class": "gr-footer",
+            "x": 9,
+            "y": 1125.75,
+            "width": 412,
+            "height": 28.390625
+          }
+        ],
+        "noHorizontalOverflow": true,
+        "clippedText": []
+      }
+    ]
+  },
+  "visualFindings": [
+    "Final actual Dallas/Houston phone captures retain the accepted V3 visual hierarchy, bright native chrome/blue/gold, complete crisp empty equipment and original official mark placement.",
+    "Full boxscore shows aligned source-recorded passing, rushing, receiving and defensive categories, names and statistics without a generic placeholder table.",
+    "Actual overtime report safely includes the OT status and extra scoring column, authentic team identity fallback and a readable source-disagreement notice.",
+    "Actual desktop capture remains centered in the430px app frame with internal scrolling; desktop data does not expand across the screen.",
+    "No further asset or layout blocker was observed."
+  ],
+  "wholeSiteRound1EvidenceSummary": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "status": "passed",
+      "nativeActions": 387,
+      "originals": 15,
+      "consoleErrors": 0,
+      "httpErrors": 0,
+      "requestFailures": 0
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "status": "passed",
+      "nativeActions": 387,
+      "originals": 15,
+      "consoleErrors": 0,
+      "httpErrors": 0,
+      "requestFailures": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": "passed",
+      "nativeActions": 387,
+      "originals": 15,
+      "consoleErrors": 0,
+      "httpErrors": 0,
+      "requestFailures": 0
+    }
+  ],
+  "originals": [
+    {
+      "path": "qa/game-report/round1-v2-chromium/home-393.png",
+      "sha256": "45708fb34fa1bdb75f585ded9272778901a9a766d1b42ac544bf546d643f8c04",
+      "bytes": 1798763,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/nfl-393.png",
+      "sha256": "a6bf9c6c173d5f6baecacda5a5520153e468b0c39a299c19f61ff27a46e79c7f",
+      "bytes": 1200532,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/team-dallas-393.png",
+      "sha256": "fd37d4b0b6239efd4565d24420ab858b6976f94a2ba4713afc72d9612627ed11",
+      "bytes": 1163257,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-top.png",
+      "sha256": "81b4cd32d0c889ec586655fcdf4738ba635a0cfc4e70b6d63ec0de4998b71fd8",
+      "bytes": 1274013,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": true
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-snapshot.png",
+      "sha256": "354c6dad710df2f13486eb4d1ce94f56260e143a035a3f70964008d6ab947c7a",
+      "bytes": 1274305,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-comparison.png",
+      "sha256": "2991241d076cafd8b02160ac5150992dd127128a3ccdccdb9797bc5bf3eeae26",
+      "bytes": 1275311,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-players.png",
+      "sha256": "54f17022e5ff938dea999c7d57867f932716872b32d3079da8868b8bf51c4d50",
+      "bytes": 1241772,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-quarters.png",
+      "sha256": "998861ff2cd9c9804417f9a38767060fc66920e37d1f77d4c2374200e5c19995",
+      "bytes": 818095,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-393-bottom.png",
+      "sha256": "3ca23b93a041b4d78cf70c9e96bf8339a6d596aba7ba591b5fcab7142bf666cd",
+      "bytes": 818380,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-box-score-393.png",
+      "sha256": "e2487a7343edade3d278f0d41a73ccd60c31eed21c8d40885e2948143ba91af9",
+      "bytes": 469939,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": true
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-drives-393.png",
+      "sha256": "0620e84542f2ef53644e03efb55ffe0175f9b2f2d54b62b2fbbbbbe6cfa125d5",
+      "bytes": 607419,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-plays-393.png",
+      "sha256": "215e45b13997a055f0f28ddab1c5f49238bc106dbadab4186e6b6e7ed1d85e58",
+      "bytes": 518072,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-overtime-393.png",
+      "sha256": "a760f746c943c3558580df5d1f1751218d2736c8c7addcf8709ea304f6b14d76",
+      "bytes": 1289897,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/matchup-393.png",
+      "sha256": "4845ddee3514ca5acac8309ac57892e2b0633584b352fa9dde9f1e526952289e",
+      "bytes": 979966,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/steelers-research-393.png",
+      "sha256": "2d2e39f1bbae90c383caa9f7beed5be3b6c3bf00a42ca7d7a951f68105da3403",
+      "bytes": 430183,
+      "nativeDimensions": [
+        786,
+        1704
+      ],
+      "viewport": {
+        "width": 393,
+        "height": 852
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/home-430.png",
+      "sha256": "ce16728fe8871c1286b818e1498b7b44459cfdb7423fd9d54a1453cdf071d9e0",
+      "bytes": 2106036,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/nfl-430.png",
+      "sha256": "414eb6f8fb9bbf7e0345231f8e2841018c6bb79c6f3cb3502af4f9ea3db19633",
+      "bytes": 1335705,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/team-dallas-430.png",
+      "sha256": "dfc69d18b3b9ecbe27e012edfa682f047c19e0504cac1e57983db8813f02a22d",
+      "bytes": 1320610,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-top.png",
+      "sha256": "d9c5b6fdb5143cc35dd4e3451359d7e8c11e6e742aae3daed85f7cb3785704a9",
+      "bytes": 1450426,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-snapshot.png",
+      "sha256": "37ebc403f0b6a52c3db953cf9003b46504f8930c55b6e4e012782744fd0020be",
+      "bytes": 1451016,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-comparison.png",
+      "sha256": "6dfcb936b92de6eecdaca85f98d69aa053f10a9310265827f4142b7021c37bf2",
+      "bytes": 1451888,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-players.png",
+      "sha256": "e9a160acbcd59d7fa91081971ef721a41941bbce19b3bf04720e57451d4c96a0",
+      "bytes": 1453036,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-quarters.png",
+      "sha256": "939ae32d3c13c690f2bcd138d11ffe9720ac62f039bd3372efd5f5e219c2c904",
+      "bytes": 1237567,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-430-bottom.png",
+      "sha256": "a6d45fbf491216184dc346e8e2e263d652d434aa88bf460c415bdf5f0b1158e2",
+      "bytes": 1065431,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": true
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-box-score-430.png",
+      "sha256": "c65bac79dc058df3e38e2f2f647326f685565cb1f160f384409ee3ff4d420aac",
+      "bytes": 518450,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-drives-430.png",
+      "sha256": "55d0eb4409d4046b1ea1c8c08e647fe8f1ca21271406435b7c8e01566392d0bf",
+      "bytes": 674262,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-plays-430.png",
+      "sha256": "34e86671410d3ee9ff664352bc57a9f42dcaa6c155b6990d6420afb72ce4be1b",
+      "bytes": 578592,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-overtime-430.png",
+      "sha256": "108255527fcf7f7c2548b105ad3a0329aa67510916517f435df21948c8cc4c65",
+      "bytes": 1463642,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": true
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/matchup-430.png",
+      "sha256": "48bf54adff338a231f8d7bed69fb16a0ab9ca63b0637c69c9114fc3fcb24d7e3",
+      "bytes": 1090591,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/steelers-research-430.png",
+      "sha256": "47032ac9d00e82d6b4af0803c0f70127296db3f4ddff117db108e23f2b594ea4",
+      "bytes": 471733,
+      "nativeDimensions": [
+        860,
+        1792
+      ],
+      "viewport": {
+        "width": 430,
+        "height": 896
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/home-1440.png",
+      "sha256": "a05f1b4765062522cc550218755d099a06be6d4118a7227ef0720dd94918f7e4",
+      "bytes": 2959967,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/nfl-1440.png",
+      "sha256": "ac0018a204ed16ab6c4377cde568cdfeb3926d767a2aaa77c22c3a056c850fd1",
+      "bytes": 1743642,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/team-dallas-1440.png",
+      "sha256": "68cffe87566a385086b85c270d1b12e7da70461ba95b5cb4838d75468ca8b773",
+      "bytes": 1685537,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-top.png",
+      "sha256": "c9e00eba766527a031c50324f9b508aad11a48f0c86ee634a6b48cf736c170e7",
+      "bytes": 1924044,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": true
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-snapshot.png",
+      "sha256": "dff124c01cac4c68ceb3361ad6f00154e2c17a17097774e7ec2f0a143214e9fc",
+      "bytes": 1925190,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-comparison.png",
+      "sha256": "04e4c9a7a13b17bbbb53990b4f16be86caba15279959730501ffce16aa409a3a",
+      "bytes": 1926317,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-players.png",
+      "sha256": "4a2ac347b8ad1533201edb255647f96bee53655fe79c75ae52212ae9cea9da2e",
+      "bytes": 1922769,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-quarters.png",
+      "sha256": "738b21feafd4cb6764713e06f509eb0ce9fcf458048534b21b9ab88bc613a603",
+      "bytes": 1455389,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-dal-hou-1440-bottom.png",
+      "sha256": "da34a83243f0c38a8f4725c9b694200e06af00da08d62e14ddec24da040e000c",
+      "bytes": 1455262,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-box-score-1440.png",
+      "sha256": "1782cd90fb1c79d853e72e5b1cdb634fb721fad3254d6f1dab7c896e8be94554",
+      "bytes": 1023960,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-drives-1440.png",
+      "sha256": "c4d121d5b2ccfc8b71dc5d7b8799c09f98705b80bfe7df37311ecc854fa3daa4",
+      "bytes": 1151957,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-plays-1440.png",
+      "sha256": "0f50bf6102f15e34ca4fbffdb44f5da252f711b017060a4c01e544712811bcae",
+      "bytes": 1098511,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/game-report-overtime-1440.png",
+      "sha256": "8f30c68d81499a482c9156027e76e90e1904ffea0af7d8d1ca247c10d65c7aa7",
+      "bytes": 1929688,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/matchup-1440.png",
+      "sha256": "aea83b77b50f49bc095cb60de54158fc88210375b7978893ded1c5a7d2c134a6",
+      "bytes": 1499896,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    },
+    {
+      "path": "qa/game-report/round1-v2-chromium/steelers-research-1440.png",
+      "sha256": "808278edf6ab90ce73a9e060895b25042807c6e17d12c2adb3cd42357a45392a",
+      "bytes": 1306915,
+      "nativeDimensions": [
+        2880,
+        1800
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "visuallyViewed": false
+    }
+  ],
+  "qualifications": {
+    "approvedSource": "Latest user chat Game Report attachment; no local approved attachment binary or registered pixel identity.",
+    "pixelIdenticalToApprovedRender": false,
+    "physicalIPhone": false,
+    "actualDeviceFPS": false,
+    "independentWholeSiteRound2": "Separate gate owned by the second auditor; this receipt does not claim its result.",
+    "actualHostedQA": false,
+    "visualInspectionMethod": "Four final phone PNG originals were requested at original detail; one desktop original was viewed for framing and was resized only by the system display. All45 original body hashes and2\u00d7geometry were verified independently. Earlier six V3 originals cover every component at both phone widths.",
+    "emptyEquipment": "Generated decorative equipment, not official product/venue/player photography. Original official vector marks remain separate.",
+    "remainingDensity": "Accepted qualitative material/density improvement remains explicit in the V3 review; this bridge does not replace truthful data to force sample-render height."
+  },
+  "noRuntimeEditsByReviewer": true
+}

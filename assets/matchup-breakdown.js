@@ -7,7 +7,7 @@
   const fmt = (value, digits = 0) => known(value) ? Number(value).toLocaleString('en-AU',{maximumFractionDigits:digits}) : '—';
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="${['calendar','stadium','shield','info'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
   const state = {team:'DAL',tab:'players',window:5,season:'cross',venue:'all',mode:'total',qb:'last5',player:null,kind:'receiving',game:null,returnRoute:'team/DAL',fromLadder:false,view:null};
-  let dataset = null, loading = null, error = null, lastCheck = 0, checkedAt = null, returnFocus = null, returnSelector = null;
+  let dataset = null, rawDataset = null, loading = null, error = null, lastCheck = 0, checkedAt = null, returnFocus = null, returnSelector = null;
   const active = () => !!page()?.classList.contains('active');
   const club = abbr => dataset?.teams?.[abbr || state.team];
   const identity = abbr => club(abbr) || window.PDApp?.getContext()?.data?.teams?.find(t => t.abbr === abbr) || {abbr,name:abbr,fullName:abbr};
@@ -40,7 +40,8 @@
   const availableGames = abbr => [...new Map([...allGames(abbr),...(club(abbr)?.headToHeadGames || [])].map(game => [game.id,game])).values()];
   function fixture() {
     const games = allGames(state.team);
-    return games.find(g => g.id === state.game) || games.find(g => g.id === club()?.researchGameId) || games.find(g => g.id === club()?.upcomingGameId) || games.filter(g => Number(g.season) === Number(dataset?.season) && !final(g) && !['cancelled','postponed'].includes(g.status)).sort((a,b) => String(a.kickoffUtc || a.gameday || '').localeCompare(String(b.kickoffUtc || b.gameday || '')))[0] || null;
+    if (state.game) return availableGames(state.team).find(g => g.id === state.game) || null;
+    return games.find(g => g.id === club()?.researchGameId) || games.find(g => g.id === club()?.upcomingGameId) || games.filter(g => Number(g.season) === Number(dataset?.season) && !final(g) && !['cancelled','postponed'].includes(g.status)).sort((a,b) => String(a.kickoffUtc || a.gameday || '').localeCompare(String(b.kickoffUtc || b.gameday || '')))[0] || null;
   }
   const otherTeam = () => fixture() ? opponentOf(fixture(),state.team) : null;
   const teamPair = () => [state.team,otherTeam()].filter(Boolean);
@@ -94,12 +95,12 @@
   function dateTime(game) {
     if (!game?.kickoffUtc || !Number.isFinite(Date.parse(game.kickoffUtc))) return 'Kickoff unavailable';
     const date = new Date(game.kickoffUtc);
-    return `${new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',day:'numeric',month:'short'}).format(date)} · ${new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(date)}`;
+    return `${new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',day:'numeric',month:'short',...(Number(game.season) !== Number(dataset?.season) ? {year:'numeric'} : {})}).format(date)} · ${new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(date)}`;
   }
   const button = (text,action,extra = '',cls = '') => `<button class="${cls}" data-mb-action="${action}" ${extra}>${escape(text)}${icon('chevron')}</button>`;
   const diamond = (text,action,extra = '',cls = '') => cls.includes('mb-continue') ? `<section class="mb-continue mb-framed">${button(text,action,extra,'mb-diamond-button')}</section>` : button(text,action,extra,`mb-diamond-button ${cls}`);
   function header() {
-    return `<div class="mb-ambient" aria-hidden="true"></div><header class="mb-brand"><img class="mb-brand-mark" src="assets/home/gate-brand.webp" alt="Project Dollar" width="1800" height="693"><p class="mb-brand-subtitle">SPORTS DATA & RESEARCH</p><button class="mb-back${state.team !== 'DAL' ? ' mb-back-wrap' : ''}" data-mb-action="back">${icon('back')} Back to ${escape(city(state.team))}</button><div class="mb-season"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500"><span>NFL<br>${dataset?.season || ''} REGULAR SEASON</span></div></header><div class="mb-breadcrumb mb-framed"><div class="mb-crumbs"><button data-mb-action="nfl">NFL</button>${icon('chevron')}<button data-mb-action="ladder">LADDER</button>${icon('chevron')}<button data-mb-action="back">${escape(panelName(state.team))}</button>${icon('chevron')}<button data-mb-action="fixture">${fixtureLabel(fixture())}</button></div></div>`;
+    return `<div class="mb-ambient" aria-hidden="true"></div><header class="mb-brand"><img class="mb-brand-mark" src="assets/home/gate-brand.webp" alt="Project Dollar" width="1800" height="693"><p class="mb-brand-subtitle">SPORTS DATA & RESEARCH</p><button class="mb-back${state.team !== 'DAL' ? ' mb-back-wrap' : ''}" data-mb-action="back">${icon('back')} Back to ${escape(city(state.team))}</button><div class="mb-season"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500"><span>NFL<br>${fixture()?.season || dataset?.season || ''} REGULAR SEASON</span></div></header><div class="mb-breadcrumb mb-framed"><div class="mb-crumbs"><button data-mb-action="nfl">NFL</button>${icon('chevron')}<button data-mb-action="ladder">LADDER</button>${icon('chevron')}<button data-mb-action="back">${escape(panelName(state.team))}</button>${icon('chevron')}<button data-mb-action="fixture">${fixtureLabel(fixture())}</button></div></div>`;
   }
   function fixtureHeader() {
     const game = fixture(), opponent = otherTeam();
@@ -109,7 +110,7 @@
     return `<div class="mb-tabs" role="tablist" aria-label="Matchup research">${[['form','Form & H2H'],['players','Players & QB'],['lineup','Lineup & Travel']].map(([value,label]) => `<button id="matchup-tab-${value}" data-mb-tab="${value}" role="tab" aria-controls="matchup-panel-${value}" aria-selected="${state.tab === value}" tabindex="${state.tab === value ? '0' : '-1'}">${label}</button>`).join('')}</div>`;
   }
   function context() {
-    return `<div class="mb-context"><div class="mb-settings mb-context-settings"><label>Window <select class="mb-select" id="matchup-window-select" aria-label="Matchup game window">${[3,5,10].map(n => `<option value="${n}" ${state.window === n ? 'selected' : ''}>Last ${n}</option>`).join('')}</select></label><div class="mb-mode-controls" role="group" aria-label="Matchup statistical presentation"><button data-mb-mode="total" aria-pressed="${state.mode === 'total'}">Totals</button><button data-mb-mode="average" aria-pressed="${state.mode === 'average'}">Per game</button></div><label><select class="mb-select" id="matchup-season-select" aria-label="Matchup season filter"><option value="cross" ${state.season === 'cross' ? 'selected' : ''}>Cross-season</option><option value="current" ${state.season === 'current' ? 'selected' : ''}>${dataset.season} only</option></select></label><label><select class="mb-select" id="matchup-venue-select" aria-label="Matchup venue filter">${[['all','All venues'],['home','Home'],['away','Away'],['neutral','Neutral']].map(([v,l]) => `<option value="${v}" ${state.venue === v ? 'selected' : ''}>${l}</option>`).join('')}</select></label></div><div class="mb-context-note mb-verification"><span>Last ${state.window} team games · GP = stat games · DNP ≠ 0</span><button data-mb-action="sources">${error ? 'RETAINED DATA · CHECK FAILED' : 'SOURCES'} · — UNAVAILABLE/DISPUTED ${icon('info')}</button></div></div>`;
+    return `<div class="mb-context"><div class="mb-settings mb-context-settings"><label>Window <select class="mb-select" id="matchup-window-select" aria-label="Matchup game window">${[3,5,10].map(n => `<option value="${n}" ${state.window === n ? 'selected' : ''}>Last ${n}</option>`).join('')}</select></label><div class="mb-mode-controls" role="group" aria-label="Matchup statistical presentation"><button data-mb-mode="total" aria-pressed="${state.mode === 'total'}">Totals</button><button data-mb-mode="average" aria-pressed="${state.mode === 'average'}">Per game</button></div><label><select class="mb-select" id="matchup-season-select" aria-label="Matchup season filter"><option value="cross" ${state.season === 'cross' ? 'selected' : ''}>Cross-season</option><option value="current" ${state.season === 'current' ? 'selected' : ''}>${dataset.season} only</option></select></label><label><select class="mb-select" id="matchup-venue-select" aria-label="Matchup venue filter">${[['all','All venues'],['home','Home'],['away','Away'],['neutral','Neutral']].map(([v,l]) => `<option value="${v}" ${state.venue === v ? 'selected' : ''}>${l}</option>`).join('')}</select></label></div><div class="mb-context-note mb-verification"><span>${fixture() && Number(fixture().season) !== Number(dataset.season) ? `Latest ${dataset.season} research snapshot · ` : ''}Last ${state.window} team games · GP = stat games · DNP ≠ 0</span><button data-mb-action="sources">${error ? 'RETAINED DATA · CHECK FAILED' : 'SOURCES'} · — UNAVAILABLE/DISPUTED ${icon('info')}</button></div></div>`;
   }
   function leaderPanel(abbr,kind) {
     const rows = leaders(abbr,kind), rush = kind === 'rushing';
@@ -248,7 +249,7 @@
   function footer() {
     const node = $('matchup-footer'); if (!node) return;
     const stale = dataset && Date.now()-Date.parse(dataset.retrievedAt)>12*60*60*1000;
-    node.innerHTML = `<button data-mb-action="sources">${icon('info')} Sources</button><span>${error ? 'RETAINED DATA · CHECK FAILED' : stale ? 'SNAPSHOT MAY BE STALE' : 'SOURCE-BACKED MATCHUP'} · ${dataset?.season || ''}<small>${escape(timestamp(dataset?.retrievedAt))}</small></span><button class="mb-refresh" data-mb-action="refresh" aria-label="Refresh verified matchup data" aria-busy="${!!loading}" aria-disabled="${!!loading}">↻</button>`;
+    node.innerHTML = `<button data-mb-action="sources">${icon('info')} Sources</button><span>${error ? dataset ? 'RETAINED DATA · CHECK FAILED' : 'DATA UNAVAILABLE · CHECK FAILED' : !dataset ? 'VERIFYING SOURCES' : stale ? 'SNAPSHOT MAY BE STALE' : 'SOURCE-BACKED MATCHUP'} · ${dataset?.season || ''}<small>${escape(timestamp(dataset?.retrievedAt))}</small></span><button class="mb-refresh" data-mb-action="refresh" aria-label="Refresh verified matchup data" aria-busy="${!!loading}" aria-disabled="${!!loading}">↻</button>`;
     node.dataset.checkedAt = checkedAt || '';
   }
   function ensureDialog() {
@@ -271,9 +272,11 @@
     document.dispatchEvent(new CustomEvent('pd:matchup-render',{detail:{team:state.team,tab:state.tab}}));
   }
   function sourceContent(ids = []) {
+    if (!dataset) return `<p>Matchup data could not be verified against the source disagreement catalog. No unchecked statistics are displayed.</p><p>${escape(error || 'Verification is still in progress.')}</p>${button('Retry verified data','refresh')}`;
     const sources = (dataset?.sources || []).filter(source => !ids.length || ids.includes(source.id));
-    const issues = (dataset?.disagreements || []).filter(issue => !issue.team || teamPair().includes(issue.team));
-    return `<p>${dataset?.season || ''} regular season · through Week ${dataset?.throughWeek ?? '—'}<br>Retrieved ${escape(timestamp(dataset?.retrievedAt))}${checkedAt ? `<br>Browser checked ${escape(timestamp(checkedAt))}` : ''}</p><p>Totals use published statistical rows; starts and snap-confirmed appearances are separate. GP counts source-recorded statistical games with at least one published numeric statistical field within the selected team-game window; snap-confirmed appearances and starts are tracked separately. A statistical row does not by itself confirm physical participation. Selected windows exclude preseason. Missing or disputed statistics, tracking, practice or inactives are unavailable. A statistical appearance is not proof of a start. No missing game is set to zero. Checks follow published source updates, not a connected live play-by-play feed.</p>${issues.length ? `<section class="mb-source-differences"><h3>SOURCE DISAGREEMENTS</h3>${issues.map(issue => `<p>${escape(issue.playerId ? `${playerById(issue.team || state.team,issue.playerId)?.name || issue.playerId} · ` : '')}${escape(issue.issue || issue.field)}${issue.gameId ? `<br>${escape(issue.gameId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action || 'Disputed value remains unavailable.')}</p>`).join('')}</section>` : ''}<ul class="mb-source-list">${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    const contextGames = new Set(teamPair().flatMap(abbr => [...availableGames(abbr),...players(abbr).flatMap(p => logs(p))]).map(gameId));
+    const issues = (dataset?.disagreements || []).filter(issue => issue.fromIntegrityCatalog ? contextGames.has(issue.gameId) || teamPair().includes(issue.team) : !issue.team || teamPair().includes(issue.team));
+    return `${error ? `<p class="mb-source-differences">${escape(error)}</p>` : ''}<p>${dataset?.season || ''} regular season · through Week ${dataset?.throughWeek ?? '—'}<br>Retrieved ${escape(timestamp(dataset?.retrievedAt))}${checkedAt ? `<br>Browser checked ${escape(timestamp(checkedAt))}` : ''}</p><p>Totals use published statistical rows; starts and snap-confirmed appearances are separate. GP counts source-recorded statistical games with at least one published numeric statistical field within the selected team-game window; snap-confirmed appearances and starts are tracked separately. A statistical row does not by itself confirm physical participation. Selected windows exclude preseason. Missing or disputed statistics, tracking, practice or inactives are unavailable. A statistical appearance is not proof of a start. No missing game is set to zero. Checks follow published source updates, not a connected live play-by-play feed.</p>${issues.length ? `<section class="mb-source-differences"><h3>SOURCE DISAGREEMENTS</h3>${issues.map(issue => issue.fromIntegrityCatalog ? window.PDSourceIntegrity.describeIssue(issue,escape,timestamp) : `<p>${escape(issue.playerId ? `${playerById(issue.team || state.team,issue.playerId)?.name || issue.playerId} · ` : '')}${escape(issue.issue || issue.field)}${issue.gameId ? `<br>${escape(issue.gameId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action || 'Disputed value remains unavailable.')}</p>`).join('')}</section>` : ''}<ul class="mb-source-list">${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   const rowSourceIds = rows => [...new Set(rows.flatMap(row => [...(row.sourceIds || []),...(row.appearance?.sourceIds || []),...(row.started?.sourceIds || []),...Object.values(row.advancedProvenance?.fieldSources || {}).flat(),...(row.disagreements || []).flatMap(issue => issue.sourceIds || [])]))];
   const humanField = key => String(key).replace(/([A-Z])/g,' $1').replace(/^./,c => c.toUpperCase());
@@ -326,12 +329,12 @@
       title = game ? `${game.away_team} at ${game.home_team} · Week ${game.week}` : 'Game unavailable'; content = reportContent(game,abbr);
     } else if (action === 'schedule') {
       title = `${identity(abbr).fullName} · ${dataset.season} schedule`;
-      content = `<table><thead><tr><th>WEEK</th><th>OPPONENT</th><th>KICKOFF / RESULT</th></tr></thead><tbody>${allGames(abbr).filter(g => Number(g.season) === Number(dataset.season)).sort((a,b) => Number(a.week)-Number(b.week)).map(g => `<tr><th>W${g.week}</th><td>${venueOf(g,abbr) === 'away' ? '@ ' : ''}${escape(opponentOf(g,abbr))}${venueOf(g,abbr) === 'neutral' ? ' (N)' : ''}</td><td>${final(g) ? escape(score(g,abbr)) : escape(dateTime(g))}<button data-mb-action="report" data-mb-team="${escape(abbr)}" data-mb-game="${escape(g.id)}">Open game ${icon('chevron')}</button></td></tr>`).join('')}</tbody></table>${sourceContent()}`;
+      content = `<table><thead><tr><th>WEEK</th><th>OPPONENT</th><th>KICKOFF / RESULT</th></tr></thead><tbody>${allGames(abbr).filter(g => Number(g.season) === Number(dataset.season)).sort((a,b) => Number(a.week)-Number(b.week)).map(g => `<tr><th>W${g.week}</th><td>${venueOf(g,abbr) === 'away' ? '@ ' : ''}${escape(opponentOf(g,abbr))}${venueOf(g,abbr) === 'neutral' ? ' (N)' : ''}</td><td>${final(g) ? escape(score(g,abbr)) : escape(dateTime(g))}<button data-mb-action="${final(g) ? 'report' : 'open-matchup'}" data-mb-team="${escape(abbr)}" data-mb-game="${escape(g.id)}">${final(g) ? 'Open game report' : 'Open matchup'} ${icon('chevron')}</button></td></tr>`).join('')}</tbody></table>${sourceContent()}`;
     }
     return {title,content};
   }
   function show(action,node,preserveView = false) {
-    if (!dataset) return;
+    if (!dataset && action !== 'sources') return;
     const dialog = ensureDialog(); if (!dialog) return;
     const wasOpen = dialog.open, focused = wasOpen && dialog.contains(document.activeElement) ? document.activeElement : null;
     const focusedHref = focused?.matches('a[href]') ? focused.getAttribute('href') : null, focusedSelector = focused ? focusSelector(focused) : null;
@@ -377,11 +380,13 @@
       try {
         const response = await fetch('assets/data/matchup-breakdown.json',{cache:'no-cache',signal:controller.signal});
         if (!response.ok) throw new Error(`Verified matchup feed returned HTTP ${response.status}`);
-        const value = await response.json();
-        if (value.schemaVersion !== 1 || !value.teams?.DAL?.games || !Number.isFinite(Date.parse(value.retrievedAt)) || !Array.isArray(value.sources) || !value.sources.length) throw new Error('Verified matchup dataset is invalid');
+        const bytes = await response.arrayBuffer(), raw = JSON.parse(new TextDecoder().decode(bytes));
+        if (raw.schemaVersion !== 1 || !raw.teams?.DAL?.games || !Number.isFinite(Date.parse(raw.retrievedAt)) || !Array.isArray(raw.sources) || !raw.sources.length) throw new Error('Verified matchup dataset is invalid');
+        if (!window.PDSourceIntegrity) throw new Error('Source integrity verification is unavailable');
+        const value = await window.PDSourceIntegrity.apply('matchup-breakdown',raw,bytes,{signal:controller.signal});
         if (dataset && Date.parse(value.retrievedAt)<Date.parse(dataset.retrievedAt)) throw new Error('Older matchup snapshot rejected; preceding verified data retained');
-        const changed = !dataset || JSON.stringify(dataset)!==JSON.stringify(value), recovered = error !== null, open = state.view;
-        if (changed) dataset = value;
+        const changed = !window.PDSourceIntegrity.sameSnapshot(dataset,value), recovered = error !== null, open = state.view;
+        if (changed) dataset = value; rawDataset = raw;
         error = null; checkedAt = new Date().toISOString(); document.documentElement.dataset.matchupDataReady = 'true';
         if (active() && (changed || recovered)) {render();if(open)show(open.action,{dataset:open.attrs},true);}
         document.dispatchEvent(new CustomEvent('pd:matchup-data-ready',{detail:{changed,recovered,checkedAt,reason:force ? 'manual-or-source' : 'entry-or-poll'}}));
@@ -416,6 +421,24 @@
     if (action === 'players' || action === 'matchups') return changeTab('players');
     if (action === 'insights') {changeTab('players',false);$('matchup-qb-panel')?.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});page()?.querySelector('[data-mb-qb]')?.focus({preventScroll:true});return;}
     if (action === 'refresh') {if(!loading)refresh(true);return;}
+    if (action === 'open-matchup') {
+      if ($('matchup-breakdown-dialog')?.open) $('matchup-breakdown-dialog').close();
+      enter(node.dataset.mbTeam || state.team,node.dataset.mbGame);
+      return;
+    }
+    if (action === 'report' && window.PDApp?.openGameReport) {
+      const abbr = node.dataset.mbTeam || state.team, game = availableGames(abbr).find(row => row.id === node.dataset.mbGame);
+      if (game && final(game)) {
+        if ($('matchup-breakdown-dialog')?.open) $('matchup-breakdown-dialog').close();
+        window.PDApp.openGameReport(abbr,game.id);
+        return;
+      }
+    }
+    if (action === 'fixture' && window.PDApp?.openGameReport && final(fixture())) {
+      const game = fixture();
+      window.PDApp.openGameReport(state.team,game.id);
+      return;
+    }
     if (action) show(action,node);
   });
   document.addEventListener('change',event => {
@@ -433,6 +456,6 @@
   window.addEventListener('focus',() => {if(active())refresh();});
   window.addEventListener('online',() => {if(active())refresh(true);});
   setInterval(() => {if(!document.hidden && active())refresh();},90000);
-  window.MatchupBreakdown = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getSelectedGames:selectedGames,getFixture:fixture,getFixtureReport:() => reportedEvent(fixture()),getLeaders:leaders,getQBSummary:abbr => qbSummary(abbr,projectedQB(abbr).player)};
+  window.MatchupBreakdown = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getRawDataset:() => rawDataset,getSelectedGames:selectedGames,getFixture:fixture,getFixtureReport:() => reportedEvent(fixture()),getLeaders:leaders,getQBSummary:abbr => qbSummary(abbr,projectedQB(abbr).player)};
   if (/^#matchup\//i.test(location.hash)) route(location.hash.slice(1));
 })();

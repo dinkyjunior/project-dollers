@@ -1,0 +1,58 @@
+{
+  "createdAt": "2026-10-12T07:48:57.520950+00:00",
+  "helperSha256": "21ffe702bf66e31336fa3757d4657f3e3663bb06f960d6b1804454257868a9e2",
+  "cases": [
+    {
+      "case": "metadata-only",
+      "passed": true,
+      "exitCode": 0,
+      "status": "passed",
+      "error": null,
+      "receiptSha256": "0fbc9904e8ef0ea5d7dfbd1e9df254bb838749562e247717abbf358171c1aa57"
+    },
+    {
+      "case": "changed-player-stat",
+      "passed": true,
+      "exitCode": 2,
+      "status": "needs_targeted_data_review",
+      "error": null,
+      "receiptSha256": "fe82c83661abd357192086f2e55e8e30f3ef85d4b0e557127de729fc8f346275"
+    },
+    {
+      "case": "swapped-source-readings",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "Named source/value mapping: 2006_13_TB_PIT/0",
+      "receiptSha256": "629284afdd23d5f62f86aaea9d745be7c00ec1f776ed979b469ab47c43e76d56"
+    },
+    {
+      "case": "wrong-source-event-url",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "ESPN selected-event URL: 2026_04_DAL_HOU",
+      "receiptSha256": "2b27e51d9b55408b35cfa691f75da8ae61503ddc20b70b8731feebaf3e6f8347"
+    },
+    {
+      "case": "unresolvable-player-field-source",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "Unresolvable report/field source reference: 2026_04_DAL_HOU",
+      "receiptSha256": "fec1b8943e009b9b14d5dbfc9d99233a812f92131f00594fe9271c5c5529774d"
+    },
+    {
+      "case": "removed-retained-archive",
+      "passed": true,
+      "exitCode": 1,
+      "status": "failed",
+      "error": "Previously addressable reports disappeared: ['2006_11_ATL_BAL']",
+      "receiptSha256": "593de7e791acda17e1d619cc0a64875f6339102f1e1fd0ee5a9503b5bdc11588"
+    }
+  ],
+  "passed": true,
+  "productionUnchanged": true,
+  "scope": "Six new outside-repository isolated fixtures; book/detail symlinks read-only except detached individual fake copies; no provider requests, refresh build or browser",
+  "qualification": "The metadata-only timestamp and modified player value are controlled fixtures, not historical-source claims."
+}

@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-12T08:21:54.004719+00:00",
+  "kind": "bounded-independent-static-prelaunch-review",
+  "status": "passed",
+  "nativeBrowserLaunchedByReviewer": false,
+  "appOrConsumedHelperEdited": false,
+  "sourceHashes": {
+    "qa/game-report/independent/round2-nfl-final-native.cjs": "7c2603132377e6bf87c22b53bc21ed935d28d709b16675466085b9e528923f55",
+    "qa/game-report/independent/native-nfl-controls-final.cjs": "826c8342ac08a5ca5c9314d57f88208b4f4af65f830eb807bbf676d9d2f2c5d2"
+  },
+  "checks": [
+    "Both preceding native receipts must be closed/sourceStable and failed statuses retained; current731 runtime must equal both prior finalSource manifests.",
+    "Each intermediate viewport must contain only the diagnosed NFL select-option-timeout failure, with no unrelated failed scope or native/browser/HTTP/genuine request failures.",
+    "Only NFL control audit executes; no previously completed report/profile/history/other page audit is repeated.",
+    "All division/form/sort/week selections use actual native offered values; dynamic conference-qualified divisions are checked against frozen team metadata.",
+    "Standings row identities,W/L/ties,PCT,PF/PA/difference,recent form and metric ordering are independently checked against frozen source rows/final-score cohorts.",
+    "All tabs and ladder QB/RB/WR expansion/collapse use actual controls; every expanded leader row/name/yards/TD is checked.",
+    "Final Dallas expansion and routed TeamDetails identity are checked.",
+    "Genuine original capture waits visible image decode before finite-entry/two-frame/unpaused PNG; geometry names use real native labels.",
+    "Frozen source manifests and executed-helper/module hashes checked at close; native error/HTTP/genuine transport failures remain fatal."
+  ],
+  "rawCohortCompatibility": {
+    "season": 2026,
+    "sourceWeekSnapshots": 18,
+    "teamSnapshotCasesVerified": 576,
+    "completeFinalScoreCohorts": true,
+    "qualification": "Read-only JSON check validates the helper expectation against actual frozen core source; it is not native execution."
+  },
+  "criticalIssueFound": false,
+  "qualification": "Bounded prelaunch review only. Actual source-backed UI effects and NFL-only successful closure remain the sole browser owner\u2019s work."
+}

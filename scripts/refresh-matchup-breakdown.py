@@ -806,23 +806,36 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
         chosen = {game["id"] for game in starting_games[:5]}
         chosen.update(game["id"] for game in [game for game in starting_games
             if opponent in (game["home_team"], game["away_team"])][:5])
-        for game in starting_games:
+        reviewed_candidates = {item["gameId"]: item for item in role_evidence["contradictions"]
+                               if player_id in {item["primaryQBId"], item["secondaryQBId"]}
+                               and item["gameId"] in final_games}
+        chosen.update(reviewed_candidates)
+        candidate_games = {game["id"]: game for game in starting_games}
+        candidate_games.update({game_id: final_games[game_id] for game_id in reviewed_candidates})
+        for game in candidate_games.values():
             if game["id"] not in chosen or game["id"] in histories[player_id]:
                 continue
             raw = raw_games[game["id"]]
-            team = game["home_team"] if raw.get("home_qb_id") == player_id else game["away_team"]
+            reviewed = reviewed_candidates.get(game["id"])
+            home_candidates = {player_id} if not reviewed else {reviewed["primaryQBId"], reviewed["secondaryQBId"]}
+            if reviewed and not home_candidates.intersection({raw.get("home_qb_id"), raw.get("away_qb_id")}):
+                raise ValueError(f"Reviewed starting-role candidates have no source-designated game team: {game['id']}")
+            team = game["home_team"] if raw.get("home_qb_id") in home_candidates else game["away_team"]
+            candidate_sources = ["nflverse_games"] + ([reviewed["sourceId"]] if reviewed else [])
+            candidate_note = ("Reviewed starting-role candidate; no weekly statistical row or confirmed participation."
+                              if reviewed else "Provider-designated starting QB; no weekly statistical row.")
             entry = {"gameId": game["id"], "season": game["season"], "week": game["week"], "team": team,
                      "opponent": game["away_team"] if team == game["home_team"] else game["home_team"],
                      "kickoffUtc": game["kickoffUtc"], "homeAway": "neutral" if game.get("neutral") else "home" if team == game["home_team"] else "away",
                      "espnEventId": str(game["espnEventId"]) if game.get("espnEventId") else None,
-                     "stats": dict.fromkeys(sorted(DISPLAY_STATS)), "sourceIds": ["nflverse_games"],
-                     "appearance": {"status": "unavailable", "sourceIds": ["nflverse_games"],
-                                    "note": "Provider-designated starting QB; no weekly statistical row. No zero statistics or statistical GP invented."},
-                     "provenance": source_provenance(["nflverse_games"], sources, game["season"], game["week"], "reported",
-                                                     "Published schedule-designated QB identity and game context; starting-role corroboration and player statistics evaluated separately")}
+                     "stats": dict.fromkeys(sorted(DISPLAY_STATS)), "sourceIds": candidate_sources,
+                     "appearance": {"status": "unavailable", "sourceIds": candidate_sources,
+                                    "note": candidate_note + " No zero statistics or statistical GP invented."},
+                     "provenance": source_provenance(candidate_sources, sources, game["season"], game["week"], "reported",
+                                                     "Published game context and reported starting-role candidates; role corroboration and player statistics evaluated separately")}
             histories[player_id][game["id"]] = entry
-            missing_start_rows.append({"playerId": player_id, "gameId": game["id"], "sourceIds": ["nflverse_games"],
-                                       "note": "Schedule-designated starting-role candidate with unavailable statistical row; no zero values or statistical GP"})
+            missing_start_rows.append({"playerId": player_id, "gameId": game["id"], "sourceIds": candidate_sources,
+                                       "note": candidate_note + " No zero values or statistical GP."})
     final_basic_disagreements, final_basic_coverage = final_boxscore_statistics(histories, final_games, bodies, sources, espn_ids,
         {pid: player_clubs[pid] for pid in current_ids})
     missing_start_rows = [item for item in missing_start_rows if not any(value is not None
@@ -849,6 +862,10 @@ def build(base, team_details, bodies, source_list, dependencies, previous=None):
         # trimming. Unknown recent roles cannot disappear in favour of older ones.
         retained.update(item["gameId"] for item in role_evidence["contradictions"]
                         if player_id in {item["primaryQBId"], item["secondaryQBId"]})
+        # Keep the actual source-designated candidate slots whose missing-stat
+        # coverage was emitted above. Weekly opponent changes must not leave
+        # dangling diagnostics or silently replace unknown roles with old starts.
+        retained.update(item["gameId"] for item in missing_start_rows if item["playerId"] == player_id)
         for entry in archived:
             if entry["gameId"] not in retained:
                 del history[entry["gameId"]]

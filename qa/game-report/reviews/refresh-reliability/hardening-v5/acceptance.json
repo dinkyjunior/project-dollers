@@ -1,0 +1,49 @@
+{
+  "createdAt": "2026-10-12T06:14:48.066422+00:00",
+  "verdict": "accepted",
+  "scriptSha256": "fbc275811d8d9739d04044f04121d3772eded7a8318f90d81626a7c42167f39e",
+  "indexSha256": "6d8fd68e25262832a154f63e3824df75bf383088f9e38bb6512fa4cbff83ac9b",
+  "reliabilityCases": 67,
+  "catalogValidationCases": 11,
+  "totalCases": 78,
+  "failureCount": 0,
+  "caseReceiptSha256": "b94ce22e64a590040471cb389dfb67d6b1e13bea8ce367736b7511ed7bfd0a6d",
+  "catalogReceiptSha256": "caaa9e0c926ef4152000168984e9370c177cdd987147fc5d85898815f864fd0b",
+  "helperSha256": "7ff2b3b3b0bddcf2b92851a81c2619b29fd9b6ee28c8298ab22fa5aa46701cd5",
+  "catalogHelperSha256": "299cb18832463fa006f443d3aba0ce52bb9f4f5f78538e68f17e6a62bbbe35b2",
+  "productionInputsUnchanged": true,
+  "sourceStable": true,
+  "currentCheck": {
+    "games": 444,
+    "verified": 444,
+    "players": 28405,
+    "plays": 80462,
+    "drives": 9504,
+    "quarterChecks": 888
+  },
+  "catalog": {
+    "rows": 109,
+    "trueConflicts": 18,
+    "venueLabelDisclosures": 91,
+    "knownBasicConflictsInherited": 5,
+    "modifiedReports": 3
+  },
+  "checked": [
+    "Original44 parser/cache/outage/TLS/index-only/staging rollback cases remain passed",
+    "All5 inherited basic conflicts mask only exact game/team/GSIS-to-ESPN player fields; retain unrelated facts, alternative source evidence and original retrieval timestamps",
+    "Reconciliation is idempotent and refuses wrong event/team/canonical identity",
+    "Current109 catalog rows bind report SHA, detail URL, season/week and canonical player identity",
+    "Explicit readings map inherited alternatives to correct sources rather than list position: Watson sack yards54nflverse/53ESPN, fumbles4nflverse/3ESPN",
+    "Whole444 isolated corrected corpus and current actual --check pass",
+    "Omitted rows, changed catalog context/body hash/alternatives/dependencies and absent catalog rejected",
+    "Player-history byte changes rejected by dependency binding",
+    "Missing known-conflict propagation rejected even after body/catalog checksums rebound"
+  ],
+  "preservedPreviousReviews": [
+    "hardening-v3/acceptance.json",
+    "hardening-v4/receipt.json",
+    "hardening-v4/catalog-validation-receipt.json"
+  ],
+  "v4Qualification": "a2e69e0 lacked explicit source readings; later v4 catalog-validator imported fbc while using a2-reconciled fixtures and correctly rejected missing new reading evidence. Neither diagnostic receipt was accepted. v5 creates fresh fixtures and binds final source through all checks.",
+  "isolation": "Temporary fixture roots under hardening-v5 only. Saved pre-integrity3 original report copies used to challenge exact propagation. No provider/browser, app/data mutation or production generation."
+}

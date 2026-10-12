@@ -32,19 +32,22 @@
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
+    <link rel="stylesheet" href="assets/game-report.css?v=20261012-v1" />
     <link rel="stylesheet" href="assets/home-aperture.css?v=jewels-20261011-v1" />
     <link rel="stylesheet" href="assets/home-gem-controls.css?v=jewels-20261011-v1" />
     <link rel="stylesheet" href="assets/home-gem-layout.css?v=jewels-20261011-v1" />
     <link rel="stylesheet" href="assets/home-aperture-motion.css?v=jewels-20261011-v1" />
     <link rel="stylesheet" href="assets/home-brand-lighting.css?v=jewels-20261011-v1" />
-    <script src="assets/team-details.js?v=matchup-20261009-v1" defer></script>
+    <script src="assets/source-integrity.js?v=20261012-v1" defer></script>
+    <script src="assets/team-details.js?v=report-20261012-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/nfl-dashboard.js?v=matchup-20261009-v1" defer></script>
-    <script src="assets/app.js?v=matchup-20261009-v1" defer></script>
-    <script src="assets/matchup-breakdown.js?v=20261009-v1" defer></script>
+    <script src="assets/nfl-dashboard.js?v=report-20261012-v1" defer></script>
+    <script src="assets/game-report.js?v=20261012-v1" defer></script>
+    <script src="assets/app.js?v=report-20261012-v1" defer></script>
+    <script src="assets/matchup-breakdown.js?v=report-20261012-v1" defer></script>
     <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
     <script src="assets/home-interactions.js?v=gem-20261009-v1" defer></script>
@@ -398,6 +401,9 @@
         <div class="page-scroll"><div class="matchup-breakdown-content" id="matchup-breakdown-content"><p class="notice">Loading verified matchup research…</p></div></div>
         <nav class="bottom-nav mb-bottom-nav mb-framed" id="matchup-bottom-nav" aria-label="Matchup navigation"></nav>
         <footer class="mb-footer" id="matchup-footer">Source-backed matchup research · missing fields remain unavailable</footer>
+      </section>
+      <section class="page game-report-page" data-page="game-report" aria-label="NFL game report" hidden>
+        <div class="page-scroll"><div class="game-report-content" id="game-report-content"><p class="notice">Loading verified game report…</p></div></div>
       </section>
     </main>
     <dialog id="about-dialog" aria-labelledby="about-title">

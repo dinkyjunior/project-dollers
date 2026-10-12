@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-12T07:35:00.944559+00:00",
+  "kind": "independent-static-review-of-native-helper-and-focused-retry-plan",
+  "nativeBrowserUsedByReviewer": false,
+  "applicationOrConsumedHelperEdits": false,
+  "observedRun": {
+    "path": "qa/game-report/independent/round2-final-webkit/results.json",
+    "statusAtReview": "running",
+    "browserClosedAtReview": false,
+    "qualification": "The running evidence has not closed. Failure classification and prefix inventory are bounded to the completed first phone; final composition must read the closed immutable receipt for every viewport."
+  },
+  "reviewedHelperHashes": {
+    "qa/game-report/independent/round2-native.cjs": "7a705efbea1b1e36b7ab85403a245af2d0a4fb1bce628f7bd3d0fd179ac5fb3a",
+    "qa/game-report/independent/native-integrity-audit.cjs": "758fc69b4d43502f2076926374fa13a7194bad028001d04af7c4e737e1c75d05",
+    "qa/game-report/independent/native-full-box-audit.cjs": "e39c6f27fb25dbf3bbd51d729a33969eb365fbe1ea21463b24189d632e63d7f6",
+    "qa/game-report/independent/native-visible-motion-audit.cjs": "b7d5d3bad908adda8520e8c17ce53c1322f04f11b2e5452edf4e09875db224a9"
+  },
+  "corrections": [
+    {
+      "site": "round2-native.cjs:55, play paragraph audit",
+      "cause": "Rendered innerText collapses source-leading whitespace, although production puts the original escaped provider text directly in p.",
+      "boundedCorrection": "Capture both p.textContent and p.innerText. Compare textContent exactly to independently frozen play.text. Compare visible text only after explicitly bounded whitespace normalization; never relax any substantive character, selected event, row count or quarter assertion. Recheck all selected-event play paragraphs/quarters, not full primary/full-box profile walks."
+    },
+    {
+      "site": "round2-native.cjs:24, generic control name audit",
+      "cause": "Native select innerText is empty in this engine. Actual NFL selects already have browser-associated wrapper labels with sr-only accessible text.",
+      "boundedCorrection": "Resolve aria-labelledby references and aria-label, then native HTML control.labels associations, then actual button/summary text as appropriate. Retain provenance of which name source was used. Do not accept selected option text alone as an accessible name. Do not add labels or change production DOM."
+    },
+    {
+      "site": "round2-native.cjs:24 and :32, Steelers tab image readiness",
+      "cause": "Geometry runs immediately after a native tab switch and requires newly inserted images to be decoded. checkVisibility alone also includes offscreen lazy images.",
+      "boundedCorrection": "After each image-bearing tab/filter change, wait with a bounded timeout for actual viewport and page-scroll clip intersecting images to complete and have positive natural dimensions. Keep offscreen pending/lazy images recorded separately; verify them when genuinely scrolled into view. Preserve original sources, native load/paint and actual image failure assertions; no forced fetch, source substitutions, styling or clock changes."
+    },
+    {
+      "site": "native-integrity-audit.cjs: initial prerequisite",
+      "cause": "Audit assumes preceding Steelers section loaded the full player-history bundle. That section exited during the first schedule geometry assertion.",
+      "boundedCorrection": "Focused wrapper must navigate to real Steelers roster and open an actual player research card by native input. Wait for ready research plus PD_HISTORY and PD_HISTORY_RAW with verified source-integrity status. Then original native audit checks exact raw canonical hash and every effective mask; do not inject history or downgrade the missing-payload assertion."
+    }
+  ],
+  "firstPhoneEvidence": {
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "errorsAtCompletedContext": [],
+    "httpFailuresAtCompletedContext": [],
+    "genuineTransportFailuresAtCompletedContext": [],
+    "fullyPassedSections": [
+      "Unchanged Home all sports and native NFL entry",
+      "Team controls and every visible previous-game report",
+      "Matchup QB/advanced/player controls and every Form/H2H report"
+    ],
+    "failedSections": [
+      {
+        "name": "Independent new Game Report",
+        "failure": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'B.Aubrey 39 yard field goal is GOOD, Center-T.Sieg, Holder-B.Anger.'\n- ' B.Aubrey 39 yard field goal is GOOD, Center-T.Sieg, Holder-B.Anger.'\n",
+        "classification": "helper-assumption or missing prerequisite, subject to focused native closure"
+      },
+      {
+        "name": "NFL standings controls and Dallas linked entry",
+        "failure": "Every visible button/select/summary has usable name",
+        "classification": "helper-assumption or missing prerequisite, subject to focused native closure"
+      },
+      {
+        "name": "Steelers full roster filter and player research regression",
+        "failure": "The expression evaluated to a falsy value:\n\n  assert.ok(g.images.every(i=>i.natural[0]>0&&i.natural[1]>0))\n",
+        "classification": "helper-assumption or missing prerequisite, subject to focused native closure"
+      },
+      {
+        "name": "Cross-screen verified source conflicts and native unavailable aggregates",
+        "failure": "Original consumer payload retained separately: player-history",
+        "classification": "helper-assumption or missing prerequisite, subject to focused native closure"
+      },
+      {
+        "name": "Direct routes and native refresh across existing screens",
+        "failure": "Every visible button/select/summary has usable name",
+        "classification": "helper-assumption or missing prerequisite, subject to focused native closure"
+      }
+    ],
+    "executedPrefixAcceptedCondition": "Final source stability and immutable executed-helper/module hashes must match. Game Report reached the play-text assertion after primary DAL/HOU category/profile/source/modal checks, full ten-category box/profile audit and drive expansion/collapse. The completed prefix is evidence of earlier assertions reaching success, even though the thrown section did not return its local result object."
+  },
+  "focusedNativeInventory": {
+    "gameReport": [
+      "All selected-event play paragraphs and known quarters; original plays screenshot.",
+      "Report tab ArrowRight/End/Home native keyboard semantics.",
+      "Full-box, comparison and plays CTAs, selected-event tab reload preservation.",
+      "Original unpaused normal/reduced/restored visible lighting frames and actual hidden-clock suspension.",
+      "Exact original matchup-query Back, browser Back to report.",
+      "Numeric ESPN and box-tab aliases; external-return safe fallback.",
+      "Missing and mismatched event truthful empty state and usable Sources dialog.",
+      "Every existing breadcrumb/bottom navigation destination and browser Back; exact historic Matchup context.",
+      "Insights/More controls.",
+      "Historical STL/OAK identity, source display abbreviations, canonical LA/LV routing and originals."
+    ],
+    "nfl": [
+      "Fresh original frame with actual associated native select names.",
+      "Both conferences, division/form/sort controls, old/current weeks, all tabs and QB/RB/WR leader expansion.",
+      "Full conference rows and actual Dallas linked entry."
+    ],
+    "steelers": [
+      "Every schedule/stats/matchups/roster tab with genuine image readiness.",
+      "All eight position filters, native actual player card, verified raw/effective history load.",
+      "Recent/opponent histories, complete-game expansion and untouched screenshot."
+    ],
+    "integrity": [
+      "Self-contained actual verified player-history prerequisite.",
+      "Every independent matrix raw/effective cell and exact source-book identity.",
+      "CLE own and NYJ allowed null aggregates in average/total, unrelated rushing remains.",
+      "Actual LV Bowers target unavailable with independent PBP metrics preserved.",
+      "Source/value/URL/retrieval pairs through native Sources.",
+      "Historic ARI kickoff unavailable and untouched original frame."
+    ],
+    "direct": [
+      "All eight original routes with actual full reload, native source-ready checks, associated labels, correctly timed visible-image geometry."
+    ]
+  },
+  "compositionRequirements": [
+    "Do not modify the active full run helper, imported modules or production files. Wait for full browser closure and preserve failed full receipt and original PNGs.",
+    "Create a fresh focused helper/evidence directory, bounded to failed/unrun work. Preserve new helper and module hashes.",
+    "Use the same engine, requested phone/desktop viewports, device scale, locale/timezone and actual native input policy.",
+    "Full failed run finalSource must equal its initialSource; focused run source and finalSource must equal that same frozen runtime manifest.",
+    "Cross-reference every original failed/unrun branch with a focused native result for each affected viewport. Keep originally passed Home/Team/Matchup sections as original evidence instead of repeating.",
+    "The original full run remains failed. Publish a separate composite audit explaining corrected helper assumptions and precisely which coverage came from each immutable run.",
+    "Any focused genuine application, source, image, accessibility, routing or motion failure is a blocker; do not classify it away as another helper assumption."
+  ],
+  "verdict": "Proposed focused closure is appropriate; no production repair is justified by these observed helper failures alone."
+}

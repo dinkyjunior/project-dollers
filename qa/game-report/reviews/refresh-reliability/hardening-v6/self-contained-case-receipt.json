@@ -1,0 +1,405 @@
+{
+  "createdAt": "2026-10-12T06:42:17Z",
+  "sourceSha256": "1e0bb61a60cb5033f2f48eea17b6ca8315b8f789669f01c19a11a26c8b82526e",
+  "helperSha256": "ba087382e09c671390f3e8bf2c79516da2ec5e5a7352b0dbbbd92dd835803088",
+  "frozenIndexSha256": "cd43314dc28faead43694a5c8658fd009cbdcf23caa16ce6221e0349dd679208",
+  "cases": [
+    {
+      "case": "provider-null-header",
+      "passed": true,
+      "status": "disputed"
+    },
+    {
+      "case": "provider-null-boxscore",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-gameInfo",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-scoringPlays",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-header-competitions",
+      "passed": true,
+      "status": "disputed"
+    },
+    {
+      "case": "provider-null-boxscore-teams",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-boxscore-players",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives-previous",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-null-drives-current",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-boxscore",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-drives",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-gameInfo",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "provider-absent-scoringPlays",
+      "passed": true,
+      "status": "verified"
+    },
+    {
+      "case": "null-number-not-zero",
+      "passed": true
+    },
+    {
+      "case": "real-zero-preserved",
+      "passed": true
+    },
+    {
+      "case": "strict-ssl-cert-and-hostname",
+      "passed": true
+    },
+    {
+      "case": "temporary-outage-retains-verified-report",
+      "passed": true
+    },
+    {
+      "case": "stale-dependency-rejected",
+      "passed": true
+    },
+    {
+      "case": "index-only-rebind-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "index-only-score-mismatch-rejected-before-write",
+      "passed": true
+    },
+    {
+      "case": "archival-reuse-retains-bytes-no-network",
+      "passed": true
+    },
+    {
+      "case": "input-drift-guard",
+      "passed": true,
+      "error": "Team-detail source changed during report construction; retry against stable inputs",
+      "detailFileChangedBeforeGuard": false,
+      "indexFileRetained": true
+    },
+    {
+      "case": "invalid-scoring-rejected",
+      "passed": true,
+      "error": "('2026_04_DAL_HOU', 'scoring final score')",
+      "detailFileChangedBeforeValidation": false,
+      "indexFileChangedBeforeValidation": false
+    },
+    {
+      "case": "malformed-matching-cache-graceful",
+      "passed": true
+    },
+    {
+      "case": "boxscore-absent-provenance-unavailable",
+      "passed": true
+    },
+    {
+      "case": "boxscore-null-provenance-unavailable",
+      "passed": true
+    },
+    {
+      "case": "cache-valid-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-tls-false-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-http-206-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-byte-count-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-url-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-hash-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-naive-timestamp-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-invalid-timestamp-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-status-validated",
+      "passed": true
+    },
+    {
+      "case": "cache-wrong-header-rejected",
+      "passed": true
+    },
+    {
+      "case": "cache-invalid-json-type-rejected",
+      "passed": true
+    },
+    {
+      "case": "cache-malformed-json-rejected",
+      "passed": true
+    },
+    {
+      "case": "installation-old-detail-rename-rollback",
+      "passed": true
+    },
+    {
+      "case": "installation-new-detail-install-rollback",
+      "passed": true
+    },
+    {
+      "case": "installation-new-index-install-rollback",
+      "passed": true
+    },
+    {
+      "case": "five-known-basics-three-reports",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_01_ATL_PIT-null-evidence-idempotent",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_01_ATL_PIT-unrelated-event-facts-preserved",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_01_ATL_PIT-wrong-game-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_01_ATL_PIT-wrong-team-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_01_ATL_PIT-wrong-gsis-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_03_MIN_TB-null-evidence-idempotent",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_03_MIN_TB-unrelated-event-facts-preserved",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_03_MIN_TB-wrong-game-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_03_MIN_TB-wrong-team-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_03_MIN_TB-wrong-gsis-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_05_CLE_NYJ-null-evidence-idempotent",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_05_CLE_NYJ-unrelated-event-facts-preserved",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_05_CLE_NYJ-wrong-game-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_05_CLE_NYJ-wrong-team-refused",
+      "passed": true
+    },
+    {
+      "case": "known-conflict-2026_05_CLE_NYJ-wrong-gsis-refused",
+      "passed": true
+    },
+    {
+      "case": "dependent-team-sack-loss-null-typed-provenance-no-invented-alternative-idempotent",
+      "passed": true,
+      "priorTeamLoss": 999,
+      "afterTeamLoss": null,
+      "unavailableReason": {
+        "field": "stats.CLE.sackYardsLost",
+        "team": "CLE",
+        "reason": "Team sack-loss total unavailable because a contributing player's sack-loss field is disputed",
+        "sourceIds": [
+          "espn_fixture_summary_401872983",
+          "nflverse_player_stats"
+        ]
+      }
+    },
+    {
+      "case": "catalog-current104-plus5-equals109",
+      "passed": true
+    },
+    {
+      "case": "catalog-context-bodyhash-canonical-identity",
+      "passed": true
+    },
+    {
+      "case": "catalog-explicit-source-value-map-2026_03_MIN_TB-00-0041048-targets",
+      "passed": true,
+      "mapping": [
+        {
+          "sourceIds": [
+            "nflverse_player_stats"
+          ],
+          "value": 3
+        },
+        {
+          "sourceIds": [
+            "espn_matchup_summary_401872959"
+          ],
+          "value": 4
+        }
+      ],
+      "expectedValuesBySourceId": {
+        "espn_matchup_summary_401872959": 4,
+        "nflverse_player_stats": 3
+      }
+    },
+    {
+      "case": "catalog-explicit-source-value-map-2026_01_ATL_PIT-00-0037238-targets",
+      "passed": true,
+      "mapping": [
+        {
+          "sourceIds": [
+            "nflverse_player_stats"
+          ],
+          "value": 4
+        },
+        {
+          "sourceIds": [
+            "espn_matchup_summary_401872658"
+          ],
+          "value": 5
+        }
+      ],
+      "expectedValuesBySourceId": {
+        "espn_matchup_summary_401872658": 5,
+        "nflverse_player_stats": 4
+      }
+    },
+    {
+      "case": "catalog-explicit-source-value-map-2026_01_ATL_PIT-00-0037741-targets",
+      "passed": true,
+      "mapping": [
+        {
+          "sourceIds": [
+            "nflverse_player_stats"
+          ],
+          "value": 3
+        },
+        {
+          "sourceIds": [
+            "espn_matchup_summary_401872658"
+          ],
+          "value": 4
+        }
+      ],
+      "expectedValuesBySourceId": {
+        "espn_matchup_summary_401872658": 4,
+        "nflverse_player_stats": 3
+      }
+    },
+    {
+      "case": "catalog-explicit-source-value-map-2026_05_CLE_NYJ-00-0033537-sackYardsLost",
+      "passed": true,
+      "mapping": [
+        {
+          "sourceIds": [
+            "nflverse_player_stats"
+          ],
+          "value": 54
+        },
+        {
+          "sourceIds": [
+            "espn_fixture_summary_401872983"
+          ],
+          "value": 53
+        }
+      ],
+      "expectedValuesBySourceId": {
+        "espn_fixture_summary_401872983": 53,
+        "nflverse_player_stats": 54
+      }
+    },
+    {
+      "case": "catalog-explicit-source-value-map-2026_05_CLE_NYJ-00-0033537-fumbles",
+      "passed": true,
+      "mapping": [
+        {
+          "sourceIds": [
+            "nflverse_player_stats"
+          ],
+          "value": 4
+        },
+        {
+          "sourceIds": [
+            "espn_fixture_summary_401872983"
+          ],
+          "value": 3
+        }
+      ],
+      "expectedValuesBySourceId": {
+        "espn_fixture_summary_401872983": 3,
+        "nflverse_player_stats": 4
+      }
+    },
+    {
+      "case": "production-protected-inputs-unchanged",
+      "passed": true
+    },
+    {
+      "case": "source-stable-before-import-through-review",
+      "passed": true
+    }
+  ],
+  "totalCases": 68,
+  "failures": [],
+  "productionInputsUnchanged": true,
+  "reviewScope": "Read-only source review and isolated temporary fixtures only. No browser or provider requests."
+}

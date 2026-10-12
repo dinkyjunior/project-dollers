@@ -1,0 +1,364 @@
+{
+  "generatedAt": "2026-10-12T05:54:49.242Z",
+  "kind": "independent-node-vm-model-tests",
+  "nativeBrowser": false,
+  "helperSha256": "0ec9216c682a1914a720b252088c04be3bb2fdfa1e9a19e84cafad24c82739c7",
+  "adapterPath": "/tmp/pd-source-integrity.js",
+  "adapterSha256": "9dcdba698145e8db11397c66c79250cef2364ccba341ed1543f75a585c3cf768",
+  "catalogPath": "/workspace/project-dollers/qa/game-report/independent/adapter-review-catalog-draft.json",
+  "catalogSha256": "a4682b519c4977a020ef679705f24f2edc41ff61b48c4f332e021fdeb1e64ea0",
+  "draftCatalog": true,
+  "sourceHashes": {
+    "assets/data/team-details.json": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "assets/data/matchup-breakdown.json": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186",
+    "assets/data/player-history.json": "343e7e28642765390c5f3d9aee7515fc182ef8906fb8555b229a82e925563930",
+    "assets/data/game-reports.json": "2efbd449090b21ec5fa209bce229dbf335f04e56a2eca06c2bf7710f7f7f7dda"
+  },
+  "checks": [
+    {
+      "name": "team-details: raw input is unchanged",
+      "pass": true
+    },
+    {
+      "name": "team-details: effective is separate",
+      "pass": true
+    },
+    {
+      "name": "team-details: verified exact input digest",
+      "pass": true
+    },
+    {
+      "name": "team-details: all 2025_02_CLE_BAL CLE.netPassing duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "team-details: unrelated 2025_02_CLE_BAL scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "team-details: all 2025_02_CLE_BAL CLE.totalOffense duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "team-details: unrelated 2025_02_CLE_BAL scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "team-details: all 2026_05_CLE_NYJ CLE.netPassing duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "team-details: unrelated 2026_05_CLE_NYJ scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "team-details: all 2026_05_CLE_NYJ CLE.totalOffense duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "team-details: unrelated 2026_05_CLE_NYJ scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "team-details: source alternatives retain audited values and both source identities",
+      "pass": true
+    },
+    {
+      "name": "team-details: every original venue label remains unchanged",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: raw input is unchanged",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: effective is separate",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: verified exact input digest",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: all 2025_02_CLE_BAL CLE.netPassing duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: unrelated 2025_02_CLE_BAL scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: all 2025_02_CLE_BAL CLE.totalOffense duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: unrelated 2025_02_CLE_BAL scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: all 2026_05_CLE_NYJ CLE.netPassing duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: unrelated 2026_05_CLE_NYJ scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: all 2026_05_CLE_NYJ CLE.totalOffense duplicates are unavailable",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: unrelated 2026_05_CLE_NYJ scores/rushing preserved",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: source alternatives retain audited values and both source identities",
+      "pass": true
+    },
+    {
+      "name": "matchup-breakdown: every original venue label remains unchanged",
+      "pass": true
+    },
+    {
+      "name": "2025_12_PIT_CHI: 00-0039739 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2025_12_PIT_CHI: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2025_12_PIT_CHI: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2025_12_PIT_CHI: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2025_12_PIT_CHI: disputed current-season target total is unavailable",
+      "pass": true
+    },
+    {
+      "name": "2026_03_KC_MIA: 00-0041525 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2026_03_KC_MIA: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2026_03_KC_MIA: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2026_03_KC_MIA: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2026_03_KC_MIA: disputed current-season target total is unavailable",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_02_JAX_DEN: 00-0039893 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2026_02_JAX_DEN: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2026_02_JAX_DEN: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2026_02_JAX_DEN: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2026_02_JAX_DEN: disputed current-season target total is unavailable",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2025_03_DEN_LAC: 00-0038544 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2025_03_DEN_LAC: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2025_03_DEN_LAC: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2025_03_DEN_LAC: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2025_03_DEN_LAC: disputed current-season target total is unavailable",
+      "pass": true
+    },
+    {
+      "name": "2026_02_PHI_TEN: 00-0034351 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2026_02_PHI_TEN: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2026_02_PHI_TEN: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2026_02_PHI_TEN: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2026_02_PHI_TEN: disputed current-season target total is unavailable",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_03_LV_NO: 00-0039338 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2026_03_LV_NO: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2026_03_LV_NO: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2026_03_LV_NO: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2026_03_LV_NO: disputed current-season target total is unavailable",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_02_MIN_CHI: 00-0036275 targets unavailable in every matching log",
+      "pass": true
+    },
+    {
+      "name": "2026_02_MIN_CHI: target sum/per-game propagate null rather than omit or zero",
+      "pass": true
+    },
+    {
+      "name": "2026_02_MIN_CHI: only disputed numerator invalidates its dependent share",
+      "pass": true
+    },
+    {
+      "name": "2026_02_MIN_CHI: independently sourced snaps/red-zone stats retained",
+      "pass": true
+    },
+    {
+      "name": "2026_02_MIN_CHI: disputed current-season target total is unavailable",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "Kickoff conflict masks all game and prior-club player copies",
+      "pass": true
+    },
+    {
+      "name": "Neutral conflict masks game classification and personal-history filters",
+      "pass": true
+    },
+    {
+      "name": "Lazy cross-screen integrity loading never requests any detail report",
+      "pass": true
+    },
+    {
+      "name": "History exact raw input is preserved separately",
+      "pass": true
+    },
+    {
+      "name": "Prior-club history kickoff conflict is unavailable for actual retained Sean Murphy-Bunting row",
+      "pass": true
+    },
+    {
+      "name": "History source-recorded statistical values are unchanged; no exact target conflict is present",
+      "pass": true
+    },
+    {
+      "name": "Unsupported catalog schema never returns verified numerics",
+      "pass": true
+    },
+    {
+      "name": "Catalog HTTP503 never returns verified numerics",
+      "pass": true
+    },
+    {
+      "name": "Catalog transport failure never returns verified numerics",
+      "pass": true
+    },
+    {
+      "name": "Wrong raw-book bytes never return verified numerics",
+      "pass": true
+    },
+    {
+      "name": "Missing known alternative is rejected by report coverage counts",
+      "pass": true
+    },
+    {
+      "name": "Alternative lacking retrieval provenance is rejected",
+      "pass": true
+    },
+    {
+      "name": "Catalog timestamp-only update leaves effective research snapshot unchanged",
+      "pass": true
+    },
+    {
+      "name": "Already-aborted consumer neither verifies stale output nor emits unhandled rejection",
+      "pass": true
+    },
+    {
+      "name": "All source books and index remain unchanged throughout model audit",
+      "pass": true
+    }
+  ],
+  "failures": [
+    {
+      "name": "2026_03_KC_MIA: disputed current-season target total is unavailable",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_02_JAX_DEN: disputed current-season target total is unavailable",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_02_PHI_TEN: disputed current-season target total is unavailable",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_03_LV_NO: disputed current-season target total is unavailable",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    },
+    {
+      "name": "2026_02_MIN_CHI: disputed current-season target total is unavailable",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n"
+    }
+  ],
+  "fetchLog": [
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json",
+    "assets/data/game-reports.json"
+  ],
+  "status": "failed",
+  "qualification": "Actual frozen books and compact index; transport failures are isolated VM test cases. No native-browser, network-performance or visual claims."
+}

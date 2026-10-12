@@ -71,6 +71,12 @@ jobs:
           python3 scripts/refresh-team-details.py --check
           python3 scripts/refresh-matchup-breakdown.py --cache-dir "$pd_source_cache" --evidence-dir "$pd_matchup_evidence"
           python3 scripts/refresh-matchup-breakdown.py --check
+          report_args=(--cache-dir "$RUNNER_TEMP/project-dollar-game-report-source-cache")
+          if [ "$REFRESH_HISTORY" = "true" ]; then
+            report_args+=(--refresh-history)
+          fi
+          python3 scripts/refresh-game-reports.py "${report_args[@]}"
+          python3 scripts/refresh-game-reports.py --check
           python3 qa/team-details/data.test.py --cache-dir "$pd_source_cache"
           python3 qa/matchup-breakdown/data.test.py --source-manifest "$pd_matchup_evidence/source-manifest.json"
           python3 qa/matchup-breakdown/source-monitor.test.py
@@ -80,15 +86,21 @@ jobs:
         id: publish
         if: steps.sources.outputs.should_refresh == 'true'
         run: |
-          if git diff --quiet -- assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json assets/data/matchup-breakdown.json; then
+          if git diff --quiet -- assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json assets/data/matchup-breakdown.json assets/data/game-reports.json assets/data/game-reports; then
             echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json assets/data/matchup-breakdown.json
+          git add assets/data/current.json assets/data/provenance.json assets/data/player-history.json assets/data/team-details.json assets/data/matchup-breakdown.json assets/data/game-reports.json assets/data/game-reports
           git commit -m 'Refresh verified NFL snapshot'
           git pull --rebase origin main
+          # A concurrent approved release may update the producers or books.
+          # Validate the combined snapshot before it can reach production.
+          python3 scripts/refresh-data.py --check
+          python3 scripts/refresh-team-details.py --check
+          python3 scripts/refresh-matchup-breakdown.py --check
+          python3 scripts/refresh-game-reports.py --check
           git push origin HEAD:main
           echo 'published=true' >> "$GITHUB_OUTPUT"
       # GITHUB_TOKEN commits do not trigger the automatic branch Pages build.

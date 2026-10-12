@@ -1,0 +1,1333 @@
+{
+  "checkedAt": "2026-10-12T06:11:19.168093+00:00",
+  "sourceHashes": {
+    "assets/data/team-details.json": "55ddf5b549068c0a85ca4f0e356aa2ff97abebdf5bbbb766096b50df466264f1",
+    "assets/data/matchup-breakdown.json": "0d6cd34c20bd42acf7c5ba0985bde4a7ac90ea43357814191b6f789e28b02186",
+    "assets/data/game-reports.json": "6d8fd68e25262832a154f63e3824df75bf383088f9e38bb6512fa4cbff83ac9b"
+  },
+  "sourceManifestSha256": "2a9079f8066b6aeac71cb818ac451c096d73d4202f78bea2683fc3c837a2c3a2",
+  "sourceStable": true,
+  "existingIssuesAudited": 26,
+  "classificationCounts": {
+    "venue-label-disclosure-only": 1,
+    "no completed game report; existing scheduled-event conflict remains masked": 8,
+    "current-roster-only; no exact historical-game scope": 7,
+    "known-basic-conflict-propagated": 5,
+    "starting-role-conflict; report makes no game-box starter assertion": 5
+  },
+  "issues": [
+    {
+      "originBook": "team-details",
+      "existingIssue": {
+        "gameId": "2025_17_DAL_WAS",
+        "field": "venue",
+        "issue": "Venue display names differ between providers",
+        "sourceIds": [
+          "nflverse_games",
+          "espn_schedule_DAL_2025"
+        ],
+        "values": [
+          "FedExField",
+          "Northwest Stadium"
+        ],
+        "action": "Display current ESPN event venue with both source labels retained"
+      },
+      "classification": "venue-label-disclosure-only",
+      "reportVenue": "Northwest Stadium",
+      "reportIssues": []
+    },
+    {
+      "originBook": "team-details",
+      "existingIssue": {
+        "gameId": "2026_18_DAL_WAS",
+        "field": "kickoffUtc",
+        "issue": "ESPN marks kickoff time unconfirmed/TBD",
+        "sourceIds": [
+          "nflverse_games",
+          "espn_schedule_DAL_2026"
+        ],
+        "values": [
+          "2027-01-10T18:00:00Z",
+          "2027-01-10T05:00Z"
+        ],
+        "action": "Kickoff time unavailable until confirmed"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "team-details",
+      "existingIssue": {
+        "playerId": "00-0038389",
+        "team": "DAL",
+        "field": "jersey",
+        "issue": "Jersey numbers disagree",
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_roster_DAL"
+        ],
+        "values": [
+          37,
+          25
+        ],
+        "action": "Jersey number unavailable pending reconciliation"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "team-details",
+      "existingIssue": {
+        "playerId": "00-0040934",
+        "team": "DAL",
+        "field": "jersey",
+        "issue": "Jersey numbers disagree",
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_roster_DAL"
+        ],
+        "values": [
+          81,
+          18
+        ],
+        "action": "Jersey number unavailable pending reconciliation"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "TB",
+        "playerId": "00-0041048",
+        "gameId": "2026_03_MIN_TB",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872959",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      "classification": "known-basic-conflict-propagated",
+      "playerEspnId": "5220680",
+      "playerGsisId": "00-0041048",
+      "playerName": "Ted Hurst III",
+      "reportValue": null,
+      "reportDetailUrl": "assets/data/game-reports/2026_03_MIN_TB.json",
+      "reportSha256": "33e420c58c57708ed860c0ae622300238f312e0bd1fa25712f6997f6d34aefe1",
+      "reportIssues": [
+        {
+          "team": "TB",
+          "playerId": "5220680",
+          "field": "players.targets",
+          "values": [
+            3,
+            4
+          ],
+          "sourceIds": [
+            "espn_matchup_summary_401872959",
+            "nflverse_player_stats"
+          ],
+          "action": "Player field unavailable: an unresolved event-specific research-source disagreement is retained",
+          "origin": "research-source-disagreement",
+          "readings": [
+            {
+              "value": 3,
+              "sourceIds": [
+                "nflverse_player_stats"
+              ]
+            },
+            {
+              "value": 4,
+              "sourceIds": [
+                "espn_matchup_summary_401872959"
+              ]
+            }
+          ]
+        }
+      ],
+      "verifiedValuesBySource": {
+        "nflverse_player_stats": 3,
+        "espn_matchup_summary_401872959": 4
+      },
+      "rawSources": {
+        "espn_matchup_summary_401872959": {
+          "id": "espn_matchup_summary_401872959",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "fb392ed2ecbb92af206ba44061c9a4dcf4c7932f1a142dd60554d681fe72ff29",
+          "bytes": 630086,
+          "tlsVerified": true,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/espn_matchup_summary_401872959.source.gz",
+          "archiveSha256": "41f58328024866b3ec6d86db19965a1c74458d3bc7f29303e42a88ec449272f3",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "fb392ed2ecbb92af206ba44061c9a4dcf4c7932f1a142dd60554d681fe72ff29"
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/nflverse_player_stats.source.gz",
+          "archiveSha256": "800cb9e54264ddded567d36e385346d40010b66cb0b3678356c5cde2ac988707",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5"
+        }
+      },
+      "reportMatchingSourceDescriptors": [
+        {
+          "id": "espn_game_report_401872959",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:37Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "91d8ae5dd65140d97fa3145e82b4c14c75ab52186f36bfbadaf51f93b72ff79b",
+          "bytes": 630086
+        },
+        {
+          "id": "espn_matchup_summary_401872959",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872959",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "fb392ed2ecbb92af206ba44061c9a4dcf4c7932f1a142dd60554d681fe72ff29",
+          "bytes": 630086,
+          "tlsVerified": true
+        },
+        {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      ],
+      "note": "Existing issue values are primary-first although sourceIds may be ESPN-first. Do not zip those arrays into mislabeled provider values."
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "ATL",
+        "playerId": "00-0037238",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          4,
+          5
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      "classification": "known-basic-conflict-propagated",
+      "playerEspnId": "4426502",
+      "playerGsisId": "00-0037238",
+      "playerName": "Drake London",
+      "reportValue": null,
+      "reportDetailUrl": "assets/data/game-reports/2026_01_ATL_PIT.json",
+      "reportSha256": "eb9ec203a61ea24bd393c4accdf63958c40a8d3766a0498c43ed3981b0a3cdcc",
+      "reportIssues": [
+        {
+          "team": "ATL",
+          "playerId": "4426502",
+          "field": "players.targets",
+          "values": [
+            4,
+            5
+          ],
+          "sourceIds": [
+            "espn_matchup_summary_401872658",
+            "nflverse_player_stats"
+          ],
+          "action": "Player field unavailable: an unresolved event-specific research-source disagreement is retained",
+          "origin": "research-source-disagreement",
+          "readings": [
+            {
+              "value": 4,
+              "sourceIds": [
+                "nflverse_player_stats"
+              ]
+            },
+            {
+              "value": 5,
+              "sourceIds": [
+                "espn_matchup_summary_401872658"
+              ]
+            }
+          ]
+        }
+      ],
+      "verifiedValuesBySource": {
+        "nflverse_player_stats": 4,
+        "espn_matchup_summary_401872658": 5
+      },
+      "rawSources": {
+        "espn_matchup_summary_401872658": {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/espn_matchup_summary_401872658.source.gz",
+          "archiveSha256": "fb405d1c8979a4ee6e734b8f946dd7745b741b961c2b00877018e0761d1c4f3f",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322"
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/nflverse_player_stats.source.gz",
+          "archiveSha256": "800cb9e54264ddded567d36e385346d40010b66cb0b3678356c5cde2ac988707",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5"
+        }
+      },
+      "reportMatchingSourceDescriptors": [
+        {
+          "id": "espn_game_report_401872658",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:26Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "6467eaa66b84ffcb8df2f62c3b8ffec6db483ce38633a4d2030f6b164be63ccf",
+          "bytes": 609138
+        },
+        {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true
+        },
+        {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      ],
+      "note": "Existing issue values are primary-first although sourceIds may be ESPN-first. Do not zip those arrays into mislabeled provider values."
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "ATL",
+        "playerId": "00-0037741",
+        "gameId": "2026_01_ATL_PIT",
+        "field": "targets",
+        "values": [
+          3,
+          4
+        ],
+        "sourceIds": [
+          "espn_matchup_summary_401872658",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      "classification": "known-basic-conflict-propagated",
+      "playerEspnId": "4361409",
+      "playerGsisId": "00-0037741",
+      "playerName": "Jahan Dotson",
+      "reportValue": null,
+      "reportDetailUrl": "assets/data/game-reports/2026_01_ATL_PIT.json",
+      "reportSha256": "eb9ec203a61ea24bd393c4accdf63958c40a8d3766a0498c43ed3981b0a3cdcc",
+      "reportIssues": [
+        {
+          "team": "ATL",
+          "playerId": "4361409",
+          "field": "players.targets",
+          "values": [
+            3,
+            4
+          ],
+          "sourceIds": [
+            "espn_matchup_summary_401872658",
+            "nflverse_player_stats"
+          ],
+          "action": "Player field unavailable: an unresolved event-specific research-source disagreement is retained",
+          "origin": "research-source-disagreement",
+          "readings": [
+            {
+              "value": 3,
+              "sourceIds": [
+                "nflverse_player_stats"
+              ]
+            },
+            {
+              "value": 4,
+              "sourceIds": [
+                "espn_matchup_summary_401872658"
+              ]
+            }
+          ]
+        }
+      ],
+      "verifiedValuesBySource": {
+        "nflverse_player_stats": 3,
+        "espn_matchup_summary_401872658": 4
+      },
+      "rawSources": {
+        "espn_matchup_summary_401872658": {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/espn_matchup_summary_401872658.source.gz",
+          "archiveSha256": "fb405d1c8979a4ee6e734b8f946dd7745b741b961c2b00877018e0761d1c4f3f",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322"
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/nflverse_player_stats.source.gz",
+          "archiveSha256": "800cb9e54264ddded567d36e385346d40010b66cb0b3678356c5cde2ac988707",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5"
+        }
+      },
+      "reportMatchingSourceDescriptors": [
+        {
+          "id": "espn_game_report_401872658",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:26:26Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "6467eaa66b84ffcb8df2f62c3b8ffec6db483ce38633a4d2030f6b164be63ccf",
+          "bytes": 609138
+        },
+        {
+          "id": "espn_matchup_summary_401872658",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872658",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "0ceecba1461bd5203085087ff1816978f36a9e7c33e8635c7a3361cc2c075322",
+          "bytes": 609138,
+          "tlsVerified": true
+        },
+        {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      ],
+      "note": "Existing issue values are primary-first although sourceIds may be ESPN-first. Do not zip those arrays into mislabeled provider values."
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "CLE",
+        "playerId": "00-0033537",
+        "gameId": "2026_05_CLE_NYJ",
+        "field": "sackYardsLost",
+        "values": [
+          54,
+          53
+        ],
+        "sourceIds": [
+          "espn_fixture_summary_401872983",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      "classification": "known-basic-conflict-propagated",
+      "playerEspnId": "3122840",
+      "playerGsisId": "00-0033537",
+      "playerName": "Deshaun Watson",
+      "reportValue": null,
+      "reportDetailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "7e2b780d6bc606ed1750db17d25e684d834fad1e5daf80fe653558998ebbbeeb",
+      "reportIssues": [
+        {
+          "team": "CLE",
+          "playerId": "3122840",
+          "field": "players.sackYardsLost",
+          "values": [
+            54,
+            53
+          ],
+          "sourceIds": [
+            "espn_fixture_summary_401872983",
+            "nflverse_player_stats"
+          ],
+          "action": "Player field unavailable: an unresolved event-specific research-source disagreement is retained",
+          "origin": "research-source-disagreement",
+          "readings": [
+            {
+              "value": 54,
+              "sourceIds": [
+                "nflverse_player_stats"
+              ]
+            },
+            {
+              "value": 53,
+              "sourceIds": [
+                "espn_fixture_summary_401872983"
+              ]
+            }
+          ]
+        }
+      ],
+      "verifiedValuesBySource": {
+        "nflverse_player_stats": 54,
+        "espn_fixture_summary_401872983": 53
+      },
+      "rawSources": {
+        "espn_fixture_summary_401872983": {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/espn_fixture_summary_401872983.source.gz",
+          "archiveSha256": "aa49e8904a407f1df417c4c05372ac73bca59a93065ca04a8051df4b0061379e",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a"
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/nflverse_player_stats.source.gz",
+          "archiveSha256": "800cb9e54264ddded567d36e385346d40010b66cb0b3678356c5cde2ac988707",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5"
+        }
+      },
+      "reportMatchingSourceDescriptors": [
+        {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true
+        },
+        {
+          "id": "espn_game_report_401872983",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:38:19Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "11c882759c324f501e0549e0e63830a9339672865141051ce45af06e1bdf1a1d",
+          "bytes": 664387
+        },
+        {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      ],
+      "note": "Existing issue values are primary-first although sourceIds may be ESPN-first. Do not zip those arrays into mislabeled provider values."
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "CLE",
+        "playerId": "00-0033537",
+        "gameId": "2026_05_CLE_NYJ",
+        "field": "fumbles",
+        "values": [
+          4,
+          3
+        ],
+        "sourceIds": [
+          "espn_fixture_summary_401872983",
+          "nflverse_player_stats"
+        ],
+        "action": "Disputed final basic cell unavailable; both reported values retained, no provider chosen"
+      },
+      "classification": "known-basic-conflict-propagated",
+      "playerEspnId": "3122840",
+      "playerGsisId": "00-0033537",
+      "playerName": "Deshaun Watson",
+      "reportValue": null,
+      "reportDetailUrl": "assets/data/game-reports/2026_05_CLE_NYJ.json",
+      "reportSha256": "7e2b780d6bc606ed1750db17d25e684d834fad1e5daf80fe653558998ebbbeeb",
+      "reportIssues": [
+        {
+          "team": "CLE",
+          "playerId": "3122840",
+          "field": "players.fumbles",
+          "values": [
+            4,
+            3
+          ],
+          "sourceIds": [
+            "espn_fixture_summary_401872983",
+            "nflverse_player_stats"
+          ],
+          "action": "Player field unavailable: an unresolved event-specific research-source disagreement is retained",
+          "origin": "research-source-disagreement",
+          "readings": [
+            {
+              "value": 4,
+              "sourceIds": [
+                "nflverse_player_stats"
+              ]
+            },
+            {
+              "value": 3,
+              "sourceIds": [
+                "espn_fixture_summary_401872983"
+              ]
+            }
+          ]
+        }
+      ],
+      "verifiedValuesBySource": {
+        "nflverse_player_stats": 4,
+        "espn_fixture_summary_401872983": 3
+      },
+      "rawSources": {
+        "espn_fixture_summary_401872983": {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/espn_fixture_summary_401872983.source.gz",
+          "archiveSha256": "aa49e8904a407f1df417c4c05372ac73bca59a93065ca04a8051df4b0061379e",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a"
+        },
+        "nflverse_player_stats": {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285,
+          "bodyPath": "/workspace/recovery-qa/game-report-current-matchup-evidence-final/sources/nflverse_player_stats.source.gz",
+          "archiveSha256": "800cb9e54264ddded567d36e385346d40010b66cb0b3678356c5cde2ac988707",
+          "archiveEncoding": "gzip-of-exact-response",
+          "decodedSourceSha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5"
+        }
+      },
+      "reportMatchingSourceDescriptors": [
+        {
+          "id": "espn_fixture_summary_401872983",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "provider": "ESPN",
+          "required": false,
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "retrievedAt": "2026-10-12T04:31:41Z",
+          "status": "verified",
+          "sha256": "3a5640efead02f27195c637d45cca4ce95dda9aaf69a6012354f18b73102425a",
+          "bytes": 664387,
+          "tlsVerified": true,
+          "season": 2026,
+          "watch": true
+        },
+        {
+          "id": "espn_game_report_401872983",
+          "provider": "ESPN",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=401872983",
+          "required": false,
+          "tlsVerified": true,
+          "status": "verified",
+          "retrievedAt": "2026-10-12T04:38:19Z",
+          "httpStatus": 200,
+          "etag": null,
+          "lastModified": null,
+          "sha256": "11c882759c324f501e0549e0e63830a9339672865141051ce45af06e1bdf1a1d",
+          "bytes": 664387
+        },
+        {
+          "id": "nflverse_player_stats",
+          "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2026.csv",
+          "provider": "nflverse",
+          "required": true,
+          "httpStatus": 200,
+          "etag": "\"0x8DF27FE59DD85F7\"",
+          "lastModified": "Mon, 12 Oct 2026 01:15:49 GMT",
+          "retrievedAt": "2026-10-12T04:29:06Z",
+          "status": "verified",
+          "sha256": "28f0c38f01a20223cad6fbf8a30e67ecece8dd7e8e11519b49c20be9412a8fb5",
+          "bytes": 2387285
+        }
+      ],
+      "note": "Existing issue values are primary-first although sourceIds may be ESPN-first. Do not zip those arrays into mislabeled provider values."
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "LV",
+        "gameId": "2024_13_LV_KC",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0035289",
+          "00-0038579"
+        ],
+        "values": [
+          "00-0035289",
+          "00-0038579"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671806"
+        ],
+        "evidence": {
+          "quote": "O'Connell, thrust back onto the field when Gardner Minshew broke his collarbone last weekend, got off to a slow start after missing a month with a broken thumb.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-11-30T02:49:14Z",
+          "eventId": "401671806",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671806"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "a01457d0ba3fb2aca9b0f4dd93356a4bf08b4377275a70bf3b90607e5052c526"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "ATL",
+        "gameId": "2026_02_CAR_ATL",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0036212",
+          "00-0033662"
+        ],
+        "values": [
+          "00-0036212",
+          "00-0033662"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401872933"
+        ],
+        "evidence": {
+          "quote": "With fill-in starter Cooper Rush at quarterback",
+          "quoteField": "article.story",
+          "publishedAt": "2026-09-20T20:16:30Z",
+          "eventId": "401872933",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401872933"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "eb7666a958a5bc4c9037b297ecd900249b16e8ff6478cc5e79385587109f781a"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "starting-role-conflict; report makes no game-box starter assertion"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "NYJ",
+        "gameId": "2025_17_NE_NYJ",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0028118",
+          "00-0040398"
+        ],
+        "values": [
+          "00-0028118",
+          "00-0040398"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401772808"
+        ],
+        "evidence": {
+          "quote": "Undrafted rookie quarterback Brady Cook made his third consecutive start",
+          "quoteField": "article.story",
+          "publishedAt": "2025-12-28T21:06:59Z",
+          "eventId": "401772808",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401772808"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "c4d79a3c3c19cad55611a47658f8d13be32f139d8d612da6b29ad2180b28dab0"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "starting-role-conflict; report makes no game-box starter assertion"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "NYJ",
+        "gameId": "2025_16_NYJ_NO",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0028118",
+          "00-0040398"
+        ],
+        "values": [
+          "00-0028118",
+          "00-0040398"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401772801"
+        ],
+        "evidence": {
+          "quote": "Undrafted rookie Brady Cook made his second start with the Jets",
+          "quoteField": "article.story",
+          "publishedAt": "2025-12-21T21:24:02Z",
+          "eventId": "401772801",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401772801"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "a4d621f268c8628163539270c7948c2a33b3050f81c2de21897ec30245fea42a"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "starting-role-conflict; report makes no game-box starter assertion"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "LV",
+        "gameId": "2024_15_ATL_LV",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0038579",
+          "00-0038122"
+        ],
+        "values": [
+          "00-0038579",
+          "00-0038122"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671697"
+        ],
+        "evidence": {
+          "quote": "In replacing Aidan O'Connell , inactive because of a bruised left knee, Ridder passed for 208 yards with a touchdown and two interceptions.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-12-17T07:46:11Z",
+          "eventId": "401671697",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671697"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "294eb2a5b6878057d3d1b4506a4c578e9da7d02c595ef3e1fc9549b2b79678b4"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "NYG",
+        "gameId": "2024_16_NYG_ATL",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0038476",
+          "00-0035704"
+        ],
+        "values": [
+          "00-0038476",
+          "00-0035704"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671729"
+        ],
+        "evidence": {
+          "quote": "Drew Lock returning as the starting QB after missing the previous week with a heel injury.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-12-23T04:57:11Z",
+          "eventId": "401671729",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671729"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "23105bf5427d44ec98de67330bc40b38bd111f992697ea1f183628166e540e52"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "CLE",
+        "gameId": "2024_17_MIA_CLE",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0031503",
+          "00-0038583"
+        ],
+        "values": [
+          "00-0031503",
+          "00-0038583"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671877"
+        ],
+        "evidence": {
+          "quote": "Dorian Thompson-Robinson isn't the long-term answer. In his second straight start, the second-year QB completed 24 of 47 passes for 170 yards.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-12-30T05:01:12Z",
+          "eventId": "401671877",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671877"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "31e9aec93cdee7c15f3f4ad862e0c7b056d96e2fd10ae5f0eef705f68e86fbb2"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "NO",
+        "gameId": "2024_17_LV_NO",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0038998",
+          "00-0039376"
+        ],
+        "values": [
+          "00-0038998",
+          "00-0039376"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671738"
+        ],
+        "evidence": {
+          "quote": "rookie Spencer Rattler received his fifth career start.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-12-29T23:27:11Z",
+          "eventId": "401671738",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671738"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "ba69acce51732c7807ded2dc198c70e380e5808f1d476e21fb5279d3b51b07ba"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "NO",
+        "gameId": "2024_16_NO_GB",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0038998",
+          "00-0039376"
+        ],
+        "values": [
+          "00-0038998",
+          "00-0039376"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671692"
+        ],
+        "evidence": {
+          "quote": "Rookie Spencer Rattler started at quarterback and went 15 of 30 for 153 yards with an interception and a fumble.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-12-24T05:41:18Z",
+          "eventId": "401671692",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671692"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "a072d649d72d8845dd82d01802b167189755b2403f1b446f3069c93884b95cdf"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "WAS",
+        "gameId": "2025_08_WAS_KC",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0039910",
+          "00-0032268"
+        ],
+        "values": [
+          "00-0039910",
+          "00-0032268"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401772817"
+        ],
+        "evidence": {
+          "quote": "Mariota started in place of Jayden Daniels , who hurt his hamstring in last week's loss to Dallas.",
+          "quoteField": "article.story",
+          "publishedAt": "2025-10-28T03:14:59Z",
+          "eventId": "401772817",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401772817"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "851cbd3f19b9391bcb2338a545eb292df9f45df6a7ddc096f73a8c74c9482ac9"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "starting-role-conflict; report makes no game-box starter assertion"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "WAS",
+        "gameId": "2026_03_SEA_WAS",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0039910",
+          "00-0032268"
+        ],
+        "values": [
+          "00-0039910",
+          "00-0032268"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401872955"
+        ],
+        "evidence": {
+          "quote": "Mariota was solid in place of the injured Jayden Daniels .",
+          "quoteField": "article.story",
+          "publishedAt": "2026-09-27T20:53:27Z",
+          "eventId": "401872955",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401872955"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "40990e07ea1684add75d6c69e5947958a1d4017ee6be94a6557f7b35e2ac9f4b"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "starting-role-conflict; report makes no game-box starter assertion"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "CAR",
+        "gameId": "2024_10_NYG_CAR",
+        "field": "startingQuarterback",
+        "status": "disputed",
+        "playerIds": [
+          "00-0027973",
+          "00-0039150"
+        ],
+        "values": [
+          "00-0027973",
+          "00-0039150"
+        ],
+        "sourceIds": [
+          "nflverse_games",
+          "espn_start_summary_401671803"
+        ],
+        "evidence": {
+          "quote": "Canales hasn't committed to keeping Young as the starter after benching him for Andy Dalton earlier in the season, but praised the quarterback's improvement.",
+          "quoteField": "article.story",
+          "publishedAt": "2024-11-10T20:05:12Z",
+          "eventId": "401671803",
+          "sourceIds": [
+            "nflverse_games",
+            "espn_start_summary_401671803"
+          ],
+          "retrievedAt": "2026-10-12T04:31:42Z",
+          "sha256": "647ec85bf45d0d48a3616949fa7c6cb9c2158bd6deda505b264fa196b7e4a9a2"
+        },
+        "retainedEvidence": false,
+        "action": "Both roles disputed/null; preserve candidates in requested QB window without selecting a provider or substituting older starts"
+      },
+      "classification": "no completed game report; existing scheduled-event conflict remains masked"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "DAL",
+        "playerId": "00-0036728",
+        "field": "rosterStatus",
+        "values": [
+          "DEV",
+          "Active"
+        ],
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_matchup_roster_DAL"
+        ],
+        "action": "Status disagreement shown; historical statistical eligibility does not imply game-day activation"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "DAL",
+        "playerId": "00-0038389",
+        "field": "jersey",
+        "values": [
+          37,
+          25
+        ],
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_matchup_roster_DAL"
+        ],
+        "action": "Jersey unavailable until sources agree"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "DAL",
+        "playerId": "00-0040934",
+        "field": "jersey",
+        "values": [
+          81,
+          18
+        ],
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_matchup_roster_DAL"
+        ],
+        "action": "Jersey unavailable until sources agree"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "TB",
+        "playerId": "00-0040429",
+        "field": "rosterStatus",
+        "values": [
+          "DEV",
+          "Active"
+        ],
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_matchup_roster_TB"
+        ],
+        "action": "Status disagreement shown; historical statistical eligibility does not imply game-day activation"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    },
+    {
+      "originBook": "matchup-breakdown",
+      "existingIssue": {
+        "team": "TB",
+        "playerId": "00-0041338",
+        "field": "rosterStatus",
+        "values": [
+          "DEV",
+          "Active"
+        ],
+        "sourceIds": [
+          "nflverse_roster",
+          "espn_matchup_roster_TB"
+        ],
+        "action": "Status disagreement shown; historical statistical eligibility does not imply game-day activation"
+      },
+      "classification": "current-roster-only; no exact historical-game scope"
+    }
+  ],
+  "status": "passed",
+  "qualification": "Raw checksum-verified provider responses, independently parsed. Current-roster changes are not applied retroactively to historical game-box fields; source-confirmed starter roles are separate from statistical categories."
+}

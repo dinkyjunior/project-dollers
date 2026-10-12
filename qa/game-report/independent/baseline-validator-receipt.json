@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-12T04:24:20.357289+00:00",
+  "preimplementation": true,
+  "commands": [
+    {
+      "command": "python3 qa/data.test.py",
+      "exitCode": 0,
+      "tests": 22,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "python3 qa/team-details/data.test.py",
+      "exitCode": 0,
+      "tests": 11,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "Provide --cache-dir for independent raw-source arithmetic"
+    },
+    {
+      "command": "python3 qa/matchup-breakdown/data.test.py",
+      "exitCode": 1,
+      "tests": 33,
+      "failed": 6,
+      "reason": "Historical source manifest belongs to a different automatically refreshed snapshot; all six fail at source_manifest before their raw-source assertions",
+      "failures": [
+        "test_audit_archives_reproduce_source_response_hashes",
+        "test_injury_identity_merging_retains_published_practice",
+        "test_missing_statistics_do_not_substitute_older_qb_start",
+        "test_opponent_starts_include_actual_prior_seasons_and_no_padding",
+        "test_position_changed_receiver_keeps_known_zero_offensive_snaps",
+        "test_stale_manifest_refused_before_source_assertions"
+      ]
+    }
+  ],
+  "qualification": "Existing tests were executed unchanged. This records baseline evidence and its real limitation, not a pass or a waiver. New report source checks use new independent retrieval evidence."
+}

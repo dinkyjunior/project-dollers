@@ -7,7 +7,7 @@
   const fmt = (value, places = 0) => known(value) ? Number(value).toLocaleString('en-AU',{maximumFractionDigits:places}) : '—';
   const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><use href="${['calendar','stadium','shield','info'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
   const state = {team:'DAL',tab:'form',window:5,season:'cross',venue:'all',mode:'average',expanded:null,initialized:false,fromLadder:false,view:null,game:null,playerOpen:new Set()};
-  let dataset = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
+  let dataset = null, rawDataset = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
   const team = abbr => dataset?.teams?.[abbr || state.team];
   const current = () => window.PDApp?.getContext()?.data;
   const identity = abbr => team(abbr) || current()?.teams?.find(item => item.abbr === abbr) || {abbr,name:abbr,fullName:abbr};
@@ -95,7 +95,7 @@
   }
   function yardsPanel(items) {
     const modes = `<div class="td-mode-controls" role="group" aria-label="Statistical presentation"><button data-td-mode="average" aria-pressed="${state.mode === 'average'}">Per game</button><button data-td-mode="total" aria-pressed="${state.mode === 'total'}">Totals</button></div>`;
-    return `<section class="td-panel td-yards td-framed">${panelHead(`${panelName()} · YARDS GAINED & ALLOWED`,modes)}<table class="td-yards-table"><thead><tr><th>METRIC</th><th>GAINED</th><th>ALLOWED</th></tr></thead><tbody>${[['Net passing <small>(accounts for sacks)</small>','netPassing'],['Rushing','rushing'],['Total offence','totalOffense']].map(([label,key]) => `<tr><th scope="row">${label}</th><td data-td-stat="${key}" data-td-side="gained">${metricCell(aggregate(key,false,items))}</td><td data-td-stat="${key}" data-td-side="allowed">${metricCell(aggregate(key,true,items))}</td></tr>`).join('')}</tbody></table><p class="td-coverage-note">${items.length} selected games · ${state.mode === 'average' ? 'per game' : 'totals'} · — = unavailable or incomplete coverage</p></section>`;
+    return `<section class="td-panel td-yards td-framed">${panelHead(`${panelName()} · YARDS GAINED & ALLOWED`,modes)}<table class="td-yards-table"><thead><tr><th>METRIC</th><th>GAINED</th><th>ALLOWED</th></tr></thead><tbody>${[['Net passing <small>(accounts for sacks)</small>','netPassing'],['Rushing','rushing'],['Total offence','totalOffense']].map(([label,key]) => `<tr><th scope="row">${label}</th><td data-td-stat="${key}" data-td-side="gained">${metricCell(aggregate(key,false,items))}</td><td data-td-stat="${key}" data-td-side="allowed">${metricCell(aggregate(key,true,items))}</td></tr>`).join('')}</tbody></table><p class="td-coverage-note">${items.length} selected games · ${state.mode === 'average' ? 'per game' : 'totals'} · — = unavailable, disputed or incomplete coverage</p></section>`;
   }
   function snapshots(items) {
     const metrics = [
@@ -117,7 +117,7 @@
     const positions = ['ALL','QB','RB','WR','TE','DEF','K'];
     const chosen = state.position || 'ALL';
     const filtered = roster.filter(player => chosen === 'ALL' || player.position === chosen || chosen === 'DEF' && ['DE','DT','DL','LB','CB','DB','S','SAF','ILB','OLB'].includes(player.position));
-    return `<section class="td-panel td-framed td-players">${panelHead(`${panelName()} · PLAYERS & QB`)}<p class="td-coverage-note">${dataset.season} current roster · verified season totals when available</p><div class="td-position-controls" role="group" aria-label="Player position">${positions.map(pos => `<button data-td-position="${pos}" aria-pressed="${chosen === pos}">${pos}</button>`).join('')}</div>${filtered.length ? filtered.map(player => { const s = player.seasonStats || {}, scoredTD = known(s.rushingTD) && known(s.receivingTD) ? Number(s.rushingTD)+Number(s.receivingTD) : null, metrics = player.position === 'QB' ? [['PASS',s.passingYards],['PASS TD',s.passingTD],['RUSH',s.rushingYards],['RUSH TD',s.rushingTD]] : ['DE','DT','DL','LB','CB','DB','S','SAF','ILB','OLB'].includes(player.position) ? [['TACKLES',s.tackles],['ASSISTS',s.assistedTackles],['SACKS',s.defensiveSacks],['INT',s.defensiveInterceptions]] : [['RUSH',s.rushingYards],['REC',s.receivingYards],['CATCH',s.receptions],['TD SCORED',scoredTD]]; return `<details class="td-player" data-td-player="${escape(player.id)}" ${state.playerOpen.has(player.id) ? 'open' : ''}><summary><span class="td-player-name"><b>#${escape(player.jersey ?? player.number ?? '—')} ${escape(player.name)}</b><small>${escape(player.position)} · ${escape(player.depth?.label || ({ACT:'Active',RES:'Reserve',INA:'Inactive'}[player.status]) || player.status || 'Starter status unavailable')}</small></span><span class="td-player-metrics">${metrics.map(([label,value]) => `<span><small>${label}</small><b>${fmt(value)}</b></span>`).join('')}</span></summary><div class="td-player-history">${(dataset.disagreements || []).some(issue => issue.playerId === player.id) ? '<p class="td-disagreement">Jersey sources differ. The number remains unavailable pending reconciliation. Open Sources for both values.</p>' : ''}<h3>LAST 5 RECORDED REGULAR-SEASON STATISTIC ROWS</h3>${player.last5?.length ? `<table><thead><tr><th>GAME</th><th>PASS</th><th>RUSH</th><th>REC</th><th>TD</th></tr></thead><tbody>${player.last5.map(game => `<tr><th>${game.season} W${game.week} · ${escape(game.team || state.team)} vs ${escape(game.opponent)}</th><td>${fmt(game.stats?.passingYards)}</td><td>${fmt(game.stats?.rushingYards)}</td><td>${fmt(game.stats?.receivingYards)}</td><td>${fmt(game.stats?.offensiveTD ?? game.stats?.totalTD)}</td></tr>`).join('')}</tbody></table>` : '<p>Verified game-level player statistics unavailable.</p>'}<p>Depth order is separate from confirmed starters. Passing touchdowns are shown separately from touchdowns scored.</p></div></details>`; }).join('') : state.team === 'PIT' ? '<button class="td-diamond-button" data-open="steelers">OPEN STEELERS PLAYER RESEARCH</button>' : '<p class="td-empty">Verified current roster unavailable. No player identities or statistics are substituted.</p>'}</section>`;
+    return `<section class="td-panel td-framed td-players">${panelHead(`${panelName()} · PLAYERS & QB`)}<p class="td-coverage-note">${dataset.season} current roster · verified season totals when available</p><div class="td-position-controls" role="group" aria-label="Player position">${positions.map(pos => `<button data-td-position="${pos}" aria-pressed="${chosen === pos}">${pos}</button>`).join('')}</div>${filtered.length ? filtered.map(player => { const s = player.seasonStats || {}, scoredTD = known(s.rushingTD) && known(s.receivingTD) ? Number(s.rushingTD)+Number(s.receivingTD) : null, metrics = player.position === 'QB' ? [['PASS',s.passingYards],['PASS TD',s.passingTD],['RUSH',s.rushingYards],['RUSH TD',s.rushingTD]] : ['DE','DT','DL','LB','CB','DB','S','SAF','ILB','OLB'].includes(player.position) ? [['TACKLES',s.tackles],['ASSISTS',s.assistedTackles],['SACKS',s.defensiveSacks],['INT',s.defensiveInterceptions]] : [['RUSH',s.rushingYards],['REC',s.receivingYards],['CATCH',s.receptions],['TD SCORED',scoredTD]]; return `<details class="td-player" data-td-player="${escape(player.id)}" ${state.playerOpen.has(player.id) ? 'open' : ''}><summary><span class="td-player-name"><b>#${escape(player.jersey ?? player.number ?? '—')} ${escape(player.name)}</b><small>${escape(player.position)} · ${escape(player.depth?.label || ({ACT:'Active',RES:'Reserve',INA:'Inactive'}[player.status]) || player.status || 'Starter status unavailable')}</small></span><span class="td-player-metrics">${metrics.map(([label,value]) => `<span><small>${label}</small><b>${fmt(value)}</b></span>`).join('')}</span></summary><div class="td-player-history">${(dataset.disagreements || []).some(issue => issue.playerId === player.id && issue.field === 'jersey') ? '<p class="td-disagreement">Jersey sources differ. The number remains unavailable pending reconciliation. Open Sources for both values.</p>' : ''}<h3>LAST 5 RECORDED REGULAR-SEASON STATISTIC ROWS</h3>${player.last5?.length ? `<table><thead><tr><th>GAME</th><th>PASS</th><th>RUSH</th><th>REC</th><th>TD</th></tr></thead><tbody>${player.last5.map(game => `<tr><th>${game.season} W${game.week} · ${escape(game.team || state.team)} vs ${escape(game.opponent)}</th><td>${fmt(game.stats?.passingYards)}</td><td>${fmt(game.stats?.rushingYards)}</td><td>${fmt(game.stats?.receivingYards)}</td><td>${fmt(game.stats?.offensiveTD ?? game.stats?.totalTD)}</td></tr>`).join('')}</tbody></table>` : '<p>Verified game-level player statistics unavailable.</p>'}<p>Depth order is separate from confirmed starters. Passing touchdowns are shown separately from touchdowns scored.</p></div></details>`; }).join('') : state.team === 'PIT' ? '<button class="td-diamond-button" data-open="steelers">OPEN STEELERS PLAYER RESEARCH</button>' : '<p class="td-empty">Verified current roster unavailable. No player identities or statistics are substituted.</p>'}</section>`;
   }
   function lineupContent() {
     const game = nextGame(), depth = team()?.depth, injuries = team()?.injuries;
@@ -151,9 +151,11 @@
     if (state.view) { const view = state.view; state.view = null; if (['report','schedule','matchup','venues','sources'].includes(view)) show(view,state.game); }
   }
   function sourcesContent(item) {
+    if (!dataset) return `<p>Research data could not be verified against the source disagreement catalog. No unchecked statistics are displayed.</p><p>${escape(error || 'Verification is still in progress.')}</p><button data-td-action="retry">Retry verified data</button>`;
     const ids = sourceIds(item), sources = dataset.sources.filter(source => !ids.length || ids.includes(source.id));
-    const issues = (dataset.disagreements || []).filter(issue => !item || issue.gameId === item.id || issue.team === state.team);
-    return `${issues.length ? `<section class="td-disagreement"><h3>SOURCE DIFFERENCES</h3>${issues.map(issue => `<p>${escape(issue.issue)} · ${escape(issue.field)}${issue.playerId ? ` · ${escape(team()?.roster?.find(player => player.id === issue.playerId)?.name || issue.playerId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action)}</p>`).join('')}</section>` : ''}<p class="td-source-context">${item?.season || dataset.season} regular season${item ? ` · Week ${item.week} · ${escape(item.id)}` : ''} · retrieved ${escape(timestamp(dataset.retrievedAt))}<br>Missing fields = unavailable. Derived metrics use the selected completed games only. Updates follow provider publication, not live play-by-play.</p><ul>${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    const contextGames = new Set([...games(),...(team()?.roster || []).flatMap(player => player.last5 || [])].map(game => game.gameId || game.id));
+    const issues = (dataset.disagreements || []).filter(issue => issue.fromIntegrityCatalog ? item ? issue.gameId === item.id : contextGames.has(issue.gameId) || issue.team === state.team : !item || issue.gameId === item.id || issue.team === state.team);
+    return `${error ? `<p class="td-disagreement">${escape(error)}</p>` : ''}${issues.length ? `<section class="td-disagreement"><h3>SOURCE DIFFERENCES</h3>${issues.map(issue => issue.fromIntegrityCatalog ? window.PDSourceIntegrity.describeIssue(issue,escape,timestamp) : `<p>${escape(issue.issue)} · ${escape(issue.field)}${issue.playerId ? ` · ${escape(team()?.roster?.find(player => player.id === issue.playerId)?.name || issue.playerId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action)}</p>`).join('')}</section>` : ''}<p class="td-source-context">${item?.season || dataset.season} regular season${item ? ` · Week ${item.week} · ${escape(item.id)}` : ''} · retrieved ${escape(timestamp(dataset.retrievedAt))}<br>Missing or disputed fields = unavailable. Derived metrics use the selected completed games only. Updates follow provider publication, not live play-by-play.</p><ul>${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   function reportContent(game) {
     if (!game) return '<p>This event is unavailable in the verified dataset.</p>';
@@ -161,8 +163,13 @@
     return `<p class="td-report-score">${escape(identity(game.away_team).fullName)} ${fmt(game.away_score)} — ${fmt(game.home_score)} ${escape(identity(game.home_team).fullName)}</p><p>${game.season} · Week ${game.week} · ${escape(game.status.toUpperCase())}<br>${escape(dateTime(game))} · ${escape(game.venue || 'Venue unavailable')}</p><table class="td-report-table"><thead><tr><th>METRIC</th><th>${escape(state.team)}</th><th>${escape(opponent(game))}</th></tr></thead><tbody>${[['Net passing','netPassing'],['Rushing','rushing'],['Total offence','totalOffense'],['Third downs made','thirdDownMade'],['Third down attempts','thirdDownAttempts'],['Red-zone TDs','redZoneTD'],['Red-zone attempts','redZoneAttempts'],['Turnovers','turnovers'],['Penalty yards','penaltyYards']].map(([label,key]) => `<tr><th>${label}</th><td>${fmt(own[key])}</td><td>${fmt(other[key])}</td></tr>`).join('')}</tbody></table>${sourcesContent(game)}`;
   }
   function show(action, id, trigger) {
-    if (!dataset) return;
+    if (!dataset && action !== 'sources') return;
     const dialog = $('team-details-dialog'), game = id ? games().find(game => game.id === id) : nextGame();
+    if (action === 'report' && window.PDApp?.openGameReport) {
+      if (dialog?.open) dialog.close();
+      window.PDApp.openGameReport(state.team,game?.id || id);
+      return;
+    }
     let title, content;
     if (action === 'report') { title = `${name(state.team)} · Game report`; content = reportContent(game); }
     else if (action === 'schedule') {
@@ -201,10 +208,12 @@
       const controller = new AbortController(), timeout = setTimeout(() => controller.abort(),20000);
       try {
         const response = await fetch('assets/data/team-details.json',{cache:'no-cache',signal:controller.signal}); if (!response.ok) throw new Error(`Verified team feed returned HTTP ${response.status}`);
-        const value = await response.json(); if (value.schemaVersion !== 1 || !value.teams?.DAL?.games || !Number.isFinite(Date.parse(value.retrievedAt)) || !value.sources?.length) throw new Error('Verified team dataset is invalid');
+        const bytes = await response.arrayBuffer(), raw = JSON.parse(new TextDecoder().decode(bytes)); if (raw.schemaVersion !== 1 || !raw.teams?.DAL?.games || !Number.isFinite(Date.parse(raw.retrievedAt)) || !raw.sources?.length) throw new Error('Verified team dataset is invalid');
+        if (!window.PDSourceIntegrity) throw new Error('Source integrity verification is unavailable');
+        const value = await window.PDSourceIntegrity.apply('team-details',raw,bytes,{signal:controller.signal});
         if (dataset && Date.parse(value.retrievedAt) < Date.parse(dataset.retrievedAt)) throw new Error('Older team snapshot rejected; preceding verified snapshot retained');
-        const changed = !dataset || JSON.stringify(dataset) !== JSON.stringify(value), recovered = error !== null;
-        if (changed) dataset = value;
+        const changed = !window.PDSourceIntegrity.sameSnapshot(dataset,value), recovered = error !== null;
+        if (changed) dataset = value; rawDataset = raw;
         error = null; document.documentElement.dataset.teamDataReady = 'true';
         // A successful check of the same snapshot keeps live controls and their
         // animation clocks intact. Full-content comparison still applies source
@@ -231,6 +240,10 @@
     else if (action === 'continue') { state.tab = 'players'; writeRoute(); render(); $('team-tab-players')?.scrollIntoView({block:'start',behavior:'auto'}); $('team-tab-players')?.focus({preventScroll:true}); }
     else if (action === 'insights') { state.tab = 'form'; writeRoute(); render(); $('team-form-snapshot')?.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
     else if (action === 'refresh' || action === 'retry') refresh(true);
+    else if (action === 'report' && window.PDApp?.openGameReport) {
+      if ($('team-details-dialog')?.open) $('team-details-dialog').close();
+      window.PDApp.openGameReport(state.team,button.dataset.game);
+    }
     else if (action === 'matchup' && window.MatchupBreakdown) {
       if ($('team-details-dialog')?.open) $('team-details-dialog').close();
       window.MatchupBreakdown.enter(state.team,button.dataset.game);
@@ -262,5 +275,5 @@
   window.addEventListener('focus',() => { if (active()) refresh(); });
   window.addEventListener('online',() => { if (active()) refresh(true); });
   setInterval(() => { if (!document.hidden && active()) refresh(); },90000);
-  window.PDTeamDetails = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getSelectedGames:selectedGames};
+  window.PDTeamDetails = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getRawDataset:() => rawDataset,getSelectedGames:selectedGames};
 })();
