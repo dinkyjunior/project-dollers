@@ -1,0 +1,50 @@
+{
+  "status": "accepted-local-saved-data-bridge",
+  "checkedAt": "2026-10-12T23:38:52.748917+00:00",
+  "baselineComposite": {
+    "file": "local-baseline-composite.json",
+    "sha256": "d084fa116bebfa83c9e8cbd515654a425514134669ff11288be6101526488e44"
+  },
+  "nativeBridge": {
+    "file": "native-delta-bridge-2026-10-12T23-37-16-585Z/results.json",
+    "sha256": "ef4517f789960b907c5374abd8e794c210456c010420f0af61a864a696e23625",
+    "status": "passed"
+  },
+  "sourceBodyCount": 731,
+  "currentManifestSha256": "0728710a2107a3b6ca2588bf9c0195dcf65b341efdce116b191c9a102dae692c",
+  "changedCode": [
+    "assets/nfl-dashboard.js"
+  ],
+  "changedReportDetails": 414,
+  "reportIndexChanged": true,
+  "unchangedBooks": [
+    "assets/data/current.json",
+    "assets/data/team-details.json",
+    "assets/data/matchup-breakdown.json",
+    "assets/data/player-history.json"
+  ],
+  "nativeInputs": 18,
+  "nativeOriginals": 6,
+  "viewports": [
+    {
+      "width": 393,
+      "height": 852
+    },
+    {
+      "width": 430,
+      "height": 896
+    },
+    {
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "browsersClosed": true,
+  "sourceStable": true,
+  "errors": 0,
+  "manualOriginalReview": {
+    "nfl393430": "Current period, source coverage and PCT/DIFF order; not playoff seeds disclosure are actually visible inside the app frame. No overflow or obstructed navigation. Source timestamp remains honestly stale.",
+    "archive393": "Exact17\u201341CLE/BAL score/quarters, CLE net passing/offense unavailable because sources disagree; no fabricated replacement. Decorative report structure preserved."
+  },
+  "qualification": "Bounded actual native regression plus unchanged-source prior baseline. Audited archive verification flags do not imply fresh provider retrieval. External refreshed data generation, actual hosted delivery, production daily-run execution and WebKit remain pending."
+}
