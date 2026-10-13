@@ -10,6 +10,8 @@
 }
 .app-shell:has(.editorial-home.active)::after { display: none; }
 .page.editorial-home {
+  --editorial-accent: #00f4ee;
+  --editorial-selection-light: #00f4ee;
   background: #000;
   color: #f9f9fc;
   font-family: PDInter, Arial, sans-serif;
@@ -207,8 +209,8 @@
   text-align: left;
   transition: background 180ms, border-color 180ms;
 }
-.editorial-sport.is-available { border-radius: 5px; background: linear-gradient(100deg, #171a21c9, #15171cba); }
-.editorial-sport.is-available::before { content: ""; position: absolute; inset: 0 auto 0 calc(var(--editorial-width) * -.014); width: 2px; border-radius: 1px; background: #00f6ed; }
+.editorial-sport.is-selected { border-radius: 5px; background: linear-gradient(100deg, #171a21c9, #15171cba); }
+.editorial-sport.is-selected::before { content: ""; position: absolute; inset: 0 auto 0 calc(var(--editorial-width) * -.014); width: 2px; border-radius: 1px; background: var(--editorial-selection-light); }
 .editorial-sport:hover { background: #ffffff0b; border-bottom-color: #89819f; }
 .editorial-sport:active { background: #ffffff10; }
 .editorial-sport-number { color: #c1b4e5; font-size: calc(var(--editorial-width) * .025); letter-spacing: .06em; }
@@ -218,13 +220,23 @@
 .editorial-sport-name { font-size: calc(var(--editorial-width) * .05); line-height: 1.1; letter-spacing: .06em; }
 .editorial-sport-action { display: flex; align-items: center; gap: 5px; color: #c5b9e8; font-size: calc(var(--editorial-width) * .027); white-space: nowrap; }
 .is-available .editorial-sport-action { color: #00f4ee; }
+.editorial-sport.is-selected .editorial-sport-action { color: var(--editorial-accent); }
 .editorial-sport-action svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 1.6; }
 .editorial-status { min-height: 0; margin: 0; color: #c7bee9; font-size: 12px; line-height: 1.5; }
 .editorial-status.is-visible { margin-top: 12px; }
+.editorial-status.sr-only { margin: -1px; }
 .editorial-footer { display: flex; align-items: center; gap: calc(var(--editorial-width) * .026); margin: calc(var(--editorial-width) * .059) var(--editorial-side) 0; }
 .editorial-footer > span { flex: 1; height: 1px; background: #4d455c80; }
 .editorial-footer p { margin: 0; color: #b4a7da; font-size: calc(var(--editorial-width) * .019); letter-spacing: .19em; text-transform: uppercase; white-space: nowrap; }
-.editorial-home button:focus-visible { outline: 2px solid #00e9e6; outline-offset: 4px; }
+.editorial-home button:focus-visible { outline: 2px solid var(--editorial-accent); outline-offset: 4px; }
+.editorial-home[data-home-sport="nba"] { --editorial-accent: #bccaff; --editorial-selection-light: linear-gradient(180deg, #2389ff 48%, #ff3c59 52%); }
+.editorial-home[data-home-sport="nrl"] { --editorial-accent: #33f4a2; --editorial-selection-light: #33f4a2; }
+.editorial-home[data-home-sport="ufc"] { --editorial-accent: #ff6373; --editorial-selection-light: #ff3852; }
+.editorial-home[data-home-sport="nba"] .editorial-stadium-light { background: radial-gradient(ellipse at 23% 17%, #659eff55, transparent 25%), radial-gradient(ellipse at 73% 26%, #ff5c7055, transparent 24%); }
+.editorial-home[data-home-sport="nrl"] .editorial-stadium-light { background: radial-gradient(ellipse at 23% 17%, #69ffb455, transparent 25%), radial-gradient(ellipse at 73% 26%, #a8ffca55, transparent 24%); }
+.editorial-home[data-home-sport="ufc"] .editorial-stadium-light { background: radial-gradient(ellipse at 23% 17%, #ff738a55, transparent 25%), radial-gradient(ellipse at 73% 26%, #ffb8bb55, transparent 24%); }
+.editorial-entry:disabled { padding-inline: calc(var(--editorial-width) * .015); font-size: calc(var(--editorial-width) * .034); font-weight: 450; color: #494653; border-color: #efedf3; background: #e6e4ea; box-shadow: 0 1px 0 #ffffff55 inset; transform: none; }
+.editorial-topics button:disabled { color: #a39bb9; cursor: default; }
 .editorial-home[data-home-motion-state="paused"] .editorial-brand-sheen > span,
 .editorial-home[data-home-motion-state="paused"] .editorial-stadium-light,
 .app-shell.motion-paused .editorial-brand-sheen > span,

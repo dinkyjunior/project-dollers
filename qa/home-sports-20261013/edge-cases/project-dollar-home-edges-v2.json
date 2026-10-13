@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "name": "initial NFL picture actually decoded",
+      "passed": true,
+      "detail": {
+        "sport": "nfl",
+        "artState": "ready",
+        "artHidden": false,
+        "artDisplay": "block",
+        "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+        "decoded": true,
+        "entryDisabled": false,
+        "entryRoute": "nfl",
+        "entryLabel": "Explore NFL",
+        "topics": [
+          {
+            "label": "Standings",
+            "disabled": false
+          },
+          {
+            "label": "Players",
+            "disabled": false
+          },
+          {
+            "label": "Matchups",
+            "disabled": false
+          }
+        ],
+        "pressed": [
+          "nfl"
+        ],
+        "status": "",
+        "hash": "#home",
+        "motion": "paused"
+      }
+    },
+    {
+      "name": "delayed NBA → NRL → NFL preserves latest picture and immediate route gating",
+      "passed": true,
+      "detail": {
+        "immediateNBA": {
+          "sport": "nba",
+          "artState": "loading",
+          "artHidden": false,
+          "artDisplay": "block",
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+          "decoded": true,
+          "entryDisabled": true,
+          "entryRoute": null,
+          "entryLabel": "NBA · Coming soon",
+          "topics": [
+            {
+              "label": "Standings",
+              "disabled": true
+            },
+            {
+              "label": "Players",
+              "disabled": true
+            },
+            {
+              "label": "Matchups",
+              "disabled": true
+            }
+          ],
+          "pressed": [
+            "nba"
+          ],
+          "status": "NBA selected. Research is coming soon.",
+          "hash": "#home",
+          "motion": "paused"
+        },
+        "finalRace": {
+          "sport": "nfl",
+          "artState": "ready",
+          "artHidden": false,
+          "artDisplay": "block",
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+          "decoded": true,
+          "entryDisabled": false,
+          "entryRoute": "nfl",
+          "entryLabel": "Explore NFL",
+          "topics": [
+            {
+              "label": "Standings",
+              "disabled": false
+            },
+            {
+              "label": "Players",
+              "disabled": false
+            },
+            {
+              "label": "Matchups",
+              "disabled": false
+            }
+          ],
+          "pressed": [
+            "nfl"
+          ],
+          "status": "NFL selected. Research is available now.",
+          "hash": "#home",
+          "motion": "paused"
+        }
+      }
+    },
+    {
+      "name": "failed UFC venue hides stale scene and NFL selection recovers",
+      "passed": true,
+      "detail": {
+        "unavailable": {
+          "sport": "ufc",
+          "artState": "unavailable",
+          "artHidden": true,
+          "artDisplay": "none",
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+          "decoded": true,
+          "entryDisabled": true,
+          "entryRoute": null,
+          "entryLabel": "UFC · Coming soon",
+          "topics": [
+            {
+              "label": "Rankings",
+              "disabled": true
+            },
+            {
+              "label": "Fighters",
+              "disabled": true
+            },
+            {
+              "label": "Matchups",
+              "disabled": true
+            }
+          ],
+          "pressed": [
+            "ufc"
+          ],
+          "status": "UFC selected. The venue image could not load. Research availability is unchanged.",
+          "hash": "#home",
+          "motion": "paused"
+        },
+        "recovered": {
+          "sport": "nfl",
+          "artState": "ready",
+          "artHidden": false,
+          "artDisplay": "block",
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+          "decoded": true,
+          "entryDisabled": false,
+          "entryRoute": "nfl",
+          "entryLabel": "Explore NFL",
+          "topics": [
+            {
+              "label": "Standings",
+              "disabled": false
+            },
+            {
+              "label": "Players",
+              "disabled": false
+            },
+            {
+              "label": "Matchups",
+              "disabled": false
+            }
+          ],
+          "pressed": [
+            "nfl"
+          ],
+          "status": "NFL selected. Research is available now.",
+          "hash": "#home",
+          "motion": "paused"
+        }
+      }
+    },
+    {
+      "name": "selected NBA restores after direct Home refresh",
+      "passed": true,
+      "detail": {
+        "sport": "nba",
+        "artState": "ready",
+        "artHidden": false,
+        "artDisplay": "block",
+        "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-nba-mobile.webp",
+        "decoded": true,
+        "entryDisabled": true,
+        "entryRoute": null,
+        "entryLabel": "NBA · Coming soon",
+        "topics": [
+          {
+            "label": "Standings",
+            "disabled": true
+          },
+          {
+            "label": "Players",
+            "disabled": true
+          },
+          {
+            "label": "Matchups",
+            "disabled": true
+          }
+        ],
+        "pressed": [
+          "nba"
+        ],
+        "status": "",
+        "hash": "#home",
+        "motion": "paused"
+      }
+    },
+    {
+      "name": "responsive picture crosses mobile breakpoint without sport mismatch",
+      "passed": true,
+      "detail": {
+        "sport": "nba",
+        "artState": "ready",
+        "artHidden": false,
+        "artDisplay": "block",
+        "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-nba-mobile.webp",
+        "decoded": true,
+        "entryDisabled": true,
+        "entryRoute": null,
+        "entryLabel": "NBA · Coming soon",
+        "topics": [
+          {
+            "label": "Standings",
+            "disabled": true
+          },
+          {
+            "label": "Players",
+            "disabled": true
+          },
+          {
+            "label": "Matchups",
+            "disabled": true
+          }
+        ],
+        "pressed": [
+          "nba"
+        ],
+        "status": "",
+        "hash": "#home",
+        "motion": "paused"
+      }
+    },
+    {
+      "name": "direct NFL route preserves hidden selected preview and pauses Home motion",
+      "passed": true,
+      "detail": {
+        "sport": "nba",
+        "artState": "ready",
+        "artHidden": false,
+        "artDisplay": "block",
+        "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-nba-mobile.webp",
+        "decoded": true,
+        "entryDisabled": true,
+        "entryRoute": null,
+        "entryLabel": "NBA · Coming soon",
+        "topics": [
+          {
+            "label": "Standings",
+            "disabled": true
+          },
+          {
+            "label": "Players",
+            "disabled": true
+          },
+          {
+            "label": "Matchups",
+            "disabled": true
+          }
+        ],
+        "pressed": [
+          "nba"
+        ],
+        "status": "",
+        "hash": "#nfl",
+        "motion": "paused"
+      }
+    },
+    {
+      "name": "blocked optional session storage keeps selection functional and safe NFL fallback",
+      "passed": true,
+      "detail": {
+        "sport": "nfl",
+        "artState": "ready",
+        "artHidden": false,
+        "artDisplay": "block",
+        "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+        "decoded": true,
+        "entryDisabled": false,
+        "entryRoute": "nfl",
+        "entryLabel": "Explore NFL",
+        "topics": [
+          {
+            "label": "Standings",
+            "disabled": false
+          },
+          {
+            "label": "Players",
+            "disabled": false
+          },
+          {
+            "label": "Matchups",
+            "disabled": false
+          }
+        ],
+        "pressed": [
+          "nfl"
+        ],
+        "status": "",
+        "hash": "#home",
+        "motion": "paused"
+      }
+    }
+  ],
+  "intentionalFaults": [
+    {
+      "url": "editorial-stadium-ufc-mobile.webp",
+      "fault": "blocked image request for recovery test"
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-10-13T06:36:18.780Z",
+  "passed": true,
+  "browserClosed": true,
+  "completedAt": "2026-10-13T06:36:22.727Z"
+}
