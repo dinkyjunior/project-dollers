@@ -21,9 +21,9 @@
   const topicButtons = [...(topics?.querySelectorAll('button') || [])];
   const sports = {
     nfl: {name:'NFL',logo:'assets/home/nfl.svg',art:'assets/home/editorial-stadium.webp',mobile:'assets/home/editorial-stadium-mobile.webp',topics:['Standings','Players','Matchups']},
-    nba: {name:'NBA',logo:'assets/home/nba.svg',art:'assets/home/editorial-interior-nba.webp',mobile:'assets/home/editorial-interior-nba-mobile.webp',topics:['Standings','Players','Matchups']},
-    nrl: {name:'NRL',logo:'assets/logos/nrl.webp',art:'assets/home/editorial-interior-nrl.webp',mobile:'assets/home/editorial-interior-nrl-mobile.webp',topics:['Ladder','Players','Matchups']},
-    ufc: {name:'UFC',logo:'assets/logos/ufc.svg',art:'assets/home/editorial-interior-ufc.webp',mobile:'assets/home/editorial-interior-ufc-mobile.webp',topics:['Rankings','Fighters','Matchups']}
+    nba: {name:'NBA',logo:'assets/home/nba.svg',art:'assets/home/editorial-immersive-nba.webp',mobile:'assets/home/editorial-immersive-nba-mobile.webp',topics:['Standings','Players','Matchups']},
+    nrl: {name:'NRL',logo:'assets/logos/nrl.webp',art:'assets/home/editorial-immersive-nrl.webp',mobile:'assets/home/editorial-immersive-nrl-mobile.webp',topics:['Ladder','Players','Matchups']},
+    ufc: {name:'UFC',logo:'assets/logos/ufc.svg',art:'assets/home/editorial-immersive-ufc.webp',mobile:'assets/home/editorial-immersive-ufc-mobile.webp',topics:['Rankings','Fighters','Matchups']}
   };
   const storageKey = 'pd-home-sport';
   let menuOpen = false;

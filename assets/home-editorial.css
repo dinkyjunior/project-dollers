@@ -57,17 +57,6 @@ body:has(.editorial-home.active) {
   pointer-events: none;
 }
 .editorial-art img { display: block; width: 100%; height: auto; }
-/* Interior scenes keep their full native composition: the court, both rugby
-   posts and the octagon stay visible without stretching or cropping. */
-.editorial-home:not([data-home-sport="nfl"]) .editorial-art {
-  inset: calc(var(--editorial-width) * .35 + env(safe-area-inset-top, 0px)) 0 auto;
-  height: calc(var(--editorial-width) * .666667);
-  mask-image: linear-gradient(180deg, transparent, #000 7%, #000 88%, transparent);
-  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 88%, transparent);
-}
-.editorial-home:not([data-home-sport="nfl"]) .editorial-art-shade {
-  background: linear-gradient(90deg, #0002, transparent 65%);
-}
 .editorial-art-shade {
   position: absolute;
   z-index: -2;

@@ -12,10 +12,12 @@ The user also approved matching Home previews for NFL, NBA, NRL and UFC with spo
 
 The latest Home refinement matches the NFL dashboard's actual frame dimensions and centring: 430px maximum on phones and 400px wide with a 770px height cap from the 700px breakpoint. Remove the visible editorial headline, the repeated hero sport name and the 01–04 row labels. The widened refined wordmark must read PROJECT DOLLAR, including two distinct gold Ls, and keep its natural aspect ratio.
 
-The user then approved that compact frame and branding and requested removal of all four research taglines and the visible sport-selector names. Enlarge the genuine selector icons, preserve their accessible labels and availability status, and replace only the NBA/NRL/UFC scenes using the latest three-panel interior-arena reference. Show the full basketball court and central scoreboard, the rugby field with both H posts, and the fenced UFC octagon beneath red lighting. Preserve the approved NFL aerial scene and refined wordmark. Only NFL remains enterable.
+The user then approved that compact frame and branding and requested removal of all four research taglines and the visible sport-selector names. Enlarge the genuine selector icons, preserve their accessible labels and availability status, and replace only the NBA/NRL/UFC scenes using the latest three-panel interior-arena reference. Preserve the approved NFL aerial scene and refined wordmark. Only NFL remains enterable.
+
+The user's subsequent clarification supersedes the landscape-strip implementation: the three images are inspiration, not exact-copy panels. Create realistic portrait arena scenes that fill the Home background behind Project Dollar, the sport badge and the entry area, blending into the lower controls exactly as the approved NFL page does. Keep native proportions; extend the scene's composition rather than distorting a landscape raster. NBA should show a central scoreboard and court with exactly two end hoops; NRL the full pitch and both H posts; UFC a complete fenced octagon and red overhead trusses. Preserve all previous artwork and research data.
 
 ## Source of truth
-The latest user-supplied render is the visual source of truth for Home. The earlier approved screen renders remain the reference for the corresponding research screens. The current website is NOT the visual source of truth.
+The latest user instructions and supplied renders guide Home. The interior sport examples are inspirational; the approved NFL page establishes the continuous portrait background and overlay layout. The earlier approved screen renders remain the reference for the corresponding research screens. The current website is NOT the visual source of truth.
 
 ## Repository / deployment
 Repository: https://github.com/dinkyjunior/project-dollers
