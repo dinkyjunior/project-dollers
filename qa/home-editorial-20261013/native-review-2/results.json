@@ -1,0 +1,2259 @@
+{
+  "qualification": "Local Chromium native layout and controls. Source freshness, WebKit and hosted delivery are separate.",
+  "browser": "Chromium /usr/bin/chromium; Playwright 1.58.2",
+  "startedAt": "2026-10-13T05:50:03.124Z",
+  "sourceBefore": {
+    "index.html": "94c5ed6c08f3a82f13b2d8144ef7fa75618b9dedf0ee825d23da9e94f9ed3001",
+    "assets/home-editorial.css": "cf24546e822a6792345a4a4137a270a37fec72456f069769e0ef7f8bd47f4616",
+    "assets/home-editorial.js": "559216401083eb443ce455dfbea89480da4e84f6b1f6dfd7289a4fea2bc008c9",
+    "assets/app.js": "1a271cba7f50cb55bbbfdef617b809f2b68ba17f470d32429ede6604d1f00799",
+    "assets/home/editorial-stadium.webp": "2422d1e84b2054b42417da73d6d87dff82c3dccd5000abb4aabdf1066effef50",
+    "assets/home/editorial-stadium-mobile.webp": "bc70d92a50c1baebeea18569dfa6691125e1b712c05c06aaa00c277df22e7ebf",
+    "assets/home/editorial-wordmark.webp": "6ab707c6c781ff548c59254708b1ede20d145e90014e04796e6ac9f2f6b5f17f"
+  },
+  "results": [
+    {
+      "viewport": {
+        "width": 393,
+        "height": 852,
+        "touch": true,
+        "dpr": 2
+      },
+      "checks": [
+        {
+          "name": "nba coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "nrl coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "ufc coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "keyboard menu and Escape focus return",
+          "status": "passed"
+        },
+        {
+          "name": "menu NFL route and frame",
+          "status": "passed"
+        },
+        {
+          "name": "Explore NFL and NFL row; Home–NFL–Home",
+          "status": "passed"
+        },
+        {
+          "name": "direct Home/NFL load and refresh",
+          "status": "passed"
+        }
+      ],
+      "diagnostics": {
+        "errors": [],
+        "httpFailures": [],
+        "requestFailures": []
+      },
+      "top": {
+        "viewport": {
+          "width": 393,
+          "height": 852,
+          "dpr": 2
+        },
+        "document": {
+          "width": 393,
+          "height": 852
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852
+        },
+        "scroll": {
+          "width": 393,
+          "clientWidth": 393,
+          "height": 890,
+          "clientHeight": 852,
+          "top": 0
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 54.203125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 25.53125,
+            "y": 133.21875,
+            "width": 341.9375,
+            "height": 76.25,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "42.837px",
+            "lineHeight": "38.1249px"
+          },
+          "[data-home-entry]": {
+            "x": 66.859375,
+            "y": 512.859375,
+            "width": 153.265625,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "15.327px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 327,
+            "y": 10.203125,
+            "width": 44,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 25.53125,
+            "y": 643.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 25.53125,
+            "y": 691.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 25.53125,
+            "y": 739.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 25.53125,
+            "y": 787.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 25.53125,
+            "y": 859.0625,
+            "width": 341.9375,
+            "height": 9,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+            "alt": "",
+            "naturalWidth": 860,
+            "naturalHeight": 1290,
+            "x": 0,
+            "y": 0,
+            "width": 393,
+            "height": 589.5,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 22,
+            "y": 11.375,
+            "width": 233.828125,
+            "height": 41.640625,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 19.25,
+            "y": 60.328125,
+            "width": 72.703125,
+            "height": 72.703125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 66.390625,
+            "y": 651.859375,
+            "width": 44.796875,
+            "height": 31.046875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 66.390625,
+            "y": 698.6875,
+            "width": 44.796875,
+            "height": 33.390625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 66.390625,
+            "y": 747.859375,
+            "width": 44.796875,
+            "height": 31.046875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 66.390625,
+            "y": 802.359375,
+            "width": 37.328125,
+            "height": 18.0625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "bottom": {
+        "viewport": {
+          "width": 393,
+          "height": 852,
+          "dpr": 2
+        },
+        "document": {
+          "width": 393,
+          "height": 852
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 852
+        },
+        "scroll": {
+          "width": 393,
+          "clientWidth": 393,
+          "height": 890,
+          "clientHeight": 852,
+          "top": 38
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": -38,
+            "width": 393,
+            "height": 54.203125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 25.53125,
+            "y": 95.21875,
+            "width": 341.9375,
+            "height": 76.25,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "42.837px",
+            "lineHeight": "38.1249px"
+          },
+          "[data-home-entry]": {
+            "x": 66.859375,
+            "y": 474.859375,
+            "width": 153.265625,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "15.327px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 327,
+            "y": -27.796875,
+            "width": 44,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 25.53125,
+            "y": 605.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 25.53125,
+            "y": 653.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 25.53125,
+            "y": 701.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 25.53125,
+            "y": 749.890625,
+            "width": 341.9375,
+            "height": 48,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 25.53125,
+            "y": 821.0625,
+            "width": 341.9375,
+            "height": 9,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+            "alt": "",
+            "naturalWidth": 860,
+            "naturalHeight": 1290,
+            "x": 0,
+            "y": -38,
+            "width": 393,
+            "height": 589.5,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 22,
+            "y": -26.625,
+            "width": 233.828125,
+            "height": 41.640625,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 19.25,
+            "y": 22.328125,
+            "width": 72.703125,
+            "height": 72.703125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 66.390625,
+            "y": 613.859375,
+            "width": 44.796875,
+            "height": 31.046875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 66.390625,
+            "y": 660.6875,
+            "width": 44.796875,
+            "height": 33.390625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 66.390625,
+            "y": 709.859375,
+            "width": 44.796875,
+            "height": 31.046875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 66.390625,
+            "y": 764.359375,
+            "width": 37.328125,
+            "height": 18.0625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "nflShellFromMenu": {
+        "x": 0,
+        "y": 47.90625,
+        "width": 393,
+        "height": 756.171875
+      },
+      "nflShellFromCTA": {
+        "x": 0,
+        "y": 47.90625,
+        "width": 393,
+        "height": 756.171875
+      },
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 896,
+        "touch": true,
+        "dpr": 2
+      },
+      "checks": [
+        {
+          "name": "nba coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "nrl coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "ufc coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "keyboard menu and Escape focus return",
+          "status": "passed"
+        },
+        {
+          "name": "menu NFL route and frame",
+          "status": "passed"
+        },
+        {
+          "name": "Explore NFL and NFL row; Home–NFL–Home",
+          "status": "passed"
+        },
+        {
+          "name": "direct Home/NFL load and refresh",
+          "status": "passed"
+        }
+      ],
+      "diagnostics": {
+        "errors": [],
+        "httpFailures": [],
+        "requestFailures": []
+      },
+      "top": {
+        "viewport": {
+          "width": 430,
+          "height": 896,
+          "dpr": 2
+        },
+        "document": {
+          "width": 430,
+          "height": 896
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 896
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 896
+        },
+        "scroll": {
+          "width": 430,
+          "clientWidth": 430,
+          "height": 957,
+          "clientHeight": 896,
+          "top": 0
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 56.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 27.9375,
+            "y": 145.75,
+            "width": 374.125,
+            "height": 83.4375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "46.87px",
+            "lineHeight": "41.7143px"
+          },
+          "[data-home-entry]": {
+            "x": 73.1875,
+            "y": 561.140625,
+            "width": 167.6875,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16.77px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 361.921875,
+            "y": 11.953125,
+            "width": 44,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 27.9375,
+            "y": 696.234375,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 27.9375,
+            "y": 746.96875,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 27.9375,
+            "y": 797.703125,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 27.9375,
+            "y": 848.4375,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 27.9375,
+            "y": 924.53125,
+            "width": 374.125,
+            "height": 10,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+            "alt": "",
+            "naturalWidth": 860,
+            "naturalHeight": 1290,
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 645,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 24.078125,
+            "y": 11.171875,
+            "width": 255.828125,
+            "height": 45.5625,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 21.0625,
+            "y": 66,
+            "width": 79.546875,
+            "height": 79.546875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 72.640625,
+            "y": 704.109375,
+            "width": 49.015625,
+            "height": 33.96875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 72.640625,
+            "y": 753.5625,
+            "width": 49.015625,
+            "height": 36.546875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 72.640625,
+            "y": 805.578125,
+            "width": 49.015625,
+            "height": 33.96875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 72.640625,
+            "y": 863.421875,
+            "width": 40.84375,
+            "height": 19.765625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "bottom": {
+        "viewport": {
+          "width": 430,
+          "height": 896,
+          "dpr": 2
+        },
+        "document": {
+          "width": 430,
+          "height": 896
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 896
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 896
+        },
+        "scroll": {
+          "width": 430,
+          "clientWidth": 430,
+          "height": 957,
+          "clientHeight": 896,
+          "top": 61
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": -61,
+            "width": 430,
+            "height": 56.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 27.9375,
+            "y": 84.75,
+            "width": 374.125,
+            "height": 83.4375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "46.87px",
+            "lineHeight": "41.7143px"
+          },
+          "[data-home-entry]": {
+            "x": 73.1875,
+            "y": 500.140625,
+            "width": 167.6875,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16.77px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 361.921875,
+            "y": -49.046875,
+            "width": 44,
+            "height": 44,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 27.9375,
+            "y": 635.234375,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 27.9375,
+            "y": 685.96875,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 27.9375,
+            "y": 736.703125,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 27.9375,
+            "y": 787.4375,
+            "width": 374.125,
+            "height": 50.734375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 27.9375,
+            "y": 863.53125,
+            "width": 374.125,
+            "height": 10,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+            "alt": "",
+            "naturalWidth": 860,
+            "naturalHeight": 1290,
+            "x": 0,
+            "y": -61,
+            "width": 430,
+            "height": 645,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 24.078125,
+            "y": -49.828125,
+            "width": 255.828125,
+            "height": 45.5625,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 21.0625,
+            "y": 5,
+            "width": 79.546875,
+            "height": 79.546875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 72.640625,
+            "y": 643.109375,
+            "width": 49.015625,
+            "height": 33.96875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 72.640625,
+            "y": 692.5625,
+            "width": 49.015625,
+            "height": 36.546875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 72.640625,
+            "y": 744.578125,
+            "width": 49.015625,
+            "height": 33.96875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 72.640625,
+            "y": 802.421875,
+            "width": 40.84375,
+            "height": 19.765625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "nflShellFromMenu": {
+        "x": 0,
+        "y": 46.65625,
+        "width": 430,
+        "height": 802.671875
+      },
+      "nflShellFromCTA": {
+        "x": 0,
+        "y": 46.65625,
+        "width": 430,
+        "height": 802.671875
+      },
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024,
+        "touch": false,
+        "dpr": 1
+      },
+      "checks": [
+        {
+          "name": "nba coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "nrl coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "ufc coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "keyboard menu and Escape focus return",
+          "status": "passed"
+        },
+        {
+          "name": "menu NFL route and frame",
+          "status": "passed"
+        },
+        {
+          "name": "Explore NFL and NFL row; Home–NFL–Home",
+          "status": "passed"
+        },
+        {
+          "name": "direct Home/NFL load and refresh",
+          "status": "passed"
+        }
+      ],
+      "diagnostics": {
+        "errors": [],
+        "httpFailures": [],
+        "requestFailures": []
+      },
+      "top": {
+        "viewport": {
+          "width": 768,
+          "height": 1024,
+          "dpr": 1
+        },
+        "document": {
+          "width": 768,
+          "height": 1024
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024
+        },
+        "scroll": {
+          "width": 768,
+          "clientWidth": 768,
+          "height": 1650,
+          "clientHeight": 1024,
+          "top": 0
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 101.328125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 49.90625,
+            "y": 260.34375,
+            "width": 668.1875,
+            "height": 149,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "83.712px",
+            "lineHeight": "74.5037px"
+          },
+          "[data-home-entry]": {
+            "x": 131.171875,
+            "y": 1002.234375,
+            "width": 299.515625,
+            "height": 71.78125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "29.952px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 669,
+            "y": 32.640625,
+            "width": 56,
+            "height": 56,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 49.90625,
+            "y": 1202.15625,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 49.90625,
+            "y": 1292.765625,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 49.90625,
+            "y": 1383.375,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 49.90625,
+            "y": 1473.984375,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 49.90625,
+            "y": 1609.890625,
+            "width": 668.1875,
+            "height": 18,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium.webp",
+            "alt": "",
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 1152,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 43,
+            "y": 19.953125,
+            "width": 456.9375,
+            "height": 81.375,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 37.625,
+            "y": 117.890625,
+            "width": 142.078125,
+            "height": 142.078125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 129.765625,
+            "y": 1216.625,
+            "width": 87.546875,
+            "height": 60.671875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 129.765625,
+            "y": 1304.9375,
+            "width": 87.546875,
+            "height": 65.265625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 129.765625,
+            "y": 1397.84375,
+            "width": 87.546875,
+            "height": 60.671875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 129.765625,
+            "y": 1501.125,
+            "width": 72.953125,
+            "height": 35.3125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "bottom": {
+        "viewport": {
+          "width": 768,
+          "height": 1024,
+          "dpr": 1
+        },
+        "document": {
+          "width": 768,
+          "height": 1024
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1024
+        },
+        "scroll": {
+          "width": 768,
+          "clientWidth": 768,
+          "height": 1650,
+          "clientHeight": 1024,
+          "top": 626
+        },
+        "elements": {
+          "header": {
+            "x": 0,
+            "y": -626,
+            "width": 768,
+            "height": 101.328125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 49.90625,
+            "y": -365.65625,
+            "width": 668.1875,
+            "height": 149,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "83.712px",
+            "lineHeight": "74.5037px"
+          },
+          "[data-home-entry]": {
+            "x": 131.171875,
+            "y": 376.234375,
+            "width": 299.515625,
+            "height": 71.78125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "29.952px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 669,
+            "y": -593.359375,
+            "width": 56,
+            "height": 56,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 49.90625,
+            "y": 576.15625,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 49.90625,
+            "y": 666.765625,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 49.90625,
+            "y": 757.375,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 49.90625,
+            "y": 847.984375,
+            "width": 668.1875,
+            "height": 90.609375,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 49.90625,
+            "y": 983.890625,
+            "width": 668.1875,
+            "height": 18,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium.webp",
+            "alt": "",
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "x": 0,
+            "y": -626,
+            "width": 768,
+            "height": 1152,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 43,
+            "y": -606.046875,
+            "width": 456.9375,
+            "height": 81.375,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 37.625,
+            "y": -508.109375,
+            "width": 142.078125,
+            "height": 142.078125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 129.765625,
+            "y": 590.625,
+            "width": 87.546875,
+            "height": 60.671875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 129.765625,
+            "y": 678.9375,
+            "width": 87.546875,
+            "height": 65.265625,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 129.765625,
+            "y": 771.84375,
+            "width": 87.546875,
+            "height": 60.671875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 129.765625,
+            "y": 875.125,
+            "width": 72.953125,
+            "height": 35.3125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "nflShellFromMenu": {
+        "x": 184,
+        "y": 127,
+        "width": 400,
+        "height": 770
+      },
+      "nflShellFromCTA": {
+        "x": 184,
+        "y": 127,
+        "width": 400,
+        "height": 770
+      },
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "touch": false,
+        "dpr": 1
+      },
+      "checks": [
+        {
+          "name": "nba coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "nrl coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "ufc coming soon",
+          "status": "passed"
+        },
+        {
+          "name": "keyboard menu and Escape focus return",
+          "status": "passed"
+        },
+        {
+          "name": "menu NFL route and frame",
+          "status": "passed"
+        },
+        {
+          "name": "Explore NFL and NFL row; Home–NFL–Home",
+          "status": "passed"
+        },
+        {
+          "name": "direct Home/NFL load and refresh",
+          "status": "passed"
+        }
+      ],
+      "diagnostics": {
+        "errors": [],
+        "httpFailures": [],
+        "requestFailures": []
+      },
+      "top": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000
+        },
+        "scroll": {
+          "width": 1440,
+          "clientWidth": 1440,
+          "height": 1815,
+          "clientHeight": 1000,
+          "top": 0
+        },
+        "elements": {
+          "header": {
+            "x": 296,
+            "y": 0,
+            "width": 848,
+            "height": 111.890625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 351.109375,
+            "y": 287.4375,
+            "width": 737.78125,
+            "height": 164.53125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "92.432px",
+            "lineHeight": "82.2645px"
+          },
+          "[data-home-entry]": {
+            "x": 441.1875,
+            "y": 1106.625,
+            "width": 330.71875,
+            "height": 79.28125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "33.072px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 1040.515625,
+            "y": 38.96875,
+            "width": 56,
+            "height": 56,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 351.109375,
+            "y": 1322.8125,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 351.109375,
+            "y": 1422.875,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 351.109375,
+            "y": 1522.9375,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 351.109375,
+            "y": 1623,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 351.109375,
+            "y": 1773.09375,
+            "width": 737.78125,
+            "height": 20,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium.webp",
+            "alt": "",
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "x": 296,
+            "y": 0,
+            "width": 848,
+            "height": 1272,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 343.484375,
+            "y": 22.046875,
+            "width": 504.515625,
+            "height": 89.84375,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 337.546875,
+            "y": 130.15625,
+            "width": 156.875,
+            "height": 156.875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 439.28125,
+            "y": 1338.84375,
+            "width": 96.671875,
+            "height": 66.984375,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 439.28125,
+            "y": 1436.359375,
+            "width": 96.671875,
+            "height": 72.078125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 439.28125,
+            "y": 1538.96875,
+            "width": 96.671875,
+            "height": 66.984375,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 439.28125,
+            "y": 1653.03125,
+            "width": 80.546875,
+            "height": 39,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "bottom": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000,
+          "dpr": 1
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "home": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000
+        },
+        "shell": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000
+        },
+        "scroll": {
+          "width": 1440,
+          "clientWidth": 1440,
+          "height": 1815,
+          "clientHeight": 1000,
+          "top": 815
+        },
+        "elements": {
+          "header": {
+            "x": 296,
+            "y": -815,
+            "width": 848,
+            "height": 111.890625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "h1": {
+            "x": 351.109375,
+            "y": -527.5625,
+            "width": 737.78125,
+            "height": 164.53125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "92.432px",
+            "lineHeight": "82.2645px"
+          },
+          "[data-home-entry]": {
+            "x": 441.1875,
+            "y": 291.625,
+            "width": 330.71875,
+            "height": 79.28125,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "33.072px",
+            "lineHeight": "normal"
+          },
+          "[data-home-menu-toggle]": {
+            "x": 1040.515625,
+            "y": -776.03125,
+            "width": 56,
+            "height": 56,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          ".editorial-sport.is-available[data-open=\"nfl\"]": {
+            "x": 351.109375,
+            "y": 507.8125,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nba\"]": {
+            "x": 351.109375,
+            "y": 607.875,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"nrl\"]": {
+            "x": 351.109375,
+            "y": 707.9375,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "[data-home-sport=\"ufc\"]": {
+            "x": 351.109375,
+            "y": 808,
+            "width": 737.78125,
+            "height": 100.0625,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          },
+          "footer": {
+            "x": 351.109375,
+            "y": 958.09375,
+            "width": 737.78125,
+            "height": 20,
+            "fontFamily": "PDInter, Arial, sans-serif",
+            "fontSize": "16px",
+            "lineHeight": "normal"
+          }
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium.webp",
+            "alt": "",
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "x": 296,
+            "y": -815,
+            "width": 848,
+            "height": 1272,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+            "alt": "Project Dollar",
+            "naturalWidth": 2156,
+            "naturalHeight": 384,
+            "x": 343.484375,
+            "y": -792.953125,
+            "width": 504.515625,
+            "height": 89.84375,
+            "objectFit": "fill",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 337.546875,
+            "y": -684.84375,
+            "width": 156.875,
+            "height": 156.875,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 439.28125,
+            "y": 523.84375,
+            "width": 96.671875,
+            "height": 66.984375,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+            "alt": "",
+            "naturalWidth": 915,
+            "naturalHeight": 2079,
+            "x": 439.28125,
+            "y": 621.359375,
+            "width": 96.671875,
+            "height": 72.078125,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+            "alt": "",
+            "naturalWidth": 500,
+            "naturalHeight": 500,
+            "x": 439.28125,
+            "y": 723.96875,
+            "width": 96.671875,
+            "height": 66.984375,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+            "alt": "",
+            "naturalWidth": 1333,
+            "naturalHeight": 461,
+            "x": 439.28125,
+            "y": 838.03125,
+            "width": 80.546875,
+            "height": 39,
+            "objectFit": "contain",
+            "objectPosition": "50% 50%",
+            "visible": true,
+            "complete": true
+          }
+        ],
+        "runningAnimations": [
+          {
+            "name": "editorial-stadium-breath",
+            "duration": 9000
+          },
+          {
+            "name": "editorial-brand-light",
+            "duration": 9000
+          }
+        ]
+      },
+      "nflShellFromMenu": {
+        "x": 520,
+        "y": 115,
+        "width": 400,
+        "height": 770
+      },
+      "nflShellFromCTA": {
+        "x": 520,
+        "y": 115,
+        "width": 400,
+        "height": 770
+      },
+      "status": "passed"
+    }
+  ],
+  "reducedMotion": {
+    "status": "passed",
+    "geometry": {
+      "viewport": {
+        "width": 393,
+        "height": 852,
+        "dpr": 2
+      },
+      "document": {
+        "width": 393,
+        "height": 852
+      },
+      "home": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      },
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 393,
+        "height": 852
+      },
+      "scroll": {
+        "width": 393,
+        "clientWidth": 393,
+        "height": 890,
+        "clientHeight": 852,
+        "top": 0
+      },
+      "elements": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 54.203125,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        "h1": {
+          "x": 25.53125,
+          "y": 133.21875,
+          "width": 341.9375,
+          "height": 76.25,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "42.837px",
+          "lineHeight": "38.1249px"
+        },
+        "[data-home-entry]": {
+          "x": 66.859375,
+          "y": 512.859375,
+          "width": 153.265625,
+          "height": 44,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "15.327px",
+          "lineHeight": "normal"
+        },
+        "[data-home-menu-toggle]": {
+          "x": 327,
+          "y": 10.203125,
+          "width": 44,
+          "height": 44,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        ".editorial-sport.is-available[data-open=\"nfl\"]": {
+          "x": 25.53125,
+          "y": 643.890625,
+          "width": 341.9375,
+          "height": 48,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        "[data-home-sport=\"nba\"]": {
+          "x": 25.53125,
+          "y": 691.890625,
+          "width": 341.9375,
+          "height": 48,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        "[data-home-sport=\"nrl\"]": {
+          "x": 25.53125,
+          "y": 739.890625,
+          "width": 341.9375,
+          "height": 48,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        "[data-home-sport=\"ufc\"]": {
+          "x": 25.53125,
+          "y": 787.890625,
+          "width": 341.9375,
+          "height": 48,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        },
+        "footer": {
+          "x": 25.53125,
+          "y": 859.0625,
+          "width": 341.9375,
+          "height": 9,
+          "fontFamily": "PDInter, Arial, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "normal"
+        }
+      },
+      "images": [
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-stadium-mobile.webp",
+          "alt": "",
+          "naturalWidth": 860,
+          "naturalHeight": 1290,
+          "x": 0,
+          "y": 0,
+          "width": 393,
+          "height": 589.5,
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/editorial-wordmark.webp",
+          "alt": "Project Dollar",
+          "naturalWidth": 2156,
+          "naturalHeight": 384,
+          "x": 22,
+          "y": 11.375,
+          "width": 233.828125,
+          "height": 41.640625,
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+          "alt": "",
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "x": 19.25,
+          "y": 60.328125,
+          "width": 72.703125,
+          "height": 72.703125,
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/nfl.svg",
+          "alt": "",
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "x": 66.390625,
+          "y": 651.859375,
+          "width": 44.796875,
+          "height": 31.046875,
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/home/nba.svg",
+          "alt": "",
+          "naturalWidth": 915,
+          "naturalHeight": 2079,
+          "x": 66.390625,
+          "y": 698.6875,
+          "width": 44.796875,
+          "height": 33.390625,
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/logos/nrl.webp",
+          "alt": "",
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "x": 66.390625,
+          "y": 747.859375,
+          "width": 44.796875,
+          "height": 31.046875,
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        },
+        {
+          "src": "http://127.0.0.1:8000/project-dollers/assets/logos/ufc.svg",
+          "alt": "",
+          "naturalWidth": 1333,
+          "naturalHeight": 461,
+          "x": 66.390625,
+          "y": 802.359375,
+          "width": 37.328125,
+          "height": 18.0625,
+          "objectFit": "contain",
+          "objectPosition": "50% 50%",
+          "visible": true,
+          "complete": true
+        }
+      ],
+      "runningAnimations": []
+    },
+    "diagnostics": {
+      "errors": [],
+      "httpFailures": [],
+      "requestFailures": []
+    }
+  },
+  "sourceAfter": {
+    "index.html": "94c5ed6c08f3a82f13b2d8144ef7fa75618b9dedf0ee825d23da9e94f9ed3001",
+    "assets/home-editorial.css": "cf24546e822a6792345a4a4137a270a37fec72456f069769e0ef7f8bd47f4616",
+    "assets/home-editorial.js": "559216401083eb443ce455dfbea89480da4e84f6b1f6dfd7289a4fea2bc008c9",
+    "assets/app.js": "1a271cba7f50cb55bbbfdef617b809f2b68ba17f470d32429ede6604d1f00799",
+    "assets/home/editorial-stadium.webp": "2422d1e84b2054b42417da73d6d87dff82c3dccd5000abb4aabdf1066effef50",
+    "assets/home/editorial-stadium-mobile.webp": "bc70d92a50c1baebeea18569dfa6691125e1b712c05c06aaa00c277df22e7ebf",
+    "assets/home/editorial-wordmark.webp": "6ab707c6c781ff548c59254708b1ede20d145e90014e04796e6ac9f2f6b5f17f"
+  },
+  "sourceStable": true,
+  "status": "passed",
+  "browserClosed": true,
+  "completedAt": "2026-10-13T05:50:34.841Z"
+}

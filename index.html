@@ -24,24 +24,16 @@
     <link rel="stylesheet" href="assets/illumination.css" />
     <link rel="stylesheet" href="assets/player-research.css" />
     <link rel="stylesheet" href="assets/home-typography.css?v=luxury-20261007-v1" />
-    <link rel="stylesheet" href="assets/home-premium.css?v=luxury-20261007-v1" />
-    <link rel="stylesheet" href="assets/home-gate-motion.css?v=luxury-20261007-v1" />
     <link rel="stylesheet" href="assets/nfl-dashboard.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/nfl-dashboard-chrome.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/nfl-dashboard-motion.css?v=replica-20261008-v2" />
     <link rel="stylesheet" href="assets/team-details.css?v=20261008-v1" />
-    <link rel="stylesheet" href="assets/home-diamond.css?v=20261008-v1" />
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
     <link rel="stylesheet" href="assets/game-report.css?v=20261012-v1" />
-    <link rel="stylesheet" href="assets/home-aperture.css?v=jewels-20261011-v1" />
-    <link rel="stylesheet" href="assets/home-gem-controls.css?v=jewels-20261011-v1" />
-    <link rel="stylesheet" href="assets/home-gem-layout.css?v=jewels-20261011-v1" />
-    <link rel="stylesheet" href="assets/home-aperture-motion.css?v=jewels-20261011-v1" />
-    <link rel="stylesheet" href="assets/home-brand-lighting.css?v=jewels-20261011-v1" />
+    <link rel="stylesheet" href="assets/home-editorial.css?v=20261013-v1" />
     <script src="assets/source-integrity.js?v=20261012-v1" defer></script>
     <script src="assets/team-details.js?v=report-20261012-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
-    <script src="assets/home-diamond.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
     <script src="assets/nfl-dashboard.js?v=current-20261013-v1" defer></script>
@@ -50,114 +42,70 @@
     <script src="assets/matchup-breakdown.js?v=report-20261012-v1" defer></script>
     <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
-    <script src="assets/home-interactions.js?v=gem-20261009-v1" defer></script>
-    <script src="assets/home-gate-motion.js?v=luxury-20261007-v1" defer></script>
     <script src="assets/nfl-dashboard-motion.js?v=replica-20261008-v2" defer></script>
-    <script src="assets/home-aperture-motion.js?v=jewels-20261011-v1" defer></script>
+    <script src="assets/home-editorial.js?v=20261013-v1" defer></script>
   </head>
   <body>
     <main class="app-shell">
-      <section class="page active aperture-home" data-page="home" data-home-sport="nfl" aria-label="Choose your sport">
-        <svg class="home-light-filters" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;pointer-events:none">
-          <defs>
-            <filter id="home-light-sapphire" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%"><feColorMatrix type="matrix" values=".9 0 .1 0 0  .18 .48 .34 0 0  0 0 1 0 0  0 0 0 1 0" /></filter>
-            <filter id="home-light-red" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-              <feColorMatrix type="matrix" values="0 0 1 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 1 0" />
-            </filter>
-            <filter id="home-light-green" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-              <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 1 0 0  .75 .25 0 0 0  0 0 0 1 0" />
-            </filter>
-
-            <filter id="home-metal-light-green" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-              <feColorMatrix in="SourceGraphic" type="saturate" values="0" result="neutral-metal" />
-              <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -4 0 4 0 0" result="blue-light-mask" />
-              <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 0 1 0 0  1 0 0 0 0  0 0 0 1 0" result="sport-metal" />
-              <feComposite in="neutral-metal" in2="blue-light-mask" operator="out" result="neutral-shell" />
-              <feComposite in="sport-metal" in2="blue-light-mask" operator="in" result="sport-channel" />
-              <feComposite in="neutral-shell" in2="sport-channel" operator="arithmetic" k2="1" k3="1" />
-            </filter>
-
-            <filter id="home-metal-light-red" color-interpolation-filters="sRGB" x="0%" y="0%" width="100%" height="100%">
-              <feColorMatrix in="SourceGraphic" type="saturate" values="0" result="neutral-metal" />
-              <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -4 0 4 0 0" result="blue-light-mask" />
-              <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 1 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 1 0" result="sport-metal" />
-              <feComposite in="neutral-metal" in2="blue-light-mask" operator="out" result="neutral-shell" />
-              <feComposite in="sport-metal" in2="blue-light-mask" operator="in" result="sport-channel" />
-              <feComposite in="neutral-shell" in2="sport-channel" operator="arithmetic" k2="1" k3="1" />
-            </filter>
-          </defs>
-        </svg>
-        <div class="page-scroll">
-          <div class="frame home-frame">
-            <div class="home-architecture" aria-hidden="true">
-              <img class="home-corridor" src="assets/home/luxury-corridor.webp" alt="" width="898" height="1752" decoding="async" fetchpriority="high" />
-              <img class="home-corridor home-corridor-half" src="assets/home/luxury-corridor.webp" alt="" width="898" height="1752" decoding="async" />
-              <div class="home-wall home-wall-left"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
-              <div class="home-wall home-wall-right"><span class="home-rail-light"></span><span class="home-rail-light home-rail-light-secondary"></span><span class="home-wall-fin"></span><span class="home-wall-crossbrace"></span></div>
-              <span class="home-architecture-shimmer"></span>
-            </div>
-            <div class="status-row" aria-hidden="true">
-              <span>9:41</span><span class="status-icons"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#signal"></use></svg><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#battery"></use></svg></span>
-            </div>
-            <header class="home-header">
-              <h1 class="brand" aria-label="Project Dollar">
-                <img class="home-brand-mark" src="assets/home/gate-brand-lossless.webp" alt="" aria-hidden="true" width="2022" height="778" fetchpriority="high" decoding="async" />
-                <span class="brand-glint" aria-hidden="true"></span><span class="brand-glint brand-glint-secondary" aria-hidden="true"></span>
-              </h1>
-              <p class="brand-subtitle">SPORTS DATA &amp; RESEARCH</p>
+      <section class="page active editorial-home" data-page="home" aria-label="Project Dollar — choose your sport">
+        <div class="page-scroll editorial-scroll">
+          <div class="editorial-canvas">
+            <picture class="editorial-art" aria-hidden="true">
+              <source media="(max-width: 430px)" srcset="assets/home/editorial-stadium-mobile.webp" />
+              <img src="assets/home/editorial-stadium.webp" alt="" width="1024" height="1536" decoding="async" fetchpriority="high" />
+            </picture>
+            <div class="editorial-art-shade" aria-hidden="true"></div>
+            <div class="editorial-stadium-light" aria-hidden="true"></div>
+            <header class="editorial-header">
+              <div class="editorial-wordmark">
+                <img src="assets/home/editorial-wordmark.webp" alt="Project Dollar" width="2156" height="384" decoding="async" fetchpriority="high" />
+                <span class="editorial-brand-sheen" aria-hidden="true"><span></span></span>
+              </div>
+              <button class="editorial-menu-toggle" data-home-menu-toggle aria-label="Open navigation" aria-controls="home-navigation" aria-expanded="false">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 8H28M4 16H28M4 24H28" /></svg>
+              </button>
+              <nav id="home-navigation" class="editorial-menu" data-home-menu aria-label="Home navigation" hidden>
+                <button data-open="nfl">Explore NFL <span aria-hidden="true">↗</span></button>
+                <button data-home-shortcut="standings">Standings <span aria-hidden="true">↗</span></button>
+                <button data-home-shortcut="players">Players <span aria-hidden="true">↗</span></button>
+                <button data-home-shortcut="matchups">Matchups <span aria-hidden="true">↗</span></button>
+              </nav>
             </header>
-            <div class="aperture-stage" aria-hidden="true">
-              <div class="aperture-gate">
-                <span class="aperture-neon-halo" aria-hidden="true"></span><span class="aperture-neon-halo-inner" aria-hidden="true"></span>
-                <div class="aperture-venue"><div class="home-scene-drift">
-                  <img src="assets/home/gate-scenes-nfl.webp" data-home-scene="nfl" alt="" width="1200" height="1200" decoding="sync" fetchpriority="high" />
-                  <img src="assets/home/gate-scenes-nba.webp" data-home-scene="nba" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
-                  <img src="assets/home/gate-scenes-nrl.webp" data-home-scene="nrl" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
-                  <img src="assets/home/gate-scenes-ufc.webp" data-home-scene="ufc" alt="" width="1200" height="1200" decoding="sync" loading="lazy" hidden />
-                </div></div>
-                <div class="aperture-rail"></div>
-                <img class="aperture-metal-housing aperture-crafted-housing" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" fetchpriority="high" />
-                <img class="aperture-metal-housing aperture-crafted-housing aperture-crafted-half" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
-                <div class="aperture-inset"></div>
-                <div class="aperture-travel-light"><span class="aperture-travel-sweep"></span></div>
-                <div class="aperture-metal-glint"><span class="aperture-metal-glint-sweep"></span></div>
-                <svg class="aperture-channel-art" viewBox="0 0 1315 1197" aria-hidden="true" focusable="false">
-                  <defs>
-                    <linearGradient id="home-aperture-colour" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="var(--home-left)" />
-                      <stop offset="49.85%" stop-color="var(--home-left)" />
-                      <stop offset="50.15%" stop-color="var(--home-right)" />
-                      <stop offset="100%" stop-color="var(--home-right)" />
-                    </linearGradient>
-                    <filter id="home-aperture-bloom" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9" /></filter>
-                    <filter id="home-aperture-hotspot" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="glow" /><feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-                  </defs>
-                  <path class="aperture-neon-bloom" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
-                  <path class="aperture-neon-track" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
-                  <path class="aperture-neon-core" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
-                  <path class="aperture-neon-inner-track" d="M658 83 C954.023 83 1194 303.540 1194 575.5 C1194 847.460 954.023 1068 658 1068 C361.977 1068 122 847.460 122 575.5 C122 303.540 361.977 83 658 83 Z" />
-                  <path class="aperture-neon-outer-track" d="M657 31 C394.49 31 183.26 210 80 419 C42.49 490 19.14 620 27 700 C-35.21 1040 112.18 1183 657 1183 C1201.82 1183 1349.21 1040 1287 700 C1294.86 620 1271.51 490 1234 419 C1130.74 210 919.51 31 657 31Z" />
-                  <path class="aperture-neon-runner" pathLength="1000" d="M657.5 53 C975.340 53 1233 287.603 1233 577 C1233 866.397 975.340 1101 657.5 1101 C339.660 1101 82 866.397 82 577 C82 287.603 339.660 53 657.5 53 Z" />
-                  <path class="aperture-metal-runner" pathLength="1000" d="M658 83 C954.023 83 1194 303.540 1194 575.5 C1194 847.460 954.023 1068 658 1068 C361.977 1068 122 847.460 122 575.5 C122 303.540 361.977 83 658 83 Z" />
-                </svg>
-                <img class="aperture-league-logo" data-home-league-logo src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" fetchpriority="high" />
+            <section class="editorial-hero" aria-labelledby="home-headline">
+              <div class="editorial-copy">
+                <div class="editorial-league"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /><span>NFL</span></div>
+                <h1 id="home-headline">See the<br />whole game.</h1>
+                <p>Football research, from every angle.</p>
               </div>
-              <div class="home-floor"><span class="home-floor-shimmer"></span></div>
-              <div class="aperture-floor-reflection">
-                <img class="home-metal-reflection-image" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
-                <img class="home-metal-reflection-image home-metal-reflection-half" src="assets/home/aperture-immersive.webp" alt="" width="1315" height="1197" decoding="async" />
+            </section>
+            <div class="editorial-entry-row">
+              <button class="editorial-entry" data-home-entry data-open="nfl">Explore NFL <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12H20M12 4L20 12L12 20" /></svg></button>
+              <span class="editorial-availability">Available now</span>
+            </div>
+            <nav class="editorial-topics" aria-label="Explore NFL research">
+              <button data-home-shortcut="standings">Standings</button><span aria-hidden="true">·</span>
+              <button data-home-shortcut="players">Players</button><span aria-hidden="true">·</span>
+              <button data-home-shortcut="matchups">Matchups</button>
+            </nav>
+            <section class="editorial-sports" aria-labelledby="home-sports-heading">
+              <h2 id="home-sports-heading">Choose your sport</h2>
+              <div class="editorial-sport-list">
+                <button class="editorial-sport is-available" data-open="nfl" aria-label="NFL — open research">
+                  <span class="editorial-sport-number" aria-hidden="true">01</span><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /><span class="editorial-sport-name">NFL</span><span class="editorial-sport-action">Open research <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18L18 6M6 6H18V18" /></svg></span>
+                </button>
+                <button class="editorial-sport" data-home-sport="nba" aria-describedby="home-sport-status">
+                  <span class="editorial-sport-number" aria-hidden="true">02</span><img class="editorial-nba" src="assets/home/nba.svg" alt="" width="500" height="500" decoding="async" /><span class="editorial-sport-name">NBA</span><span class="editorial-sport-action">Coming soon</span>
+                </button>
+                <button class="editorial-sport" data-home-sport="nrl" aria-describedby="home-sport-status">
+                  <span class="editorial-sport-number" aria-hidden="true">03</span><img src="assets/logos/nrl.webp" alt="" width="500" height="500" decoding="async" /><span class="editorial-sport-name">NRL</span><span class="editorial-sport-action">Coming soon</span>
+                </button>
+                <button class="editorial-sport" data-home-sport="ufc" aria-describedby="home-sport-status">
+                  <span class="editorial-sport-number" aria-hidden="true">04</span><img class="editorial-ufc" src="assets/logos/ufc.svg" alt="" width="500" height="500" decoding="async" /><span class="editorial-sport-name">UFC</span><span class="editorial-sport-action">Coming soon</span>
+                </button>
               </div>
-            </div>
-            <button class="home-entry nfl-card" data-home-entry data-open="nfl" aria-label="Enter NFL dashboard">
-              <span data-home-entry-label>Enter</span>
-            </button>
-            <div class="home-sport-dock" role="group" aria-label="Choose a sport">
-              <button class="home-sport-option" data-home-select="nfl" aria-pressed="true" aria-label="Select NFL"><img src="assets/home/nfl.svg" alt="" width="500" height="500" decoding="async" /></button>
-              <button class="home-sport-option" data-home-select="nba" aria-pressed="false" aria-label="Select NBA, coming soon"><img src="assets/home/nba.svg" alt="" width="500" height="500" decoding="async" /></button>
-              <button class="home-sport-option" data-home-select="nrl" aria-pressed="false" aria-label="Select NRL, coming soon"><img src="assets/logos/nrl.webp" alt="" width="500" height="500" decoding="async" /></button>
-              <button class="home-sport-option" data-home-select="ufc" aria-pressed="false" aria-label="Select UFC, coming soon"><img src="assets/logos/ufc.svg" alt="" width="1250" height="433" decoding="async" /></button>
-            </div>
-            <p class="home-availability sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+              <p id="home-sport-status" class="editorial-status" data-home-status role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+            <footer class="editorial-footer"><span></span><p>Sports data &amp; research</p><span></span></footer>
           </div>
         </div>
       </section>

@@ -4,12 +4,12 @@
 Build and refine Project Dollar$ as a premium mobile-first sports data and research interface.
 
 ## HARD SCOPE GATE
-The user's subsequent approvals expanded the original Pages 1–3 scope to the implemented team details, matchup research and, on 12 October 2026, a historical NFL Game Report linked from completed-game results. These approved screens and their existing linked controls are in scope. The latest request leaves Home unchanged until a later visual pass.
+The user's subsequent approvals expanded the original Pages 1–3 scope to the implemented team details, matchup research and, on 12 October 2026, a historical NFL Game Report linked from completed-game results. These approved screens and their existing linked controls are in scope. On 13 October 2026, the user approved a new Home render: horizontal diamond/gold branding, an editorial NFL headline, an aerial stadium at sunset, a white Explore NFL button and four horizontal sport rows. This approval supersedes the previous Home freeze and metal-portal concept. Preserve existing research screens and data while implementing that Home pass.
 
 Do not add unrelated screens or abandoned concept features. Preserve existing work, original artwork and backups. Game Report must use verified event-specific scores, quarters and statistics; the supplied render's sample values are design examples, not factual authority.
 
 ## Source of truth
-The approved eight-screen Project Dollar$ render from the ChatGPT project is the visual source of truth. The current website is NOT the visual source of truth.
+The latest user-supplied render is the visual source of truth for Home. The earlier approved screen renders remain the reference for the corresponding research screens. The current website is NOT the visual source of truth.
 
 ## Repository / deployment
 Repository: https://github.com/dinkyjunior/project-dollers
