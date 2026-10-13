@@ -1,0 +1,24 @@
+{
+  "url": "https://www.nfl.com/standings/conference/2026/REG",
+  "ordinaryRequest": "URLError: Tunnel connection failed: 403 Forbidden",
+  "escalatedRequestExitCode": 22,
+  "escalatedCurlHttpStatus": "000",
+  "escalatedCurlProxyConnectStatus": 403,
+  "responseServer": "envoy",
+  "conclusion": "The proxy refused the CONNECT tunnel before an NFL origin HTTP response was obtained. This is not evidence that NFL.com blocks this audit or that its standings match the app.",
+  "officialPayloadRetrieved": false,
+  "comparisonStatus": "pending",
+  "userReportedExamples": ["Ravens", "Jaguars"],
+  "savedAppExamples": {
+    "BAL": {"wins": 4, "losses": 1, "ties": 0, "customAfcPosition": 3},
+    "JAX": {"wins": 4, "losses": 1, "ties": 0, "customAfcPosition": 2}
+  },
+  "context": {
+    "season": 2026,
+    "seasonType": "REG",
+    "currentWeek": 5,
+    "throughWeek": 5,
+    "retrievedAt": "2026-10-12T08:44:58Z",
+    "officialCrossCheck": "unavailable"
+  }
+}

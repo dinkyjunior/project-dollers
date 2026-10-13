@@ -1,0 +1,85 @@
+{
+  "createdAt": "2026-10-12T23:59:07.864245+00:00",
+  "status": "DESIGN_ONLY_BLOCKED_UNTIL_REAL_HTML",
+  "requestedOfficialUrl": "https://www.nfl.com/standings/conference/2026/REG",
+  "currentAccessEvidence": {
+    "receipt": "qa/official-standings-20261013/official-request.json",
+    "sha256": "95c0785ab62a9c62d86e9825b07594f704a61ee037aabbdb9ed25f831a5d0157",
+    "result": "URLError: Tunnel connection failed: 403 Forbidden; no page body retrieved"
+  },
+  "ownedFilesExamined": [
+    ".github/workflows/refresh-nfl-data.yml",
+    "scripts/check-source-updates.py",
+    "scripts/refresh-data.py",
+    "assets/nfl-dashboard.js"
+  ],
+  "contract": {
+    "provider": "NFL official conference standings",
+    "urlForSeason": "https://www.nfl.com/standings/conference/{season}/REG",
+    "fetchRules": [
+      "HTTPS with verified certificate/hostname; ordinary public request only",
+      "Do not bypass blocked access, authentication or robots restrictions",
+      "Bound timeout/body size; reject error/challenge/login shells even with HTTP 200",
+      "Record requested/final URL, HTTP status, exact body SHA-256, bytes, genuine retrievedAt, validators and parser version",
+      "Use season/type actually stated in source content, not merely the requested URL"
+    ],
+    "requiredNormalizedBody": {
+      "schemaVersion": 1,
+      "season": "Exact requested season integer",
+      "seasonType": "REG from source content",
+      "teams": "Exactly 32 unique current canonical teams, 16 AFC plus 16 NFC; no duplicate/missing/unknown team",
+      "teamFields": [
+        "canonical abbreviation",
+        "source team name/id/link",
+        "conference",
+        "wins integer >=0",
+        "losses integer >=0",
+        "ties integer >=0",
+        "percentage if genuinely present",
+        "pointsFor/pointsAgainst only if genuinely present",
+        "conference row order as separate source order, not inferred playoff seed"
+      ],
+      "source": "Exact URL/retrieval/hash metadata"
+    },
+    "recordComparison": [
+      "Compare each of 32 source W/L/T records with newest snapshot currentWeek conference rows only",
+      "Compare published percentages with tie-aware arithmetic allowing source display rounding",
+      "Compare PF/PA if both source and primary publish them, never infer missing fields",
+      "Require same regular-season context; historical selected week is not the current official table",
+      "Require same final-game coverage; if game completion races retrieval, bounded re-fetch rather than choosing a convenient source",
+      "Retain exact provider readings/times for every mismatch"
+    ],
+    "orderingComparison": [
+      "Different tied-team order is not a W/L/T disagreement",
+      "NFL page conference order must be preserved separately from custom PCT/PF/PA/differential sort order",
+      "Do not call source row order playoff seeds unless source explicitly defines it as seeding",
+      "Official ordering must not be retroactively applied to historical-week research"
+    ],
+    "gate": [
+      "Run real official fetch and schema checks as part of daily full-refresh path",
+      "Run record cross-check against freshly produced books before commit/push",
+      "Unexplained numeric disagreement, invalid scope/schema or unavailable required official source fails job; retain last validated production snapshot",
+      "Do not silently replace values or report independent official verification when official retrieval fails",
+      "Store source result in current/provenance before computing canonical snapshot/history/dependency hashes; downstream Team/Matchup/Report must bind to same candidate books"
+    ]
+  },
+  "proposedFiles": [
+    "scripts/official-nfl-standings.py (new provider adapter and comparison CLI after actual page access)",
+    "qa/official-nfl-standings.test.py (genuine captured HTML fixtures plus adversarial fixtures)",
+    "workflow bounded fetch/compare invocation; producer official-source provenance registration"
+  ],
+  "testsRequired": [
+    "Actual captured official HTML parses 32 known teams in right season/REG",
+    "Wrong season/type, missing/duplicate/unknown team, fractional/negative/malformed WLT rejected",
+    "Challenge/login shell/HTTP error/redirect to unscoped defaults rejected",
+    "Tie-aware numeric percentage and zero-game handling preserve missing-vs-zero",
+    "All matching WLT passes; one altered W/L/T blocks publish and records both sources",
+    "Tied source row order difference alone passes record comparison and preserves distinct ordering labels",
+    "Partial completed-week race is explicit; stale/future/historical mismatch rejected",
+    "Retrieval metadata and body hash exact; parser errors never renew prior verified retrieval time",
+    "Workflow daily17:07 forces new body fetch even matching source validators; hourly refresh preserves required-source failure policy"
+  ],
+  "noParserImplemented": true,
+  "noProductionOrDatasetChanges": true,
+  "reason": "No genuine HTML/source structure is available. A blind CSS/regex parser or assumed private API would not establish official verification."
+}

@@ -1,0 +1,233 @@
+{
+  "status": "pass",
+  "reviewedAt": "2026-10-13T00:14:17.701251+00:00",
+  "scope": "Independent synthetic normalized-JSON interface audit; no official source data / external retrieval / HTML parsing / browser / workflow integration claim",
+  "sourceHashesBefore": {
+    "scripts/compare-nfl-standings.py": "eba86455d0804157b260ee4b5e896daa178c8ce88b3cb17c87a6857c8371f097",
+    "qa/official-standings-compare.test.py": "7079b18331dce312ad970f906b74f6ba48498e0571164d0bad3d95d74e006f65"
+  },
+  "sourceHashesAfter": {
+    "scripts/compare-nfl-standings.py": "eba86455d0804157b260ee4b5e896daa178c8ce88b3cb17c87a6857c8371f097",
+    "qa/official-standings-compare.test.py": "7079b18331dce312ad970f906b74f6ba48498e0571164d0bad3d95d74e006f65"
+  },
+  "sourceStable": true,
+  "cases": 52,
+  "passed": 52,
+  "failed": [],
+  "results": [
+    {
+      "name": "32 independent synthetic identity rows and six numeric fields match without input mutation",
+      "status": "pass"
+    },
+    {
+      "name": "Default compares Current only, ignoring different historical W4 rows",
+      "status": "pass"
+    },
+    {
+      "name": "Even whole source row reversal is separate from numeric equality and never an official seed claim",
+      "status": "pass"
+    },
+    {
+      "name": "One w disagreement fails match and preserves both values",
+      "status": "pass"
+    },
+    {
+      "name": "One l disagreement fails match and preserves both values",
+      "status": "pass"
+    },
+    {
+      "name": "One ties disagreement fails match and preserves both values",
+      "status": "pass"
+    },
+    {
+      "name": "One pointsFor disagreement fails match and preserves both values",
+      "status": "pass"
+    },
+    {
+      "name": "One pointsAgainst disagreement fails match and preserves both values",
+      "status": "pass"
+    },
+    {
+      "name": "96 absent optional cells stay unavailable while explicit zero mismatches positive value",
+      "status": "pass"
+    },
+    {
+      "name": "Tie-aware half win and thirds rounding work; differing displayed third fails",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias LAR rejected at canonical-only normalized boundary for LA",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias JAC rejected at canonical-only normalized boundary for JAX",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias WSH rejected at canonical-only normalized boundary for WAS",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias SD rejected at canonical-only normalized boundary for LAC",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias OAK rejected at canonical-only normalized boundary for LV",
+      "status": "pass"
+    },
+    {
+      "name": "Raw alias STL rejected at canonical-only normalized boundary for LA",
+      "status": "pass"
+    },
+    {
+      "name": "Guard current identity set matches all32 saved asset/team definitions including distinct Rams LA and Chargers LAC",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required w=None",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required w=True",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required w=1.5",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required w=-1",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required w='2'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required l=None",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required l=True",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required l=1.5",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required l=-1",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required l='2'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required ties=None",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required ties=True",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required ties=1.5",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required ties=-1",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed required ties='2'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject actual normalized body non-REG type 'PRE'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject actual normalized body non-REG type 'POST'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject actual normalized body non-REG type 'regular'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject actual normalized body non-REG type None",
+      "status": "pass"
+    },
+    {
+      "name": "Requested URL alone cannot override normalized body season2025 mismatch",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata unscopedURL",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata wrongHost",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata sourceScopeURLOnly",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata redirectToWrongScope",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata blockedHTTP",
+      "status": "pass"
+    },
+    {
+      "name": "Reject malformed source metadata missingHash",
+      "status": "pass"
+    },
+    {
+      "name": "Reject missing/naive/>5min future/>24h stale clock None",
+      "status": "pass"
+    },
+    {
+      "name": "Reject missing/naive/>5min future/>24h stale clock '2026-10-13T02:30:00'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject missing/naive/>5min future/>24h stale clock '2026-10-13T03:06:00Z'",
+      "status": "pass"
+    },
+    {
+      "name": "Reject missing/naive/>5min future/>24h stale clock '2026-10-12T02:59:00Z'",
+      "status": "pass"
+    },
+    {
+      "name": "Explicit Sydney timezone retrieval resolves to actual UTC timestamp",
+      "status": "pass"
+    },
+    {
+      "name": "Missing coverage cannot pass None==None",
+      "status": "pass"
+    },
+    {
+      "name": "Current row coverage must be actual integer rather than equal numeric float",
+      "status": "pass"
+    },
+    {
+      "name": "REG records cannot represent18 regular-season games",
+      "status": "pass"
+    },
+    {
+      "name": "Real CLI returns0 match/1 disagreement/2 invalid with exact receipts and unchanged inputs",
+      "status": "pass"
+    }
+  ],
+  "limitations": [
+    "Canonical-only interface rejects raw provider aliases; future official adapter must map genuine NFL identities before supplying normalized input.",
+    "Valid source URL/hash/time metadata is not proof of source acquisition.",
+    "A five-minute future timestamp tolerance permits clock skew, not an unbounded future source.",
+    "No official page body exists; user Ravens/Jaguars contradiction remains unresolved and official values unavailable."
+  ]
+}
