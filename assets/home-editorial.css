@@ -57,6 +57,17 @@ body:has(.editorial-home.active) {
   pointer-events: none;
 }
 .editorial-art img { display: block; width: 100%; height: auto; }
+/* Interior scenes keep their full native composition: the court, both rugby
+   posts and the octagon stay visible without stretching or cropping. */
+.editorial-home:not([data-home-sport="nfl"]) .editorial-art {
+  inset: calc(var(--editorial-width) * .35 + env(safe-area-inset-top, 0px)) 0 auto;
+  height: calc(var(--editorial-width) * .666667);
+  mask-image: linear-gradient(180deg, transparent, #000 7%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 7%, #000 88%, transparent);
+}
+.editorial-home:not([data-home-sport="nfl"]) .editorial-art-shade {
+  background: linear-gradient(90deg, #0002, transparent 65%);
+}
 .editorial-art-shade {
   position: absolute;
   z-index: -2;
@@ -147,13 +158,6 @@ body:has(.editorial-home.active) {
 .editorial-copy { padding: calc(var(--editorial-width) * .16 + env(safe-area-inset-top, 0px)) var(--editorial-side) 0; }
 .editorial-league { display: flex; align-items: center; gap: calc(var(--editorial-width) * .031); height: calc(var(--editorial-width) * .172); }
 .editorial-league img { display: block; width: calc(var(--editorial-width) * .185); height: calc(var(--editorial-width) * .185); margin-left: calc(var(--editorial-width) * -.016); margin-right: calc(var(--editorial-width) * -.034); object-fit: contain; }
-.editorial-copy p {
-  margin: calc(var(--editorial-width) * .018) 0 0;
-  font-size: calc(var(--editorial-width) * .037);
-  line-height: 1.4;
-  letter-spacing: -.013em;
-  color: #c3bce8;
-}
 .editorial-stadium-light {
   position: absolute;
   z-index: -1;
@@ -201,11 +205,11 @@ body:has(.editorial-home.active) {
 .editorial-sport {
   position: relative;
   display: grid;
-  grid-template-columns: calc(var(--editorial-width) * .114) 1fr auto;
+  grid-template-columns: 64px 1fr;
   align-items: center;
-  gap: calc(var(--editorial-width) * .014);
-  min-height: max(48px, calc(var(--editorial-width) * .118));
-  padding: calc(var(--editorial-width) * .013) calc(var(--editorial-width) * .009);
+  gap: 12px;
+  min-height: 56px;
+  padding: 5px calc(var(--editorial-width) * .009);
   border: 0;
   border-bottom: 1px solid #5a536980;
   border-radius: 0;
@@ -217,11 +221,9 @@ body:has(.editorial-home.active) {
 .editorial-sport.is-selected::before { content: ""; position: absolute; inset: 0 auto 0 calc(var(--editorial-width) * -.014); width: 2px; border-radius: 1px; background: var(--editorial-selection-light); }
 .editorial-sport:hover { background: #ffffff0b; border-bottom-color: #89819f; }
 .editorial-sport:active { background: #ffffff10; }
-.editorial-sport > img { width: 100%; height: calc(var(--editorial-width) * .079); object-fit: contain; }
-.editorial-sport > .editorial-nba { height: calc(var(--editorial-width) * .085); }
-.editorial-sport > .editorial-ufc { width: calc(var(--editorial-width) * .095); height: calc(var(--editorial-width) * .046); }
-.editorial-sport-name { font-size: calc(var(--editorial-width) * .05); line-height: 1.1; letter-spacing: .06em; }
-.editorial-sport-action { display: flex; align-items: center; gap: 5px; color: #c5b9e8; font-size: calc(var(--editorial-width) * .027); white-space: nowrap; }
+.editorial-sport > img { width: 46px; height: 46px; object-fit: contain; justify-self: center; }
+.editorial-sport > .editorial-ufc { width: 56px; height: 26px; }
+.editorial-sport-action { display: flex; align-items: center; justify-self: end; gap: 5px; color: #c5b9e8; font-size: calc(var(--editorial-width) * .027); white-space: nowrap; }
 .is-available .editorial-sport-action { color: #00f4ee; }
 .editorial-sport.is-selected .editorial-sport-action { color: var(--editorial-accent); }
 .editorial-sport-action svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 1.6; }
@@ -257,7 +259,7 @@ body:has(.editorial-home.active) {
 }
 @media (max-width: 360px) {
   .editorial-availability { letter-spacing: .17em; }
-  .editorial-sport { grid-template-columns: 34px 1fr auto; gap: 7px; }
+  .editorial-sport { grid-template-columns: 60px 1fr; gap: 8px; }
   .editorial-sport-action { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {

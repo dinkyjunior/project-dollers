@@ -14,17 +14,16 @@
   const artSource = art?.querySelector('source');
   const artImage = art?.querySelector('img');
   const leagueLogo = home.querySelector('[data-home-league-logo]');
-  const description = home.querySelector('[data-home-description]');
   const entry = home.querySelector('[data-home-entry]');
   const entryLabel = entry?.querySelector('[data-home-entry-label]');
   const availability = home.querySelector('[data-home-availability]');
   const topics = home.querySelector('[data-home-topics]');
   const topicButtons = [...(topics?.querySelectorAll('button') || [])];
   const sports = {
-    nfl: {name:'NFL',description:'Football research, from every angle.',logo:'assets/home/nfl.svg',art:'assets/home/editorial-stadium.webp',mobile:'assets/home/editorial-stadium-mobile.webp',topics:['Standings','Players','Matchups']},
-    nba: {name:'NBA',description:'Basketball research, from every angle.',logo:'assets/home/nba.svg',art:'assets/home/editorial-stadium-nba.webp',mobile:'assets/home/editorial-stadium-nba-mobile.webp',topics:['Standings','Players','Matchups']},
-    nrl: {name:'NRL',description:'Rugby league research, from every angle.',logo:'assets/logos/nrl.webp',art:'assets/home/editorial-stadium-nrl.webp',mobile:'assets/home/editorial-stadium-nrl-mobile.webp',topics:['Ladder','Players','Matchups']},
-    ufc: {name:'UFC',description:'Fight research, from every angle.',logo:'assets/logos/ufc.svg',art:'assets/home/editorial-stadium-ufc.webp',mobile:'assets/home/editorial-stadium-ufc-mobile.webp',topics:['Rankings','Fighters','Matchups']}
+    nfl: {name:'NFL',logo:'assets/home/nfl.svg',art:'assets/home/editorial-stadium.webp',mobile:'assets/home/editorial-stadium-mobile.webp',topics:['Standings','Players','Matchups']},
+    nba: {name:'NBA',logo:'assets/home/nba.svg',art:'assets/home/editorial-interior-nba.webp',mobile:'assets/home/editorial-interior-nba-mobile.webp',topics:['Standings','Players','Matchups']},
+    nrl: {name:'NRL',logo:'assets/logos/nrl.webp',art:'assets/home/editorial-interior-nrl.webp',mobile:'assets/home/editorial-interior-nrl-mobile.webp',topics:['Ladder','Players','Matchups']},
+    ufc: {name:'UFC',logo:'assets/logos/ufc.svg',art:'assets/home/editorial-interior-ufc.webp',mobile:'assets/home/editorial-interior-ufc-mobile.webp',topics:['Rankings','Fighters','Matchups']}
   };
   const storageKey = 'pd-home-sport';
   let menuOpen = false;
@@ -154,7 +153,6 @@
       leagueLogo.src = details.logo;
       leagueLogo.alt = details.name;
     }
-    if (description) description.textContent = details.description;
     if (availability) availability.textContent = ready ? 'Available now' : 'Coming soon';
     try { sessionStorage.setItem(storageKey, sport); } catch { /* Storage is optional. */ }
     updateArtwork(sport, () => {
