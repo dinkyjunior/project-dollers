@@ -1,5 +1,5 @@
-/* Editorial Home controls use the existing research routes and source-selected
-   fixture. Unavailable sports stay on Home and never open a substitute screen. */
+/* Four editorial sport previews share one Home. Only NFL has research routes;
+   unavailable sports never open a substitute screen or sample data. */
 (() => {
   'use strict';
   const home = document.querySelector('.editorial-home[data-page="home"]');
@@ -9,10 +9,31 @@
   const menu = home.querySelector('[data-home-menu]');
   const status = home.querySelector('[data-home-status]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const sports = {nba:'NBA',nrl:'NRL',ufc:'UFC'};
+  const selectors = [...home.querySelectorAll('[data-home-sport]')];
+  const art = home.querySelector('[data-home-art]') || home.querySelector('.editorial-art');
+  const artSource = art?.querySelector('source');
+  const artImage = art?.querySelector('img');
+  const leagueLogo = home.querySelector('[data-home-league-logo]');
+  const leagueName = home.querySelector('[data-home-league-name]');
+  const description = home.querySelector('[data-home-description]');
+  const entry = home.querySelector('[data-home-entry]');
+  const entryLabel = entry?.querySelector('[data-home-entry-label]');
+  const availability = home.querySelector('[data-home-availability]');
+  const topics = home.querySelector('[data-home-topics]');
+  const topicButtons = [...(topics?.querySelectorAll('button') || [])];
+  const sports = {
+    nfl: {name:'NFL',description:'Football research, from every angle.',logo:'assets/home/nfl.svg',art:'assets/home/editorial-stadium.webp',mobile:'assets/home/editorial-stadium-mobile.webp',topics:['Standings','Players','Matchups']},
+    nba: {name:'NBA',description:'Basketball research, from every angle.',logo:'assets/home/nba.svg',art:'assets/home/editorial-stadium-nba.webp',mobile:'assets/home/editorial-stadium-nba-mobile.webp',topics:['Standings','Players','Matchups']},
+    nrl: {name:'NRL',description:'Rugby league research, from every angle.',logo:'assets/logos/nrl.webp',art:'assets/home/editorial-stadium-nrl.webp',mobile:'assets/home/editorial-stadium-nrl-mobile.webp',topics:['Ladder','Players','Matchups']},
+    ufc: {name:'UFC',description:'Fight research, from every angle.',logo:'assets/logos/ufc.svg',art:'assets/home/editorial-stadium-ufc.webp',mobile:'assets/home/editorial-stadium-ufc-mobile.webp',topics:['Rankings','Fighters','Matchups']}
+  };
+  const storageKey = 'pd-home-sport';
   let menuOpen = false;
   let announcementFrame = null;
   let pageVisible = true;
+  let selected = 'nfl';
+  let artSequence = 0;
+  let artListeners = null;
 
   function announce(message) {
     if (!status) return;
@@ -49,6 +70,104 @@
     }
   }
 
+  function updateArtwork(sport, afterReady) {
+    if (!artImage) return;
+    const sequence = ++artSequence;
+    artListeners?.abort();
+    const listeners = new AbortController();
+    artListeners = listeners;
+    const details = sports[sport];
+    let loaded = false;
+    const current = () => sequence === artSequence && selected === sport;
+    const ready = () => {
+      if (!current() || loaded) return;
+      loaded = true;
+      listeners.abort();
+      art.hidden = false;
+      home.dataset.homeArtState = 'ready';
+      afterReady?.();
+    };
+    const fail = () => {
+      if (!current() || loaded) return;
+      // A failed preview must not display another sport's venue as its own.
+      art.hidden = true;
+      home.dataset.homeArtState = 'unavailable';
+      announce(`${details.name} selected. The venue image could not load. Research availability is unchanged.`);
+    };
+    const decodeDisplayedImage = () => {
+      // A responsive picture can replace its source during orientation change.
+      // Its later load recovers a decode cancelled by that source replacement.
+      artImage.addEventListener('load', ready, {once:true,signal:listeners.signal});
+      artImage.addEventListener('error', fail, {once:true,signal:listeners.signal});
+      if (typeof artImage.decode === 'function') artImage.decode().then(ready, fail);
+      else if (artImage.complete) { if (artImage.naturalWidth) ready(); else fail(); }
+    };
+    home.dataset.homeArtState = 'loading';
+    if (artImage.getAttribute('src') === details.art &&
+        (!artSource || artSource.getAttribute('srcset') === details.mobile)) {
+      decodeDisplayedImage();
+      return;
+    }
+    const preload = new Image();
+    const mobile = artSource && window.matchMedia(artSource.media || '(max-width: 430px)').matches;
+    const apply = () => {
+      if (!current()) return;
+      if (artSource) artSource.srcset = details.mobile;
+      artImage.src = details.art;
+      decodeDisplayedImage();
+    };
+    preload.src = mobile ? details.mobile : details.art;
+    if (typeof preload.decode === 'function') preload.decode().then(apply, fail);
+    else if (preload.complete) { if (preload.naturalWidth) apply(); else fail(); }
+    else { preload.onload = apply; preload.onerror = fail; }
+  }
+
+  function selectSport(sport, announceSelection = false) {
+    if (!Object.hasOwn(sports, sport)) return;
+    const details = sports[sport];
+    const ready = sport === 'nfl';
+    const changed = selected !== sport;
+    selected = sport;
+    // Entry and topic availability change before artwork starts decoding.
+    // A fast selection can never carry an NFL route into another sport.
+    if (entry) {
+      entry.disabled = !ready;
+      if (ready) entry.dataset.open = 'nfl';
+      else entry.removeAttribute('data-open');
+      entry.setAttribute('aria-label', ready ? 'Explore NFL research' : `${details.name} research is coming soon`);
+      if (entryLabel) entryLabel.textContent = ready ? 'Explore NFL' : `${details.name} · Coming soon`;
+      entry.querySelector('svg')?.toggleAttribute('hidden', !ready);
+    }
+    topicButtons.forEach((button, index) => {
+      const label = details.topics[index] || '';
+      button.disabled = !ready;
+      button.textContent = label;
+      button.setAttribute('aria-label', ready ? `Explore NFL ${label.toLowerCase()}` : `${details.name} ${label.toLowerCase()} — coming soon`);
+    });
+    topics?.setAttribute('aria-label', `${details.name} research${ready ? '' : ' — coming soon'}`);
+    home.dataset.homeSport = sport;
+    selectors.forEach(button => {
+      const active = button.dataset.homeSport === sport;
+      button.setAttribute('aria-pressed', String(active));
+      button.classList.toggle('is-selected', active);
+    });
+    if (leagueLogo) {
+      leagueLogo.src = details.logo;
+      leagueLogo.alt = '';
+    }
+    if (leagueName) leagueName.textContent = details.name;
+    if (description) description.textContent = details.description;
+    if (availability) availability.textContent = ready ? 'Available now' : 'Coming soon';
+    try { sessionStorage.setItem(storageKey, sport); } catch { /* Storage is optional. */ }
+    updateArtwork(sport, () => {
+      if (!announceSelection || !changed || home.hidden || !home.classList.contains('active')) return;
+      home.querySelector('.page-scroll')?.scrollTo({top:0,behavior:reducedMotion.matches ? 'auto' : 'smooth'});
+    });
+    if (announceSelection) announce(ready
+      ? 'NFL selected. Research is available now.'
+      : `${details.name} selected. Research is coming soon.`);
+  }
+
   function openShortcut(destination) {
     const app = window.PDApp;
     if (!app?.openPage || !app?.openLadder) {
@@ -77,16 +196,18 @@
 
   home.addEventListener('click', event => {
     const control = event.target.closest('button');
-    if (!control || !home.contains(control)) return;
+    if (!control || !home.contains(control) || control.disabled) return;
     if (control.hasAttribute('data-home-menu-toggle')) {
       setMenu(!menuOpen, menuOpen);
       return;
     }
     const sport = control.dataset.homeSport;
     if (Object.hasOwn(sports, sport)) {
+      event.preventDefault();
+      event.stopPropagation();
       const fromMenu = !!control.closest('[data-home-menu]');
       setMenu(false, fromMenu);
-      announce(`${sports[sport]} research is coming soon. NFL research is available now.`);
+      selectSport(sport, true);
       return;
     }
     if (control.dataset.homeShortcut) {
@@ -94,7 +215,7 @@
       return;
     }
     if (control.dataset.open) setMenu(false);
-  });
+  }, true);
 
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape' || home.hidden || !home.classList.contains('active')) return;
@@ -134,5 +255,11 @@
   else reducedMotion.addListener(updateMotionState);
 
   setMenu(false);
+  let initialSport = 'nfl';
+  try {
+    const stored = sessionStorage.getItem(storageKey);
+    if (Object.hasOwn(sports, stored)) initialSport = stored;
+  } catch { /* Private or embedded browsing can block optional storage. */ }
+  selectSport(initialSport);
   updateMotionState();
 })();

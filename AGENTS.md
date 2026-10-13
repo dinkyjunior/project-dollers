@@ -8,6 +8,8 @@ The user's subsequent approvals expanded the original Pages 1–3 scope to the i
 
 Do not add unrelated screens or abandoned concept features. Preserve existing work, original artwork and backups. Game Report must use verified event-specific scores, quarters and statistics; the supplied render's sample values are design examples, not factual authority.
 
+The user also approved matching Home previews for NFL, NBA, NRL and UFC with sport selection. All sport rows select their Home preview; only NFL's primary entry and NFL research links open implemented destinations. NBA, NRL and UFC must remain coming soon. Publish the approved Home implementation while preserving production's existing research controllers and datasets; the pending NFL data reconciliation remains separate.
+
 ## Source of truth
 The latest user-supplied render is the visual source of truth for Home. The earlier approved screen renders remain the reference for the corresponding research screens. The current website is NOT the visual source of truth.
 
