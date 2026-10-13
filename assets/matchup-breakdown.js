@@ -100,7 +100,8 @@
   const button = (text,action,extra = '',cls = '') => `<button class="${cls}" data-mb-action="${action}" ${extra}>${escape(text)}${icon('chevron')}</button>`;
   const diamond = (text,action,extra = '',cls = '') => cls.includes('mb-continue') ? `<section class="mb-continue mb-framed">${button(text,action,extra,'mb-diamond-button')}</section>` : button(text,action,extra,`mb-diamond-button ${cls}`);
   function header() {
-    return `<div class="mb-ambient" aria-hidden="true"></div><header class="mb-brand"><img class="mb-brand-mark" src="assets/home/gate-brand.webp" alt="Project Dollar" width="1800" height="693"><p class="mb-brand-subtitle">SPORTS DATA & RESEARCH</p><button class="mb-back${state.team !== 'DAL' ? ' mb-back-wrap' : ''}" data-mb-action="back">${icon('back')} Back to ${escape(city(state.team))}</button><div class="mb-season"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500"><span>NFL<br>${fixture()?.season || dataset?.season || ''} REGULAR SEASON</span></div></header><div class="mb-breadcrumb mb-framed"><div class="mb-crumbs"><button data-mb-action="nfl">NFL</button>${icon('chevron')}<button data-mb-action="ladder">LADDER</button>${icon('chevron')}<button data-mb-action="back">${escape(panelName(state.team))}</button>${icon('chevron')}<button data-mb-action="fixture">${fixtureLabel(fixture())}</button></div></div>`;
+    const dashboardReturn = state.returnRoute === 'nfl';
+    return `<div class="mb-ambient" aria-hidden="true"></div><header class="mb-brand"><img class="mb-brand-mark" src="assets/home/gate-brand.webp" alt="Project Dollar" width="1800" height="693"><p class="mb-brand-subtitle">SPORTS DATA & RESEARCH</p><button class="mb-back${state.team !== 'DAL' ? ' mb-back-wrap' : ''}" data-mb-action="back">${icon('back')} Back to ${dashboardReturn ? 'NFL' : escape(city(state.team))}</button><div class="mb-season"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500"><span>NFL<br>${fixture()?.season || dataset?.season || ''} REGULAR SEASON</span></div></header><div class="mb-breadcrumb mb-framed"><div class="mb-crumbs"><button data-mb-action="nfl">NFL</button>${icon('chevron')}<button data-mb-action="ladder">LADDER</button>${icon('chevron')}<button data-mb-action="${dashboardReturn ? 'team' : 'back'}" data-mb-team="${escape(state.team)}">${escape(panelName(state.team))}</button>${icon('chevron')}<button data-mb-action="fixture">${fixtureLabel(fixture())}</button></div></div>`;
   }
   function fixtureHeader() {
     const game = fixture(), opponent = otherTeam();
@@ -352,21 +353,24 @@
   }
   function writeRoute() {
     const q = new URLSearchParams(); if (state.tab !== 'players') q.set('tab',state.tab); if (state.game) q.set('game',state.game);
+    if (state.returnRoute === 'nfl') q.set('return','nfl');
     if (state.window !== 5) q.set('window',state.window); if (state.season !== 'cross') q.set('season',state.season); if (state.venue !== 'all') q.set('venue',state.venue); if (state.mode !== 'total') q.set('mode',state.mode); if (state.qb !== 'last5') q.set('qb',state.qb); if (state.player) {q.set('player',state.player);q.set('kind',state.kind);}
     const value = `matchup/${state.team}${q.size ? `?${q}` : ''}`; if (location.hash !== `#${value}`) history.replaceState(null,'',`#${value}`);
   }
-  function enter(abbr = 'DAL',id = null,tab = 'players') {
+  function enter(abbr = 'DAL',id = null,tab = 'players',returnRoute = null) {
     const teamAbbr = String(abbr || 'DAL').toUpperCase(), originTeam = location.hash.match(/^#team\/([A-Z]+)(?:\?|$)/i)?.[1]?.toUpperCase();
-    state.returnRoute = originTeam === teamAbbr ? location.hash.slice(1) : `team/${teamAbbr}`;
-    state.fromLadder = document.querySelector('.page.active')?.dataset.page === 'nfl' || originTeam === teamAbbr && window.PDTeamDetails?.getState()?.fromLadder === true;
+    state.returnRoute = returnRoute === 'nfl' ? 'nfl' : originTeam === teamAbbr ? location.hash.slice(1) : `team/${teamAbbr}`;
+    state.fromLadder = returnRoute === 'nfl' || document.querySelector('.page.active')?.dataset.page === 'nfl' || originTeam === teamAbbr && window.PDTeamDetails?.getState()?.fromLadder === true;
     if (state.team !== teamAbbr) {state.team = teamAbbr;state.player = null;state.venue = 'all';}
     state.game = id || null; state.tab = ['form','players','lineup'].includes(tab) ? tab : 'players';
     const params = new URLSearchParams(); if (id) params.set('game',id);if (state.tab !== 'players')params.set('tab',state.tab);
+    if (state.returnRoute === 'nfl') params.set('return','nfl');
     window.PDApp?.openPage(`matchup/${teamAbbr}${params.size ? `?${params}` : ''}`);
   }
   function route(value) {
     const [path,query] = String(value || 'matchup/DAL').split('?'), abbr = path.split('/')[1]?.toUpperCase() || 'DAL', q = new URLSearchParams(query || '');
-    if (state.team !== abbr) {state.returnRoute = `team/${abbr}`;state.fromLadder = false;}
+    if (q.get('return') === 'nfl') {state.returnRoute = 'nfl';state.fromLadder = true;}
+    else if (state.team !== abbr || state.returnRoute === 'nfl') {state.returnRoute = `team/${abbr}`;state.fromLadder = false;}
     state.team = abbr; state.tab = ['form','players','lineup'].includes(q.get('tab')) ? q.get('tab') : 'players'; state.window = [3,5,10].includes(Number(q.get('window'))) ? Number(q.get('window')) : 5;
     state.season = q.get('season') === 'current' ? 'current' : 'cross'; state.venue = ['all','home','away','neutral'].includes(q.get('venue')) ? q.get('venue') : 'all'; state.mode = q.get('mode') === 'average' ? 'average' : 'total'; state.qb = ['last5','opponent','pressure','venue'].includes(q.get('qb')) ? q.get('qb') : 'last5'; state.player = q.get('player'); state.kind = q.get('kind') === 'rushing' ? 'rushing' : 'receiving'; state.game = q.get('game');
     render(); return refresh();

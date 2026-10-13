@@ -487,3 +487,114 @@ body:has(.nfl-editorial-dashboard.active) { display: grid; place-items: center; 
   .nfl-editorial-dashboard .nfl-editorial-footer-links { gap: 7px; }
   .nfl-editorial-dashboard .nfl-editorial-leader-links { flex-wrap: wrap; justify-content: center; gap: 4px 12px; }
 }
+
+/* Every fixture in the selected week shares the same quiet dashboard card. */
+.nfl-editorial-dashboard .nfl-weekly-selector {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 7px;
+  margin: 9px 0 7px;
+}
+.nfl-editorial-dashboard .nfl-weekly-selector > button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  border: 1px solid #28383a;
+  border-image: none;
+  border-radius: 6px;
+  background: #101719;
+  color: #d5e1df;
+  box-shadow: none;
+  font: 400 16px/1 PDInter, Arial, sans-serif;
+}
+.nfl-editorial-dashboard .nfl-weekly-selector > button .icon { width: 14px; height: 14px; color: inherit; }
+.nfl-editorial-dashboard .nfl-weekly-selector :is(select, label) { min-width: 0; }
+.nfl-editorial-dashboard .nfl-weekly-selector select,
+.nfl-editorial-dashboard .nfl-recap-toolbar select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 9px;
+  border: 1px solid #28383a;
+  border-image: none;
+  border-radius: 6px;
+  background: #101719;
+  color: #d5e1df;
+  font: 400 11px/1.3 PDInter, Arial, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-weekly-selector :is(button, select):disabled { opacity: .4; cursor: default; }
+.nfl-editorial-dashboard .nfl-weekly-game-count { margin: 0 0 8px; color: #8d9d9f; font: 400 10px/1.45 PDInter, Arial, sans-serif; text-align: center; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) { padding: 0 10px 10px; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-art { height: 132px; grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); background-image: linear-gradient(0deg, #030708f2 0%, #030708dd 23%, #08101a60 58%, #08101a88 100%), url("home/editorial-stadium-mobile.webp"); }
+.nfl-editorial-dashboard .nfl-matchup-vs.nfl-weekly-score { color: #d5e3e1; font: 500 18px/1.2 PDInter, Arial, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -.5px; white-space: nowrap; text-align: center; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team.has-team-logo .nfl-equipment-wrap { top: 4px; width: 68px; height: 68px; left: calc(50% - 34px); }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team.has-team-logo.is-away .nfl-equipment-wrap { left: auto; right: calc(50% - 34px); }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team.has-upright-helmet .nfl-equipment-wrap { top: 0; left: calc(50% - 45px); width: 90px; height: 90px; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team.has-upright-helmet.is-away .nfl-equipment-wrap { left: auto; right: calc(50% - 45px); }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team small { font-size: 10px; letter-spacing: 0; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-team strong { max-width: 100%; overflow-wrap: anywhere; font-size: 13px; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-meta { margin: 5px 0 9px; color: #98a7aa; font-size: 10px; line-height: 1.45; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-action:first-child { min-width: 175px; min-height: 40px; width: auto; padding-inline: 17px; font-size: 11px; }
+.nfl-editorial-dashboard .matchup-section:has(.nfl-weekly-selector) .nfl-matchup-action:not(:first-child) { min-height: 32px; font-size: 10px; }
+
+/* Recap cards keep each team's city, nickname and score independently legible. */
+.nfl-editorial-dashboard .recap-panel:has(.nfl-recap-toolbar) { padding: 12px; }
+.nfl-editorial-dashboard .recap-panel:has(.nfl-recap-toolbar) > h2 { margin: 0 0 4px; color: #e1e9e7; font-size: 16px; }
+.nfl-editorial-dashboard .recap-panel:has(.nfl-recap-toolbar) > .eyebrow { color: #54ded4; font: 500 9px/1.4 PDInter, Arial, sans-serif; letter-spacing: 1.5px; }
+.nfl-editorial-dashboard .recap-panel:has(.nfl-recap-toolbar) .nfl-dataset-note { margin: 5px 0 7px; font-size: 9px; line-height: 1.5; }
+.nfl-editorial-dashboard .nfl-recap-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; margin: 10px 0 12px; }
+.nfl-editorial-dashboard .nfl-recap-toolbar label { min-width: 0; }
+.nfl-editorial-dashboard .nfl-recap-toolbar :is(p, small, .nfl-recap-count) { margin: 0; color: #94a5a8; font: 400 10px/1.45 PDInter, Arial, sans-serif; text-align: right; }
+.nfl-editorial-dashboard .nfl-recap-card { margin: 0 0 9px; border: 1px solid #273436; border-radius: 7px; background: #0b1112; overflow: hidden; }
+.nfl-editorial-dashboard .nfl-recap-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18px;
+  gap: 7px 8px;
+  width: 100%;
+  min-height: 108px;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  background: transparent;
+  color: #d9e2e0;
+  text-align: left;
+  font: 400 12px/1.4 PDInter, Arial, sans-serif;
+  text-transform: none;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-recap-summary[aria-expanded="true"] { background: #111e1f; }
+.nfl-editorial-dashboard .nfl-recap-teams { grid-column: 1; display: grid; gap: 7px; min-width: 0; }
+.nfl-editorial-dashboard .nfl-recap-team { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 9px; align-items: center; min-width: 0; min-height: 34px; }
+.nfl-editorial-dashboard .nfl-recap-team > img { display: block; width: 32px; height: 32px; object-fit: contain; }
+.nfl-editorial-dashboard .nfl-recap-team > :not(img) { min-width: 0; }
+.nfl-editorial-dashboard .nfl-recap-team small { display: block; margin: 0; color: #8d9d9f; font: 400 10px/1.3 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-recap-team strong { display: block; margin: 0; color: #e1e8e6; font: 500 12px/1.3 PDInter, Arial, sans-serif; overflow-wrap: anywhere; }
+.nfl-editorial-dashboard .nfl-recap-score { color: #c4d1cf; font: 500 17px/1.2 PDInter, Arial, sans-serif; font-variant-numeric: tabular-nums; }
+.nfl-editorial-dashboard .nfl-recap-team.is-winner :is(strong, .nfl-recap-score) { color: #60e1d8; }
+.nfl-editorial-dashboard .nfl-recap-meta { grid-column: 1; margin: 0; color: #8a9c9f; font: 400 10px/1.45 PDInter, Arial, sans-serif; overflow-wrap: anywhere; }
+.nfl-editorial-dashboard .nfl-recap-chevron { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 14px; height: 14px; color: #40d6cb; transition: transform 150ms ease; }
+.nfl-editorial-dashboard .nfl-recap-summary[aria-expanded="true"] .nfl-recap-chevron { transform: rotate(180deg); }
+.nfl-editorial-dashboard .nfl-recap-detail { padding: 10px; border-top: 1px solid #243a3c; background: #0a1415; color: #b4c4c4; font: 400 11px/1.5 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-recap-detail[hidden] { display: none; }
+.nfl-editorial-dashboard .nfl-recap-detail p { margin: 0 0 8px; font: inherit; }
+.nfl-editorial-dashboard .nfl-recap-quarter-table { width: 100%; margin: 7px 0 10px; border-collapse: collapse; table-layout: fixed; font-size: 10px; font-variant-numeric: tabular-nums; }
+.nfl-editorial-dashboard .nfl-recap-quarter-table :is(th, td) { padding: 5px 3px; border-bottom: 1px solid #223537; color: #becdcc; text-align: center; font-weight: 400; }
+.nfl-editorial-dashboard .nfl-recap-quarter-table th { color: #8ea3a5; }
+.nfl-editorial-dashboard .nfl-recap-quarter-table :is(th, td):first-child { width: 39px; text-align: left; }
+.nfl-editorial-dashboard .nfl-recap-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+.nfl-editorial-dashboard .nfl-recap-actions button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; flex: 1 1 120px; min-height: 40px; padding: 7px 10px; border: 1px solid #2b5555; border-image: none; border-radius: 5px; background: #0f292a; color: #68e6dd; font: 500 11px/1.35 PDInter, Arial, sans-serif; letter-spacing: 0; text-transform: none; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-recap-actions .icon { width: 10px; height: 10px; color: inherit; }
+.nfl-editorial-dashboard .nfl-recap-empty { padding: 18px 12px; border: 1px dashed #344447; border-radius: 7px; color: #a4b6b6; font: 400 12px/1.5 PDInter, Arial, sans-serif; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  .nfl-editorial-dashboard .nfl-recap-chevron { transition: none; }
+}

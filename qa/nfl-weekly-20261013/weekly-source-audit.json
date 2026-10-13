@@ -1,0 +1,1717 @@
+{
+  "scope": "Retained 2026 regular-season sources; no live official reconciliation or network request",
+  "season": 2026,
+  "retrievedAt": {
+    "current.json": "2026-10-12T08:44:57Z",
+    "team-details.json": "2026-10-12T08:44:57Z",
+    "matchup-breakdown.json": "2026-10-12T08:44:58Z",
+    "game-reports.json": "2026-10-12T04:26:25Z"
+  },
+  "sourceBookSha256": {
+    "current.json": "b99036b55aa467ef0ce031aacf0fa75dbbf6803560d1ccd37539579646088da8",
+    "team-details.json": "f925ac2dfd730363fdd40d0e65f5873ce68b5b6990abd9022d87fd4a28aa0226",
+    "matchup-breakdown.json": "9eda69880863a4ea1458ff36a4b7f3bf18e0948f76dbcf94b4e2d3d61ecbae93",
+    "game-reports.json": "c6bbf5aea20fc6e70a8955ec8d85c0d529e28cd5be410c2db098b8eac1928cbe"
+  },
+  "checks": [
+    {
+      "name": "Season aligns across all four books",
+      "passed": true
+    },
+    {
+      "name": "32 source team identities",
+      "passed": true
+    },
+    {
+      "name": "272 unique regular-season fixtures",
+      "passed": true
+    },
+    {
+      "name": "Each fixture has exactly the two participating team copies",
+      "passed": true
+    },
+    {
+      "name": "Duplicate team copies are byte-equivalent JSON values",
+      "passed": true
+    },
+    {
+      "name": "Matchup research covers exactly the same fixture IDs",
+      "passed": true
+    },
+    {
+      "name": "Fixture identity, result, venue and kickoff agree with matchup research",
+      "passed": true
+    },
+    {
+      "name": "Team location labels can be derived from retained full names",
+      "passed": true
+    },
+    {
+      "name": "All existing recap IDs refer to the same complete fixture",
+      "passed": true
+    },
+    {
+      "name": "Week 1 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 1 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 1 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 1 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 2 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 2 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 2 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 2 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 3 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 3 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 3 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 3 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 4 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 4 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 4 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 4 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 5 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 5 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 5 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 5 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 6 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 6 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 6 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 6 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 7 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 7 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 7 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 7 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 8 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 8 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 8 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 8 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 9 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 9 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 9 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 9 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 10 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 10 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 10 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 10 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 11 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 11 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 11 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 11 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 12 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 12 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 12 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 12 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 13 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 13 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 13 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 13 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 14 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 14 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 14 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 14 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 15 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 15 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 15 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 15 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 16 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 16 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 16 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 16 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 17 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 17 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 17 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 17 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "Week 18 complete retained fixture count",
+      "passed": true
+    },
+    {
+      "name": "Week 18 no team scheduled twice",
+      "passed": true
+    },
+    {
+      "name": "Week 18 no invented scores for scheduled games",
+      "passed": true
+    },
+    {
+      "name": "Week 18 every final has an event-specific report",
+      "passed": true
+    },
+    {
+      "name": "All 78 retained finals have correct report identity, event ID, checksum and bytes",
+      "passed": true,
+      "detail": {
+        "reportsChecked": 78
+      }
+    }
+  ],
+  "passed": true,
+  "weeks": [
+    {
+      "week": 1,
+      "games": 16,
+      "statusCounts": {
+        "final": 16
+      },
+      "reportGames": 16,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_01_NE_SEA",
+        "2026_01_SF_LA",
+        "2026_01_ATL_PIT",
+        "2026_01_BAL_IND",
+        "2026_01_BUF_HOU",
+        "2026_01_CHI_CAR",
+        "2026_01_CLE_JAX",
+        "2026_01_NO_DET",
+        "2026_01_NYJ_TEN",
+        "2026_01_TB_CIN",
+        "2026_01_ARI_LAC",
+        "2026_01_GB_MIN",
+        "2026_01_MIA_LV",
+        "2026_01_WAS_PHI",
+        "2026_01_DAL_NYG",
+        "2026_01_DEN_KC"
+      ],
+      "reportUnavailable": []
+    },
+    {
+      "week": 2,
+      "games": 16,
+      "statusCounts": {
+        "final": 16
+      },
+      "reportGames": 16,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_02_DET_BUF",
+        "2026_02_CAR_ATL",
+        "2026_02_CIN_HOU",
+        "2026_02_CLE_TB",
+        "2026_02_GB_NYJ",
+        "2026_02_MIN_CHI",
+        "2026_02_NO_BAL",
+        "2026_02_PHI_TEN",
+        "2026_02_PIT_NE",
+        "2026_02_JAX_DEN",
+        "2026_02_LV_LAC",
+        "2026_02_MIA_SF",
+        "2026_02_SEA_ARI",
+        "2026_02_WAS_DAL",
+        "2026_02_IND_KC",
+        "2026_02_NYG_LA"
+      ],
+      "reportUnavailable": []
+    },
+    {
+      "week": 3,
+      "games": 16,
+      "statusCounts": {
+        "final": 16
+      },
+      "reportGames": 16,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_03_ATL_GB",
+        "2026_03_CAR_CLE",
+        "2026_03_CIN_PIT",
+        "2026_03_HOU_IND",
+        "2026_03_KC_MIA",
+        "2026_03_LAC_BUF",
+        "2026_03_NE_JAX",
+        "2026_03_NYJ_DET",
+        "2026_03_SEA_WAS",
+        "2026_03_TEN_NYG",
+        "2026_03_ARI_SF",
+        "2026_03_MIN_TB",
+        "2026_03_BAL_DAL",
+        "2026_03_LV_NO",
+        "2026_03_LA_DEN",
+        "2026_03_PHI_CHI"
+      ],
+      "reportUnavailable": []
+    },
+    {
+      "week": 4,
+      "games": 16,
+      "statusCounts": {
+        "final": 16
+      },
+      "reportGames": 16,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_04_PIT_CLE",
+        "2026_04_IND_WAS",
+        "2026_04_ARI_NYG",
+        "2026_04_DAL_HOU",
+        "2026_04_GB_TB",
+        "2026_04_JAX_CIN",
+        "2026_04_LA_PHI",
+        "2026_04_NE_BUF",
+        "2026_04_NYJ_CHI",
+        "2026_04_TEN_BAL",
+        "2026_04_MIA_MIN",
+        "2026_04_DEN_SF",
+        "2026_04_KC_LV",
+        "2026_04_LAC_SEA",
+        "2026_04_DET_CAR",
+        "2026_04_ATL_NO"
+      ],
+      "reportUnavailable": []
+    },
+    {
+      "week": 5,
+      "games": 15,
+      "statusCounts": {
+        "final": 14,
+        "scheduled": 1
+      },
+      "reportGames": 14,
+      "byeTeams": [
+        "CAR",
+        "KC"
+      ],
+      "gameIds": [
+        "2026_05_TB_DAL",
+        "2026_05_PHI_JAX",
+        "2026_05_CHI_GB",
+        "2026_05_CIN_MIA",
+        "2026_05_CLE_NYJ",
+        "2026_05_HOU_TEN",
+        "2026_05_IND_PIT",
+        "2026_05_LV_NE",
+        "2026_05_MIN_NO",
+        "2026_05_NYG_WAS",
+        "2026_05_DEN_LAC",
+        "2026_05_DET_ARI",
+        "2026_05_SF_SEA",
+        "2026_05_BAL_ATL",
+        "2026_05_BUF_LA"
+      ],
+      "reportUnavailable": [
+        "2026_05_BUF_LA"
+      ]
+    },
+    {
+      "week": 6,
+      "games": 14,
+      "statusCounts": {
+        "scheduled": 14
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "CIN",
+        "DET",
+        "MIA",
+        "MIN"
+      ],
+      "gameIds": [
+        "2026_06_SEA_DEN",
+        "2026_06_HOU_JAX",
+        "2026_06_BAL_CLE",
+        "2026_06_CAR_PHI",
+        "2026_06_CHI_ATL",
+        "2026_06_NO_NYG",
+        "2026_06_NYJ_NE",
+        "2026_06_PIT_TB",
+        "2026_06_TEN_IND",
+        "2026_06_ARI_LA",
+        "2026_06_BUF_LV",
+        "2026_06_LAC_KC",
+        "2026_06_DAL_GB",
+        "2026_06_WAS_SF"
+      ],
+      "reportUnavailable": [
+        "2026_06_SEA_DEN",
+        "2026_06_HOU_JAX",
+        "2026_06_BAL_CLE",
+        "2026_06_CAR_PHI",
+        "2026_06_CHI_ATL",
+        "2026_06_NO_NYG",
+        "2026_06_NYJ_NE",
+        "2026_06_PIT_TB",
+        "2026_06_TEN_IND",
+        "2026_06_ARI_LA",
+        "2026_06_BUF_LV",
+        "2026_06_LAC_KC",
+        "2026_06_DAL_GB",
+        "2026_06_WAS_SF"
+      ]
+    },
+    {
+      "week": 7,
+      "games": 14,
+      "statusCounts": {
+        "scheduled": 14
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "BUF",
+        "JAX",
+        "LAC",
+        "WAS"
+      ],
+      "gameIds": [
+        "2026_07_NE_CHI",
+        "2026_07_PIT_NO",
+        "2026_07_CIN_BAL",
+        "2026_07_CLE_TEN",
+        "2026_07_IND_MIN",
+        "2026_07_MIA_NYJ",
+        "2026_07_NYG_HOU",
+        "2026_07_SF_ATL",
+        "2026_07_TB_CAR",
+        "2026_07_DEN_ARI",
+        "2026_07_GB_DET",
+        "2026_07_LA_LV",
+        "2026_07_KC_SEA",
+        "2026_07_DAL_PHI"
+      ],
+      "reportUnavailable": [
+        "2026_07_NE_CHI",
+        "2026_07_PIT_NO",
+        "2026_07_CIN_BAL",
+        "2026_07_CLE_TEN",
+        "2026_07_IND_MIN",
+        "2026_07_MIA_NYJ",
+        "2026_07_NYG_HOU",
+        "2026_07_SF_ATL",
+        "2026_07_TB_CAR",
+        "2026_07_DEN_ARI",
+        "2026_07_GB_DET",
+        "2026_07_LA_LV",
+        "2026_07_KC_SEA",
+        "2026_07_DAL_PHI"
+      ]
+    },
+    {
+      "week": 8,
+      "games": 14,
+      "statusCounts": {
+        "scheduled": 14
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "HOU",
+        "NO",
+        "NYG",
+        "SF"
+      ],
+      "gameIds": [
+        "2026_08_CAR_GB",
+        "2026_08_ARI_DAL",
+        "2026_08_ATL_TB",
+        "2026_08_BAL_BUF",
+        "2026_08_CLE_PIT",
+        "2026_08_IND_JAX",
+        "2026_08_LV_NYJ",
+        "2026_08_MIN_DET",
+        "2026_08_TEN_CIN",
+        "2026_08_LAC_LA",
+        "2026_08_KC_DEN",
+        "2026_08_NE_MIA",
+        "2026_08_PHI_WAS",
+        "2026_08_CHI_SEA"
+      ],
+      "reportUnavailable": [
+        "2026_08_CAR_GB",
+        "2026_08_ARI_DAL",
+        "2026_08_ATL_TB",
+        "2026_08_BAL_BUF",
+        "2026_08_CLE_PIT",
+        "2026_08_IND_JAX",
+        "2026_08_LV_NYJ",
+        "2026_08_MIN_DET",
+        "2026_08_TEN_CIN",
+        "2026_08_LAC_LA",
+        "2026_08_KC_DEN",
+        "2026_08_NE_MIA",
+        "2026_08_PHI_WAS",
+        "2026_08_CHI_SEA"
+      ]
+    },
+    {
+      "week": 9,
+      "games": 15,
+      "statusCounts": {
+        "scheduled": 15
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "PIT",
+        "TEN"
+      ],
+      "gameIds": [
+        "2026_09_JAX_BAL",
+        "2026_09_CIN_ATL",
+        "2026_09_CLE_NO",
+        "2026_09_DAL_IND",
+        "2026_09_DEN_CAR",
+        "2026_09_DET_MIA",
+        "2026_09_LA_WAS",
+        "2026_09_NYG_PHI",
+        "2026_09_NYJ_KC",
+        "2026_09_HOU_LAC",
+        "2026_09_LV_SF",
+        "2026_09_ARI_SEA",
+        "2026_09_GB_NE",
+        "2026_09_TB_CHI",
+        "2026_09_BUF_MIN"
+      ],
+      "reportUnavailable": [
+        "2026_09_JAX_BAL",
+        "2026_09_CIN_ATL",
+        "2026_09_CLE_NO",
+        "2026_09_DAL_IND",
+        "2026_09_DEN_CAR",
+        "2026_09_DET_MIA",
+        "2026_09_LA_WAS",
+        "2026_09_NYG_PHI",
+        "2026_09_NYJ_KC",
+        "2026_09_HOU_LAC",
+        "2026_09_LV_SF",
+        "2026_09_ARI_SEA",
+        "2026_09_GB_NE",
+        "2026_09_TB_CHI",
+        "2026_09_BUF_MIN"
+      ]
+    },
+    {
+      "week": 10,
+      "games": 14,
+      "statusCounts": {
+        "scheduled": 14
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "CHI",
+        "DEN",
+        "PHI",
+        "TB"
+      ],
+      "gameIds": [
+        "2026_10_WAS_NYG",
+        "2026_10_NE_DET",
+        "2026_10_BUF_NYJ",
+        "2026_10_CAR_NO",
+        "2026_10_HOU_CLE",
+        "2026_10_JAX_TEN",
+        "2026_10_KC_ATL",
+        "2026_10_MIA_IND",
+        "2026_10_MIN_GB",
+        "2026_10_LA_ARI",
+        "2026_10_SEA_LV",
+        "2026_10_SF_DAL",
+        "2026_10_PIT_CIN",
+        "2026_10_LAC_BAL"
+      ],
+      "reportUnavailable": [
+        "2026_10_WAS_NYG",
+        "2026_10_NE_DET",
+        "2026_10_BUF_NYJ",
+        "2026_10_CAR_NO",
+        "2026_10_HOU_CLE",
+        "2026_10_JAX_TEN",
+        "2026_10_KC_ATL",
+        "2026_10_MIA_IND",
+        "2026_10_MIN_GB",
+        "2026_10_LA_ARI",
+        "2026_10_SEA_LV",
+        "2026_10_SF_DAL",
+        "2026_10_PIT_CIN",
+        "2026_10_LAC_BAL"
+      ]
+    },
+    {
+      "week": 11,
+      "games": 13,
+      "statusCounts": {
+        "scheduled": 13
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "ATL",
+        "CLE",
+        "GB",
+        "LA",
+        "NE",
+        "SEA"
+      ],
+      "gameIds": [
+        "2026_11_IND_HOU",
+        "2026_11_ARI_KC",
+        "2026_11_BAL_CAR",
+        "2026_11_JAX_NYG",
+        "2026_11_MIA_BUF",
+        "2026_11_NO_CHI",
+        "2026_11_TB_DET",
+        "2026_11_TEN_DAL",
+        "2026_11_NYJ_LAC",
+        "2026_11_LV_DEN",
+        "2026_11_PIT_PHI",
+        "2026_11_MIN_SF",
+        "2026_11_CIN_WAS"
+      ],
+      "reportUnavailable": [
+        "2026_11_IND_HOU",
+        "2026_11_ARI_KC",
+        "2026_11_BAL_CAR",
+        "2026_11_JAX_NYG",
+        "2026_11_MIA_BUF",
+        "2026_11_NO_CHI",
+        "2026_11_TB_DET",
+        "2026_11_TEN_DAL",
+        "2026_11_NYJ_LAC",
+        "2026_11_LV_DEN",
+        "2026_11_PIT_PHI",
+        "2026_11_MIN_SF",
+        "2026_11_CIN_WAS"
+      ]
+    },
+    {
+      "week": 12,
+      "games": 16,
+      "statusCounts": {
+        "scheduled": 16
+      },
+      "reportGames": 0,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_12_GB_LA",
+        "2026_12_CHI_DET",
+        "2026_12_PHI_DAL",
+        "2026_12_KC_BUF",
+        "2026_12_DEN_PIT",
+        "2026_12_ATL_MIN",
+        "2026_12_BAL_HOU",
+        "2026_12_LV_CLE",
+        "2026_12_NO_CIN",
+        "2026_12_NYG_IND",
+        "2026_12_NYJ_MIA",
+        "2026_12_TEN_JAX",
+        "2026_12_SEA_SF",
+        "2026_12_WAS_ARI",
+        "2026_12_NE_LAC",
+        "2026_12_CAR_TB"
+      ],
+      "reportUnavailable": [
+        "2026_12_GB_LA",
+        "2026_12_CHI_DET",
+        "2026_12_PHI_DAL",
+        "2026_12_KC_BUF",
+        "2026_12_DEN_PIT",
+        "2026_12_ATL_MIN",
+        "2026_12_BAL_HOU",
+        "2026_12_LV_CLE",
+        "2026_12_NO_CIN",
+        "2026_12_NYG_IND",
+        "2026_12_NYJ_MIA",
+        "2026_12_TEN_JAX",
+        "2026_12_SEA_SF",
+        "2026_12_WAS_ARI",
+        "2026_12_NE_LAC",
+        "2026_12_CAR_TB"
+      ]
+    },
+    {
+      "week": 13,
+      "games": 14,
+      "statusCounts": {
+        "scheduled": 14
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "BAL",
+        "IND",
+        "LV",
+        "NYJ"
+      ],
+      "gameIds": [
+        "2026_13_KC_LA",
+        "2026_13_CIN_CLE",
+        "2026_13_DET_ATL",
+        "2026_13_GB_NO",
+        "2026_13_JAX_CHI",
+        "2026_13_LAC_TB",
+        "2026_13_SF_NYG",
+        "2026_13_WAS_TEN",
+        "2026_13_MIA_DEN",
+        "2026_13_PHI_ARI",
+        "2026_13_BUF_NE",
+        "2026_13_CAR_MIN",
+        "2026_13_HOU_PIT",
+        "2026_13_DAL_SEA"
+      ],
+      "reportUnavailable": [
+        "2026_13_KC_LA",
+        "2026_13_CIN_CLE",
+        "2026_13_DET_ATL",
+        "2026_13_GB_NO",
+        "2026_13_JAX_CHI",
+        "2026_13_LAC_TB",
+        "2026_13_SF_NYG",
+        "2026_13_WAS_TEN",
+        "2026_13_MIA_DEN",
+        "2026_13_PHI_ARI",
+        "2026_13_BUF_NE",
+        "2026_13_CAR_MIN",
+        "2026_13_HOU_PIT",
+        "2026_13_DAL_SEA"
+      ]
+    },
+    {
+      "week": 14,
+      "games": 15,
+      "statusCounts": {
+        "scheduled": 15
+      },
+      "reportGames": 0,
+      "byeTeams": [
+        "ARI",
+        "DAL"
+      ],
+      "gameIds": [
+        "2026_14_MIN_NE",
+        "2026_14_ATL_CLE",
+        "2026_14_CHI_MIA",
+        "2026_14_DEN_NYJ",
+        "2026_14_HOU_WAS",
+        "2026_14_IND_PHI",
+        "2026_14_NO_CAR",
+        "2026_14_TB_BAL",
+        "2026_14_TEN_DET",
+        "2026_14_LAC_LV",
+        "2026_14_KC_CIN",
+        "2026_14_LA_SF",
+        "2026_14_NYG_SEA",
+        "2026_14_BUF_GB",
+        "2026_14_PIT_JAX"
+      ],
+      "reportUnavailable": [
+        "2026_14_MIN_NE",
+        "2026_14_ATL_CLE",
+        "2026_14_CHI_MIA",
+        "2026_14_DEN_NYJ",
+        "2026_14_HOU_WAS",
+        "2026_14_IND_PHI",
+        "2026_14_NO_CAR",
+        "2026_14_TB_BAL",
+        "2026_14_TEN_DET",
+        "2026_14_LAC_LV",
+        "2026_14_KC_CIN",
+        "2026_14_LA_SF",
+        "2026_14_NYG_SEA",
+        "2026_14_BUF_GB",
+        "2026_14_PIT_JAX"
+      ]
+    },
+    {
+      "week": 15,
+      "games": 16,
+      "statusCounts": {
+        "scheduled": 16
+      },
+      "reportGames": 0,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_15_SF_LAC",
+        "2026_15_SEA_PHI",
+        "2026_15_CHI_BUF",
+        "2026_15_ATL_WAS",
+        "2026_15_BAL_PIT",
+        "2026_15_CIN_CAR",
+        "2026_15_CLE_NYG",
+        "2026_15_IND_TEN",
+        "2026_15_JAX_HOU",
+        "2026_15_MIA_GB",
+        "2026_15_NO_TB",
+        "2026_15_NYJ_ARI",
+        "2026_15_DAL_LA",
+        "2026_15_DEN_LV",
+        "2026_15_DET_MIN",
+        "2026_15_NE_KC"
+      ],
+      "reportUnavailable": [
+        "2026_15_SF_LAC",
+        "2026_15_SEA_PHI",
+        "2026_15_CHI_BUF",
+        "2026_15_ATL_WAS",
+        "2026_15_BAL_PIT",
+        "2026_15_CIN_CAR",
+        "2026_15_CLE_NYG",
+        "2026_15_IND_TEN",
+        "2026_15_JAX_HOU",
+        "2026_15_MIA_GB",
+        "2026_15_NO_TB",
+        "2026_15_NYJ_ARI",
+        "2026_15_DAL_LA",
+        "2026_15_DEN_LV",
+        "2026_15_DET_MIN",
+        "2026_15_NE_KC"
+      ]
+    },
+    {
+      "week": 16,
+      "games": 16,
+      "statusCounts": {
+        "scheduled": 16
+      },
+      "reportGames": 0,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_16_HOU_PHI",
+        "2026_16_GB_CHI",
+        "2026_16_BUF_DEN",
+        "2026_16_LA_SEA",
+        "2026_16_ARI_NO",
+        "2026_16_CAR_PIT",
+        "2026_16_CIN_IND",
+        "2026_16_CLE_BAL",
+        "2026_16_LAC_MIA",
+        "2026_16_NE_NYJ",
+        "2026_16_TB_ATL",
+        "2026_16_WAS_MIN",
+        "2026_16_TEN_LV",
+        "2026_16_SF_KC",
+        "2026_16_JAX_DAL",
+        "2026_16_NYG_DET"
+      ],
+      "reportUnavailable": [
+        "2026_16_HOU_PHI",
+        "2026_16_GB_CHI",
+        "2026_16_BUF_DEN",
+        "2026_16_LA_SEA",
+        "2026_16_ARI_NO",
+        "2026_16_CAR_PIT",
+        "2026_16_CIN_IND",
+        "2026_16_CLE_BAL",
+        "2026_16_LAC_MIA",
+        "2026_16_NE_NYJ",
+        "2026_16_TB_ATL",
+        "2026_16_WAS_MIN",
+        "2026_16_TEN_LV",
+        "2026_16_SF_KC",
+        "2026_16_JAX_DAL",
+        "2026_16_NYG_DET"
+      ]
+    },
+    {
+      "week": 17,
+      "games": 16,
+      "statusCounts": {
+        "scheduled": 16
+      },
+      "reportGames": 0,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_17_BAL_CIN",
+        "2026_17_BUF_MIA",
+        "2026_17_DEN_NE",
+        "2026_17_IND_CLE",
+        "2026_17_KC_LAC",
+        "2026_17_LA_TB",
+        "2026_17_MIN_NYJ",
+        "2026_17_NO_ATL",
+        "2026_17_NYG_DAL",
+        "2026_17_PIT_TEN",
+        "2026_17_SEA_CAR",
+        "2026_17_WAS_JAX",
+        "2026_17_LV_ARI",
+        "2026_17_DET_CHI",
+        "2026_17_PHI_SF",
+        "2026_17_HOU_GB"
+      ],
+      "reportUnavailable": [
+        "2026_17_BAL_CIN",
+        "2026_17_BUF_MIA",
+        "2026_17_DEN_NE",
+        "2026_17_IND_CLE",
+        "2026_17_KC_LAC",
+        "2026_17_LA_TB",
+        "2026_17_MIN_NYJ",
+        "2026_17_NO_ATL",
+        "2026_17_NYG_DAL",
+        "2026_17_PIT_TEN",
+        "2026_17_SEA_CAR",
+        "2026_17_WAS_JAX",
+        "2026_17_LV_ARI",
+        "2026_17_DET_CHI",
+        "2026_17_PHI_SF",
+        "2026_17_HOU_GB"
+      ]
+    },
+    {
+      "week": 18,
+      "games": 16,
+      "statusCounts": {
+        "scheduled": 16
+      },
+      "reportGames": 0,
+      "byeTeams": [],
+      "gameIds": [
+        "2026_18_DAL_WAS",
+        "2026_18_ATL_CAR",
+        "2026_18_CHI_MIN",
+        "2026_18_CLE_CIN",
+        "2026_18_DET_GB",
+        "2026_18_JAX_IND",
+        "2026_18_LAC_DEN",
+        "2026_18_LV_KC",
+        "2026_18_MIA_NE",
+        "2026_18_NYJ_BUF",
+        "2026_18_PHI_NYG",
+        "2026_18_PIT_BAL",
+        "2026_18_SEA_LA",
+        "2026_18_SF_ARI",
+        "2026_18_TB_NO",
+        "2026_18_TEN_HOU"
+      ],
+      "reportUnavailable": [
+        "2026_18_DAL_WAS",
+        "2026_18_ATL_CAR",
+        "2026_18_CHI_MIN",
+        "2026_18_CLE_CIN",
+        "2026_18_DET_GB",
+        "2026_18_JAX_IND",
+        "2026_18_LAC_DEN",
+        "2026_18_LV_KC",
+        "2026_18_MIA_NE",
+        "2026_18_NYJ_BUF",
+        "2026_18_PHI_NYG",
+        "2026_18_PIT_BAL",
+        "2026_18_SEA_LA",
+        "2026_18_SF_ARI",
+        "2026_18_TB_NO",
+        "2026_18_TEN_HOU"
+      ]
+    }
+  ],
+  "reportChecks": [
+    {
+      "id": "2026_05_DET_ARI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_ARI_NYG",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_ARI_SF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_SEA_ARI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_ARI_LAC",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_BAL_ATL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_ATL_NO",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_ATL_GB",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_CAR_ATL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_ATL_PIT",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_TEN_BAL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_BAL_DAL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_NO_BAL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_BAL_IND",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_NE_BUF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_LAC_BUF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_DET_BUF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_BUF_HOU",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_DET_CAR",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_CAR_CLE",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_CHI_CAR",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_CHI_GB",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_NYJ_CHI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_PHI_CHI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_MIN_CHI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_CIN_MIA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_JAX_CIN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_CIN_PIT",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_CIN_HOU",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_TB_CIN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_CLE_NYJ",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_PIT_CLE",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_CLE_TB",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_CLE_JAX",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_TB_DAL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_DAL_HOU",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_WAS_DAL",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_DAL_NYG",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_DEN_LAC",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_DEN_SF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_LA_DEN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_JAX_DEN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_DEN_KC",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_NYJ_DET",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_NO_DET",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_GB_TB",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_GB_NYJ",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_GB_MIN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_HOU_TEN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_HOU_IND",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_IND_PIT",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_IND_WAS",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_IND_KC",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_PHI_JAX",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_NE_JAX",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_KC_LV",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_KC_MIA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_LA_PHI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_NYG_LA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_SF_LA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_LAC_SEA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_LV_LAC",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_LV_NE",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_LV_NO",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_MIA_LV",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_04_MIA_MIN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_MIA_SF",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_MIN_NO",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_MIN_TB",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_PIT_NE",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_NE_SEA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_NYG_WAS",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_TEN_NYG",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_NYJ_TEN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_02_PHI_TEN",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_01_WAS_PHI",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_05_SF_SEA",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    },
+    {
+      "id": "2026_03_SEA_WAS",
+      "identityMatches": true,
+      "eventIdMatches": true,
+      "checksumMatches": true,
+      "byteCountMatches": true,
+      "verifiedFinal": true
+    }
+  ],
+  "limitation": "Source freshness and the reported official NFL standings discrepancy remain unresolved. A scheduled fixture is not a completed game report."
+}

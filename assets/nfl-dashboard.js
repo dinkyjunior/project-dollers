@@ -7,6 +7,7 @@
   let bound = false;
   let cachedData = null;
   let cachedGames = [];
+  let weeklyDataset = null, weeklyGames = [], weeklyReports = {}, weeklyLoading = null, weeklyError = null;
   const $ = id => document.getElementById(id);
   const exists = value => value !== null && value !== undefined && value !== '';
   const finite = value => exists(value) && Number.isFinite(Number(value));
@@ -14,6 +15,82 @@
   const rightChevron = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>';
   // Give source initials readable spacing without changing the stored name.
   const readablePlayerName = player => String(player.short || player.name || '').replace(/^([A-Za-z]{1,3}\.)(?=\S)/, '$1 ');
+
+  // The team source retains the whole league schedule. Consume its integrity-
+  // applied public dataset; never alter a source book or infer final scores.
+  function adoptWeeklySource() {
+    const next = window.PDTeamDetails?.getDataset();
+    if (!next || next._sourceIntegrity?.status !== 'verified' || Number(next.season) !== Number(context?.data.season)) return false;
+    if (next === weeklyDataset) return false;
+    const games = new Map();
+    Object.values(next.teams || {}).forEach(team => (team.games || []).forEach(game => {
+      if (game.id && Number(game.season) === Number(next.season) && game.seasonType === 'REG') games.set(game.id,game);
+    }));
+    weeklyDataset = next;
+    weeklyGames = [...games.values()].sort((a,b) => String(a.kickoffUtc || `${a.gameday}T00:00:00Z`).localeCompare(String(b.kickoffUtc || `${b.gameday}T00:00:00Z`)) || a.id.localeCompare(b.id));
+    // Catalog cloning happens once per source version, not once per card.
+    weeklyReports = window.PDSourceIntegrity?.getLastCatalog()?.games || {};
+    weeklyError = null;
+    return true;
+  }
+
+  function loadWeeklySource(force = false) {
+    adoptWeeklySource();
+    if (weeklyLoading || !force && (weeklyDataset && Number(weeklyDataset.season) === Number(context?.data.season) || weeklyError)) return;
+    weeklyLoading = Promise.resolve().then(async () => {
+      if (!window.PDTeamDetails?.refresh) throw new Error('The league schedule is unavailable');
+      await window.PDTeamDetails.refresh(force);
+      adoptWeeklySource();
+      if (!weeklyDataset || Number(weeklyDataset.season) !== Number(context?.data.season)) throw new Error('The league schedule could not be verified');
+    }).catch(error => { weeklyError = error; }).finally(() => {
+      weeklyLoading = null;
+      if (context) rerender();
+      if (context?.state.nflPendingMatchup) {
+        context.state.nflPendingMatchup = false;
+        if (!weeklyError && document.querySelector('.page.active')?.dataset.page === 'nfl') openWeeklyGame(selectedWeeklyGame(context.data.weeks[context.state.week]));
+      }
+    });
+  }
+
+  function gamesThisWeek() {
+    if (!weeklyDataset || Number(weeklyDataset.season) !== Number(context.data.season)) return [];
+    return weeklyGames.filter(game => Number(game.week) === Number(context.state.week));
+  }
+
+  function teamIdentity(abbr) {
+    const club = weeklyDataset?.teams?.[abbr] || context.data.teams?.find(team => getAbbr(team) === abbr);
+    const name = club?.name || context.teamName(abbr), fullName = club?.fullName || name;
+    const city = fullName.endsWith(` ${name}`) ? fullName.slice(0,-name.length-1) : '';
+    return {abbr,name,fullName,city:city || 'Location unavailable'};
+  }
+
+  function finalGame(game) { return game.status === 'final' && finite(game.home_score) && finite(game.away_score); }
+  function hasGameReport(game) {
+    const entry = weeklyReports[game.id];
+    return game.status === 'final' && entry?.status === 'final' && Number(entry.season) === Number(game.season) && Number(entry.week) === Number(game.week) && entry.home_team === game.home_team && entry.away_team === game.away_team;
+  }
+  function gameStatus(game) {
+    if (game.status === 'final') return finalGame(game) ? 'Final' : 'Final · score unavailable';
+    if (game.kickoffUtc && Number.isFinite(Date.parse(game.kickoffUtc)) && Date.parse(game.kickoffUtc) <= Date.now()) return 'Awaiting result';
+    return 'Upcoming';
+  }
+  function selectedWeeklyGame(snapshot) {
+    const games = gamesThisWeek(), {state,data} = context;
+    const weekKey = `${data.season}/${state.week}`;
+    if (state.nflWeeklyWeek !== weekKey || !games.some(game => game.id === state.nflWeeklyGame)) {
+      state.nflWeeklyWeek = weekKey;
+      state.nflWeeklyGame = games.find(game => game.id === snapshot.fixture?.id)?.id || games[0]?.id || null;
+    }
+    return games.find(game => game.id === state.nflWeeklyGame) || null;
+  }
+  function openWeeklyGame(game, compare = false) {
+    if (!game) return;
+    if (!compare && hasGameReport(game) && window.PDApp?.openGameReport) window.PDApp.openGameReport(game.away_team,game.id,'overview','nfl');
+    else window.MatchupBreakdown?.enter(game.away_team,game.id,compare ? 'form' : 'players','nfl');
+  }
+  function weeklyLoadingMessage(matchup = false) {
+    return `<p class="nfl-recap-empty" role="status">${weeklyError ? 'The league schedule could not load.' : weeklyLoading ? context.state.nflPendingMatchup ? 'Opening this week’s matchup after the schedule loads…' : 'Loading this week’s games…' : 'No source games are available for this week.'}</p>${weeklyError ? '<button class="nfl-detail-button" data-nfl-action="weekly-retry">Retry schedule</button>' : matchup && weeklyLoading ? '<button class="nfl-detail-button" data-nfl-action="matchups">Open matchup when ready</button>' : ''}`;
+  }
 
   function completedGames(data, throughWeek) {
     if (cachedData !== data) {
@@ -63,11 +140,13 @@
     if (!Object.hasOwn(state,'nflDivision')) state.nflDivision = 'all';
     if (!Object.hasOwn(state,'nflForm')) state.nflForm = 4;
     if (!Object.hasOwn(state,'nflSort')) state.nflSort = 'PCT';
-    if (!Object.hasOwn(state,'nflExpandedTeam')) state.nflExpandedTeam = 'PIT';
+    if (!Object.hasOwn(state,'nflExpandedTeam')) state.nflExpandedTeam = null;
     if (!Object.hasOwn(state,'nflLeaderExpanded')) state.nflLeaderExpanded = new Set();
     if (!['QB','RB','WR'].includes(state.nflLeaderPosition)) state.nflLeaderPosition = 'RB';
     if (!Object.hasOwn(state,'nflPreview')) state.nflPreview = null;
     if (!Object.hasOwn(state,'nflPreviewReturn')) state.nflPreviewReturn = null;
+    if (!Object.hasOwn(state,'nflRecapTeam')) state.nflRecapTeam = 'all';
+    if (!(state.nflRecapExpanded instanceof Set)) state.nflRecapExpanded = new Set();
   }
 
   function sourceContext(snapshot) {
@@ -145,11 +224,11 @@
       if (selected) heading.setAttribute('aria-sort',sortContext.direction); else heading.removeAttribute('aria-sort');
     });
     $('standings-rows').innerHTML = teams.map(team => {
-      const abbr = getAbbr(team), expanded = state.nflExpandedTeam === abbr;
+      const abbr = getAbbr(team), expanded = !state.standingsExpanded && state.nflExpandedTeam === abbr;
       const ties = finite(team.ties) ? Number(team.ties) : null;
       const recordText = `${number(team.w)}–${number(team.l)}${ties === null ? '–—' : ties > 0 ? `–${number(ties)}` : ''}`;
       const recordLabel = `${number(team.w)} wins, ${number(team.l)} losses, ${ties === null ? 'ties unavailable' : `${number(ties)} ties`}`;
-      return `<div class="stand-row${abbr === 'PIT' ? ' steelers-row' : ''}${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="Sorted record order; not official playoff seeding">${all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="team" data-team="${esc(abbr)}" aria-expanded="${expanded}" aria-label="${esc(team.fullName || team.name)} record details"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span class="nfl-record" role="cell" aria-label="${esc(recordLabel)}">${esc(recordText)}</span><span class="nfl-pct" role="cell">${exists(team.pct) ? esc(team.pct) : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
+      return `<div class="stand-row${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="Sorted record order; not official playoff seeding">${all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="${state.standingsExpanded ? 'team-details' : 'team'}" data-team="${esc(abbr)}"${state.standingsExpanded ? '' : ` aria-expanded="${expanded}"`} aria-label="${esc(team.fullName || team.name)} ${state.standingsExpanded ? 'team details' : 'record details'}"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span class="nfl-record" role="cell" aria-label="${esc(recordLabel)}">${esc(recordText)}</span><span class="nfl-pct" role="cell">${exists(team.pct) ? esc(team.pct) : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
     }).join('');
     const toggle = document.querySelector('[data-page="nfl"] [data-standings-toggle]');
     if (toggle) {
@@ -183,36 +262,54 @@
   }
 
   function matchup(snapshot) {
-    const {data,state,esc,logo,teamName,date,time,number} = context;
-    const game = snapshot.fixture;
-    if (!game) return `<div class="nfl-bye-state"><img src="${esc(logo('pit'))}" alt="Pittsburgh Steelers" width="500" height="500"><strong>No Steelers fixture this week</strong><span>Week ${esc(state.week)} · ${data.season}</span><button data-nfl-action="schedule">View available schedule</button></div>`;
-    const opponent = game.home_team === 'PIT' ? game.away_team : game.home_team;
-    const info = abbr => (data.teams || []).find(team => getAbbr(team) === abbr);
+    const {state,esc,logo,date,time,number} = context;
+    const game = selectedWeeklyGame(snapshot), games = gamesThisWeek();
+    if (!game) return weeklyLoadingMessage(true);
+    const index = games.findIndex(item => item.id === game.id);
     const equipment = {PIT:'assets/nfl-dashboard/helmet-pit-upright.webp',IND:'assets/nfl-dashboard/helmet-ind-upright.webp'};
-    const side = (abbr,sideClass) => {
-      const team = info(abbr);
-      const short = team?.name || teamName(abbr);
-      const city = team?.fullName?.replace(short,'').trim() || abbr;
+    const side = (abbr,sideClass,designation) => {
+      const team = teamIdentity(abbr);
       const helmet = equipment[abbr];
-      return `<div class="nfl-matchup-team ${sideClass}${helmet ? ' has-helmet has-upright-helmet' : ' has-team-logo'}"><div class="nfl-equipment-wrap"><img class="nfl-matchup-helmet" src="${esc(helmet || logo(abbr))}" alt="${esc(team?.fullName || short)}${helmet ? ' decorative helmet' : ''}" width="${helmet ? '1254' : '500'}" height="${helmet ? '1254' : '500'}" decoding="async">${helmet ? `<img class="nfl-matchup-mark" src="${esc(logo(abbr))}" alt="" width="500" height="500" decoding="async">` : ''}</div><small>${esc(city)}</small><strong>${esc(short)}</strong></div>`;
+      return `<div class="nfl-matchup-team ${sideClass}${helmet ? ' has-helmet has-upright-helmet' : ' has-team-logo'}" data-weekly-side="${designation.toLowerCase()}" data-team="${esc(abbr)}" aria-label="${esc(team.fullName)} · ${designation}"><div class="nfl-equipment-wrap"><img class="nfl-matchup-helmet" src="${esc(helmet || logo(abbr))}" alt="" width="${helmet ? '1254' : '500'}" height="${helmet ? '1254' : '500'}" decoding="async">${helmet ? `<img class="nfl-matchup-mark" src="${esc(logo(abbr))}" alt="" width="500" height="500" decoding="async">` : ''}</div><small>${designation} · ${esc(team.city)}</small><strong>${esc(team.name)}</strong></div>`;
     };
-    const final = game.status === 'final' && finite(game.home_score) && finite(game.away_score);
-    const ownScore = game.home_team === 'PIT' ? game.home_score : game.away_score;
-    const otherScore = game.home_team === 'PIT' ? game.away_score : game.home_score;
-    const when = final ? `FINAL · ${number(ownScore)}–${number(otherScore)} · ${date(game)}` : `${date(game)} · ${time(game)}`;
-    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">${final ? 'Open game report' : 'Open matchup'} ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">Compare teams ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">Team form ${rightChevron}</button></div>`;
+    const options = games.map(item => {
+      const away = teamIdentity(item.away_team), home = teamIdentity(item.home_team);
+      const full = `${away.fullName} at ${home.fullName}`;
+      return `<option value="${esc(item.id)}" aria-label="${esc(full)}" title="${esc(full)}"${item.id === game.id ? ' selected' : ''}>${esc(away.name)} at ${esc(home.name)}</option>`;
+    }).join('');
+    const score = finalGame(game) ? `${number(game.away_score)}–${number(game.home_score)}` : 'VS';
+    const when = `${gameStatus(game)} · ${date(game)}${game.status === 'final' ? '' : ` · ${time(game)}`}`;
+    return `<div class="nfl-weekly-selector"><button id="nfl-weekly-prev" data-nfl-action="weekly-prev" aria-label="Previous weekly matchup"${games.length < 2 ? ' disabled' : ''}><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#back"></use></svg></button><label><span class="sr-only">Select weekly matchup</span><select id="nfl-weekly-game" title="${esc(teamIdentity(game.away_team).fullName)} at ${esc(teamIdentity(game.home_team).fullName)}">${options}</select></label><button id="nfl-weekly-next" data-nfl-action="weekly-next" aria-label="Next weekly matchup"${games.length < 2 ? ' disabled' : ''}>${rightChevron}</button></div><p class="nfl-weekly-game-count" role="status" aria-live="polite">Game ${index+1} of ${games.length} · Week ${esc(state.week)}</p><div class="nfl-matchup-art" data-weekly-game="${esc(game.id)}">${side(game.away_team,'is-home','Away')}<span class="nfl-matchup-vs nfl-weekly-score" aria-label="${finalGame(game) ? `Away ${number(game.away_score)}, home ${number(game.home_score)}` : 'Versus'}">${score}</span>${side(game.home_team,'is-away','Home')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchups" data-game="${esc(game.id)}">${hasGameReport(game) ? 'Open game report' : 'Open matchup'} ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare" data-game="${esc(game.id)}">Compare teams ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form" data-team="${esc(game.away_team)}">${esc(teamIdentity(game.away_team).name)} form ${rightChevron}</button></div>`;
   }
 
   function recap(snapshot) {
-    const {esc,number,teamName} = context;
-    const week = snapshot.recapWeek ?? snapshot.leadersWeek;
-    const games = snapshot.recap || [];
-    $('recap-title').textContent = finite(week) && Number(week) > 0 ? `WEEK ${week} · RESULTS` : 'WEEKLY RECAP';
-    $('recap-content').innerHTML = games.length ? `<p class="nfl-dataset-note">${context.data.season} · completed source results for Week ${esc(week)}</p>${games.map(game => {
-      const complete = game.status === 'final' && finite(game.home_score) && finite(game.away_score), gameId = game.id || game.game_id;
-      const result = `<strong>${number(game.away_score)}–${number(game.home_score)}</strong>`;
-      return `<div class="nfl-recap-game"><span>${esc(teamName(game.away_team))} <small>@</small> ${esc(teamName(game.home_team))}</span>${complete && gameId ? `<button class="nfl-detail-button nfl-recap-report" data-nfl-action="report" data-game="${esc(gameId)}" data-team="${esc(game.away_team)}" aria-label="Open ${esc(teamName(game.away_team))} at ${esc(teamName(game.home_team))} game report, ${esc(game.season || context.data.season)} Week ${esc(game.week)}">${result} ${rightChevron}</button>` : result}</div>`;
-    }).join('')}` : '<p class="nfl-dataset-note">No verified completed results are available for this recap week.</p>';
+    const {data,state,esc,number,logo,date,time,timestamp} = context;
+    const games = gamesThisWeek();
+    $('recap-title').textContent = `Week ${state.week} recap`;
+    const filter = $('nfl-recap-team');
+    const teams = [...new Set(games.flatMap(game => [game.away_team,game.home_team]))].sort((a,b) => teamIdentity(a).fullName.localeCompare(teamIdentity(b).fullName));
+    if (!teams.includes(state.nflRecapTeam)) state.nflRecapTeam = 'all';
+    if (filter) {
+      filter.innerHTML = `<option value="all">All teams</option>${teams.map(abbr => `<option value="${esc(abbr)}">${esc(teamIdentity(abbr).fullName)}</option>`).join('')}`;
+      filter.value = state.nflRecapTeam;
+      filter.disabled = !games.length;
+    }
+    const shown = games.filter(game => state.nflRecapTeam === 'all' || [game.home_team,game.away_team].includes(state.nflRecapTeam));
+    const finals = games.filter(game => game.status === 'final').length;
+    if ($('nfl-recap-count')) $('nfl-recap-count').textContent = `${shown.length} game${shown.length === 1 ? '' : 's'}`;
+    if (!games.length) { $('recap-content').innerHTML = weeklyLoadingMessage(); return; }
+    const waiting = games.filter(game => gameStatus(game) === 'Awaiting result').length;
+    const upcoming = games.filter(game => gameStatus(game) === 'Upcoming').length;
+    const period = `${data.season} · Week ${state.week} · ${finals} final${finals === 1 ? '' : 's'}${waiting ? ` · ${waiting} awaiting result` : ''}${upcoming ? ` · ${upcoming} upcoming` : ''}`;
+    const note = !finals ? '<p class="nfl-dataset-note">No completed results are available in this saved week yet. Scheduled matchups are shown below.</p>' : '';
+    $('recap-content').innerHTML = `<p class="nfl-dataset-note">${esc(period)}</p>${note}${shown.map(game => {
+      const away = teamIdentity(game.away_team), home = teamIdentity(game.home_team), complete = finalGame(game), open = state.nflRecapExpanded.has(game.id);
+      const row = (team,score,other) => `<span class="nfl-recap-team${complete && Number(score) > Number(other) ? ' is-winner' : ''}" data-team="${esc(team.abbr)}"><img src="${esc(logo(team.abbr))}" alt="" width="500" height="500" decoding="async"><span><small>${esc(team.city)}</small><strong>${esc(team.name)}</strong></span><span class="nfl-recap-score">${complete ? number(score) : '—'}</span></span>`;
+      const result = complete ? Number(game.away_score) === Number(game.home_score) ? 'Tied final score' : `${Number(game.away_score) > Number(game.home_score) ? away.fullName : home.fullName} won by ${Math.abs(Number(game.away_score)-Number(game.home_score))}` : 'Final score is not available in this snapshot';
+      const issues = (game.sourceIntegrityIssues || []).filter(issue => ['event','venue'].includes(issue.scope)).map(issue => window.PDSourceIntegrity?.describeIssue(issue,esc,timestamp) || '').join('');
+      const report = hasGameReport(game);
+      return `<article class="nfl-recap-card" data-game="${esc(game.id)}"><button id="nfl-recap-${esc(game.id)}" class="nfl-recap-summary" data-nfl-action="recap-expand" data-game="${esc(game.id)}" aria-expanded="${open}" aria-controls="nfl-recap-detail-${esc(game.id)}" aria-label="${esc(away.fullName)} at ${esc(home.fullName)} · ${esc(gameStatus(game))} · ${open ? 'hide' : 'show'} game details"><span class="nfl-recap-teams">${row(away,game.away_score,game.home_score)}${row(home,game.home_score,game.away_score)}</span><span class="nfl-recap-meta">${esc(gameStatus(game))} · ${esc(date(game))}</span><svg class="icon nfl-recap-chevron" aria-hidden="true"><use href="assets/icons.svg#down"></use></svg></button><div id="nfl-recap-detail-${esc(game.id)}" class="nfl-recap-detail"${open ? '' : ' hidden'}><p><strong>${esc(result)}</strong></p><p>${esc(game.venue || 'Venue unavailable')}<br>${esc(date(game))} · ${esc(time(game))}</p>${issues}<div class="nfl-recap-actions"><button class="nfl-recap-report" data-nfl-action="${report ? 'report' : 'recap-matchup'}" data-game="${esc(game.id)}" data-team="${esc(game.away_team)}">${report ? 'Open game report' : 'Open matchup'} ${rightChevron}</button><button data-nfl-action="recap-compare" data-game="${esc(game.id)}">Compare teams ${rightChevron}</button><button data-nfl-action="team-details" data-team="${esc(game.away_team)}">${esc(away.name)} details</button><button data-nfl-action="team-details" data-team="${esc(game.home_team)}">${esc(home.name)} details</button></div></div></article>`;
+    }).join('')}`;
   }
 
   function preview() {
@@ -261,6 +358,8 @@
   function render(nextContext) {
     context = nextContext;
     initializeState(context.state);
+    adoptWeeklySource();
+    loadWeeklySource();
     const {data,state} = context;
     const snapshot = data.weeks[state.week];
     if (!snapshot) return;
@@ -297,7 +396,7 @@
     const top = scroll?.scrollTop;
     const focus = document.activeElement;
     let selector = focus?.id ? `#${CSS.escape(focus.id)}` : null;
-    if (!selector && focus?.dataset?.nflAction) selector = `[data-nfl-action="${CSS.escape(focus.dataset.nflAction)}"]${focus.dataset.team ? `[data-team="${CSS.escape(focus.dataset.team)}"]` : focus.dataset.position ? `[data-position="${CSS.escape(focus.dataset.position)}"]` : ''}`;
+    if (!selector && focus?.dataset?.nflAction) selector = `[data-nfl-action="${CSS.escape(focus.dataset.nflAction)}"]${focus.dataset.game ? `[data-game="${CSS.escape(focus.dataset.game)}"]` : ''}${focus.dataset.team ? `[data-team="${CSS.escape(focus.dataset.team)}"]` : focus.dataset.position ? `[data-position="${CSS.escape(focus.dataset.position)}"]` : ''}`;
     render(context);
     if (scroll) scroll.scrollTop = top;
     if (selector && !focus.isConnected) page?.querySelector(selector)?.focus({preventScroll:true});
@@ -320,6 +419,9 @@
 
   function bind() {
     bound = true;
+    document.addEventListener('pd:team-data-ready',() => {
+      if (context && adoptWeeklySource()) rerender();
+    });
     document.addEventListener('click',event => {
       const button = event.target.closest('button');
       if (!button?.closest('[data-page="nfl"]') || !context) return;
@@ -344,8 +446,31 @@
         showPanel('recap');
         return;
       }
+      if (action === 'weekly-prev' || action === 'weekly-next') {
+        const games = gamesThisWeek();
+        const index = games.findIndex(game => game.id === state.nflWeeklyGame);
+        if (games.length) state.nflWeeklyGame = games[(index + (action === 'weekly-next' ? 1 : -1) + games.length) % games.length].id;
+        state.nflPreview = null;
+        rerender();
+        return;
+      }
+      if (action === 'weekly-retry') {
+        weeklyError = null;
+        loadWeeklySource(true);
+        rerender();
+        return;
+      }
+      if (action === 'recap-expand') {
+        if (gamesThisWeek().some(game => game.id === button.dataset.game)) {
+          if (state.nflRecapExpanded.has(button.dataset.game)) state.nflRecapExpanded.delete(button.dataset.game);
+          else state.nflRecapExpanded.add(button.dataset.game);
+          rerender();
+        }
+        return;
+      }
       if (action === 'report' && window.PDApp?.openGameReport) {
-        window.PDApp.openGameReport(button.dataset.team,button.dataset.game);
+        const game = gamesThisWeek().find(item => item.id === button.dataset.game);
+        if (game && hasGameReport(game)) window.PDApp.openGameReport(game.away_team,game.id,'overview','nfl');
         return;
       }
       if (action === 'team-details') {
@@ -353,19 +478,19 @@
         return;
       }
       if (action === 'team-form' && window.PDTeamDetails) {
-        window.PDTeamDetails.enter('PIT');
+        window.PDTeamDetails.enter(button.dataset.team);
         return;
       }
-      if (['matchup','matchups','compare'].includes(action) && window.MatchupBreakdown) {
-        const fixture = context.data.weeks?.[state.week]?.fixture;
+      if (['matchup','matchups','compare','recap-matchup','recap-compare'].includes(action)) {
+        const fixture = button.dataset.game ? gamesThisWeek().find(game => game.id === button.dataset.game) : selectedWeeklyGame(context.data.weeks[state.week]);
+        const compare = action === 'compare' || action === 'recap-compare';
         if (fixture) {
-          if (action !== 'compare' && fixture.status === 'final' && finite(fixture.home_score) && finite(fixture.away_score) && window.PDApp?.openGameReport) {
-            window.PDApp.openGameReport('PIT',fixture.id || fixture.game_id);
-            return;
-          }
-          window.MatchupBreakdown.enter('PIT',fixture.id || fixture.game_id,action === 'compare' ? 'form' : 'players');
-          return;
+          openWeeklyGame(fixture,compare);
+        } else if (action === 'matchups' && !button.dataset.game && weeklyLoading) {
+          state.nflPendingMatchup = true;
+          rerender();
         }
+        return;
       }
       if (button.dataset.conference) { state.conference = button.dataset.conference; state.nflDivision = 'all'; }
       else if (button.hasAttribute('data-standings-toggle')) state.standingsExpanded = !state.standingsExpanded;
@@ -401,6 +526,17 @@
     });
     document.addEventListener('change',event => {
       if (!context || !event.target.closest('[data-page="nfl"]')) return;
+      if (event.target.id === 'nfl-weekly-game') {
+        if (gamesThisWeek().some(game => game.id === event.target.value)) context.state.nflWeeklyGame = event.target.value;
+        context.state.nflPreview = null;
+        rerender();
+        return;
+      }
+      if (event.target.id === 'nfl-recap-team') {
+        context.state.nflRecapTeam = event.target.value;
+        rerender();
+        return;
+      }
       const keys = {'division-select':'nflDivision','form-select':'nflForm','standings-sort':'nflSort'};
       const key = keys[event.target.id];
       if (!key) return;

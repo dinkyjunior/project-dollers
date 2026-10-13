@@ -31,16 +31,16 @@
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
     <link rel="stylesheet" href="assets/game-report.css?v=20261012-v1" />
     <link rel="stylesheet" href="assets/home-editorial.css?v=20261013-immersive-v1" />
-    <link rel="stylesheet" href="assets/nfl-editorial.css?v=20261013-dashboard-v1" />
+    <link rel="stylesheet" href="assets/nfl-editorial.css?v=20261013-weekly-v1" />
     <script src="assets/source-integrity.js?v=20261012-v1" defer></script>
     <script src="assets/team-details.js?v=report-20261012-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/nfl-dashboard.js?v=20261013-editorial-v1" defer></script>
+    <script src="assets/nfl-dashboard.js?v=20261013-weekly-v1" defer></script>
     <script src="assets/game-report.js?v=20261012-v1" defer></script>
     <script src="assets/app.js?v=report-20261012-v1" defer></script>
-    <script src="assets/matchup-breakdown.js?v=report-20261012-v1" defer></script>
+    <script src="assets/matchup-breakdown.js?v=20261013-weekly-v1" defer></script>
     <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
     <script src="assets/nfl-dashboard-motion.js?v=replica-20261008-v2" defer></script>
@@ -134,6 +134,10 @@
               <button id="tab-recap" role="tab" aria-selected="false" aria-controls="panel-recap" data-nfl-tab="recap" tabindex="-1">Weekly Recap</button>
             </div>
             <div id="panel-ladder" role="tabpanel" aria-labelledby="tab-ladder">
+              <div class="section-heading nfl-editorial-matchup-heading"><h2>Weekly matchup</h2><span id="fixture-context">Season snapshot</span></div>
+              <section class="matchup-section nfl-framed nfl-motion-zone" aria-label="All NFL weekly matchups">
+                <div id="featured-matchup"></div>
+              </section>
               <div class="nfl-editorial-section-bar">
                 <h2>Standings</h2>
                 <div class="conference-toggle" role="group" aria-label="Conference"><button data-conference="AFC" aria-pressed="true">AFC</button><button data-conference="NFC" aria-pressed="false">NFC</button></div>
@@ -151,15 +155,11 @@
                 </div>
                 <button class="subtle-button standings-toggle nfl-all-teams" data-standings-toggle aria-expanded="false"><span>View all 16 teams</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg></button>
               </section>
-              <div class="section-heading nfl-editorial-matchup-heading"><h2>Featured matchup</h2><span id="fixture-context">Season snapshot</span></div>
-              <section class="matchup-section nfl-framed nfl-motion-zone" aria-label="Featured Steelers fixture">
-                <div id="featured-matchup"></div>
-              </section>
               <h2 class="nfl-editorial-eyebrow nfl-editorial-leaders-caption">League leaders</h2>
               <div id="ladder-leaders" class="leader-grid nfl-leader-stack"></div>
             </div>
             <div id="panel-players" role="tabpanel" aria-labelledby="tab-players" hidden><h2 class="nfl-editorial-eyebrow nfl-editorial-leaders-caption">League leaders</h2><div id="players-leaders" class="leader-grid nfl-leader-stack"></div></div>
-            <div id="panel-recap" class="recap-panel nfl-framed nfl-motion-zone" role="tabpanel" aria-labelledby="tab-recap" hidden><span class="eyebrow">Weekly research</span><h2 id="recap-title">Weekly recap</h2><div id="recap-content"></div></div>
+            <div id="panel-recap" class="recap-panel nfl-framed nfl-motion-zone" role="tabpanel" aria-labelledby="tab-recap" hidden><span class="eyebrow">Weekly research</span><h2 id="recap-title">Weekly recap</h2><div class="nfl-recap-toolbar"><label><span class="sr-only">Filter recap by team</span><select id="nfl-recap-team"><option value="all">All teams</option></select></label><p id="nfl-recap-count" class="nfl-recap-count" role="status" aria-live="polite"></p></div><div id="recap-content"></div></div>
             <div class="week-row nfl-week-shortcuts" role="group" aria-label="Week selection" hidden></div>
             <div id="nfl-inline-preview" class="nfl-inline-preview" tabindex="-1" role="status" aria-live="polite" aria-atomic="true" hidden></div>
             <footer class="nfl-editorial-footer"><button data-open="home">Home <span aria-hidden="true">↗</span></button><div class="data-status" id="data-status"><span>Loading season snapshot…</span><button data-sources>View sources <span aria-hidden="true">↗</span></button></div><p id="nfl-data-context" class="nfl-dataset-note"></p></footer>

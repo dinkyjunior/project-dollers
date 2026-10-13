@@ -1,0 +1,41 @@
+{
+  "baseline": "dfe92c810aff1f250267ab4608d115541ccc9d3b",
+  "scope": "NFL dashboard JS/CSS, its index slice/cache versions, AGENTS and new QA evidence; targeted matchup return route exception within four functions only",
+  "targetedMatchupException": {
+    "file": "assets/matchup-breakdown.js",
+    "baselineBlob": "c80c4bb749101263d4b5285e99fd8e68beb5c2b9",
+    "functions": [
+      "header",
+      "writeRoute",
+      "enter",
+      "route"
+    ],
+    "reason": "NFL weekly matchup exact-game routes require a persisted safe return=nfl so Back works after navigation and refresh; existing team-origin behavior must remain intact."
+  },
+  "protectedFiles": 6981,
+  "protectedDataFiles": 452,
+  "protectedOldQA": 6137,
+  "changedProtected": [],
+  "checks": [
+    {
+      "name": "Every protected tracked file unchanged",
+      "passed": true
+    },
+    {
+      "name": "Home and other research markup/scripts unchanged outside the NFL slice and its cache versions",
+      "passed": true
+    },
+    {
+      "name": "All matchup logic outside the four targeted return-route functions preserved",
+      "passed": true
+    },
+    {
+      "name": "Working changes restricted to approved NFL work and this audit archive",
+      "passed": true
+    }
+  ],
+  "indexOutsideSha256": "0e159ee0776aad3b2486cb516da5fb699e1c5da108e1d5adbeea3fc7f0dececf",
+  "matchupOutsideSha256": "cd69c9db598afefa372776a5bfb4b5978921699bca0d86d2db5dbce20142c9b0",
+  "unexpectedChangedPaths": [],
+  "status": "PASS"
+}

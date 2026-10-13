@@ -1,0 +1,73 @@
+{
+  "scope": "Targeted optional NFL matchup return routing; no source-data or statistics logic edits",
+  "beforeSha256": "44e9fc46e15a68583ef1c1417ed5ee9f7c9f7ceac4456668fff6383d4ed7e0de",
+  "afterSha256": "05934c495b39874e81fbd7eae026c3b276665e5b1382b9e01809061b23892c1e",
+  "checks": [
+    {
+      "name": "Legacy three-argument behavior: #nfl / DAL / players",
+      "passed": true
+    },
+    {
+      "name": "Legacy three-argument behavior: #nfl / PIT / form",
+      "passed": true
+    },
+    {
+      "name": "Legacy three-argument behavior: #team/DAL?tab=form / DAL / players",
+      "passed": true
+    },
+    {
+      "name": "Legacy three-argument behavior: #team/DAL?tab=form / PIT / form",
+      "passed": true
+    },
+    {
+      "name": "Legacy three-argument behavior: #team/TB / DAL / players",
+      "passed": true
+    },
+    {
+      "name": "Legacy three-argument behavior: #team/TB / PIT / form",
+      "passed": true
+    },
+    {
+      "name": "NFL override preserves selected team/game/tab and marks ladder origin",
+      "passed": true
+    },
+    {
+      "name": "Fresh direct matchup URL restores NFL return state",
+      "passed": true
+    },
+    {
+      "name": "Research tab/filter URL writes retain NFL return",
+      "passed": true
+    },
+    {
+      "name": "Return override does not leak into subsequent same-team URL",
+      "passed": true
+    },
+    {
+      "name": "Unsupported URL return rejected: \"https://example.com\"",
+      "passed": true
+    },
+    {
+      "name": "Unsupported URL return rejected: \"home\"",
+      "passed": true
+    },
+    {
+      "name": "Unsupported URL return rejected: \"team/TB\"",
+      "passed": true
+    },
+    {
+      "name": "Unsupported URL return rejected: \"NFL\"",
+      "passed": true
+    },
+    {
+      "name": "Unsupported URL return rejected: \"nfl\\n\"",
+      "passed": true
+    },
+    {
+      "name": "Unsupported fourth argument retains legacy team origin",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "browserVerification": "Deferred until parent freezes the integrated weekly dashboard."
+}

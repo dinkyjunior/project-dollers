@@ -1,0 +1,216 @@
+{
+  "qualification": "Explicit fault injection: abort only the first native local team-details.json request, then retry with the real origin; separately delay that one local source behind a controllable test promise. No source response, application state, DOM or browser clock substitutions.",
+  "startedAt": "2026-10-13T13:04:46.271Z",
+  "sourceBefore": {
+    "assets/nfl-dashboard.js": "6b0f953aac1185f6211a0094c5c5b68546a749c23e09f23a557fc11d29b405ae",
+    "assets/nfl-editorial.css": "bdec390a44d050a855cfb50780d712410f09ea61168167a206bf4884293cc994",
+    "assets/data/team-details.json": "f925ac2dfd730363fdd40d0e65f5873ce68b5b6990abd9022d87fd4a28aa0226",
+    "assets/data/game-reports.json": "c6bbf5aea20fc6e70a8955ec8d85c0d529e28cd5be410c2db098b8eac1928cbe"
+  },
+  "checks": [
+    {
+      "name": "Failed source exposes a schedule error and Retry schedule control",
+      "passed": true
+    },
+    {
+      "name": "Failed source does not publish fixtures or navigate away from NFL",
+      "passed": true
+    },
+    {
+      "name": "Fault injection aborted one source request only",
+      "passed": true
+    },
+    {
+      "name": "Retry loads all 15 selected Week 5 games",
+      "passed": true
+    },
+    {
+      "name": "Retry dataset is integrity verified and bound to the unchanged local source",
+      "passed": true
+    },
+    {
+      "name": "Recovered error and Retry schedule controls disappear",
+      "passed": true
+    },
+    {
+      "name": "Recovered primary action routes the exact selected event to its report",
+      "passed": true
+    },
+    {
+      "name": "Recovered game report Back returns to NFL",
+      "passed": true
+    },
+    {
+      "name": "No application exception during source failure and recovery",
+      "passed": true
+    },
+    {
+      "name": "All failed requests are the explicitly injected source failure",
+      "passed": true
+    },
+    {
+      "name": "No origin HTTP errors during retry/report recovery",
+      "passed": true
+    },
+    {
+      "name": "Cold Home Matchups queues while the real weekly source loads",
+      "passed": true
+    },
+    {
+      "name": "Leaving NFL cancels automatic matchup navigation after delayed source completes",
+      "passed": true
+    },
+    {
+      "name": "Cancelled navigation still retains the verified source without substitutions",
+      "passed": true
+    },
+    {
+      "name": "Cancelled navigation produces no failed requests, HTTP errors or application exceptions",
+      "passed": true
+    }
+  ],
+  "scenarios": {
+    "failedSourceThenRetry": {
+      "pageErrors": [],
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "failedRequests": [
+        {
+          "url": "http://127.0.0.1:8809/project-dollers/assets/data/team-details.json",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "badResponses": [],
+      "injectedAbortCount": 1,
+      "failureState": {
+        "activePage": "nfl",
+        "hash": "#nfl",
+        "selectedWeek": "5",
+        "sourceLoaded": false,
+        "sourceIntegrity": null,
+        "selectedGame": null,
+        "matchupOptions": []
+      },
+      "failureNotice": "The league schedule could not load.\n\nRetry schedule",
+      "recoveredState": {
+        "activePage": "nfl",
+        "hash": "#nfl",
+        "selectedWeek": "5",
+        "sourceLoaded": true,
+        "sourceIntegrity": {
+          "status": "verified",
+          "kind": "team-details",
+          "catalogSchemaVersion": 1,
+          "rawBookSha256": "f925ac2dfd730363fdd40d0e65f5873ce68b5b6990abd9022d87fd4a28aa0226",
+          "applicableDisagreements": 72,
+          "appliedCatalogSha256": "d7e066a913601a0d57bdf16ca9df0074a38293ffec949cb5b32bd770b9e0f363"
+        },
+        "selectedGame": "2026_05_IND_PIT",
+        "matchupOptions": [
+          "2026_05_TB_DAL",
+          "2026_05_PHI_JAX",
+          "2026_05_CHI_GB",
+          "2026_05_CIN_MIA",
+          "2026_05_CLE_NYJ",
+          "2026_05_HOU_TEN",
+          "2026_05_IND_PIT",
+          "2026_05_LV_NE",
+          "2026_05_MIN_NO",
+          "2026_05_NYG_WAS",
+          "2026_05_DEN_LAC",
+          "2026_05_DET_ARI",
+          "2026_05_SF_SEA",
+          "2026_05_BAL_ATL",
+          "2026_05_BUF_LA"
+        ]
+      },
+      "reportState": {
+        "hash": "#game-report?team=IND&game=2026_05_IND_PIT&return=nfl",
+        "state": {
+          "team": "IND",
+          "game": "2026_05_IND_PIT",
+          "tab": "overview",
+          "performanceTeam": "IND",
+          "kind": "passing",
+          "expanded": "3917792",
+          "returnRoute": "nfl"
+        },
+        "reportId": "2026_05_IND_PIT",
+        "activePage": "game-report"
+      },
+      "expectedConsoleErrorQualification": "The retained console error for net::ERR_FAILED is expected evidence of the intentionally aborted local team-details request; it is not suppressed."
+    },
+    "cancelPendingHomeMatchup": {
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "heldSourceRequests": 1,
+      "queuedState": {
+        "activePage": "nfl",
+        "hash": "#nfl",
+        "pendingMatchup": true,
+        "selectedWeek": "5",
+        "sourceLoaded": false,
+        "sourceIntegrity": null,
+        "selectedGame": null,
+        "matchupOptions": []
+      },
+      "queuedNotice": "Opening this week’s matchup after the schedule loads…\n\nOpen matchup when ready",
+      "homeBeforeRelease": {
+        "activePage": "home",
+        "hash": "#home",
+        "pendingMatchup": true,
+        "selectedWeek": "5",
+        "sourceLoaded": false,
+        "sourceIntegrity": null,
+        "selectedGame": null,
+        "matchupOptions": []
+      },
+      "homeAfterRelease": {
+        "activePage": "home",
+        "hash": "#home",
+        "pendingMatchup": false,
+        "selectedWeek": "5",
+        "sourceLoaded": true,
+        "sourceIntegrity": {
+          "status": "verified",
+          "kind": "team-details",
+          "catalogSchemaVersion": 1,
+          "rawBookSha256": "f925ac2dfd730363fdd40d0e65f5873ce68b5b6990abd9022d87fd4a28aa0226",
+          "applicableDisagreements": 72,
+          "appliedCatalogSha256": "d7e066a913601a0d57bdf16ca9df0074a38293ffec949cb5b32bd770b9e0f363"
+        },
+        "selectedGame": "2026_05_IND_PIT",
+        "matchupOptions": [
+          "2026_05_TB_DAL",
+          "2026_05_PHI_JAX",
+          "2026_05_CHI_GB",
+          "2026_05_CIN_MIA",
+          "2026_05_CLE_NYJ",
+          "2026_05_HOU_TEN",
+          "2026_05_IND_PIT",
+          "2026_05_LV_NE",
+          "2026_05_MIN_NO",
+          "2026_05_NYG_WAS",
+          "2026_05_DEN_LAC",
+          "2026_05_DET_ARI",
+          "2026_05_SF_SEA",
+          "2026_05_BAL_ATL",
+          "2026_05_BUF_LA"
+        ]
+      }
+    }
+  },
+  "passed": true,
+  "browserClosed": true,
+  "sourceAfter": {
+    "assets/nfl-dashboard.js": "6b0f953aac1185f6211a0094c5c5b68546a749c23e09f23a557fc11d29b405ae",
+    "assets/nfl-editorial.css": "bdec390a44d050a855cfb50780d712410f09ea61168167a206bf4884293cc994",
+    "assets/data/team-details.json": "f925ac2dfd730363fdd40d0e65f5873ce68b5b6990abd9022d87fd4a28aa0226",
+    "assets/data/game-reports.json": "c6bbf5aea20fc6e70a8955ec8d85c0d529e28cd5be410c2db098b8eac1928cbe"
+  },
+  "sourceStable": true,
+  "finishedAt": "2026-10-13T13:04:53.998Z"
+}
