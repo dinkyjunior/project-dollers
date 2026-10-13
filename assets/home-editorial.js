@@ -14,7 +14,6 @@
   const artSource = art?.querySelector('source');
   const artImage = art?.querySelector('img');
   const leagueLogo = home.querySelector('[data-home-league-logo]');
-  const leagueName = home.querySelector('[data-home-league-name]');
   const description = home.querySelector('[data-home-description]');
   const entry = home.querySelector('[data-home-entry]');
   const entryLabel = entry?.querySelector('[data-home-entry-label]');
@@ -153,9 +152,8 @@
     });
     if (leagueLogo) {
       leagueLogo.src = details.logo;
-      leagueLogo.alt = '';
+      leagueLogo.alt = details.name;
     }
-    if (leagueName) leagueName.textContent = details.name;
     if (description) description.textContent = details.description;
     if (availability) availability.textContent = ready ? 'Available now' : 'Coming soon';
     try { sessionStorage.setItem(storageKey, sport); } catch { /* Storage is optional. */ }

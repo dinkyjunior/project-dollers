@@ -10,6 +10,8 @@ Do not add unrelated screens or abandoned concept features. Preserve existing wo
 
 The user also approved matching Home previews for NFL, NBA, NRL and UFC with sport selection. All sport rows select their Home preview; only NFL's primary entry and NFL research links open implemented destinations. NBA, NRL and UFC must remain coming soon. Publish the approved Home implementation while preserving production's existing research controllers and datasets; the pending NFL data reconciliation remains separate.
 
+The latest Home refinement matches the NFL dashboard's actual frame dimensions and centring: 430px maximum on phones and 400px wide with a 770px height cap from the 700px breakpoint. Remove the visible editorial headline, the repeated hero sport name and the 01–04 row labels. Keep the scene, tagline, sport-row names and selection controls. The widened refined wordmark must read PROJECT DOLLAR, including two distinct gold Ls, and keep its natural aspect ratio.
+
 ## Source of truth
 The latest user-supplied render is the visual source of truth for Home. The earlier approved screen renders remain the reference for the corresponding research screens. The current website is NOT the visual source of truth.
 

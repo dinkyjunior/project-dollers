@@ -1,12 +1,19 @@
 /* Home follows the approved editorial stadium render. Research pages retain
    their own chrome, geometry and motion; every selector here is Home-scoped. */
+body:has(.editorial-home.active) {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  background: radial-gradient(ellipse at 15% 32%, #002f543b, transparent 45%), radial-gradient(ellipse at 85% 70%, #00274132, transparent 47%), #010205;
+}
 .app-shell:has(.editorial-home.active) {
   width: 100%;
-  max-width: none;
-  height: 100vh;
-  height: 100dvh;
-  margin: 0;
+  max-width: 430px;
+  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 262.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
+  margin: auto;
+  border-radius: 18px;
   background: #000;
+  box-shadow: 0 0 0 1px #52657538, 0 0 0 5px #02070b, 0 0 0 6px #7188972b, 0 22px 55px #000b;
 }
 .app-shell:has(.editorial-home.active)::after { display: none; }
 .page.editorial-home {
@@ -17,6 +24,9 @@
   font-family: PDInter, Arial, sans-serif;
   font-weight: 400;
   font-synthesis: none;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
   -webkit-font-smoothing: antialiased;
 }
 .editorial-home .editorial-scroll {
@@ -26,11 +36,11 @@
   overscroll-behavior-y: contain;
 }
 .editorial-canvas {
-  --editorial-width: min(100vw, 848px);
+  --editorial-width: min(100vw, 430px);
   --editorial-side: calc(var(--editorial-width) * .065);
   position: relative;
   isolation: isolate;
-  max-width: 848px;
+  max-width: 430px;
   min-height: 100%;
   margin: 0 auto;
   padding-bottom: max(22px, env(safe-area-inset-bottom, 0px));
@@ -40,7 +50,7 @@
 .editorial-art {
   position: absolute;
   z-index: -3;
-  inset: calc(var(--editorial-width) * .078) 0 auto;
+  inset: calc(var(--editorial-width) * -.10) 0 auto;
   height: calc(var(--editorial-width) * 1.5);
   mask-image: linear-gradient(180deg, transparent, #000 4%, #000);
   -webkit-mask-image: linear-gradient(180deg, transparent, #000 4%, #000);
@@ -64,12 +74,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding: calc(var(--editorial-width) * .026 + env(safe-area-inset-top, 0px)) calc(var(--editorial-width) * .056) 0;
 }
 .editorial-wordmark {
   position: relative;
-  width: 67%;
-  max-width: 510px;
+  flex: 1;
+  min-width: 0;
   line-height: 0;
 }
 .editorial-wordmark > img { display: block; width: 100%; height: auto; }
@@ -77,8 +88,8 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  mask: url("home/editorial-wordmark.webp") center / 100% 100% no-repeat;
-  -webkit-mask: url("home/editorial-wordmark.webp") center / 100% 100% no-repeat;
+  mask: url("home/editorial-wordmark-refined.webp") center / 100% 100% no-repeat;
+  -webkit-mask: url("home/editorial-wordmark-refined.webp") center / 100% 100% no-repeat;
   pointer-events: none;
   mix-blend-mode: screen;
 }
@@ -94,6 +105,7 @@
   place-items: center;
   width: 44px;
   height: 44px;
+  flex-shrink: 0;
   padding: 8px;
   border: 0;
   border-radius: 50%;
@@ -101,7 +113,7 @@
   color: #d7d4e6;
   transition: color 160ms, background 160ms;
 }
-.editorial-menu-toggle svg { width: clamp(20px, 4vw, 34px); height: auto; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.editorial-menu-toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; }
 .editorial-menu-toggle:hover, .editorial-menu-toggle[aria-expanded="true"] { background: #ffffff0b; color: #fff; }
 .editorial-menu {
   position: absolute;
@@ -131,18 +143,10 @@
 }
 .editorial-menu button:hover, .editorial-menu button:focus-visible { background: #ffffff0b; }
 .editorial-menu button span { color: #00f6f2; }
-.editorial-hero { position: relative; height: calc(var(--editorial-width) * 1.305 + env(safe-area-inset-top, 0px)); }
+.editorial-hero { position: relative; height: calc(var(--editorial-width) * 1.127 + env(safe-area-inset-top, 0px)); }
 .editorial-copy { padding: calc(var(--editorial-width) * .16 + env(safe-area-inset-top, 0px)) var(--editorial-side) 0; }
 .editorial-league { display: flex; align-items: center; gap: calc(var(--editorial-width) * .031); height: calc(var(--editorial-width) * .172); }
 .editorial-league img { display: block; width: calc(var(--editorial-width) * .185); height: calc(var(--editorial-width) * .185); margin-left: calc(var(--editorial-width) * -.016); margin-right: calc(var(--editorial-width) * -.034); object-fit: contain; }
-.editorial-league span { font-size: calc(var(--editorial-width) * .058); line-height: 1; letter-spacing: .07em; }
-.editorial-copy h1 {
-  margin: calc(var(--editorial-width) * .007) 0 0;
-  font: 400 calc(var(--editorial-width) * .109) / .89 PDInter, Arial, sans-serif;
-  letter-spacing: -.058em;
-  color: #fafafd;
-  text-shadow: none;
-}
 .editorial-copy p {
   margin: calc(var(--editorial-width) * .018) 0 0;
   font-size: calc(var(--editorial-width) * .037);
@@ -153,7 +157,7 @@
 .editorial-stadium-light {
   position: absolute;
   z-index: -1;
-  top: calc(var(--editorial-width) * .588);
+  top: calc(var(--editorial-width) * .410);
   left: 3%;
   width: 94%;
   height: calc(var(--editorial-width) * .36);
@@ -197,7 +201,7 @@
 .editorial-sport {
   position: relative;
   display: grid;
-  grid-template-columns: calc(var(--editorial-width) * .081) calc(var(--editorial-width) * .114) 1fr auto;
+  grid-template-columns: calc(var(--editorial-width) * .114) 1fr auto;
   align-items: center;
   gap: calc(var(--editorial-width) * .014);
   min-height: max(48px, calc(var(--editorial-width) * .118));
@@ -213,7 +217,6 @@
 .editorial-sport.is-selected::before { content: ""; position: absolute; inset: 0 auto 0 calc(var(--editorial-width) * -.014); width: 2px; border-radius: 1px; background: var(--editorial-selection-light); }
 .editorial-sport:hover { background: #ffffff0b; border-bottom-color: #89819f; }
 .editorial-sport:active { background: #ffffff10; }
-.editorial-sport-number { color: #c1b4e5; font-size: calc(var(--editorial-width) * .025); letter-spacing: .06em; }
 .editorial-sport > img { width: 100%; height: calc(var(--editorial-width) * .079); object-fit: contain; }
 .editorial-sport > .editorial-nba { height: calc(var(--editorial-width) * .085); }
 .editorial-sport > .editorial-ufc { width: calc(var(--editorial-width) * .095); height: calc(var(--editorial-width) * .046); }
@@ -244,16 +247,17 @@
 @keyframes editorial-brand-light { 0%, 73% { opacity: 0; transform: translateX(-80%); } 76% { opacity: .48; } 86% { opacity: .4; } 89%, 100% { opacity: 0; transform: translateX(80%); } }
 @keyframes editorial-stadium-breath { 0%, 100% { opacity: .11; transform: scale(1); } 50% { opacity: .26; transform: scale(1.025); } }
 @media (min-width: 700px) {
-  .editorial-menu-toggle { width: 56px; height: 56px; }
+  body:has(.editorial-home.active) { padding: 32px 0; }
+  .app-shell:has(.editorial-home.active) { width: 400px; max-width: 400px; height: min(calc(100dvh - 64px), 770px); }
+  .editorial-canvas { --editorial-width: 400px; }
   .editorial-menu { width: 280px; }
   .editorial-menu button { min-height: 52px; font-size: 17px; }
   .editorial-entry { font-size: calc(var(--editorial-width) * .039); }
   .editorial-canvas { box-shadow: 0 0 110px #03071755; }
 }
 @media (max-width: 360px) {
-  .editorial-copy h1 { font-size: calc(var(--editorial-width) * .111); }
   .editorial-availability { letter-spacing: .17em; }
-  .editorial-sport { grid-template-columns: 24px 34px 1fr auto; gap: 7px; }
+  .editorial-sport { grid-template-columns: 34px 1fr auto; gap: 7px; }
   .editorial-sport-action { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
