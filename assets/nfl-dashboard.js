@@ -65,6 +65,7 @@
     if (!Object.hasOwn(state,'nflSort')) state.nflSort = 'PCT';
     if (!Object.hasOwn(state,'nflExpandedTeam')) state.nflExpandedTeam = 'PIT';
     if (!Object.hasOwn(state,'nflLeaderExpanded')) state.nflLeaderExpanded = new Set();
+    if (!['QB','RB','WR'].includes(state.nflLeaderPosition)) state.nflLeaderPosition = 'RB';
     if (!Object.hasOwn(state,'nflPreview')) state.nflPreview = null;
     if (!Object.hasOwn(state,'nflPreviewReturn')) state.nflPreviewReturn = null;
   }
@@ -100,7 +101,7 @@
     const diff = differential(team);
     const value = finite(diff) ? `${diff > 0 ? '+' : ''}${number(diff)}` : '—';
     const metrics = [['PF',number(team.pointsFor)],['PA',number(team.pointsAgainst)],['DIFF',value],['HOME',record(result.home)],['AWAY',record(result.away)]];
-    return `<div class="nfl-team-summary" role="row"><div class="nfl-summary-content" role="cell" aria-colspan="9"><div class="nfl-summary-identity"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><div><small>${esc(team.fullName?.replace(team.name,'').trim() || abbr)}</small><strong>${esc(team.name)}</strong></div></div><div class="nfl-summary-metrics">${metrics.map(([label,metric]) => `<div class="nfl-summary-metric${label === 'DIFF' ? ` ${diff > 0 ? 'positive' : diff < 0 ? 'negative' : ''}` : ''}"><small>${label}</small><strong>${esc(metric)}</strong></div>`).join('')}</div><button id="nfl-team-details-${esc(abbr.toLowerCase())}" class="nfl-detail-button" data-nfl-action="team-details" data-team="${esc(abbr)}">Team details ${rightChevron}</button></div></div>`;
+    return `<div class="nfl-team-summary" role="row"><div class="nfl-summary-content" role="cell" aria-colspan="5"><div class="nfl-summary-identity"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><div><small>${esc(team.fullName?.replace(team.name,'').trim() || abbr)}</small><strong>${esc(team.name)}</strong></div></div><div class="nfl-summary-metrics">${metrics.map(([label,metric]) => `<div class="nfl-summary-metric${label === 'DIFF' ? ` ${diff > 0 ? 'positive' : diff < 0 ? 'negative' : ''}` : ''}"><small>${label}</small><strong>${esc(metric)}</strong></div>`).join('')}</div><button id="nfl-team-details-${esc(abbr.toLowerCase())}" class="nfl-detail-button" data-nfl-action="team-details" data-team="${esc(abbr)}">Team details ${rightChevron}</button></div></div>`;
   }
 
   function standings(snapshot) {
@@ -116,32 +117,26 @@
     }
     if ($('form-select')) $('form-select').value = String(state.nflForm);
     if ($('standings-sort')) $('standings-sort').value = state.nflSort;
-    const sortMetric = team => state.nflSort === 'PF' ? Number(team.pointsFor) : state.nflSort === 'PA' ? -Number(team.pointsAgainst) : state.nflSort === 'DIFF' ? differential(team) : Number(team.pct);
+    const sortMetric = team => state.nflSort === 'PF' ? (finite(team.pointsFor) ? Number(team.pointsFor) : NaN) : state.nflSort === 'PA' ? (finite(team.pointsAgainst) ? -Number(team.pointsAgainst) : NaN) : state.nflSort === 'DIFF' ? (finite(differential(team)) ? differential(team) : NaN) : (finite(team.pct) ? Number(team.pct) : NaN);
     all.sort((a,b) => {
       const av = sortMetric(a), bv = sortMetric(b);
       return (Number.isFinite(bv) ? bv : -Infinity) - (Number.isFinite(av) ? av : -Infinity) || Number(b.pct) - Number(a.pct) || (differential(b) ?? -Infinity) - (differential(a) ?? -Infinity) || getAbbr(a).localeCompare(getAbbr(b));
     });
     const filtered = all.filter(team => state.nflDivision === 'all' || teamMap.get(getAbbr(team))?.division === state.nflDivision);
-    let teams = filtered;
-    if (!state.standingsExpanded && filtered.length > 5) {
-      const featured = new Set(filtered.slice(0,4).map(getAbbr));
-      featured.add(state.conference === 'AFC' && filtered.some(team => getAbbr(team) === 'PIT') ? 'PIT' : getAbbr(filtered[4]));
-      for (const team of filtered) {
-        if (featured.size >= 5) break;
-        featured.add(getAbbr(team));
-      }
-      teams = filtered.filter(team => featured.has(getAbbr(team)));
-    }
-    $('table-caption').textContent = `${state.conference} STANDINGS`;
-    document.querySelector('[data-page="nfl"] .through-week').textContent = `THROUGH WEEK ${snapshot.throughWeek}`;
+    const teams = state.standingsExpanded ? filtered : filtered.slice(0,5);
+    $('table-caption').textContent = `${state.conference} standings`;
+    document.querySelector('[data-page="nfl"] .through-week').textContent = `Through Week ${snapshot.throughWeek}`;
     const mark = $('nfl-conference-mark');
     if (mark) { mark.src = `assets/nfl-dashboard/${state.conference.toLowerCase()}.svg`; mark.alt = state.conference; }
     const sortContext = {
-      PCT:{label:'win percentage',column:4,direction:'descending'},
-      PF:{label:'points scored',column:5,direction:'descending'},
-      PA:{label:'points allowed',column:6,direction:'ascending'},
-      DIFF:{label:'point differential',column:7,direction:'descending'}
-    }[state.nflSort] || {label:'win percentage',column:4,direction:'descending'};
+      PCT:{label:'win percentage',column:3,direction:'descending'},
+      PF:{label:'points scored',column:null,direction:'descending'},
+      PA:{label:'points allowed',column:null,direction:'ascending'},
+      DIFF:{label:'point differential',column:null,direction:'descending'}
+    }[state.nflSort] || {label:'win percentage',column:3,direction:'descending'};
+    const caption = $('table-caption');
+    caption.textContent = `${state.conference} standings${state.nflSort === 'PCT' ? '' : ` · ${state.nflSort}`}`;
+    caption.title = `Sorted by ${sortContext.label}; not official playoff seeding`;
     const table = document.querySelector('[data-page="nfl"] .standings');
     table?.setAttribute('aria-label',`${state.conference} records sorted by ${sortContext.label}; not official playoff seeding`);
     table?.querySelectorAll('[role="columnheader"]').forEach((heading,index) => {
@@ -150,13 +145,16 @@
       if (selected) heading.setAttribute('aria-sort',sortContext.direction); else heading.removeAttribute('aria-sort');
     });
     $('standings-rows').innerHTML = teams.map(team => {
-      const abbr = getAbbr(team), diff = differential(team), expanded = state.nflExpandedTeam === abbr;
-      return `<div class="stand-row${abbr === 'PIT' ? ' steelers-row' : ''}${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="Sorted record order; not official playoff seeding">${all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="team" data-team="${esc(abbr)}" aria-expanded="${expanded}" aria-label="${esc(team.fullName || team.name)} record details"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span role="cell">${number(team.w)}</span><span role="cell" title="${team.ties || 0} ties">${number(team.l)}${team.ties ? `<small class="tie-mark">+${team.ties}T</small>` : ''}</span><span class="nfl-pct" role="cell">${esc(team.pct || '—')}</span><span role="cell">${number(team.pointsFor)}</span><span role="cell">${number(team.pointsAgainst)}</span><span class="${diff > 0 ? 'positive' : diff < 0 ? 'negative' : ''}" role="cell">${finite(diff) ? `${diff > 0 ? '+' : ''}${number(diff)}` : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
+      const abbr = getAbbr(team), expanded = state.nflExpandedTeam === abbr;
+      const ties = finite(team.ties) ? Number(team.ties) : null;
+      const recordText = `${number(team.w)}–${number(team.l)}${ties === null ? '–—' : ties > 0 ? `–${number(ties)}` : ''}`;
+      const recordLabel = `${number(team.w)} wins, ${number(team.l)} losses, ${ties === null ? 'ties unavailable' : `${number(ties)} ties`}`;
+      return `<div class="stand-row${abbr === 'PIT' ? ' steelers-row' : ''}${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="Sorted record order; not official playoff seeding">${all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="team" data-team="${esc(abbr)}" aria-expanded="${expanded}" aria-label="${esc(team.fullName || team.name)} record details"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span class="nfl-record" role="cell" aria-label="${esc(recordLabel)}">${esc(recordText)}</span><span class="nfl-pct" role="cell">${exists(team.pct) ? esc(team.pct) : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
     }).join('');
     const toggle = document.querySelector('[data-page="nfl"] [data-standings-toggle]');
     if (toggle) {
       const label = toggle.querySelector('span:not([aria-hidden])');
-      const text = state.standingsExpanded ? 'SHOW FEATURED TEAMS' : `VIEW ALL ${filtered.length} TEAMS`;
+      const text = state.standingsExpanded ? 'Show top 5 teams' : `View all ${filtered.length} teams`;
       if (label) label.textContent = text; else toggle.textContent = text;
       toggle.setAttribute('aria-expanded',String(state.standingsExpanded));
     }
@@ -165,15 +163,23 @@
   }
 
   function leaderboards(snapshot, panel) {
-    const {state,esc,number} = context;
-    const labels = {QB:'PASSING',RB:'RUSHING',WR:'RECEIVING'};
-    return ['QB','RB','WR'].map(position => {
-      const players = snapshot.leaders?.[position] || [];
-      const expanded = state.nflLeaderExpanded.has(position);
-      const shown = expanded ? players : players.slice(0,5);
-      const week = snapshot.leadersWeek ?? snapshot.throughWeek;
-      return `<section class="leader-panel nfl-leader-panel nfl-framed nfl-motion-zone" data-nfl-leader-panel="${position}"><span class="nfl-frame-shimmer" aria-hidden="true"></span><span class="nfl-bevel-corner is-tl" aria-hidden="true"></span><span class="nfl-bevel-corner is-tr" aria-hidden="true"></span><span class="nfl-bevel-corner is-bl" aria-hidden="true"></span><span class="nfl-bevel-corner is-br" aria-hidden="true"></span><div class="nfl-leader-heading"><div><h2>TOP ${position}s</h2><span>${labels[position]} · ${finite(week) && Number(week) > 0 ? `WEEK ${week}` : 'AWAITING VERIFIED WEEK'}</span></div><button id="nfl-${panel}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="leaders" data-position="${position}" aria-expanded="${expanded}" aria-label="${expanded ? 'Collapse' : 'View all available'} ${position} leaders">${expanded ? 'Show less' : 'View all'} ${rightChevron}</button></div><div class="leader-columns"><span>#</span><span>PLAYER</span><span>YDS</span><span>TD</span></div>${shown.length ? shown.map((player,index) => `<div class="leader-row"><b>${index+1}</b><span title="${esc(player.name)}">${esc(readablePlayerName(player))}</span><span>${number(player.yards)}</span><span>${number(player.td)}</span></div>`).join('') : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</section>`;
-    }).join('');
+    const {state,esc,number,logo} = context;
+    const labels = {QB:'Passing',RB:'Rushing',WR:'Receiving'};
+    const titles = {QB:'Top passers',RB:'Top rushers',WR:'Top receivers'};
+    const position = state.nflLeaderPosition;
+    const players = snapshot.leaders?.[position] || [];
+    // Ladder stays compact even after the separate Players panel is expanded.
+    const expanded = panel === 'players' && state.nflLeaderExpanded.has(position);
+    const shown = expanded ? players : players.slice(0,5);
+    const week = Object.hasOwn(snapshot,'leadersWeek') ? snapshot.leadersWeek : snapshot.throughWeek;
+    const period = finite(week) && Number(week) > 0 ? `Week ${week}` : 'Awaiting verified week';
+    const prefix = `nfl-${panel}`;
+    const positionTabs = ['QB','RB','WR'].map(value => `<button id="${prefix}-position-${value.toLowerCase()}" role="tab" data-nfl-action="leader-position" data-position="${value}" data-panel="${panel}" aria-selected="${value === position}" aria-controls="${prefix}-leader-results" tabindex="${value === position ? '0' : '-1'}" aria-label="${labels[value]} ${value} leaders">${value}</button>`).join('');
+    const rows = shown.map((player,index) => `<div class="leader-row" role="row"><b role="cell">${index+1}</b><span class="nfl-editorial-leader-player" role="cell" title="${esc(player.name)}">${player.team ? `<img src="${esc(logo(player.team))}" alt="" width="500" height="500" decoding="async">` : ''}<span>${esc(readablePlayerName(player))}</span></span><span role="cell">${number(player.yards)}</span><span role="cell">${number(player.td)}</span></div>`).join('');
+    const action = panel === 'ladder' ? 'all-players' : 'leaders';
+    const linkLabel = expanded ? 'Show featured players' : 'View all players';
+    const relatedLinks = panel === 'ladder' ? `<button id="${prefix}-passing" data-nfl-action="all-players" data-position="QB" aria-controls="panel-players">View passing leaders ${rightChevron}</button><button id="${prefix}-receiving" data-nfl-action="all-players" data-position="WR" aria-controls="panel-players">View receiving leaders ${rightChevron}</button>` : '';
+    return `<section class="leader-panel nfl-editorial-leaders" data-nfl-leader-panel="${position}" aria-labelledby="${prefix}-leaders-title"><div class="nfl-editorial-leaders-heading"><div><h2 id="${prefix}-leaders-title">${titles[position]}</h2><span>${esc(period)}</span></div><div class="nfl-editorial-position-tabs" role="tablist" data-nfl-leader-tablist aria-label="League leader position">${positionTabs}</div></div><div id="${prefix}-leader-results" role="tabpanel" aria-labelledby="${prefix}-position-${position.toLowerCase()}"><div class="nfl-editorial-leader-table" role="table" aria-label="${labels[position]} yards leaders · ${esc(period)}"><div class="leader-columns" role="row"><span role="columnheader">#</span><span role="columnheader">Player</span><span role="columnheader">YDS</span><span role="columnheader">TD</span></div><div role="rowgroup">${rows}</div></div>${shown.length ? '' : '<p class="nfl-leaders-unavailable">Verified weekly leaders unavailable.</p>'}${expanded ? `<p class="nfl-dataset-note">${players.length} source-backed ${position} records available${players.length <= 5 ? '; no additional rows are published in this snapshot' : ''}.</p>` : ''}</div><div class="nfl-editorial-leader-links"><button id="${prefix}-${position.toLowerCase()}" class="nfl-view-all" data-nfl-action="${action}" data-position="${position}"${panel === 'players' ? ` aria-expanded="${expanded}" aria-controls="${prefix}-leader-results"` : ' aria-controls="panel-players"'}>${linkLabel} ${rightChevron}</button>${relatedLinks}</div></section>`;
   }
 
   function matchup(snapshot) {
@@ -194,7 +200,7 @@
     const ownScore = game.home_team === 'PIT' ? game.home_score : game.away_score;
     const otherScore = game.home_team === 'PIT' ? game.away_score : game.home_score;
     const when = final ? `FINAL · ${number(ownScore)}–${number(otherScore)} · ${date(game)}` : `${date(game)} · ${time(game)}`;
-    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">${final ? 'OPEN GAME REPORT' : 'VIEW MATCHUP'} ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">COMPARE TEAMS ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">TEAM FORM ${rightChevron}</button></div>`;
+    return `<div class="nfl-matchup-art">${side('PIT','is-home')}<span class="nfl-matchup-vs" aria-hidden="true">VS</span>${side(opponent,'is-away')}</div><p class="nfl-matchup-meta">${esc(when)} · ${esc(game.venue || 'Venue unavailable')}</p><div class="nfl-matchup-actions"><button class="nfl-matchup-action is-primary" data-nfl-action="matchup">${final ? 'Open game report' : 'Open matchup'} ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="compare">Compare teams ${rightChevron}</button><button class="nfl-matchup-action" data-nfl-action="team-form">Team form ${rightChevron}</button></div>`;
   }
 
   function recap(snapshot) {
@@ -258,6 +264,15 @@
     const {data,state} = context;
     const snapshot = data.weeks[state.week];
     if (!snapshot) return;
+    const season = $('season-select');
+    if (season) {
+      // Historical player coverage is not an available standings season. This
+      // dashboard snapshot contains one sourced season and its actual weeks.
+      season.innerHTML = `<option value="${context.esc(data.season)}">${context.esc(data.season)} season</option>`;
+      season.value = String(data.season);
+      season.disabled = true;
+      season.title = 'Only this source-backed standings season is currently available';
+    }
     $('week-select').value = state.week;
     document.querySelectorAll('[data-conference]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.conference === state.conference)));
     document.querySelectorAll('[data-week]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.week === state.week)));
@@ -265,7 +280,7 @@
     $('ladder-leaders').innerHTML = leaderboards(snapshot,'ladder');
     $('players-leaders').innerHTML = leaderboards(snapshot,'players');
     $('featured-matchup').innerHTML = matchup(snapshot);
-    $('fixture-context').textContent = `WEEK ${state.week}`;
+    $('fixture-context').textContent = `Week ${state.week}`;
     recap(snapshot);
     preview();
     const provenance = $('nfl-data-context');
@@ -288,6 +303,21 @@
     if (selector && !focus.isConnected) page?.querySelector(selector)?.focus({preventScroll:true});
   }
 
+  function showPanel(tab) {
+    const button = $(`tab-${tab}`);
+    button?.click();
+    button?.focus({preventScroll:true});
+  }
+
+  function showTeams() {
+    context.state.standingsExpanded = true;
+    rerender();
+    showPanel('ladder');
+    const panel = document.querySelector('[data-page="nfl"] .nfl-standings-panel');
+    panel?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'start'});
+    panel?.querySelector('.team-link')?.focus({preventScroll:true});
+  }
+
   function bind() {
     bound = true;
     document.addEventListener('click',event => {
@@ -298,6 +328,22 @@
       if (!action && !button.dataset.conference && !button.hasAttribute('data-standings-toggle')) return;
       // Prevent the legacy page navigation handler from opening future screens.
       event.stopImmediatePropagation();
+      if (action === 'all-players') {
+        const position = ['QB','RB','WR'].includes(button.dataset.position) ? button.dataset.position : state.nflLeaderPosition;
+        state.nflLeaderPosition = position;
+        state.nflLeaderExpanded.add(position);
+        rerender();
+        showPanel('players');
+        return;
+      }
+      if (action === 'teams') {
+        showTeams();
+        return;
+      }
+      if (action === 'recap' || action === 'weekly-recap') {
+        showPanel('recap');
+        return;
+      }
       if (action === 'report' && window.PDApp?.openGameReport) {
         window.PDApp.openGameReport(button.dataset.team,button.dataset.game);
         return;
@@ -313,7 +359,7 @@
       if (['matchup','matchups','compare'].includes(action) && window.MatchupBreakdown) {
         const fixture = context.data.weeks?.[state.week]?.fixture;
         if (fixture) {
-          if (fixture.status === 'final' && finite(fixture.home_score) && finite(fixture.away_score) && window.PDApp?.openGameReport) {
+          if (action !== 'compare' && fixture.status === 'final' && finite(fixture.home_score) && finite(fixture.away_score) && window.PDApp?.openGameReport) {
             window.PDApp.openGameReport('PIT',fixture.id || fixture.game_id);
             return;
           }
@@ -324,8 +370,9 @@
       if (button.dataset.conference) { state.conference = button.dataset.conference; state.nflDivision = 'all'; }
       else if (button.hasAttribute('data-standings-toggle')) state.standingsExpanded = !state.standingsExpanded;
       else if (action === 'team') state.nflExpandedTeam = state.nflExpandedTeam === button.dataset.team ? null : button.dataset.team;
+      else if (action === 'leader-position') state.nflLeaderPosition = ['QB','RB','WR'].includes(button.dataset.position) ? button.dataset.position : state.nflLeaderPosition;
       else if (action === 'leaders') {
-        const position = button.dataset.position;
+        const position = ['QB','RB','WR'].includes(button.dataset.position) ? button.dataset.position : state.nflLeaderPosition;
         if (state.nflLeaderExpanded.has(position)) state.nflLeaderExpanded.delete(position); else state.nflLeaderExpanded.add(position);
       } else if (action === 'close-preview') state.nflPreview = null;
       else {
@@ -334,12 +381,24 @@
       }
       rerender();
       if (action === 'close-preview' && state.nflPreviewReturn) document.querySelector('[data-page="nfl"]')?.querySelector(state.nflPreviewReturn)?.focus({preventScroll:true});
-      if (state.nflPreview && action && action !== 'team' && action !== 'leaders') {
+      if (state.nflPreview && action && !['team','leaders','leader-position'].includes(action)) {
         const node = $('nfl-inline-preview');
         node?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'nearest'});
         node?.focus({preventScroll:true});
       }
     },true);
+    document.addEventListener('keydown',event => {
+      const list = event.target.closest('[data-nfl-leader-tablist]');
+      if (!list || !list.closest('[data-page="nfl"]') || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+      const tabs = [...list.querySelectorAll('[role="tab"]')];
+      const index = tabs.indexOf(document.activeElement);
+      if (index < 0) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      const id = tabs[next].id;
+      tabs[next].click();
+      $(id)?.focus({preventScroll:true});
+    });
     document.addEventListener('change',event => {
       if (!context || !event.target.closest('[data-page="nfl"]')) return;
       const keys = {'division-select':'nflDivision','form-select':'nflForm','standings-sort':'nflSort'};

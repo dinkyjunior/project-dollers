@@ -1,0 +1,478 @@
+/* The approved editorial NFL dashboard. Every rule is scoped to this page;
+   the retained mechanical research screens and Home are intentionally separate. */
+.page.nfl-editorial-dashboard {
+  --nfl-editorial-width: min(100vw, 430px);
+  --nfl-editorial-side: 20px;
+  --nfl-editorial-teal: #28e2d7;
+  --nfl-editorial-muted: #8e989c;
+  --nfl-editorial-line: #22282a;
+  --nfl-text: PDInter, Arial, sans-serif;
+  --nfl-display: PDInter, Arial, sans-serif;
+  background: #030505;
+  color: #f1f3f2;
+  font: 400 12px/1.4 PDInter, Arial, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-mask-image: none;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
+}
+body:has(.nfl-editorial-dashboard.active) { display: grid; place-items: center; min-height: 100dvh; background: #030607; }
+.app-shell:has(.nfl-editorial-dashboard.active) {
+  width: 100%;
+  max-width: 430px;
+  height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 262.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px)));
+  margin: auto;
+  border-radius: 18px;
+  background: #030505;
+  box-shadow: 0 0 0 1px #38404361, 0 22px 55px #0009;
+}
+.app-shell:has(.nfl-editorial-dashboard.active)::after { display: none; }
+.nfl-editorial-dashboard .page-scroll {
+  inset: 0;
+  padding: 0 var(--nfl-editorial-side) max(18px, env(safe-area-inset-bottom, 0px));
+  overflow-x: hidden;
+  scroll-padding-block: 16px;
+}
+.nfl-editorial-dashboard .nfl-frame {
+  min-height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-frame::before,
+.nfl-editorial-dashboard .nfl-frame::after,
+.nfl-editorial-dashboard .nfl-ambient-light,
+.nfl-editorial-dashboard .nfl-bevel-corner,
+.nfl-editorial-dashboard .nfl-frame-shimmer,
+.nfl-editorial-dashboard .nfl-frame-glints,
+.nfl-editorial-dashboard .nfl-diamond-glint { display: none; }
+.nfl-editorial-dashboard .nfl-framed,
+.nfl-editorial-dashboard .leader-panel {
+  border: 1px solid var(--nfl-editorial-line);
+  border-image: none;
+  border-radius: 8px;
+  background: #0a0d0d;
+  box-shadow: none;
+}
+/* Legacy lighting selectors include the page attribute and selected state.
+   Match that specificity so this editorial page receives no inherited rails. */
+.page.nfl-editorial-dashboard :is(.standings, .leader-panel, .research-panel, .recap-panel, .nfl-view-all, .week-select select, .season-select select),
+.page.nfl-editorial-dashboard .primary-tabs button,
+.page.nfl-editorial-dashboard .primary-tabs button[aria-selected="true"] { box-shadow: none; border-image: none; }
+.page.nfl-editorial-dashboard :is(.leader-panel, .recap-panel) { border-color: var(--nfl-editorial-line); }
+.nfl-editorial-dashboard .nfl-framed::before,
+.nfl-editorial-dashboard .nfl-framed::after,
+.nfl-editorial-dashboard .nfl-view-all::before,
+.nfl-editorial-dashboard .nfl-view-all::after,
+.nfl-editorial-dashboard .nfl-all-teams::before,
+.nfl-editorial-dashboard .nfl-all-teams::after,
+.nfl-editorial-dashboard .nfl-matchup-action::before,
+.nfl-editorial-dashboard .nfl-matchup-action::after { display: none; content: none; }
+
+/* A photographic hero with independent HTML overlays, never a screenshot. */
+.nfl-editorial-dashboard .nfl-editorial-hero {
+  position: relative;
+  isolation: isolate;
+  height: calc(var(--nfl-editorial-width) * .655 + env(safe-area-inset-top, 0px));
+  margin-inline: calc(-1 * var(--nfl-editorial-side));
+  padding: calc(15px + env(safe-area-inset-top, 0px)) var(--nfl-editorial-side) 0;
+  overflow: hidden;
+}
+.nfl-editorial-dashboard .nfl-editorial-art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.nfl-editorial-dashboard .nfl-editorial-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+}
+.nfl-editorial-dashboard .nfl-editorial-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #030505e8 0%, #030505bf 20%, #03050530 57%, transparent 100%),
+    linear-gradient(180deg, #03050520 0%, transparent 53%, #03050599 83%, #030505 100%);
+}
+.nfl-editorial-dashboard .nfl-editorial-brand { display: block; width: 213px; max-width: 72%; height: auto; min-height: 0; padding: 0; border: 0; background: transparent; }
+.nfl-editorial-dashboard .nfl-editorial-brand img { display: block; width: 100%; height: auto; }
+.nfl-editorial-dashboard .nfl-editorial-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
+  color: #aeb5b8;
+  font-size: 9px;
+  line-height: 18px;
+}
+.nfl-editorial-dashboard .nfl-editorial-breadcrumb button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--nfl-editorial-teal);
+  font: inherit;
+}
+.nfl-editorial-dashboard .nfl-editorial-breadcrumb .icon { width: 10px; height: 10px; }
+.nfl-editorial-dashboard .nfl-editorial-hero .league-header {
+  display: block;
+  min-height: 0;
+  margin: 9px 0 0;
+  padding: 0;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-league-medallion {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin: 0 0 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-league-medallion img { display: block; width: 45px; height: 45px; object-fit: contain; }
+.nfl-editorial-dashboard .league-header h1 {
+  margin: 0;
+  color: #f7f8f7;
+  font: 400 42px/.96 PDInter, Arial, sans-serif;
+  letter-spacing: -1.9px;
+  text-shadow: none;
+}
+.nfl-editorial-dashboard .league-header p {
+  margin: 5px 0 0;
+  color: #c3c9ca;
+  font: 400 20px/1.15 PDInter, Arial, sans-serif;
+  letter-spacing: -.55px;
+}
+.nfl-editorial-dashboard .league-header .nfl-editorial-heading { margin: 5px 0 0; color: #c3c9ca; font: 400 20px/1.15 PDInter, Arial, sans-serif; letter-spacing: -.55px; }
+.nfl-editorial-dashboard .league-header #season-context {
+  margin-top: 5px;
+  color: #a2aeb0;
+  font: 400 8px/1.3 PDInter, Arial, sans-serif;
+  letter-spacing: 1.55px;
+  text-transform: uppercase;
+}
+.nfl-editorial-dashboard .league-header .nfl-verification-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; margin: 0; }
+.nfl-editorial-dashboard .nfl-editorial-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 9px;
+}
+.nfl-editorial-dashboard .week-select,
+.nfl-editorial-dashboard .season-select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 128px;
+  height: 27px;
+  min-height: 27px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #363d3e;
+  border-image: none;
+  border-radius: 999px;
+  background: #101516d9;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .season-select { width: 110px; }
+.nfl-editorial-dashboard .week-select select,
+.nfl-editorial-dashboard .season-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0 23px 0 11px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: #d7dfdf;
+  font: 400 10px/1 PDInter, Arial, sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .week-select .icon,
+.nfl-editorial-dashboard .season-select .icon { position: absolute; right: 9px; width: 9px; height: 9px; color: #b5bfc0; pointer-events: none; }
+.nfl-editorial-dashboard .primary-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #272e30;
+  border-radius: 0;
+  background: transparent;
+}
+.nfl-editorial-dashboard .primary-tabs button {
+  position: relative;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  background: transparent;
+  color: #a3abad;
+  font: 400 11px/1.3 PDInter, Arial, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+.nfl-editorial-dashboard .primary-tabs button[aria-selected="true"] { color: #f4f6f6; border: 0; border-image: none; background: transparent; box-shadow: none; text-shadow: none; }
+.nfl-editorial-dashboard .primary-tabs button[aria-selected="true"]::after { content: ""; position: absolute; inset: auto 0 -1px; height: 2px; background: var(--nfl-editorial-teal); }
+
+/* Standings: compact native cells inside a quiet, finely outlined card. */
+.nfl-editorial-dashboard .nfl-editorial-standings-toolbar,
+.nfl-editorial-dashboard .nfl-editorial-section-bar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 27px;
+  margin-bottom: 5px;
+}
+.nfl-editorial-dashboard .nfl-editorial-eyebrow,
+.nfl-editorial-dashboard .nfl-editorial-section-bar > h2 {
+  margin: 0;
+  color: #9faaaa;
+  font: 500 8px/1.3 PDInter, Arial, sans-serif;
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+}
+.nfl-editorial-dashboard .nfl-editorial-standings-toolbar > .nfl-editorial-eyebrow,
+.nfl-editorial-dashboard .nfl-editorial-section-bar > h2 { flex: 1; }
+.nfl-editorial-dashboard .conference-toggle {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid #263133;
+  border-image: none;
+  border-radius: 4px;
+  background: #0b1011;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .conference-toggle button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 29px;
+  height: 20px;
+  min-height: 20px;
+  padding: 0 6px;
+  border: 0;
+  border-image: none;
+  border-radius: 2px;
+  background: transparent;
+  color: #849195;
+  font: 500 8px/1 PDInter, Arial, sans-serif;
+  box-shadow: none;
+  text-shadow: none;
+}
+.nfl-editorial-dashboard .conference-toggle button img { display: none; }
+.nfl-editorial-dashboard .conference-toggle button[aria-pressed="true"] { border: 0; border-image: none; background: #0c3a3d; color: #56ece5; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-standings-filters { display: flex; gap: 6px; margin: 0; }
+.nfl-editorial-dashboard .nfl-standings-filters label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 25px;
+  min-height: 25px;
+  width: 82px;
+  padding: 0 14px 0 7px;
+  border: 1px solid #293235;
+  border-image: none;
+  border-radius: 999px;
+  background: #0c1112;
+  color: #a7b3b6;
+  font: 400 8px/1 PDInter, Arial, sans-serif;
+  box-shadow: none;
+}
+.nfl-editorial-dashboard .nfl-standings-filters label > span:not(.sr-only) { display: none; }
+.nfl-editorial-dashboard .nfl-standings-filters label:nth-child(2) { width: 89px; }
+.nfl-editorial-dashboard .nfl-standings-filters select { appearance: none; -webkit-appearance: none; width: 100%; min-height: 0; padding: 0; border: 0; background: transparent; font: inherit; letter-spacing: 0; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-standings-filters .icon { position: absolute; right: 7px; width: 8px; height: 8px; color: #8e9d9e; pointer-events: none; }
+.nfl-editorial-dashboard .nfl-standings-filters .nfl-sort-control { width: 58px; border-color: #293235; box-shadow: none; }
+.nfl-editorial-dashboard .table-label .nfl-sort-control { display: inline-flex; align-items: center; position: relative; width: 64px; height: 23px; padding: 0 12px 0 4px; border: 0; background: transparent; color: #819699; font: 400 8px/1 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .table-label .nfl-sort-control select { appearance: none; -webkit-appearance: none; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; color: inherit; font: inherit; box-shadow: none; }
+.nfl-editorial-dashboard .table-label .nfl-sort-control .icon { position: absolute; right: 3px; width: 8px; height: 8px; color: inherit; pointer-events: none; }
+.nfl-editorial-dashboard .nfl-standings-panel { padding: 7px 10px 0; margin: 0 0 16px; }
+.nfl-editorial-dashboard .table-label { display: flex; min-height: 23px; gap: 4px; margin: 0; padding: 0; }
+.nfl-editorial-dashboard .table-label > img { display: none; }
+.nfl-editorial-dashboard .table-label > div { flex: 1; }
+.nfl-editorial-dashboard .table-label h2 { margin: 0; color: #d6dedd; font: 500 11px/1.3 PDInter, Arial, sans-serif; letter-spacing: -.1px; text-shadow: none; text-transform: none; }
+.nfl-editorial-dashboard .through-week { display: none; }
+.nfl-editorial-dashboard .nfl-info-button { display: grid; place-items: center; width: 24px; height: 24px; min-height: 24px; padding: 0; border: 0; background: transparent; color: #768589; }
+.nfl-editorial-dashboard .nfl-info-button .icon { width: 12px; height: 12px; }
+.nfl-editorial-dashboard .standings { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.nfl-editorial-dashboard .stand-head,
+.nfl-editorial-dashboard .nfl-frame .stand-row {
+  display: grid;
+  grid-template-columns: 14px minmax(95px, 1fr) 46px 44px 78px;
+  gap: 0;
+  align-items: center;
+  padding: 0 3px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.nfl-editorial-dashboard .stand-head { height: 20px; min-height: 20px; border: 0; background: transparent; color: #758287; font: 400 8px/1 PDInter, Arial, sans-serif; letter-spacing: 0; }
+.nfl-editorial-dashboard .stand-head > :nth-child(2) { padding-left: 5px; text-align: left; }
+.nfl-editorial-dashboard .stand-head .nfl-sort-heading { color: #91a3a5; }
+.nfl-editorial-dashboard .nfl-frame .stand-row { height: 24px; min-height: 24px; margin: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #dbe2e2; font: 400 11px/1.2 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .stand-row > :first-child { color: #8c9699; font: inherit; }
+.nfl-editorial-dashboard .stand-row .table-team { font: inherit; }
+.nfl-editorial-dashboard .nfl-frame .team-link { display: flex; width: 100%; height: 24px; min-height: 24px; padding: 0 0 0 4px; align-items: center; gap: 6px; font: 500 11px/1.2 PDInter, Arial, sans-serif; color: #e4e9e8; border: 0; background: transparent; }
+.nfl-editorial-dashboard .team-link img { width: 22px; height: 22px; object-fit: contain; }
+.nfl-editorial-dashboard .stand-row.is-expanded { border-radius: 5px 5px 0 0; background: #171d1e; box-shadow: none; }
+.nfl-editorial-dashboard .stand-form { display: flex; align-items: center; justify-content: center; gap: 3px; }
+.nfl-editorial-dashboard .form-chip { min-width: 13px; height: 15px; padding: 0 2px; border: 0; border-radius: 2px; background: #21633e; color: #e4f4e5; box-shadow: none; font: 500 8px/1 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .form-chip.loss { border: 0; background: #783330; color: #ffe5dc; box-shadow: none; }
+.nfl-editorial-dashboard .form-chip.tie { border: 0; background: #4c5458; box-shadow: none; }
+.nfl-editorial-dashboard .stand-form:has(.form-chip:nth-child(5)) { gap: 2px; }
+.nfl-editorial-dashboard .stand-form:has(.form-chip:nth-child(5)) .form-chip { min-width: 12px; padding-inline: 1px; }
+.nfl-editorial-dashboard .nfl-team-summary { display: block; min-height: 39px; padding: 6px 5px 7px; border: 0; border-radius: 0 0 5px 5px; background: #171d1e; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-summary-content { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+.nfl-editorial-dashboard .nfl-summary-identity { display: none; }
+.nfl-editorial-dashboard .nfl-summary-metrics { display: flex; gap: 6px; }
+.nfl-editorial-dashboard .nfl-summary-metric { display: flex; gap: 3px; align-items: center; padding: 0; border: 0; }
+.nfl-editorial-dashboard .nfl-summary-metric small { color: #849397; font: 400 8.5px/1.2 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-summary-metric strong { display: block; margin: 0; color: #c3cfce; font: 400 10px/1.2 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-detail-button { display: inline-flex; align-items: center; justify-content: center; min-height: 24px; padding: 0; gap: 3px; border: 0; border-image: none; border-radius: 0; background: transparent; box-shadow: none; color: var(--nfl-editorial-teal); font: 400 9px/1 PDInter, Arial, sans-serif; text-transform: none; }
+.nfl-editorial-dashboard .nfl-detail-button .icon { width: 8px; height: 8px; color: inherit; }
+.nfl-editorial-dashboard .nfl-all-teams { display: flex; align-items: center; justify-content: center; width: 100%; height: 29px; min-height: 29px; margin: 3px 0 0; padding: 0; border: 0; border-top: 1px solid #1a2325; border-image: none; border-radius: 0; background: transparent; box-shadow: none; color: var(--nfl-editorial-teal); font: 400 10px/1.2 PDInter, Arial, sans-serif; text-transform: none; text-shadow: none; gap: 6px; }
+.nfl-editorial-dashboard .nfl-all-teams .icon { width: 9px; height: 9px; color: inherit; }
+
+/* The helmet matchup stays authentic; its controls become an editorial pill. */
+.nfl-editorial-dashboard .nfl-editorial-matchup-eyebrow { margin: 0 0 10px; }
+.nfl-editorial-dashboard .matchup-section { padding: 0 9px 7px; margin: 0 0 16px; overflow: hidden; }
+.nfl-editorial-dashboard .section-heading { min-height: 0; margin: 0 0 6px; padding: 0; }
+.nfl-editorial-dashboard .section-heading h2 { font: 500 8px/1.3 PDInter, Arial, sans-serif; color: #9faaaa; letter-spacing: 2.1px; text-shadow: none; text-transform: uppercase; }
+.nfl-editorial-dashboard .section-heading > span { color: #9ba8ab; font: 400 8px/1.3 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-matchup-art { position: relative; isolation: isolate; display: grid; height: 82px; grid-template-columns: 1fr 44px 1fr; border: 0; border-radius: 0; background: linear-gradient(0deg, #0a0d0dcc, #08101a88), url("home/editorial-stadium-mobile.webp") center 60% / cover no-repeat; overflow: hidden; }
+.nfl-editorial-dashboard .nfl-matchup-art::before,
+.nfl-editorial-dashboard .nfl-matchup-art::after { content: none; display: none; }
+.nfl-editorial-dashboard .nfl-matchup-team { position: relative; z-index: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; min-width: 0; padding-bottom: 6px; text-align: left; }
+.nfl-editorial-dashboard .nfl-matchup-team.is-away { align-items: flex-end; text-align: right; }
+.nfl-editorial-dashboard .nfl-equipment-wrap { position: absolute; z-index: -1; }
+.nfl-editorial-dashboard .nfl-matchup-team.has-upright-helmet .nfl-equipment-wrap { top: -3px; left: 32px; width: 86px; height: 86px; aspect-ratio: 1; }
+.nfl-editorial-dashboard .nfl-matchup-team.has-upright-helmet.is-away .nfl-equipment-wrap { left: auto; right: 32px; }
+.nfl-editorial-dashboard .nfl-matchup-team.has-team-logo .nfl-equipment-wrap { top: 4px; left: calc(50% - 31px); width: 62px; height: 62px; aspect-ratio: 1; }
+.nfl-editorial-dashboard .nfl-matchup-team.has-team-logo.is-away .nfl-equipment-wrap { left: auto; right: calc(50% - 31px); }
+.nfl-editorial-dashboard .nfl-equipment-wrap .nfl-matchup-helmet { position: static; display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 3px #0007); }
+.nfl-editorial-dashboard .nfl-matchup-mark { position: absolute; left: 34%; top: 30%; width: 27%; height: auto; aspect-ratio: 1; object-fit: contain; transform: translate(-50%, -50%) rotate(-9deg); }
+.nfl-editorial-dashboard .is-away .nfl-matchup-mark { left: 73%; top: 31%; width: 24%; transform: translate(-50%, -50%) rotate(8deg); }
+.nfl-editorial-dashboard .nfl-matchup-team small { font: 400 7px/1.3 PDInter, Arial, sans-serif; letter-spacing: .3px; text-transform: none; text-shadow: none; color: #aab7b9; }
+.nfl-editorial-dashboard .nfl-matchup-team strong,
+.nfl-editorial-dashboard .nfl-matchup-team.is-away strong { background: none; color: #e5ebed; -webkit-text-fill-color: currentColor; filter: none; font: 600 13px/1.2 PDInter, Arial, sans-serif; letter-spacing: -.4px; text-transform: none; text-shadow: none; }
+.nfl-editorial-dashboard .nfl-matchup-vs { align-self: center; margin: 0; background: none; color: #7d8c94; -webkit-text-fill-color: currentColor; filter: none; font: italic 600 20px/1 PDInter, Arial, sans-serif; letter-spacing: -.8px; text-shadow: none; }
+.nfl-editorial-dashboard .nfl-matchup-meta { display: block; min-height: 0; margin: 0 0 5px; padding: 0; color: #88979c; font: 400 8px/1.3 PDInter, Arial, sans-serif; text-align: center; }
+.nfl-editorial-dashboard .nfl-matchup-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; justify-items: center; }
+.nfl-editorial-dashboard .nfl-matchup-action { display: inline-flex; align-items: center; justify-content: center; width: auto; min-height: 20px; padding: 0; border: 0; border-image: none; border-radius: 0; background: transparent; color: #a1acae; font: 400 9px/1.3 PDInter, Arial, sans-serif; text-transform: none; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-matchup-action:first-child { grid-column: 1 / -1; width: 141px; min-height: 26px; padding: 0 15px; border: 0; border-image: none; border-radius: 999px; background: #f3f4ef; color: #0c1517; box-shadow: none; font: 500 10px/1.3 PDInter, Arial, sans-serif; text-shadow: none; }
+.nfl-editorial-dashboard .nfl-matchup-action:not(:first-child) { border: 0; border-image: none; background: transparent; box-shadow: none; }
+.nfl-editorial-dashboard .nfl-matchup-action .icon { width: 9px; height: 9px; }
+
+/* One position-switched leaders card mirrors the reference's single table. */
+.nfl-editorial-dashboard .leader-grid { display: block; margin: 0; }
+.nfl-editorial-dashboard .nfl-editorial-leaders { padding: 8px 10px 0; margin: 0; overflow: hidden; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 25px; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-heading h2 { margin: 0; padding: 0; border: 0; background: transparent; color: #d6dedd; font: 500 11px/1.3 PDInter, Arial, sans-serif; letter-spacing: -.2px; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-heading p,
+.nfl-editorial-dashboard .nfl-editorial-leaders-heading span { margin: 1px 0 0; color: #859194; font: 400 8px/1.3 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-heading > div:first-child > span { display: block; }
+.nfl-editorial-dashboard .nfl-editorial-position-tabs { display: flex; gap: 0; padding: 2px; border: 1px solid #263133; border-radius: 4px; background: #0b1011; }
+.nfl-editorial-dashboard .nfl-editorial-position-tabs button { width: 30px; min-height: 21px; padding: 0; border: 0; border-radius: 2px; background: transparent; color: #8c989c; font: 500 8px/1.3 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-editorial-position-tabs button[aria-selected="true"] { background: #0c3a3d; color: #56ece5; }
+.nfl-editorial-dashboard .leader-columns,
+.nfl-editorial-dashboard .leader-row { grid-template-columns: 16px minmax(0, 1fr) 41px 30px; height: 21px; min-height: 21px; padding: 0 3px; border: 0; border-radius: 0; background: transparent; font: 400 11px/1.3 PDInter, Arial, sans-serif; color: #d1dadb; }
+.nfl-editorial-dashboard .leader-columns { height: 20px; min-height: 20px; color: #718084; font-size: 8px; }
+.nfl-editorial-dashboard .leader-columns > :nth-child(-n+2) { text-align: left; }
+.nfl-editorial-dashboard .leader-row > b,
+.nfl-editorial-dashboard .leader-row > span:first-of-type { font: inherit; }
+.nfl-editorial-dashboard .leader-row > b { color: #859296; }
+.nfl-editorial-dashboard .leader-row > span:last-child { color: #c8d3d4; }
+.nfl-editorial-dashboard .leader-row .nfl-editorial-player,
+.nfl-editorial-dashboard .leader-row .nfl-editorial-leader-player { display: flex; align-items: center; gap: 6px; min-width: 0; text-align: left; }
+.nfl-editorial-dashboard .nfl-editorial-leader-player > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nfl-editorial-dashboard .leader-row img { width: 16px; height: 16px; object-fit: contain; }
+.nfl-editorial-dashboard .nfl-editorial-leader-links { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 28px; margin-top: 3px; border-top: 1px solid #1b2426; }
+.nfl-editorial-dashboard .nfl-editorial-leader-links button { display: inline-flex; align-items: center; justify-content: center; gap: 3px; min-height: 25px; padding: 0; border: 0; border-radius: 0; border-image: none; background: transparent; box-shadow: none; color: var(--nfl-editorial-teal); font: 400 9px/1.3 PDInter, Arial, sans-serif; text-transform: none; white-space: nowrap; }
+.nfl-editorial-dashboard .nfl-editorial-leader-links .icon { width: 8px; height: 8px; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-eyebrow { margin: 0 0 10px; }
+.nfl-editorial-dashboard .nfl-editorial-leaders-caption { margin: 0 0 6px; }
+.nfl-editorial-dashboard .nfl-editorial-footer-links { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 19px 0 18px; padding-bottom: 15px; border-bottom: 1px solid #1a2325; }
+.nfl-editorial-dashboard .nfl-editorial-footer-links button { min-height: 27px; padding: 0; border: 0; background: transparent; color: var(--nfl-editorial-teal); font: 400 9px/1.3 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-editorial-footer-links .icon { width: 8px; height: 8px; }
+.nfl-editorial-dashboard .nfl-dataset-note { margin: 5px 0 0; color: #78868a; font: 400 8px/1.45 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-source-footer { position: static; inset: auto; height: auto; margin: 0; background: transparent; }
+.nfl-editorial-dashboard .nfl-editorial-footer { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 9px; padding-top: 6px; border-top: 1px solid #1c282a; }
+.nfl-editorial-dashboard .nfl-editorial-footer > button { min-height: 28px; padding: 0; border: 0; background: transparent; color: var(--nfl-editorial-teal); font: 400 9px/1 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-editorial-footer > button .icon { width: 9px; height: 9px; }
+.nfl-editorial-dashboard .nfl-editorial-footer #nfl-data-context { grid-column: 1 / -1; margin: 0; }
+.nfl-editorial-dashboard .data-status { display: flex; width: 100%; min-height: 26px; margin: 0; padding: 0; border: 0; background: transparent; align-items: center; justify-content: space-between; gap: 8px; color: #7f9298; font: 400 8px/1.4 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .data-status button { min-height: 26px; padding: 0; background: transparent; color: var(--nfl-editorial-teal); font: inherit; }
+.nfl-editorial-dashboard .data-status.is-stale { color: #a6a58d; }
+.nfl-editorial-dashboard .nfl-inline-preview { position: relative; bottom: auto; border: 1px solid #2e4b4d; border-radius: 8px; background: #0c1415; box-shadow: none; font: 400 12px/1.5 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-preview-heading h2 { color: #dfe8e7; font: 500 14px/1.3 PDInter, Arial, sans-serif; letter-spacing: -.2px; }
+.nfl-editorial-dashboard .nfl-preview-heading button { border-color: #334145; background: transparent; color: #9baeb0; }
+.nfl-editorial-dashboard .recap-panel { padding: 13px; }
+.nfl-editorial-dashboard .recap-panel h2 { font: 500 16px/1.3 PDInter, Arial, sans-serif; letter-spacing: -.3px; }
+.nfl-editorial-dashboard .nfl-recap-game { border-color: #263234; font: 400 11px/1.4 PDInter, Arial, sans-serif; }
+.nfl-editorial-dashboard .nfl-bye-state { min-height: 147px; gap: 5px; }
+.nfl-editorial-dashboard .nfl-bye-state img { width: 42px; height: 42px; }
+.nfl-editorial-dashboard .nfl-bye-state strong { font-weight: 500; }
+.nfl-editorial-dashboard .nfl-bye-state button { border: 1px solid #365052; border-radius: 999px; background: #101b1c; color: #40dbd2; font: inherit; }
+.nfl-editorial-dashboard button:focus-visible,
+.nfl-editorial-dashboard select:focus-visible { outline: 2px solid #50e1d7; outline-offset: 2px; }
+.nfl-editorial-dashboard button:active { filter: none; }
+@media (hover: hover) and (pointer: fine) {
+  .nfl-editorial-dashboard button:hover { filter: none; color: #edfefd; }
+  .nfl-editorial-dashboard .nfl-matchup-action:first-child:hover { background: #fff; color: #071313; }
+  .nfl-editorial-dashboard .team-link:hover { color: #80eee5; }
+}
+@media (min-width: 700px) {
+  .page.nfl-editorial-dashboard { --nfl-editorial-width: 400px; }
+  body:has(.nfl-editorial-dashboard.active) { padding: 32px 0; }
+  .app-shell:has(.nfl-editorial-dashboard.active) { width: 400px; max-width: 400px; height: min(calc(100dvh - 64px), 770px); }
+}
+@media (max-width: 360px) {
+  .page.nfl-editorial-dashboard { --nfl-editorial-side: 16px; }
+  .nfl-editorial-dashboard .nfl-editorial-hero { height: 254px; }
+  .nfl-editorial-dashboard .nfl-editorial-standings-toolbar,
+  .nfl-editorial-dashboard .nfl-editorial-section-bar { flex-wrap: wrap; gap: 7px; }
+  .nfl-editorial-dashboard .nfl-standings-filters { gap: 4px; }
+  .nfl-editorial-dashboard .nfl-standings-filters label { width: 67px; }
+  .nfl-editorial-dashboard .nfl-standings-filters label:nth-child(2) { width: 76px; }
+  .nfl-editorial-dashboard .nfl-standings-filters .nfl-sort-control { width: 47px; }
+  .nfl-editorial-dashboard .stand-head,
+  .nfl-editorial-dashboard .nfl-frame .stand-row { grid-template-columns: 12px minmax(83px, 1fr) 42px 39px 72px; }
+  .nfl-editorial-dashboard .nfl-matchup-team.has-upright-helmet .nfl-equipment-wrap { left: 20px; }
+  .nfl-editorial-dashboard .nfl-matchup-team.has-upright-helmet.is-away .nfl-equipment-wrap { right: 20px; }
+  .nfl-editorial-dashboard .nfl-summary-metrics { gap: 4px; }
+  .nfl-editorial-dashboard .nfl-editorial-footer-links { gap: 7px; }
+  .nfl-editorial-dashboard .nfl-editorial-leader-links { flex-wrap: wrap; justify-content: center; gap: 4px 12px; }
+}
