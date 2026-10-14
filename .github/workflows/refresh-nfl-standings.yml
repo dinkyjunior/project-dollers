@@ -1,0 +1,63 @@
+name: Refresh independent NFL standings
+
+on:
+  schedule:
+    - cron: '9 * * * *'
+    - cron: '17 19 * * *'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-nfl-standings.yml'
+      - 'scripts/refresh-standings.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: nfl-standings-refresh
+  cancel-in-progress: false
+
+jobs:
+  standings:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+      - name: Fetch and validate standings independently of player research
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          args=()
+          if [ "$SCHEDULE" = "17 19 * * *" ]; then
+            args+=(--force)
+          fi
+          python3 scripts/refresh-standings.py "${args[@]}"
+          python3 scripts/refresh-standings.py --check
+          python3 qa/standings.test.py
+      - name: Publish validated standings
+        id: publish
+        run: |
+          if git diff --quiet -- assets/data/standings.json; then
+            echo 'published=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/data/standings.json
+          git commit -m 'Refresh source-backed NFL standings'
+          git pull --rebase origin main
+          python3 scripts/refresh-standings.py --check
+          git push origin HEAD:main
+          echo 'published=true' >> "$GITHUB_OUTPUT"
+      - name: Deploy and verify updated standings
+        if: steps.publish.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+          python3 scripts/verify-pages-deployment.py --commit "$(git rev-parse HEAD)"

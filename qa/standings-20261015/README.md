@@ -1,0 +1,13 @@
+# Independent standings release audit — 15 October 2026
+
+Verified the standalone records feed against a separate successful HTTP 200 download of the nflverse source CSV, without importing the producer's calculation code. The downloaded 2,184,486 bytes match the published source SHA-256. Recomputed all 576 team/week records, including wins, losses, ties, points for and points against. All agree. The source includes 272 regular-season fixtures and 79 finals; Week 5 is complete at 15/15. Buffalo's 37–34 win over Los Angeles yields BUF 4–1 and LA 2–3. Conference playoff ordering remains explicitly unverified; displayed records use percentage, points differential and abbreviation as disclosed.
+
+`browser.cjs` passed in actual Chromium 151 at 393×852 and 430×896, device scale 2, touch enabled, Australia/Sydney timezone. It verifies Week 6 initial selection, all 14 sourced fixtures, every expanded conference row and current record, manual Week 5 preservation across resume, Follow current week, existing team research links, separate source timestamps, no console errors, no failed HTTP responses, no horizontal overflow and no clipped standings labels/cells. It serves the real site under `/project-dollers/`.
+
+The screenshots were personally inspected at both phone widths. The approved compact frame, artwork, proportions, aligned record columns and controls are retained. Coverage, sorting disclosure and source date remain readable and wrap inside the card. Home and the team research screens were also rendered and inspected.
+
+Preservation checks against `a5944b2` confirm byte-identical existing current/team/report data books and Home/research controllers. The approved Home section is unchanged. Tracked changes are confined to dashboard JavaScript/CSS and index cache versions. Archives and original artwork are unchanged. The Rams research screen intentionally still uses its separately dated 12 October snapshot (2–2, awaiting Week 5); the new records card explicitly warns that team research/statistics retain independent coverage. No old statistics are marked fresh.
+
+Evidence: `independent-source.json`, `browser.json`, and the screenshots in this directory. Re-run `python3 qa/standings-20261015/independent-source.py` after downloading the source to `/tmp/standings-independent-source.csv`, and `node qa/standings-20261015/browser.cjs` with the local server on port 8133. `PD_STANDINGS_QA_URL` and `PD_STANDINGS_QA_OUT` can target another served deployment and evidence directory.
+
+The prior verified WebKit runtime is absent from this environment. No browser packages were installed; this release audit claims Chromium phone testing only. Deployment verification belongs to the root agent.

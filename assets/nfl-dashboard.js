@@ -9,6 +9,10 @@
   let cachedGames = [];
   let weeklyDataset = null, weeklyGames = [], weeklyReports = {}, weeklyLoading = null, weeklyError = null;
   let weeklyRetry = null, weeklyFailures = 0, lastSnapshot = null, pendingWeeklyRefresh = false;
+  // Conference records refresh independently of the larger research books.
+  // Neither a standings refresh nor a failed request rewrites those snapshots.
+  let standingsDataset = null, standingsRequest = null, standingsError = null, standingsTimer = null;
+  let standingsETag = null, standingsModified = null, standingsFailures = 0, standingsLastAttempt = 0;
   const $ = id => document.getElementById(id);
   const exists = value => value !== null && value !== undefined && value !== '';
   const finite = value => exists(value) && Number.isFinite(Number(value));
@@ -16,6 +20,103 @@
   const rightChevron = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg>';
   // Give source initials readable spacing without changing the stored name.
   const readablePlayerName = player => String(player.short || player.name || '').replace(/^([A-Za-z]{1,3}\.)(?=\S)/, '$1 ');
+
+  function validateStandings(feed) {
+    const invalid = () => { throw new Error('The independent standings feed did not pass validation'); };
+    if (feed?.schemaVersion !== 1 || !Number.isInteger(feed.season) || feed.source?.status !== 'verified' || !Number.isFinite(Date.parse(feed.source?.retrievedAt)) || !feed.source?.url || feed.ranking?.official !== false || !Array.isArray(feed.teams) || feed.teams.length !== 32 || !feed.weeks || !Object.keys(feed.weeks).length || !Array.isArray(feed.games)) invalid();
+    const identities = new Set(feed.teams.map(getAbbr));
+    if (identities.size !== 32) invalid();
+    for (const [key,week] of Object.entries(feed.weeks)) {
+      if (!Number.isInteger(Number(key)) || !Number.isInteger(week.throughWeek) || week.throughWeek < 0 || week.throughWeek > Number(key)) invalid();
+      const rows = [...(week.conferences?.AFC || []),...(week.conferences?.NFC || [])];
+      if (week.conferences?.AFC?.length !== 16 || week.conferences?.NFC?.length !== 16 || new Set(rows.map(getAbbr)).size !== 32) invalid();
+      for (const team of rows) {
+        if (!identities.has(getAbbr(team)) || !['w','l','ties','pointsFor','pointsAgainst'].every(field => Number.isInteger(team[field]) && team[field] >= 0) || !finite(team.pct) || Number(team.pct) < 0 || Number(team.pct) > 1) invalid();
+      }
+      const coverage = week.coverage;
+      if (!coverage || !['finalGames','scheduledGames'].every(field => Number.isInteger(coverage[field]) && coverage[field] >= 0) || !['completedGamesInThroughWeek','scheduledGamesInThroughWeek'].every(field => Number.isInteger(week[field]) && week[field] >= 0) || coverage.finalGames > coverage.scheduledGames || week.completedGamesInThroughWeek > week.scheduledGamesInThroughWeek) invalid();
+    }
+    const gameIds = new Set();
+    for (const game of feed.games) {
+      if (!game.id || gameIds.has(game.id) || Number(game.season) !== feed.season || game.seasonType !== 'REG' || game.status !== 'final' || !identities.has(game.home_team) || !identities.has(game.away_team) || game.home_team === game.away_team || !Number.isInteger(game.week) || !['home_score','away_score'].every(field => Number.isInteger(game[field]) && game[field] >= 0)) invalid();
+      gameIds.add(game.id);
+    }
+    for (const week of Object.values(feed.weeks)) {
+      const finals = feed.games.filter(game => game.week <= week.throughWeek);
+      if (finals.length !== week.coverage.finalGames || finals.filter(game => game.week === week.throughWeek).length !== week.completedGamesInThroughWeek) invalid();
+      for (const team of [...week.conferences.AFC,...week.conferences.NFC]) {
+        const abbr = getAbbr(team), totals = {w:0,l:0,ties:0,pointsFor:0,pointsAgainst:0};
+        finals.filter(game => game.home_team === abbr || game.away_team === abbr).forEach(game => {
+          const home = game.home_team === abbr, own = home ? game.home_score : game.away_score, other = home ? game.away_score : game.home_score;
+          totals[own > other ? 'w' : own < other ? 'l' : 'ties']++;
+          totals.pointsFor += own; totals.pointsAgainst += other;
+        });
+        const played = totals.w + totals.l + totals.ties;
+        const pct = played ? (totals.w + totals.ties / 2) / played : 0;
+        if (Object.keys(totals).some(field => totals[field] !== team[field]) || Math.abs(pct - Number(team.pct)) > .00051) invalid();
+      }
+    }
+    if (standingsDataset && (feed.season < standingsDataset.season || feed.season === standingsDataset.season && Date.parse(feed.source.retrievedAt) < Date.parse(standingsDataset.source.retrievedAt))) throw new Error('An older standings feed was returned; retaining verified records');
+    return feed;
+  }
+
+  function scheduleStandingsCheck() {
+    clearTimeout(standingsTimer);
+    const delay = standingsError ? Math.min(300000,15000 * 2 ** Math.min(standingsFailures - 1,5)) : 300000;
+    standingsTimer = setTimeout(() => { if (!document.hidden) loadStandingsSource(true); },delay);
+  }
+
+  function loadStandingsSource(force = false) {
+    if (standingsRequest) return standingsRequest;
+    if (!force && standingsLastAttempt) return Promise.resolve(false);
+    standingsLastAttempt = Date.now();
+    clearTimeout(standingsTimer);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(),15000);
+    const headers = {};
+    if (standingsETag) headers['If-None-Match'] = standingsETag;
+    if (standingsModified) headers['If-Modified-Since'] = standingsModified;
+    standingsRequest = Promise.resolve().then(async () => {
+      const response = await fetch(new URL('assets/data/standings.json',document.baseURI),{cache:'no-cache',headers,signal:controller.signal});
+      if (response.status !== 304) {
+        if (!response.ok) throw new Error(`Standings request failed (HTTP ${response.status})`);
+        const feed = validateStandings(await response.json());
+        standingsDataset = feed;
+        standingsETag = response.headers?.get('ETag') || null;
+        standingsModified = response.headers?.get('Last-Modified') || null;
+      } else if (!standingsDataset) throw new Error('Standings request returned no validated records');
+      standingsError = null; standingsFailures = 0;
+      return true;
+    }).catch(error => { standingsError = error; standingsFailures++; return false; }).finally(() => {
+      clearTimeout(timeout);
+      standingsRequest = null;
+      scheduleStandingsCheck();
+      if (context) rerender();
+    });
+    return standingsRequest;
+  }
+
+  function recordsSnapshot(snapshot) {
+    const {data,state} = context;
+    // A manually selected historical week keeps its approved entering-week
+    // snapshot. The current browsing week takes independently refreshed records.
+    const week = standingsDataset?.weeks?.[state.week];
+    const savedRetrievedAt = data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt;
+    if (String(state.week) !== String(state.currentBrowsingWeek) || standingsDataset?.season !== data.season || !week || week.throughWeek < snapshot.throughWeek || Date.parse(standingsDataset.source.retrievedAt) < Date.parse(savedRetrievedAt)) return snapshot;
+    return {...snapshot,throughWeek:week.throughWeek,conferences:week.conferences,recordsFeed:standingsDataset,recordsCoverage:{...week.coverage,completedGamesInThroughWeek:week.completedGamesInThroughWeek,scheduledGamesInThroughWeek:week.scheduledGamesInThroughWeek}};
+  }
+
+  function coverageLabel(snapshot) {
+    const coverage = snapshot.recordsCoverage;
+    if (coverage) return `Week ${snapshot.throughWeek}: ${coverage.completedGamesInThroughWeek}/${coverage.scheduledGamesInThroughWeek} finals · ${coverage.finalGames}/${coverage.scheduledGames} through Week ${snapshot.throughWeek}`;
+    const finals = completedGames(context.data,snapshot.throughWeek).length;
+    const scheduled = weeklyDataset ? weeklyGames.filter(game => Number(game.week) <= snapshot.throughWeek).length : null;
+    return `${finals}${scheduled === null ? ' retained finals · schedule total unavailable' : `/${scheduled} retained finals through Week ${snapshot.throughWeek}`}`;
+  }
+
+  function recordsSource(snapshot) {
+    return snapshot.recordsFeed?.source || context.data.sources?.find(source => source.id === 'nflverse_games') || {retrievedAt:context.data.retrievedAt};
+  }
 
   // The team source retains the whole league schedule. Consume its integrity-
   // applied public dataset; never alter a source book or infer final scores.
@@ -118,9 +219,9 @@
 
   function teamResults(data, snapshot, team) {
     const abbr = getAbbr(team);
-    const games = completedGames(data, snapshot.throughWeek).filter(game => game.home_team === abbr || game.away_team === abbr);
+    const games = (snapshot.recordsFeed?.games || completedGames(data, snapshot.throughWeek)).filter(game => Number(game.week) <= snapshot.throughWeek && (game.home_team === abbr || game.away_team === abbr));
     const sourceIds = [...new Set(games.map(game => game.sourceId).filter(Boolean))];
-    const provenance = {status:'derived',season:data.season,throughWeek:snapshot.throughWeek,sourceIds,retrievedAt:data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt,note:'Calculated from complete retained final scores, checked against sourced record and points totals. Home/away follows the source designation, including neutral venues.'};
+    const provenance = {status:'derived',season:data.season,throughWeek:snapshot.throughWeek,sourceIds,retrievedAt:snapshot.recordsFeed?.source?.retrievedAt || data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt,note:'Calculated from complete retained final scores, checked against sourced record and points totals. Home/away follows the source designation, including neutral venues.'};
     const unavailable = () => ({complete:false,games:[],form:[],home:null,away:null,provenance:{...provenance,status:'unavailable',note:'Retained final scores are incomplete or disagree with the sourced record/points totals.'}});
     const expected = Number(team.w) + Number(team.l) + Number(team.ties || 0);
     // A partial historical recap must not masquerade as a complete form or split.
@@ -159,10 +260,11 @@
 
   function sourceContext(snapshot) {
     const {data,timestamp} = context;
+    if (snapshot.recordsFeed) return `${data.season} · ${coverageLabel(snapshot)} · ${snapshot.recordsFeed.source.provider || snapshot.recordsFeed.source.id || 'Source-backed records'} · retrieved ${timestamp(snapshot.recordsFeed.source.retrievedAt)}`;
     const sourceIds = data.provenance?.standings?.sourceIds || [];
     const names = sourceIds.map(id => data.sources?.find(source => source.id === id)?.name || id.replaceAll('_',' '));
     const source = data.sources?.find(item => item.id === 'nflverse_games');
-    return `${data.season} · records through Week ${snapshot.throughWeek} · ${names.join(', ') || 'Verified source snapshot'} · retrieved ${timestamp(source?.retrievedAt || data.retrievedAt)}`;
+    return `${data.season} · records through Week ${snapshot.throughWeek} · ${coverageLabel(snapshot)} · ${names.join(', ') || 'Verified source snapshot'} · retrieved ${timestamp(source?.retrievedAt || data.retrievedAt)}`;
   }
 
   function record(split) {
@@ -212,7 +314,7 @@
     const filtered = all.filter(team => state.nflDivision === 'all' || teamMap.get(getAbbr(team))?.division === state.nflDivision);
     const teams = state.standingsExpanded ? filtered : filtered.slice(0,5);
     $('table-caption').textContent = `${state.conference} standings`;
-    document.querySelector('[data-page="nfl"] .through-week').textContent = `Through Week ${snapshot.throughWeek}`;
+    document.querySelector('[data-page="nfl"] .through-week').textContent = coverageLabel(snapshot);
     const mark = $('nfl-conference-mark');
     if (mark) { mark.src = `assets/nfl-dashboard/${state.conference.toLowerCase()}.svg`; mark.alt = state.conference; }
     const sortContext = {
@@ -222,9 +324,20 @@
       DIFF:{label:'point differential',column:null,direction:'descending'}
     }[state.nflSort] || {label:'win percentage',column:3,direction:'descending'};
     const caption = $('table-caption');
-    caption.textContent = `${state.conference} standings${state.nflSort === 'PCT' ? '' : ` · ${state.nflSort}`}`;
+    caption.textContent = `${state.conference} records · ${state.nflSort}-sorted`;
     caption.title = `Sorted by ${sortContext.label}; not official playoff seeding`;
     const table = document.querySelector('[data-page="nfl"] .standings');
+    let sourceNote = $('nfl-standings-source');
+    if (!sourceNote && table) {
+      sourceNote = document.createElement('p');
+      sourceNote.id = 'nfl-standings-source'; sourceNote.className = 'nfl-standings-source';
+      table.insertAdjacentElement('afterend',sourceNote);
+    }
+    if (sourceNote) {
+      const pending = Number(snapshot.recordsFeed?.coverage?.pendingStartedGames || 0);
+      sourceNote.textContent = `Record order is not official playoff seeding.${state.nflSort === 'PCT' ? ' Equal percentages use points differential, then team abbreviation.' : ''} ${recordsSource(snapshot).provider || recordsSource(snapshot).name || 'nflverse'} source retrieved ${context.timestamp(recordsSource(snapshot).retrievedAt)}.${pending > 0 ? ` ${pending} past-kickoff game${pending === 1 ? '' : 's'} await sourced results.` : ''}${standingsError ? ' Latest standings check failed; retaining verified records and retrying automatically.' : ''}${snapshot.recordsFeed ? ' Team research and statistics retain their separately dated coverage.' : ''}`;
+      sourceNote.title = recordsSource(snapshot).url || '';
+    }
     table?.setAttribute('aria-label',`${state.conference} records sorted by ${sortContext.label}; not official playoff seeding`);
     table?.querySelectorAll('[role="columnheader"]').forEach((heading,index) => {
       const selected = index === sortContext.column;
@@ -327,7 +440,8 @@
     const request = state.nflPreview;
     node.hidden = !request;
     if (!request) { node.innerHTML = ''; return; }
-    const snapshot = data.weeks[state.week];
+    const originalSnapshot = data.weeks[state.week];
+    const snapshot = originalSnapshot && recordsSnapshot(originalSnapshot);
     const allTeams = [...(snapshot.conferences?.AFC || []),...(snapshot.conferences?.NFC || [])];
     const fixture = snapshot.fixture;
     const opponent = fixture ? fixture.home_team === 'PIT' ? fixture.away_team : fixture.home_team : null;
@@ -369,6 +483,7 @@
     if (!lastSnapshot) lastSnapshot = context.data;
     adoptWeeklySource();
     loadWeeklySource();
+    loadStandingsSource();
     const {data,state} = context;
     const snapshot = data.weeks[state.week];
     if (!snapshot) return;
@@ -384,7 +499,8 @@
     $('week-select').value = state.week;
     document.querySelectorAll('[data-conference]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.conference === state.conference)));
     document.querySelectorAll('[data-week]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.week === state.week)));
-    standings(snapshot);
+    const records = recordsSnapshot(snapshot);
+    standings(records);
     $('ladder-leaders').innerHTML = leaderboards(snapshot,'ladder');
     $('players-leaders').innerHTML = leaderboards(snapshot,'players');
     $('featured-matchup').innerHTML = matchup(snapshot) + (weeklyError && weeklyGames.length ? '<p class="nfl-dataset-note" role="status">Schedule refresh failed. Retained verified games; retrying automatically.</p>' : '');
@@ -393,8 +509,8 @@
     preview();
     const provenance = $('nfl-data-context');
     if (provenance) {
-      provenance.textContent = `${data.season} · fixtures Week ${state.week} · records through W${snapshot.throughWeek} · statistics ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}. Records source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt)}. Schedule source retrieved ${weeklyDataset ? context.timestamp(weeklyDataset.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt) : 'unavailable'}. Statistics source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_player_stats')?.retrievedAt || data.retrievedAt)}.`;
-      provenance.title = `${sourceContext(snapshot)}. Form and home/away splits are calculated from complete retained final scores; sorted rows are not official playoff seeds.`;
+      provenance.textContent = `${data.season} · fixtures Week ${state.week} · records: ${coverageLabel(records)} · statistics ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}. Records source retrieved ${context.timestamp(recordsSource(records).retrievedAt)}. Schedule source retrieved ${weeklyDataset ? context.timestamp(weeklyDataset.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt) : 'unavailable'}. Statistics source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_player_stats')?.retrievedAt || data.retrievedAt)}.`;
+      provenance.title = `${sourceContext(records)}. Form and home/away splits are calculated from complete retained final scores; sorted rows are not official playoff seeds. Team research retains its independent source snapshot.`;
     }
     if (!bound) bind();
   }
@@ -431,12 +547,21 @@
     document.addEventListener('pd:data-ready',() => {
       if (context && context.data !== lastSnapshot) { lastSnapshot = context.data; loadWeeklySource(true); }
     });
-    const resumeSchedule = () => { if (context && !document.hidden) loadWeeklySource(true); };
+    const resumeSchedule = () => {
+      if (!context || document.hidden) return;
+      loadWeeklySource(true);
+      if (Date.now() - standingsLastAttempt >= (standingsError ? 15000 : 60000)) loadStandingsSource(true);
+      else scheduleStandingsCheck();
+    };
     document.addEventListener('visibilitychange',resumeSchedule);
+    window.addEventListener('focus',resumeSchedule);
     window.addEventListener('online',resumeSchedule);
     window.addEventListener('pageshow',resumeSchedule);
     document.addEventListener('pd:team-data-ready',() => {
       if (context && adoptWeeklySource()) rerender();
+    });
+    document.addEventListener('click',event => {
+      if (context && event.target.closest('[data-refresh]')) loadStandingsSource(true);
     });
     document.addEventListener('click',event => {
       const button = event.target.closest('button');
@@ -561,5 +686,5 @@
     });
   }
 
-  window.PDNFLDashboard = {render,deriveTeamResults:teamResults};
+  window.PDNFLDashboard = {render,deriveTeamResults:teamResults,refreshStandings:() => loadStandingsSource(true),getStandingsDataset:() => standingsDataset};
 })();
