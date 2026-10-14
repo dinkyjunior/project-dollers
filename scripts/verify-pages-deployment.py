@@ -41,8 +41,13 @@ def main():
     expected = {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in paths}
     pending = 'Pages build has not completed'
     while time.monotonic() < deadline:
-        build = api(f'repos/{repo}/pages/builds/latest')
-        if build.get('commit') == args.commit and build.get('status') == 'errored':
+        builds = api(f'repos/{repo}/pages/builds?per_page=20')
+        matching = [build for build in builds if build.get('commit') == args.commit]
+        # A newer queued build must not hide an already successful exact-commit
+        # build. Hosted hashes still have to match before success is possible.
+        build = next((item for item in matching if item.get('status') == 'built'),
+                     matching[0] if matching else {})
+        if matching and all(item.get('status') == 'errored' for item in matching):
             raise SystemExit(f"Pages build failed: {build.get('error')}")
         if build.get('commit') == args.commit and build.get('status') == 'built':
             mismatches = []
@@ -62,7 +67,7 @@ def main():
                 return
             pending = 'Hosted files do not match: ' + ', '.join(mismatches)
         else:
-            pending = f"Latest Pages build: commit={build.get('commit')} status={build.get('status')}"
+            pending = f"Matching Pages build: commit={build.get('commit')} status={build.get('status')}"
         print(pending, flush=True)
         time.sleep(15)
     raise SystemExit('Deployment verification timed out. ' + pending)

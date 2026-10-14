@@ -24,9 +24,14 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 2
-      - name: Request the configured production Pages build
+      - name: Verify the configured production Pages build
         env:
           GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '{status,url}'
+          # Ordinary main pushes already trigger the configured branch Pages build.
+          # Manual runs request one; token-based data commits use their own request.
+          if [ "$EVENT_NAME" != "push" ]; then
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '{status,url}'
+          fi
           python3 scripts/verify-pages-deployment.py --commit "$GITHUB_SHA"
