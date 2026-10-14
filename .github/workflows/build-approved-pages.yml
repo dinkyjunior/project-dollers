@@ -13,7 +13,8 @@ permissions:
 
 concurrency:
   group: approved-pages-publication
-  cancel-in-progress: false
+  # A newer approved commit supersedes verification of the older publication.
+  cancel-in-progress: true
 
 jobs:
   build:
