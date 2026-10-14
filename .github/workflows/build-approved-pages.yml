@@ -3,6 +3,8 @@ name: Build approved GitHub Pages
 # Rebuild the configured main/root static site after an approved application
 # or evidence commit, without forcing an unrelated source-data refresh.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,9 +19,14 @@ jobs:
   build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 2
       - name: Request the configured production Pages build
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '{status,url}'
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '{status,url}'
+          python3 scripts/verify-pages-deployment.py --commit "$GITHUB_SHA"

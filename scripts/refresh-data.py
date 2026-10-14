@@ -1137,7 +1137,7 @@ def main():
                   "rosterVerification": roster_checks,
                   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
                   "refreshCommand": "python3 scripts/refresh-data.py", "validateCommand": "python3 scripts/refresh-data.py --check",
-                  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
+                  "refreshCadence": "Source-change checks every 15 minutes during verified NFL game/provider windows, hourly otherwise; daily full validated refresh at 19:17 UTC plus six-hour full-fetch safety check. Publish only changed public data; no provider push/live-feed claim. Snapshot and archival source retrieval timestamps remain separate.",
                   "historyRefreshCommand": "python3 scripts/refresh-data.py --refresh-history"}
     atomic_json(HISTORY_PATH, history, compact=True)
     atomic_json(ROOT / "assets/data/current.json", data, compact=True)

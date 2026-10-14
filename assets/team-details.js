@@ -7,7 +7,7 @@
   const fmt = (value, places = 0) => known(value) ? Number(value).toLocaleString('en-AU',{maximumFractionDigits:places}) : '—';
   const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><use href="${['calendar','stadium','shield','info'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
   const state = {team:'DAL',tab:'form',window:5,season:'cross',venue:'all',mode:'average',expanded:null,initialized:false,fromLadder:false,view:null,game:null,playerOpen:new Set()};
-  let dataset = null, rawDataset = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
+  let dataset = null, rawDataset = null, rawBytes = null, etag = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
   const team = abbr => dataset?.teams?.[abbr || state.team];
   const current = () => window.PDApp?.getContext()?.data;
   const identity = abbr => team(abbr) || current()?.teams?.find(item => item.abbr === abbr) || {abbr,name:abbr,fullName:abbr};
@@ -207,22 +207,27 @@
     loading = (async () => {
       const controller = new AbortController(), timeout = setTimeout(() => controller.abort(),20000);
       try {
-        const response = await fetch('assets/data/team-details.json',{cache:'no-cache',signal:controller.signal}); if (!response.ok) throw new Error(`Verified team feed returned HTTP ${response.status}`);
-        const bytes = await response.arrayBuffer(), raw = JSON.parse(new TextDecoder().decode(bytes)); if (raw.schemaVersion !== 1 || !raw.teams?.DAL?.games || !Number.isFinite(Date.parse(raw.retrievedAt)) || !raw.sources?.length) throw new Error('Verified team dataset is invalid');
+        const response = await fetch('assets/data/team-details.json',{cache:'no-cache',headers:etag ? {'If-None-Match':etag} : {},signal:controller.signal});
+        if (response.status !== 304 && !response.ok) throw new Error(`Verified team feed returned HTTP ${response.status}`);
+        if (response.status === 304 && !rawBytes) throw new Error('Cached team source is unavailable');
+        const bytes = response.status === 304 ? rawBytes : await response.arrayBuffer(), raw = response.status === 304 ? rawDataset : JSON.parse(new TextDecoder().decode(bytes)); if (raw.schemaVersion !== 1 || !raw.teams?.DAL?.games || !Number.isFinite(Date.parse(raw.retrievedAt)) || !raw.sources?.length) throw new Error('Verified team dataset is invalid');
         if (!window.PDSourceIntegrity) throw new Error('Source integrity verification is unavailable');
         const value = await window.PDSourceIntegrity.apply('team-details',raw,bytes,{signal:controller.signal});
         if (dataset && Date.parse(value.retrievedAt) < Date.parse(dataset.retrievedAt)) throw new Error('Older team snapshot rejected; preceding verified snapshot retained');
         const changed = !window.PDSourceIntegrity.sameSnapshot(dataset,value), recovered = error !== null;
-        if (changed) dataset = value; rawDataset = raw;
+        if (changed) dataset = value; rawDataset = raw; rawBytes = bytes;
+        etag = response.headers.get('ETag') || etag;
         error = null; document.documentElement.dataset.teamDataReady = 'true';
         // A successful check of the same snapshot keeps live controls and their
         // animation clocks intact. Full-content comparison still applies source
         // corrections that share a retrieval timestamp; recovery clears errors.
         if (active() && (changed || recovered)) { render(); const dialog = $('team-details-dialog'); if (dialog.open) show(dialog.dataset.view,dialog.dataset.game); }
         document.dispatchEvent(new CustomEvent('pd:team-data-ready',{detail:{changed,recovered,checkedAt:new Date().toISOString()}}));
+        return true;
       } catch (err) {
         error = `${dataset ? 'Retained preceding verified data. ' : ''}${err.name === 'AbortError' ? 'Team source request timed out.' : err.message}`;
         document.documentElement.dataset.teamDataReady = dataset ? 'true' : 'error'; if (active()) render();
+        return false;
       } finally { clearTimeout(timeout); loading = null; page()?.querySelector('[data-td-action=refresh]')?.setAttribute('aria-busy','false'); page()?.querySelector('[data-td-action=refresh]')?.setAttribute('aria-disabled','false'); }
     })();
     return loading;

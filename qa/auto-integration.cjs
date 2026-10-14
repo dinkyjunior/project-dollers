@@ -12,7 +12,7 @@ const historyChangedBytes=Buffer.from(JSON.stringify(historyChanged));
 const historyChangedSha=require('node:crypto').createHash('sha256').update(historyChangedBytes).digest('hex');
 const changedHistorySnapshot=structuredClone(changed);changedHistorySnapshot.retrievedAt=new Date(Date.parse(base.retrievedAt)+120000).toISOString();changedHistorySnapshot.generatedAt=changedHistorySnapshot.retrievedAt;changedHistorySnapshot.playerHistory.sha256=historyChangedSha;
 const invalidSnapshot=structuredClone(changed);delete invalidSnapshot.steelers.record;
-const rendererFailureSnapshot=structuredClone(changed);rendererFailureSnapshot.weeks['2'].leaders.QB=[null];
+const rendererFailureSnapshot=structuredClone(changed);rendererFailureSnapshot.weeks['2'].leaders.QB=[null];rendererFailureSnapshot.weeks['2'].leaders.WR=[null];rendererFailureSnapshot.weeks['2'].leaders.RB=[null];
 const historyFailedSnapshot=structuredClone(changedHistorySnapshot);historyFailedSnapshot.retrievedAt=new Date(Date.parse(base.retrievedAt)+180000).toISOString();historyFailedSnapshot.playerHistory.sha256='a'.repeat(64);
 let mode='base'; const requests=[];
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.woff2':'font/woff2'};

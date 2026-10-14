@@ -8,6 +8,7 @@
   let cachedData = null;
   let cachedGames = [];
   let weeklyDataset = null, weeklyGames = [], weeklyReports = {}, weeklyLoading = null, weeklyError = null;
+  let weeklyRetry = null, weeklyFailures = 0, lastSnapshot = null, pendingWeeklyRefresh = false;
   const $ = id => document.getElementById(id);
   const exists = value => value !== null && value !== undefined && value !== '';
   const finite = value => exists(value) && Number.isFinite(Number(value));
@@ -36,15 +37,22 @@
 
   function loadWeeklySource(force = false) {
     adoptWeeklySource();
-    if (weeklyLoading || !force && (weeklyDataset && Number(weeklyDataset.season) === Number(context?.data.season) || weeklyError)) return;
+    if (weeklyLoading) { if (force) pendingWeeklyRefresh = true; return; }
+    if (!force && (weeklyError || weeklyDataset && Number(weeklyDataset.season) === Number(context?.data.season))) return;
+    clearTimeout(weeklyRetry);
     weeklyLoading = Promise.resolve().then(async () => {
       if (!window.PDTeamDetails?.refresh) throw new Error('The league schedule is unavailable');
-      await window.PDTeamDetails.refresh(force);
+      const loaded = await window.PDTeamDetails.refresh(force);
+      if (loaded === false) throw new Error('The league schedule could not be refreshed; retained verified games');
       adoptWeeklySource();
       if (!weeklyDataset || Number(weeklyDataset.season) !== Number(context?.data.season)) throw new Error('The league schedule could not be verified');
-    }).catch(error => { weeklyError = error; }).finally(() => {
+      weeklyFailures = 0; weeklyError = null;
+    }).catch(error => { weeklyError = error; weeklyFailures++; }).finally(() => {
       weeklyLoading = null;
+      // Keep verified games visible and retry transport/integrity failures.
+      if (weeklyError) weeklyRetry = setTimeout(() => { if (!document.hidden) loadWeeklySource(true); },Math.min(300000,15000 * 2 ** Math.min(weeklyFailures-1,4)));
       if (context) rerender();
+      if (pendingWeeklyRefresh) { pendingWeeklyRefresh = false; loadWeeklySource(true); }
       if (context?.state.nflPendingMatchup) {
         context.state.nflPendingMatchup = false;
         if (!weeklyError && document.querySelector('.page.active')?.dataset.page === 'nfl') openWeeklyGame(selectedWeeklyGame(context.data.weeks[context.state.week]));
@@ -358,6 +366,7 @@
   function render(nextContext) {
     context = nextContext;
     initializeState(context.state);
+    if (!lastSnapshot) lastSnapshot = context.data;
     adoptWeeklySource();
     loadWeeklySource();
     const {data,state} = context;
@@ -378,13 +387,13 @@
     standings(snapshot);
     $('ladder-leaders').innerHTML = leaderboards(snapshot,'ladder');
     $('players-leaders').innerHTML = leaderboards(snapshot,'players');
-    $('featured-matchup').innerHTML = matchup(snapshot);
+    $('featured-matchup').innerHTML = matchup(snapshot) + (weeklyError && weeklyGames.length ? '<p class="nfl-dataset-note" role="status">Schedule refresh failed. Retained verified games; retrying automatically.</p>' : '');
     $('fixture-context').textContent = `Week ${state.week}`;
     recap(snapshot);
     preview();
     const provenance = $('nfl-data-context');
     if (provenance) {
-      provenance.textContent = `${data.season} · source-backed snapshot · records W${snapshot.throughWeek} · stats ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}`;
+      provenance.textContent = `${data.season} · fixtures Week ${state.week} · records through W${snapshot.throughWeek} · statistics ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}. Records source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt)}. Schedule source retrieved ${weeklyDataset ? context.timestamp(weeklyDataset.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt) : 'unavailable'}. Statistics source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_player_stats')?.retrievedAt || data.retrievedAt)}.`;
       provenance.title = `${sourceContext(snapshot)}. Form and home/away splits are calculated from complete retained final scores; sorted rows are not official playoff seeds.`;
     }
     if (!bound) bind();
@@ -419,6 +428,13 @@
 
   function bind() {
     bound = true;
+    document.addEventListener('pd:data-ready',() => {
+      if (context && context.data !== lastSnapshot) { lastSnapshot = context.data; loadWeeklySource(true); }
+    });
+    const resumeSchedule = () => { if (context && !document.hidden) loadWeeklySource(true); };
+    document.addEventListener('visibilitychange',resumeSchedule);
+    window.addEventListener('online',resumeSchedule);
+    window.addEventListener('pageshow',resumeSchedule);
     document.addEventListener('pd:team-data-ready',() => {
       if (context && adoptWeeklySource()) rerender();
     });

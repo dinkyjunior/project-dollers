@@ -73,6 +73,16 @@ class SourceMonitorTests(unittest.TestCase):
         self.assertTrue(MONITOR.cadence(snapshot, afternoon, "schedule", MONITOR.HOURLY_CRON)[0])
         self.assertTrue(MONITOR.cadence(snapshot, afternoon, "repository_dispatch")[0])
 
+    def test_daily_full_fetch_runs_outside_game_windows(self):
+        quiet = dt.datetime(2026, 7, 1, 19, 17, tzinfo=dt.timezone.utc)
+        self.assertTrue(MONITOR.cadence({}, quiet, "schedule", MONITOR.DAILY_FULL_CRON)[0])
+        # The daily path deliberately skips HEAD and proceeds to validated GETs.
+        from unittest.mock import patch
+        import sys, tempfile
+        with tempfile.NamedTemporaryFile() as output, patch.object(sys, "argv", ["check-source-updates.py", "--event", "schedule", "--cron", MONITOR.DAILY_FULL_CRON, "--github-output", output.name]), patch.object(MONITOR, "check_source", side_effect=AssertionError("Daily GET cannot depend on HEAD")):
+            MONITOR.main()
+            self.assertIn("should_refresh=true", Path(output.name).read_text())
+
     def test_public_source_allowlist_rejects_unexpected_host_without_request(self):
         def unexpected(*args, **kwargs):
             self.fail("Unexpected URL must never be fetched")

@@ -5,6 +5,8 @@ on:
     # Hourly fallback, with additional 15-minute checks around verified NFL
     # kickoffs and the provider's daily release windows. Cron can be delayed.
     - cron: '7 * * * *'
+    # Always attempt a full validated fetch at 19:17 UTC, independent of validators.
+    - cron: '17 19 * * *'
     - cron: '22,37,52 * * * *'
   workflow_dispatch:
     inputs:
@@ -35,7 +37,7 @@ jobs:
   refresh:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - name: Check out production
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -109,4 +111,6 @@ jobs:
         if: steps.publish.outputs.published == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+          python3 scripts/verify-pages-deployment.py --commit "$(git rev-parse HEAD)"

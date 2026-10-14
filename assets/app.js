@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const pages = [...document.querySelectorAll('.page')];
-  const state = { week: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
+  const state = { week: null, followCurrentWeek: true, currentBrowsingWeek: null, conference: 'AFC', nflTab: 'ladder', teamTab: 'roster', filter: 'ALL', standingsExpanded: false, rosterExpanded: false, openPlayer: null, historyMode: 'recent', openGames: new Set(), seasonOpen: new Set() };
   let data = null, assets = { players: {}, logos: {} };
   let playerHistory = null, rawPlayerHistory = null, historyPromise = null, historyError = null, historyHash = null, lastHistoryCheck = 0, updater = null, updateStatus = {};
   const $ = id => document.getElementById(id);
@@ -31,7 +31,7 @@
     return `<aside class="roster-verification-note" data-roster-disagreement><strong>Roster sources differ</strong><ul>${(evidence.issues || []).map(issue => `<li><b>${esc(labels[issue.field] || issue.field)}</b>: primary ${esc(issue.primary ?? 'unavailable')} · Steelers ${esc(issue.official ?? 'unavailable')} · ESPN ${esc(issue.espn ?? 'unavailable')}${issue.note ? `<br>${esc(issue.note)}` : ''}</li>`).join('')}</ul><p>Steelers roster: ${esc(evidence.officialRosterStatus || (evidence.officialCurrentMembership === false ? 'No matched entry' : 'Unavailable'))} · ESPN roster: ${esc(evidence.espnRosterStatus || 'Unavailable')}${evidence.reportedOtherTeam ? `<br>ESPN current team: ${esc(evidence.reportedOtherTeam.name || evidence.reportedOtherTeam.abbr)}` : ''}</p><p>${esc(sourceNames.join(' · '))}<br>Checked ${esc(timestamp(evidence.retrievedAt || evidence.checkedAt))}${evidence.retained ? ' · previous verified check retained' : ''}</p></aside>`;
   }
   const seasonLabel = () => `${data.season} regular season`;
-  const timestamp = value => value ? new Date(value).toLocaleString(undefined, { month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short' }) : 'Unavailable';
+  const timestamp = value => value ? new Date(value).toLocaleString(undefined, { year:'numeric', month:'short', day:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short' }) : 'Unavailable';
   const date = game => {
     if (game.kickoffUtc) return new Date(game.kickoffUtc).toLocaleDateString(undefined, { weekday:'short', month:'short', day:'numeric' });
     return game.gameday ? new Date(`${game.gameday}T12:00:00Z`).toLocaleDateString(undefined, { timeZone:'UTC', weekday:'short', month:'short', day:'numeric' }) : 'Date unavailable';
@@ -42,7 +42,8 @@
     const provenance = data.provenance?.[aliases[group] || group];
     const ids = provenance?.sourceIds || [];
     const names = ids.map(id => data.sources.find(source => source.id === id)?.name || id.replace(/^nflverse_/, 'nflverse · ').replaceAll('_', ' '));
-    return `<p class="source-note">${esc(context || `${provenance?.season || data.season} · through Week ${provenance?.throughWeek ?? data.throughWeek}`)} · ${esc(names.join(', ') || 'nflverse')}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p>`;
+    const retrievals = ids.map(id => data.sources.find(source => source.id === id)).filter(Boolean).map(source => `${source.name || source.id}: ${timestamp(source.retrievedAt)}`);
+    return `<p class="source-note">${esc(context || `${provenance?.season || data.season} · through Week ${provenance?.throughWeek ?? data.throughWeek}`)} · ${esc(names.join(', ') || 'nflverse')}<br>Source retrieval ${esc(retrievals.join(' · ') || 'unavailable')}</p>`;
   };
   function openPage(id, writeHash = true) {
     const teamRoute = /^team\//i.test(id);
@@ -237,6 +238,8 @@
   function changeWeek(week) {
     if (!data?.weeks[week]) return;
     state.week = String(week);
+    state.followCurrentWeek = state.week === state.currentBrowsingWeek;
+    updateFollowControl();
     preserveScroll(() => { renderDashboard(); renderRoster(); renderTeamMatchup(); });
   }
   function renderRoster() {
@@ -314,7 +317,7 @@
     const historyIssues = (playerHistory?.disagreements || []).filter(issue => issue.fromIntegrityCatalog);
     const historyIntegrity = `${historyError ? `<p class="history-status">History verification failed: ${esc(historyError)}${playerHistory ? ' Previous checked history retains its original source times.' : ' Unchecked history is unavailable.'}</p>` : ''}${historyIssues.length ? `<section class="roster-source-differences"><h3>Historical provider differences</h3>${historyIssues.map(issue => window.PDSourceIntegrity.describeIssue(issue,esc,timestamp)).join('')}</section>` : ''}`;
     const labels = { standings:'Conference records',weeklyLeaders:'Weekly leaders',roster:'Current roster',playerStats:'Player statistics',teamStats:'Team statistics',schedule:'Schedule & results',depthChart:'Depth chart',injuries:'Injury & practice reports',opponentAllowances:'Opponent positional allowance',historicalMatchups:'Previous meetings',weatherForecast:'Weather forecast',historicalPrices:'Archival lines (provider/time unavailable)' };
-    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Retrieved ${esc(timestamp(data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : entry.note || '')}</p></div>`).join('')}</div>${data.roster.some(player => rosterEvidence(player)?.status === 'disputed') ? `<section class="roster-source-differences"><h3>Roster source differences</h3><p>Confirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.</p>${data.roster.filter(player => rosterEvidence(player)?.status === 'disputed').map(player => `<h4>${esc(player.name)}</h4>${rosterVerificationNote(player)}`).join('')}</section>` : ''}${historyIntegrity}<p>Missing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    $('sources-content').innerHTML = `<p>${esc(data.context?.label || seasonLabel())}<br>Source retrieval ${esc(timestamp(data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt))}</p><p>Records and totals are calculated from sourced scores and statistics. Conference rows are sorted by win percentage; official playoff seeds and tie-break rankings are not asserted.</p><p>The app checks for newly published verified data when opened, resumed or reconnected, and while active. Repository source checks adapt to game windows. Player statistics follow the provider’s post-game release and correction schedule; this is not live play-by-play. An authorised push feed is not connected.</p><div class="coverage-list">${provenance.map(([key,entry]) => `<div><b>${esc(labels[key] || key.replace(/([A-Z])/g,' $1'))}</b><span class="coverage-${esc(entry.status)}">${esc(entry.status)}</span><p>${esc(key === 'weatherForecast' ? 'No verified current forecast is available.' : entry.note || '')}</p></div>`).join('')}</div>${data.roster.some(player => rosterEvidence(player)?.status === 'disputed') ? `<section class="roster-source-differences"><h3>Roster source differences</h3><p>Confirmed departures corroborated by official and second-provider sources are excluded from current roster controls. Other disagreements remain visible; original statistics and history are retained.</p>${data.roster.filter(player => rosterEvidence(player)?.status === 'disputed').map(player => `<h4>${esc(player.name)}</h4>${rosterVerificationNote(player)}`).join('')}</section>` : ''}${historyIntegrity}<p>Missing injury designations are not treated as healthy status. Source checks have their own retrieval times; unavailable checks do not establish current membership.</p><ul class="source-list">${sources.map(source => `<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name || source.id.replaceAll('_',' '))}</a><br>${esc(source.status)} · ${esc(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
   }
   function freshness() {
     if (!data) return;
@@ -331,10 +334,12 @@
     $('season-context').textContent = `${data.season} REGULAR SEASON`;
     const record = data.steelers.record;
     $('team-context').innerHTML = `${data.season} · CURRENT ROSTER <span>${record.w}–${record.l}${record.ties ? `–${record.ties}` : ''} · THROUGH WEEK ${data.throughWeek}</span>`;
+    state.currentBrowsingWeek = window.PDCurrentWeek.resolve(data);
+    updateFollowControl();
     const weeks = Object.keys(data.weeks).sort((a,b) => Number(a)-Number(b));
-    $('week-select').innerHTML = weeks.map(week => `<option value="${week}">Week ${week}${Number(week) === data.currentWeek ? ' · Current' : ''}</option>`).join('');
+    $('week-select').innerHTML = weeks.map(week => `<option value="${week}">Week ${week}${String(week) === state.currentBrowsingWeek ? ' · Current' : ''}</option>`).join('');
     $('week-select').disabled = false;
-    const nearby = weeks.filter(week => Number(week) >= data.currentWeek - 2 && Number(week) <= data.currentWeek + 1);
+    const nearby = weeks.filter(week => Number(week) >= Number(state.currentBrowsingWeek) - 2 && Number(week) <= Number(state.currentBrowsingWeek) + 1);
     document.querySelector('.week-row').innerHTML = nearby.map(week => `<button data-week="${week}" aria-pressed="${week === state.week}">WEEK ${week}</button>`).join('');
     renderDashboard(); renderRoster(); renderSchedule(); renderTeamStats(); renderTeamMatchup(); renderSources(); freshness();
     document.documentElement.dataset.dataReady = 'true';
@@ -347,7 +352,8 @@
     const oldHistoryHash = data?.playerHistory?.sha256;
     try {
       data = snapshot;
-      if (!data.weeks[state.week]) state.week = String(data.currentWeek);
+      state.currentBrowsingWeek = window.PDCurrentWeek.resolve(data);
+      if (state.followCurrentWeek || !data.weeks[state.week]) state.week = state.currentBrowsingWeek;
       if (state.openPlayer && !data.roster.some(player => player.id === state.openPlayer)) state.openPlayer = null;
       preserveScroll(renderAll);
       window.PD_DATA = data;
@@ -360,6 +366,26 @@
     if (oldHistoryHash !== data.playerHistory?.sha256) historyError = null;
     if (state.openPlayer && historyHash !== data.playerHistory?.sha256) loadHistory();
   }
+  function updateFollowControl() {
+    const button = $('follow-current-week');
+    if (!button) return;
+    button.hidden = state.followCurrentWeek;
+    button.textContent = 'Follow current week';
+    button.title = `Return to current fixtures: Week ${state.currentBrowsingWeek}`;
+  }
+  function followClock() {
+    if (!data || document.hidden) return;
+    const week = window.PDCurrentWeek.resolve(data);
+    if (week === state.currentBrowsingWeek) return;
+    state.currentBrowsingWeek = week;
+    if (state.followCurrentWeek) state.week = week;
+    preserveScroll(renderAll);
+  }
+  document.addEventListener('pd:team-data-ready',followClock);
+  document.addEventListener('visibilitychange',followClock);
+  window.addEventListener('focus',followClock);
+  window.addEventListener('pageshow',followClock);
+  setInterval(followClock,30000);
   function startUpdates() {
     updater?.stop();
     updater = window.PDDataUpdates.start({
@@ -394,6 +420,7 @@
     if (button.hasAttribute('data-refresh') && updateStatus.state !== 'checking') updater?.refresh('manual',{force:true});
     if (button.hasAttribute('data-history-retry')) loadHistory(true);
     if (!data) return;
+    if (button.id === 'follow-current-week') { state.followCurrentWeek = true; state.week = window.PDCurrentWeek.resolve(data); preserveScroll(renderAll); }
     if (button.dataset.conference) { state.conference = button.dataset.conference; renderDashboard(); }
     if (button.dataset.week) changeWeek(button.dataset.week);
     if (button.dataset.historyMode) { state.historyMode = button.dataset.historyMode; preserveScroll(renderRoster); }
@@ -432,21 +459,33 @@
   },true);
   window.addEventListener('popstate',() => openPage(location.hash.slice(1),false));
   window.addEventListener('hashchange',() => openPage(location.hash.slice(1),false));
+  let initialLoadPromise = null, initialRetryTimer = null, initialFailures = 0;
+  window.addEventListener('online',() => { if (!data) loadData(); });
+  document.addEventListener('visibilitychange',() => { if (!document.hidden && !data) loadData(); });
   async function loadData() {
+    if (initialLoadPromise) return initialLoadPromise;
+    initialLoadPromise = loadDataAttempt();
+    try { return await initialLoadPromise; } finally { initialLoadPromise = null; }
+  }
+  async function loadDataAttempt() {
+    clearTimeout(initialRetryTimer);
     if (data && updater) return updater.refresh('retry',{force:true});
+    const controller = new AbortController(), timeout = setTimeout(() => controller.abort(),20000);
     try {
-      const responses = await Promise.all([fetch('assets/data/current.json',{cache:'no-cache'}),fetch('assets/player-assets.json')]);
+      const responses = await Promise.all([fetch('assets/data/current.json',{cache:'no-cache',signal:controller.signal}),fetch('assets/player-assets.json',{signal:controller.signal})]);
       if (!responses.every(response => response.ok)) throw new Error('Local feed unavailable');
       const [snapshot,mapping] = await Promise.all(responses.map(response => response.json()));
       if (snapshot.schemaVersion !== 1 || !snapshot.roster?.length || !snapshot.weeks?.[snapshot.currentWeek] || !snapshot.retrievedAt) throw new Error('Local feed invalid');
-      assets=mapping; applySnapshot(snapshot); startUpdates();
+      assets=mapping; applySnapshot(snapshot); startUpdates(); initialFailures = 0;
     } catch (error) {
       $('data-status').innerHTML='<span>Verified data unavailable</span><button data-retry>Retry</button>';
       $('roster').innerHTML='<p class="notice">The verified feed could not load. No statistics are being substituted.</p>';
       $('sources-content').innerHTML='<p>The verified feed could not load. Retry to restore data and its source information.</p>';
       $('featured-matchup').innerHTML='<p class="notice">The verified feed could not load. Try again when a connection is available.</p>';
       document.documentElement.dataset.dataReady='error';
-    }
+      const retryDelay = Math.min(300000, 5000 * 2 ** Math.min(initialFailures++,6));
+      initialRetryTimer = setTimeout(() => { if (!document.hidden) loadData(); },retryDelay);
+    } finally { clearTimeout(timeout); }
   }
   window.PDApp = {
     openPage,

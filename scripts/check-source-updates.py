@@ -22,6 +22,7 @@ import urllib.request
 ROOT = Path(__file__).resolve().parents[1]
 UTC = dt.timezone.utc
 HOURLY_CRON = "7 * * * *"
+DAILY_FULL_CRON = "17 19 * * *"
 MAX_AGE = dt.timedelta(hours=6)
 
 
@@ -37,6 +38,8 @@ def cadence(snapshot, now, event="workflow_dispatch", cron=""):
     """Return whether this invocation is eligible to perform small HEAD checks."""
     if event != "schedule":
         return True, "Authorized manual or integration trigger"
+    if cron == DAILY_FULL_CRON:
+        return True, "Daily 19:17 UTC full validated source refresh"
     if cron == HOURLY_CRON:
         return True, "Hourly provider availability check"
     kickoffs = snapshot.get("context", {}).get("refreshGameKickoffsUtc", [])
@@ -169,7 +172,12 @@ def main():
     now = dt.datetime.now(UTC)
     snapshot = json.loads((ROOT / "assets/data/current.json").read_text())
     eligible, reason = cadence(snapshot, now, args.event, args.cron)
-    if not eligible and not args.force:
+    if args.event == "schedule" and args.cron == DAILY_FULL_CRON:
+        # Fetch/validate the bodies even when a provider does not support HEAD.
+        # Failed retrieval cannot reach the publication step.
+        result = {"checkedAt": iso(now), "shouldRefresh": True, "checks": [],
+                  "forced": True, "cadenceReason": reason}
+    elif not eligible and not args.force:
         result = {"checkedAt": iso(now), "shouldRefresh": False, "checks": [], "cadenceReason": reason}
     else:
         # Archival releases stay cached. Current PBP/snaps and small ESPN
@@ -179,7 +187,7 @@ def main():
         sources = monitored_sources(snapshot, matchup)
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
             checks = list(pool.map(check_source, sources))
-        result = {**decision(snapshot, checks, now, args.force), "cadenceReason": reason}
+        result = {**decision(snapshot, checks, now, args.force or (args.event == "schedule" and args.cron == DAILY_FULL_CRON)), "cadenceReason": reason}
     print(json.dumps(result, indent=2))
     if args.github_output:
         with Path(args.github_output).open("a") as handle:
