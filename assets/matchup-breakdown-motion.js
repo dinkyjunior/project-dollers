@@ -3,7 +3,7 @@
 (() => {
   'use strict';
   const page = document.querySelector('.page[data-page="matchup-breakdown"]');
-  if (!page) return;
+  if (!page || page.classList.contains('matchup-editorial-page')) return;
   const scroller = page.querySelector('.page-scroll') || page;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const zones = new Set();

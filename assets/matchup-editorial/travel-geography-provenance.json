@@ -1,0 +1,761 @@
+{
+  "schemaVersion": 1,
+  "artifact": "assets/matchup-editorial/travel-geography.json",
+  "artifactSha256": "ca7a5deeff594be808dab0ced0ac0f191d17181f0a4a97b462ea06f586995539",
+  "retrievedAt": "2026-10-15T03:55:26Z",
+  "licenseNotes": "Venue coordinate facts and source-derived addresses; source links and page titles retained. US Census boundary data public domain, us-atlas package ISC. Natural Earth public domain. No Wikipedia article prose or imagery copied.",
+  "sources": [
+    {
+      "id": "existing_verified_schedule",
+      "path": "assets/data/matchup-breakdown.json",
+      "sha256": "9eda69880863a4ea1458ff36a4b7f3bf18e0948f76dbcf94b4e2d3d61ecbae93",
+      "retrievedAt": "2026-10-12T08:44:58Z",
+      "note": "Home venue labels from sourced non-neutral 2026 fixtures; no source-book changes."
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/State_Farm_Stadium",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "47e5e75c98c1a64123f815c040d0b991deef60e743e299d8bf6a1d352d30e7dd",
+      "bytes": 2557,
+      "httpStatus": 200,
+      "id": "venue_2748329",
+      "provider": "Wikipedia",
+      "pageTitle": "State Farm Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Mercedes-Benz_Stadium",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "7661d9a76af01943d1bd640a32d11c69a4f8ee9e7b36f0b667b81b0422743a45",
+      "bytes": 3083,
+      "httpStatus": 200,
+      "id": "venue_36962066",
+      "provider": "Wikipedia",
+      "pageTitle": "Mercedes-Benz Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/M%26T_Bank_Stadium",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "ea35564f81e1630a4f4b625d320d3d6590835d22ef13d928e5c34be6d5cf82f3",
+      "bytes": 2771,
+      "httpStatus": 200,
+      "id": "venue_345892",
+      "provider": "Wikipedia",
+      "pageTitle": "M&T Bank Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Highmark_Stadium_%282026%29",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Bank_of_America_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "bd89514365c5dde95ec9cd892502e4ae8f1c69a157803ba81b044d531b8bf138",
+      "bytes": 3370,
+      "httpStatus": 200,
+      "id": "venue_626674",
+      "provider": "Wikipedia",
+      "pageTitle": "Bank of America Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Soldier_Field",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "1a3b2f2ed444dbf4804566ad591287f8b4357a6b42ee4a1cd2920b24cb1a4d4e",
+      "bytes": 2716,
+      "httpStatus": 200,
+      "id": "venue_509225",
+      "provider": "Wikipedia",
+      "pageTitle": "Soldier Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Paycor_Stadium",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "1a14d38d8f08f189e8191617c7c629eb1105b82508564d9ac04b61206fedbe8c",
+      "bytes": 2209,
+      "httpStatus": 200,
+      "id": "venue_626623",
+      "provider": "Wikipedia",
+      "pageTitle": "Paycor Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Huntington_Bank_Field",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "a518bfbdc57d4a64ddb78fadb6c853c5682e8809c9b6da15569e0ee4ee8ddb3b",
+      "bytes": 3670,
+      "httpStatus": 200,
+      "id": "venue_626700",
+      "provider": "Wikipedia",
+      "pageTitle": "Huntington Bank Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/AT%26T_Stadium",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "11f629fb26a740c267df0c0a5ec416affc01bb6637833b093bb367905b29e027",
+      "bytes": 3328,
+      "httpStatus": 200,
+      "id": "venue_6549393",
+      "provider": "Wikipedia",
+      "pageTitle": "AT&T Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Empower_Field_at_Mile_High",
+      "retrievedAt": "2026-10-15T03:53:42Z",
+      "sha256": "ca336dc5dd388e24b06c8931b8d0c7883cedc71b131e333af8389feb4efab0b0",
+      "bytes": 2464,
+      "httpStatus": 200,
+      "id": "venue_501440",
+      "provider": "Wikipedia",
+      "pageTitle": "Empower Field at Mile High",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Ford_Field",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "c9ac8cb5939f80483ebdf3710e7945ce6db8599d370b0eac9364eb497eadbff7",
+      "bytes": 2927,
+      "httpStatus": 200,
+      "id": "venue_752260",
+      "provider": "Wikipedia",
+      "pageTitle": "Ford Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Lambeau_Field",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "ba3a8aa9cc82f8e7c01be07ef9bbb152ecf3a339d058fc6b7e271ad13ce35f3d",
+      "bytes": 2972,
+      "httpStatus": 200,
+      "id": "venue_149583",
+      "provider": "Wikipedia",
+      "pageTitle": "Lambeau Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/NRG_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "c78382a0a7fa659faa1257342616395a98e8a65c18ac57f680f68617cf079177",
+      "bytes": 2167,
+      "httpStatus": 200,
+      "id": "venue_316466",
+      "provider": "Wikipedia",
+      "pageTitle": "Reliant Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Lucas_Oil_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "db91ff4b9e9233a58bdac1bb8ed971ece77437b212cb570db90bf96100b7ddbe",
+      "bytes": 3076,
+      "httpStatus": 200,
+      "id": "venue_2746089",
+      "provider": "Wikipedia",
+      "pageTitle": "Lucas Oil Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/EverBank_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "7d6f85a35b62e952244da8f13deb49e63e4c0ab9f94a44469953bbdb2f3f5628",
+      "bytes": 2363,
+      "httpStatus": 200,
+      "id": "venue_626654",
+      "provider": "Wikipedia",
+      "pageTitle": "EverBank Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Arrowhead_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "63186b57389f8b5af95d22a5da75507c766dc73b208736bde62f66824dcaee83",
+      "bytes": 2559,
+      "httpStatus": 200,
+      "id": "venue_292909",
+      "provider": "Wikipedia",
+      "pageTitle": "Arrowhead Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/SoFi_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "df5246f82c91f9bd04fde9fc8eab5f608ff0b95e9bdaf7b91ab53e441171f0b6",
+      "bytes": 2117,
+      "httpStatus": 200,
+      "id": "venue_45525802",
+      "provider": "Wikipedia",
+      "pageTitle": "SoFi Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Allegiant_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "d0ff901316d9b5752825c373e76781cec0b68afec3d0bdec8b2fd4044fea72a0",
+      "bytes": 3406,
+      "httpStatus": 200,
+      "id": "venue_52047141",
+      "provider": "Wikipedia",
+      "pageTitle": "Allegiant Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Hard_Rock_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "6829b854d8b8806fd23cbb9597e7e29255b9ca3e66bee158a2c073a354837182",
+      "bytes": 2454,
+      "httpStatus": 200,
+      "id": "venue_362322",
+      "provider": "Wikipedia",
+      "pageTitle": "Hard Rock Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/U.S._Bank_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "5bd10d33fd7df067a3decb3795be84ae4f50775b07cb241414220341c3b7268c",
+      "bytes": 2424,
+      "httpStatus": 200,
+      "id": "venue_10853062",
+      "provider": "Wikipedia",
+      "pageTitle": "U.S. Bank Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Gillette_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "7678197f88e8e793b292dcb41312925a916e1a0d2ba7ed596cf37dd2c37f59e4",
+      "bytes": 3445,
+      "httpStatus": 200,
+      "id": "venue_445102",
+      "provider": "Wikipedia",
+      "pageTitle": "Gillette Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Caesars_Superdome",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "75bbcda77d57ccd6be2e6de51c7cbabffba8287c8167efcbe05be9e41f9a66b8",
+      "bytes": 2397,
+      "httpStatus": 200,
+      "id": "venue_626568",
+      "provider": "Wikipedia",
+      "pageTitle": "Caesars Superdome",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/MetLife_Stadium",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "a4f0bfc9df63d8a3239e152ebfabcb34a458d6040670724613ee8d6440345712",
+      "bytes": 2885,
+      "httpStatus": 200,
+      "id": "venue_5476983",
+      "provider": "Wikipedia",
+      "pageTitle": "MetLife Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Lincoln_Financial_Field",
+      "retrievedAt": "2026-10-15T03:53:43Z",
+      "sha256": "cb91953c726fe59a02319a83a8ca2c4f940faccaed701f24aaec9fe55e091ab0",
+      "bytes": 2893,
+      "httpStatus": 200,
+      "id": "venue_251756",
+      "provider": "Wikipedia",
+      "pageTitle": "Lincoln Financial Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Acrisure_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Lumen_Field",
+      "retrievedAt": "2026-10-15T03:53:44Z",
+      "sha256": "c3746872f9d9ad80d4df0a3a12ab4243e9141f3176aa103ace19ab9d7cc58a9c",
+      "bytes": 3154,
+      "httpStatus": 200,
+      "id": "venue_206812",
+      "provider": "Wikipedia",
+      "pageTitle": "Lumen Field",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Levi%27s_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Raymond_James_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Nissan_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Northwest_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Santiago_Bernab%C3%A9u_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Maracan%C3%A3_Stadium",
+      "retrievedAt": "2026-10-15T03:53:44Z",
+      "sha256": "4fd66d64b0fcf34f869ba9f572513d9cd3b82ca0c8cd1258f825dae8dd3e8784",
+      "bytes": 2578,
+      "httpStatus": 200,
+      "id": "venue_292965",
+      "provider": "Wikipedia",
+      "pageTitle": "Maracanã Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Allianz_Arena",
+      "retrievedAt": "2026-10-15T03:53:44Z",
+      "sha256": "8b1661778c0618d7a969e66479e1541e100fc57ca3ef4b49718618df148a476c",
+      "bytes": 2669,
+      "httpStatus": 200,
+      "id": "venue_1363716",
+      "provider": "Wikipedia",
+      "pageTitle": "Allianz Arena",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Wembley_Stadium",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Tottenham_Hotspur_Stadium",
+      "retrievedAt": "2026-10-15T03:53:44Z",
+      "sha256": "2a24905987308a44de9d583b92c019034d6501b629a3f4fa9cbb45ce2df5784d",
+      "bytes": 2894,
+      "httpStatus": 200,
+      "id": "venue_57547930",
+      "provider": "Wikipedia",
+      "pageTitle": "Tottenham Hotspur Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Melbourne_Cricket_Ground",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Estadio_Azteca",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Stade_de_France",
+      "status": "unavailable",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Acrisure_Stadium",
+      "retrievedAt": "2026-10-15T03:54:55Z",
+      "sha256": "fdd1b699c0bb188a67ca6b8cd2c64fcbdca4f3789239acef2e657781826fa798",
+      "bytes": 3006,
+      "httpStatus": 200,
+      "id": "venue_626713",
+      "provider": "Wikipedia",
+      "pageTitle": "Acrisure Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Levi%27s_Stadium",
+      "retrievedAt": "2026-10-15T03:54:57Z",
+      "sha256": "4d679185a7a117bd18253fa00c5aeb626e8169c8fda80a6cb8a0d26eda91b765",
+      "bytes": 2788,
+      "httpStatus": 200,
+      "id": "venue_7719913",
+      "provider": "Wikipedia",
+      "pageTitle": "Levi's Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Raymond_James_Stadium",
+      "retrievedAt": "2026-10-15T03:54:59Z",
+      "sha256": "9ee1e18908db3e52b285d7d65f39d7a4a9ebd8569e54a3b9344eab1347ba4e52",
+      "bytes": 3333,
+      "httpStatus": 200,
+      "id": "venue_752288",
+      "provider": "Wikipedia",
+      "pageTitle": "Raymond James Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Northwest_Stadium",
+      "retrievedAt": "2026-10-15T03:55:04Z",
+      "sha256": "bcbef43e1c260fb44844dac7baea770cd66dfa8eb3fedf3e4e6874bffb828294",
+      "bytes": 2524,
+      "httpStatus": 200,
+      "id": "venue_395592",
+      "provider": "Wikipedia",
+      "pageTitle": "Northwest Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Santiago_Bernab%C3%A9u_Stadium",
+      "retrievedAt": "2026-10-15T03:55:06Z",
+      "sha256": "209eadf151479ecbd7a8a0d82a9a5b3845b23baff270427aace312200c37af86",
+      "bytes": 2680,
+      "httpStatus": 200,
+      "id": "venue_225760",
+      "provider": "Wikipedia",
+      "pageTitle": "Bernabéu (stadium)",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Wembley_Stadium",
+      "retrievedAt": "2026-10-15T03:55:08Z",
+      "sha256": "928f162995fec17fffe8795d0b2806c46664784f505845f144e7780c0f8667ca",
+      "bytes": 3512,
+      "httpStatus": 200,
+      "id": "venue_8913012",
+      "provider": "Wikipedia",
+      "pageTitle": "Wembley Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Melbourne_Cricket_Ground",
+      "retrievedAt": "2026-10-15T03:55:10Z",
+      "sha256": "adcbd23fb07d8b2aa1ce5da49e0e06dfd8e38c3737a95a450853fec9b77d18db",
+      "bytes": 3454,
+      "httpStatus": 200,
+      "id": "venue_19765",
+      "provider": "Wikipedia",
+      "pageTitle": "Melbourne Cricket Ground",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Estadio_Azteca",
+      "retrievedAt": "2026-10-15T03:55:11Z",
+      "sha256": "5d675be94af1377c7ff722ef5a582a7390f2deb59cb04b4c3ad6c17889eeb1f6",
+      "bytes": 2643,
+      "httpStatus": 200,
+      "id": "venue_1834902",
+      "provider": "Wikipedia",
+      "pageTitle": "Estadio Azteca",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Stade_de_France",
+      "retrievedAt": "2026-10-15T03:55:13Z",
+      "sha256": "d45f40237da088e2279dcde457ad6a0e7f8b82426fb88da8fb1360425d5ada17",
+      "bytes": 2715,
+      "httpStatus": 200,
+      "id": "venue_758605",
+      "provider": "Wikipedia",
+      "pageTitle": "Stade de France",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Nissan_Stadium_%28Nashville%29",
+      "retrievedAt": "2026-10-15T03:55:24Z",
+      "sha256": "9bb846dfa8f07a9d7add37509157bd60223a7c4c4fcb4e2db183b17e55704293",
+      "bytes": 3363,
+      "httpStatus": 200,
+      "id": "venue_467823",
+      "provider": "Wikipedia",
+      "pageTitle": "Nissan Stadium (Nashville)",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/New_Highmark_Stadium",
+      "retrievedAt": "2026-10-15T03:55:25Z",
+      "sha256": "8ceddecaee06099e9a125b7752f63b27d30c73c05f8e069e57d8af51b408984a",
+      "bytes": 2167,
+      "httpStatus": 200,
+      "id": "venue_39235022",
+      "provider": "Wikipedia",
+      "pageTitle": "Highmark Stadium",
+      "coordinateFields": "coordinates.lat / coordinates.lon"
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/ari",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "b4cd7c3023c899980c6643cf4d4f7151336d09f6f4b6ff8340f84f841c77e592",
+      "bytes": 21501,
+      "httpStatus": 200,
+      "id": "venue_address_ARI",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/atl",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "9157da58bcfec3b7966018ea658e345147981d133c408cd1663b13bdb20444a7",
+      "bytes": 21315,
+      "httpStatus": 200,
+      "id": "venue_address_ATL",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/bal",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "5ae8992ff9d087506162cca6acda2691b804484baa23ce7c9acb7b699bad64c9",
+      "bytes": 21479,
+      "httpStatus": 200,
+      "id": "venue_address_BAL",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/car",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "f633d27bb4b6fafaa096593d14ad9cad37aae3b396fc0f805cbec8ae89c2a83c",
+      "bytes": 21573,
+      "httpStatus": 200,
+      "id": "venue_address_CAR",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/chi",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "0c033d3add815b7f482c5a6e0d4d191bf911a363e1838feba6211d827bfba0d1",
+      "bytes": 21385,
+      "httpStatus": 200,
+      "id": "venue_address_CHI",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/cin",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "d7f29a2e2232f7acf86d8d23b0d5660b48f22094435dd22e0f881781617be3fe",
+      "bytes": 21503,
+      "httpStatus": 200,
+      "id": "venue_address_CIN",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/cle",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "1167f5eac02b8540c5f1e43e0eeed93d6ec72f290abc11daa78f03fcb72fa016",
+      "bytes": 21493,
+      "httpStatus": 200,
+      "id": "venue_address_CLE",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/dal",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "2c77de18a12ff98ff9cbf31b3f76412c3b147fde984d19cd02a5e09b2cc17b1b",
+      "bytes": 21436,
+      "httpStatus": 200,
+      "id": "venue_address_DAL",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/den",
+      "retrievedAt": "2026-10-15T03:53:38Z",
+      "sha256": "33c35d773eba9f718a339083dc123ae833d494f583c8a96c0fee56e9e29ad70f",
+      "bytes": 21509,
+      "httpStatus": 200,
+      "id": "venue_address_DEN",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/det",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "a6c22cf470c4845e8e24aa0bdd59d5bf761f13c02acbcc3880c5ebad56e1a417",
+      "bytes": 21357,
+      "httpStatus": 200,
+      "id": "venue_address_DET",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/gb",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "9243b85ee91a35e40aca8ea4060d8291fc5702b2702a5b9ef8baeb5d14290f99",
+      "bytes": 21445,
+      "httpStatus": 200,
+      "id": "venue_address_GB",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/hou",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "3caf00912450219c51ec818f2aba30be821e5f6768f4a3c81568e4c4d9903bb4",
+      "bytes": 21719,
+      "httpStatus": 200,
+      "id": "venue_address_HOU",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/ind",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "868862924dee0d4ebda5fd209bb3cebbbe4d782c69aee54fd20ed9a42a76d6c9",
+      "bytes": 21527,
+      "httpStatus": 200,
+      "id": "venue_address_IND",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/jax",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "1d11e00b8a445608867192e1ad2b98bbf6c85662965c11da8d147d40e0ee70c6",
+      "bytes": 21791,
+      "httpStatus": 200,
+      "id": "venue_address_JAX",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/lv",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "40c5612bef660b7e65bf1136913768719e219e0ce082dbc62115667e308f0d79",
+      "bytes": 21440,
+      "httpStatus": 200,
+      "id": "venue_address_LV",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/mia",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "c3000cb142a41f392efbecc311fedab66d34d8844a8bf0873510a513f4971dee",
+      "bytes": 21423,
+      "httpStatus": 200,
+      "id": "venue_address_MIA",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/min",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "754c10a42da72dc96c35c3adef6216c36e012e013c95aae411be41d03111d7f2",
+      "bytes": 21400,
+      "httpStatus": 200,
+      "id": "venue_address_MIN",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/ne",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "01c00ebc56d7b9ed370af37c19d154e57d9ad684400e5c1a7b8a600b38cc728b",
+      "bytes": 21515,
+      "httpStatus": 200,
+      "id": "venue_address_NE",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/no",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "00d20bb0658c8ffb1d10f8f87865d0966cbb8be145b90d9a2c1453e7cd1af753",
+      "bytes": 21485,
+      "httpStatus": 200,
+      "id": "venue_address_NO",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/nyg",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "16bd8260a076c45cc34947a5af6f50cbf6a1e31364753ade321ccfd74f942f2d",
+      "bytes": 21472,
+      "httpStatus": 200,
+      "id": "venue_address_NYG",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/nyj",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "c90ddd2f2c06aa090ceaab5fa76e58985e9ce5414196f66a0385a1634d364536",
+      "bytes": 21441,
+      "httpStatus": 200,
+      "id": "venue_address_NYJ",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/phi",
+      "retrievedAt": "2026-10-15T03:53:39Z",
+      "sha256": "e206342429632d3805bb0a8f4b24c557661251295e52a96296b448a264fb0d29",
+      "bytes": 21600,
+      "httpStatus": 200,
+      "id": "venue_address_PHI",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/pit",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "92a2a174d10007b6ddb6573ee356861a580b07d0ae1bacaac22f2010611ef47d",
+      "bytes": 21579,
+      "httpStatus": 200,
+      "id": "venue_address_PIT",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/sea",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "db8f10db0fce590d80042363afd4a72a941949822976601e1df47ffea12cf80a",
+      "bytes": 21530,
+      "httpStatus": 200,
+      "id": "venue_address_SEA",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/sf",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "f63119cfab14d81e4e288f626a37226a188f7a36868436d51d40e94057cafef3",
+      "bytes": 22425,
+      "httpStatus": 200,
+      "id": "venue_address_SF",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/tb",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "f20d087bb9bc6b951888be789c55d006e697cc8f4579d77322bffce85ab2a0f1",
+      "bytes": 21596,
+      "httpStatus": 200,
+      "id": "venue_address_TB",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/ten",
+      "retrievedAt": "2026-10-15T03:53:40Z",
+      "sha256": "09309f6510258c5681d5659cb230d3ff7fe27e9e3de13c04ad5802fbb555383a",
+      "bytes": 21495,
+      "httpStatus": 200,
+      "id": "venue_address_TEN",
+      "note": "Venue address only; used only where current schedule venue name exactly matches franchise venue name."
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json",
+      "retrievedAt": "2026-10-15T03:53:59Z",
+      "sha256": "d76b391ccfa8bff601d51e3e3da5d43a89fa46cd5caca72ce731b383be5596d0",
+      "bytes": 114554,
+      "httpStatus": 200,
+      "id": "us_census_states",
+      "provider": "US Census Bureau via us-atlas 3",
+      "license": "US federal geographic data public domain; us-atlas package ISC",
+      "attribution": "U.S. Census Bureau cartographic boundaries, distributed by us-atlas",
+      "documentation": "https://github.com/topojson/us-atlas"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+      "retrievedAt": "2026-10-15T03:54:01Z",
+      "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+      "bytes": 838726,
+      "httpStatus": 200,
+      "id": "natural_earth_countries",
+      "provider": "Natural Earth",
+      "license": "Public domain",
+      "attribution": "Made with Natural Earth",
+      "documentation": "https://www.naturalearthdata.com/about/terms-of-use/"
+    }
+  ],
+  "qualityNotes": [
+    "ESPN franchise venues returned historical Coliseum/Carson locations for LA/LAC and were rejected as current-home authority. Home venue labels come from existing verified 2026 non-neutral fixtures.",
+    "Unknown coordinates remain null. Venue names with changed naming are resolved only using a retrieved venue page and retained aliases.",
+    "US features exclude Alaska/Hawaii and territories; world features support neutral international fixtures. Simplified display geometry is not a navigation basemap."
+  ]
+}

@@ -1,0 +1,26 @@
+/* Native, sourced geographical illustration inside the matchup travel card. */
+.page.matchup-editorial-page .mb-travel-map-card { position: relative; overflow: hidden; }
+.page.matchup-editorial-page .mb-travel-map-card::before { display: none; }
+.page.matchup-editorial-page .mtr-heading { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.page.matchup-editorial-page .mtr-heading h2 { margin: 0; color: #f1f3f4; font: 500 15px/1.4 PDInter,Arial,sans-serif; letter-spacing: -.3px; text-transform: none; }
+.page.matchup-editorial-page .mtr-heading p { margin: 3px 0 0; color: #d0d5df; font: 400 10px/1.5 PDInter,Arial,sans-serif; }
+.page.matchup-editorial-page .mtr-heading button { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 30px; padding: 0 2px; border: 0; border-radius: 0; background: none; color: #26e5e9; font: 400 9px/1.4 PDInter,Arial,sans-serif; white-space: nowrap; }
+.page.matchup-editorial-page .mtr-heading button:disabled { color: #7d8e9b; opacity: .7; }
+.page.matchup-editorial-page .mtr-disclosure { position: relative; z-index: 1; margin: 2px 0 -8px; color: #aab3c3; font: 400 8px/1.5 PDInter,Arial,sans-serif; }
+.page.matchup-editorial-page .mtr-map { display: block; width: 100%; height: auto; margin: 0; overflow: visible; background: radial-gradient(ellipse at 45% 55%,#06335444,transparent 65%); }
+.page.matchup-editorial-page .mtr-geography path { fill: #07151ed9; stroke: #1f4562; stroke-width: .7; vector-effect: non-scaling-stroke; }
+.page.matchup-editorial-page .mtr-route { fill: none; stroke: #35e1ef; stroke-width: 2.2; stroke-dasharray: 2 4; stroke-linecap: round; }
+.page.matchup-editorial-page .mtr-pin { fill: #d7fcff; stroke: #21cfe9; stroke-width: 3; filter: drop-shadow(0 0 5px #00c8ff); }
+.page.matchup-editorial-page .mtr-plane path { fill: #e7edf6; stroke: #a0a6c1; stroke-width: .8; filter: drop-shadow(0 2px 2px #0009); }
+.page.matchup-editorial-page .mtr-place { fill: #e5e8f2; font: 400 20px/1.3 PDInter,Arial,sans-serif; paint-order: stroke; stroke: #041019; stroke-width: 3px; stroke-linejoin: round; }
+.page.matchup-editorial-page .mtr-place tspan { fill: #b7c8da; font-size: 17px; }
+.page.matchup-editorial-page .mtr-itinerary { margin: -1px 0 0; color: #8e9eaf; font: 400 8px/1.5 PDInter,Arial,sans-serif; }
+.page.matchup-editorial-page .mtr-sources { margin-top: 4px; color: #a8b2bf; font: 400 8px/1.5 PDInter,Arial,sans-serif; }
+.page.matchup-editorial-page .mtr-sources summary { display: inline-block; min-height: 22px; color: #32dbe0; cursor: pointer; }
+.page.matchup-editorial-page .mtr-sources summary::after { content: ' ↗'; }
+.page.matchup-editorial-page .mtr-sources p { margin: 3px 0; font: inherit; }
+.page.matchup-editorial-page .mtr-sources a { color: #72dfe3; text-underline-offset: 2px; }
+.page.matchup-editorial-page .mtr-empty { display: grid; align-content: center; min-height: 110px; color: #b9c4d0; font: 400 10px/1.6 PDInter,Arial,sans-serif; }
+.page.matchup-editorial-page .mtr-empty p { margin: 0 0 5px; }
+.page.matchup-editorial-page .mtr-empty small { font: 400 8px/1.5 PDInter,Arial,sans-serif; color: #8e9eaf; }
+.page.matchup-editorial-page .mtr-replay-status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
