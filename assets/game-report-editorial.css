@@ -1,0 +1,255 @@
+/* Approved report presentation. Source books and retained base styles remain
+   separate; all editorial overrides are confined to the game-report route. */
+body:has(.page.game-report-editorial-page.active) { display: grid; place-items: center; min-height: 100dvh; padding: 0; background: #030607; }
+.app-shell:has(.page.game-report-editorial-page.active) { width: 100%; max-width: 430px; height: min(100dvh, calc(min(100vw, 430px) * 1.25645 + 262.4px + env(safe-area-inset-top, 0px) + env(safe-area-inset-bottom, 0px))); min-height: 0; margin: auto; border-radius: 18px; background: #020303; box-shadow: 0 0 0 1px #38404361, 0 22px 55px #0009; }
+.app-shell:has(.page.game-report-editorial-page.active)::after { display: none; }
+.page.game-report-editorial-page[data-page="game-report"] { --gr-text: PDInter, Arial, sans-serif; --gr-display: PDInter, Arial, sans-serif; --gr-cyan: #36e9de; --gr-editorial-side: 22px; --gr-editorial-line: #292e32; --gr-hero-image: url("game-report-editorial/stadium-hero.webp"); overflow: hidden; isolation: isolate; border-radius: 18px; background: #020303; color: #eef1f4; font: 400 11px/1.5 var(--gr-text); font-synthesis: none; -webkit-font-smoothing: antialiased; -webkit-mask-image: none; }
+.page.game-report-editorial-page .page-scroll { inset: 0; padding: 0 var(--gr-editorial-side) max(14px, env(safe-area-inset-bottom, 0px)); overflow-x: hidden; scroll-padding-block: 14px; }
+.page.game-report-editorial-page .game-report-content { width: 100%; min-width: 0; padding: 0; container-type: inline-size; background: none; }
+.page.game-report-editorial-page [hidden] { display: none !important; }
+.page.game-report-editorial-page :is(button, select, summary) { font-family: var(--gr-text); font-weight: 400; text-shadow: none; text-transform: none; letter-spacing: 0; touch-action: manipulation; }
+.page.game-report-editorial-page :is(button, select, summary, a):focus-visible { outline: 2px solid var(--gr-cyan); outline-offset: 3px; }
+.page.game-report-editorial-page button:active { filter: brightness(1.08); }
+.page.game-report-editorial-page .icon { width: 14px; height: 14px; color: currentColor; }
+
+/* This route skips the retained lighting controller. Suppress old paint as well. */
+.page.game-report-editorial-page :is(.gr-diamond, .gr-perimeter-light, .gr-frame-glints, .gr-reflection, .gr-reflection-sweep, .gr-diamond-spark, .gr-helmet),
+.page.game-report-editorial-page :is(.gr-framed, .gr-hero, .gr-gem-button)::before,
+.page.game-report-editorial-page :is(.gr-framed, .gr-hero, .gr-gem-button)::after { display: none; content: none; animation: none; }
+.page.game-report-editorial-page :is(.gr-framed, .gr-button, .gr-button[aria-selected="true"], .gr-button[aria-pressed="true"], .gr-back, .gr-tabs, .gr-snapshot-tile, .gr-player, .gr-player.is-expanded, .gr-cumulative, .gr-gem-button, .gr-information, .gr-source-card) { border-image: none; box-shadow: none; text-shadow: none; }
+.page.game-report-editorial-page .gr-framed { min-width: 0; margin: 0 0 13px; border: 1px solid var(--gr-editorial-line); border-radius: 5px; background: linear-gradient(110deg, #0d1012, #080b0d); }
+.page.game-report-editorial-page .gr-button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 0; min-height: 31px; padding: 6px 9px; border: 1px solid #414b54; border-radius: 5px; background: #0c1318; color: #c7d2de; font: 400 10px/1.45 var(--gr-text); text-transform: none; letter-spacing: 0; }
+.page.game-report-editorial-page .gr-button[aria-selected="true"],
+.page.game-report-editorial-page .gr-button[aria-pressed="true"] { border-color: #565b61; background: #34383b; color: #f4f5f6; }
+
+/* A stadium artwork masthead with native source-backed marks and final scores. */
+.page.game-report-editorial-page .gr-editorial-masthead { position: relative; isolation: isolate; margin: 0 calc(-1 * var(--gr-editorial-side)); padding: calc(12px + env(safe-area-inset-top, 0px)) var(--gr-editorial-side) 18px; background-image: linear-gradient(180deg, #020303d9 0%, #02030355 34%, #02030311 68%, #020303 100%), var(--gr-hero-image); background-position: center, center; background-size: cover; background-repeat: no-repeat; }
+.page.game-report-editorial-page .gr-brand { position: relative; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 14px; height: auto; min-height: 46px; margin: 0 0 5px; padding: 0; overflow: visible; background: none; }
+.page.game-report-editorial-page .gr-brand-mark { display: block; width: 46px; height: 46px; object-fit: contain; filter: none; }
+.page.game-report-editorial-page .gr-brand p { display: none; }
+.page.game-report-editorial-page .gr-header-menu { display: grid; place-items: center; flex: 0 0 auto; width: 44px; min-height: 44px; padding: 10px; border: 0; border-radius: 0; background: transparent; color: #d7dae1; }
+.page.game-report-editorial-page .gr-header-menu :is(svg, .icon) { width: 21px; height: 21px; }
+.page.game-report-editorial-page .gr-back { position: static; display: inline-flex; align-items: center; justify-content: flex-start; gap: 6px; width: auto; max-width: 100%; min-height: 29px; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; color: #31e8e2; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-back .icon { width: 13px; height: 13px; }
+.page.game-report-editorial-page .gr-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 4px 10px; min-height: 24px; margin: 0 0 14px; padding: 0; border: 0; background: none; box-shadow: none; color: #c1c2d2; }
+.page.game-report-editorial-page .gr-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 7px; min-width: 0; font: 400 9px/1.5 var(--gr-text); text-transform: none; }
+.page.game-report-editorial-page .gr-crumbs button { min-height: 23px; padding: 0; border: 0; background: none; color: inherit; font: inherit; }
+.page.game-report-editorial-page .gr-crumbs .icon { width: 8px; height: 10px; }
+.page.game-report-editorial-page .gr-league { margin-left: auto; color: #b4bdc8; font: 400 8px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-league img { display: none; }
+.page.game-report-editorial-page .gr-hero { min-width: 0; margin: 0; padding: 0; overflow: visible; border: 0; border-radius: 0; background: none; }
+.page.game-report-editorial-page .gr-hero h1 { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.page.game-report-editorial-page .gr-score-scene { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(126px, 1.45fr) minmax(0, 1fr); align-items: center; gap: 7px; min-height: 135px; margin: 4px 0 9px; }
+.page.game-report-editorial-page .gr-competitor { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; gap: 7px; }
+.page.game-report-editorial-page :is(.gr-team-logo, .gr-fallback-team-mark) { display: block; width: 73px; max-width: 100%; height: 73px; object-fit: contain; filter: drop-shadow(0 2px 3px #0008); }
+.page.game-report-editorial-page .gr-competitor h2 { max-width: 100%; margin: 0; color: #f0f1f4; font: 400 10px/1.4 var(--gr-text); letter-spacing: 1.6px; text-align: center; text-transform: uppercase; text-shadow: none; overflow-wrap: anywhere; }
+.page.game-report-editorial-page .gr-competitor h2 strong { margin: 2px 0 0; color: #bfc4ce; font: 400 8px/1.4 var(--gr-text); letter-spacing: .5px; text-shadow: none; }
+.page.game-report-editorial-page .gr-score-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-width: 0; padding: 0; text-align: center; }
+.page.game-report-editorial-page .gr-scoreline { display: flex; align-items: center; justify-content: center; gap: 5px; margin: 0; color: #fff; font: 500 37px/1 var(--gr-text); letter-spacing: -1px; white-space: nowrap; }
+.page.game-report-editorial-page .gr-scoreline > span { color: #fff; font: 400 27px/1 var(--gr-text); }
+.page.game-report-editorial-page .gr-scoreline strong { color: #fff; font: inherit; text-shadow: none; }
+.page.game-report-editorial-page .gr-game-status { order: -1; display: inline-flex; align-items: center; justify-content: center; width: auto; max-width: 100%; min-height: 21px; padding: 3px 9px; border: 1px solid #626571; border-image: none; border-radius: 999px; background: #14171fa6; color: #e8e9f0; font: 400 8px/1.4 var(--gr-text); letter-spacing: 1px; white-space: normal; }
+.page.game-report-editorial-page .gr-score-center p { margin: 0; color: #d3d7df; font: 400 9px/1.5 var(--gr-text); text-shadow: none; }
+.page.game-report-editorial-page .gr-score-center small { margin: 0; color: #bcc4d0; font: 400 8px/1.5 var(--gr-text); text-shadow: none; }
+.page.game-report-editorial-page :is(.gr-hero-context, .gr-hero-source, .gr-event-context) { margin: 5px 0 0; color: #bdc4d1; font: 400 8px/1.55 var(--gr-text); text-align: center; letter-spacing: .3px; }
+.page.game-report-editorial-page .gr-event-context p { margin: 0 0 4px; }
+.page.game-report-editorial-page .gr-event-context small { font: inherit; }
+.page.game-report-editorial-page :is(.gr-dispute, .gr-retained) { margin: 8px 0; color: #dfbd88; font: 400 9px/1.6 var(--gr-text); }
+
+/* Quarter scores are separate from the hero, including every sourced OT column. */
+.page.game-report-editorial-page table { width: 100%; table-layout: fixed; border-collapse: collapse; background: none; color: #d3d9e2; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page :is(th, td) { min-width: 0; padding: 6px 4px; border: 0; border-bottom: 1px solid #30363b; color: inherit; font-weight: 400; overflow-wrap: anywhere; }
+.page.game-report-editorial-page thead th { color: #b6bbcf; font: 400 8px/1.5 var(--gr-text); letter-spacing: .7px; text-transform: uppercase; }
+.page.game-report-editorial-page .gr-quarter-table-wrap { position: relative; width: 100%; margin: 0 0 13px; padding: 6px 8px; overflow-x: auto; border: 1px solid #30353b; border-radius: 5px; clip-path: none; background: #0b0d0f; }
+.page.game-report-editorial-page .gr-quarter-table thead th { padding: 5px 1px; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-quarter-table th:first-child { width: 29%; text-align: left; }
+.page.game-report-editorial-page .gr-quarter-table tbody th { padding: 6px 1px; color: #e0e4eb; font: 400 10px/1.5 var(--gr-text); text-align: left; white-space: normal; }
+.page.game-report-editorial-page .gr-quarter-table th img { width: 22px; height: 22px; margin-right: 5px; object-fit: contain; vertical-align: middle; }
+.page.game-report-editorial-page .gr-quarter-table td { padding: 6px 1px; color: #e7eaf0; font: 400 11px/1.5 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-quarter-table td:last-child,
+.page.game-report-editorial-page .gr-quarter-table tr:last-child td:last-child { background: none; color: #fff; font: 500 12px/1.5 var(--gr-text); text-shadow: none; }
+.page.game-report-editorial-page .gr-quarter-table tbody tr:last-child :is(th, td) { border-bottom: 0; }
+
+/* Four flat report tabs; the active treatment is neutral gray. */
+.page.game-report-editorial-page .gr-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; margin: 0 0 15px; padding: 2px; border: 1px solid #30353a; border-radius: 5px; background: #080b0d; box-shadow: none; }
+.page.game-report-editorial-page .gr-tabs .gr-button { min-width: 0; min-height: 32px; padding: 6px 2px; border: 1px solid transparent; border-radius: 4px; background: none; color: #bec5d3; font: 400 10px/1.4 var(--gr-text); text-transform: none; }
+.page.game-report-editorial-page .gr-tabs .gr-button[aria-selected="true"] { border-color: #3a3d40; background: #343638; color: #f5f6f7; }
+.page.game-report-editorial-page .gr-panel { min-width: 0; margin: 0 0 18px; padding: 0; border: 0; border-radius: 0; background: none; }
+.page.game-report-editorial-page .gr-panel-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; min-height: 0; margin: 0 0 10px; }
+.page.game-report-editorial-page .gr-panel-heading h2,
+.page.game-report-editorial-page .gr-game-story h2 { min-width: 0; margin: 0; color: #f1f3f5; font: 400 22px/1.25 var(--gr-text); letter-spacing: -.6px; text-shadow: none; text-transform: none; white-space: normal; }
+.page.game-report-editorial-page .gr-heading-mark { width: 25px; height: 25px; object-fit: contain; filter: none; }
+.page.game-report-editorial-page .gr-heading-opponent { margin-left: auto; }
+.page.game-report-editorial-page .gr-game-story { margin: 0 0 18px; padding: 0; border: 0; background: none; }
+.page.game-report-editorial-page .gr-game-story h2 { margin-bottom: 10px; }
+.page.game-report-editorial-page .gr-game-story > p { margin: 6px 0; color: #c8cbdc; font: 400 11px/1.65 var(--gr-text); }
+.page.game-report-editorial-page .gr-story-details { margin-top: 12px; border: 1px solid #303a41; border-radius: 5px; background: #0a1115; }
+.page.game-report-editorial-page .gr-story-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 34px; padding: 8px 10px; color: #b7c9d5; font: 400 10px/1.5 var(--gr-text); list-style: none; cursor: pointer; }
+.page.game-report-editorial-page .gr-story-details > summary::-webkit-details-marker { display: none; }
+.page.game-report-editorial-page .gr-story-details > summary .icon { width: 12px; height: 12px; transform: rotate(90deg); }
+.page.game-report-editorial-page .gr-story-details[open] > summary .icon { transform: rotate(-90deg); }
+.page.game-report-editorial-page .gr-story-details .gr-snapshot { margin: 0; padding: 8px; }
+.page.game-report-editorial-page .gr-snapshot .gr-panel-heading h2 { font-size: 13px; letter-spacing: 0; }
+.page.game-report-editorial-page .gr-snapshot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.page.game-report-editorial-page .gr-snapshot-tile { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 5px; min-height: 83px; padding: 8px 6px; border: 1px solid #31424e; border-radius: 5px; background: #10202b; }
+.page.game-report-editorial-page .gr-snapshot-tile img { width: 23px; height: 23px; object-fit: contain; }
+.page.game-report-editorial-page .gr-snapshot-tile h3 { margin: 0 0 5px; color: #bdd0df; font: 400 8px/1.5 var(--gr-text); white-space: normal; }
+.page.game-report-editorial-page .gr-snapshot-tile strong { color: #edf4fa; font: 400 18px/1.1 var(--gr-text); text-shadow: none; }
+.page.game-report-editorial-page .gr-snapshot-tile p { margin: 5px 0 0; color: #a5bbcd; font: 400 7px/1.5 var(--gr-text); }
+
+/* A plain three-column comparison retains each team's exact event statistics. */
+.page.game-report-editorial-page .gr-comparison { margin-top: 15px; }
+.page.game-report-editorial-page .gr-comparison .gr-heading-mark { display: none; }
+.page.game-report-editorial-page .gr-comparison th:first-child,
+.page.game-report-editorial-page .gr-comparison th:last-child { width: 25%; }
+.page.game-report-editorial-page .gr-comparison thead th { padding: 7px 5px; color: #b9bfd0; font: 400 8px/1.5 var(--gr-text); letter-spacing: 1px; }
+.page.game-report-editorial-page .gr-comparison thead th:first-child { text-align: left; }
+.page.game-report-editorial-page .gr-comparison thead th:last-child { text-align: right; }
+.page.game-report-editorial-page .gr-comparison tbody th { width: 50%; padding: 6px 4px; color: #c5cad8; font: 400 11px/1.5 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-comparison tbody td { padding: 6px 5px; color: #e5eaf0; font: 400 11px/1.5 var(--gr-text); text-align: left; }
+.page.game-report-editorial-page .gr-comparison tbody td:last-child { text-align: right; }
+.page.game-report-editorial-page .gr-comparison .is-highlighted { background: none; box-shadow: none; }
+
+/* All / passing / rushing / receiving and both club controls remain visible. */
+.page.game-report-editorial-page .gr-performance .gr-panel-heading { gap: 10px; }
+.page.game-report-editorial-page .gr-performance .gr-panel-heading h2 { flex: 1 1 100%; font: 400 22px/1.25 var(--gr-text); }
+.page.game-report-editorial-page .gr-team-switch { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; }
+.page.game-report-editorial-page .gr-team-switch button { min-height: 29px; max-width: none; padding: 5px 10px; border: 1px solid #46515b; border-radius: 999px; background: #0b1217; color: #aebccc; font: 400 9px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-team-switch button[aria-pressed="true"] { border-color: #5a6b75; background: #2b343b; color: #eff3f6; }
+.page.game-report-editorial-page .gr-performance-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; margin: 0 0 9px; }
+.page.game-report-editorial-page .gr-performance-tabs .gr-button { min-height: 29px; padding: 5px 2px; border: 1px solid transparent; border-radius: 999px; background: none; color: #b5bfd0; font: 400 10px/1.4 var(--gr-text); text-transform: none; }
+.page.game-report-editorial-page .gr-performance-tabs .gr-button[aria-pressed="true"] { border-color: #3a3e43; background: #34383b; color: #f2f4f6; }
+.page.game-report-editorial-page .gr-player-table-head,
+.page.game-report-editorial-page .gr-player-row { display: grid; grid-template-columns: minmax(0, 1.65fr) repeat(4, minmax(26px, .48fr)) 13px; gap: 3px; align-items: center; min-width: 0; }
+.page.game-report-editorial-page .gr-player-table-head { min-height: 25px; padding: 6px 7px; border: 1px solid #30363d; border-bottom: 0; border-radius: 5px 5px 0 0; background: #0b0e11; color: #a8b4c6; font: 400 7px/1.4 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-player-list { overflow: hidden; border: 1px solid #30363d; border-radius: 0 0 5px 5px; }
+.page.game-report-editorial-page .gr-player { min-width: 0; border: 0; border-bottom: 1px solid #30363d; border-radius: 0; background: linear-gradient(110deg, #0d1012, #090c0e); }
+.page.game-report-editorial-page .gr-player:last-child { border-bottom: 0; }
+.page.game-report-editorial-page .gr-player.is-expanded { background: #111c23; box-shadow: none; }
+.page.game-report-editorial-page .gr-player-row { width: 100%; min-height: 48px; padding: 8px 7px; border: 0; background: none; color: #cfd8e4; text-align: left; }
+.page.game-report-editorial-page .gr-player-identity { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.page.game-report-editorial-page .gr-player-identity img { flex: 0 0 auto; width: 28px; height: 31px; object-fit: contain; }
+.page.game-report-editorial-page .gr-player-identity strong { display: block; color: #e3e8ee; font: 400 10px/1.4 var(--gr-text); letter-spacing: 0; overflow-wrap: anywhere; }
+.page.game-report-editorial-page .gr-player-identity small { display: block; margin-top: 4px; color: #9faec0; font: 400 8px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-player-row > b { color: #c7d2e1; font: 400 10px/1.4 var(--gr-text); text-align: center; overflow-wrap: normal; }
+.page.game-report-editorial-page .gr-player-row > .icon { width: 12px; height: 13px; color: #bdc8d7; transition: transform .18s; }
+.page.game-report-editorial-page .gr-player-expansion { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 7px; padding: 0 9px 9px 42px; }
+.page.game-report-editorial-page .gr-player-expansion > small { flex: 1 1 90px; min-width: 0; color: #9db2c6; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-player-expansion .gr-button { flex: 0 0 auto; min-height: 28px; padding: 5px 7px; border: 1px solid #385567; border-radius: 5px; background: #132b3b; color: #a8d8e7; font: 400 9px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-performance-group { margin-bottom: 10px; }
+.page.game-report-editorial-page .gr-performance-group > h3 { margin: 10px 0 7px; color: #b6c8d8; font: 400 10px/1.5 var(--gr-text); }
+
+/* The primary box-score pill and outlined secondary actions match the render. */
+.page.game-report-editorial-page .gr-editorial-actions { margin: 15px 0; }
+.page.game-report-editorial-page .gr-full-box { display: flex; width: min(100%, 265px); min-height: 38px; margin: 0 auto 9px; padding: 9px 16px; border: 1px solid #e8ebed; border-radius: 999px; background: #f7f9f9; color: #0a111b; font: 500 11px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-two-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.page.game-report-editorial-page .gr-two-actions .gr-button,
+.page.game-report-editorial-page .gr-gem-button { min-height: 33px; padding: 7px 10px; border: 1px solid #7a8191; border-radius: 999px; background: transparent; color: #c2cbdb; font: 400 9px/1.4 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-gem-button .icon { width: 10px; height: 11px; }
+.page.game-report-editorial-page .gr-scoring-collapse { margin: 15px 0 11px; padding: 0; border: 1px solid #30363c; border-radius: 5px; background: #0b0e11; }
+.page.game-report-editorial-page .gr-scoring-collapse > summary { display: flex; align-items: center; justify-content: space-between; min-height: 39px; padding: 10px 12px; color: #d1d9e4; font: 400 11px/1.5 var(--gr-text); list-style: none; cursor: pointer; }
+.page.game-report-editorial-page .gr-scoring-collapse > summary::-webkit-details-marker { display: none; }
+.page.game-report-editorial-page .gr-scoring-collapse > summary > .icon { display: none; }
+.page.game-report-editorial-page .gr-scoring-collapse > summary::after { content: ""; width: 8px; height: 8px; margin: 0 3px 4px 12px; border-right: 1px solid #c2cede; border-bottom: 1px solid #c2cede; transform: rotate(45deg); }
+.page.game-report-editorial-page .gr-scoring-collapse[open] > summary::after { margin-bottom: 0; transform: rotate(225deg); }
+.page.game-report-editorial-page .gr-scoring-collapse .gr-scoring { margin: 0; padding: 0 10px 12px; }
+.page.game-report-editorial-page .gr-scoring-content { padding: 0 10px 12px; }
+.page.game-report-editorial-page .gr-scoring-content h3 { margin: 10px 0 8px; color: #b9cbdc; font: 400 11px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-scoring-content p { margin: 7px 0; color: #afc3d6; font: 400 10px/1.6 var(--gr-text); }
+.page.game-report-editorial-page .gr-scoring-events { margin: 0; padding-left: 17px; color: #a6bed3; font: 400 9px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-scoring-events li { margin: 10px 0; }
+.page.game-report-editorial-page .gr-scoring-events strong { color: #bfd3e4; font-weight: 400; }
+.page.game-report-editorial-page .gr-scoring .gr-panel-heading h2 { font-size: 13px; letter-spacing: 0; }
+.page.game-report-editorial-page .gr-cumulative-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin-bottom: 10px; }
+.page.game-report-editorial-page .gr-cumulative { padding: 7px 5px; border: 1px solid #344652; border-radius: 4px; background: #0e1a24; }
+.page.game-report-editorial-page .gr-cumulative h3 { margin: 0 0 6px; padding: 0 0 5px; border-bottom: 1px solid #2e424f; color: #aec3d3; font: 400 8px/1.4 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-cumulative > div { display: grid; grid-template-columns: 15px minmax(0, 1fr) 18px; gap: 2px; align-items: center; margin-top: 4px; color: #c7d8e6; font: 400 8px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-cumulative img { width: 15px; height: 15px; object-fit: contain; }
+.page.game-report-editorial-page .gr-cumulative b { color: #edf4fa; font: 400 11px/1.2 var(--gr-text); text-align: right; }
+
+/* Availability, every box-score category, drives and plays remain real controls. */
+.page.game-report-editorial-page .gr-ancillary { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 0; border: 0; background: none; }
+.page.game-report-editorial-page :is(.gr-information, .gr-source-card) { min-width: 0; min-height: 49px; padding: 9px 10px; border: 1px solid #303f4a; border-radius: 5px; background: #0b141b; color: #c5d4e2; }
+.page.game-report-editorial-page :is(.gr-information, .gr-source-card) > .icon { width: 22px; height: 24px; color: #b4d2df; }
+.page.game-report-editorial-page .gr-information > .icon:last-child { width: 11px; height: 12px; color: #63d1d4; }
+.page.game-report-editorial-page :is(.gr-information, .gr-source-card) strong { color: #cbd8e4; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page :is(.gr-information, .gr-source-card) small { margin-top: 4px; color: #99aec2; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-source-card { grid-template-columns: 22px minmax(0, 1fr) auto; gap: 4px 9px; }
+.page.game-report-editorial-page .gr-source-card .gr-button { min-height: 27px; padding: 5px 7px; border-color: #3b5868; background: #102533; color: #add6e1; font: 400 8px/1.4 var(--gr-text); }
+.page.game-report-editorial-page :is(.gr-empty, .gr-context) { margin: 8px 0; color: #aabccf; font: 400 10px/1.6 var(--gr-text); }
+.page.game-report-editorial-page .gr-loading { padding: 15px 12px; }
+.page.game-report-editorial-page .gr-loading h1 { margin: 0 0 12px; color: #e7edf4; font: 400 24px/1.25 var(--gr-text); }
+.page.game-report-editorial-page .gr-box-team > h3 { display: flex; align-items: center; gap: 8px; margin: 19px 0 10px; color: #e4edf5; font: 400 17px/1.4 var(--gr-text); text-transform: none; }
+.page.game-report-editorial-page .gr-box-team > h3 img { width: 28px; height: 28px; object-fit: contain; }
+.page.game-report-editorial-page .gr-box-team > h4 { margin: 15px 0 7px; color: #9fc5d7; font: 400 10px/1.5 var(--gr-text); letter-spacing: .6px; }
+.page.game-report-editorial-page .gr-box-table thead th { padding: 6px 2px; font: 400 8px/1.4 var(--gr-text); }
+.page.game-report-editorial-page .gr-box-table thead th:first-child { width: 41%; text-align: left; }
+.page.game-report-editorial-page .gr-box-table tbody th { padding: 7px 3px; color: #c6d6e5; font: 400 10px/1.5 var(--gr-text); text-align: left; }
+.page.game-report-editorial-page .gr-box-table tbody td { padding: 7px 2px; color: #e0e8f0; font: 400 10px/1.5 var(--gr-text); text-align: center; }
+.page.game-report-editorial-page .gr-box-table th button { display: flex; align-items: center; justify-content: space-between; gap: 5px; width: 100%; min-width: 0; min-height: 27px; padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; }
+.page.game-report-editorial-page .gr-box-table .icon { flex: 0 0 auto; width: 10px; height: 11px; }
+.page.game-report-editorial-page .gr-drive { margin: 8px 0; padding: 10px; border: 1px solid #324551; border-radius: 5px; background: #0c1923; }
+.page.game-report-editorial-page .gr-drive summary { display: flex; align-items: center; gap: 8px; min-height: 30px; cursor: pointer; list-style: none; }
+.page.game-report-editorial-page .gr-drive summary img { width: 27px; height: 27px; object-fit: contain; }
+.page.game-report-editorial-page .gr-drive summary strong { display: block; color: #d4e3ef; font: 400 11px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-drive summary small { display: block; margin-top: 3px; color: #a4bacd; font: 400 9px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-drive summary > span:last-child { gap: 5px; color: #bbd6e7; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-drive dl { display: grid; grid-template-columns: 43% minmax(0, 1fr); gap: 0; margin: 11px 0 0; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-drive :is(dt, dd) { margin: 0; padding: 5px 3px; border-bottom: 1px solid #2a4253; }
+.page.game-report-editorial-page .gr-drive dt { color: #9fbcd2; }
+.page.game-report-editorial-page .gr-play { margin: 8px 0; padding: 10px; border: 1px solid #304857; border-radius: 5px; background: #0b1822; }
+.page.game-report-editorial-page .gr-play.is-scoring { border-color: #417d89; background: #10282b; }
+.page.game-report-editorial-page .gr-play > div { gap: 7px; color: #94cedc; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-play > div > b { color: #9cd8b6; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page :is(.gr-play p, .gr-play-text) { margin: 7px 0; color: #c2d1df; font: 400 11px/1.6 var(--gr-text); }
+.page.game-report-editorial-page .gr-play small { color: #97b3c9; font: 400 9px/1.5 var(--gr-text); }
+
+/* Flowing footer and navigation retain the report's full-page scrolling model. */
+.page.game-report-editorial-page .gr-editorial-source-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 39px; margin-top: 12px; padding-top: 8px; border-top: 1px solid #2c353d; color: #a4b5c6; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-editorial-source-line button { min-width: 30px; min-height: 29px; padding: 0; border: 0; background: none; color: #36e9de; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-editorial-source-line > span { min-width: 0; text-align: right; }
+.page.game-report-editorial-page .gr-back-to-form { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; margin: 0 0 7px; padding: 0; border: 0; background: none; color: #32e4df; font: 400 10px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-bottom-nav { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; min-height: 57px; margin: 10px 0 0; padding: 7px 0; border: 0; border-top: 1px solid #2c343b; border-radius: 0; background: #020303; }
+.page.game-report-editorial-page .gr-bottom-nav button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-width: 0; min-height: 43px; padding: 0; border: 0; background: none; color: #c0c6d9; font: 400 9px/1.3 var(--gr-text); }
+.page.game-report-editorial-page .gr-bottom-nav .icon { width: 21px; height: 21px; color: currentColor; }
+.page.game-report-editorial-page .gr-bottom-nav [aria-current="page"],
+.page.game-report-editorial-page .gr-bottom-nav [aria-current="page"] .icon { color: #34e5df; filter: none; text-shadow: none; }
+.page.game-report-editorial-page .gr-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 6px 0 0; padding: 5px 0; color: #9fb1c5; font: 400 8px/1.5 var(--gr-text); }
+.page.game-report-editorial-page .gr-footer button { display: inline-flex; align-items: center; gap: 4px; min-width: 30px; min-height: 27px; padding: 0; border: 0; background: none; color: #38e4de; font: inherit; }
+.page.game-report-editorial-page .gr-footer > span { min-width: 0; max-width: 80%; text-align: right; }
+.page.game-report-editorial-page .gr-footer small { display: block; margin-top: 3px; color: #9fb1c5; font: 400 8px/1.5 var(--gr-text); }
+
+/* Every existing player, availability and source dialog uses the same paint. */
+body:has(.page.game-report-editorial-page.active) .gr-dialog { width: min(390px, calc(100vw - 30px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 18px 16px; border: 1px solid #3c4c59; border-radius: 10px; background: #0a121a; color: #d8e4f0; box-shadow: 0 18px 60px #000b; font: 400 11px/1.6 PDInter, Arial, sans-serif; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog::backdrop { background: #000c; backdrop-filter: blur(5px); }
+body:has(.page.game-report-editorial-page.active) .gr-dialog h2 { margin: 0 33px 14px 0; color: #eaf1f8; font: 500 19px/1.35 PDInter, Arial, sans-serif; letter-spacing: -.3px; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog h3 { margin: 16px 0 8px; color: #b7d6e7; font: 500 12px/1.5 PDInter, Arial, sans-serif; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog p { color: #afc2d5; font: 400 10px/1.6 PDInter, Arial, sans-serif; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .dialog-close { width: 29px; height: 29px; border: 1px solid #435869; border-radius: 999px; background: #152b3b; color: #caddeb; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 11px 0; background: transparent; font: 400 10px/1.5 PDInter, Arial, sans-serif; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog :is(th, td) { padding: 6px 4px; border: 0; border-bottom: 1px solid #2d4659; overflow-wrap: anywhere; font-weight: 400; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog th { width: 62%; color: #a9c2d8; text-align: left; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog td { color: #dfebf5; text-align: right; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog details { margin-top: 12px; padding: 9px 10px; border: 1px solid #304c60; border-radius: 5px; background: #0c1d2a; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog summary { min-height: 26px; color: #71d7dc; cursor: pointer; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog a { color: #43dfdf; text-underline-offset: 3px; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .icon { width: 13px; height: 13px; color: currentColor; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .gr-source-list article { margin: 11px 0; padding: 10px; border: 1px solid #304b60; border-radius: 5px; background: #102331; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .gr-source-list small { display: block; margin-top: 8px; color: #91afc8; font: 400 9px/1.6 PDInter, Arial, sans-serif; word-break: break-all; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog li > button { min-height: 27px; padding: 3px 0; border: 0; background: none; color: #74d6dd; font: inherit; text-align: left; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .gr-menu-actions { display: grid; gap: 7px; }
+body:has(.page.game-report-editorial-page.active) .gr-dialog .gr-menu-actions button { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 42px; padding: 9px 11px; border: 1px solid #36556b; border-radius: 5px; background: #10293c; color: #c7e0ef; font: 400 11px/1.5 PDInter, Arial, sans-serif; text-align: left; }
+
+@media (min-width: 700px) {
+  .app-shell:has(.page.game-report-editorial-page.active) { width: 400px; max-width: 400px; height: min(770px, calc(100dvh - 32px)); min-height: 0; }
+}
+@media (max-width: 375px) {
+  .page.game-report-editorial-page[data-page="game-report"] { --gr-editorial-side: 18px; }
+  .page.game-report-editorial-page .gr-scoreline { font-size: 34px; }
+  .page.game-report-editorial-page .gr-score-scene { grid-template-columns: minmax(0, 1fr) minmax(119px, 1.5fr) minmax(0, 1fr); gap: 5px; }
+  .page.game-report-editorial-page .gr-player-row { grid-template-columns: minmax(0, 1.5fr) repeat(4, minmax(24px, .48fr)) 12px; }
+  .page.game-report-editorial-page .gr-player-expansion { padding-left: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page.game-report-editorial-page *, .page.game-report-editorial-page *::before, .page.game-report-editorial-page *::after { scroll-behavior: auto; transition: none; animation: none; }
+}

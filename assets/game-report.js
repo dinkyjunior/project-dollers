@@ -9,7 +9,7 @@
   const known = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
   const fmt = (value, places = 0) => known(value) ? Number(value).toLocaleString('en-AU', {maximumFractionDigits:places}) : '—';
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="${['medical','document','box-score','play'].includes(name) ? 'assets/game-report/ui-icons.svg' : ['shield','info','calendar','stadium'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
-  const state = {team:'DAL',game:null,tab:'overview',performanceTeam:'DAL',kind:'passing',expanded:undefined,returnRoute:'team/DAL'};
+  const state = {team:'DAL',game:null,tab:'overview',performanceTeam:'DAL',kind:'all',expanded:undefined,returnRoute:'team/DAL'};
   let index = null, report = null, error = null, loading = null, checkedAt = 0, generation = 0, lastFocus = null, lastFocusAttrs = null, dialogState = null;
   const detailCache = new Map();
   const safeReturn = (value, abbr = state.team) => /^(?:(?:team\/|matchup\/)(?:[A-Z]{2,3})(?:\?|$)|(?:home|nfl|steelers)$)/i.test(String(value || '')) && !/[<>\r\n]/.test(value) ? value : `team/${abbr}`;
@@ -32,7 +32,10 @@
   const displayAbbr = abbr => report?.providerTeamAbbreviations?.[abbr] || abbr;
   const equipment = abbr => ['DAL','HOU'].includes(abbr) ? `<div class="gr-helmet gr-helmet-${abbr.toLowerCase()}" aria-label="${esc(fullName(abbr))} decorative helmet"><img class="gr-helmet-shell" src="assets/game-report/helmet-${abbr.toLowerCase()}-decorative.webp" alt="" width="1254" height="1254"><img class="gr-helmet-mark" src="${esc(logo(abbr))}" alt="${esc(fullName(abbr))}" width="500" height="500"></div>` : `<img class="gr-fallback-team-mark" src="${esc(logo(abbr))}" alt="${esc(fullName(abbr))}" width="500" height="500">`;
   const titleCity = abbr => identity(abbr).city.toUpperCase();
-  const navigationCity = abbr => {const t=current()?.teams?.find(item=>item.abbr===abbr);return (t?.fullName?.replace(t.name,'').trim() || identities[abbr]?.[0] || abbr).toUpperCase();};
+  function navigationIdentity(abbr) {
+    const t = current()?.teams?.find(item => item.abbr === abbr), fallback = identities[abbr];
+    return {fullName:t?.fullName || (fallback ? fallback.join(' ') : abbr),city:t?.fullName?.replace(t.name,'').trim() || fallback?.[0] || abbr};
+  }
   const timestamp = value => value && Number.isFinite(Date.parse(value)) ? new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',day:'numeric',month:'short',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(value)) : 'Unavailable';
   function datetime(value) {
     if (!value || !Number.isFinite(Date.parse(value))) return 'Kickoff unavailable';
@@ -40,16 +43,22 @@
   }
   const namedButton = (label, action, extra = '', cls = '') => `<button class="gr-button ${cls}" data-gr-action="${action}" ${extra}>${esc(label)} ${icon('chevron')}</button>`;
   const gem = (label, action, extra = '') => namedButton(label,action,extra,'gr-gem-button');
-  const panelHeading = (title, extra = '', mark = 'diamond') => `<header class="gr-panel-heading">${mark === 'diamond' ? '<img class="gr-diamond" src="assets/nfl-dashboard/diamond-premium.svg" alt="" width="50" height="66">' : `<img class="gr-heading-mark" src="${esc(logo(mark))}" alt="" width="500" height="500">`}<h2>${esc(title)}</h2>${extra}</header>`;
+  const panelHeading = (title, extra = '', mark = 'diamond') => `<header class="gr-panel-heading"><h2>${esc(title)}</h2>${extra}</header>`;
   function header() {
-    return `<header class="gr-brand"><img class="gr-brand-mark" src="assets/home/gate-brand-lossless.webp" alt="Project Dollar" width="2022" height="778"><p>SPORTS DATA &amp; RESEARCH</p></header><button class="gr-back gr-button" data-gr-action="back">${icon('back')} BACK TO ${esc(navigationCity(state.team))}</button><div class="gr-breadcrumb"><div class="gr-crumbs"><button data-gr-action="nfl">NFL</button>${icon('chevron')}<button data-gr-action="team">${esc(navigationCity(state.team))}</button>${icon('chevron')}<span>GAME REPORT</span></div><div class="gr-league"><img src="assets/home/nfl.svg" alt="NFL" width="500" height="500"><span>GAME REPORT</span></div></div>`;
+    const returnTeam = state.returnRoute.match(/^team\/([A-Z]{2,3})(?:\?|$)/i)?.[1]?.toUpperCase() || state.team;
+    const back = state.returnRoute.startsWith('matchup/') ? 'Back to matchup research' : state.returnRoute === 'nfl' ? 'Back to NFL' : state.returnRoute === 'home' ? 'Back to Home' : state.returnRoute === 'steelers' ? 'Back to Steelers research' : `Back to ${navigationIdentity(returnTeam).city} team details`;
+    return `<header class="gr-brand"><img class="gr-brand-mark" src="assets/branding/project-dollar-jewel-bag-emerald.png" alt="Project Dollar" width="500" height="500"><button class="gr-header-menu" data-gr-action="menu" aria-label="Open game report navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></header><button class="gr-back gr-button" data-gr-action="back">${icon('back')} ${esc(back)}</button><div class="gr-breadcrumb"><div class="gr-crumbs"><button data-gr-action="nfl">Teams</button><span aria-hidden="true">/</span><button data-gr-action="team">${esc(navigationIdentity(state.team).fullName)}</button><span aria-hidden="true">/</span><span>Game report</span></div></div>`;
   }
   function hero() {
     const sides = pair(), qCount = Math.max(4, ...sides.map(abbr => quarters(abbr).length));
-    return `<section class="gr-hero gr-framed" aria-labelledby="game-report-title"><h1 id="game-report-title">GAME REPORT</h1><div class="gr-score-scene">${sides.map((abbr,i) => `<div class="gr-competitor gr-competitor-${i}">${equipment(abbr)}<h2><span>${esc(identity(abbr).city)}</span><strong>${esc(identity(abbr).name)}</strong></h2></div>`).join('')}<div class="gr-score-center"><div class="gr-scoreline"><strong class="gr-score-own">${fmt(score(sides[0]))}</strong><span>–</span><strong class="gr-score-other">${fmt(score(sides[1]))}</strong></div><strong class="gr-game-status">${esc(report.status === 'final' ? 'FINAL' : report.status?.toUpperCase() || 'STATUS UNAVAILABLE')}${qCount > 4 ? ' · OT' : ''}</strong><p>${esc(report.venue || 'Venue unavailable')}</p><small>${esc(report.season)} · WEEK ${esc(report.week)}<br>${esc(datetime(report.kickoffUtc))}</small></div></div><div class="gr-quarter-table-wrap"><table class="gr-quarter-table"><thead><tr><th scope="col">TEAM</th>${Array.from({length:qCount},(_,n) => `<th scope="col">${n < 4 ? `Q${n+1}` : n === 4 ? 'OT' : `OT${n-3}`}</th>`).join('')}<th scope="col">TOTAL</th></tr></thead><tbody>${sides.map(abbr => `<tr><th scope="row"><img src="${esc(logo(abbr))}" alt="" width="500" height="500">${esc(displayAbbr(abbr))}</th>${Array.from({length:qCount},(_,n) => `<td>${fmt(quarters(abbr)[n])}</td>`).join('')}<td>${fmt(score(abbr))}</td></tr>`).join('')}</tbody></table></div>${report.disagreements?.length ? `<p class="gr-dispute">${report.disagreements.some(issue => issue.field !== 'venue') ? 'Some sources disagree. Affected values remain unavailable; inspect Sources.' : 'Provider venue labels differ. Inspect Sources.'}</p>` : ''}</section>`;
+    return `<section class="gr-hero gr-framed" aria-label="Selected game result"><h1 id="game-report-title" class="gr-report-label">Game report</h1><div class="gr-score-scene"><div class="gr-competitor gr-competitor-0"><img class="gr-team-logo gr-fallback-team-mark" src="${esc(logo(sides[0]))}" alt="${esc(fullName(sides[0]))}" width="500" height="500"><h2>${esc(identity(sides[0]).city)}</h2></div><div class="gr-score-center"><strong class="gr-game-status">${esc(report.status === 'final' ? 'FINAL' : report.status?.toUpperCase() || 'STATUS UNAVAILABLE')}${qCount > 4 ? ' · OT' : ''}</strong><div class="gr-scoreline"><strong class="gr-score-own">${fmt(score(sides[0]))}</strong><span>–</span><strong class="gr-score-other">${fmt(score(sides[1]))}</strong></div></div><div class="gr-competitor gr-competitor-1"><img class="gr-team-logo gr-fallback-team-mark" src="${esc(logo(sides[1]))}" alt="${esc(fullName(sides[1]))}" width="500" height="500"><h2>${esc(identity(sides[1]).city)}</h2></div></div><div class="gr-event-context"><p>${esc(report.venue || 'Venue unavailable')}</p><small>${esc(report.season)} · Week ${esc(report.week)} · ${esc(datetime(report.kickoffUtc))}</small></div>${report.disagreements?.length ? `<p class="gr-dispute">${report.disagreements.some(issue => issue.field !== 'venue') ? 'Some sources disagree. Affected values remain unavailable; inspect Sources.' : 'Provider venue labels differ. Inspect Sources.'}</p>` : ''}</section>`;
+  }
+  function quarterTable() {
+    const sides = pair(), qCount = Math.max(4, ...sides.map(abbr => quarters(abbr).length));
+    return `<div class="gr-quarter-table-wrap gr-framed"><table class="gr-quarter-table"><thead><tr><th scope="col">TEAM</th>${Array.from({length:qCount},(_,n) => `<th scope="col">${n < 4 ? `Q${n+1}` : n === 4 ? 'OT' : `OT${n-3}`}</th>`).join('')}<th scope="col">FINAL</th></tr></thead><tbody>${sides.map(abbr => `<tr><th scope="row"><img src="${esc(logo(abbr))}" alt="" width="500" height="500">${esc(displayAbbr(abbr))}</th>${Array.from({length:qCount},(_,n) => `<td>${fmt(quarters(abbr)[n])}</td>`).join('')}<td>${fmt(score(abbr))}</td></tr>`).join('')}</tbody></table></div>`;
   }
   function tabs() {
-    return `<div class="gr-tabs" role="tablist" aria-label="Game report sections">${[['overview','OVERVIEW'],['box-score','BOX SCORE'],['drives','DRIVES'],['plays','PLAYS']].map(([tab,label]) => `<button id="game-report-tab-${tab}" class="gr-button" data-gr-tab="${tab}" role="tab" aria-selected="${state.tab === tab}" aria-controls="game-report-panel-${tab}" tabindex="${state.tab === tab ? '0' : '-1'}">${label}</button>`).join('')}</div>`;
+    return `<div class="gr-tabs" role="tablist" aria-label="Game report sections">${[['overview','Overview'],['box-score','Box score'],['drives','Drives'],['plays','Plays']].map(([tab,label]) => `<button id="game-report-tab-${tab}" class="gr-button" data-gr-tab="${tab}" role="tab" aria-selected="${state.tab === tab}" aria-controls="game-report-panel-${tab}" tabindex="${state.tab === tab ? '0' : '-1'}">${label}</button>`).join('')}</div>`;
   }
   const difference = (a,b) => known(a) && known(b) ? Number(a)-Number(b) : null;
   const signed = n => known(n) ? `${Number(n)>0?'+':''}${fmt(n)}` : '—';
@@ -58,6 +67,19 @@
     const rush = difference(stats(own).rushing,stats(other).rushing), pass = difference(stats(other).netPassing,stats(own).netPassing);
     const fourth = known(ownQ) && known(oppQ) ? `${fmt(ownQ)}–${fmt(oppQ)}` : '—';
     return `<section class="gr-panel gr-framed gr-snapshot">${panelHeading('GAME SNAPSHOT')}<div class="gr-snapshot-grid"><article class="gr-snapshot-tile"><img src="${esc(logo(own))}" alt="" width="500" height="500"><div><h3>${esc(displayAbbr(own))} Q4</h3><strong>${fourth}</strong><p>${known(ownQ)&&known(oppQ) ? Number(ownQ)>Number(oppQ) ? `OUTSCORED ${esc(displayAbbr(other))} IN Q4` : Number(ownQ)<Number(oppQ) ? `OUTSCORED BY ${esc(displayAbbr(other))} IN Q4` : 'LEVEL IN Q4' : 'QUARTER DATA UNAVAILABLE'}</p></div></article><article class="gr-snapshot-tile"><img src="${esc(logo(own))}" alt="" width="500" height="500"><div><h3>${esc(displayAbbr(own))} RUSH</h3><strong>${signed(rush)}</strong><p>${known(rush) ? `RUSHING YARDS VS ${esc(displayAbbr(other))}` : 'RUSHING DATA UNAVAILABLE'}</p></div></article><article class="gr-snapshot-tile"><img src="${esc(logo(other))}" alt="" width="500" height="500"><div><h3>${esc(displayAbbr(other))} PASS</h3><strong>${signed(pass)}</strong><p>${known(pass) ? `NET PASSING YARDS VS ${esc(displayAbbr(own))}` : 'PASSING DATA UNAVAILABLE'}</p></div></article></div></section>`;
+  }
+  function gameStory() {
+    const [own,other] = pair(), ownPeriods = quarters(own), otherPeriods = quarters(other);
+    const three = values => values.length >= 3 && values.slice(0,3).every(known) ? values.slice(0,3).reduce((sum,value) => sum + Number(value),0) : null;
+    const ownThree = three(ownPeriods), otherThree = three(otherPeriods), ownFourth = ownPeriods[3], otherFourth = otherPeriods[3];
+    const sentences = [];
+    if (known(ownThree) && known(otherThree)) sentences.push(ownThree === otherThree
+      ? `${identity(own).city} and ${identity(other).city} were tied ${fmt(ownThree)}–${fmt(otherThree)} after three quarters.`
+      : `${identity(own).city} ${ownThree < otherThree ? 'trailed' : 'led'} ${fmt(ownThree)}–${fmt(otherThree)} after three quarters.`);
+    if (known(ownFourth) && known(otherFourth)) sentences.push(ownFourth === otherFourth
+      ? `Both teams scored ${fmt(ownFourth)} points in the fourth quarter.`
+      : `${identity(ownFourth > otherFourth ? own : other).city} outscored ${identity(ownFourth > otherFourth ? other : own).city} ${fmt(Math.max(ownFourth,otherFourth))}–${fmt(Math.min(ownFourth,otherFourth))} in the fourth quarter.`);
+    return `<section class="gr-game-story"><h2>Game story</h2>${sentences.length ? sentences.map(sentence => `<p>${esc(sentence)}</p>`).join('') : '<p>Verified quarter-by-quarter evidence is unavailable. No game narrative is inferred.</p>'}<details class="gr-story-details"><summary>Derived game snapshot ${icon('chevron')}</summary>${snapshot()}</details></section>`;
   }
   function statDisplay(abbr,key) {
     const s = stats(abbr);
@@ -69,30 +91,45 @@
   const comparisonMetrics = [['Total offence','totalOffense'],['Net passing','netPassing'],['Rushing','rushing'],['Turnovers','turnovers'],['Third downs','thirdDown'],['Possession','possession'],['Penalties','penalties']];
   function comparison() {
     const sides = pair();
-    return `<section class="gr-panel gr-framed gr-comparison">${panelHeading('TEAM COMPARISON',`<img class="gr-heading-mark gr-heading-opponent" src="${esc(logo(sides[1]))}" alt="" width="500" height="500">`,sides[0])}<table><thead><tr><th scope="col">${esc(titleCity(sides[0]))}</th><th scope="col">STATISTIC</th><th scope="col">${esc(titleCity(sides[1]))}</th></tr></thead><tbody>${comparisonMetrics.map(([label,key],i) => `<tr class="${i === 0 ? 'is-highlighted' : ''}"><td data-gr-stat="${key}" data-gr-team="${esc(sides[0])}">${statDisplay(sides[0],key)}</td><th scope="row">${label}</th><td data-gr-stat="${key}" data-gr-team="${esc(sides[1])}">${statDisplay(sides[1],key)}</td></tr>`).join('')}</tbody></table></section>`;
+    return `<section class="gr-panel gr-framed gr-comparison">${panelHeading('Team statistics')}<table><thead><tr><th scope="col">${esc(displayAbbr(sides[0]))}</th><th scope="col">METRIC</th><th scope="col">${esc(displayAbbr(sides[1]))}</th></tr></thead><tbody>${comparisonMetrics.map(([label,key],i) => `<tr class="${i === 0 ? 'is-highlighted' : ''}"><td data-gr-stat="${key}" data-gr-team="${esc(sides[0])}">${statDisplay(sides[0],key)}</td><th scope="row">${label}</th><td data-gr-stat="${key}" data-gr-team="${esc(sides[1])}">${statDisplay(sides[1],key)}</td></tr>`).join('')}</tbody></table></section>`;
   }
   const performanceColumns = {passing:[['CMP/ATT','completionAttempt'],['YDS','passingYards'],['TD','passingTD'],['INT','interceptions']],rushing:[['ATT','rushingAttempts'],['YDS','rushingYards'],['AVG','rushingAverage'],['TD','rushingTD']],receiving:[['REC','receptions'],['YDS','receivingYards'],['TGT','targets'],['TD','receivingTD']]};
+  const allPerformanceColumns = [['PASS','passingYards'],['RUSH','rushingYards'],['REC','receivingYards'],['TD','touchdownsScored']];
   const boxColumns = {...performanceColumns,defensive:[['TACK','totalTackles'],['SOLO','soloTackles'],['SACK','defensiveSacks'],['TFL','tacklesForLoss']],kicking:[['FGM','fieldGoalsMade'],['FGA','fieldGoalAttempts'],['XPM','extraPointsMade'],['PTS','kickingPoints']],punting:[['PUNT','punts'],['YDS','puntYards'],['AVG','grossAvgPuntYards'],['IN20','puntsInside20']],kickReturns:[['RET','kickoffReturns'],['YDS','kickoffReturnYards'],['AVG','yardsPerKickoffReturn'],['TD','kickoffReturnTD']],puntReturns:[['RET','puntReturns'],['YDS','puntReturnYards'],['AVG','yardsPerPuntReturn'],['TD','puntReturnTD']],fumbles:[['FUM','fumbles'],['LOST','fumblesLost'],['REC','fumblesRecovered']],interceptions:[['INT','defensiveInterceptions'],['YDS','interceptionReturnYards'],['TD','interceptionTD']]};
   function playerValue(player,key) {
     const s = player.stats || {};
     if (key === 'completionAttempt') return known(s.completions) && known(s.passingAttempts) ? `${fmt(s.completions)}/${fmt(s.passingAttempts)}` : '—';
     if (key === 'rushingAverage') return known(s.rushingYards) && known(s.rushingAttempts) && Number(s.rushingAttempts)>0 ? fmt(Number(s.rushingYards)/Number(s.rushingAttempts),1) : '—';
+    if (key === 'touchdownsScored') return known(s.rushingTD) && known(s.receivingTD) ? fmt(Number(s.rushingTD)+Number(s.receivingTD)) : '—';
     return fmt(s[key],1);
   }
   function selectedPlayers() {
+    if (state.kind === 'all') {
+      const seen = new Set();
+      return playerRows().filter(player => {
+        const eligible = Object.keys(performanceColumns).some(kind => {
+          const marker = kind === 'passing' ? 'passingAttempts' : kind === 'rushing' ? 'rushingAttempts' : 'receptions';
+          return player.categories?.includes(kind) || player.statCategories?.includes(kind) || known(player.stats?.[marker]) || kind === 'receiving' && known(player.stats?.targets);
+        });
+        const id = String(player.id);
+        if (!eligible || seen.has(id)) return false;
+        seen.add(id); return true;
+      });
+    }
     const marker = state.kind === 'passing' ? 'passingAttempts' : state.kind === 'rushing' ? 'rushingAttempts' : 'receptions';
     return playerRows().filter(player => player.categories?.includes(state.kind) || player.statCategories?.includes(state.kind) || known(player.stats?.[marker]) || state.kind === 'receiving' && known(player.stats?.targets)).sort((a,b) => Number(b.stats?.[state.kind === 'passing' ? 'passingYards' : state.kind === 'rushing' ? 'rushingYards' : 'receivingYards'] ?? -Infinity) - Number(a.stats?.[state.kind === 'passing' ? 'passingYards' : state.kind === 'rushing' ? 'rushingYards' : 'receivingYards'] ?? -Infinity));
   }
   function performance() {
-    const columns = performanceColumns[state.kind], rows = selectedPlayers();
+    const columns = state.kind === 'all' ? allPerformanceColumns : performanceColumns[state.kind], rows = selectedPlayers();
     if (state.expanded !== null && !rows.some(p => String(p.id) === String(state.expanded))) state.expanded = rows[0]?.id || null;
-    const teams = `<div class="gr-team-switch" role="group" aria-label="Player performance team">${pair().map(abbr => `<button class="gr-button" data-gr-team="${esc(abbr)}" aria-pressed="${state.performanceTeam === abbr}">${esc(titleCity(abbr))}</button>`).join('')}</div>`;
-    return `<section class="gr-panel gr-framed gr-performance" id="game-report-performances">${panelHeading('PLAYER PERFORMANCES',teams)}<div class="gr-performance-tabs" role="group" aria-label="Player statistical category">${Object.keys(performanceColumns).map(kind => `<button class="gr-button" data-gr-kind="${kind}" aria-pressed="${state.kind === kind}">${kind[0].toUpperCase()+kind.slice(1)}</button>`).join('')}</div><div class="gr-player-table-head" aria-hidden="true"><span>PLAYER</span>${columns.map(([label]) => `<span>${label}</span>`).join('')}<span></span></div><div class="gr-player-list">${rows.map(player => {const expanded = String(state.expanded) === String(player.id);return `<article class="gr-player ${expanded ? 'is-expanded' : ''}"><button class="gr-player-row" data-gr-player="${esc(player.id)}" aria-expanded="${expanded}" aria-controls="gr-player-detail-${esc(player.id)}"><span class="gr-player-identity"><img src="${esc(logo(state.performanceTeam))}" alt="" width="500" height="500"><span><strong>${esc(player.name)}</strong><small>${esc(player.position || 'Position unavailable')}${player.jersey ? ` · #${esc(player.jersey)}` : ''}</small></span></span>${columns.map(([,key]) => `<b>${playerValue(player,key)}</b>`).join('')}${icon('chevron')}</button><div class="gr-player-expansion" id="gr-player-detail-${esc(player.id)}" ${expanded ? '' : 'hidden'}><small>${esc(report.season)} W${esc(report.week)} · Source-recorded game stats</small>${namedButton('OPEN PLAYER PROFILE','profile',`data-player="${esc(player.id)}"`)}</div></article>`;}).join('') || '<p class="gr-empty">Verified player statistics unavailable for this team and category. Missing rows are not zero or DNP.</p>'}</div></section>`;
+    const teams = `<div class="gr-team-switch" role="group" aria-label="Player performance team">${pair().map(abbr => `<button class="gr-button" data-gr-team="${esc(abbr)}" aria-pressed="${state.performanceTeam === abbr}">${esc(identity(abbr).city)}</button>`).join('')}</div>`;
+    return `<section class="gr-panel gr-framed gr-performance" id="game-report-performances">${panelHeading('Player performances',teams)}<div class="gr-performance-tabs" role="group" aria-label="Player statistical category">${['all',...Object.keys(performanceColumns)].map(kind => `<button class="gr-button" data-gr-kind="${kind}" aria-pressed="${state.kind === kind}">${kind[0].toUpperCase()+kind.slice(1)}</button>`).join('')}</div><div class="gr-player-table-head" aria-hidden="true"><span>PLAYER</span>${columns.map(([label]) => `<span>${label}</span>`).join('')}<span></span></div><div class="gr-player-list">${rows.map(player => {const expanded = String(state.expanded) === String(player.id);return `<article class="gr-player ${expanded ? 'is-expanded' : ''}" data-gr-player-kind="${state.kind}"><button class="gr-player-row" data-gr-player="${esc(player.id)}" aria-expanded="${expanded}" aria-controls="gr-player-detail-${esc(player.id)}"><span class="gr-player-identity"><img src="${esc(logo(state.performanceTeam))}" alt="" width="500" height="500"><span><strong>${esc(player.name)}</strong><small>${esc(player.position || 'Position unavailable')}${player.jersey ? ` · #${esc(player.jersey)}` : ''}</small></span></span>${columns.map(([,key]) => `<b data-gr-performance-field="${key}">${playerValue(player,key)}</b>`).join('')}${icon('chevron')}</button><div class="gr-player-expansion" id="gr-player-detail-${esc(player.id)}" ${expanded ? '' : 'hidden'}><small>${esc(report.season)} W${esc(report.week)} · Source-recorded game stats</small>${namedButton('Open player profile','profile',`data-player="${esc(player.id)}"`)}</div></article>`;}).join('') || '<p class="gr-empty">Verified player statistics unavailable for this team and category. Missing rows are not zero or DNP.</p>'}</div>${state.kind === 'all' ? '<p class="gr-context">PASS / RUSH / REC are yards. TD = rushing + receiving touchdowns scored, only when both source fields are known; passing touchdowns are separate. Source order; no cross-position ranking.</p>' : ''}</section>`;
   }
   function scoring() {
     const labels = [['Q1',1],['HALF',2],['Q3',3],['FINAL',null]];
     const cumulative = (abbr,count) => {const qs = quarters(abbr).slice(0,count);return qs.length === count && qs.every(known) ? qs.reduce((sum,n)=>sum+Number(n),0) : null;};
-    return `<section class="gr-panel gr-framed gr-scoring">${panelHeading('SCORING BY QUARTER')}<div class="gr-cumulative-grid">${labels.map(([label,count]) => `<article class="gr-cumulative"><h3>${label}</h3>${pair().map(abbr => `<div><img src="${esc(logo(abbr))}" alt="" width="500" height="500"><span>${esc(displayAbbr(abbr))}</span><b>${fmt(count ? cumulative(abbr,count) : score(abbr))}</b></div>`).join('')}</article>`).join('')}</div><div class="gr-two-actions">${gem('OPEN FULL BOX SCORE','box-score')}${gem('OPEN PLAY-BY-PLAY','plays')}</div></section>`;
+    const events = listData('plays').filter(play => play.scoringPlay === true);
+    return `<details class="gr-panel gr-framed gr-scoring gr-scoring-collapse"><summary>Scoring summary ${icon('chevron')}</summary><div class="gr-scoring-content"><h3>Cumulative score</h3><div class="gr-cumulative-grid">${labels.map(([label,count]) => `<article class="gr-cumulative"><h3>${label}</h3>${pair().map(abbr => `<div><img src="${esc(logo(abbr))}" alt="" width="500" height="500"><span>${esc(displayAbbr(abbr))}</span><b>${fmt(count ? cumulative(abbr,count) : score(abbr))}</b></div>`).join('')}</article>`).join('')}</div><h3>Source-recorded scoring plays</h3>${events.length ? `<ol class="gr-scoring-events">${events.map(play => `<li><strong>${known(play.quarter ?? play.period?.number ?? play.period) ? `Q${fmt(play.quarter ?? play.period?.number ?? play.period)}` : 'Period unavailable'} · ${esc(play.clock?.displayValue || play.clock || 'Clock unavailable')}</strong><p>${esc(play.text || play.description || 'Description unavailable')}</p>${known(play.awayScore) && known(play.homeScore) ? `<small>${esc(displayAbbr(report.away_team))} ${fmt(play.awayScore)} · ${esc(displayAbbr(report.home_team))} ${fmt(play.homeScore)}</small>` : ''}</li>`).join('')}</ol>` : '<p>Verified scoring-play details unavailable. No scoring events are invented.</p>'}</div></details>`;
   }
   function availabilityText() {
     const availability = report?.availability;
@@ -102,7 +139,7 @@
   function ancillary() {
     return `<section class="gr-ancillary gr-framed"><button class="gr-information" data-gr-action="availability">${icon('medical')}<span><strong>AVAILABILITY &amp; PARTICIPATION</strong><small>${availabilityText()}</small></span>${icon('chevron')}</button><div class="gr-source-card">${icon('document')}<span><strong>SOURCES</strong><small>Game-specific evidence<br>— = unavailable</small></span>${namedButton('VIEW SOURCES','sources')}</div></section>`;
   }
-  function overview() {return snapshot()+comparison()+performance()+scoring()+ancillary();}
+  function overview() {return gameStory()+comparison()+performance()+`<div class="gr-editorial-actions">${namedButton('Open full box score','box-score','','gr-full-box')}<div class="gr-two-actions">${namedButton('Explore drives','drives')}${namedButton('View play-by-play','plays')}</div></div>`+scoring()+ancillary()+`<div class="gr-editorial-source-line"><button data-gr-action="back">${icon('back')} Back to ${state.returnRoute.startsWith('matchup/') ? 'matchup research' : state.returnRoute === 'nfl' ? 'NFL' : state.returnRoute === 'home' ? 'Home' : 'team form'} <span aria-hidden="true">↗</span></button></div>`;}
   function boxScore() {
     return `<section class="gr-panel gr-framed">${panelHeading('FULL BOX SCORE')}<p class="gr-context">${esc(report.season)} · Week ${esc(report.week)} · ${esc(displayAbbr(report.away_team))} at ${esc(displayAbbr(report.home_team))}. Source-recorded categories; unavailable fields remain —.</p>${pair().map(abbr => `<section class="gr-box-team"><h3><img src="${esc(logo(abbr))}" alt="" width="500" height="500">${esc(fullName(abbr))}</h3>${Object.entries(boxColumns).map(([kind,cols]) => {const rows = playerRows(abbr).filter(p => p.categories?.includes(kind) || p.statCategories?.includes(kind) || known(p.stats?.[cols[1][1]]) && performanceColumns[kind] || kind === 'receiving' && known(p.stats?.targets));return `<h4>${esc(kind.replace(/([A-Z])/g,' $1').toUpperCase())}</h4><table class="gr-box-table"><thead><tr><th scope="col">PLAYER</th>${cols.map(([label]) => `<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${rows.map(p => `<tr><th scope="row"><button data-gr-action="profile" data-player="${esc(p.id)}" data-player-team="${esc(abbr)}">${esc(p.name)} ${icon('chevron')}</button></th>${cols.map(([,key]) => `<td>${playerValue(p,key)}</td>`).join('')}</tr>`).join('') || `<tr><td colspan="${cols.length+1}">Verified ${esc(kind)} rows unavailable.</td></tr>`}</tbody></table>`;}).join('')}</section>`).join('')}<p class="gr-context">Open a player profile for every published statistical category, including defensive and special-teams values where available.</p>${gem('VIEW TEAM COMPARISON','comparison')}</section>${comparison()}${ancillary()}`;
   }
@@ -124,11 +161,11 @@
     const focused = holder.contains(document.activeElement) ? document.activeElement : null;
     const focusId = focused?.id, focusData = focused?.dataset ? {...focused.dataset} : null;
     if (!report) {
-      holder.innerHTML = `${header()}<section class="gr-panel gr-framed gr-loading"><h1>GAME REPORT</h1><p role="status">${esc(error || (loading ? 'Loading the selected source-backed game…' : 'Select a completed game from team history to open its report.'))}</p>${error ? namedButton('RETRY VERIFIED REPORT','refresh') : ''}</section>${navigation()}`;
+      holder.innerHTML = `<div class="gr-editorial-masthead">${header()}</div><section class="gr-panel gr-framed gr-loading"><h1>Game report</h1><p role="status">${esc(error || (loading ? 'Loading the selected source-backed game…' : 'Select a completed game from team history to open its report.'))}</p>${error ? namedButton('Retry verified report','refresh') : ''}</section>${navigation()}`;
       return;
     }
     if (!pair().includes(state.performanceTeam)) state.performanceTeam = state.team;
-    holder.innerHTML = `${header()}${hero()}${error ? `<p class="gr-retained" role="status">${esc(error)}</p>` : ''}${tabs()}${['overview','box-score','drives','plays'].map(tab => `<div id="game-report-panel-${tab}" role="tabpanel" aria-labelledby="game-report-tab-${tab}" ${state.tab === tab ? '' : 'hidden'}>${state.tab === tab ? ({overview, 'box-score':boxScore,drives,plays}[tab])() : ''}</div>`).join('')}${navigation()}`;
+    holder.innerHTML = `<div class="gr-editorial-masthead">${header()}${hero()}</div>${quarterTable()}${error ? `<p class="gr-retained" role="status">${esc(error)}</p>` : ''}${tabs()}${['overview','box-score','drives','plays'].map(tab => `<div id="game-report-panel-${tab}" role="tabpanel" aria-labelledby="game-report-tab-${tab}" ${state.tab === tab ? '' : 'hidden'}>${state.tab === tab ? ({overview, 'box-score':boxScore,drives,plays}[tab])() : ''}</div>`).join('')}${navigation()}`;
     if (scroll) scroll.scrollTop = oldScroll;
     if (focusId) $(focusId)?.focus({preventScroll:true});
     else if (focusData) {
@@ -161,9 +198,13 @@
     return dialog;
   }
   function showDialog(action,node) {
-    if (!report && action !== 'sources') return;
+    if (!report && !['sources','menu'].includes(action)) return;
     const dialog = ensureDialog(); let title = 'GAME REPORT', content = '';
-    if (action === 'sources') {title='SOURCES & FRESHNESS';content=sourceContent();}
+    if (action === 'menu') {
+      title = 'Game report navigation';
+      content = `<div class="gr-menu-actions">${namedButton('Back to research','back')}${namedButton('Home','home')}${namedButton('NFL ladder','nfl')}${namedButton(`${navigationIdentity(state.team).city} team details`,'team')}${namedButton('Full box score','box-score',report ? '' : 'disabled')}${namedButton('Drives','drives',report ? '' : 'disabled')}${namedButton('Play-by-play','plays',report ? '' : 'disabled')}${namedButton('Availability & participation','availability',report ? '' : 'disabled')}${namedButton('Sources & freshness','sources')}${namedButton('Refresh verified report','refresh')}</div>`;
+    }
+    else if (action === 'sources') {title='SOURCES & FRESHNESS';content=sourceContent();}
     else if (action === 'profile') {
       const abbr = node.dataset.playerTeam || state.performanceTeam, player = playerRows(abbr).find(item => String(item.id) === String(node.dataset.player));
       title = player ? `${player.name} · ${displayAbbr(abbr)}` : 'PLAYER UNAVAILABLE';
@@ -179,7 +220,7 @@
   function writeRoute() {
     const q = new URLSearchParams({team:state.team});if(state.game)q.set('game',state.game);if(state.tab !== 'overview')q.set('tab',state.tab);
     if(state.returnRoute !== `team/${state.team}`)q.set('return',state.returnRoute);
-    if(state.performanceTeam !== state.team)q.set('players',state.performanceTeam);if(state.kind !== 'passing')q.set('kind',state.kind);
+    if(state.performanceTeam !== state.team)q.set('players',state.performanceTeam);if(state.kind !== 'all')q.set('kind',state.kind);
     history.replaceState(null,'',`#game-report?${q}`);
   }
   function changeTab(tab,focus = true) {
@@ -192,7 +233,7 @@
     const selectedGame = q.get('game'), changed = abbr !== state.team || selectedGame !== state.game;
     if(changed){generation++;report=null;error=null;state.expanded=undefined;}
     state.team = /^[A-Z]{2,3}$/.test(abbr) ? abbr : 'DAL';state.game=selectedGame;state.tab=q.get('tab')==='box'?'box-score':['overview','box-score','drives','plays'].includes(q.get('tab'))?q.get('tab'):'overview';
-    state.performanceTeam = /^[A-Z]{2,3}$/.test(q.get('players') || '') ? q.get('players') : state.team;state.kind=['passing','rushing','receiving'].includes(q.get('kind'))?q.get('kind'):'passing';
+    state.performanceTeam = /^[A-Z]{2,3}$/.test(q.get('players') || '') ? q.get('players') : state.team;state.kind=['all','passing','rushing','receiving'].includes(q.get('kind'))?q.get('kind'):'all';
     state.returnRoute=safeReturn(q.get('return'),state.team);render();return refresh(false,changed);
   }
   function enter({team='DAL',gameId,tab='overview',returnRoute=location.hash.slice(1)} = {}) {
@@ -256,20 +297,21 @@
     if(node.dataset.grKind){state.kind=node.dataset.grKind;state.expanded=undefined;writeRoute();render();return;}
     if(node.dataset.grPlayer){state.expanded=String(state.expanded)===node.dataset.grPlayer?null:node.dataset.grPlayer;render();return;}
     const action=node.dataset.grAction;
+    if(node.closest('#game-report-dialog')&&['back','team','nfl','home','matchups','box-score','drives','plays','insights','comparison'].includes(action))$('game-report-dialog')?.close();
     if(action==='back')return window.PDApp?.openPage(safeReturn(state.returnRoute));
     if(action==='team')return window.PDApp?.openPage(`team/${state.team}`);
     if(action==='nfl')return window.PDApp?.openLadder(state.team,true);
     if(action==='home')return window.PDApp?.openPage('home');
     if(action==='matchups')return window.MatchupBreakdown?.enter(state.team,report?.id,'form');
-    if(action==='refresh'){node.setAttribute('aria-busy','true');return refresh(true);}
+    if(action==='refresh'){node.setAttribute('aria-busy','true');return refresh(true).finally(()=>{if(node.isConnected)node.setAttribute('aria-busy','false');});}
     if(['box-score','drives','plays'].includes(action))return changeTab(action);
     if(action==='insights'){changeTab('overview',false);$('game-report-performances')?.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});return;}
     if(action==='comparison'){changeTab('overview',false);page()?.querySelector('.gr-comparison')?.scrollIntoView({block:'center',behavior:'auto'});return;}
-    if(['sources','profile','availability'].includes(action))showDialog(action,node);
+    if(['sources','profile','availability','menu'].includes(action))showDialog(action,node);
   });
   document.addEventListener('keydown',event=>{const list=event.target.closest('.gr-tabs');if(!list||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;const items=[...list.querySelectorAll('[role="tab"]')],n=items.indexOf(document.activeElement);if(n<0)return;event.preventDefault();items[event.key==='Home'?0:event.key==='End'?items.length-1:(n+(event.key==='ArrowRight'?1:-1)+items.length)%items.length].click();});
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  function updateMotion(){if(page())page().dataset.grMotion=!document.hidden&&active()&&!reduced.matches?'running':'paused';}
+  function updateMotion(){if(page()?.classList.contains('game-report-editorial-page')){page().dataset.grMotion='paused';return;}if(page())page().dataset.grMotion=!document.hidden&&active()&&!reduced.matches?'running':'paused';}
   reduced.addEventListener?.('change',updateMotion);
   document.addEventListener('pd:route-change',event=>{updateMotion();if(event.detail?.page!=='game-report'&&$('game-report-dialog')?.open)$('game-report-dialog').close();});
   document.addEventListener('visibilitychange',()=>{updateMotion();if(!document.hidden&&active())refresh();});
