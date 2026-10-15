@@ -32,6 +32,18 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: main
+          # Fetch only pipeline inputs; preserve the full repository on origin.
+          # Sparse checkout automatically uses partial clone (blob:none).
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/refresh-standings.py
+            /scripts/verify-pages-deployment.py
+            /qa/standings.test.py
+            /index.html
+            /404.html
+            /assets/*.js
+            /assets/*.css
+            /assets/data/*.json
       - name: Fetch and validate standings independently of player research
         env:
           SCHEDULE: ${{ github.event.schedule }}
