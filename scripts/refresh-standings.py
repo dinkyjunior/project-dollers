@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """Refresh standings independently of rosters, player statistics and reports.
 
-Only the public nflverse regular-season schedule is required. A failed request,
-invalid season, incomplete schedule or disappearing final preserves the last
-validated file. Conditional GETs avoid redownloading an unchanged source. The
-daily workflow can pass --force to retrieve and validate the complete entity.
-
-Optional --official-standings accepts a locally captured, normalized ESPN/NFL
-record export; no official ranking or tie-break order is inferred from records.
+Records come from the public nflverse schedule. ESPN's explicit playoffSeed
+supplies the current conference order; NFL.com independently checks all records
+and points. All three sources must validate before replacement. Rank differences
+between ESPN and NFL.com are disclosed, never recomputed from points. Conditional
+GETs avoid unchanged downloads; --force fetches every complete source entity.
 """
 import argparse
 import collections
@@ -15,10 +13,12 @@ import csv
 import datetime as dt
 from fractions import Fraction
 import hashlib
+from html.parser import HTMLParser
 import io
 import json
 import os
 from pathlib import Path
+import re
 import ssl
 import tempfile
 import urllib.error
@@ -28,6 +28,8 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+ESPN_SOURCE_ID = "espn_conference_standings"
+NFL_SOURCE_ID = "nfl_conference_standings"
 UTC = dt.timezone.utc
 ET = ZoneInfo("America/New_York")
 MAX_SOURCE_BYTES = 12 * 1024 * 1024
@@ -94,6 +96,235 @@ def parse_games(body):
     if not REQUIRED_COLUMNS.issubset(reader.fieldnames or []):
         raise ValueError("Schedule CSV is missing required game/result columns")
     return list(reader)
+
+
+def provider_url(provider, season):
+    if provider == "ESPN":
+        return f"https://site.api.espn.com/apis/v2/sports/football/nfl/standings?season={season}&type=2&level=2"
+    if provider == "NFL":
+        return f"https://www.nfl.com/standings/conference/{season}/REG"
+    raise ValueError("Unexpected standings provider")
+
+
+def fetch_provider(provider, season, previous=None, force=False, opener=urllib.request.urlopen):
+    """Fetch official rank proof even if the independent game CSV is unchanged."""
+    url = provider_url(provider, season)
+    source_id = ESPN_SOURCE_ID if provider == "ESPN" else NFL_SOURCE_ID
+    prior = next((item for item in (previous or {}).get("sources", []) if item.get("id") == source_id), None)
+    saved = (previous or {}).get("providerStandings", {}).get(provider)
+    headers = {"User-Agent": "ProjectDollarStandings/2.0 public-source-audit"}
+    if prior and saved and not force and prior.get("url") == url:
+        if prior.get("etag"):
+            headers["If-None-Match"] = prior["etag"]
+        elif prior.get("lastModified"):
+            headers["If-Modified-Since"] = prior["lastModified"]
+    request = urllib.request.Request(url, headers=headers)
+    try:
+        with opener(request, timeout=60, context=ssl_context()) as response:
+            if response.status == 304 and prior and saved and not force:
+                print(json.dumps({"provider": provider, "httpStatus": 304, "checkedAt": iso(dt.datetime.now(UTC))}))
+                return None, prior
+            if response.status != 200:
+                raise ValueError(f"Unexpected {provider} standings HTTP status {response.status}")
+            body = response.read(4 * 1024 * 1024 + 1)
+            if not body or len(body) > 4 * 1024 * 1024:
+                raise ValueError(f"Empty or oversized {provider} standings response")
+            retrieved = iso(dt.datetime.now(UTC))
+            source = {"id": source_id, "url": url, "provider": provider, "status": "verified", "season": season,
+                      "retrievedAt": retrieved, "checkedAt": retrieved, "httpStatus": 200,
+                      "sha256": hashlib.sha256(body).hexdigest(), "bytes": len(body),
+                      "etag": response.headers.get("ETag"), "lastModified": response.headers.get("Last-Modified")}
+            if prior and saved and source["sha256"] == prior.get("sha256"):
+                print(json.dumps({"provider": provider, "httpStatus": 200, "status": "retrieved-unchanged", "checkedAt": retrieved}))
+                source = prior
+            return body, source
+    except urllib.error.HTTPError as exc:
+        if exc.code == 304 and prior and saved and not force:
+            print(json.dumps({"provider": provider, "httpStatus": 304, "checkedAt": iso(dt.datetime.now(UTC))}))
+            return None, prior
+        raise
+
+
+def integer(value, label, maximum=17):
+    if isinstance(value, bool) or value is None:
+        raise ValueError(f"Missing or invalid {label}")
+    number = float(value)
+    if not number.is_integer() or not 0 <= number <= maximum:
+        raise ValueError(f"Invalid {label}")
+    return int(number)
+
+
+def validate_provider(official, identities, season):
+    if official.get("season") != season:
+        raise ValueError("Official standings belong to another season")
+    teams = official.get("teams", [])
+    expected = {team["abbr"]: team for team in identities}
+    if len(teams) != 32 or {team.get("abbr") for team in teams} != set(expected):
+        raise ValueError("Official standings must contain all 32 distinct teams")
+    for team in teams:
+        if team.get("conference") != expected[team["abbr"]]["conference"]:
+            raise ValueError("Official standings conference differs from team identity")
+        for field in ("w", "l", "ties"):
+            if type(team.get(field)) is not int or not 0 <= team[field] <= 17:
+                raise ValueError("Invalid official record count")
+        if sum(team[field] for field in ("w", "l", "ties")) > 17:
+            raise ValueError("Official team record exceeds regular-season games")
+        if type(team.get("rank")) is not int or not 1 <= team["rank"] <= 16:
+            raise ValueError("Invalid official conference rank")
+    for conference in ("AFC", "NFC"):
+        if sorted(team["rank"] for team in teams if team["conference"] == conference) != list(range(1, 17)):
+            raise ValueError("Official conference ranks must contain every position 1 through 16 exactly once")
+    return official
+
+
+def parse_espn(body, identities, season):
+    data = json.loads(body)
+    if data.get("season", {}).get("year") != season:
+        raise ValueError("ESPN response season differs from requested season")
+    teams, conferences = [], set()
+    for conference in data.get("children", []):
+        abbr = conference.get("abbreviation")
+        if abbr not in ("AFC", "NFC") or abbr in conferences:
+            raise ValueError("Unexpected or duplicate ESPN conference")
+        conferences.add(abbr)
+        standings = conference.get("standings", {})
+        if standings.get("season") != season or standings.get("seasonType") != 2:
+            raise ValueError("ESPN standings are not the requested regular season")
+        for entry in standings.get("entries", []):
+            stats = {item["name"]: item.get("value") for item in entry.get("stats", [])}
+            team = entry.get("team", {}).get("abbreviation")
+            team = {"LAR": "LA", "WSH": "WAS"}.get(team, team)
+            teams.append({"abbr": team, "conference": abbr,
+                          "w": integer(stats.get("wins"), "ESPN wins"),
+                          "l": integer(stats.get("losses"), "ESPN losses"),
+                          "ties": integer(stats.get("ties"), "ESPN ties"),
+                          # The raw API entry array is not necessarily seed order.
+                          "rank": integer(stats.get("playoffSeed"), "ESPN playoffSeed", 16)})
+    return validate_provider({"provider": "ESPN", "season": season, "teams": teams}, identities, season)
+
+
+class StandingsTableParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.rows, self.row, self.cell = [], None, None
+        self.canonical_urls, self.selected_phases, self.select_id = [], [], None
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "link" and "canonical" in attributes.get("rel", "").lower().split():
+            self.canonical_urls.append(attributes.get("href", "").lower().rstrip("/"))
+        elif tag == "select":
+            self.select_id = attributes.get("id")
+        elif tag == "option" and self.select_id == "phase-dropdown" and "selected" in attributes:
+            self.selected_phases.append(attributes.get("value", "").lower().rstrip("/"))
+        if tag == "tr":
+            self.row = []
+        elif tag in ("td", "th"):
+            self.cell = []
+
+    def handle_data(self, text):
+        if self.cell is not None:
+            self.cell.append(text)
+
+    def handle_endtag(self, tag):
+        if tag == "select":
+            self.select_id = None
+        if tag in ("td", "th") and self.row is not None and self.cell is not None:
+            self.row.append(" ".join(" ".join(self.cell).split()))
+            self.cell = None
+        elif tag == "tr" and self.row is not None:
+            self.rows.append(self.row)
+            self.row = None
+
+
+def parse_nfl(body, identities, season):
+    text = body.decode("utf-8")
+    if not re.search(rf"<title>\s*{season} NFL Conference Standings\s*</title>", text, re.IGNORECASE):
+        raise ValueError("NFL.com response does not identify the requested season and conference standings")
+    parser = StandingsTableParser()
+    parser.feed(text)
+    expected_path = f"/standings/conference/{season}/reg"
+    if (parser.canonical_urls != [f"https://www.nfl.com{expected_path}"]
+            or parser.selected_phases != [expected_path]):
+        raise ValueError("NFL.com canonical URL and selected phase must identify the requested regular season")
+    teams, conference = [], None
+    for row in parser.rows:
+        if row and row[0] in ("AFC Team", "NFC Team"):
+            conference = row[0][:3]
+            if row[1:8] != ["W", "L", "T", "RANK", "PCT", "PF", "PA"]:
+                raise ValueError("NFL.com standings column contract changed")
+        elif conference and len(row) >= 8:
+            matched = [team for team in identities if row[0].startswith(team["fullName"])]
+            if len(matched) != 1:
+                raise ValueError("NFL.com standings team identity is not unique")
+            teams.append({"abbr": matched[0]["abbr"], "conference": conference,
+                          "w": integer(row[1], "NFL wins"), "l": integer(row[2], "NFL losses"),
+                          "ties": integer(row[3], "NFL ties"), "rank": integer(row[4], "NFL rank", 16),
+                          "pointsFor": integer(row[6], "NFL points for", 1500),
+                          "pointsAgainst": integer(row[7], "NFL points against", 1500)})
+    return validate_provider({"provider": "NFL", "season": season, "teams": teams}, identities, season)
+
+
+def apply_provider_order(snapshot, espn, nfl, espn_source, nfl_source):
+    """Apply verified ESPN seed positions only to the current browsing week."""
+    for official in (espn, nfl):
+        validate_provider(official, snapshot["teams"], snapshot["season"])
+    current = snapshot["weeks"][str(snapshot["currentBrowsingWeek"])]
+    derived = {row["abbr"]: row for rows in current["conferences"].values() for row in rows}
+    provider_rows = {}
+    for official in (espn, nfl):
+        provider_rows[official["provider"]] = {row["abbr"]: row for row in official["teams"]}
+        fields = ("w", "l", "ties", "pointsFor", "pointsAgainst") if official["provider"] == "NFL" else ("w", "l", "ties")
+        for abbr, row in provider_rows[official["provider"]].items():
+            if any(row[field] != derived[abbr][field] for field in fields):
+                raise ValueError(f"{official['provider']} {abbr} records differ from independently sourced finals")
+    order = {}
+    for conference in ("AFC", "NFC"):
+        ranked = sorted((row for row in espn["teams"] if row["conference"] == conference), key=lambda row: row["rank"])
+        order[conference] = [row["abbr"] for row in ranked]
+        current["conferences"][conference] = []
+        for row in ranked:
+            updated = dict(derived[row["abbr"]])
+            updated.update(rank=row["rank"], playoffSeed=row["rank"], sortIndex=row["rank"])
+            current["conferences"][conference].append(updated)
+    disagreements = [{"abbr": abbr, "espnRank": row["rank"], "nflRank": provider_rows["NFL"][abbr]["rank"]}
+                     for abbr, row in sorted(provider_rows["ESPN"].items())
+                     if row["rank"] != provider_rows["NFL"][abbr]["rank"]]
+    snapshot["ranking"] = {"method": "provider-conference-order", "official": True, "provider": "ESPN",
+        "sourceId": ESPN_SOURCE_ID, "source": espn_source,
+        "note": "ESPN conference order; ranks are supplied by ESPN, not recalculated from points."}
+    snapshot["conferenceOrder"] = {"provider": "ESPN", "sourceId": ESPN_SOURCE_ID, "season": snapshot["season"],
+        "week": snapshot["currentBrowsingWeek"], "throughWeek": current["throughWeek"],
+        "retrievedAt": espn_source["retrievedAt"], "conferences": order}
+    snapshot["sources"] = [snapshot["source"], espn_source, nfl_source]
+    snapshot["providerStandings"] = {"ESPN": espn, "NFL": nfl}
+    snapshot["crossCheck"] = {"status": "records-match", "provider": "NFL", "url": nfl_source["url"],
+        "retrievedAt": nfl_source["retrievedAt"], "recordsCompared": 32, "mismatches": [],
+        "orderDisagreements": disagreements,
+        "note": (f"All 32 records and PF/PA match NFL.com and nflverse finals; {len(disagreements)} conference ranks "
+                 "differ between ESPN and NFL.com. ESPN supplies the display order.")}
+    return snapshot
+
+
+def retain_unchanged_provider_proof(official, source, previous):
+    """Keep the authentic original proof when only HTML/JSON chrome changes.
+
+    New GETs are still performed and logged. Retention requires every normalized
+    season, team identity, record, point total and provider rank to remain equal.
+    API entry-array order is not part of conference ranking authority.
+    """
+    provider = official["provider"]
+    saved = (previous or {}).get("providerStandings", {}).get(provider)
+    prior = next((item for item in (previous or {}).get("sources", []) if item.get("id") == source["id"]), None)
+    def semantic(value):
+        return {**value, "teams": sorted(value["teams"], key=lambda team: team["abbr"])}
+    if saved and prior and semantic(official) == semantic(saved):
+        if source.get("sha256") != prior.get("sha256"):
+            print(json.dumps({"provider": provider, "status": "validated-records-and-ranks-unchanged",
+                              "checkedAt": source["checkedAt"], "httpStatus": source["httpStatus"],
+                              "retainedProofRetrievedAt": prior["retrievedAt"]}))
+        return saved, prior
+    return official, source
 
 
 def score(value):
@@ -257,11 +488,14 @@ def build_snapshot(rows, identities, season, source, now, require_full_schedule=
             "schedule": games}
 
 
-def validate_snapshot(snapshot, previous=None):
+def validate_snapshot(snapshot, previous=None, require_official=False):
     if snapshot.get("schemaVersion") != 1 or not snapshot.get("weeks"):
         raise ValueError("Invalid standings snapshot schema")
-    if snapshot.get("ranking", {}).get("official") is not False:
-        raise ValueError("Derived records must not claim official NFL seeding")
+    is_official = snapshot.get("ranking", {}).get("official") is True
+    if require_official and not is_official:
+        raise ValueError("Current standings require verified ESPN conference order")
+    if is_official and snapshot["ranking"].get("method") != "provider-conference-order":
+        raise ValueError("Official ranking requires a verified provider conference-order contract")
     source = snapshot["source"]
     if source.get("url") != SOURCE_URL or source.get("status") != "verified" or len(source.get("sha256", "")) != 64:
         raise ValueError("Invalid standings source provenance")
@@ -271,7 +505,7 @@ def validate_snapshot(snapshot, previous=None):
     if any(game.get("status") != "final" or game.get("home_score") is None or game.get("away_score") is None
            for game in snapshot["games"]):
         raise ValueError("Standings results must contain genuine two-sided finals")
-    for week in snapshot["weeks"].values():
+    for week_number, week in snapshot["weeks"].items():
         all_rows = sum(week["conferences"].values(), [])
         if len(all_rows) != 32 or len({row["abbr"] for row in all_rows}) != 32:
             raise ValueError("Standings must contain 32 distinct teams")
@@ -282,6 +516,24 @@ def validate_snapshot(snapshot, previous=None):
         if wins != losses or wins + ties // 2 != week["coverage"]["finalGames"] or ties % 2:
             raise ValueError("League wins/losses/ties do not reconcile to final games")
         expected = conference_records(snapshot["teams"], [game for game in snapshot["games"] if game["week"] <= week["throughWeek"]])
+        if is_official and int(week_number) == snapshot["currentBrowsingWeek"]:
+            sources = {item["id"]: item for item in snapshot.get("sources", [])}
+            for source_id, provider in ((ESPN_SOURCE_ID, "ESPN"), (NFL_SOURCE_ID, "NFL")):
+                proof = sources.get(source_id, {})
+                if (proof.get("url") != provider_url(provider, snapshot["season"]) or proof.get("provider") != provider
+                        or proof.get("season") != snapshot["season"] or proof.get("status") != "verified"
+                        or proof.get("httpStatus") != 200 or not re.fullmatch(r"[0-9a-f]{64}", proof.get("sha256", ""))):
+                    raise ValueError("Missing or invalid official provider source provenance")
+                timestamp(proof["retrievedAt"])
+            verification = {"source": snapshot["source"], "teams": snapshot["teams"], "season": snapshot["season"],
+                "currentBrowsingWeek": snapshot["currentBrowsingWeek"],
+                "weeks": {week_number: {"throughWeek": week["throughWeek"], "conferences": expected}}}
+            apply_provider_order(verification, snapshot["providerStandings"]["ESPN"], snapshot["providerStandings"]["NFL"],
+                                 sources[ESPN_SOURCE_ID], sources[NFL_SOURCE_ID])
+            expected = verification["weeks"][week_number]["conferences"]
+            for key in ("ranking", "conferenceOrder", "crossCheck"):
+                if snapshot.get(key) != verification[key]:
+                    raise ValueError("Official order metadata does not reconcile to verified provider records")
         if week["conferences"] != expected:
             raise ValueError("Team records, points or order do not reconcile to sourced finals")
     if previous and previous.get("season") == snapshot["season"]:
@@ -347,7 +599,7 @@ def refresh(output, identity_path, force=False, check=False, official_path=None)
     if check:
         if not previous:
             raise ValueError("No saved standings snapshot exists")
-        validate_snapshot(previous)
+        validate_snapshot(previous, require_official=True)
         return previous, False
     body, source = fetch_games(previous, force=force)
     now = dt.datetime.now(UTC)
@@ -357,7 +609,7 @@ def refresh(output, identity_path, force=False, check=False, official_path=None)
         # result coverage can roll over without requiring another large GET.
         print(json.dumps({"status": "unchanged", "checkedAt": source["checkedAt"], "httpStatus": 304}))
         if not previous.get("schedule"):
-            return previous, False
+            raise ValueError("Saved standings lack the validated schedule needed for a conditional rebuild")
         rows = [{"game_id": game["id"], "season": game["season"], "game_type": "REG", "week": game["week"],
                  "gameday": game["gameday"], "gametime": (timestamp(game["kickoffUtc"]).astimezone(ET).strftime("%H:%M")
                                                              if game["kickoffUtc"] else ""),
@@ -367,21 +619,36 @@ def refresh(output, identity_path, force=False, check=False, official_path=None)
     else:
         rows = parse_games(body)
     snapshot = build_snapshot(rows, identities_snapshot["teams"], season, source, now)
-    if official_path:
-        snapshot["crossCheck"] = compare_official_records(snapshot, json.loads(official_path.read_text()))
     if previous and previous.get("source", {}).get("sha256") == source["sha256"]:
         # A re-download cannot make unchanged data look newly updated. Rebuild
         # for calendar rollover, but retain the original source retrieval date.
         snapshot["retrievedAt"] = previous["retrievedAt"]
         snapshot["source"] = previous["source"]
-        if not official_path:
-            snapshot["crossCheck"] = previous.get("crossCheck", snapshot["crossCheck"])
         if body is not None:
             print(json.dumps({"status": "retrieved-unchanged", "checkedAt": source["checkedAt"], "httpStatus": 200}))
-        if {key: value for key, value in snapshot.items() if key != "generatedAt"} == {
-                key: value for key, value in previous.items() if key != "generatedAt"}:
-            snapshot["generatedAt"] = previous["generatedAt"]
-    validate_snapshot(snapshot, previous)
+    # Every refresh validates the official sources independently. A CSV 304
+    # cannot suppress a corrected conference seed or hide a provider failure.
+    espn_body, espn_source = fetch_provider("ESPN", season, previous, force)
+    nfl_body, nfl_source = fetch_provider("NFL", season, previous, force)
+    espn = (parse_espn(espn_body, snapshot["teams"], season) if espn_body is not None else
+            previous["providerStandings"]["ESPN"])
+    nfl = (parse_nfl(nfl_body, snapshot["teams"], season) if nfl_body is not None else
+           previous["providerStandings"]["NFL"])
+    # Ads, scripts and unrelated page chrome must not cause another release of
+    # identical records/order. Preserve the prior dated proof only after both
+    # newly parsed provider models have passed their complete schema checks.
+    for official in (espn, nfl):
+        validate_provider(official, snapshot["teams"], season)
+    espn, espn_source = retain_unchanged_provider_proof(espn, espn_source, previous)
+    nfl, nfl_source = retain_unchanged_provider_proof(nfl, nfl_source, previous)
+    apply_provider_order(snapshot, espn, nfl, espn_source, nfl_source)
+    if official_path:
+        # Additional captured comparisons cannot replace the live rank proof.
+        snapshot["additionalCrossCheck"] = compare_official_records(snapshot, json.loads(official_path.read_text()))
+    if previous and {key: value for key, value in snapshot.items() if key != "generatedAt"} == {
+            key: value for key, value in previous.items() if key != "generatedAt"}:
+        snapshot["generatedAt"] = previous["generatedAt"]
+    validate_snapshot(snapshot, previous, require_official=True)
     return snapshot, atomic_write(output, snapshot)
 
 

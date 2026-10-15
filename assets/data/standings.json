@@ -2,29 +2,72 @@
   "schemaVersion": 1,
   "season": 2026,
   "currentBrowsingWeek": 6,
-  "retrievedAt": "2026-10-14T23:52:27Z",
-  "generatedAt": "2026-10-14T23:55:29Z",
+  "retrievedAt": "2026-10-15T00:40:27Z",
+  "generatedAt": "2026-10-15T00:40:27Z",
   "source": {
     "id": "nflverse_games",
     "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
     "provider": "nflverse",
     "status": "verified",
-    "retrievedAt": "2026-10-14T23:52:27Z",
-    "checkedAt": "2026-10-14T23:52:27Z",
+    "retrievedAt": "2026-10-15T00:40:27Z",
+    "checkedAt": "2026-10-15T00:40:27Z",
     "httpStatus": 200,
-    "sha256": "19867a4fabc85326f055b4dfae24d18e81fa5a5ebd110f021de51d1b82706457",
+    "sha256": "1d4c675cf00437c4f06a299449b6968ae3d1a3ab662ab978d4fe4f650b6044f2",
     "bytes": 2184486,
-    "etag": "\"5124754589a8883d4faf2911bbd7cadcca58e63c0deb8546ba32ccfedc5c0456\"",
+    "etag": "\"2229f69d75a000c841065d9b9126a3a3c7ce34c75ab9598558f8ec76d702d294\"",
     "lastModified": null
   },
   "ranking": {
-    "method": "winning-percentage-points-differential",
-    "official": false,
-    "note": "Ordered by winning percentage, then points differential, then team abbreviation. NFL conference seeding and official tie-break order are not verified."
+    "method": "provider-conference-order",
+    "official": true,
+    "provider": "ESPN",
+    "sourceId": "espn_conference_standings",
+    "source": {
+      "id": "espn_conference_standings",
+      "url": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?season=2026&type=2&level=2",
+      "provider": "ESPN",
+      "status": "verified",
+      "season": 2026,
+      "retrievedAt": "2026-10-15T00:40:30Z",
+      "checkedAt": "2026-10-15T00:40:30Z",
+      "httpStatus": 200,
+      "sha256": "4a5ddc3b1b474d903959bc9b5162b21f4e959ced00917fde424085dfeaf5e280",
+      "bytes": 139843,
+      "etag": null,
+      "lastModified": null
+    },
+    "note": "ESPN conference order; ranks are supplied by ESPN, not recalculated from points."
   },
   "crossCheck": {
-    "status": "not-performed",
-    "note": "Official ESPN/NFL records and conference seeding were not independently retrieved."
+    "status": "records-match",
+    "provider": "NFL",
+    "url": "https://www.nfl.com/standings/conference/2026/REG",
+    "retrievedAt": "2026-10-15T00:40:31Z",
+    "recordsCompared": 32,
+    "mismatches": [],
+    "orderDisagreements": [
+      {
+        "abbr": "CHI",
+        "espnRank": 7,
+        "nflRank": 6
+      },
+      {
+        "abbr": "DET",
+        "espnRank": 6,
+        "nflRank": 7
+      },
+      {
+        "abbr": "MIA",
+        "espnRank": 14,
+        "nflRank": 16
+      },
+      {
+        "abbr": "TEN",
+        "espnRank": 16,
+        "nflRank": 14
+      }
+    ],
+    "note": "All 32 records and PF/PA match NFL.com and nflverse finals; 4 conference ranks differ between ESPN and NFL.com. ESPN supplies the display order."
   },
   "coverage": {
     "throughWeek": 5,
@@ -4032,29 +4075,13 @@
             "ties": 0,
             "pointsFor": 118,
             "pointsAgainst": 77,
-            "rank": null,
+            "rank": 1,
             "streak": "W4",
             "pct": "1.000",
             "record": "4–0",
             "pointDifferential": 41,
-            "sortIndex": 1
-          },
-          {
-            "id": "jax",
-            "abbr": "JAX",
-            "name": "Jaguars",
-            "fullName": "Jacksonville Jaguars",
-            "w": 4,
-            "l": 1,
-            "ties": 0,
-            "pointsFor": 123,
-            "pointsAgainst": 70,
-            "rank": null,
-            "streak": "W3",
-            "pct": ".800",
-            "record": "4–1",
-            "pointDifferential": 53,
-            "sortIndex": 2
+            "sortIndex": 1,
+            "playoffSeed": 1
           },
           {
             "id": "bal",
@@ -4066,12 +4093,31 @@
             "ties": 0,
             "pointsFor": 146,
             "pointsAgainst": 119,
-            "rank": null,
+            "rank": 2,
             "streak": "W3",
             "pct": ".800",
             "record": "4–1",
             "pointDifferential": 27,
-            "sortIndex": 3
+            "sortIndex": 2,
+            "playoffSeed": 2
+          },
+          {
+            "id": "jax",
+            "abbr": "JAX",
+            "name": "Jaguars",
+            "fullName": "Jacksonville Jaguars",
+            "w": 4,
+            "l": 1,
+            "ties": 0,
+            "pointsFor": 123,
+            "pointsAgainst": 70,
+            "rank": 3,
+            "streak": "W3",
+            "pct": ".800",
+            "record": "4–1",
+            "pointDifferential": 53,
+            "sortIndex": 3,
+            "playoffSeed": 3
           },
           {
             "id": "buf",
@@ -4083,29 +4129,13 @@
             "ties": 0,
             "pointsFor": 164,
             "pointsAgainst": 141,
-            "rank": null,
+            "rank": 4,
             "streak": "W1",
             "pct": ".800",
             "record": "4–1",
             "pointDifferential": 23,
-            "sortIndex": 4
-          },
-          {
-            "id": "cin",
-            "abbr": "CIN",
-            "name": "Bengals",
-            "fullName": "Cincinnati Bengals",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 128,
-            "pointsAgainst": 109,
-            "rank": null,
-            "streak": "W1",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 19,
-            "sortIndex": 5
+            "sortIndex": 4,
+            "playoffSeed": 4
           },
           {
             "id": "ne",
@@ -4117,46 +4147,13 @@
             "ties": 0,
             "pointsFor": 110,
             "pointsAgainst": 94,
-            "rank": null,
+            "rank": 5,
             "streak": "W2",
             "pct": ".600",
             "record": "3–2",
             "pointDifferential": 16,
-            "sortIndex": 6
-          },
-          {
-            "id": "lv",
-            "abbr": "LV",
-            "name": "Raiders",
-            "fullName": "Las Vegas Raiders",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 132,
-            "pointsAgainst": 129,
-            "rank": null,
-            "streak": "L2",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 3,
-            "sortIndex": 7
-          },
-          {
-            "id": "pit",
-            "abbr": "PIT",
-            "name": "Steelers",
-            "fullName": "Pittsburgh Steelers",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 111,
-            "pointsAgainst": 109,
-            "rank": null,
-            "streak": "W1",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 2,
-            "sortIndex": 8
+            "sortIndex": 5,
+            "playoffSeed": 5
           },
           {
             "id": "den",
@@ -4168,12 +4165,31 @@
             "ties": 0,
             "pointsFor": 97,
             "pointsAgainst": 111,
-            "rank": null,
+            "rank": 6,
             "streak": "W1",
             "pct": ".600",
             "record": "3–2",
             "pointDifferential": -14,
-            "sortIndex": 9
+            "sortIndex": 6,
+            "playoffSeed": 6
+          },
+          {
+            "id": "lv",
+            "abbr": "LV",
+            "name": "Raiders",
+            "fullName": "Las Vegas Raiders",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 132,
+            "pointsAgainst": 129,
+            "rank": 7,
+            "streak": "L2",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 3,
+            "sortIndex": 7,
+            "playoffSeed": 7
           },
           {
             "id": "cle",
@@ -4185,12 +4201,49 @@
             "ties": 0,
             "pointsFor": 93,
             "pointsAgainst": 112,
-            "rank": null,
+            "rank": 8,
             "streak": "L1",
             "pct": ".600",
             "record": "3–2",
             "pointDifferential": -19,
-            "sortIndex": 10
+            "sortIndex": 8,
+            "playoffSeed": 8
+          },
+          {
+            "id": "pit",
+            "abbr": "PIT",
+            "name": "Steelers",
+            "fullName": "Pittsburgh Steelers",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 111,
+            "pointsAgainst": 109,
+            "rank": 9,
+            "streak": "W1",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 2,
+            "sortIndex": 9,
+            "playoffSeed": 9
+          },
+          {
+            "id": "cin",
+            "abbr": "CIN",
+            "name": "Bengals",
+            "fullName": "Cincinnati Bengals",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 128,
+            "pointsAgainst": 109,
+            "rank": 10,
+            "streak": "W1",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 19,
+            "sortIndex": 10,
+            "playoffSeed": 10
           },
           {
             "id": "nyj",
@@ -4202,12 +4255,13 @@
             "ties": 0,
             "pointsFor": 93,
             "pointsAgainst": 96,
-            "rank": null,
+            "rank": 11,
             "streak": "W1",
             "pct": ".400",
             "record": "2–3",
             "pointDifferential": -3,
-            "sortIndex": 11
+            "sortIndex": 11,
+            "playoffSeed": 11
           },
           {
             "id": "ind",
@@ -4219,12 +4273,13 @@
             "ties": 0,
             "pointsFor": 124,
             "pointsAgainst": 138,
-            "rank": null,
+            "rank": 12,
             "streak": "L1",
             "pct": ".400",
             "record": "2–3",
             "pointDifferential": -14,
-            "sortIndex": 12
+            "sortIndex": 12,
+            "playoffSeed": 12
           },
           {
             "id": "hou",
@@ -4236,46 +4291,13 @@
             "ties": 0,
             "pointsFor": 110,
             "pointsAgainst": 112,
-            "rank": null,
+            "rank": 13,
             "streak": "W1",
             "pct": ".200",
             "record": "1–4",
             "pointDifferential": -2,
-            "sortIndex": 13
-          },
-          {
-            "id": "lac",
-            "abbr": "LAC",
-            "name": "Chargers",
-            "fullName": "Los Angeles Chargers",
-            "w": 0,
-            "l": 5,
-            "ties": 0,
-            "pointsFor": 84,
-            "pointsAgainst": 129,
-            "rank": null,
-            "streak": "L5",
-            "pct": ".000",
-            "record": "0–5",
-            "pointDifferential": -45,
-            "sortIndex": 14
-          },
-          {
-            "id": "ten",
-            "abbr": "TEN",
-            "name": "Titans",
-            "fullName": "Tennessee Titans",
-            "w": 0,
-            "l": 5,
-            "ties": 0,
-            "pointsFor": 58,
-            "pointsAgainst": 109,
-            "rank": null,
-            "streak": "L5",
-            "pct": ".000",
-            "record": "0–5",
-            "pointDifferential": -51,
-            "sortIndex": 15
+            "sortIndex": 13,
+            "playoffSeed": 13
           },
           {
             "id": "mia",
@@ -4287,12 +4309,49 @@
             "ties": 0,
             "pointsFor": 70,
             "pointsAgainst": 132,
-            "rank": null,
+            "rank": 14,
             "streak": "L5",
             "pct": ".000",
             "record": "0–5",
             "pointDifferential": -62,
-            "sortIndex": 16
+            "sortIndex": 14,
+            "playoffSeed": 14
+          },
+          {
+            "id": "lac",
+            "abbr": "LAC",
+            "name": "Chargers",
+            "fullName": "Los Angeles Chargers",
+            "w": 0,
+            "l": 5,
+            "ties": 0,
+            "pointsFor": 84,
+            "pointsAgainst": 129,
+            "rank": 15,
+            "streak": "L5",
+            "pct": ".000",
+            "record": "0–5",
+            "pointDifferential": -45,
+            "sortIndex": 15,
+            "playoffSeed": 15
+          },
+          {
+            "id": "ten",
+            "abbr": "TEN",
+            "name": "Titans",
+            "fullName": "Tennessee Titans",
+            "w": 0,
+            "l": 5,
+            "ties": 0,
+            "pointsFor": 58,
+            "pointsAgainst": 109,
+            "rank": 16,
+            "streak": "L5",
+            "pct": ".000",
+            "record": "0–5",
+            "pointDifferential": -51,
+            "sortIndex": 16,
+            "playoffSeed": 16
           }
         ],
         "NFC": [
@@ -4306,12 +4365,13 @@
             "ties": 0,
             "pointsFor": 154,
             "pointsAgainst": 93,
-            "rank": null,
+            "rank": 1,
             "streak": "W5",
             "pct": "1.000",
             "record": "5–0",
             "pointDifferential": 61,
-            "sortIndex": 1
+            "sortIndex": 1,
+            "playoffSeed": 1
           },
           {
             "id": "min",
@@ -4323,12 +4383,13 @@
             "ties": 0,
             "pointsFor": 109,
             "pointsAgainst": 64,
-            "rank": null,
+            "rank": 2,
             "streak": "W5",
             "pct": "1.000",
             "record": "5–0",
             "pointDifferential": 45,
-            "sortIndex": 2
+            "sortIndex": 2,
+            "playoffSeed": 2
           },
           {
             "id": "nyg",
@@ -4340,80 +4401,13 @@
             "ties": 1,
             "pointsFor": 109,
             "pointsAgainst": 106,
-            "rank": null,
+            "rank": 3,
             "streak": "T1",
             "pct": ".700",
             "record": "3–1–1",
             "pointDifferential": 3,
-            "sortIndex": 3
-          },
-          {
-            "id": "sea",
-            "abbr": "SEA",
-            "name": "Seahawks",
-            "fullName": "Seattle Seahawks",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 134,
-            "pointsAgainst": 105,
-            "rank": null,
-            "streak": "L1",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 29,
-            "sortIndex": 4
-          },
-          {
-            "id": "chi",
-            "abbr": "CHI",
-            "name": "Bears",
-            "fullName": "Chicago Bears",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 119,
-            "pointsAgainst": 96,
-            "rank": null,
-            "streak": "L1",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 23,
-            "sortIndex": 5
-          },
-          {
-            "id": "det",
-            "abbr": "DET",
-            "name": "Lions",
-            "fullName": "Detroit Lions",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 164,
-            "pointsAgainst": 148,
-            "rank": null,
-            "streak": "W1",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": 16,
-            "sortIndex": 6
-          },
-          {
-            "id": "gb",
-            "abbr": "GB",
-            "name": "Packers",
-            "fullName": "Green Bay Packers",
-            "w": 3,
-            "l": 2,
-            "ties": 0,
-            "pointsFor": 104,
-            "pointsAgainst": 112,
-            "rank": null,
-            "streak": "W2",
-            "pct": ".600",
-            "record": "3–2",
-            "pointDifferential": -8,
-            "sortIndex": 7
+            "sortIndex": 3,
+            "playoffSeed": 3
           },
           {
             "id": "car",
@@ -4425,29 +4419,85 @@
             "ties": 0,
             "pointsFor": 121,
             "pointsAgainst": 109,
-            "rank": null,
+            "rank": 4,
             "streak": "W1",
             "pct": ".500",
             "record": "2–2",
             "pointDifferential": 12,
-            "sortIndex": 8
+            "sortIndex": 4,
+            "playoffSeed": 4
           },
           {
-            "id": "dal",
-            "abbr": "DAL",
-            "name": "Cowboys",
-            "fullName": "Dallas Cowboys",
-            "w": 2,
-            "l": 3,
+            "id": "gb",
+            "abbr": "GB",
+            "name": "Packers",
+            "fullName": "Green Bay Packers",
+            "w": 3,
+            "l": 2,
             "ties": 0,
-            "pointsFor": 138,
-            "pointsAgainst": 136,
-            "rank": null,
+            "pointsFor": 104,
+            "pointsAgainst": 112,
+            "rank": 5,
+            "streak": "W2",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": -8,
+            "sortIndex": 5,
+            "playoffSeed": 5
+          },
+          {
+            "id": "det",
+            "abbr": "DET",
+            "name": "Lions",
+            "fullName": "Detroit Lions",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 164,
+            "pointsAgainst": 148,
+            "rank": 6,
+            "streak": "W1",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 16,
+            "sortIndex": 6,
+            "playoffSeed": 6
+          },
+          {
+            "id": "chi",
+            "abbr": "CHI",
+            "name": "Bears",
+            "fullName": "Chicago Bears",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 119,
+            "pointsAgainst": 96,
+            "rank": 7,
             "streak": "L1",
-            "pct": ".400",
-            "record": "2–3",
-            "pointDifferential": 2,
-            "sortIndex": 9
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 23,
+            "sortIndex": 7,
+            "playoffSeed": 7
+          },
+          {
+            "id": "sea",
+            "abbr": "SEA",
+            "name": "Seahawks",
+            "fullName": "Seattle Seahawks",
+            "w": 3,
+            "l": 2,
+            "ties": 0,
+            "pointsFor": 134,
+            "pointsAgainst": 105,
+            "rank": 8,
+            "streak": "L1",
+            "pct": ".600",
+            "record": "3–2",
+            "pointDifferential": 29,
+            "sortIndex": 8,
+            "playoffSeed": 8
           },
           {
             "id": "la",
@@ -4459,12 +4509,13 @@
             "ties": 0,
             "pointsFor": 119,
             "pointsAgainst": 120,
-            "rank": null,
+            "rank": 9,
             "streak": "L1",
             "pct": ".400",
             "record": "2–3",
             "pointDifferential": -1,
-            "sortIndex": 10
+            "sortIndex": 9,
+            "playoffSeed": 9
           },
           {
             "id": "atl",
@@ -4476,12 +4527,13 @@
             "ties": 0,
             "pointsFor": 119,
             "pointsAgainst": 122,
-            "rank": null,
+            "rank": 10,
             "streak": "L1",
             "pct": ".400",
             "record": "2–3",
             "pointDifferential": -3,
-            "sortIndex": 11
+            "sortIndex": 10,
+            "playoffSeed": 10
           },
           {
             "id": "phi",
@@ -4493,12 +4545,31 @@
             "ties": 0,
             "pointsFor": 92,
             "pointsAgainst": 112,
-            "rank": null,
+            "rank": 11,
             "streak": "L3",
             "pct": ".400",
             "record": "2–3",
             "pointDifferential": -20,
-            "sortIndex": 12
+            "sortIndex": 11,
+            "playoffSeed": 11
+          },
+          {
+            "id": "dal",
+            "abbr": "DAL",
+            "name": "Cowboys",
+            "fullName": "Dallas Cowboys",
+            "w": 2,
+            "l": 3,
+            "ties": 0,
+            "pointsFor": 138,
+            "pointsAgainst": 136,
+            "rank": 12,
+            "streak": "L1",
+            "pct": ".400",
+            "record": "2–3",
+            "pointDifferential": 2,
+            "sortIndex": 12,
+            "playoffSeed": 12
           },
           {
             "id": "was",
@@ -4510,12 +4581,13 @@
             "ties": 1,
             "pointsFor": 115,
             "pointsAgainst": 149,
-            "rank": null,
+            "rank": 13,
             "streak": "T1",
             "pct": ".300",
             "record": "1–3–1",
             "pointDifferential": -34,
-            "sortIndex": 13
+            "sortIndex": 13,
+            "playoffSeed": 13
           },
           {
             "id": "tb",
@@ -4527,12 +4599,13 @@
             "ties": 0,
             "pointsFor": 100,
             "pointsAgainst": 112,
-            "rank": null,
+            "rank": 14,
             "streak": "W1",
             "pct": ".200",
             "record": "1–4",
             "pointDifferential": -12,
-            "sortIndex": 14
+            "sortIndex": 14,
+            "playoffSeed": 14
           },
           {
             "id": "no",
@@ -4544,12 +4617,13 @@
             "ties": 0,
             "pointsFor": 118,
             "pointsAgainst": 151,
-            "rank": null,
+            "rank": 15,
             "streak": "L3",
             "pct": ".200",
             "record": "1–4",
             "pointDifferential": -33,
-            "sortIndex": 15
+            "sortIndex": 15,
+            "playoffSeed": 15
           },
           {
             "id": "ari",
@@ -4561,12 +4635,13 @@
             "ties": 0,
             "pointsFor": 108,
             "pointsAgainst": 162,
-            "rank": null,
+            "rank": 16,
             "streak": "L4",
             "pct": ".200",
             "record": "1–4",
             "pointDifferential": -54,
-            "sortIndex": 16
+            "sortIndex": 16,
+            "playoffSeed": 16
           }
         ]
       }
@@ -17214,5 +17289,684 @@
       "home_score": null,
       "status": "scheduled"
     }
-  ]
+  ],
+  "conferenceOrder": {
+    "provider": "ESPN",
+    "sourceId": "espn_conference_standings",
+    "season": 2026,
+    "week": 6,
+    "throughWeek": 5,
+    "retrievedAt": "2026-10-15T00:40:30Z",
+    "conferences": {
+      "AFC": [
+        "KC",
+        "BAL",
+        "JAX",
+        "BUF",
+        "NE",
+        "DEN",
+        "LV",
+        "CLE",
+        "PIT",
+        "CIN",
+        "NYJ",
+        "IND",
+        "HOU",
+        "MIA",
+        "LAC",
+        "TEN"
+      ],
+      "NFC": [
+        "SF",
+        "MIN",
+        "NYG",
+        "CAR",
+        "GB",
+        "DET",
+        "CHI",
+        "SEA",
+        "LA",
+        "ATL",
+        "PHI",
+        "DAL",
+        "WAS",
+        "TB",
+        "NO",
+        "ARI"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "nflverse_games",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+      "provider": "nflverse",
+      "status": "verified",
+      "retrievedAt": "2026-10-15T00:40:27Z",
+      "checkedAt": "2026-10-15T00:40:27Z",
+      "httpStatus": 200,
+      "sha256": "1d4c675cf00437c4f06a299449b6968ae3d1a3ab662ab978d4fe4f650b6044f2",
+      "bytes": 2184486,
+      "etag": "\"2229f69d75a000c841065d9b9126a3a3c7ce34c75ab9598558f8ec76d702d294\"",
+      "lastModified": null
+    },
+    {
+      "id": "espn_conference_standings",
+      "url": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?season=2026&type=2&level=2",
+      "provider": "ESPN",
+      "status": "verified",
+      "season": 2026,
+      "retrievedAt": "2026-10-15T00:40:30Z",
+      "checkedAt": "2026-10-15T00:40:30Z",
+      "httpStatus": 200,
+      "sha256": "4a5ddc3b1b474d903959bc9b5162b21f4e959ced00917fde424085dfeaf5e280",
+      "bytes": 139843,
+      "etag": null,
+      "lastModified": null
+    },
+    {
+      "id": "nfl_conference_standings",
+      "url": "https://www.nfl.com/standings/conference/2026/REG",
+      "provider": "NFL",
+      "status": "verified",
+      "season": 2026,
+      "retrievedAt": "2026-10-15T00:40:31Z",
+      "checkedAt": "2026-10-15T00:40:31Z",
+      "httpStatus": 200,
+      "sha256": "de17720ff453bed794a2b744792d0ecaa6a580d4d71c6486707d1a1bad4a3d87",
+      "bytes": 242707,
+      "etag": null,
+      "lastModified": null
+    }
+  ],
+  "providerStandings": {
+    "ESPN": {
+      "provider": "ESPN",
+      "season": 2026,
+      "teams": [
+        {
+          "abbr": "KC",
+          "conference": "AFC",
+          "w": 4,
+          "l": 0,
+          "ties": 0,
+          "rank": 1
+        },
+        {
+          "abbr": "BAL",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 2
+        },
+        {
+          "abbr": "JAX",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 3
+        },
+        {
+          "abbr": "BUF",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 4
+        },
+        {
+          "abbr": "NE",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 5
+        },
+        {
+          "abbr": "DEN",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 6
+        },
+        {
+          "abbr": "LV",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 7
+        },
+        {
+          "abbr": "CLE",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 8
+        },
+        {
+          "abbr": "PIT",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 9
+        },
+        {
+          "abbr": "CIN",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 10
+        },
+        {
+          "abbr": "NYJ",
+          "conference": "AFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 11
+        },
+        {
+          "abbr": "IND",
+          "conference": "AFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 12
+        },
+        {
+          "abbr": "HOU",
+          "conference": "AFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 13
+        },
+        {
+          "abbr": "MIA",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 14
+        },
+        {
+          "abbr": "LAC",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 15
+        },
+        {
+          "abbr": "TEN",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 16
+        },
+        {
+          "abbr": "SF",
+          "conference": "NFC",
+          "w": 5,
+          "l": 0,
+          "ties": 0,
+          "rank": 1
+        },
+        {
+          "abbr": "MIN",
+          "conference": "NFC",
+          "w": 5,
+          "l": 0,
+          "ties": 0,
+          "rank": 2
+        },
+        {
+          "abbr": "NYG",
+          "conference": "NFC",
+          "w": 3,
+          "l": 1,
+          "ties": 1,
+          "rank": 3
+        },
+        {
+          "abbr": "GB",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 5
+        },
+        {
+          "abbr": "DET",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 6
+        },
+        {
+          "abbr": "CHI",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 7
+        },
+        {
+          "abbr": "SEA",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 8
+        },
+        {
+          "abbr": "CAR",
+          "conference": "NFC",
+          "w": 2,
+          "l": 2,
+          "ties": 0,
+          "rank": 4
+        },
+        {
+          "abbr": "LA",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 9
+        },
+        {
+          "abbr": "ATL",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 10
+        },
+        {
+          "abbr": "PHI",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 11
+        },
+        {
+          "abbr": "DAL",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 12
+        },
+        {
+          "abbr": "WAS",
+          "conference": "NFC",
+          "w": 1,
+          "l": 3,
+          "ties": 1,
+          "rank": 13
+        },
+        {
+          "abbr": "TB",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 14
+        },
+        {
+          "abbr": "NO",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 15
+        },
+        {
+          "abbr": "ARI",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 16
+        }
+      ]
+    },
+    "NFL": {
+      "provider": "NFL",
+      "season": 2026,
+      "teams": [
+        {
+          "abbr": "LAC",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 15,
+          "pointsFor": 84,
+          "pointsAgainst": 129
+        },
+        {
+          "abbr": "MIA",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 16,
+          "pointsFor": 70,
+          "pointsAgainst": 132
+        },
+        {
+          "abbr": "TEN",
+          "conference": "AFC",
+          "w": 0,
+          "l": 5,
+          "ties": 0,
+          "rank": 14,
+          "pointsFor": 58,
+          "pointsAgainst": 109
+        },
+        {
+          "abbr": "HOU",
+          "conference": "AFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 13,
+          "pointsFor": 110,
+          "pointsAgainst": 112
+        },
+        {
+          "abbr": "IND",
+          "conference": "AFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 12,
+          "pointsFor": 124,
+          "pointsAgainst": 138
+        },
+        {
+          "abbr": "CLE",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 8,
+          "pointsFor": 93,
+          "pointsAgainst": 112
+        },
+        {
+          "abbr": "NYJ",
+          "conference": "AFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 11,
+          "pointsFor": 93,
+          "pointsAgainst": 96
+        },
+        {
+          "abbr": "CIN",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 10,
+          "pointsFor": 128,
+          "pointsAgainst": 109
+        },
+        {
+          "abbr": "DEN",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 6,
+          "pointsFor": 97,
+          "pointsAgainst": 111
+        },
+        {
+          "abbr": "LV",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 7,
+          "pointsFor": 132,
+          "pointsAgainst": 129
+        },
+        {
+          "abbr": "PIT",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 9,
+          "pointsFor": 111,
+          "pointsAgainst": 109
+        },
+        {
+          "abbr": "BAL",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 2,
+          "pointsFor": 146,
+          "pointsAgainst": 119
+        },
+        {
+          "abbr": "BUF",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 4,
+          "pointsFor": 164,
+          "pointsAgainst": 141
+        },
+        {
+          "abbr": "NE",
+          "conference": "AFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 5,
+          "pointsFor": 110,
+          "pointsAgainst": 94
+        },
+        {
+          "abbr": "JAX",
+          "conference": "AFC",
+          "w": 4,
+          "l": 1,
+          "ties": 0,
+          "rank": 3,
+          "pointsFor": 123,
+          "pointsAgainst": 70
+        },
+        {
+          "abbr": "KC",
+          "conference": "AFC",
+          "w": 4,
+          "l": 0,
+          "ties": 0,
+          "rank": 1,
+          "pointsFor": 118,
+          "pointsAgainst": 77
+        },
+        {
+          "abbr": "ARI",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 16,
+          "pointsFor": 108,
+          "pointsAgainst": 162
+        },
+        {
+          "abbr": "NO",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 15,
+          "pointsFor": 118,
+          "pointsAgainst": 151
+        },
+        {
+          "abbr": "TB",
+          "conference": "NFC",
+          "w": 1,
+          "l": 4,
+          "ties": 0,
+          "rank": 14,
+          "pointsFor": 100,
+          "pointsAgainst": 112
+        },
+        {
+          "abbr": "WAS",
+          "conference": "NFC",
+          "w": 1,
+          "l": 3,
+          "ties": 1,
+          "rank": 13,
+          "pointsFor": 115,
+          "pointsAgainst": 149
+        },
+        {
+          "abbr": "DAL",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 12,
+          "pointsFor": 138,
+          "pointsAgainst": 136
+        },
+        {
+          "abbr": "PHI",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 11,
+          "pointsFor": 92,
+          "pointsAgainst": 112
+        },
+        {
+          "abbr": "SEA",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 8,
+          "pointsFor": 134,
+          "pointsAgainst": 105
+        },
+        {
+          "abbr": "ATL",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 10,
+          "pointsFor": 119,
+          "pointsAgainst": 122
+        },
+        {
+          "abbr": "CAR",
+          "conference": "NFC",
+          "w": 2,
+          "l": 2,
+          "ties": 0,
+          "rank": 4,
+          "pointsFor": 121,
+          "pointsAgainst": 109
+        },
+        {
+          "abbr": "LA",
+          "conference": "NFC",
+          "w": 2,
+          "l": 3,
+          "ties": 0,
+          "rank": 9,
+          "pointsFor": 119,
+          "pointsAgainst": 120
+        },
+        {
+          "abbr": "CHI",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 6,
+          "pointsFor": 119,
+          "pointsAgainst": 96
+        },
+        {
+          "abbr": "DET",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 7,
+          "pointsFor": 164,
+          "pointsAgainst": 148
+        },
+        {
+          "abbr": "GB",
+          "conference": "NFC",
+          "w": 3,
+          "l": 2,
+          "ties": 0,
+          "rank": 5,
+          "pointsFor": 104,
+          "pointsAgainst": 112
+        },
+        {
+          "abbr": "NYG",
+          "conference": "NFC",
+          "w": 3,
+          "l": 1,
+          "ties": 1,
+          "rank": 3,
+          "pointsFor": 109,
+          "pointsAgainst": 106
+        },
+        {
+          "abbr": "SF",
+          "conference": "NFC",
+          "w": 5,
+          "l": 0,
+          "ties": 0,
+          "rank": 1,
+          "pointsFor": 154,
+          "pointsAgainst": 93
+        },
+        {
+          "abbr": "MIN",
+          "conference": "NFC",
+          "w": 5,
+          "l": 0,
+          "ties": 0,
+          "rank": 2,
+          "pointsFor": 109,
+          "pointsAgainst": 64
+        }
+      ]
+    }
+  }
 }

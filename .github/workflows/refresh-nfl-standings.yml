@@ -2,8 +2,12 @@ name: Refresh independent NFL standings
 
 on:
   schedule:
+    # Source-backed official order is checked every hour, independently of research.
     - cron: '9 * * * *'
     - cron: '17 19 * * *'
+    # Tuesday midnight America/New_York is 04 UTC in EDT / 05 UTC in EST.
+    # Fetch at both candidates to tolerate DST and delayed GitHub scheduling.
+    - cron: '0 4,5 * * 2'
   push:
     branches: [main]
     paths:
@@ -31,14 +35,19 @@ jobs:
       - name: Fetch and validate standings independently of player research
         env:
           SCHEDULE: ${{ github.event.schedule }}
+          EVENT_NAME: ${{ github.event_name }}
         run: |
           args=()
-          if [ "$SCHEDULE" = "17 19 * * *" ]; then
+          # A producer release must actually exercise production source retrieval.
+          # Tuesday runs force a fresh official order at the NY browsing rollover.
+          if [ "$SCHEDULE" = "17 19 * * *" ] || [ "$SCHEDULE" = "0 4,5 * * 2" ] || [ "$EVENT_NAME" = "push" ] || [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             args+=(--force)
           fi
           python3 scripts/refresh-standings.py "${args[@]}"
           python3 scripts/refresh-standings.py --check
           python3 qa/standings.test.py
+      # Any retrieval, official-ranking or validation error stops here. The
+      # preceding published file remains intact; there is no synthetic fallback.
       - name: Publish validated standings
         id: publish
         run: |

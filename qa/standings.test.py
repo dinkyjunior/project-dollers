@@ -72,6 +72,42 @@ def csv_body(rows):
     return stream.getvalue().encode()
 
 
+def official_captures(snapshot):
+    """Synthetic public-provider responses for isolated producer tests."""
+    espn = {"season": {"year": snapshot["season"]}, "children": []}
+    html = [f"<title>{snapshot['season']} NFL Conference Standings</title>"
+            f'<link rel="canonical" href="https://www.nfl.com/standings/conference/{snapshot["season"]}/reg">'
+            f'<select id="phase-dropdown"><option value="/standings/conference/{snapshot["season"]}/REG" selected>'
+            'Regular season</option></select><table>']
+    for conference, rows in snapshot["weeks"][str(snapshot["currentBrowsingWeek"])]["conferences"].items():
+        entries = []
+        html.append("<tr>" + "".join(f"<th>{cell}</th>" for cell in [f"{conference} Team", "W", "L", "T", "RANK", "PCT", "PF", "PA"]) + "</tr>")
+        for rank, row in enumerate(rows, 1):
+            entries.append({"team": {"abbreviation": {"LA": "LAR", "WAS": "WSH"}.get(row["abbr"], row["abbr"])},
+                            "stats": [{"name": key, "value": value} for key, value in {
+                                "wins": row["w"], "losses": row["l"], "ties": row["ties"], "playoffSeed": rank}.items()]})
+            html.append("<tr>" + "".join(f"<td>{value}</td>" for value in [row["fullName"], row["w"], row["l"], row["ties"], rank,
+                                                                              row["pct"], row["pointsFor"], row["pointsAgainst"]]) + "</tr>")
+        # Entry array order must never become conference rank authority.
+        espn["children"].append({"abbreviation": conference, "standings": {
+            "season": snapshot["season"], "seasonType": 2, "entries": list(reversed(entries))}})
+    html.append("</table>")
+    captures = {}
+    for provider, body in (("ESPN", json.dumps(espn).encode()), ("NFL", "".join(html).encode())):
+        captures[provider] = (body, {"id": REFRESH.ESPN_SOURCE_ID if provider == "ESPN" else REFRESH.NFL_SOURCE_ID,
+            "url": REFRESH.provider_url(provider, snapshot["season"]), "provider": provider, "season": snapshot["season"],
+            "status": "verified", "httpStatus": 200, "retrievedAt": SOURCE["retrievedAt"], "checkedAt": SOURCE["retrievedAt"],
+            "sha256": hashlib.sha256(body).hexdigest(), "bytes": len(body), "etag": f'"test-{provider}"', "lastModified": None})
+    return captures
+
+
+def attach_official(snapshot):
+    captures = official_captures(snapshot)
+    REFRESH.apply_provider_order(snapshot, REFRESH.parse_espn(captures["ESPN"][0], snapshot["teams"], snapshot["season"]),
+        REFRESH.parse_nfl(captures["NFL"][0], snapshot["teams"], snapshot["season"]), captures["ESPN"][1], captures["NFL"][1])
+    return captures
+
+
 class Response:
     status = 200
     headers = {"ETag": '"new-entity"'}
@@ -188,13 +224,14 @@ class StandingsTests(unittest.TestCase):
     def test_identical_full_get_does_not_rewrite_or_refresh_age(self):
         rows = full_fixtures()
         previous = REFRESH.build_snapshot(rows, identities(), 2026, copy.deepcopy(SOURCE), NOW)
+        captures = attach_official(previous)
         body = csv_body(rows)
         source = {**SOURCE, "retrievedAt": "2026-10-15T12:00:00Z", "checkedAt": "2026-10-15T12:00:00Z"}
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "standings.json"
             REFRESH.atomic_write(output, previous)
             before = output.read_bytes()
-            with patch.object(REFRESH, "fetch_games", return_value=(body, source)):
+            with patch.object(REFRESH, "fetch_games", return_value=(body, source)), patch.object(REFRESH, "fetch_provider", side_effect=lambda provider, *_args: captures[provider]):
                 snapshot, changed = REFRESH.refresh(output, ROOT / "assets/data/current.json", force=True)
             self.assertFalse(changed)
             self.assertEqual(snapshot["source"]["retrievedAt"], previous["source"]["retrievedAt"])
@@ -202,6 +239,7 @@ class StandingsTests(unittest.TestCase):
 
     def test_304_can_roll_over_week_without_download_or_new_retrieval_age(self):
         previous = REFRESH.build_snapshot(full_fixtures(), identities(), 2026, copy.deepcopy(SOURCE), NOW)
+        captures = attach_official(previous)
         resumed = dt.datetime(2026, 10, 20, 4, 0, tzinfo=dt.timezone.utc)
         class Clock(dt.datetime):
             @classmethod
@@ -210,7 +248,7 @@ class StandingsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "standings.json"
             REFRESH.atomic_write(output, previous)
-            with patch.object(REFRESH, "fetch_games", return_value=(None, {"httpStatus": 304, "checkedAt": REFRESH.iso(resumed)})), patch.object(REFRESH.dt, "datetime", Clock):
+            with patch.object(REFRESH, "fetch_games", return_value=(None, {"httpStatus": 304, "checkedAt": REFRESH.iso(resumed)})), patch.object(REFRESH.dt, "datetime", Clock), patch.object(REFRESH, "fetch_provider", side_effect=lambda provider, *_args: captures[provider]):
                 snapshot, changed = REFRESH.refresh(output, ROOT / "assets/data/current.json")
             self.assertTrue(changed)
             self.assertEqual(snapshot["currentBrowsingWeek"], 7)
@@ -220,6 +258,121 @@ class StandingsTests(unittest.TestCase):
             self.assertEqual(snapshot["coverage"]["pendingStartedGames"], 16)
             self.assertEqual(snapshot["coverage"]["expectedThroughWeek"], 6)
             self.assertEqual(snapshot["coverage"]["status"], "partial")
+
+    def test_official_seed_overrides_array_and_custom_diff_order_current_week_only(self):
+        snapshot = build()
+        before_history = copy.deepcopy(snapshot["weeks"]["5"])
+        captures = attach_official(snapshot)
+        parsed = REFRESH.parse_espn(captures["ESPN"][0], identities(), 2026)
+        self.assertNotEqual(parsed["teams"][0]["rank"], 1)
+        # Explicitly swap two source seeds, leaving records and DIFF unchanged.
+        first, second = [row for row in parsed["teams"] if row["conference"] == "AFC"][:2]
+        first["rank"], second["rank"] = second["rank"], first["rank"]
+        REFRESH.apply_provider_order(snapshot, parsed, snapshot["providerStandings"]["NFL"], captures["ESPN"][1], captures["NFL"][1])
+        self.assertEqual(snapshot["weeks"]["5"], before_history)
+        self.assertEqual(len(snapshot["crossCheck"]["orderDisagreements"]), 2)
+        self.assertEqual(snapshot["crossCheck"]["status"], "records-match")
+        self.assertTrue(snapshot["ranking"]["official"])
+        rows = snapshot["weeks"]["6"]["conferences"]["AFC"]
+        self.assertEqual([row["rank"] for row in rows], list(range(1, 17)))
+        self.assertEqual(rows[first["rank"] - 1]["abbr"], first["abbr"])
+        REFRESH.validate_snapshot(snapshot, require_official=True)
+
+    def test_wrong_season_missing_duplicate_seed_and_record_conflict_rejected(self):
+        snapshot = build()
+        captures = official_captures(snapshot)
+        body = json.loads(captures["ESPN"][0])
+        for change in ("season", "missing", "duplicate", "records"):
+            changed = copy.deepcopy(body)
+            entry = changed["children"][0]["standings"]["entries"][0]
+            if change == "season":
+                changed["season"]["year"] = 2025
+            elif change == "missing":
+                entry["stats"] = [item for item in entry["stats"] if item["name"] != "playoffSeed"]
+            elif change == "duplicate":
+                next(item for item in entry["stats"] if item["name"] == "playoffSeed")["value"] = 1
+            else:
+                next(item for item in entry["stats"] if item["name"] == "wins")["value"] += 1
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                parsed = REFRESH.parse_espn(json.dumps(changed).encode(), identities(), 2026)
+                REFRESH.apply_provider_order(snapshot, parsed, REFRESH.parse_nfl(captures["NFL"][0], identities(), 2026),
+                                             captures["ESPN"][1], captures["NFL"][1])
+
+    def test_nfl_wrong_or_missing_regular_season_phase_rejected(self):
+        captures = official_captures(build())
+        body = captures["NFL"][0]
+        for changed in (body.replace(b"/2026/reg", b"/2026/pre"),
+                        body.replace(b"/2026/REG", b"/2026/PRE"),
+                        body.replace(b"/2026/reg", b"/2025/reg"),
+                        body.replace(b" selected", b"")):
+            with self.subTest(body=changed[:200]), self.assertRaisesRegex(ValueError, "canonical URL and selected phase"):
+                REFRESH.parse_nfl(changed, identities(), 2026)
+        # The production canonical is lowercase while its selected option is uppercase.
+        parsed = REFRESH.parse_nfl(body, identities(), 2026)
+        self.assertEqual(len(parsed["teams"]), 32)
+
+    def test_official_only_rank_change_publishes_even_when_games_304(self):
+        previous = REFRESH.build_snapshot(full_fixtures(), identities(), 2026, copy.deepcopy(SOURCE), NOW)
+        captures = attach_official(previous)
+        espn_json = json.loads(captures["ESPN"][0])
+        entries = espn_json["children"][0]["standings"]["entries"]
+        first = next(item for item in entries[0]["stats"] if item["name"] == "playoffSeed")
+        second = next(item for item in entries[1]["stats"] if item["name"] == "playoffSeed")
+        first["value"], second["value"] = second["value"], first["value"]
+        espn_body = json.dumps(espn_json).encode()
+        changed_source = {**captures["ESPN"][1], "retrievedAt": "2026-10-15T00:30:00Z", "sha256": hashlib.sha256(espn_body).hexdigest()}
+        def providers(provider, *_args):
+            return (espn_body, changed_source) if provider == "ESPN" else (None, captures["NFL"][1])
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "standings.json"
+            REFRESH.atomic_write(output, previous)
+            with patch.object(REFRESH, "fetch_games", return_value=(None, {"httpStatus": 304, "checkedAt": REFRESH.iso(NOW)})), patch.object(REFRESH, "fetch_provider", side_effect=providers) as fetch:
+                snapshot, changed = REFRESH.refresh(output, ROOT / "assets/data/current.json")
+            self.assertTrue(changed)
+            self.assertEqual(fetch.call_count, 2)
+            self.assertNotEqual(snapshot["conferenceOrder"], previous["conferenceOrder"])
+            self.assertEqual(snapshot["source"]["retrievedAt"], previous["source"]["retrievedAt"])
+            self.assertEqual(snapshot["ranking"]["source"]["retrievedAt"], changed_source["retrievedAt"])
+
+    def test_official_failure_preserves_full_previous_official_feed(self):
+        previous = REFRESH.build_snapshot(full_fixtures(), identities(), 2026, copy.deepcopy(SOURCE), NOW)
+        attach_official(previous)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "standings.json"
+            REFRESH.atomic_write(output, previous)
+            before = output.read_bytes()
+            with patch.object(REFRESH, "fetch_games", return_value=(None, {"httpStatus": 304, "checkedAt": REFRESH.iso(NOW)})), patch.object(REFRESH, "fetch_provider", side_effect=urllib.error.URLError("Official provider failed")):
+                with self.assertRaises(urllib.error.URLError):
+                    REFRESH.refresh(output, ROOT / "assets/data/current.json")
+            self.assertEqual(output.read_bytes(), before)
+            self.assertTrue(json.loads(output.read_text())["ranking"]["official"])
+
+    def test_changed_html_chrome_same_validated_records_and_ranks_does_not_publish(self):
+        previous = REFRESH.build_snapshot(full_fixtures(), identities(), 2026, copy.deepcopy(SOURCE), NOW)
+        captures = attach_official(previous)
+        # A genuine new response can have changed ads without changed standings.
+        changed_body = captures["NFL"][0] + b"<script>/* changed advertisement */</script>"
+        changed_source = {**captures["NFL"][1], "retrievedAt": "2026-10-15T00:30:00Z",
+                          "checkedAt": "2026-10-15T00:30:00Z", "sha256": hashlib.sha256(changed_body).hexdigest(),
+                          "bytes": len(changed_body)}
+        # ESPN may also reorder its raw entries without changing playoffSeed.
+        espn_json = json.loads(captures["ESPN"][0])
+        espn_json["children"][0]["standings"]["entries"].reverse()
+        espn_body = json.dumps(espn_json).encode()
+        espn_source = {**captures["ESPN"][1], "retrievedAt": "2026-10-15T00:30:00Z",
+                       "checkedAt": "2026-10-15T00:30:00Z", "sha256": hashlib.sha256(espn_body).hexdigest(), "bytes": len(espn_body)}
+        def providers(provider, *_args):
+            return (changed_body, changed_source) if provider == "NFL" else (espn_body, espn_source)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "standings.json"
+            REFRESH.atomic_write(output, previous)
+            before = output.read_bytes()
+            with patch.object(REFRESH, "fetch_games", return_value=(None, {"httpStatus": 304, "checkedAt": REFRESH.iso(NOW)})), patch.object(REFRESH, "fetch_provider", side_effect=providers) as fetch:
+                snapshot, changed = REFRESH.refresh(output, ROOT / "assets/data/current.json", force=True)
+            self.assertFalse(changed)
+            self.assertEqual(fetch.call_count, 2)
+            self.assertEqual(output.read_bytes(), before)
+            self.assertEqual(snapshot["sources"], previous["sources"])
 
     def test_official_records_compare_without_claiming_seed_order(self):
         snapshot = build()

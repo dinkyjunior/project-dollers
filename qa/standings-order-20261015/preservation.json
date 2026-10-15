@@ -1,0 +1,35 @@
+{
+  "baseCommit": "43521f6acfeaf532daa80f2b7a77b8e2a8f62eeb",
+  "auditedAtUtc": "2026-10-15T00:44:36.058668+00:00",
+  "result": "PASS",
+  "existingTrackedFiles": 7190,
+  "unchangedProtectedFiles": 7181,
+  "protectedViolations": [],
+  "deletedFiles": [],
+  "approvedHomeMarkupByteIdentical": true,
+  "appChangesLimitedToSourcesDialogAndOpenRefresh": true,
+  "preservedGroups": [
+    "Home markup, artwork, CSS and controller",
+    "all existing data books except authorized standalone standings feed",
+    "team, player, matchup and game-report controllers and styles",
+    "source integrity, weekly browsing and update controllers",
+    "references, backups and prior QA archives"
+  ],
+  "authorizedChangedPaths": [
+    ".github/workflows/refresh-nfl-standings.yml",
+    "assets/app.js",
+    "assets/data/standings.json",
+    "assets/nfl-dashboard.js",
+    "assets/nfl-editorial.css",
+    "index.html",
+    "qa/standings-ui.test.cjs",
+    "qa/standings.test.py",
+    "scripts/refresh-standings.py"
+  ],
+  "notes": [
+    "App exception permits updated Sources dialog provider, dates and disagreement disclosure, with rerender when opened; all remaining app code exact.",
+    "NFL CSS changes only widen the standings Source order control from 64px to 72px.",
+    "Index changes only standings labels/options and cache-version query strings.",
+    "Producer may finish source validation guards after this receipt; any further protected-file change requires another audit."
+  ]
+}

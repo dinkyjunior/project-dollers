@@ -7,6 +7,10 @@ const source = fs.readFileSync(path.join(__dirname,'../assets/nfl-dashboard.js')
 const feed = JSON.parse(fs.readFileSync(path.join(__dirname,'../assets/data/standings.json'),'utf8'));
 const research = JSON.parse(fs.readFileSync(path.join(__dirname,'../assets/data/current.json'),'utf8'));
 const activeWeek = String(feed.currentBrowsingWeek);
+const screenshotOrder = {
+  AFC:['KC','BAL','JAX','BUF','NE','DEN','LV','CLE','PIT','CIN','NYJ','IND','HOU','MIA','LAC','TEN'],
+  NFC:['SF','MIN','NYG','CAR','GB','DET','CHI','SEA','LA','ATL','PHI','DAL','WAS','TB','NO','ARI']
+};
 const clone = value => JSON.parse(JSON.stringify(value));
 const flush = async () => { for (let i = 0; i < 25; i++) await Promise.resolve(); };
 
@@ -106,7 +110,7 @@ function harness() {
   {
     const h = harness(); await h.api.refreshStandings();
     h.render();
-    assert.match(h.node('nfl-standings-source').textContent,/Record order is not official playoff seeding/,'ranking limitation is visible');
+    assert.match(h.node('nfl-standings-source').textContent,feed.ranking.official ? /Order: ESPN conference standings/ : /official conference ranking was not verified/,'ranking source or limitation is visible');
     assert.match(h.node('nfl-standings-source').textContent,new RegExp(feed.source.retrievedAt));
     const currentCaption = h.node('[data-page="nfl"] .through-week').textContent;
     assert.match(currentCaption,/finals/,'exact result coverage is visible');
@@ -117,9 +121,57 @@ function harness() {
     const latest = new Date(Date.parse(feed.source.retrievedAt)+1000).toISOString();
     newerResearch.sources.find(source => source.id === 'nflverse_games').retrievedAt = latest;
     h.render(newerResearch);
-    assert.match(h.node('nfl-standings-source').textContent,new RegExp(latest),'a newer primary refresh takes precedence over older standalone records');
+    assert.match(h.node('nfl-standings-source').textContent,new RegExp(feed.source.retrievedAt),'a newer retrieval timestamp on incomplete research does not remove verified source order');
+    newerResearch.weeks[activeWeek].conferences = clone(feed.weeks[activeWeek].conferences);
+    h.render(newerResearch);
+    assert.match(h.node('nfl-standings-source').textContent,new RegExp(feed.source.retrievedAt),'a date-only primary refresh with identical complete records retains verified conference order');
+    if (feed.ranking.official) assert.match(h.node('table-caption').textContent,/standings · ESPN/);
+    // Model a later validated score correction with unchanged game count.
+    // Only this in-memory test fixture changes; published source data is preserved.
+    newerResearch.weeks[activeWeek].conferences.AFC[0].pointsFor++;
+    h.render(newerResearch);
+    assert.match(h.node('nfl-standings-source').textContent,new RegExp(latest),'genuinely changed primary records with equal coverage take precedence over older standalone records');
     assert.doesNotMatch(h.node('nfl-standings-source').textContent,new RegExp(feed.source.retrievedAt));
+    newerResearch.weeks[activeWeek].throughWeek = feed.weeks[activeWeek].throughWeek + 1;
+    h.render(newerResearch);
+    assert.match(h.node('nfl-standings-source').textContent,new RegExp(latest),'primary records covering a later week take precedence');
     groups++;
   }
-  console.log(`PASS: ${groups} independent standings UI groups (real feed validation, record reconciliation, conditional requests, subpath, rollback, retained failure, retry, timeout, single-flight, sourced form, visible limitations, historical selection, newer-primary precedence).`);
+  if (feed.ranking.official) {
+    const h = harness(); assert.equal(await h.api.refreshStandings(),true);
+    const renderedRows = () => [...h.node('standings-rows').innerHTML.matchAll(/class="stand-row[^\"]*" role="row"><span role="cell" title="[^\"]*">(\d+)<\/span>.*?data-team="([A-Z]+)"/g)].map(match => ({rank:Number(match[1]),abbr:match[2]}));
+    for (const conference of ['AFC','NFC']) {
+      const state = {week:activeWeek,currentBrowsingWeek:activeWeek,conference,standingsExpanded:true,nflSort:'PCT'};
+      h.render(research,state);
+      assert.equal(state.nflSort,'SOURCE','legacy PCT selection migrates to provider conference order');
+      const expected = feed.conferenceOrder.conferences[conference];
+      assert.deepEqual(renderedRows().map(team => team.abbr),expected,`${conference} default follows all16 verified provider seeds`);
+      assert.deepEqual(renderedRows().map(team => team.rank),Array.from({length:16},(_,index) => index+1));
+      if (feed.currentBrowsingWeek === 6 && feed.weeks[activeWeek].throughWeek === 5) assert.deepEqual(expected,screenshotOrder[conference],`${conference} matches the complete user ESPN screenshot, including all tie groups`);
+      state.nflSort = 'PF'; h.render(research,state);
+      const sourceRows = feed.weeks[activeWeek].conferences[conference];
+      assert.ok(renderedRows().every(team => sourceRows.find(sourceTeam => sourceTeam.abbr === team.abbr).rank === team.rank),'explicit points analysis retains actual ESPN rank numbers');
+      assert.match(h.node('table-caption').textContent,/PF analysis/,'analysis ordering has a separate visible label');
+      state.nflSort = 'SOURCE'; h.render(research,state);
+      assert.deepEqual(renderedRows().map(team => team.abbr),expected,'returning to source order restores exact provider ranking');
+    }
+    const good = h.api.getStandingsDataset();
+    const corrupted = [];
+    let bad = clone(feed); bad.weeks[activeWeek].conferences.NFC.reverse(); corrupted.push(bad);
+    bad = clone(feed); bad.weeks[activeWeek].conferences.AFC[1].rank = 1; corrupted.push(bad);
+    bad = clone(feed); bad.sources.find(source => source.id === bad.ranking.sourceId).status = 'unavailable'; corrupted.push(bad);
+    bad = clone(feed); bad.conferenceOrder.season--; corrupted.push(bad);
+    bad = clone(feed); bad.conferenceOrder.conferences.NFC[3] = 'SEA'; corrupted.push(bad);
+    bad = clone(feed); delete bad.conferenceOrder; corrupted.push(bad);
+    bad = clone(feed); bad.ranking.official = false; corrupted.push(bad);
+    const historicalWeek = Object.keys(feed.weeks).find(week => week !== activeWeek);
+    bad = clone(feed); bad.weeks[historicalWeek].conferences.AFC[0].rank = 1; corrupted.push(bad);
+    for (const invalidFeed of corrupted) {
+      h.setHandle(async () => h.response(invalidFeed));
+      assert.equal(await h.api.refreshStandings(),false,'unverified, duplicated, misordered or wrong-season provider ranks are rejected');
+      assert.equal(h.api.getStandingsDataset(),good,'invalid provider evidence preserves the entire last verified dataset');
+    }
+    groups++;
+  }
+  console.log(`PASS: ${groups} independent standings UI groups (record reconciliation, conditional requests, rollback, retained failure/retry/timeout, sourced form, historical preservation, newer-primary precedence, all32 ESPN screenshot ranks, analysis rank preservation, invalid provider evidence rejection).`);
 })().catch(error => { console.error(error); process.exitCode = 1; });

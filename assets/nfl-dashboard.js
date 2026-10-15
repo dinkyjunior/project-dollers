@@ -23,7 +23,7 @@
 
   function validateStandings(feed) {
     const invalid = () => { throw new Error('The independent standings feed did not pass validation'); };
-    if (feed?.schemaVersion !== 1 || !Number.isInteger(feed.season) || feed.source?.status !== 'verified' || !Number.isFinite(Date.parse(feed.source?.retrievedAt)) || !feed.source?.url || feed.ranking?.official !== false || !Array.isArray(feed.teams) || feed.teams.length !== 32 || !feed.weeks || !Object.keys(feed.weeks).length || !Array.isArray(feed.games)) invalid();
+    if (feed?.schemaVersion !== 1 || !Number.isInteger(feed.season) || !Number.isInteger(feed.currentBrowsingWeek) || feed.currentBrowsingWeek < 1 || feed.currentBrowsingWeek > 18 || feed.source?.status !== 'verified' || !Number.isFinite(Date.parse(feed.source?.retrievedAt)) || !feed.source?.url || typeof feed.ranking?.official !== 'boolean' || !Array.isArray(feed.teams) || feed.teams.length !== 32 || !feed.weeks?.[feed.currentBrowsingWeek] || !Array.isArray(feed.games)) invalid();
     const identities = new Set(feed.teams.map(getAbbr));
     if (identities.size !== 32) invalid();
     for (const [key,week] of Object.entries(feed.weeks)) {
@@ -55,6 +55,24 @@
         const pct = played ? (totals.w + totals.ties / 2) / played : 0;
         if (Object.keys(totals).some(field => totals[field] !== team[field]) || Math.abs(pct - Number(team.pct)) > .00051) invalid();
       }
+    }
+    if (standingsDataset?.ranking?.official && standingsDataset.season === feed.season && standingsDataset.currentBrowsingWeek === feed.currentBrowsingWeek && !feed.ranking.official) throw new Error('The verified conference order is unavailable in this response; retaining sourced standings');
+    if (feed.ranking.official) {
+      const order = feed.conferenceOrder, source = feed.sources?.find(item => item.id === feed.ranking.sourceId);
+      const rankingSource = feed.ranking.source;
+      if (feed.ranking.method !== 'provider-conference-order' || feed.ranking.provider !== 'ESPN' || !order || order.provider !== feed.ranking.provider || order.sourceId !== feed.ranking.sourceId || order.season !== feed.season || order.week !== feed.currentBrowsingWeek || order.throughWeek !== feed.weeks[order.week]?.throughWeek || !source || source.status !== 'verified' || source.provider !== order.provider || source.season !== feed.season || !source.url || !Number.isFinite(Date.parse(source.retrievedAt)) || order.retrievedAt !== source.retrievedAt || !/^[a-f0-9]{64}$/i.test(source.sha256 || '') || !rankingSource || ['id','url','provider','status','season','retrievedAt','sha256'].some(field => rankingSource[field] !== source[field])) invalid();
+      const identityMap = new Map(feed.teams.map(team => [getAbbr(team),team]));
+      for (const conference of ['AFC','NFC']) {
+        const rows = feed.weeks[order.week].conferences[conference], abbrs = order.conferences?.[conference];
+        if (!Array.isArray(abbrs) || abbrs.length !== 16 || new Set(abbrs).size !== 16) invalid();
+        rows.forEach((team,index) => {
+          if (team.rank !== index + 1 || team.playoffSeed !== team.rank || team.sortIndex !== team.rank || abbrs[index] !== getAbbr(team) || identityMap.get(getAbbr(team))?.conference !== conference) invalid();
+        });
+      }
+      for (const [weekNumber,week] of Object.entries(feed.weeks)) {
+        if (Number(weekNumber) !== order.week && [...week.conferences.AFC,...week.conferences.NFC].some(team => team.rank != null || team.playoffSeed != null)) invalid();
+      }
+      if (standingsDataset?.ranking?.official && standingsDataset.season === feed.season && Date.parse(order.retrievedAt) < Date.parse(standingsDataset.conferenceOrder.retrievedAt)) throw new Error('An older conference order was returned; retaining verified standings');
     }
     if (standingsDataset && (feed.season < standingsDataset.season || feed.season === standingsDataset.season && Date.parse(feed.source.retrievedAt) < Date.parse(standingsDataset.source.retrievedAt))) throw new Error('An older standings feed was returned; retaining verified records');
     return feed;
@@ -102,7 +120,21 @@
     // snapshot. The current browsing week takes independently refreshed records.
     const week = standingsDataset?.weeks?.[state.week];
     const savedRetrievedAt = data.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt || data.retrievedAt;
-    if (String(state.week) !== String(state.currentBrowsingWeek) || standingsDataset?.season !== data.season || !week || week.throughWeek < snapshot.throughWeek || Date.parse(standingsDataset.source.retrievedAt) < Date.parse(savedRetrievedAt)) return snapshot;
+    if (String(state.week) !== String(state.currentBrowsingWeek) || standingsDataset?.season !== data.season || !week || week.throughWeek < snapshot.throughWeek) return snapshot;
+    if (Date.parse(standingsDataset.source.retrievedAt) < Date.parse(savedRetrievedAt) && week.throughWeek === snapshot.throughWeek) {
+      const savedTeams = [...(snapshot.conferences?.AFC || []),...(snapshot.conferences?.NFC || [])];
+      const refreshedTeams = [...week.conferences.AFC,...week.conferences.NFC];
+      const savedFinals = savedTeams.reduce((total,team) => total + Number(team.w) + Number(team.l) + Number(team.ties || 0),0) / 2;
+      const refreshedFinals = week.coverage.finalGames;
+      const recordsMatch = savedTeams.length === refreshedTeams.length && savedTeams.every(team => {
+        const refreshed = refreshedTeams.find(item => getAbbr(item) === getAbbr(team));
+        return refreshed && ['w','l','ties','pointsFor','pointsAgainst'].every(field => Number(team[field] || 0) === Number(refreshed[field] || 0));
+      });
+      // A later retrieval of unchanged or incomplete research data does not
+      // invalidate independently verified conference order. Preserve genuinely
+      // newer primary results or corrections when their coverage is at least as complete.
+      if (savedFinals > refreshedFinals || savedFinals === refreshedFinals && !recordsMatch) return snapshot;
+    }
     return {...snapshot,throughWeek:week.throughWeek,conferences:week.conferences,recordsFeed:standingsDataset,recordsCoverage:{...week.coverage,completedGamesInThroughWeek:week.completedGamesInThroughWeek,scheduledGamesInThroughWeek:week.scheduledGamesInThroughWeek}};
   }
 
@@ -116,6 +148,11 @@
 
   function recordsSource(snapshot) {
     return snapshot.recordsFeed?.source || context.data.sources?.find(source => source.id === 'nflverse_games') || {retrievedAt:context.data.retrievedAt};
+  }
+
+  function conferenceOrder(snapshot) {
+    const feed = snapshot.recordsFeed;
+    return feed?.ranking?.official && Number(context.state.week) === Number(feed.conferenceOrder?.week) ? feed.conferenceOrder : null;
   }
 
   // The team source retains the whole league schedule. Consume its integrity-
@@ -248,7 +285,7 @@
   function initializeState(state) {
     if (!Object.hasOwn(state,'nflDivision')) state.nflDivision = 'all';
     if (!Object.hasOwn(state,'nflForm')) state.nflForm = 4;
-    if (!Object.hasOwn(state,'nflSort')) state.nflSort = 'PCT';
+    if (!['SOURCE','PF','PA','DIFF'].includes(state.nflSort)) state.nflSort = 'SOURCE';
     if (!Object.hasOwn(state,'nflExpandedTeam')) state.nflExpandedTeam = null;
     if (!Object.hasOwn(state,'nflLeaderExpanded')) state.nflLeaderExpanded = new Set();
     if (!['QB','RB','WR'].includes(state.nflLeaderPosition)) state.nflLeaderPosition = 'RB';
@@ -295,6 +332,7 @@
 
   function standings(snapshot) {
     const {data,state,esc,logo,number} = context;
+    const order = conferenceOrder(snapshot), sourceOrder = state.nflSort === 'SOURCE';
     const all = [...(snapshot.conferences?.[state.conference] || [])];
     const teamMap = new Map((data.teams || []).map(team => [getAbbr(team),team]));
     const divisions = [...new Set(all.map(team => teamMap.get(getAbbr(team))?.division).filter(Boolean))];
@@ -307,7 +345,8 @@
     if ($('form-select')) $('form-select').value = String(state.nflForm);
     if ($('standings-sort')) $('standings-sort').value = state.nflSort;
     const sortMetric = team => state.nflSort === 'PF' ? (finite(team.pointsFor) ? Number(team.pointsFor) : NaN) : state.nflSort === 'PA' ? (finite(team.pointsAgainst) ? -Number(team.pointsAgainst) : NaN) : state.nflSort === 'DIFF' ? (finite(differential(team)) ? differential(team) : NaN) : (finite(team.pct) ? Number(team.pct) : NaN);
-    all.sort((a,b) => {
+    if (sourceOrder && order) all.sort((a,b) => a.rank - b.rank);
+    else if (!sourceOrder) all.sort((a,b) => {
       const av = sortMetric(a), bv = sortMetric(b);
       return (Number.isFinite(bv) ? bv : -Infinity) - (Number.isFinite(av) ? av : -Infinity) || Number(b.pct) - Number(a.pct) || (differential(b) ?? -Infinity) - (differential(a) ?? -Infinity) || getAbbr(a).localeCompare(getAbbr(b));
     });
@@ -318,14 +357,14 @@
     const mark = $('nfl-conference-mark');
     if (mark) { mark.src = `assets/nfl-dashboard/${state.conference.toLowerCase()}.svg`; mark.alt = state.conference; }
     const sortContext = {
-      PCT:{label:'win percentage',column:3,direction:'descending'},
+      SOURCE:{label:order ? `${order.provider} conference order` : 'saved snapshot order',column:order ? 0 : null,direction:order ? 'ascending' : null},
       PF:{label:'points scored',column:null,direction:'descending'},
       PA:{label:'points allowed',column:null,direction:'ascending'},
       DIFF:{label:'point differential',column:null,direction:'descending'}
-    }[state.nflSort] || {label:'win percentage',column:3,direction:'descending'};
+    }[state.nflSort];
     const caption = $('table-caption');
-    caption.textContent = `${state.conference} records · ${state.nflSort}-sorted`;
-    caption.title = `Sorted by ${sortContext.label}; not official playoff seeding`;
+    caption.textContent = sourceOrder ? order ? `${state.conference} standings · ${order.provider}` : `${state.conference} records · Saved order` : `${state.conference} records · ${state.nflSort} analysis`;
+    caption.title = sourceOrder ? order ? `${order.provider} conference standings; source-supplied ranks` : 'Historical snapshot order; official conference ranking was not verified' : `Analysis sorted by ${sortContext.label}; ${order ? `${order.provider} conference ranks are retained` : 'row numbers show analysis order'}`;
     const table = document.querySelector('[data-page="nfl"] .standings');
     let sourceNote = $('nfl-standings-source');
     if (!sourceNote && table) {
@@ -335,10 +374,12 @@
     }
     if (sourceNote) {
       const pending = Number(snapshot.recordsFeed?.coverage?.pendingStartedGames || 0);
-      sourceNote.textContent = `Record order is not official playoff seeding.${state.nflSort === 'PCT' ? ' Equal percentages use points differential, then team abbreviation.' : ''} ${recordsSource(snapshot).provider || recordsSource(snapshot).name || 'nflverse'} source retrieved ${context.timestamp(recordsSource(snapshot).retrievedAt)}.${pending > 0 ? ` ${pending} past-kickoff game${pending === 1 ? '' : 's'} await sourced results.` : ''}${standingsError ? ' Latest standings check failed; retaining verified records and retrying automatically.' : ''}${snapshot.recordsFeed ? ' Team research and statistics retain their separately dated coverage.' : ''}`;
-      sourceNote.title = recordsSource(snapshot).url || '';
+      const ordering = order ? `${sourceOrder ? 'Order' : 'Conference ranks'}: ${order.provider} conference standings, retrieved ${context.timestamp(order.retrievedAt)}.` : 'Saved record order; official conference ranking was not verified.';
+      const differences = order && snapshot.recordsFeed?.crossCheck?.orderDisagreements?.length ? ' NFL.com conference order differs; see Sources.' : '';
+      sourceNote.textContent = `${ordering}${!sourceOrder ? ` Analysis sorted by ${sortContext.label}.` : ''} Records: ${recordsSource(snapshot).provider || recordsSource(snapshot).name || 'nflverse'}, retrieved ${context.timestamp(recordsSource(snapshot).retrievedAt)}.${differences}${pending > 0 ? ` ${pending} past-kickoff game${pending === 1 ? '' : 's'} await sourced results.` : ''}${standingsError ? ' Latest standings check failed; retaining verified records and retrying automatically.' : ''}${snapshot.recordsFeed ? ' Team research and statistics retain their separately dated coverage.' : ''}`;
+      sourceNote.title = order ? snapshot.recordsFeed.ranking.source.url : recordsSource(snapshot).url || '';
     }
-    table?.setAttribute('aria-label',`${state.conference} records sorted by ${sortContext.label}; not official playoff seeding`);
+    table?.setAttribute('aria-label',`${state.conference} records in ${sortContext.label}${order ? `; ${order.provider} conference ranks` : '; official conference ranking unverified'}`);
     table?.querySelectorAll('[role="columnheader"]').forEach((heading,index) => {
       const selected = index === sortContext.column;
       heading.classList.toggle('nfl-sort-heading',selected);
@@ -349,7 +390,7 @@
       const ties = finite(team.ties) ? Number(team.ties) : null;
       const recordText = `${number(team.w)}–${number(team.l)}${ties === null ? '–—' : ties > 0 ? `–${number(ties)}` : ''}`;
       const recordLabel = `${number(team.w)} wins, ${number(team.l)} losses, ${ties === null ? 'ties unavailable' : `${number(ties)} ties`}`;
-      return `<div class="stand-row${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="Sorted record order; not official playoff seeding">${all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="${state.standingsExpanded ? 'team-details' : 'team'}" data-team="${esc(abbr)}"${state.standingsExpanded ? '' : ` aria-expanded="${expanded}"`} aria-label="${esc(team.fullName || team.name)} ${state.standingsExpanded ? 'team details' : 'record details'}"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span class="nfl-record" role="cell" aria-label="${esc(recordLabel)}">${esc(recordText)}</span><span class="nfl-pct" role="cell">${exists(team.pct) ? esc(team.pct) : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
+      return `<div class="stand-row${expanded ? ' is-expanded' : ''}" role="row"><span role="cell" title="${order ? `${esc(order.provider)} conference rank` : 'Saved record or analysis order; official conference ranking unverified'}">${order ? team.rank : all.indexOf(team)+1}</span><span class="table-team" role="cell"><button id="nfl-team-${esc(abbr.toLowerCase())}" class="team-link" data-nfl-action="${state.standingsExpanded ? 'team-details' : 'team'}" data-team="${esc(abbr)}"${state.standingsExpanded ? '' : ` aria-expanded="${expanded}"`} aria-label="${esc(team.fullName || team.name)} ${state.standingsExpanded ? 'team details' : 'record details'}"><img src="${esc(logo(team.id))}" alt="" width="500" height="500" decoding="async"><span>${esc(team.name)}</span></button></span><span class="nfl-record" role="cell" aria-label="${esc(recordLabel)}">${esc(recordText)}</span><span class="nfl-pct" role="cell">${exists(team.pct) ? esc(team.pct) : '—'}</span><span class="stand-form" role="cell" aria-label="Recent results, oldest to newest">${formChips(team,snapshot)}</span></div>${expanded ? teamSummary(team,snapshot) : ''}`;
     }).join('');
     const toggle = document.querySelector('[data-page="nfl"] [data-standings-toggle]');
     if (toggle) {
@@ -509,8 +550,9 @@
     preview();
     const provenance = $('nfl-data-context');
     if (provenance) {
-      provenance.textContent = `${data.season} · fixtures Week ${state.week} · records: ${coverageLabel(records)} · statistics ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}. Records source retrieved ${context.timestamp(recordsSource(records).retrievedAt)}. Schedule source retrieved ${weeklyDataset ? context.timestamp(weeklyDataset.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt) : 'unavailable'}. Statistics source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_player_stats')?.retrievedAt || data.retrievedAt)}.`;
-      provenance.title = `${sourceContext(records)}. Form and home/away splits are calculated from complete retained final scores; sorted rows are not official playoff seeds. Team research retains its independent source snapshot.`;
+      const order = conferenceOrder(records);
+      provenance.textContent = `${data.season} · fixtures Week ${state.week} · records: ${coverageLabel(records)} · statistics ${finite(snapshot.leadersWeek) ? `W${snapshot.leadersWeek}` : 'unavailable'}. Records source retrieved ${context.timestamp(recordsSource(records).retrievedAt)}.${order ? ` Conference order: ${order.provider}, retrieved ${context.timestamp(order.retrievedAt)}.` : ''} Schedule source retrieved ${weeklyDataset ? context.timestamp(weeklyDataset.sources?.find(source => source.id === 'nflverse_games')?.retrievedAt) : 'unavailable'}. Statistics source retrieved ${context.timestamp(data.sources?.find(source => source.id === 'nflverse_player_stats')?.retrievedAt || data.retrievedAt)}.`;
+      provenance.title = `${sourceContext(records)}. Form and home/away splits are calculated from complete retained final scores. ${order ? `Conference ranks are supplied by ${order.provider}.` : 'Official conference ranks are not verified for this snapshot.'} Team research retains its independent source snapshot.`;
     }
     if (!bound) bind();
   }

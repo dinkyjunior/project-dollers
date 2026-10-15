@@ -31,16 +31,16 @@
     <link rel="stylesheet" href="assets/matchup-breakdown.css?v=20261009-v1" />
     <link rel="stylesheet" href="assets/game-report.css?v=20261012-v1" />
     <link rel="stylesheet" href="assets/home-editorial.css?v=20261013-immersive-v1" />
-    <link rel="stylesheet" href="assets/nfl-editorial.css?v=20261015-standings-v1" />
+    <link rel="stylesheet" href="assets/nfl-editorial.css?v=20261015-espn-order-v1" />
     <script src="assets/source-integrity.js?v=20261012-v1" defer></script>
     <script src="assets/team-details.js?v=20261015-auto-week-v1" defer></script>
     <script src="assets/team-details-motion.js?v=20261008-v1" defer></script>
     <script src="assets/data-updates.js" defer></script>
     <script src="assets/player-research.js" defer></script>
-    <script src="assets/nfl-dashboard.js?v=20261015-standings-v1" defer></script>
+    <script src="assets/nfl-dashboard.js?v=20261015-espn-order-v1" defer></script>
     <script src="assets/game-report.js?v=20261012-v1" defer></script>
     <script src="assets/current-week.js" defer></script>
-    <script src="assets/app.js?v=20261015-auto-week-v1" defer></script>
+    <script src="assets/app.js?v=20261015-espn-order-v1" defer></script>
     <script src="assets/matchup-breakdown.js?v=20261013-weekly-v1" defer></script>
     <script src="assets/matchup-breakdown-motion.js?v=20261009-v1" defer></script>
     <script src="assets/motion.js" defer></script>
@@ -149,10 +149,10 @@
                 </div>
               </div>
               <section class="nfl-standings-panel nfl-framed nfl-motion-zone" aria-label="Conference standings">
-                <div class="table-label"><img id="nfl-conference-mark" src="assets/nfl-dashboard/afc.svg" alt="" width="50" height="50" hidden /><div><h2 id="table-caption">AFC standings</h2><span class="through-week">Loading data</span></div><label class="nfl-sort-control"><span class="sr-only">Sort standings</span><select id="standings-sort"><option value="PCT">Sort: PCT</option><option value="PF">Sort: PF</option><option value="PA">Sort: PA</option><option value="DIFF">Sort: DIFF</option></select></label><button class="nfl-info-button" data-sources aria-label="Standings data sources and context"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg></button></div>
+                <div class="table-label"><img id="nfl-conference-mark" src="assets/nfl-dashboard/afc.svg" alt="" width="50" height="50" hidden /><div><h2 id="table-caption">AFC standings</h2><span class="through-week">Loading data</span></div><label class="nfl-sort-control"><span class="sr-only">Standings order or analysis sort</span><select id="standings-sort"><option value="SOURCE">Source order</option><option value="PF">Sort: PF</option><option value="PA">Sort: PA</option><option value="DIFF">Sort: DIFF</option></select></label><button class="nfl-info-button" data-sources aria-label="Standings data sources and context"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg></button></div>
                 <p id="nfl-filter-note" class="nfl-filter-note" role="status" aria-live="polite" hidden></p>
-                <div class="standings" role="table" aria-label="Conference records sorted by win percentage; not official playoff seeding">
-                  <div class="stand-head" role="row"><span role="columnheader">#</span><span role="columnheader">Team</span><span role="columnheader">W–L</span><span role="columnheader" class="nfl-sort-heading">PCT</span><span role="columnheader">Form</span></div>
+                <div class="standings" role="table" aria-label="Conference records; source order loading">
+                  <div class="stand-head" role="row"><span role="columnheader">#</span><span role="columnheader">Team</span><span role="columnheader">W–L</span><span role="columnheader">PCT</span><span role="columnheader">Form</span></div>
                   <div id="standings-rows" role="rowgroup"></div>
                 </div>
                 <button class="subtle-button standings-toggle nfl-all-teams" data-standings-toggle aria-expanded="false"><span>View all 16 teams</span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron"></use></svg></button>
