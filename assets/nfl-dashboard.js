@@ -225,7 +225,15 @@
     const weekKey = `${data.season}/${state.week}`;
     if (state.nflWeeklyWeek !== weekKey || !games.some(game => game.id === state.nflWeeklyGame)) {
       state.nflWeeklyWeek = weekKey;
-      state.nflWeeklyGame = games.find(game => game.id === snapshot.fixture?.id)?.id || games[0]?.id || null;
+      state.nflWeeklyManual = false;
+    }
+    if (!state.nflWeeklyManual) {
+      const now = Date.now();
+      // Only sourced kickoff timestamps establish the next game. A calendar
+      // date, disputed time or passed kickoff cannot establish an upcoming one.
+      const next = games.filter(game => game.status !== 'final' && (!game.kickoffStatus || game.kickoffStatus === 'verified') && typeof game.kickoffUtc === 'string' && game.kickoffUtc.includes('T') && Date.parse(game.kickoffUtc) >= now)
+        .sort((a,b) => Date.parse(a.kickoffUtc) - Date.parse(b.kickoffUtc) || a.id.localeCompare(b.id))[0];
+      state.nflWeeklyGame = next?.id || games.find(game => game.id === snapshot?.fixture?.id)?.id || games[0]?.id || null;
     }
     return games.find(game => game.id === state.nflWeeklyGame) || null;
   }
@@ -591,6 +599,9 @@
     });
     const resumeSchedule = () => {
       if (!context || document.hidden) return;
+      const selected = context.state.nflWeeklyGame;
+      selectedWeeklyGame(context.data.weeks[context.state.week]);
+      if (selected !== context.state.nflWeeklyGame) rerender();
       loadWeeklySource(true);
       if (Date.now() - standingsLastAttempt >= (standingsError ? 15000 : 60000)) loadStandingsSource(true);
       else scheduleStandingsCheck();
@@ -632,7 +643,10 @@
       if (action === 'weekly-prev' || action === 'weekly-next') {
         const games = gamesThisWeek();
         const index = games.findIndex(game => game.id === state.nflWeeklyGame);
-        if (games.length) state.nflWeeklyGame = games[(index + (action === 'weekly-next' ? 1 : -1) + games.length) % games.length].id;
+        if (games.length) {
+          state.nflWeeklyGame = games[(index + (action === 'weekly-next' ? 1 : -1) + games.length) % games.length].id;
+          state.nflWeeklyManual = true;
+        }
         state.nflPreview = null;
         rerender();
         return;
@@ -710,7 +724,10 @@
     document.addEventListener('change',event => {
       if (!context || !event.target.closest('[data-page="nfl"]')) return;
       if (event.target.id === 'nfl-weekly-game') {
-        if (gamesThisWeek().some(game => game.id === event.target.value)) context.state.nflWeeklyGame = event.target.value;
+        if (gamesThisWeek().some(game => game.id === event.target.value)) {
+          context.state.nflWeeklyGame = event.target.value;
+          context.state.nflWeeklyManual = true;
+        }
         context.state.nflPreview = null;
         rerender();
         return;

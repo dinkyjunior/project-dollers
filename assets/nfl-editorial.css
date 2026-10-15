@@ -192,7 +192,7 @@ body:has(.nfl-editorial-dashboard.active) { display: grid; place-items: center; 
   border: 1px solid #363d3e;
   border-image: none;
   border-radius: 999px;
-  background: #101516d9;
+  background: transparent;
   box-shadow: none;
 }
 .nfl-editorial-dashboard .season-select { width: 110px; }
@@ -217,6 +217,10 @@ body:has(.nfl-editorial-dashboard.active) { display: grid; place-items: center; 
 }
 .nfl-editorial-dashboard .week-select .icon,
 .nfl-editorial-dashboard .season-select .icon { position: absolute; right: 9px; width: 9px; height: 9px; color: #b5bfc0; pointer-events: none; }
+/* Native menus need opaque option colours even when the closed control blends
+   into the stadium. Keep the browser's keyboard and platform picker behaviour. */
+.page.nfl-editorial-dashboard select { color-scheme: dark; }
+.page.nfl-editorial-dashboard :is(option, optgroup) { background: #101719; color: #d5e1df; }
 .nfl-editorial-dashboard .primary-tabs {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
