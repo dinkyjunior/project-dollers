@@ -8,6 +8,12 @@
   const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><use href="${['calendar','stadium','shield','info'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
   const state = {team:'DAL',tab:'form',window:5,season:'cross',venue:'all',mode:'average',expanded:null,initialized:false,fromLadder:false,view:null,game:null,playerOpen:new Set()};
   let dataset = null, rawDataset = null, rawBytes = null, etag = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
+  const upcomingLayout = typeof ResizeObserver === 'function' ? new ResizeObserver(entries => {
+    for (const {target} of entries) {
+      const height = target.getBoundingClientRect().height;
+      if (height > 0) target.parentElement.style.setProperty('--td-upcoming-overlap', `${height * 0.7}px`);
+    }
+  }) : null;
   const team = abbr => dataset?.teams?.[abbr || state.team];
   const current = () => window.PDApp?.getContext()?.data;
   const identity = abbr => team(abbr) || current()?.teams?.find(item => item.abbr === abbr) || {abbr,name:abbr,fullName:abbr};
@@ -153,6 +159,7 @@
   }
   function render() {
     const holder = $('team-details-content'); if (!holder) return;
+    upcomingLayout?.disconnect();
     if (page()) page().dataset.team = state.team;
     if (!dataset || !team()) {
       holder.innerHTML = `${masthead()}<section class="td-panel td-framed"><h1>${escape(identity(state.team).fullName)} research</h1><p>${error ? escape(error) : dataset ? 'This team is unavailable in the verified research feed.' : 'Loading verified team data…'}</p>${error ? '<button data-td-action="retry">Retry verified data</button>' : ''}</section>`;
@@ -160,6 +167,7 @@
     }
     const scroll = page().querySelector('.page-scroll'), top = scroll.scrollTop, focused = document.activeElement, focusedSelector = focusSelector(focused);
     holder.innerHTML = `${masthead(hero())}${upcoming()}<div class="td-tabs" role="tablist" aria-label="Team research">${[['form','Form'],['players','Players & QB'],['lineup','Lineup & travel']].map(([tab,label]) => `<button id="team-tab-${tab}" data-team-tab="${tab}" role="tab" aria-selected="${state.tab === tab}" aria-controls="team-panel-${tab}" tabindex="${state.tab === tab ? '0' : '-1'}">${label}</button>`).join('')}</div>${['form','players','lineup'].map(tab => `<div id="team-panel-${tab}" role="tabpanel" aria-labelledby="team-tab-${tab}" ${state.tab !== tab ? 'hidden' : ''}>${tab === state.tab ? tab === 'form' ? formContent() : tab === 'players' ? playersContent() : lineupContent() : ''}</div>`).join('')}<div class="td-editorial-source-line"><button data-td-action="sources">View sources <span aria-hidden="true">↗</span></button><span>${dataset.season} research · ${escape(timestamp(dataset.retrievedAt))}</span></div>`;
+    upcomingLayout?.observe(holder.querySelector('.td-upcoming'));
     scroll.scrollTop = top;
     const stale = Date.now() - Date.parse(dataset.retrievedAt) > 12*60*60*1000;
     $('team-details-footer').innerHTML = `<button data-td-action="sources">${icon('info')} Sources</button><span>${error ? 'RETAINED VERIFIED DATA · UPDATE FAILED' : stale ? 'SNAPSHOT MAY BE STALE' : 'VERIFIED SOURCES'} · ${dataset.season} · ${escape(timestamp(dataset.retrievedAt))}</span><button data-td-action="refresh" aria-label="Refresh team research">↻</button>`;

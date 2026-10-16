@@ -91,7 +91,10 @@ body:has(.page.team-editorial-page.active) {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.page.team-editorial-page .td-editorial-masthead:has(.td-hero) { min-height: calc(var(--td-editorial-width) * 1.5 + env(safe-area-inset-top, 0px)); }
+.page.team-editorial-page .td-editorial-masthead:has(.td-hero) {
+  min-height: calc(var(--td-editorial-width) * 1.5 + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(17px + var(--td-upcoming-overlap, 80px));
+}
 .page.team-editorial-page .td-editorial-art {
   position: absolute;
   inset: 0;
@@ -217,6 +220,14 @@ body:has(.page.team-editorial-page.active) {
 
 /* The next real fixture remains a compact research entry point. */
 .page.team-editorial-page .td-upcoming { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 12px; min-height: 80px; margin: 0 0 9px; padding: 10px 11px; overflow: hidden; }
+/* Keep 70% of the card over the stadium, with its remaining 30% over black.
+   The measured overlap follows wrapping names, fixture text and phone sizes. */
+.page.team-editorial-page .td-editorial-masthead:has(.td-hero) + .td-upcoming {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(-1 * var(--td-upcoming-overlap, 80px));
+  background: linear-gradient(110deg, #0c0d0ed9, #080909eb);
+}
 .page.team-editorial-page .td-upcoming-info { display: contents; }
 .page.team-editorial-page .td-upcoming-info h2,
 .page.team-editorial-page .td-upcoming > h2 { grid-column: 1 / -1; margin: 0; color: #cecedd; font: 400 9px/1.5 var(--td-text); letter-spacing: 1.6px; text-transform: uppercase; }
