@@ -6,7 +6,8 @@
   const known = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
   const fmt = (value, places = 0) => known(value) ? Number(value).toLocaleString('en-AU',{maximumFractionDigits:places}) : '—';
   const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><use href="${['calendar','stadium','shield','info'].includes(name) ? 'assets/team-details/ui-icons.svg' : 'assets/icons.svg'}#${name}"></use></svg>`;
-  const state = {team:'DAL',tab:'form',window:5,season:'cross',venue:'all',mode:'average',expanded:null,initialized:false,fromLadder:false,view:null,game:null,playerOpen:new Set()};
+  const state = {team:'DAL',tab:'form',mode:'average',expanded:null,fixture:null,fromLadder:false,view:null,game:null};
+  const fixtureSelections = new Map();
   let dataset = null, rawDataset = null, rawBytes = null, etag = null, loading = null, error = null, lastCheck = 0, returnFocus = null, returnFocusSelector = null;
   const upcomingLayout = typeof ResizeObserver === 'function' ? new ResizeObserver(entries => {
     for (const {target} of entries) {
@@ -18,8 +19,6 @@
   const current = () => window.PDApp?.getContext()?.data;
   const identity = abbr => team(abbr) || current()?.teams?.find(item => item.abbr === abbr) || {abbr,name:abbr,fullName:abbr};
   const name = abbr => identity(abbr).name || abbr;
-  const panelName = () => state.team === 'DAL' ? 'DALLAS' : state.team;
-  const cityName = abbr => identity(abbr).fullName?.replace(identity(abbr).name,'').trim() || abbr;
   const logo = abbr => abbr === 'DAL' ? 'assets/team-details/dal.svg' : window.PDApp?.getContext()?.logo(abbr) || `assets/logos/${String(abbr).toLowerCase()}.webp`;
   const active = () => !!page()?.classList.contains('active');
   const games = () => team()?.games || [];
@@ -32,7 +31,7 @@
   const venueKind = game => game.neutral === true ? 'neutral' : game.neutral === false ? home(game) ? 'home' : 'away' : 'unknown';
   const sortRecent = (a,b) => String(b.kickoffUtc || b.gameday).localeCompare(String(a.kickoffUtc || a.gameday)) || Number(b.season)-Number(a.season) || Number(b.week)-Number(a.week);
   function selectedGames() {
-    return games().filter(game => final(game) && (!game.seasonType || ['REG','2'].includes(String(game.seasonType))) && (state.season === 'cross' || Number(game.season) === Number(dataset.season)) && (state.venue === 'all' || venueKind(game) === state.venue)).sort(sortRecent).slice(0,state.window);
+    return games().filter(game => final(game) && (!game.seasonType || ['REG','2'].includes(String(game.seasonType)))).sort(sortRecent).slice(0,5);
   }
   const seasonGames = () => games().filter(game => final(game) && Number(game.season) === Number(dataset.season) && (!game.seasonType || ['REG','2'].includes(String(game.seasonType)))).sort(sortRecent);
   function record(items) {
@@ -40,16 +39,59 @@
     const wins = items.filter(game => outcome(game) === 'W').length, losses = items.filter(game => outcome(game) === 'L').length, ties = items.filter(game => outcome(game) === 'T').length;
     return `${wins}–${losses}${ties ? `–${ties}` : ''}`;
   }
+  function calendarDay(value) {
+    const date = new Date(value);
+    if (!Number.isFinite(date.getTime())) return null;
+    const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
+    return ['year','month','day'].map(type => parts.find(part => part.type === type).value).join('-');
+  }
+  function sourcedDay(game) {
+    const value = game?.gameday;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return null;
+    const date = new Date(`${value}T12:00:00Z`);
+    return Number.isFinite(date.getTime()) && date.toISOString().slice(0,10) === value ? value : null;
+  }
+  function confirmedKickoff(game) {
+    if (typeof game?.kickoffUtc !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/i.test(game.kickoffUtc) || !sourcedDay({gameday:game.kickoffUtc.slice(0,10)}) || game.kickoffStatus && game.kickoffStatus !== 'verified') return null;
+    const value = Date.parse(game.kickoffUtc);
+    return Number.isFinite(value) ? value : null;
+  }
+  function futureGames() {
+    const now = Date.now(), today = calendarDay(now), seen = new Set();
+    return games().filter(game => {
+      if (!game.id || seen.has(game.id) || Number(game.season) !== Number(dataset?.season) || game.status !== 'scheduled' || ![game.home_team,game.away_team].includes(state.team) || game.seasonType && !['REG','2'].includes(String(game.seasonType))) return false;
+      seen.add(game.id);
+      const kickoff = confirmedKickoff(game);
+      // A dated fixture with no confirmed time is future only on a later source
+      // calendar day. No midnight kickoff is manufactured for a TBD time.
+      return kickoff !== null ? kickoff >= now : !!sourcedDay(game) && sourcedDay(game) > today;
+    }).sort((a,b) => {
+      const aTime = confirmedKickoff(a), bTime = confirmedKickoff(b);
+      const aDay = aTime !== null ? calendarDay(aTime) : sourcedDay(a), bDay = bTime !== null ? calendarDay(bTime) : sourcedDay(b);
+      return aDay.localeCompare(bDay) || (aTime !== null && bTime !== null ? aTime-bTime : aTime !== null ? -1 : bTime !== null ? 1 : 0) || Number(a.week)-Number(b.week) || a.id.localeCompare(b.id);
+    }).slice(0,5);
+  }
   function nextGame() {
-    const eligible = game => Number(game.season) === Number(dataset.season) && (game.home_team === state.team || game.away_team === state.team) && game.status !== 'final' && !['cancelled','postponed'].includes(game.status);
-    const upcomingId = team()?.upcomingGameId;
-    const upcoming = upcomingId ? games().find(game => game.id === upcomingId && eligible(game)) : null;
-    return upcoming || games().filter(eligible).sort((a,b) => String(a.kickoffUtc || a.gameday).localeCompare(String(b.kickoffUtc || b.gameday)))[0] || null;
+    const fixtures = futureGames(), selected = fixtures.find(game => game.id === fixtureSelections.get(state.team)) || fixtures[0] || null;
+    state.fixture = selected?.id || null;
+    if (selected) fixtureSelections.set(state.team,selected.id); else fixtureSelections.delete(state.team);
+    return selected;
+  }
+  function selectFixture(index) {
+    const fixtures = futureGames(), selected = fixtures[index];
+    if (!selected) return;
+    fixtureSelections.set(state.team,selected.id); state.fixture = selected.id;
+    render();
   }
   function dateTime(game) {
-    if (!game?.kickoffUtc) return 'Kickoff unavailable';
-    const value = new Date(game.kickoffUtc);
-    if (!Number.isFinite(value.getTime())) return 'Kickoff unavailable';
+    const kickoff = confirmedKickoff(game);
+    if (kickoff === null) {
+      const day = sourcedDay(game);
+      if (!day) return 'Kickoff unavailable';
+      const label = new Intl.DateTimeFormat('en-AU',{timeZone:'UTC',weekday:'short',day:'numeric',month:'short'}).format(new Date(`${day}T12:00:00Z`));
+      return `${label} (source date) · Kickoff time unavailable`;
+    }
+    const value = new Date(kickoff);
     const date = new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',weekday:'short',day:'numeric',month:'short'}).format(value);
     const time = new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Sydney',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(value);
     return `${date} · ${time}`;
@@ -64,10 +106,6 @@
   function aggregate(field, allowed = false, items = selectedGames()) {
     return completeValue(items,game => stats(game,allowed ? opponent(game) : state.team)[field]);
   }
-  function conversion(made, attempts, items) {
-    const numer = completeValue(items,game => stats(game)[made],false), denom = completeValue(items,game => stats(game)[attempts],false);
-    return {value: known(numer.value) && known(denom.value) && denom.value > 0 ? 100*numer.value/denom.value : null,covered:Math.min(numer.covered,denom.covered),total:items.length};
-  }
   const coverage = result => result.total ? `${result.covered} of ${result.total} games verified` : 'No eligible games';
   const metricCell = result => `<span title="${escape(coverage(result))}" data-coverage="${result.covered}/${result.total}">${fmt(result.value,state.mode === 'average' ? 1 : 0)}</span>`;
   function chips(items) {
@@ -78,7 +116,7 @@
       return `<span class="td-form-chip ${result === 'W' ? 'is-win' : result === 'L' ? 'is-loss' : 'is-tie'}" data-outcome="${result}" role="img" aria-label="${escape(label)}" title="${escape(label)}"><svg class="td-form-glyph" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="${square}${letters[result] || letters.T}"/></svg><span class="sr-only">${result}</span></span>`;
     }).join('');
   }
-  const diamond = (label, action, extra = '') => `<button class="td-diamond-button${action === 'continue' ? ' td-continue' : ''}" data-td-action="${action}" ${extra}>${escape(label)} ${icon('chevron')}</button>`;
+  const diamond = (label, action, extra = '') => `<button class="td-diamond-button" data-td-action="${action}" ${extra}>${escape(label)} ${icon('chevron')}</button>`;
   function editorialHeader() {
     return `<header class="team-brand td-editorial-header"><a class="brand-home-link" href="#home" aria-label="Project Dollar Home"><img class="td-brand-mark" src="assets/branding/project-dollar-jewel-bag-emerald.png" alt="Project Dollar" width="500" height="500"></a><span class="td-brand-subtitle" hidden>Sports data &amp; research</span><button class="td-header-menu" data-td-action="menu" aria-label="Open team navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 12h18M3 19h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></header><div class="td-breadcrumb td-editorial-crumbs"><button class="td-back" data-td-action="ladder">${icon('back')} NFL ladder</button><span class="td-editorial-crumb-divider" aria-hidden="true"></span><div class="td-crumbs"><button data-td-action="ladder">Teams</button><span aria-hidden="true">/</span><span>${escape(identity(state.team).fullName || state.team)}</span></div></div>`;
   }
@@ -96,64 +134,40 @@
     return `<section class="td-hero td-framed"><img class="td-team-logo" src="${escape(crest)}" alt="${escape(t.fullName)} logo" width="500" height="500"><div class="td-hero-copy"><h1 class="td-wordmark-title"><span class="sr-only">${escape(t.fullName)}</span><span class="td-team-wordmark" aria-hidden="true" style="--td-wordmark-image:url('${escape(wordmark)}')"></span></h1><p class="td-hero-meta">${escape(t.division || t.conference || 'NFL')}</p><div class="td-hero-bottom"><div class="td-record-wrap"><small class="td-record-label">RECORD</small><strong class="td-record" aria-label="${dataset.season} research record across ${items.length} verified completed games">${record(items)}</strong></div><div class="td-form"><small>FORM</small><div class="td-form-chips">${chips(items.slice(0,5))}</div></div></div></div></section>`;
   }
   function upcoming() {
-    const game = nextGame();
-    if (!game) return `<section class="td-upcoming td-framed"><h2>UPCOMING GAME</h2><p>No verified upcoming fixture is available.</p></section>`;
-    const opp = opponent(game), past = game.kickoffUtc && Date.parse(game.kickoffUtc) < Date.now();
-    return `<section class="td-upcoming td-framed" data-upcoming-game="${escape(game.id)}"><div class="td-upcoming-info"><h2>${past ? 'AWAITING RESULT' : 'UPCOMING MATCHUP'} · WEEK ${game.week}</h2><div class="td-upcoming-opponent"><img class="td-opponent-logo" src="${escape(logo(opp))}" alt="${escape(identity(opp).fullName)} logo" width="500" height="500"><div class="td-upcoming-copy"><h3><small>vs</small> ${escape(identity(opp).fullName)}</h3><p>${escape(venueKind(game) === 'unknown' ? 'Venue designation unavailable' : venueKind(game))} · ${escape(game.venue || 'Venue unavailable')}<br>${escape(dateTime(game))}</p></div></div></div>${diamond('Open matchup breakdown','matchup',`data-game="${escape(game.id)}"`)}</section>`;
+    const game = nextGame(), fixtures = futureGames();
+    if (!game) return `<section class="td-upcoming td-framed"><h2>UPCOMING MATCHUPS</h2><p>No future fixture is available in this snapshot.</p></section>`;
+    const opp = opponent(game), index = fixtures.findIndex(item => item.id === game.id);
+    const controls = `<div class="td-fixture-controls" role="group" aria-label="Upcoming fixtures"><button data-td-action="fixture-prev" aria-label="Previous upcoming fixture" ${index === 0 ? 'disabled' : ''}>${icon('back')}</button><div class="td-fixture-week-buttons">${fixtures.map((item,i) => `<button data-td-fixture-index="${i}" aria-pressed="${i === index}" aria-label="Week ${item.week}: ${escape(identity(opponent(item)).fullName)}">W${item.week}</button>`).join('')}</div><button data-td-action="fixture-next" aria-label="Next upcoming fixture" ${index === fixtures.length-1 ? 'disabled' : ''}>${icon('chevron')}</button></div>`;
+    return `<section class="td-upcoming td-framed" data-upcoming-game="${escape(game.id)}"><div class="td-upcoming-info"><h2>UPCOMING MATCHUP · WEEK ${game.week}</h2><div class="td-upcoming-opponent"><img class="td-opponent-logo" src="${escape(logo(opp))}" alt="${escape(identity(opp).fullName)} logo" width="500" height="500"><div class="td-upcoming-copy"><h3><small>${home(game) || venueKind(game) === 'neutral' ? 'vs' : '@'}</small> ${escape(identity(opp).fullName)}</h3><p>${escape(venueKind(game) === 'unknown' ? 'Venue designation unavailable' : venueKind(game))} · ${escape(game.venue || 'Venue unavailable')}<br>${escape(dateTime(game))}</p></div></div></div>${diamond('Open matchup breakdown','matchup',`data-game="${escape(game.id)}"`)}${controls}</section>`;
   }
   function panelHead(title, extra = '') {
     return `<header class="td-panel-head"><h2>${escape(title)}</h2>${extra}</header>`;
   }
-  function filters(items) {
-    return `<div class="td-filters"><label><select id="team-window-select" aria-label="Game window">${[3,5,10].map(n => `<option value="${n}" ${state.window === n ? 'selected' : ''}>Last ${n}</option>`).join('')}</select>${icon('chevron')}</label><label><select id="team-season-select" aria-label="Season filter"><option value="cross" ${state.season === 'cross' ? 'selected' : ''}>Cross-season</option><option value="current" ${state.season === 'current' ? 'selected' : ''}>${dataset.season} only</option></select>${icon('chevron')}</label><label><select id="team-venue-select" aria-label="Venue filter">${[['all','All venues'],['home','Home'],['away','Away'],['neutral','Neutral']].map(([v,l]) => `<option value="${v}" ${state.venue === v ? 'selected' : ''}>${l}</option>`).join('')}</select>${icon('chevron')}</label></div>`;
-  }
   function gameExpansion(game) {
-    const own = stats(game), other = stats(game,opponent(game));
-    const lines = [['Total offense','totalOffense'],['Net passing', 'netPassing'],['Rushing','rushing']];
-    return `<div class="td-game-report" data-game="${escape(game.id)}" id="team-game-${escape(game.id)}"><h3>${escape(cityName(state.team))} ${fmt(ownScore(game))}–${fmt(otherScore(game))} ${escape(cityName(opponent(game)))} <span>· Final · ${game.season} Week ${game.week}</span></h3><div class="td-game-report-body"><table class="td-game-stats td-game-stats-table"><thead><tr><th scope="col"><span class="td-stats-label">YARDS</span></th><th scope="col">${escape(state.team)}</th><th scope="col">${escape(opponent(game))}</th></tr></thead><tbody>${lines.map(([label,key]) => `<tr class="td-game-stat"><th scope="row">${label}</th><td>${fmt(own[key])}</td><td>${fmt(other[key])}</td></tr>`).join('')}</tbody></table><button class="td-game-open" data-td-action="report" data-game="${escape(game.id)}">Open game report ${icon('chevron')}</button></div></div>`;
+    const quarters = window.PDTeamQuarters?.render(game,state.team) || '<p class="td-quarter-status" role="status">Quarter scores are unavailable.</p>';
+    return `<div class="td-game-report" data-game="${escape(game.id)}" id="team-game-${escape(game.id)}">${quarters}</div>`;
   }
   function gamesPanel(items) {
-    return `<section class="td-panel td-games td-framed">${panelHead(`LAST ${state.window === 5 ? 'FIVE' : state.window} GAMES`)}<div class="td-table-head" aria-hidden="true"><span>OPPONENT</span><span>RESULT</span></div><div class="td-game-list">${items.length ? items.map(game => { const expanded = state.expanded === game.id, opp = opponent(game); return `<button class="td-game-row ${expanded ? 'is-expanded' : ''}" data-team-game="${escape(game.id)}" aria-expanded="${expanded}" aria-controls="team-game-${escape(game.id)}"><span class="td-game-opponent"><img class="td-opponent-logo" src="${escape(logo(opp))}" alt="" width="500" height="500"><span class="td-game-opponent-copy"><span>${venueKind(game) === 'neutral' ? '' : home(game) ? '' : '@ '}${escape(name(opp))}${venueKind(game) === 'neutral' ? ' (N)' : ''}</span><small class="td-game-context">${game.season} W${game.week}${game.season !== dataset.season ? '<span class="td-prior-season"> · Prior season</span>' : ''}</small></span></span><span class="td-game-result ${outcome(game) === 'W' ? 'td-win' : outcome(game) === 'L' ? 'td-loss' : ''}">${outcome(game)} ${fmt(ownScore(game))}–${fmt(otherScore(game))}</span>${icon('chevron','td-row-chevron')}</button>${expanded ? gameExpansion(game) : `<div id="team-game-${escape(game.id)}" hidden></div>`}`; }).join('') : '<p class="td-empty">No verified completed games match these filters.</p>'}</div>${items.some(game => venueKind(game) === 'neutral') ? `<p class="td-neutral-note">N = verified neutral venue: ${escape([...new Set(items.filter(game => venueKind(game) === 'neutral').map(game => game.venue))].join(', '))}</p>` : ''}</section>`;
+    return `<section class="td-panel td-games td-framed">${panelHead('LAST FIVE GAMES')}<div class="td-table-head" aria-hidden="true"><span>OPPONENT</span><span>RESULT</span></div><div class="td-game-list">${items.length ? items.map(game => { const expanded = state.expanded === game.id, opp = opponent(game); return `<button class="td-game-row ${expanded ? 'is-expanded' : ''}" data-team-game="${escape(game.id)}" aria-expanded="${expanded}" aria-controls="team-game-${escape(game.id)}"><span class="td-game-opponent"><img class="td-opponent-logo" src="${escape(logo(opp))}" alt="" width="500" height="500"><span class="td-game-opponent-copy"><span>${venueKind(game) === 'neutral' ? '' : home(game) ? '' : '@ '}${escape(name(opp))}${venueKind(game) === 'neutral' ? ' (N)' : ''}</span><small class="td-game-context">${game.season} W${game.week}</small></span></span><span class="td-game-result ${outcome(game) === 'W' ? 'td-win' : outcome(game) === 'L' ? 'td-loss' : ''}"><span class="td-game-outcome ${outcome(game) === 'W' ? 'is-win' : outcome(game) === 'L' ? 'is-loss' : 'is-tie'}">${outcome(game)}</span> <span class="td-game-score">${fmt(ownScore(game))}–${fmt(otherScore(game))}</span></span>${icon('chevron','td-row-chevron')}</button>${expanded ? gameExpansion(game) : `<div id="team-game-${escape(game.id)}" hidden></div>`}`; }).join('') : '<p class="td-empty">No verified completed games are available.</p>'}</div></section>`;
   }
   function yardsPanel(items) {
     const modes = `<div class="td-mode-controls" role="group" aria-label="Statistical presentation"><button data-td-mode="average" aria-pressed="${state.mode === 'average'}">Per game</button><button data-td-mode="total" aria-pressed="${state.mode === 'total'}">Totals</button></div>`;
-    return `<section class="td-panel td-yards td-framed">${panelHead('YARDS GAINED & ALLOWED',modes)}<table class="td-yards-table"><thead><tr><th><span class="td-stats-label">METRIC</span></th><th>GAINED</th><th>ALLOWED</th></tr></thead><tbody>${[['Net passing <small>(accounts for sacks)</small>','netPassing'],['Rushing','rushing'],['Total offense','totalOffense']].map(([label,key]) => `<tr><th scope="row">${label}</th><td data-td-stat="${key}" data-td-side="gained">${metricCell(aggregate(key,false,items))}</td><td data-td-stat="${key}" data-td-side="allowed">${metricCell(aggregate(key,true,items))}</td></tr>`).join('')}</tbody></table><p class="td-coverage-note">${items.length} selected games · ${state.mode === 'average' ? 'per game' : 'totals'} · — = unavailable, disputed or incomplete coverage</p></section>`;
-  }
-  function snapshots(items) {
-    const metrics = [
-      ['POINTS FOR',completeValue(items,ownScore)],['POINTS AGAINST',completeValue(items,otherScore)],
-      ['THIRD DOWNS',conversion('thirdDownMade','thirdDownAttempts',items),'%'],['RED-ZONE TD%',conversion('redZoneTD','redZoneAttempts',items),'%'],
-      ['TURNOVER MARGIN',completeValue(items,game => known(stats(game).turnovers) && known(stats(game,opponent(game)).turnovers) ? stats(game,opponent(game)).turnovers - stats(game).turnovers : null)],
-      ['PENALTY YARDS',aggregate('penaltyYards',false,items)]
-    ];
-    return `<section class="td-panel td-snapshot td-framed" id="team-form-snapshot">${panelHead('TEAM FORM SNAPSHOT')}<div class="td-stat-grid">${metrics.map(([label,result,suffix=''],index) => `<div class="td-stat-tile"><span>${label}</span><strong data-td-snapshot="${['pointsFor','pointsAgainst','thirdDown','redZoneTD','turnoverMargin','penaltyYards'][index]}" title="${escape(coverage(result))}" data-coverage="${result.covered}/${result.total}">${fmt(result.value,1)}${known(result.value) ? suffix : ''}</strong></div>`).join('')}</div><div class="td-snapshot-actions"><button data-td-action="venues">Home / away / neutral splits <span aria-hidden="true">↗</span></button><button data-td-action="schedule">Full schedule <span aria-hidden="true">↗</span></button></div></section>`;
+    return `<section class="td-panel td-yards td-framed">${panelHead('YARDS GAINED & ALLOWED',modes)}<table class="td-yards-table"><thead><tr><th><span class="td-stats-label">METRIC</span></th><th>GAINED</th><th>ALLOWED</th></tr></thead><tbody>${[['Net passing','netPassing'],['Rushing','rushing'],['Total offense','totalOffense']].map(([label,key]) => `<tr><th scope="row">${label}</th><td data-td-stat="${key}" data-td-side="gained">${metricCell(aggregate(key,false,items))}</td><td data-td-stat="${key}" data-td-side="allowed">${metricCell(aggregate(key,true,items))}</td></tr>`).join('')}</tbody></table></section>`;
   }
   function formContent() {
     const items = selectedGames();
-    if (!state.initialized) { state.expanded = items[0]?.id || null; state.initialized = true; }
-    if (state.expanded && !items.some(game => game.id === state.expanded)) state.expanded = items[0]?.id || null;
-    return `${filters(items)}${gamesPanel(items)}<div class="td-form-cards">${yardsPanel(items)}${snapshots(items)}</div>${diamond('Continue to players & QB','continue')}`;
+    if (state.expanded && !items.some(game => game.id === state.expanded)) state.expanded = null;
+    return `${gamesPanel(items)}<div class="td-form-cards">${yardsPanel(items)}</div>`;
   }
   function playersContent() {
-    const roster = team()?.roster || [];
-    const positions = ['ALL','QB','RB','WR','TE','DEF','K'];
-    const chosen = state.position || 'ALL';
-    const filtered = roster.filter(player => chosen === 'ALL' || player.position === chosen || chosen === 'DEF' && ['DE','DT','DL','LB','CB','DB','S','SAF','ILB','OLB'].includes(player.position));
-    return `<section class="td-panel td-framed td-players">${panelHead(`${panelName()} · PLAYERS & QB`)}<p class="td-coverage-note">${dataset.season} current roster · verified season totals when available</p><div class="td-position-controls" role="group" aria-label="Player position">${positions.map(pos => `<button data-td-position="${pos}" aria-pressed="${chosen === pos}">${pos}</button>`).join('')}</div>${filtered.length ? filtered.map(player => { const s = player.seasonStats || {}, scoredTD = known(s.rushingTD) && known(s.receivingTD) ? Number(s.rushingTD)+Number(s.receivingTD) : null, metrics = player.position === 'QB' ? [['PASS',s.passingYards],['PASS TD',s.passingTD],['RUSH',s.rushingYards],['RUSH TD',s.rushingTD]] : ['DE','DT','DL','LB','CB','DB','S','SAF','ILB','OLB'].includes(player.position) ? [['TACKLES',s.tackles],['ASSISTS',s.assistedTackles],['SACKS',s.defensiveSacks],['INT',s.defensiveInterceptions]] : [['RUSH',s.rushingYards],['REC',s.receivingYards],['CATCH',s.receptions],['TD SCORED',scoredTD]]; return `<details class="td-player" data-td-player="${escape(player.id)}" ${state.playerOpen.has(player.id) ? 'open' : ''}><summary><span class="td-player-name"><b>#${escape(player.jersey ?? player.number ?? '—')} ${escape(player.name)}</b><small>${escape(player.position)} · ${escape(player.depth?.label || ({ACT:'Active',RES:'Reserve',INA:'Inactive'}[player.status]) || player.status || 'Starter status unavailable')}</small></span><span class="td-player-metrics">${metrics.map(([label,value]) => `<span><small>${label}</small><b>${fmt(value)}</b></span>`).join('')}</span></summary><div class="td-player-history">${(dataset.disagreements || []).some(issue => issue.playerId === player.id && issue.field === 'jersey') ? '<p class="td-disagreement">Jersey sources differ. The number remains unavailable pending reconciliation. Open Sources for both values.</p>' : ''}<h3>LAST 5 RECORDED REGULAR-SEASON STATISTIC ROWS</h3>${player.last5?.length ? `<table><thead><tr><th>GAME</th><th>PASS</th><th>RUSH</th><th>REC</th><th>TD</th></tr></thead><tbody>${player.last5.map(game => `<tr><th>${game.season} W${game.week} · ${escape(game.team || state.team)} vs ${escape(game.opponent)}</th><td>${fmt(game.stats?.passingYards)}</td><td>${fmt(game.stats?.rushingYards)}</td><td>${fmt(game.stats?.receivingYards)}</td><td>${fmt(game.stats?.offensiveTD ?? game.stats?.totalTD)}</td></tr>`).join('')}</tbody></table>` : '<p>Verified game-level player statistics unavailable.</p>'}<p>Depth order is separate from confirmed starters. Passing touchdowns are shown separately from touchdowns scored.</p></div></details>`; }).join('') : state.team === 'PIT' ? '<button class="td-diamond-button" data-open="steelers">OPEN STEELERS PLAYER RESEARCH</button>' : '<p class="td-empty">Verified current roster unavailable. No player identities or statistics are substituted.</p>'}</section>`;
-  }
-  function lineupContent() {
-    const game = nextGame(), depth = team()?.depth, injuries = team()?.injuries;
-    const depthPlayers = Array.isArray(depth) ? depth : depth?.players || [];
-    const injuryPlayers = Array.isArray(injuries) ? injuries : injuries?.players || [];
-    return `<section class="td-panel td-framed">${panelHead('LINEUP & TRAVEL')}<h3>UPCOMING VENUE & REST</h3>${game ? `<dl class="td-info-grid"><dt>Opponent</dt><dd>${escape(identity(opponent(game)).fullName)}</dd><dt>Venue</dt><dd>${escape(game.venue || 'Unavailable')}</dd><dt>Home / away / neutral</dt><dd>${venueKind(game).toUpperCase()}</dd><dt>Kickoff</dt><dd>${escape(dateTime(game))}</dd><dt>Published rest days</dt><dd>${fmt(home(game) ? game.homeRest : game.awayRest)}</dd><dt>Travel itinerary</dt><dd>Unavailable</dd><dt>Weather forecast</dt><dd>Unavailable</dd></dl>` : '<p>Verified upcoming venue unavailable.</p>'}<h3>DEPTH CHART</h3>${depthPlayers.length ? depthPlayers.map(player => `<p>${escape(player.position)} · ${escape(player.name)} · ${escape(player.label || (known(player.rank) ? `Depth rank ${player.rank} · ${player.unit || 'Unit unavailable'}` : 'Rank unavailable'))}</p>`).join('') : '<p>Verified current depth chart unavailable. Roster order is not treated as starter status.</p>'}<h3>INJURY & PRACTICE REPORTS</h3>${injuryPlayers.length ? injuryPlayers.map(player => `<p>${escape(player.name)} · ${escape(player.reportStatus || player.status || 'Game status unavailable')} · ${escape(player.practiceStatus || player.practice || 'Practice participation unavailable')}</p>`).join('') : '<p>Verified current reports unavailable. Missing reports do not mean healthy. Confirmed game-day inactives unavailable.</p>'}${diamond('VIEW FULL SCHEDULE','schedule')}</section>`;
+    return window.PDTeamTopPlayers?.render(team(),dataset) || '<section class="td-panel td-framed td-top-players"><h2>Top Players</h2><p role="status">Player statistics are unavailable.</p></section>';
   }
   function focusSelector(node) {
     if (!node) return null;
     if (node.id) return `#${CSS.escape(node.id)}`;
-    if (node.matches?.('summary') && node.parentElement.dataset.tdPlayer) return `[data-td-player="${CSS.escape(node.parentElement.dataset.tdPlayer)}"] > summary`;
-    for (const attr of ['data-team-game','data-td-mode','data-td-position','data-td-action']) {
+    for (const attr of ['data-team-game','data-td-mode','data-td-action','data-td-fixture-index']) {
       const value = node.getAttribute?.(attr);
-      if (value) return `[${attr}="${CSS.escape(value)}"]${node.dataset.game ? `[data-game="${CSS.escape(node.dataset.game)}"]` : ''}`;
+      if (value !== null && value !== undefined) return `[${attr}="${CSS.escape(value)}"]${node.dataset.game ? `[data-game="${CSS.escape(node.dataset.game)}"]` : ''}`;
     }
     return null;
   }
@@ -166,7 +180,7 @@
       return;
     }
     const scroll = page().querySelector('.page-scroll'), top = scroll.scrollTop, focused = document.activeElement, focusedSelector = focusSelector(focused);
-    holder.innerHTML = `${masthead(hero())}${upcoming()}<div class="td-tabs" role="tablist" aria-label="Team research">${[['form','Form'],['players','Players & QB'],['lineup','Lineup & travel']].map(([tab,label]) => `<button id="team-tab-${tab}" data-team-tab="${tab}" role="tab" aria-selected="${state.tab === tab}" aria-controls="team-panel-${tab}" tabindex="${state.tab === tab ? '0' : '-1'}">${label}</button>`).join('')}</div>${['form','players','lineup'].map(tab => `<div id="team-panel-${tab}" role="tabpanel" aria-labelledby="team-tab-${tab}" ${state.tab !== tab ? 'hidden' : ''}>${tab === state.tab ? tab === 'form' ? formContent() : tab === 'players' ? playersContent() : lineupContent() : ''}</div>`).join('')}<div class="td-editorial-source-line"><button data-td-action="sources">View sources <span aria-hidden="true">↗</span></button><span>${dataset.season} research · ${escape(timestamp(dataset.retrievedAt))}</span></div>`;
+    holder.innerHTML = `${masthead(hero())}${upcoming()}<div class="td-tabs" role="tablist" aria-label="Team research">${[['form','Form'],['players','Top Players']].map(([tab,label]) => `<button id="team-tab-${tab}" data-team-tab="${tab}" role="tab" aria-selected="${state.tab === tab}" aria-controls="team-panel-${tab}" tabindex="${state.tab === tab ? '0' : '-1'}">${label}</button>`).join('')}</div>${['form','players'].map(tab => `<div id="team-panel-${tab}" role="tabpanel" aria-labelledby="team-tab-${tab}" ${state.tab !== tab ? 'hidden' : ''}>${tab === state.tab ? tab === 'form' ? formContent() : playersContent() : ''}</div>`).join('')}`;
     upcomingLayout?.observe(holder.querySelector('.td-upcoming'));
     scroll.scrollTop = top;
     const stale = Date.now() - Date.parse(dataset.retrievedAt) > 12*60*60*1000;
@@ -175,14 +189,20 @@
     document.dispatchEvent(new CustomEvent('pd:team-render'));
     if (state.view) { const view = state.view; state.view = null; if (['report','schedule','matchup','venues','sources','menu'].includes(view)) show(view,state.game); }
   }
+  function playerSourcesContent() {
+    const feed = window.PDTeamTopPlayers?.getDataset?.();
+    if (!feed || Number(feed.season) !== Number(dataset?.season)) return '<h3>TOP PLAYERS</h3><p>No verified player snapshot is available for this season.</p>';
+    const sources = Array.isArray(feed.sources) ? feed.sources : [];
+    return `<h3>TOP PLAYERS</h3><p>${feed.season} regular season${known(feed.throughWeek) ? ` · Statistics through Week ${feed.throughWeek}` : ''} · retrieved ${escape(timestamp(feed.retrievedAt))}. Player totals use this separate source snapshot.</p>${sources.length ? `<ul>${sources.filter(source => !source.team || source.team === state.team).map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id || 'Player source')}</a><br>${escape(source.status || 'Retrieved')} · ${escape(timestamp(source.retrievedAt || feed.retrievedAt))}</li>`).join('')}</ul>` : '<p>Source URL evidence is unavailable.</p>'}`;
+  }
   function sourcesContent(item) {
     if (!dataset) return `<p>Research data could not be verified against the source disagreement catalog. No unchecked statistics are displayed.</p><p>${escape(error || 'Verification is still in progress.')}</p><button data-td-action="retry">Retry verified data</button>`;
     const ids = sourceIds(item), sources = dataset.sources.filter(source => !ids.length || ids.includes(source.id));
     const contextGames = new Set([...games(),...(team()?.roster || []).flatMap(player => player.last5 || [])].map(game => game.gameId || game.id));
     const finals = seasonGames(), selected = selectedGames(), through = finals.length ? Math.max(...finals.map(game => Number(game.week))) : null;
-    const recordCoverage = !item ? `<p class="td-source-coverage">${dataset.season} record ${record(finals)} · ${finals.length} verified final${finals.length === 1 ? '' : 's'}${through ? ` through Week ${through}` : ''}. Selected form: ${selected.length} completed games · ${selected.filter(game => Number(game.season) === Number(dataset.season)).length} current-season${selected.some(game => Number(game.season) !== Number(dataset.season)) ? ' + prior-season coverage' : ''}. Preseason excluded.</p>` : '';
+    const recordCoverage = !item ? `<p class="td-source-coverage">${dataset.season} record ${record(finals)} · ${finals.length} verified final${finals.length === 1 ? '' : 's'}${through ? ` through Week ${through}` : ''}. Last-five form: ${selected.length} completed games · ${selected.filter(game => Number(game.season) === Number(dataset.season)).length} current-season${selected.some(game => Number(game.season) !== Number(dataset.season)) ? ' + prior-season coverage' : ''}. Preseason excluded.</p>` : '';
     const issues = (dataset.disagreements || []).filter(issue => issue.fromIntegrityCatalog ? item ? issue.gameId === item.id : contextGames.has(issue.gameId) || issue.team === state.team : !item || issue.gameId === item.id || issue.team === state.team);
-    return `${error ? `<p class="td-disagreement">${escape(error)}</p>` : ''}${issues.length ? `<section class="td-disagreement"><h3>SOURCE DIFFERENCES</h3>${issues.map(issue => issue.fromIntegrityCatalog ? window.PDSourceIntegrity.describeIssue(issue,escape,timestamp) : `<p>${escape(issue.issue)} · ${escape(issue.field)}${issue.playerId ? ` · ${escape(team()?.roster?.find(player => player.id === issue.playerId)?.name || issue.playerId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action)}</p>`).join('')}</section>` : ''}${recordCoverage}<p class="td-source-context">${item?.season || dataset.season} regular season${item ? ` · Week ${item.week} · ${escape(item.id)}` : ''} · retrieved ${escape(timestamp(dataset.retrievedAt))}<br>Missing or disputed fields = unavailable. Derived metrics use the selected completed games only. Updates follow provider publication, not live play-by-play.</p><ul>${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>`;
+    return `${error ? `<p class="td-disagreement">${escape(error)}</p>` : ''}${issues.length ? `<section class="td-disagreement"><h3>SOURCE DIFFERENCES</h3>${issues.map(issue => issue.fromIntegrityCatalog ? window.PDSourceIntegrity.describeIssue(issue,escape,timestamp) : `<p>${escape(issue.issue)} · ${escape(issue.field)}${issue.playerId ? ` · ${escape(team()?.roster?.find(player => player.id === issue.playerId)?.name || issue.playerId)}` : ''}<br>${escape(issue.values?.join(' / ') || '')}<br>${escape(issue.action)}</p>`).join('')}</section>` : ''}${recordCoverage}<p class="td-source-context">${item?.season || dataset.season} regular season${item ? ` · Week ${item.week} · ${escape(item.id)}` : ''} · retrieved ${escape(timestamp(dataset.retrievedAt))}<br>Missing or disputed fields = unavailable. Derived metrics use the selected completed games only. Updates follow provider publication, not live play-by-play.</p><ul>${sources.map(source => `<li><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name || source.id)}</a><br>${escape(source.status)} · ${escape(timestamp(source.retrievedAt))}</li>`).join('')}</ul>${!item ? playerSourcesContent() : ''}`;
   }
   function reportContent(game) {
     if (!game) return '<p>This event is unavailable in the verified dataset.</p>';
@@ -208,7 +228,7 @@
       content = `<div class="td-schedule-list">${games().filter(game => game.season === dataset.season).sort((a,b) => -sortRecent(a,b)).map(game => `<button data-td-action="${final(game) ? 'report' : 'matchup'}" data-game="${escape(game.id)}"><strong>W${game.week} · ${venueKind(game) === 'neutral' ? 'N · ' : home(game) ? 'vs ' : '@ '}${escape(name(opponent(game)))}</strong><span>${final(game) ? `${outcome(game)} ${fmt(ownScore(game))}–${fmt(otherScore(game))}` : escape(dateTime(game))}</span></button>`).join('')}</div>${sourcesContent()}`;
     } else if (action === 'venues') {
       title = `${name(state.team)} · Venue breakdown`;
-      content = `<p>Completed ${dataset.season} regular-season games. Neutral uses the source’s explicit venue designation.</p><table><thead><tr><th>VENUE</th><th>GAMES</th><th>RECORD</th></tr></thead><tbody>${['home','away','neutral','unknown'].map(kind => { const rows = seasonGames().filter(game => venueKind(game) === kind); return `<tr><th>${kind.toUpperCase()}</th><td>${rows.length}</td><td>${record(rows)}</td></tr>`; }).join('')}</tbody></table><div class="td-venue-actions">${['all','home','away','neutral'].map(kind => `<button data-td-venue="${kind}">Show ${kind} form</button>`).join('')}</div>${sourcesContent()}`;
+      content = `<p>Completed ${dataset.season} regular-season games. Neutral uses the source’s explicit venue designation.</p><table><thead><tr><th>VENUE</th><th>GAMES</th><th>RECORD</th></tr></thead><tbody>${['home','away','neutral','unknown'].map(kind => { const rows = seasonGames().filter(game => venueKind(game) === kind); return `<tr><th>${kind.toUpperCase()}</th><td>${rows.length}</td><td>${record(rows)}</td></tr>`; }).join('')}</tbody></table>${sourcesContent()}`;
     } else if (action === 'matchup') {
       title = game ? `${name(state.team)} vs ${name(opponent(game))}` : 'Matchup unavailable';
       content = game ? `<div class="td-dialog-matchup"><img src="${escape(logo(state.team))}" alt="${escape(name(state.team))}" width="500" height="500"><strong>VS</strong><img src="${escape(logo(opponent(game)))}" alt="${escape(name(opponent(game)))}" width="500" height="500"></div><p>${game.season} · WEEK ${game.week} · ${escape(game.status.toUpperCase())}<br>${escape(dateTime(game))}<br>${escape(game.venue || 'Venue unavailable')} · ${venueKind(game).toUpperCase()}</p><table><thead><tr><th>TEAM</th><th>CURRENT RECORD</th></tr></thead><tbody>${[state.team,opponent(game)].map(abbr => { const rows = team(abbr)?.games?.filter(g => final(g) && g.season === dataset.season) || []; const w = rows.filter(g => (g.home_team === abbr ? g.home_score > g.away_score : g.away_score > g.home_score)).length; const l = rows.filter(g => (g.home_team === abbr ? g.home_score < g.away_score : g.away_score < g.home_score)).length; return `<tr><th>${escape(identity(abbr).fullName)}</th><td>${w}–${l}${rows.length > w+l ? `–${rows.length-w-l}` : ''}</td></tr>`; }).join('')}</tbody></table><p>Verified fixture overview. Weather, confirmed inactives and exact pre-game prices are unavailable.</p>${sourcesContent(game)}` : '<p>No verified upcoming fixture is available.</p>';
@@ -225,8 +245,8 @@
   function enter(abbr) { state.fromLadder = true; window.PDApp?.openPage(`team/${String(abbr || 'DAL').toUpperCase()}`); }
   function route(value) {
     const [path,query] = value.split('?'), abbr = path.split('/')[1]?.toUpperCase() || 'DAL';
-    if (state.team !== abbr) { state.team = abbr; state.expanded = null; state.initialized = false; state.venue = 'all'; }
-    const params = new URLSearchParams(query || ''); state.tab = ['form','players','lineup'].includes(params.get('tab')) ? params.get('tab') : 'form';
+    state.team = abbr; state.expanded = null;
+    const params = new URLSearchParams(query || ''); state.tab = ['form','players'].includes(params.get('tab')) ? params.get('tab') : 'form';
     state.view = params.get('view'); state.game = params.get('game');
     render(); refresh();
   }
@@ -266,31 +286,26 @@
   document.addEventListener('click',event => {
     const button = event.target.closest('button'); if (!button || (!button.closest('[data-page="team-details"]') && !button.closest('#team-details-dialog'))) return;
     const action = button.dataset.tdAction;
-    if (action || button.dataset.teamTab || button.dataset.teamGame || button.dataset.tdMode || button.dataset.tdPosition || button.dataset.tdVenue) event.stopImmediatePropagation();
+    if (action || button.dataset.teamTab || button.dataset.teamGame || button.dataset.tdMode || button.hasAttribute('data-td-fixture-index')) event.stopImmediatePropagation();
     if (button.dataset.teamTab) { state.tab = button.dataset.teamTab; writeRoute(); render(); $(`team-tab-${state.tab}`)?.focus({preventScroll:true}); }
     else if (button.dataset.teamGame) { state.expanded = state.expanded === button.dataset.teamGame ? null : button.dataset.teamGame; render(); document.querySelector(`[data-team-game="${CSS.escape(button.dataset.teamGame)}"]`)?.focus({preventScroll:true}); }
     else if (button.dataset.tdMode) { state.mode = button.dataset.tdMode; render(); document.querySelector(`[data-td-mode="${state.mode}"]`)?.focus({preventScroll:true}); }
-    else if (button.dataset.tdPosition) { state.position = button.dataset.tdPosition; render(); document.querySelector(`[data-td-position="${state.position}"]`)?.focus({preventScroll:true}); }
-    else if (button.dataset.tdVenue) { state.venue = button.dataset.tdVenue; state.expanded = null; state.initialized = false; returnFocus = null; returnFocusSelector = '#team-venue-select'; $('team-details-dialog').close(); state.tab = 'form'; writeRoute(); render(); $('team-venue-select')?.focus({preventScroll:true}); }
+    else if (button.hasAttribute('data-td-fixture-index')) { const index = Number(button.dataset.tdFixtureIndex); if (Number.isInteger(index)) { selectFixture(index); page()?.querySelector(`[data-td-fixture-index="${index}"]`)?.focus({preventScroll:true}); } }
+    else if (action === 'fixture-prev' || action === 'fixture-next') { const fixtures = futureGames(), index = fixtures.findIndex(game => game.id === state.fixture); selectFixture(index + (action === 'fixture-prev' ? -1 : 1)); page()?.querySelector(`[data-td-action="${action}"]`)?.focus({preventScroll:true}); }
     else if (action === 'home') window.PDApp?.openPage('home');
     else if (action === 'ladder' || action === 'nfl') window.PDApp?.openLadder(state.team,!state.fromLadder);
-    else if (action === 'continue') { state.tab = 'players'; writeRoute(); render(); $('team-tab-players')?.scrollIntoView({block:'start',behavior:'auto'}); $('team-tab-players')?.focus({preventScroll:true}); }
-    else if (action === 'insights') { state.tab = 'form'; writeRoute(); render(); $('team-form-snapshot')?.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
-    else if (action === 'refresh' || action === 'retry') refresh(true);
+    else if (action === 'refresh' || action === 'retry') { refresh(true); window.PDTeamTopPlayers?.refresh?.(true); }
     else if (action === 'report' && window.PDApp?.openGameReport) {
       if ($('team-details-dialog')?.open) $('team-details-dialog').close();
       window.PDApp.openGameReport(state.team,button.dataset.game);
     }
     else if (action === 'matchup' && window.MatchupBreakdown) {
       if ($('team-details-dialog')?.open) $('team-details-dialog').close();
-      window.MatchupBreakdown.enter(state.team,button.dataset.game);
+      const gameId = button.dataset.game || nextGame()?.id;
+      if (gameId) window.MatchupBreakdown.enter(state.team,gameId); else show('matchup',null,button);
     }
     else if (action && ['matchup','schedule','venues','report','sources','menu'].includes(action)) show(action,button.dataset.game,button);
   });
-  document.addEventListener('toggle',event => {
-    const node = event.target; if (!node.isConnected || !node.matches?.('.td-player[data-td-player]')) return;
-    if (node.open) state.playerOpen.add(node.dataset.tdPlayer); else state.playerOpen.delete(node.dataset.tdPlayer);
-  },true);
   document.addEventListener('keydown',event => {
     if (!event.target.closest('.td-tabs') || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
     const tabs = [...page().querySelectorAll('.td-tabs [role=tab]')], index = tabs.indexOf(document.activeElement);
@@ -298,19 +313,23 @@
     const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length-1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
     tabs[next].click();
   });
-  document.addEventListener('change',event => {
-    const key = {'team-window-select':'window','team-season-select':'season','team-venue-select':'venue'}[event.target.id]; if (!key) return;
-    state[key] = key === 'window' ? Number(event.target.value) : event.target.value; state.initialized = false; render();
-  });
   $('team-details-dialog')?.addEventListener('close',() => {
     const target = returnFocus?.isConnected ? returnFocus : returnFocusSelector ? page()?.querySelector(returnFocusSelector) : null;
     if (target && active()) target.focus({preventScroll:true});
   });
   document.addEventListener('pd:route-change',event => { if (event.detail?.page !== 'team-details' && $('team-details-dialog')?.open) $('team-details-dialog').close(); });
   document.addEventListener('pd:data-ready',() => { if (active()) { render(); refresh(true); } });
-  document.addEventListener('visibilitychange',() => { if (!document.hidden && active()) refresh(); });
-  window.addEventListener('focus',() => { if (active()) refresh(); });
-  window.addEventListener('online',() => { if (active()) refresh(true); });
-  setInterval(() => { if (!document.hidden && active()) refresh(); },90000);
-  window.PDTeamDetails = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getRawDataset:() => rawDataset,getSelectedGames:selectedGames};
+  document.addEventListener('pd:team-quarters-updated',event => { if (active() && event.detail?.gameId === state.expanded) render(); });
+  window.addEventListener('pd:team-top-players-updated',() => { if (active() && state.tab === 'players') render(); });
+  function resume() {
+    if (!active()) return;
+    const previous = state.fixture; nextGame();
+    if (previous !== state.fixture) render();
+    refresh(); window.PDTeamTopPlayers?.refresh?.();
+  }
+  document.addEventListener('visibilitychange',() => { if (!document.hidden) resume(); });
+  window.addEventListener('focus',resume);
+  window.addEventListener('online',() => { if (active()) { refresh(true); window.PDTeamTopPlayers?.refresh?.(true); } });
+  setInterval(() => { if (!document.hidden) resume(); },90000);
+  window.PDTeamDetails = {route,enter,render,refresh,getState:() => ({...state}),getDataset:() => dataset,getRawDataset:() => rawDataset,getSelectedGames:selectedGames,getUpcomingGames:futureGames};
 })();

@@ -318,6 +318,6 @@
   window.addEventListener('focus',()=>{if(active())refresh();});window.addEventListener('online',()=>{if(active())refresh(true);});
   document.addEventListener('pd:data-ready',()=>{if(active())refresh(true);});
   setInterval(()=>{if(!document.hidden&&active())refresh();},90000);
-  window.PDGameReport={route,enter,refresh,render,getState:()=>({...state}),getDataset:()=>index,getReport:()=>report};
+  window.PDGameReport={route,enter,refresh,render,getState:()=>({...state}),getDataset:()=>index,getReport:()=>report,getCachedReport:id=>detailCache.get(id)};
   if(/^#game-report(?:\/|\?|$)/i.test(location.hash))route(location.hash.slice(1));
 })();
