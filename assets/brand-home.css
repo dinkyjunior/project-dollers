@@ -1,0 +1,40 @@
+/* The approved moneybag is a native Home link on every implemented screen.
+   Team/league crests and their team-research destinations remain independent. */
+.app-shell .page a.brand-home-link {
+  display: inline-flex;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  min-width: 46px;
+  max-width: 46px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.app-shell .page a.brand-home-link > img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+}
+.app-shell .page a.brand-home-link:focus-visible {
+  outline: 2px solid #39e4df;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 1px #02171b;
+}
+.app-shell .page a.brand-home-link:hover { filter: brightness(1.08); }
+.app-shell .page a.brand-home-link:active { filter: brightness(1.15); }
+.page[data-page="steelers"] .legacy-brand-home-row { display: flex; align-items: center; min-height: 50px; padding: 2px 0; }

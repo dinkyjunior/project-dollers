@@ -21,9 +21,9 @@ body:has(.page.team-editorial-page.active) {
   --td-display: PDInter, Arial, sans-serif;
   --td-cyan: #36e9de;
   --td-muted: #9da5ab;
+  --td-editorial-width: min(100vw, 430px);
   --td-editorial-side: 22px;
   --td-editorial-line: #292b2d;
-  --td-hero-image: url("home/editorial-stadium-mobile.webp");
   overflow: hidden;
   isolation: isolate;
   border-radius: 18px;
@@ -34,7 +34,6 @@ body:has(.page.team-editorial-page.active) {
   -webkit-font-smoothing: antialiased;
   -webkit-mask-image: none;
 }
-.page.team-editorial-page[data-team="DAL"] { --td-hero-image: url("team-editorial/dallas-stadium-hero.webp"); }
 .page.team-editorial-page .page-scroll {
   inset: 0 0 calc(91px + env(safe-area-inset-bottom, 0px));
   padding: 0 var(--td-editorial-side) 14px;
@@ -87,11 +86,12 @@ body:has(.page.team-editorial-page.active) {
   isolation: isolate;
   margin: 0 calc(-1 * var(--td-editorial-side));
   padding: calc(13px + env(safe-area-inset-top, 0px)) var(--td-editorial-side) 17px;
-  background-image: linear-gradient(180deg, #0004 0%, #0000 26%, #0002 65%, #020303 100%), linear-gradient(90deg, #0007, #0003 42%, #0000 75%), var(--td-hero-image);
+  background-image: linear-gradient(180deg, #0004 0%, #0000 26%, #0001 88%, #020303 100%), linear-gradient(90deg, #0007, #0003 42%, #0000 75%), var(--td-hero-image, none);
   background-position: center, center, center 48%;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.page.team-editorial-page .td-editorial-masthead:has(.td-hero) { min-height: calc(var(--td-editorial-width) * 1.5 + env(safe-area-inset-top, 0px)); }
 .page.team-editorial-page .td-editorial-art {
   position: absolute;
   inset: 0;
@@ -129,6 +129,7 @@ body:has(.page.team-editorial-page.active) {
   color: #d9dcdf;
 }
 .page.team-editorial-page :is(.td-editorial-menu, .td-menu-button, .td-header-menu) :is(.icon, svg) { width: 21px; height: 21px; }
+.page.team-editorial-page .td-header-menu svg { filter: drop-shadow(0 1px 2px #000) drop-shadow(0 0 2px #000b); }
 .page.team-editorial-page .td-editorial-crumb-divider { height: 11px; border-left: 1px solid #b2b0c2; }
 .page.team-editorial-page .td-editorial-crumbs,
 .page.team-editorial-page .td-breadcrumb {
@@ -169,18 +170,36 @@ body:has(.page.team-editorial-page.active) {
 .page.team-editorial-page .td-season img { display: none; }
 .page.team-editorial-page .td-hero {
   display: block;
-  min-height: 205px;
+  min-height: 318px;
   margin: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: none;
 }
-.page.team-editorial-page .td-team-logo { display: block; width: 65px; height: 65px; margin: 0 0 4px; object-fit: contain; filter: drop-shadow(0 2px 3px #0008); }
+.page.team-editorial-page .td-team-logo { display: block; width: 118px; height: 118px; margin: 2px 0 10px; object-fit: contain; filter: drop-shadow(0 2px 3px #0008); }
 .page.team-editorial-page .td-hero-copy { min-width: 0; }
 .page.team-editorial-page .td-hero h1 { margin: 0 0 11px; color: #fff; font: 400 35px/.99 var(--td-text); letter-spacing: -1.5px; text-transform: none; text-shadow: none; }
 .page.team-editorial-page :is(.td-city, .td-name, .td-city.is-long, .td-name.is-long) { display: block; font-size: inherit; line-height: inherit; }
 .page.team-editorial-page .td-hero h1:has(.td-name.is-long) { font-size: 33px; }
+/* Each mask contains the club's genuine outlined wordmark artwork. The native
+   aspect ratio is preserved, with the same white treatment for every club. */
+.page.team-editorial-page .td-hero h1.td-wordmark-title { width: 100%; height: 76px; margin: 0 0 8px; color: #fff; font-size: 0; line-height: 1; }
+.page.team-editorial-page .td-team-wordmark {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: 100%;
+  background: currentColor;
+  -webkit-mask-image: var(--td-wordmark-image);
+  mask-image: var(--td-wordmark-image);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 .page.team-editorial-page .td-hero-meta { margin: 6px 0 8px; color: #d5d7e0; font: 400 9px/1.5 var(--td-text); letter-spacing: 1.7px; text-transform: uppercase; }
 .page.team-editorial-page .td-hero-bottom { display: flex; align-items: center; gap: 17px; margin-top: 4px; }
 .page.team-editorial-page :is(.td-record-wrap, .td-editorial-record) { flex: 0 0 auto; min-width: 73px; }
@@ -189,9 +208,10 @@ body:has(.page.team-editorial-page.active) {
 .page.team-editorial-page .td-record { display: block; min-height: 0; padding: 0; border: 0; color: #fff; font: 400 25px/1.05 var(--td-text); letter-spacing: 1px; text-shadow: none; }
 .page.team-editorial-page .td-form { min-width: 0; padding-left: 16px; border-left: 1px solid #9da1ad82; }
 .page.team-editorial-page .td-form-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.page.team-editorial-page .td-form-chip { display: grid; place-items: center; min-width: 20px; height: 21px; padding: 0 4px; border: 1px solid #91949d; border-radius: 5px; background: #050909b3; color: #cdd3d7; box-shadow: none; font: 400 10px/1 var(--td-text); }
-.page.team-editorial-page .td-form-chip.is-win { border-color: #00b584; background: #002b206b; color: #00e7ae; }
-.page.team-editorial-page .td-form-chip.is-loss { border-color: #bd252c; background: #30060970; color: #fb343e; }
+.page.team-editorial-page .td-form-chip { display: block; flex: 0 0 32px; width: 32px; min-width: 32px; height: 32px; padding: 0; border: 0; border-radius: 0; background: transparent; color: #a0a8ae; box-shadow: none; }
+.page.team-editorial-page .td-form-glyph { display: block; width: 100%; height: 100%; fill: currentColor; }
+.page.team-editorial-page .td-form-chip.is-win { border: 0; background: transparent; color: #00c38a; }
+.page.team-editorial-page .td-form-chip.is-loss { border: 0; background: transparent; color: #ef3545; }
 .page.team-editorial-page .td-hero :is(.td-source-note, .td-coverage-note, .td-hero-source) { margin: 8px 0 0; color: #bec0d2; font: 400 8px/1.5 var(--td-text); letter-spacing: .1px; }
 .page.team-editorial-page .td-disagreement { margin: 7px 0 0; color: #e4bd83; font: 400 9px/1.5 var(--td-text); }
 
@@ -373,6 +393,7 @@ body:has(.page.team-editorial-page.active) .td-dialog .td-menu-actions button { 
 body:has(.page.team-editorial-page.active) .td-dialog .td-menu-actions .icon { width: 14px; height: 14px; color: #3ce8dc; }
 
 @media (min-width: 700px) {
+  .page.team-editorial-page[data-page="team-details"] { --td-editorial-width: 400px; }
   .app-shell:has(.page.team-editorial-page.active) { width: 400px; max-width: 400px; height: min(770px, calc(100dvh - 32px)); }
 }
 @media (max-width: 375px) {
