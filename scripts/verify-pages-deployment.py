@@ -31,7 +31,7 @@ def hosted_files(commit):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit', required=True)
-    parser.add_argument('--timeout', type=int, default=600)
+    parser.add_argument('--timeout', type=int, default=1200)
     args = parser.parse_args()
     repo = os.environ['GITHUB_REPOSITORY']
     pages = api(f'repos/{repo}/pages')

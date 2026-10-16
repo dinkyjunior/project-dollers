@@ -137,7 +137,7 @@
     const game = nextGame(), fixtures = futureGames();
     if (!game) return `<section class="td-upcoming td-framed"><h2>UPCOMING MATCHUPS</h2><p>No future fixture is available in this snapshot.</p></section>`;
     const opp = opponent(game), index = fixtures.findIndex(item => item.id === game.id);
-    const controls = `<div class="td-fixture-controls" role="group" aria-label="Upcoming fixtures"><button data-td-action="fixture-prev" aria-label="Previous upcoming fixture" ${index === 0 ? 'disabled' : ''}>${icon('back')}</button><div class="td-fixture-week-buttons">${fixtures.map((item,i) => `<button data-td-fixture-index="${i}" aria-pressed="${i === index}" aria-label="Week ${item.week}: ${escape(identity(opponent(item)).fullName)}">W${item.week}</button>`).join('')}</div><button data-td-action="fixture-next" aria-label="Next upcoming fixture" ${index === fixtures.length-1 ? 'disabled' : ''}>${icon('chevron')}</button></div>`;
+    const controls = `<div class="td-fixture-controls" role="group" aria-label="Upcoming fixtures"><button data-td-action="fixture-prev" aria-label="Previous upcoming fixture" ${index === 0 ? 'disabled' : ''}>${icon('back')}</button><div class="td-fixture-week-buttons">${fixtures.map((item,i) => `<button data-td-fixture-index="${i}" data-td-fixture-game="${escape(item.id)}" aria-pressed="${i === index}" aria-label="Week ${item.week}: ${escape(identity(opponent(item)).fullName)}">W${item.week}</button>`).join('')}</div><button data-td-action="fixture-next" aria-label="Next upcoming fixture" ${index === fixtures.length-1 ? 'disabled' : ''}>${icon('chevron')}</button></div>`;
     return `<section class="td-upcoming td-framed" data-upcoming-game="${escape(game.id)}"><div class="td-upcoming-info"><h2>UPCOMING MATCHUP · WEEK ${game.week}</h2><div class="td-upcoming-opponent"><img class="td-opponent-logo" src="${escape(logo(opp))}" alt="${escape(identity(opp).fullName)} logo" width="500" height="500"><div class="td-upcoming-copy"><h3><small>${home(game) || venueKind(game) === 'neutral' ? 'vs' : '@'}</small> ${escape(identity(opp).fullName)}</h3><p>${escape(venueKind(game) === 'unknown' ? 'Venue designation unavailable' : venueKind(game))} · ${escape(game.venue || 'Venue unavailable')}<br>${escape(dateTime(game))}</p></div></div></div>${diamond('Open matchup breakdown','matchup',`data-game="${escape(game.id)}"`)}${controls}</section>`;
   }
   function panelHead(title, extra = '') {
@@ -290,7 +290,13 @@
     if (button.dataset.teamTab) { state.tab = button.dataset.teamTab; writeRoute(); render(); $(`team-tab-${state.tab}`)?.focus({preventScroll:true}); }
     else if (button.dataset.teamGame) { state.expanded = state.expanded === button.dataset.teamGame ? null : button.dataset.teamGame; render(); document.querySelector(`[data-team-game="${CSS.escape(button.dataset.teamGame)}"]`)?.focus({preventScroll:true}); }
     else if (button.dataset.tdMode) { state.mode = button.dataset.tdMode; render(); document.querySelector(`[data-td-mode="${state.mode}"]`)?.focus({preventScroll:true}); }
-    else if (button.hasAttribute('data-td-fixture-index')) { const index = Number(button.dataset.tdFixtureIndex); if (Number.isInteger(index)) { selectFixture(index); page()?.querySelector(`[data-td-fixture-index="${index}"]`)?.focus({preventScroll:true}); } }
+    else if (button.hasAttribute('data-td-fixture-index')) {
+      const requested = button.dataset.tdFixtureGame, fixtures = futureGames();
+      const index = requested ? fixtures.findIndex(game => game.id === requested) : Number(button.dataset.tdFixtureIndex);
+      if (Number.isInteger(index) && index >= 0) selectFixture(index); else render();
+      const selector = requested ? `[data-td-fixture-game="${CSS.escape(requested)}"]` : `[data-td-fixture-index="${index}"]`;
+      (page()?.querySelector(selector) || page()?.querySelector('.td-fixture-week-buttons [aria-pressed="true"]'))?.focus({preventScroll:true});
+    }
     else if (action === 'fixture-prev' || action === 'fixture-next') { const fixtures = futureGames(), index = fixtures.findIndex(game => game.id === state.fixture); selectFixture(index + (action === 'fixture-prev' ? -1 : 1)); page()?.querySelector(`[data-td-action="${action}"]`)?.focus({preventScroll:true}); }
     else if (action === 'home') window.PDApp?.openPage('home');
     else if (action === 'ladder' || action === 'nfl') window.PDApp?.openLadder(state.team,!state.fromLadder);
@@ -323,8 +329,10 @@
   window.addEventListener('pd:team-top-players-updated',() => { if (active() && state.tab === 'players') render(); });
   function resume() {
     if (!active()) return;
-    const previous = state.fixture; nextGame();
-    if (previous !== state.fixture) render();
+    const previous = state.fixture, mounted = [...page().querySelectorAll('[data-td-fixture-game]')].map(button => button.dataset.tdFixtureGame);
+    nextGame();
+    const upcoming = futureGames().map(game => game.id);
+    if (previous !== state.fixture || JSON.stringify(mounted) !== JSON.stringify(upcoming)) render();
     refresh(); window.PDTeamTopPlayers?.refresh?.();
   }
   document.addEventListener('visibilitychange',() => { if (!document.hidden) resume(); });
