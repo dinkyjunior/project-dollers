@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T19:47:50Z",
-  "retrievedAt": "2026-10-18T19:47:48Z",
-  "snapshotSha256CanonicalJson": "7018581b45ed68755618775938223c4d50d2598c44461fe582b241ca8815cbe9",
+  "generatedAt": "2026-10-18T20:06:43Z",
+  "retrievedAt": "2026-10-18T20:06:40Z",
+  "snapshotSha256CanonicalJson": "b05c0b41082fb9f300ed005301687d2a0de545b42116a02a3f6d945606231026",
   "sources": [
     {
       "id": "nflverse_games",
@@ -10,12 +10,12 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
-      "etag": "\"81bef893420ac5e50250897534db409768e0155d85e6030aa81d24b95993bb41\"",
+      "etag": "\"16abab6a6a5092435b1828862f73d6a49ff15dad6c4ae6e57161173d25c00428\"",
       "lastModified": null,
-      "retrievedAt": "2026-10-18T19:47:48Z",
+      "retrievedAt": "2026-10-18T20:06:40Z",
       "status": "verified",
-      "sha256": "f29d5661e96b71affeb5c22539303d7489313956cb7305d2f9736fb7aa6ef2c3",
-      "bytes": 2184835
+      "sha256": "bbe582eca00e00dc6894a620e389752ad018f4d334e54b05754a06b7d5040369",
+      "bytes": 2184843
     },
     {
       "id": "nflverse_teams",
@@ -25,7 +25,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DE8C1878E14FA9\"",
       "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
-      "retrievedAt": "2026-10-18T19:47:48Z",
+      "retrievedAt": "2026-10-18T20:06:40Z",
       "status": "verified",
       "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
       "bytes": 18919
@@ -38,7 +38,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2D0FE9C58276\"",
       "lastModified": "Sun, 18 Oct 2026 12:04:07 GMT",
-      "retrievedAt": "2026-10-18T19:47:48Z",
+      "retrievedAt": "2026-10-18T20:06:41Z",
       "status": "verified",
       "sha256": "5d13b1f597e2c700227703898543fad1b9b4bcd0eb304a24f8d59f3e1f847dff",
       "bytes": 970204
@@ -51,7 +51,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2D19C9402DDD\"",
       "lastModified": "Sun, 18 Oct 2026 13:14:48 GMT",
-      "retrievedAt": "2026-10-18T19:47:48Z",
+      "retrievedAt": "2026-10-18T20:06:41Z",
       "status": "verified",
       "sha256": "982d86fa324694c6934d0d57e1de94261fefb1de745f5985bc2e0b725dd6febb",
       "bytes": 2482827
@@ -64,7 +64,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2D0FB94210D0\"",
       "lastModified": "Sun, 18 Oct 2026 12:02:46 GMT",
-      "retrievedAt": "2026-10-18T19:47:49Z",
+      "retrievedAt": "2026-10-18T20:06:41Z",
       "status": "verified",
       "sha256": "dbf5c6fe6613f816c671eeab12ccfc581909cfa778a395515e09eb5cf503c574",
       "bytes": 63678279
@@ -77,7 +77,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2D0FA21146BA\"",
       "lastModified": "Sun, 18 Oct 2026 12:02:07 GMT",
-      "retrievedAt": "2026-10-18T19:47:48Z",
+      "retrievedAt": "2026-10-18T20:06:41Z",
       "status": "verified",
       "sha256": "b51b2ca4e3f6f40b8a53fc00b6689ab1d7c561d546a7cb1900dd74ee675e9286",
       "bytes": 204576
@@ -90,10 +90,10 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-18T19:47:51Z",
+      "retrievedAt": "2026-10-18T20:06:43Z",
       "status": "verified",
-      "sha256": "a0f9d7ee796969e9b41d9a8e1d37a139583d5d010b5db836346f3c229795d3a6",
-      "bytes": 445112
+      "sha256": "9dbac11d029422048be561fe50767e24d5090d1f5d94c6ee7de3628c1e4f8418",
+      "bytes": 445113
     },
     {
       "id": "espn_steelers_roster",
@@ -103,9 +103,9 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-18T19:47:51Z",
+      "retrievedAt": "2026-10-18T20:06:43Z",
       "status": "verified",
-      "sha256": "cc84521f127c693fbd135e8dc75f738fbed368801046da7e373cf8b4ce934ef2",
+      "sha256": "0d6bf56078b534c20375299af691361dd5fdb553fe2bd63fccaf99a09853adc2",
       "bytes": 378366
     },
     {
@@ -648,7 +648,23 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
+        "playerId": "00-0036775",
+        "name": "Brandon Smith",
+        "field": "rosterStatus",
+        "primary": "Active",
+        "official": "Practice Squad",
+        "espn": "offense",
+        "note": "Official current category differs from the primary release; categories retain their source wording.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -664,7 +680,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -680,7 +696,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -696,7 +712,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -712,7 +728,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -728,7 +744,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -744,7 +760,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -760,13 +776,13 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-18T19:47:51Z",
+        "checkedAt": "2026-10-18T20:06:43Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       }
     ]
   },
-  "playerHistorySha256": "00ff2f7d604a0ece7d764197d3f4aa5b4dacde7a690fc02e374b5d74a575a69f",
+  "playerHistorySha256": "43cd138ef01b135ed686626b6849f38f6225c7f61d73b0acf2d21c7a5f05c79d",
   "playerHistoryValidation": {
     "status": "passed",
     "playerCount": 80,
@@ -809,8 +825,8 @@
       "espn_steelers_roster",
       "official_steelers_roster"
     ],
-    "confirmed": 72,
-    "disputed": 8,
+    "confirmed": 71,
+    "disputed": 9,
     "unavailable": 0,
     "retained": 0,
     "officialRosterCount": 78,
