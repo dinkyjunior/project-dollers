@@ -1,0 +1,48 @@
+/* Shared Violet Floodlight render: light follows the existing surfaces.
+   Hairline emission and separate diffuse spill preserve sharp artwork/type. */
+.editorial-home[data-home-sport="nfl"] .editorial-art {
+  filter: saturate(1.14) contrast(1.035);
+}
+.editorial-home[data-home-sport="nfl"] .editorial-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, #4523a45c, #6835bd38 28%, #373aff26 60%, transparent 86%);
+  mix-blend-mode: soft-light;
+}
+.editorial-home[data-home-sport="nfl"] .editorial-stadium-light {
+  background:
+    radial-gradient(ellipse at 23% 17%, #76baff99, #446cff30 13%, transparent 27%),
+    radial-gradient(ellipse at 73% 26%, #c6b9ff99, #9468ff33 14%, transparent 28%);
+}
+.editorial-home .editorial-entry {
+  box-shadow: 0 1px 0 #fff8 inset, 0 2px 3px #b7a0ff26, 0 5px 17px #7844ff30;
+}
+.editorial-home .editorial-entry:hover {
+  box-shadow: 0 1px 0 #fff inset, 0 3px 6px #b7a0ff35, 0 6px 22px #7844ff42;
+}
+.editorial-home .editorial-entry:disabled {
+  box-shadow: 0 1px 0 #ffffff55 inset;
+}
+.editorial-home .editorial-sport.is-selected {
+  border-bottom-color: transparent;
+  background: linear-gradient(110deg, #0c1828ed, #111322ed 65%, #1b1031e6);
+  box-shadow: 0 0 3px #5685ff66, 0 0 12px #7445ff33, inset 0 0 12px #6460ff12;
+}
+.editorial-home .editorial-sport.is-selected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(115deg, #309dff, #687cff 50%, #bd78ff) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.editorial-home .editorial-sport.is-selected::before {
+  box-shadow: 0 0 3px #22eaffb3, 0 0 10px #22dfff55;
+}
