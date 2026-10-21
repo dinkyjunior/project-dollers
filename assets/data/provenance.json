@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T18:37:24Z",
-  "retrievedAt": "2026-10-21T18:37:22Z",
-  "snapshotSha256CanonicalJson": "6bfe95f8b92942ea750098e8dfa24e36af5d925cc4a24214069741384d76b3e6",
+  "generatedAt": "2026-10-21T19:35:53Z",
+  "retrievedAt": "2026-10-21T19:35:50Z",
+  "snapshotSha256CanonicalJson": "489d453489da3a6cbd682746b35668e8684c3810231b0c28526a2669d3fff481",
   "sources": [
     {
       "id": "nflverse_games",
@@ -10,12 +10,12 @@
       "provider": "nflverse",
       "required": true,
       "httpStatus": 200,
-      "etag": "\"b8b3f657844c68987a801682dfdf5c2637284d9cfceff63c3db4788eccf9872e\"",
+      "etag": "\"785584d029d756059687eb2aa2068229a9565ecd0e28c3702f1c1af42ef93ae7\"",
       "lastModified": null,
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:50Z",
       "status": "verified",
-      "sha256": "47bc1679d6a2e2d2cf94017cf9b14250c445377c7f4ef9e9f01a665a286ca3db",
-      "bytes": 2186343
+      "sha256": "8d9738ad16f4de384523a6c11456087ceb98633da11b2c16baef321d379e1150",
+      "bytes": 2186344
     },
     {
       "id": "nflverse_teams",
@@ -25,7 +25,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DE8C1878E14FA9\"",
       "lastModified": "Fri, 27 Mar 2026 15:49:46 GMT",
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:50Z",
       "status": "verified",
       "sha256": "4eab559fcf89cb4eaf61cb63a88abc47b01b6c9049187c59f3efe95888c3d048",
       "bytes": 18919
@@ -38,7 +38,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2F72BF307EFC\"",
       "lastModified": "Wed, 21 Oct 2026 12:56:39 GMT",
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:50Z",
       "status": "verified",
       "sha256": "128aceb1a35d60888769021ae3cbc3551c434ed0141261f9e656266ccf679ec9",
       "bytes": 973009
@@ -51,7 +51,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2F80C254D8E1\"",
       "lastModified": "Wed, 21 Oct 2026 14:36:57 GMT",
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:50Z",
       "status": "verified",
       "sha256": "30af4f807cdd01f8efe0b81d67b59eac081e9e59be5a4b9d267cba7212eb628c",
       "bytes": 2888891
@@ -64,7 +64,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2F7252CCF10E\"",
       "lastModified": "Wed, 21 Oct 2026 12:53:37 GMT",
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:51Z",
       "status": "verified",
       "sha256": "4a51a9eca800a18dbb944ac55125d95a287365cdb4b6c2d07bf566af15698805",
       "bytes": 64786693
@@ -77,7 +77,7 @@
       "httpStatus": 200,
       "etag": "\"0x8DF2F723DD812A3\"",
       "lastModified": "Wed, 21 Oct 2026 12:53:02 GMT",
-      "retrievedAt": "2026-10-21T18:37:22Z",
+      "retrievedAt": "2026-10-21T19:35:50Z",
       "status": "verified",
       "sha256": "3fe15dbab07884013f62028817a88fc017222f6303a577d332617d733c5208f5",
       "bytes": 207051
@@ -90,10 +90,10 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-21T18:37:25Z",
+      "retrievedAt": "2026-10-21T19:35:54Z",
       "status": "verified",
-      "sha256": "612e558ab2c5970e8075d7ad9a60052a91c80f934f96931824e6a5eb6dec7b61",
-      "bytes": 457062
+      "sha256": "b616c54c63632859cd9f23bfe5adbb2dc7b7a37082dee581aeba2014a642a134",
+      "bytes": 454994
     },
     {
       "id": "espn_steelers_roster",
@@ -103,9 +103,9 @@
       "httpStatus": 200,
       "etag": null,
       "lastModified": null,
-      "retrievedAt": "2026-10-21T18:37:24Z",
+      "retrievedAt": "2026-10-21T19:35:53Z",
       "status": "verified",
-      "sha256": "cba0866229502417134eecc41d10ae0df272f1b842a0ddc61172e47d1db463d8",
+      "sha256": "a6f835f6fc10b9acddef4d598cc0e520c09e6a9f7352176edd00fe6c1a09380a",
       "bytes": 383643
     },
     {
@@ -639,6 +639,22 @@
     ],
     "disagreements": [
       {
+        "playerId": "00-0033941",
+        "name": "Rayshawn Jenkins",
+        "field": "membership",
+        "primary": "PIT",
+        "official": "No matched entry in complete current roster",
+        "espn": "PIT",
+        "note": "Current official and primary retained-roster membership differ; raw primary record and statistics remain preserved.",
+        "sourceIds": [
+          "official_steelers_roster",
+          "espn_steelers_roster"
+        ],
+        "checkedAt": "2026-10-21T19:35:54Z",
+        "retained": false,
+        "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
+      },
+      {
         "playerId": "00-0039883",
         "name": "Daequan Hardy",
         "field": "membership",
@@ -650,7 +666,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -666,7 +682,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -682,7 +698,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -698,7 +714,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -714,7 +730,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -730,7 +746,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -746,7 +762,7 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       },
@@ -762,13 +778,13 @@
           "official_steelers_roster",
           "espn_steelers_roster"
         ],
-        "checkedAt": "2026-10-21T18:37:25Z",
+        "checkedAt": "2026-10-21T19:35:54Z",
         "retained": false,
         "action": "Primary record preserved; source conflict explicitly flagged for current-roster presentation."
       }
     ]
   },
-  "playerHistorySha256": "1b6f77453676a9b2d027f864fb33e70573e6c52a1252da2c92b8c5c1d54bb361",
+  "playerHistorySha256": "4a1cd197e134b270cb144b8c0df4c592c8d85aaed64ed6551a155ca73465be0e",
   "playerHistoryValidation": {
     "status": "passed",
     "playerCount": 81,
@@ -811,11 +827,11 @@
       "espn_steelers_roster",
       "official_steelers_roster"
     ],
-    "confirmed": 73,
-    "disputed": 8,
+    "confirmed": 72,
+    "disputed": 9,
     "unavailable": 0,
     "retained": 0,
-    "officialRosterCount": 79,
+    "officialRosterCount": 78,
     "espnRosterCount": 81
   },
   "sourcePolicy": "Public authorised datasets only; rejected sources are not bypassed. Required-source failure retains the preceding verified snapshot.",
